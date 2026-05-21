@@ -14,7 +14,7 @@ git init
 git add .
 git commit -m "Initial commit"
 git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/qco-coffee-data.git
+git remote add origin https://github.com/YOUR_KGS-blog/Update-Coffee-Data.git
 git push -u origin main
 2. Enable GitHub Pages
 Go to Settings → Pages
@@ -67,3 +67,10 @@ If Yahoo blocks requests, data falls back to last known values
 For production reliability, consider upgrading to Barchart OnDemand or Alpha Vantage (paid APIs)
 🔄 Data Update History
 View all updates in commit history.
+🌐 HTML Report
+The main report page is laporan-usda.html. Upload this to your GitHub Pages repo (e.g., Blog repo).
+It fetches live data from:
+plain
+Copy
+https://KGS-blog.github.io/Update-Coffee-Data/data/market-data.json
+Make sure Update-Coffee-Data repo has GitHub Pages enabled.
