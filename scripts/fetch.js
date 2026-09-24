@@ -1,4 +1,4 @@
-// QCO Data Pipeline — fetch.js — v2026.09.24-5
+// QCO Data Pipeline — fetch.js — v2026.09.24-8
 // Repo: KGS-blog/Update-Coffee-Data — dijalankan via GitHub Actions (.github/workflows/)
 // Output:
 //   data/market-data.json  -> format lama dipertahankan (arabica/robusta/idrUsd + history)
@@ -99,6 +99,25 @@ function round2(n) { return Math.round(n * 100) / 100; }
     console.log("Robusta: RM=F tidak tersedia -> stale (nilai terakhir dipertahankan)");
   }
 
+  // --- Seri harian 6 bulan (untuk analisis deskriptif di blog) ---
+  try {
+    const j6 = await getJSON("https://query1.finance.yahoo.com/v8/finance/chart/KC=F?interval=1d&range=6mo");
+    const r6 = j6 && j6.chart && j6.chart.result && j6.chart.result[0];
+    const ts = r6 && r6.timestamp;
+    const cl = r6 && r6.indicators && r6.indicators.quote && r6.indicators.quote[0].close;
+    const seri = [];
+    if (ts && cl) {
+      for (let i = 0; i < ts.length; i++) {
+        if (cl[i] == null) continue;
+        let p = cl[i];
+        if (p > 10 && p < 100) p = p * 100;
+        seri.push([ts[i], round2(p)]);
+      }
+    }
+    fs.writeFileSync(path.join(OUT, "harga-harian.json"), JSON.stringify({ simbol: "KC=F", unit: "cents/lb", jumlahTitik: seri.length, seri: seri, fetched: now }));
+    console.log("saved data/harga-harian.json:", seri.length, "titik");
+  } catch (e) { errors.harian = e.message; }
+
   data.meta.lastUpdated = now;
   data.meta.nextUpdate = "Auto: GitHub Actions";
   fs.writeFileSync(mPath, JSON.stringify(data, null, 2));
@@ -107,11 +126,28 @@ function round2(n) { return Math.round(n * 100) / 100; }
   // --- BPS ekspor HS 0901 ---
   if (BPS_KEY) {
     try {
-      const j = await getJSON("https://webapi.bps.go.id/v1/api/dataexim/sumber/1/kodehs/0901/jenishs/1/tahun/" + YEAR + "/key/" + BPS_KEY);
+      const j = await getJSON("https://webapi.bps.go.id/v1/api/dataexim/sumber/1/kodehs/09/jenishs/2/tahun/" + YEAR + "/periode/1/key/" + BPS_KEY);
       if (j && j.status === "Error") throw new Error(j.message);
-      let arr = Array.isArray(j) ? j : (Array.isArray(j.data) ? j.data : (Array.isArray(j.entri) ? j.entri : null));
-      const ringkas = arr ? { jumlahEntri: arr.length, contohField: arr[0] ? Object.keys(arr[0]) : [] } : { jumlahEntri: 0 };
-      fs.writeFileSync(path.join(OUT, "ekspor.json"), JSON.stringify({ ...j, ringkasan: ringkas, fetched: now }, null, 2));
+      const arr = Array.isArray(j) ? j : (Array.isArray(j.data) ? j.data : []);
+      // kopi murni: hanya HS yang diawali 0901 (0902=teh, 0903=mate -> dibuang)
+      const kopi = arr.filter(function (d) { return String(d.kodehs || "").indexOf("0901") !== -1; });
+      const perBulan = {};
+      kopi.forEach(function (d) {
+        const b = String(d.bulan || "??").trim();
+        if (!perBulan[b]) perBulan[b] = { bulan: b, nilaiUSD: 0, nettoKg: 0 };
+        perBulan[b].nilaiUSD += Number(d.value) || 0;
+        perBulan[b].nettoKg += Number(d.netweight) || 0;
+      });
+      const bulanan = Object.values(perBulan).sort(function (a, b2) { return a.bulan.localeCompare(b2.bulan); });
+      const total = bulanan.reduce(function (s, b2) { s.nilaiUSD += b2.nilaiUSD; s.nettoKg += b2.nettoKg; return s; }, { nilaiUSD: 0, nettoKg: 0 });
+      fs.writeFileSync(path.join(OUT, "ekspor.json"), JSON.stringify({
+        sumber: "BPS dataexim — HS 0901 kopi, periode bulanan",
+        tahun: Number(YEAR),
+        jumlahEntriKopi: kopi.length,
+        bulanan: bulanan,
+        totalTahun: total,
+        fetched: now
+      }, null, 2));
       console.log("saved data/ekspor.json");
     } catch (e) { errors.ekspor = e.message; }
   } else {
