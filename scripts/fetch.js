@@ -1,4 +1,4 @@
-// QCO Data Pipeline — fetch.js — v2026.09.24-10
+// QCO Data Pipeline — fetch.js — v2026.09.24-11
 // Repo: KGS-blog/Update-Coffee-Data — dijalankan via GitHub Actions (.github/workflows/)
 // Output:
 //   data/market-data.json  -> format lama dipertahankan (arabica/robusta/idrUsd + history)
@@ -97,6 +97,85 @@ function round2(n) { return Math.round(n * 100) / 100; }
     errors.robusta = e.message;
     data.robusta.stale = true; // nilai terakhir dipertahankan, ditandai tidak segar
     console.log("Robusta: RM=F tidak tersedia -> stale (nilai terakhir dipertahankan)");
+  }
+
+  // --- Seri harian 6 bulan (untuk analisis deskriptif di blog) ---
+  try {
+    const j6 = await getJSON("https://query1.finance.yahoo.com/v8/finance/chart/KC=F?interval=1d&range=6mo");
+    const r6 = j6 && j6.chart && j6.chart.result && j6.chart.result[0];
+    const ts = r6 && r6.timestamp;
+    const cl = r6 && r6.indicators && r6.indicators.quote && r6.indicators.quote[0].close;
+    const seri = [];
+    if (ts && cl) {
+      for (let i = 0; i < ts.length; i++) {
+        if (cl[i] == null) continue;
+        let p = cl[i];
+        if (p > 10 && p < 100) p = p * 100;
+        seri.push([ts[i], round2(p)]);
+      }
+    }
+    fs.writeFileSync(path.join(OUT, "harga-harian.json"), JSON.stringify({ simbol: "KC=F", unit: "cents/lb", jumlahTitik: seri.length, seri: seri, fetched: now }));
+    console.log("saved data/harga-harian.json:", seri.length, "titik");
+  } catch (e) { errors.harian = e.message; }
+
+  // --- Berita kopi (NewsData.io utama, fallback Google News RSS) — v2026.09.24-11 ---
+  {
+    const ND_KEY = process.env.NEWSDATA_KEY || "";
+    const err = {};
+    let artikel = null;
+    let sumberBerita = "";
+    const UA_BROWSER = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36";
+    async function getTextUA(url) {
+      const r = await fetch(url, { headers: { "User-Agent": UA_BROWSER, "Accept": "application/rss+xml,application/xml,text/html,*/*" } });
+      if (!r.ok) throw new Error("HTTP " + r.status);
+      return r.text();
+    }
+    if (ND_KEY) {
+      const urls = [
+        "https://newsdata.io/api/1/latest?apikey=" + ND_KEY + "&q=kopi&country=id&language=id&size=8",
+        "https://newsdata.io/api/1/latest?apikey=" + ND_KEY + "&q=kopi&language=id&size=8"
+      ];
+      for (const url of urls) {
+        try {
+          const jn = await getJSON(url);
+          if (jn && jn.status === "success" && Array.isArray(jn.results) && jn.results.length) {
+            artikel = jn.results.map(function (a) {
+              return { judul: a.title, tautan: a.link, tanggal: a.pubDate, sumber: a.source_name || a.source_id || "" };
+            });
+            sumberBerita = "NewsData.io";
+            break;
+          }
+          err.newsdata = JSON.stringify(jn).slice(0, 200);
+        } catch (e2) { err.newsdata = e2.message; }
+      }
+    } else {
+      err.newsdata = "NEWSDATA_KEY tidak di-set sebagai secret";
+    }
+    if (!artikel) {
+      try {
+        const xml = await getTextUA("https://news.google.com/rss/search?q=kopi+indonesia&hl=id&gl=ID&ceid=ID:id");
+        const items = xml.match(/<item>[\s\S]*?<\/item>/g) || [];
+        if (!items.length) err.rss = "RSS merespons tapi 0 item (kemungkinan halaman consent Google)";
+        const clean = function (s) { return String(s || "").replace(/<!\[CDATA\[|\]\]>/g, "").replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&#39;/g, "'").trim(); };
+        artikel = items.slice(0, 8).map(function (it) {
+          const ti = (it.match(/<title>([\s\S]*?)<\/title>/) || [])[1] || "";
+          const li = (it.match(/<link>([\s\S]*?)<\/link>/) || [])[1] || "";
+          const pd = (it.match(/<pubDate>([\s\S]*?)<\/pubDate>/) || [])[1] || "";
+          const sr = (it.match(/<source[^>]*>([\s\S]*?)<\/source>/) || [])[1] || "";
+          return { judul: clean(ti), tautan: li.trim(), tanggal: pd, sumber: clean(sr) };
+        });
+        if (artikel.length) sumberBerita = "Google News RSS";
+      } catch (e3) { err.rss = e3.message; }
+    }
+    if (artikel && artikel.length) {
+      fs.writeFileSync(path.join(OUT, "berita.json"), JSON.stringify({ sumber: sumberBerita, artikel: artikel, fetched: now }));
+      console.log("saved data/berita.json:", artikel.length, "artikel dari", sumberBerita);
+    } else {
+      const pesan = JSON.stringify(err);
+      fs.writeFileSync(path.join(OUT, "berita.json"), JSON.stringify({ status: "Error", message: pesan, sumber: "-", artikel: [], fetched: now }));
+      console.log("berita.json ditulis dengan status Error:", pesan);
+      errors.berita = pesan;
+    }
   }
 
   // --- Seri harian 6 bulan (untuk analisis deskriptif di blog) ---
