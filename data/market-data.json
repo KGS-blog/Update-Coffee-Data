@@ -1,7 +1,7 @@
 {
   "meta": {
     "source": "Yahoo Finance via GitHub Actions",
-    "lastUpdated": "2026-09-24T10:16:39.912Z",
+    "lastUpdated": "2026-09-24T10:36:18.988Z",
     "nextUpdate": "Auto: GitHub Actions",
     "version": "1.0"
   },
@@ -9,9 +9,9 @@
     "symbol": "KC=F",
     "name": "Arabica C-Market",
     "unit": "cents/lb",
-    "current": 275.65,
-    "change": -0.25,
-    "changePercent": -0.09,
+    "current": 274.2,
+    "change": -1.45,
+    "changePercent": -0.53,
     "history": [
       {
         "month": "Jan 2021",
@@ -271,7 +271,7 @@
       },
       {
         "month": "Sep 2026",
-        "value": 275.65
+        "value": 274.2
       }
     ],
     "stale": false
