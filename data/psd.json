@@ -1,1 +1,1 @@
-{"status":"Error","message":"USDA PSD kosong untuk semua varian: ID/2026:ERR HTTP 500 | ID/2025:ERR HTTP 500 | 536/2026:ERR HTTP 500 | 536/2025:ERR HTTP 500","data":[],"fetched":"2026-09-24T16:13:12.619Z"}
+{"status":"Error","message":"USDA PSD kosong untuk semua varian: world/2026:ERR HTTP 500 | world/2025:ERR HTTP 500","data":[],"fetched":"2026-09-24T16:18:46.648Z"}
