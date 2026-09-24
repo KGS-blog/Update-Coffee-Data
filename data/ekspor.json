@@ -1,5 +1,11 @@
 {
-  "status": "Error",
-  "message": "You are not Allowed to take this action.Error: Parameter jenishs is missing<br>Error: Parameter tahun is missing<br>",
-  "fetched": "2026-09-24T07:59:11.071Z"
+  "sumber": "BPS dataexim — HS 0901 kopi, periode bulanan",
+  "tahun": 2026,
+  "jumlahEntriKopi": 0,
+  "bulanan": [],
+  "totalTahun": {
+    "nilaiUSD": 0,
+    "nettoKg": 0
+  },
+  "fetched": "2026-09-24T08:44:53.391Z"
 }
