@@ -1,4 +1,4 @@
-// QCO Data Pipeline — fetch.js — v2026.09.24-16
+// QCO Data Pipeline — fetch.js — v2026.09.24-17
 // Repo: KGS-blog/Update-Coffee-Data — dijalankan via GitHub Actions (.github/workflows/)
 // Output:
 //   data/market-data.json  -> format lama dipertahankan (arabica/robusta/idrUsd + history)
@@ -118,7 +118,7 @@ function round2(n) { return Math.round(n * 100) / 100; }
     console.log("saved data/harga-harian.json:", seri.length, "titik");
   } catch (e) { errors.harian = e.message; }
 
-  // --- Berita kopi (NewsData.io utama, fallback Google News RSS) — v2026.09.24-16 ---
+  // --- Berita kopi (NewsData.io utama, fallback Google News RSS) — v2026.09.24-17 ---
   {
     const ND_KEY = process.env.NEWSDATA_KEY || "";
     const err = {};
@@ -237,7 +237,7 @@ function round2(n) { return Math.round(n * 100) / 100; }
     }
   }
 
-  // --- USDA FAS PSD — v2026.09.24-16 ---
+  // --- USDA FAS PSD — v2026.09.24-17 ---
   // Berdasarkan SDK terbukti (chhayly/usda-fas-sdk, April 2026):
   // host BARU api.fas.usda.gov, header X-Api-Key + Accept: application/json
   {
@@ -264,13 +264,26 @@ function round2(n) { return Math.round(n * 100) / 100; }
         coba.push("countries:" + csArr.length + " id=" + idCode);
       } catch (e1) { coba.push("countries:ERR " + e1.message); }
 
+      // 1b) cari kode komoditas KOPHI dari daftar komoditas (jangan menebak)
+      let coffeeCode = "0711000";
+      try {
+        const cms = await usdaGet(BASE + "/api/psd/commodities");
+        const cmArr = Array.isArray(cms) ? cms : [];
+        const kopiHit = cmArr.filter(function (c) { return /coffee/i.test(String(c.commodityName || c.name || "")); });
+        const green = kopiHit.filter(function (c) { return /green/i.test(String(c.commodityName || c.name || "")); })[0];
+        const anyK = green || kopiHit[0];
+        if (anyK) coffeeCode = String(anyK.commodityCode || anyK.code || coffeeCode);
+        coba.push("commodities:" + cmArr.length + " kopi=" + JSON.stringify(kopiHit.slice(0, 4).map(function (c) { return (c.commodityCode || c.code) + ":" + (c.commodityName || c.name); })).slice(0, 220));
+      } catch (e1b) { coba.push("commodities:ERR " + e1b.message); }
+
       // 2) ambil data PSD kopi Indonesia
       let rows = null;
       const years = [YEAR, String(Number(YEAR) - 1)];
       const tries = [];
-      if (idCode) tries.push(function (yr) { return "/api/psd/commodity/0711000/country/" + idCode + "/year/" + yr; });
-      tries.push(function (yr) { return "/api/psd/commodity/0711000/country/all/year/" + yr; });
-      tries.push(function (yr) { return "/api/psd/commodity/0711000/world/year/" + yr; });
+      if (idCode) tries.push(function (yr) { return "/api/psd/commodity/" + coffeeCode + "/country/" + idCode + "/year/" + yr; });
+      tries.push(function (yr) { return "/api/psd/commodity/" + coffeeCode + "/country/all/year/" + yr; });
+      tries.push(function (yr) { return "/api/psd/commodity/" + coffeeCode + "/world/year/" + yr; });
+      tries.push(function (yr) { return "/api/psd/commodity/" + coffeeCode + "/year/" + yr; });
       outer:
       for (const yr of years) {
         for (const t of tries) {
