@@ -15,7 +15,7 @@ fs.mkdirSync(OUT, { recursive: true });
 const today = new Date().toISOString().slice(0, 10);
 const YEAR = process.env.FETCH_YEAR || String(new Date().getFullYear());
 
-const REPO_RAW = "https://raw.githubusercontent.com/OWNER/Update-Coffee-Data/main/data"; // ganti OWNER
+const REPO_RAW = "https://raw.githubusercontent.com/KGS-blog/Update-Coffee-Data/main/data"; // ganti OWNER
 
 async function getText(url) {
   const r = await fetch(url, { headers: { "User-Agent": "qco-data-pipeline" } });
