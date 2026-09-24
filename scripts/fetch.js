@@ -1,4 +1,4 @@
-// QCO Data Pipeline — fetch.js — v2026.09.24-15
+// QCO Data Pipeline — fetch.js — v2026.09.24-16
 // Repo: KGS-blog/Update-Coffee-Data — dijalankan via GitHub Actions (.github/workflows/)
 // Output:
 //   data/market-data.json  -> format lama dipertahankan (arabica/robusta/idrUsd + history)
@@ -118,7 +118,7 @@ function round2(n) { return Math.round(n * 100) / 100; }
     console.log("saved data/harga-harian.json:", seri.length, "titik");
   } catch (e) { errors.harian = e.message; }
 
-  // --- Berita kopi (NewsData.io utama, fallback Google News RSS) — v2026.09.24-15 ---
+  // --- Berita kopi (NewsData.io utama, fallback Google News RSS) — v2026.09.24-16 ---
   {
     const ND_KEY = process.env.NEWSDATA_KEY || "";
     const err = {};
@@ -237,69 +237,79 @@ function round2(n) { return Math.round(n * 100) / 100; }
     }
   }
 
-  // --- USDA FAS PSD (kopi hijau 0711000, Indonesia) — v2026.09.24-15 ---
+  // --- USDA FAS PSD — v2026.09.24-16 ---
+  // Berdasarkan SDK terbukti (chhayly/usda-fas-sdk, April 2026):
+  // host BARU api.fas.usda.gov, header X-Api-Key + Accept: application/json
   {
     const KEY = process.env.USDA_API_KEY || "";
     if (!KEY) {
       fs.writeFileSync(path.join(OUT, "psd.json"), JSON.stringify({ status: "Error", message: "USDA_API_KEY tidak di-set sebagai secret", data: [], fetched: now }));
     } else {
-      let rows = null, coba = [];
-      // FAS mau key di header "API_KEY" (konvensi khusus, bukan ?api_key=)
+      const BASE = "https://api.fas.usda.gov";
+      const coba = [];
       async function usdaGet(url) {
-        const r = await fetch(url, { headers: { "API_KEY": KEY, "X-Api-Key": KEY, "User-Agent": UA } });
+        const r = await fetch(url, { headers: { "X-Api-Key": KEY, "Accept": "application/json", "User-Agent": UA } });
         if (!r.ok) throw new Error("HTTP " + r.status);
         return r.json();
       }
-      // Fase 0: bukti autentikasi + konfirmasi kode komoditas kopi
+      // 1) cari kode numerik Indonesia dari daftar negara
+      let idCode = null;
       try {
-        const cl = await usdaGet("https://apps.fas.usda.gov/OpenData/api/psd/commodity");
-        const clArr = Array.isArray(cl) ? cl : [];
-        const kopiRows = clArr.filter(function (c) { return /coffee/i.test(String(c.commodityName || c.name || "")); }).slice(0, 5);
-        coba.push("commodity-list:" + clArr.length + " | kopi: " + JSON.stringify(kopiRows.map(function (c) { return (c.commodityCode || c.code) + "=" + (c.commodityName || c.name); })).slice(0, 200));
-      } catch (e0) { coba.push("commodity-list:ERR " + e0.message); }
-      // Fase 1: world endpoint, coba semua releaseMonth 01-09 untuk tiap tahun
-      const base = "https://apps.fas.usda.gov/OpenData/api/psd/commodity/0711000/world/year/";
+        const cs = await usdaGet(BASE + "/api/psd/countries");
+        const csArr = Array.isArray(cs) ? cs : [];
+        const hit = csArr.filter(function (c) {
+          return String(c.gencCode || c.genc || "").toUpperCase() === "ID" || /indonesia/i.test(String(c.name || c.countryName || ""));
+        })[0];
+        if (hit) idCode = String(hit.countryCode || hit.code || "");
+        coba.push("countries:" + csArr.length + " id=" + idCode);
+      } catch (e1) { coba.push("countries:ERR " + e1.message); }
+
+      // 2) ambil data PSD kopi Indonesia
+      let rows = null;
+      const years = [YEAR, String(Number(YEAR) - 1)];
+      const tries = [];
+      if (idCode) tries.push(function (yr) { return "/api/psd/commodity/0711000/country/" + idCode + "/year/" + yr; });
+      tries.push(function (yr) { return "/api/psd/commodity/0711000/country/all/year/" + yr; });
+      tries.push(function (yr) { return "/api/psd/commodity/0711000/world/year/" + yr; });
       outer:
-      for (const yr of [YEAR, String(Number(YEAR) - 1)]) {
-        for (let rm = 1; rm <= 9; rm++) {
-          const rms = "0" + rm;
+      for (const yr of years) {
+        for (const t of tries) {
           try {
-            const ju = await usdaGet(base + yr + "/releaseMonth/" + rms);
+            const ju = await usdaGet(BASE + t(yr));
             const arr = Array.isArray(ju) ? ju : (Array.isArray(ju.data) ? ju.data : []);
-            coba.push("world/" + yr + "/rm" + rms + ":" + arr.length);
-            if (arr.length) { rows = arr; break outer; }
-          } catch (e4) { coba.push("world/" + yr + "/rm" + rms + ":ERR " + e4.message); }
+            coba.push(t(yr) + " -> " + arr.length);
+            if (arr.length) { rows = { arr: arr, sumber: t(yr) }; break outer; }
+          } catch (e2) { coba.push(t(yr) + ":ERR " + e2.message); }
         }
       }
-      if (rows && rows.length) {
-        const idn = rows.filter(function (r) {
-          const cc = String(r.countryCode !== undefined ? r.countryCode : (r.CountryCode || ""));
-          const g = String(r.gencCode || r.GencCode || "").toUpperCase();
-          const n = String(r.countryName || r.CountryName || "").toUpperCase();
-          return cc === "536" || g === "ID" || n.indexOf("INDONESIA") !== -1;
+
+      if (rows && rows.arr.length) {
+        const idn = rows.arr.filter(function (r) {
+          const cc = String(r.countryCode !== undefined ? r.countryCode : "");
+          const g = String(r.gencCode || r.genc || "").toUpperCase();
+          const n = String(r.countryName || r.name || "").toUpperCase();
+          return cc === idCode || cc === "536" || g === "ID" || n.indexOf("INDONESIA") !== -1;
         });
-        const pakai = idn.length ? idn : rows.slice(0, 50);
+        const pakai = idn.length ? idn : rows.arr.slice(0, 50);
         const flat = pakai.map(function (r) {
           return {
-            tahun: r.marketYear || r.MarketYear || r.year || r.Year,
-            atribut: r.attributeName || r.AttributeName || r.attribute || "",
+            tahun: r.marketYear || r.MarketYear || r.year,
+            atribut: r.attributeName || r.attribute || "",
             nilai: (r.value !== undefined ? r.value : r.Value),
-            satuan: r.unitDescription || r.UnitDescription || r.unit || "",
-            negara: r.countryName || r.CountryName || r.gencCode || r.GencCode || ""
+            satuan: r.unitDescription || r.unitDescription || r.unit || "",
+            negara: r.countryName || r.name || r.gencCode || ""
           };
         }).filter(function (r) { return r.atribut; });
-        if (!idn.length) coba.push("CATATAN: filter Indonesia gagal, negara contoh: " + pakai.slice(0, 3).map(function (r) { return (r.countryName || r.countryCode); }).join(", "));
         fs.writeFileSync(path.join(OUT, "psd.json"), JSON.stringify({
-          sumber: "USDA FAS OpenData PSD — kopi hijau (0711000), Indonesia",
+          sumber: "USDA FAS PSD — " + rows.sumber,
           percobaan: coba,
-          contohField: rows[0],
           data: flat,
           fetched: now
         }, null, 2));
-        console.log("saved data/psd.json:", flat.length, "atribut |", coba.join(" "));
+        console.log("saved data/psd.json:", flat.length, "atribut |", coba.join(" | "));
       } else {
-        fs.writeFileSync(path.join(OUT, "psd.json"), JSON.stringify({ status: "Error", message: "USDA PSD kosong untuk semua varian: " + coba.join(" | "), data: [], fetched: now }));
-        console.log("psd.json Error:", coba.join(" "));
+        fs.writeFileSync(path.join(OUT, "psd.json"), JSON.stringify({ status: "Error", message: "Gagal semua varian: " + coba.join(" | "), data: [], fetched: now }));
+        console.log("psd.json Error:", coba.join(" | "));
         errors.psd = "kosong";
       }
     }
