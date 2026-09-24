@@ -1,4 +1,4 @@
-// QCO Data Pipeline — fetch.js — v2026.09.24-4
+// QCO Data Pipeline — fetch.js — v2026.09.24-5
 // Repo: KGS-blog/Update-Coffee-Data — dijalankan via GitHub Actions (.github/workflows/)
 // Output:
 //   data/market-data.json  -> format lama dipertahankan (arabica/robusta/idrUsd + history)
@@ -107,8 +107,11 @@ function round2(n) { return Math.round(n * 100) / 100; }
   // --- BPS ekspor HS 0901 ---
   if (BPS_KEY) {
     try {
-      const j = await getJSON("https://webapi.bps.go.id/v1/api/dataexim/sumber/1/kodehs/0901/th/" + YEAR + "/key/" + BPS_KEY);
-      fs.writeFileSync(path.join(OUT, "ekspor.json"), JSON.stringify({ ...j, fetched: now }, null, 2));
+      const j = await getJSON("https://webapi.bps.go.id/v1/api/dataexim/sumber/1/kodehs/0901/jenishs/1/tahun/" + YEAR + "/key/" + BPS_KEY);
+      if (j && j.status === "Error") throw new Error(j.message);
+      let arr = Array.isArray(j) ? j : (Array.isArray(j.data) ? j.data : (Array.isArray(j.entri) ? j.entri : null));
+      const ringkas = arr ? { jumlahEntri: arr.length, contohField: arr[0] ? Object.keys(arr[0]) : [] } : { jumlahEntri: 0 };
+      fs.writeFileSync(path.join(OUT, "ekspor.json"), JSON.stringify({ ...j, ringkasan: ringkas, fetched: now }, null, 2));
       console.log("saved data/ekspor.json");
     } catch (e) { errors.ekspor = e.message; }
   } else {
