@@ -1,4 +1,4 @@
-// QCO Data Pipeline — fetch.js — v2026.09.24-14
+// QCO Data Pipeline — fetch.js — v2026.09.24-15
 // Repo: KGS-blog/Update-Coffee-Data — dijalankan via GitHub Actions (.github/workflows/)
 // Output:
 //   data/market-data.json  -> format lama dipertahankan (arabica/robusta/idrUsd + history)
@@ -118,7 +118,7 @@ function round2(n) { return Math.round(n * 100) / 100; }
     console.log("saved data/harga-harian.json:", seri.length, "titik");
   } catch (e) { errors.harian = e.message; }
 
-  // --- Berita kopi (NewsData.io utama, fallback Google News RSS) — v2026.09.24-14 ---
+  // --- Berita kopi (NewsData.io utama, fallback Google News RSS) — v2026.09.24-15 ---
   {
     const ND_KEY = process.env.NEWSDATA_KEY || "";
     const err = {};
@@ -237,7 +237,7 @@ function round2(n) { return Math.round(n * 100) / 100; }
     }
   }
 
-  // --- USDA FAS PSD (kopi hijau 0711000, Indonesia) — v2026.09.24-14 ---
+  // --- USDA FAS PSD (kopi hijau 0711000, Indonesia) — v2026.09.24-15 ---
   {
     const KEY = process.env.USDA_API_KEY || "";
     if (!KEY) {
@@ -250,14 +250,26 @@ function round2(n) { return Math.round(n * 100) / 100; }
         if (!r.ok) throw new Error("HTTP " + r.status);
         return r.json();
       }
+      // Fase 0: bukti autentikasi + konfirmasi kode komoditas kopi
+      try {
+        const cl = await usdaGet("https://apps.fas.usda.gov/OpenData/api/psd/commodity");
+        const clArr = Array.isArray(cl) ? cl : [];
+        const kopiRows = clArr.filter(function (c) { return /coffee/i.test(String(c.commodityName || c.name || "")); }).slice(0, 5);
+        coba.push("commodity-list:" + clArr.length + " | kopi: " + JSON.stringify(kopiRows.map(function (c) { return (c.commodityCode || c.code) + "=" + (c.commodityName || c.name); })).slice(0, 200));
+      } catch (e0) { coba.push("commodity-list:ERR " + e0.message); }
+      // Fase 1: world endpoint, coba semua releaseMonth 01-09 untuk tiap tahun
+      const base = "https://apps.fas.usda.gov/OpenData/api/psd/commodity/0711000/world/year/";
+      outer:
       for (const yr of [YEAR, String(Number(YEAR) - 1)]) {
-        try {
-          const url = "https://apps.fas.usda.gov/OpenData/api/psd/commodity/0711000/world/year/" + yr + "/releaseMonth/01";
-          const ju = await usdaGet(url);
-          const arr = Array.isArray(ju) ? ju : (Array.isArray(ju.data) ? ju.data : []);
-          coba.push("world/" + yr + ":" + arr.length);
-          if (arr.length) { rows = arr; break; }
-        } catch (e4) { coba.push("world/" + yr + ":ERR " + e4.message); }
+        for (let rm = 1; rm <= 9; rm++) {
+          const rms = "0" + rm;
+          try {
+            const ju = await usdaGet(base + yr + "/releaseMonth/" + rms);
+            const arr = Array.isArray(ju) ? ju : (Array.isArray(ju.data) ? ju.data : []);
+            coba.push("world/" + yr + "/rm" + rms + ":" + arr.length);
+            if (arr.length) { rows = arr; break outer; }
+          } catch (e4) { coba.push("world/" + yr + "/rm" + rms + ":ERR " + e4.message); }
+        }
       }
       if (rows && rows.length) {
         const idn = rows.filter(function (r) {
