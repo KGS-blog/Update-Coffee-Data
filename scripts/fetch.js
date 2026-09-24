@@ -1,4 +1,4 @@
-// QCO Data Pipeline — fetch.js — v2026.09.24-11
+// QCO Data Pipeline — fetch.js — v2026.09.24-13
 // Repo: KGS-blog/Update-Coffee-Data — dijalankan via GitHub Actions (.github/workflows/)
 // Output:
 //   data/market-data.json  -> format lama dipertahankan (arabica/robusta/idrUsd + history)
@@ -118,7 +118,7 @@ function round2(n) { return Math.round(n * 100) / 100; }
     console.log("saved data/harga-harian.json:", seri.length, "titik");
   } catch (e) { errors.harian = e.message; }
 
-  // --- Berita kopi (NewsData.io utama, fallback Google News RSS) — v2026.09.24-11 ---
+  // --- Berita kopi (NewsData.io utama, fallback Google News RSS) — v2026.09.24-13 ---
   {
     const ND_KEY = process.env.NEWSDATA_KEY || "";
     const err = {};
@@ -234,6 +234,56 @@ function round2(n) { return Math.round(n * 100) / 100; }
       console.log("saved data/berita.json:", artikel.length, "artikel dari", sumberBerita);
     } else {
       errors.berita = errors.berita || "kedua sumber kosong";
+    }
+  }
+
+  // --- USDA FAS PSD (kopi hijau 0711000, Indonesia) — v2026.09.24-13 ---
+  {
+    const KEY = process.env.USDA_API_KEY || "";
+    if (!KEY) {
+      fs.writeFileSync(path.join(OUT, "psd.json"), JSON.stringify({ status: "Error", message: "USDA_API_KEY tidak di-set sebagai secret", data: [], fetched: now }));
+    } else {
+      let rows = null, coba = [];
+      // FAS mau key di header "API_KEY" (konvensi khusus, bukan ?api_key=)
+      async function usdaGet(url) {
+        const r = await fetch(url, { headers: { "API_KEY": KEY, "X-Api-Key": KEY, "User-Agent": UA } });
+        if (!r.ok) throw new Error("HTTP " + r.status);
+        return r.json();
+      }
+      for (const cc of ["ID", "536"]) {
+        for (const yr of [YEAR, String(Number(YEAR) - 1)]) {
+          const url = "https://apps.fas.usda.gov/OpenData/api/psd/commodity/0711000/country/" + cc + "/year/" + yr;
+          try {
+            const ju = await usdaGet(url);
+            const arr = Array.isArray(ju) ? ju : (Array.isArray(ju.data) ? ju.data : []);
+            coba.push(cc + "/" + yr + ":" + arr.length);
+            if (arr.length) { rows = arr; break; }
+          } catch (e4) { coba.push(cc + "/" + yr + ":ERR " + e4.message); }
+        }
+        if (rows) break;
+      }
+      if (rows && rows.length) {
+        const flat = rows.map(function (r) {
+          return {
+            tahun: r.marketYear || r.MarketYear || r.year || r.Year,
+            atribut: r.attributeName || r.AttributeName || r.attribute || "",
+            nilai: (r.value !== undefined ? r.value : r.Value),
+            satuan: r.unitDescription || r.UnitDescription || r.unit || ""
+          };
+        }).filter(function (r) { return r.atribut; });
+        fs.writeFileSync(path.join(OUT, "psd.json"), JSON.stringify({
+          sumber: "USDA FAS OpenData PSD — kopi hijau (0711000), Indonesia",
+          percobaan: coba,
+          contohField: rows[0],
+          data: flat,
+          fetched: now
+        }, null, 2));
+        console.log("saved data/psd.json:", flat.length, "atribut |", coba.join(" "));
+      } else {
+        fs.writeFileSync(path.join(OUT, "psd.json"), JSON.stringify({ status: "Error", message: "USDA PSD kosong untuk semua varian: " + coba.join(" | "), data: [], fetched: now }));
+        console.log("psd.json Error:", coba.join(" "));
+        errors.psd = "kosong";
+      }
     }
   }
 
