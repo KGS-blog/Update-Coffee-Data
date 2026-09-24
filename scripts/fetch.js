@@ -1,9 +1,11 @@
-// QCO Data Pipeline — fetch.js — v2026.09.24-1
-// Sumber: ICE coffee via stooq (tanpa key) | USD/IDR via frankfurter (tanpa key) | BPS ekspor HS0901 (key)
-// Usage:
-//   node scripts/fetch.js            -> fetch semua, tulis ke data/*.json
-//   node scripts/fetch.js discover kopi -> cari tabel BPS berkeyword (explorasi)
-// Secret: BPS_API_KEY di GitHub Secrets. Tanpa key, sumber BPS dilewati (tidak gagal total).
+// QCO Data Pipeline — fetch.js — v2026.09.24-4
+// Repo: KGS-blog/Update-Coffee-Data — dijalankan via GitHub Actions (.github/workflows/)
+// Output:
+//   data/market-data.json  -> format lama dipertahankan (arabica/robusta/idrUsd + history)
+//   data/ekspor.json       -> BPS dataexim HS 0901 (butuh secret BPS_API_KEY)
+// Sumber: Yahoo Finance v8 (KC=F, RM=F, IDR=X) + BPS. Tanpa dependency npm.
+// Catatan: RM=F (Robusta London) tidak tersedia di Yahoo -> robusta ditandai stale,
+// nilai terakhir dipertahankan agar tidak ada angka palsu yang mengaku live.
 
 const fs = require("fs");
 const path = require("path");
@@ -11,67 +13,108 @@ const path = require("path");
 const BPS_KEY = process.env.BPS_API_KEY || "";
 const OUT = path.join(__dirname, "..", "data");
 fs.mkdirSync(OUT, { recursive: true });
-
-const today = new Date().toISOString().slice(0, 10);
 const YEAR = process.env.FETCH_YEAR || String(new Date().getFullYear());
+const UA = { "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" };
 
-const REPO_RAW = "https://raw.githubusercontent.com/KGS-blog/Update-Coffee-Data/main/data"; // ganti OWNER
-
-async function getText(url) {
-  const r = await fetch(url, { headers: { "User-Agent": "qco-data-pipeline" } });
-  if (!r.ok) throw new Error("HTTP " + r.status + " " + url);
-  return r.text();
-}
 async function getJSON(url) {
-  return JSON.parse(await getText(url));
-}
-function save(name, obj) {
-  fs.writeFileSync(path.join(OUT, name), JSON.stringify({ ...obj, fetched: today }, null, 2));
-  console.log("saved data/" + name);
+  const r = await fetch(url, { headers: UA });
+  if (!r.ok) throw new Error("HTTP " + r.status);
+  return r.json();
 }
 
-// ---- mode discover: node fetch.js discover <keyword> ----
-if (process.argv[2] === "discover") {
-  const kw = encodeURIComponent(process.argv[3] || "kopi");
-  if (!BPS_KEY) { console.error("BPS_API_KEY belum di-set"); process.exit(1); }
-  const url = `https://webapi.bps.go.id/v1/api/list/model/var/lang/ind/domain/0000/keyword/${kw}/th/${YEAR}/key/${BPS_KEY}`;
-  getJSON(url)
-    .then(j => { save("_discover-" + (process.argv[3] || "kopi") + ".json", j); })
-    .catch(e => { console.error("DISCOVER ERROR:", e.message); process.exit(1); });
-  return;
+// Yahoo v8 chart — kembalikan regularMarketPrice
+async function yahoo(symbol) {
+  const j = await getJSON("https://query1.finance.yahoo.com/v8/finance/chart/" + encodeURIComponent(symbol) + "?interval=1d&range=1d");
+  const res = j && j.chart && j.chart.result && j.chart.result[0];
+  if (!res || !res.meta) throw new Error("no data");
+  const p = res.meta.regularMarketPrice;
+  if (!p) throw new Error("no price");
+  return p;
 }
+
+const MONTHS = ["Jan","Feb","Mar","Apr","Mei","Jun","Jul","Agu","Sep","Okt","Nov","Des"];
+function monthLabel() { const n = new Date(); return MONTHS[n.getMonth()] + " " + n.getFullYear(); }
+function upsertMonth(history, label, value) {
+  const ex = history.find(h => h.month === label);
+  if (ex) ex.value = value; else history.push({ month: label, value: value });
+}
+function round2(n) { return Math.round(n * 100) / 100; }
 
 (async () => {
+  const now = new Date().toISOString();
+  const mPath = path.join(OUT, "market-data.json");
+  let data;
+  try { data = JSON.parse(fs.readFileSync(mPath, "utf8")); }
+  catch (e) {
+    data = {
+      meta: { source: "Yahoo Finance via GitHub Actions", version: "2.0", historyNote: "Riwayat sebelum Sep 2026 adalah baseline ilustratif; data mulai Sep 2026 adalah data riil harian." },
+      arabica: { symbol: "KC=F", name: "Arabica C-Market", unit: "cents/lb", history: [] },
+      robusta: { symbol: "RM=F", name: "Robusta London", unit: "USD/ton", history: [] },
+      idrUsd: { symbol: "IDR=X", name: "IDR/USD", unit: "IDR/USD", history: [] }
+    };
+  }
+  if (!data.meta) data.meta = {};
+  const label = monthLabel();
   const errors = {};
 
-  // 1) Harga futures kopi Arabica ICE (stooq, tanpa key) — KC.F, US cents/lb
+  // --- Arabika KC=F (cents/lb) ---
   try {
-    const csv = await getText("https://stooq.com/q/l/?s=kc.f&f=sd2t2ohlcv&h&e=csv");
-    const lines = csv.trim().split(/\r?\n/);
-    const v = lines[1].split(",");
-    save("ice.json", {
-      source: "stooq KC.F — ICE Arabica futures, US cents/lb",
-      symbol: v[0], date: v[1], time: v[2],
-      open: v[3], high: v[4], low: v[5], close: v[6], volume: v[7]
-    });
-  } catch (e) { errors.ice = e.message; }
+    let p = await yahoo("KC=F");
+    if (p > 10 && p < 100) p = p * 100; // normalisasi kalau Yahoo mengirim USD/lb
+    const prev = data.arabica.current || p;
+    data.arabica.current = round2(p);
+    data.arabica.change = round2(p - prev);
+    data.arabica.changePercent = prev ? round2((p - prev) / prev * 100) : 0;
+    data.arabica.stale = false;
+    upsertMonth(data.arabica.history, label, data.arabica.current);
+    console.log("Arabica:", data.arabica.current, "cents/lb");
+  } catch (e) { errors.arabica = e.message; data.arabica.stale = true; }
 
-  // 2) Kurs USD/IDR (frankfurter, tanpa key — referensi ECB)
+  // --- Kurs IDR=X ---
   try {
-    const j = await getJSON("https://api.frankfurter.app/latest?from=USD&to=IDR");
-    save("kurs.json", { source: "frankfurter.app (ECB reference rate)", rate: j.rates.IDR, date: j.date });
-  } catch (e) { errors.kurs = e.message; }
+    const p = await yahoo("IDR=X");
+    const prev = data.idrUsd.current || p;
+    data.idrUsd.current = Math.round(p);
+    data.idrUsd.change = Math.round(p - prev);
+    data.idrUsd.changePercent = prev ? round2((p - prev) / prev * 100) : 0;
+    data.idrUsd.stale = false;
+    upsertMonth(data.idrUsd.history, label, data.idrUsd.current);
+    console.log("IDR/USD:", data.idrUsd.current);
+  } catch (e) { errors.kurs = e.message; data.idrUsd.stale = true; }
 
-  // 3) BPS: ekspor kopi HS 0901, tahun berjalan (butuh key)
-  if (BPS_KEY) {
-    try {
-      const j = await getJSON(`https://webapi.bps.go.id/v1/api/dataexim/sumber/1/kodehs/0901/th/${YEAR}/key/${BPS_KEY}`);
-      save("ekspor.json", j);
-    } catch (e) { errors.ekspor = e.message; }
-  } else {
-    errors.ekspor = "BPS_API_KEY tidak di-set (lewati)";
+  // --- Robusta RM=F (umumnya tidak tersedia di Yahoo -> jujur: stale) ---
+  try {
+    let p = await yahoo("RM=F");
+    if (p < 1000) p = p * 1000;
+    const prev = data.robusta.current || p;
+    data.robusta.current = Math.round(p);
+    data.robusta.change = Math.round(p - prev);
+    data.robusta.changePercent = prev ? round2((p - prev) / prev * 100) : 0;
+    data.robusta.stale = false;
+    upsertMonth(data.robusta.history, label, data.robusta.current);
+    console.log("Robusta:", data.robusta.current, "USD/ton");
+  } catch (e) {
+    errors.robusta = e.message;
+    data.robusta.stale = true; // nilai terakhir dipertahankan, ditandai tidak segar
+    console.log("Robusta: RM=F tidak tersedia -> stale (nilai terakhir dipertahankan)");
   }
 
-  console.log(JSON.stringify({ date: today, errors }, null, 2));
-  process.exit(Object.keys(errors).length ? 1 : 0);
+  data.meta.lastUpdated = now;
+  data.meta.nextUpdate = "Auto: GitHub Actions";
+  fs.writeFileSync(mPath, JSON.stringify(data, null, 2));
+  console.log("saved data/market-data.json");
+
+  // --- BPS ekspor HS 0901 ---
+  if (BPS_KEY) {
+    try {
+      const j = await getJSON("https://webapi.bps.go.id/v1/api/dataexim/sumber/1/kodehs/0901/th/" + YEAR + "/key/" + BPS_KEY);
+      fs.writeFileSync(path.join(OUT, "ekspor.json"), JSON.stringify({ ...j, fetched: now }, null, 2));
+      console.log("saved data/ekspor.json");
+    } catch (e) { errors.ekspor = e.message; }
+  } else {
+    errors.ekspor = "BPS_API_KEY tidak di-set";
+  }
+
+  console.log(JSON.stringify({ date: now, errors }, null, 2));
+  process.exit(0); // jangan gagal total bila satu sumber error — file tetap ter-commit
 })();
