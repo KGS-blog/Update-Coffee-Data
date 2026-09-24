@@ -1,4 +1,4 @@
-// QCO Data Pipeline — fetch.js — v2026.09.24-17
+// QCO Data Pipeline — fetch.js — v2026.09.24-18
 // Repo: KGS-blog/Update-Coffee-Data — dijalankan via GitHub Actions (.github/workflows/)
 // Output:
 //   data/market-data.json  -> format lama dipertahankan (arabica/robusta/idrUsd + history)
@@ -118,7 +118,7 @@ function round2(n) { return Math.round(n * 100) / 100; }
     console.log("saved data/harga-harian.json:", seri.length, "titik");
   } catch (e) { errors.harian = e.message; }
 
-  // --- Berita kopi (NewsData.io utama, fallback Google News RSS) — v2026.09.24-17 ---
+  // --- Berita kopi (NewsData.io utama, fallback Google News RSS) — v2026.09.24-18 ---
   {
     const ND_KEY = process.env.NEWSDATA_KEY || "";
     const err = {};
@@ -237,7 +237,7 @@ function round2(n) { return Math.round(n * 100) / 100; }
     }
   }
 
-  // --- USDA FAS PSD — v2026.09.24-17 ---
+  // --- USDA FAS PSD — v2026.09.24-18 ---
   // Berdasarkan SDK terbukti (chhayly/usda-fas-sdk, April 2026):
   // host BARU api.fas.usda.gov, header X-Api-Key + Accept: application/json
   {
@@ -297,6 +297,15 @@ function round2(n) { return Math.round(n * 100) / 100; }
       }
 
       if (rows && rows.arr.length) {
+        // peta attributeId -> nama bila baris hanya punya ID
+        let attrMap = {};
+        try {
+          const at = await usdaGet(BASE + "/api/psd/commodity/" + coffeeCode + "/attributes");
+          const atArr = Array.isArray(at) ? at : [];
+          atArr.forEach(function (a) { attrMap[String(a.attributeId || a.id)] = a.attributeName || a.attributeDescription || a.name || ""; });
+          coba.push("attributes:" + atArr.length);
+        } catch (e3) { coba.push("attributes:ERR " + e3.message); }
+
         const idn = rows.arr.filter(function (r) {
           const cc = String(r.countryCode !== undefined ? r.countryCode : "");
           const g = String(r.gencCode || r.genc || "").toUpperCase();
@@ -304,19 +313,27 @@ function round2(n) { return Math.round(n * 100) / 100; }
           return cc === idCode || cc === "536" || g === "ID" || n.indexOf("INDONESIA") !== -1;
         });
         const pakai = idn.length ? idn : rows.arr.slice(0, 50);
+        const ambil = function () {
+          for (let i = 0; i < arguments.length - 1; i++) {
+            const v = arguments[i];
+            if (v !== undefined && v !== null && v !== "") return v;
+          }
+          return "";
+        };
         const flat = pakai.map(function (r) {
           return {
-            tahun: r.marketYear || r.MarketYear || r.year,
-            atribut: r.attributeName || r.attribute || "",
-            nilai: (r.value !== undefined ? r.value : r.Value),
-            satuan: r.unitDescription || r.unitDescription || r.unit || "",
-            negara: r.countryName || r.name || r.gencCode || ""
+            tahun: ambil(r.marketYear, r.MarketYear, r.year, r.Year),
+            atribut: ambil(r.attributeName, r.attributeDescription, r.publicAttributeName, r.attribute, (r.attributeId !== undefined ? attrMap[String(r.attributeId)] : ""), r.name),
+            nilai: ambil(r.value, r.Value, r.Value1, r.val),
+            satuan: ambil(r.unitDescription, r.unit, r.UnitDescription, r.unitName),
+            negara: ambil(r.countryName, r.name, r.gencCode, r.country)
           };
-        }).filter(function (r) { return r.atribut; });
+        }).filter(function (r) { return String(r.atribut) !== ""; });
         fs.writeFileSync(path.join(OUT, "psd.json"), JSON.stringify({
           sumber: "USDA FAS PSD — " + rows.sumber,
           percobaan: coba,
-          data: flat,
+          contohBaris: rows.arr[0],
+          data: flat.length ? flat : pakai,
           fetched: now
         }, null, 2));
         console.log("saved data/psd.json:", flat.length, "atribut |", coba.join(" | "));
