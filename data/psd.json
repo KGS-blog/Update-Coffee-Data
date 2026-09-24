@@ -1,1 +1,10 @@
-{"status":"Error","message":"Gagal semua varian: countries:251 id=ID | /api/psd/commodity/0711000/country/ID/year/2026 -> 0 | /api/psd/commodity/0711000/country/all/year/2026 -> 0 | /api/psd/commodity/0711000/world/year/2026 -> 0 | /api/psd/commodity/0711000/country/ID/year/2025 -> 0 | /api/psd/commodity/0711000/country/all/year/2025 -> 0 | /api/psd/commodity/0711000/world/year/2025 -> 0","data":[],"fetched":"2026-09-24T16:35:20.876Z"}
+{
+  "sumber": "USDA FAS PSD — /api/psd/commodity/0711100/country/ID/year/2026",
+  "percobaan": [
+    "countries:251 id=ID",
+    "commodities:63 kopi=[\"0711100:Coffee, Green\"]",
+    "/api/psd/commodity/0711100/country/ID/year/2026 -> 19"
+  ],
+  "data": [],
+  "fetched": "2026-09-24T16:42:51.537Z"
+}
