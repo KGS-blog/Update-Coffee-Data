@@ -1,4 +1,4 @@
-# QCO Data Pipeline — update-coffee-data.yml — v2026.09.24-4
+# QCO Data Pipeline — update-coffee-data.yml — v2026.09.24-13
 # WAJIB berada di: .github/workflows/update-coffee-data.yml
 # Cron: tiap 6 jam (harga) — BPS ikut ter-fetch tiap run (aman, tidak menambah beban berarti)
 name: Update Coffee Market Data
@@ -22,6 +22,8 @@ jobs:
       - name: Fetch latest data
         env:
           BPS_API_KEY: ${{ secrets.BPS_API_KEY }}
+          NEWSDATA_KEY: ${{ secrets.NEWSDATA_KEY }}
+          USDA_API_KEY: ${{ secrets.USDA_API_KEY }}
         run: node scripts/fetch.js
       - name: Commit and push if changed
         run: |
