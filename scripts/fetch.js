@@ -1,4 +1,4 @@
-// QCO Data Pipeline — fetch.js — v2026.09.26-3
+// QCO Data Pipeline — fetch.js — v2026.09.26-4
 // Repo: KGS-blog/Update-Coffee-Data — dijalankan via GitHub Actions (.github/workflows/)
 // Output:
 //   data/market-data.json  -> format lama dipertahankan (arabica/robusta/idrUsd + history)
@@ -118,7 +118,7 @@ function round2(n) { return Math.round(n * 100) / 100; }
     console.log("saved data/harga-harian.json:", seri.length, "titik");
   } catch (e) { errors.harian = e.message; }
 
-  // --- Berita kopi (NewsData.io utama, fallback Google News RSS) — v2026.09.26-3 ---
+  // --- Berita kopi (NewsData.io utama, fallback Google News RSS) — v2026.09.26-4 ---
   {
     const ND_KEY = process.env.NEWSDATA_KEY || "";
     const err = {};
@@ -207,6 +207,19 @@ function round2(n) { return Math.round(n * 100) / 100; }
         fs.writeFileSync(arsipPath, JSON.stringify(arsip, null, 1));
         console.log("saved data/arsip/berita-" + bln + ".json:", arsip.artikel.length, "artikel terkumpul");
       } catch (eA) { console.log("arsip skip:", eA.message); }
+      // MASTER KUMULATIF untuk tab Clustering: dedupe by tautan, FIFO cap 500
+      try {
+        const ALL_PATH = path.join(OUT, "berita-all.json");
+        let all = { artikel: [] };
+        try { all = JSON.parse(fs.readFileSync(ALL_PATH, "utf8")); } catch (e0) {}
+        const seenA = new Set((all.artikel || []).map(function (a) { return String(a.tautan || a.judul); }));
+        simpan.forEach(function (a) { const k = String(a.tautan || a.judul); if (!seenA.has(k)) { all.artikel.push(a); seenA.add(k); } });
+        all.artikel.sort(function (a, b) { return (Date.parse(b.tanggal) || 0) - (Date.parse(a.tanggal) || 0); });
+        if (all.artikel.length > 500) all.artikel = all.artikel.slice(0, 500);
+        all.fetched = now;
+        fs.writeFileSync(ALL_PATH, JSON.stringify(all));
+        console.log("saved data/berita-all.json:", all.artikel.length, "artikel kumulatif");
+      } catch (eAll) { console.log("berita-all skip:", eAll.message); }
       console.log("saved data/berita.json:", simpan.length, "artikel dari", sumberBerita);
     } else {
       const pesan = JSON.stringify(err);
@@ -216,7 +229,7 @@ function round2(n) { return Math.round(n * 100) / 100; }
     }
   }
 
-  // --- USDA FAS PSD — v2026.09.26-3 ---
+  // --- USDA FAS PSD — v2026.09.26-4 ---
   // Berdasarkan SDK terbukti (chhayly/usda-fas-sdk, April 2026):
   // host BARU api.fas.usda.gov, header X-Api-Key + Accept: application/json
   {
@@ -330,6 +343,42 @@ function round2(n) { return Math.round(n * 100) / 100; }
       }
     }
   }
+
+  // --- maintenance arsip analisis: gabung analisis-berita.json terbaru ke arsip (FIFO 6 batch) ---
+  try {
+    const ARSIP_A = path.join(OUT, "analisis-arsip.json");
+    let arsip = { batas_batch: 6, batches: [] };
+    try { arsip = JSON.parse(fs.readFileSync(ARSIP_A, "utf8")); } catch (e0) {}
+    let baru = null;
+    try { baru = JSON.parse(fs.readFileSync(path.join(OUT, "analisis-berita.json"), "utf8")); } catch (e1) {}
+    if (baru && Array.isArray(baru.grup)) {
+      const key = String(baru.periode || baru.dibuat || "");
+      arsip.batches = (arsip.batches || []).filter(function (b) { return String(b.periode || b.dibuat || "") !== key; });
+      arsip.batches.unshift({ dibuat: baru.dibuat, periode: baru.periode, jumlah_berita: baru.jumlah_berita, grup: baru.grup });
+      // impor file batch lama (analisis-batch-*.json) sekali jalan, lalu file dihapus
+      try {
+        const files = fs.readdirSync(OUT).filter(function (x) { return /^analisis-batch-.*\.json$/.test(x); });
+        files.forEach(function (fn) {
+          try {
+            const b = JSON.parse(fs.readFileSync(path.join(OUT, fn), "utf8"));
+            if (b && Array.isArray(b.grup)) {
+              const key = String(b.periode || b.dibuat || fn);
+              if (!arsip.batches.some(function (x) { return String(x.periode || x.dibuat || "") === key; })) {
+                arsip.batches.unshift({ dibuat: b.dibuat, periode: b.periode, jumlah_berita: b.jumlah_berita, grup: b.grup });
+                console.log("impor batch:", fn, "->", b.periode);
+              }
+              fs.unlinkSync(path.join(OUT, fn));
+            }
+          } catch (eB) { console.log("impor gagal", fn, eB.message); }
+        });
+      } catch (eScan) {}
+      const cap = arsip.batas_batch || 6;
+      arsip.batches = arsip.batches.slice(0, cap);
+      arsip.diperbarui = now;
+      fs.writeFileSync(ARSIP_A, JSON.stringify(arsip, null, 1));
+      console.log("saved data/analisis-arsip.json:", arsip.batches.length, "batch");
+    }
+  } catch (eAr) { console.log("arsip analisis skip:", eAr.message); }
 
   data.meta.lastUpdated = now;
   data.meta.nextUpdate = "Auto: GitHub Actions";
