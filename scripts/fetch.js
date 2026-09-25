@@ -1,4 +1,4 @@
-// QCO Data Pipeline — fetch.js — v2026.09.25-4
+// QCO Data Pipeline — fetch.js — v2026.09.25-5
 // Repo: KGS-blog/Update-Coffee-Data — dijalankan via GitHub Actions (.github/workflows/)
 // Output:
 //   data/market-data.json  -> format lama dipertahankan (arabica/robusta/idrUsd + history)
@@ -118,7 +118,7 @@ function round2(n) { return Math.round(n * 100) / 100; }
     console.log("saved data/harga-harian.json:", seri.length, "titik");
   } catch (e) { errors.harian = e.message; }
 
-  // --- Berita kopi (NewsData.io utama, fallback Google News RSS) — v2026.09.25-4 ---
+  // --- Berita kopi (NewsData.io utama, fallback Google News RSS) — v2026.09.25-5 ---
   {
     const ND_KEY = process.env.NEWSDATA_KEY || "";
     const err = {};
@@ -132,9 +132,12 @@ function round2(n) { return Math.round(n * 100) / 100; }
       return r.text();
     }
     if (ND_KEY) {
+      const enc = encodeURIComponent;
       const urls = [
-        "https://newsdata.io/api/1/latest?apikey=" + ND_KEY + "&q=kopi&country=id&language=id&size=25",
-        "https://newsdata.io/api/1/latest?apikey=" + ND_KEY + "&q=kopi&language=id&size=25"
+        "https://newsdata.io/api/1/latest?apikey=" + ND_KEY + "&qInTitle=" + enc("kopi") + "&country=id&language=id&size=25",
+        "https://newsdata.io/api/1/latest?apikey=" + ND_KEY + "&q=" + enc("kopi indonesia") + "&language=id&size=25",
+        "https://newsdata.io/api/1/latest?apikey=" + ND_KEY + "&q=" + enc("arabica OR robusta") + "&language=id&size=25",
+        "https://newsdata.io/api/1/latest?apikey=" + ND_KEY + "&q=kopi&country=id&language=id&size=25"
       ];
       for (const url of urls) {
         try {
@@ -245,7 +248,7 @@ function round2(n) { return Math.round(n * 100) / 100; }
     }
   }
 
-  // --- USDA FAS PSD — v2026.09.25-4 ---
+  // --- USDA FAS PSD — v2026.09.25-5 ---
   // Berdasarkan SDK terbukti (chhayly/usda-fas-sdk, April 2026):
   // host BARU api.fas.usda.gov, header X-Api-Key + Accept: application/json
   {
