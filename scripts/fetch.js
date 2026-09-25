@@ -1,4 +1,4 @@
-// QCO Data Pipeline — fetch.js — v2026.09.25-5
+// QCO Data Pipeline — fetch.js — v2026.09.25-6
 // Repo: KGS-blog/Update-Coffee-Data — dijalankan via GitHub Actions (.github/workflows/)
 // Output:
 //   data/market-data.json  -> format lama dipertahankan (arabica/robusta/idrUsd + history)
@@ -118,7 +118,7 @@ function round2(n) { return Math.round(n * 100) / 100; }
     console.log("saved data/harga-harian.json:", seri.length, "titik");
   } catch (e) { errors.harian = e.message; }
 
-  // --- Berita kopi (NewsData.io utama, fallback Google News RSS) — v2026.09.25-5 ---
+  // --- Berita kopi (NewsData.io utama, fallback Google News RSS) — v2026.09.25-6 ---
   {
     const ND_KEY = process.env.NEWSDATA_KEY || "";
     const err = {};
@@ -189,66 +189,7 @@ function round2(n) { return Math.round(n * 100) / 100; }
     }
   }
 
-  // --- Seri harian 6 bulan (untuk analisis deskriptif di blog) ---
-  try {
-    const j6 = await getJSON("https://query1.finance.yahoo.com/v8/finance/chart/KC=F?interval=1d&range=6mo");
-    const r6 = j6 && j6.chart && j6.chart.result && j6.chart.result[0];
-    const ts = r6 && r6.timestamp;
-    const cl = r6 && r6.indicators && r6.indicators.quote && r6.indicators.quote[0].close;
-    const seri = [];
-    if (ts && cl) {
-      for (let i = 0; i < ts.length; i++) {
-        if (cl[i] == null) continue;
-        let p = cl[i];
-        if (p > 10 && p < 100) p = p * 100;
-        seri.push([ts[i], round2(p)]);
-      }
-    }
-    fs.writeFileSync(path.join(OUT, "harga-harian.json"), JSON.stringify({ simbol: "KC=F", unit: "cents/lb", jumlahTitik: seri.length, seri: seri, fetched: now }));
-    console.log("saved data/harga-harian.json:", seri.length, "titik");
-  } catch (e) { errors.harian = e.message; }
-
-  // --- Berita kopi (NewsData.io utama, fallback Google News RSS) ---
-  {
-    const ND_KEY = process.env.NEWSDATA_KEY || "";
-    let artikel = null;
-    let sumberBerita = "Google News RSS";
-    if (ND_KEY) {
-      try {
-        const jn = await getJSON("https://newsdata.io/api/1/latest?apikey=" + ND_KEY + "&q=kopi&country=id&language=id&size=8");
-        if (jn && jn.status === "success" && Array.isArray(jn.results) && jn.results.length) {
-          artikel = jn.results.map(function (a) {
-            return { judul: a.title, tautan: a.link, tanggal: a.pubDate, sumber: a.source_name || a.source_id || "" };
-          });
-          sumberBerita = "NewsData.io";
-        } else {
-          console.log("NewsData.io tidak sukses:", JSON.stringify(jn).slice(0, 200));
-        }
-      } catch (e2) { console.log("NewsData.io error (fallback ke RSS):", e2.message); }
-    }
-    if (!artikel || !artikel.length) {
-      try {
-        const xml = await getText("https://news.google.com/rss/search?q=kopi+indonesia&hl=id&gl=ID&ceid=ID:id");
-        const items = xml.match(/<item>[\s\S]*?<\/item>/g) || [];
-        const clean = function (s) { return String(s || "").replace(/<!\[CDATA\[|\]\]>/g, "").replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&#39;/g, "'").trim(); };
-        artikel = items.slice(0, 8).map(function (it) {
-          const ti = (it.match(/<title>([\s\S]*?)<\/title>/) || [])[1] || "";
-          const li = (it.match(/<link>([\s\S]*?)<\/link>/) || [])[1] || "";
-          const pd = (it.match(/<pubDate>([\s\S]*?)<\/pubDate>/) || [])[1] || "";
-          const sr = (it.match(/<source[^>]*>([\s\S]*?)<\/source>/) || [])[1] || "";
-          return { judul: clean(ti), tautan: li.trim(), tanggal: pd, sumber: clean(sr) };
-        });
-      } catch (e3) { errors.berita = e3.message; }
-    }
-    if (artikel && artikel.length) {
-      fs.writeFileSync(path.join(OUT, "berita.json"), JSON.stringify({ sumber: sumberBerita, artikel: artikel, fetched: now }));
-      console.log("saved data/berita.json:", artikel.length, "artikel dari", sumberBerita);
-    } else {
-      errors.berita = errors.berita || "kedua sumber kosong";
-    }
-  }
-
-  // --- USDA FAS PSD — v2026.09.25-5 ---
+  // --- USDA FAS PSD — v2026.09.25-6 ---
   // Berdasarkan SDK terbukti (chhayly/usda-fas-sdk, April 2026):
   // host BARU api.fas.usda.gov, header X-Api-Key + Accept: application/json
   {
