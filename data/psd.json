@@ -4,7 +4,8 @@
     "countries:251 id=ID",
     "commodities:63 kopi=[\"0711100:Coffee, Green\"]",
     "/api/psd/commodity/0711100/country/ID/year/2026 -> 19",
-    "attributes:ERR HTTP 404"
+    "attributes:85",
+    "units:42"
   ],
   "contohBaris": {
     "commodityCode": "0711100",
@@ -18,195 +19,138 @@
   },
   "data": [
     {
-      "commodityCode": "0711100",
-      "countryCode": "ID",
-      "marketYear": "2026",
-      "calendarYear": "2026",
-      "month": "07",
-      "attributeId": 20,
-      "unitId": 2,
-      "value": 751
+      "tahun": "2026",
+      "atribut": "Beginning Stocks",
+      "nilai": 751,
+      "satuan": "(1000 60 KG BAGS)   ",
+      "negara": ""
     },
     {
-      "commodityCode": "0711100",
-      "countryCode": "ID",
-      "marketYear": "2026",
-      "calendarYear": "2026",
-      "month": "07",
-      "attributeId": 29,
-      "unitId": 2,
-      "value": 1380
+      "tahun": "2026",
+      "atribut": "Arabica Production",
+      "nilai": 1380,
+      "satuan": "(1000 60 KG BAGS)   ",
+      "negara": ""
     },
     {
-      "commodityCode": "0711100",
-      "countryCode": "ID",
-      "marketYear": "2026",
-      "calendarYear": "2026",
-      "month": "07",
-      "attributeId": 53,
-      "unitId": 2,
-      "value": 10000
+      "tahun": "2026",
+      "atribut": "Robusta Production",
+      "nilai": 10000,
+      "satuan": "(1000 60 KG BAGS)   ",
+      "negara": ""
     },
     {
-      "commodityCode": "0711100",
-      "countryCode": "ID",
-      "marketYear": "2026",
-      "calendarYear": "2026",
-      "month": "07",
-      "attributeId": 56,
-      "unitId": 2,
-      "value": 0
+      "tahun": "2026",
+      "atribut": "Other Production",
+      "nilai": 0,
+      "satuan": "(1000 60 KG BAGS)   ",
+      "negara": ""
     },
     {
-      "commodityCode": "0711100",
-      "countryCode": "ID",
-      "marketYear": "2026",
-      "calendarYear": "2026",
-      "month": "07",
-      "attributeId": 28,
-      "unitId": 2,
-      "value": 11380
+      "tahun": "2026",
+      "atribut": "Production",
+      "nilai": 11380,
+      "satuan": "(1000 60 KG BAGS)   ",
+      "negara": ""
     },
     {
-      "commodityCode": "0711100",
-      "countryCode": "ID",
-      "marketYear": "2026",
-      "calendarYear": "2026",
-      "month": "07",
-      "attributeId": 58,
-      "unitId": 2,
-      "value": 400
+      "tahun": "2026",
+      "atribut": "Bean Imports",
+      "nilai": 400,
+      "satuan": "(1000 60 KG BAGS)   ",
+      "negara": ""
     },
     {
-      "commodityCode": "0711100",
-      "countryCode": "ID",
-      "marketYear": "2026",
-      "calendarYear": "2026",
-      "month": "07",
-      "attributeId": 75,
-      "unitId": 2,
-      "value": 20
+      "tahun": "2026",
+      "atribut": "Roast & Ground Imports",
+      "nilai": 20,
+      "satuan": "(1000 60 KG BAGS)   ",
+      "negara": ""
     },
     {
-      "commodityCode": "0711100",
-      "countryCode": "ID",
-      "marketYear": "2026",
-      "calendarYear": "2026",
-      "month": "07",
-      "attributeId": 82,
-      "unitId": 2,
-      "value": 1000
+      "tahun": "2026",
+      "atribut": "Soluble Imports",
+      "nilai": 1000,
+      "satuan": "(1000 60 KG BAGS)   ",
+      "negara": ""
     },
     {
-      "commodityCode": "0711100",
-      "countryCode": "ID",
-      "marketYear": "2026",
-      "calendarYear": "2026",
-      "month": "07",
-      "attributeId": 57,
-      "unitId": 2,
-      "value": 1420
+      "tahun": "2026",
+      "atribut": "Imports",
+      "nilai": 1420,
+      "satuan": "(1000 60 KG BAGS)   ",
+      "negara": ""
     },
     {
-      "commodityCode": "0711100",
-      "countryCode": "ID",
-      "marketYear": "2026",
-      "calendarYear": "2026",
-      "month": "07",
-      "attributeId": 86,
-      "unitId": 2,
-      "value": 13551
+      "tahun": "2026",
+      "atribut": "Total Supply",
+      "nilai": 13551,
+      "satuan": "(1000 60 KG BAGS)   ",
+      "negara": ""
     },
     {
-      "commodityCode": "0711100",
-      "countryCode": "ID",
-      "marketYear": "2026",
-      "calendarYear": "2026",
-      "month": "07",
-      "attributeId": 90,
-      "unitId": 2,
-      "value": 7000
+      "tahun": "2026",
+      "atribut": "Bean Exports",
+      "nilai": 7000,
+      "satuan": "(1000 60 KG BAGS)   ",
+      "negara": ""
     },
     {
-      "commodityCode": "0711100",
-      "countryCode": "ID",
-      "marketYear": "2026",
-      "calendarYear": "2026",
-      "month": "07",
-      "attributeId": 107,
-      "unitId": 2,
-      "value": 50
+      "tahun": "2026",
+      "atribut": "Roast & Ground Exports",
+      "nilai": 50,
+      "satuan": "(1000 60 KG BAGS)   ",
+      "negara": ""
     },
     {
-      "commodityCode": "0711100",
-      "countryCode": "ID",
-      "marketYear": "2026",
-      "calendarYear": "2026",
-      "month": "07",
-      "attributeId": 114,
-      "unitId": 2,
-      "value": 1000
+      "tahun": "2026",
+      "atribut": "Soluble Exports",
+      "nilai": 1000,
+      "satuan": "(1000 60 KG BAGS)   ",
+      "negara": ""
     },
     {
-      "commodityCode": "0711100",
-      "countryCode": "ID",
-      "marketYear": "2026",
-      "calendarYear": "2026",
-      "month": "07",
-      "attributeId": 88,
-      "unitId": 2,
-      "value": 8050
+      "tahun": "2026",
+      "atribut": "Exports",
+      "nilai": 8050,
+      "satuan": "(1000 60 KG BAGS)   ",
+      "negara": ""
     },
     {
-      "commodityCode": "0711100",
-      "countryCode": "ID",
-      "marketYear": "2026",
-      "calendarYear": "2026",
-      "month": "07",
-      "attributeId": 141,
-      "unitId": 2,
-      "value": 3280
+      "tahun": "2026",
+      "atribut": "Rst,Ground Dom. Consum",
+      "nilai": 3280,
+      "satuan": "(1000 60 KG BAGS)   ",
+      "negara": ""
     },
     {
-      "commodityCode": "0711100",
-      "countryCode": "ID",
-      "marketYear": "2026",
-      "calendarYear": "2026",
-      "month": "07",
-      "attributeId": 154,
-      "unitId": 2,
-      "value": 1550
+      "tahun": "2026",
+      "atribut": "Soluble Dom. Cons.",
+      "nilai": 1550,
+      "satuan": "(1000 60 KG BAGS)   ",
+      "negara": ""
     },
     {
-      "commodityCode": "0711100",
-      "countryCode": "ID",
-      "marketYear": "2026",
-      "calendarYear": "2026",
-      "month": "07",
-      "attributeId": 125,
-      "unitId": 2,
-      "value": 4830
+      "tahun": "2026",
+      "atribut": "Domestic Consumption",
+      "nilai": 4830,
+      "satuan": "(1000 60 KG BAGS)   ",
+      "negara": ""
     },
     {
-      "commodityCode": "0711100",
-      "countryCode": "ID",
-      "marketYear": "2026",
-      "calendarYear": "2026",
-      "month": "07",
-      "attributeId": 176,
-      "unitId": 2,
-      "value": 671
+      "tahun": "2026",
+      "atribut": "Ending Stocks",
+      "nilai": 671,
+      "satuan": "(1000 60 KG BAGS)   ",
+      "negara": ""
     },
     {
-      "commodityCode": "0711100",
-      "countryCode": "ID",
-      "marketYear": "2026",
-      "calendarYear": "2026",
-      "month": "07",
-      "attributeId": 178,
-      "unitId": 2,
-      "value": 13551
+      "tahun": "2026",
+      "atribut": "Total Distribution",
+      "nilai": 13551,
+      "satuan": "(1000 60 KG BAGS)   ",
+      "negara": ""
     }
   ],
-  "fetched": "2026-09-25T04:10:55.303Z"
+  "fetched": "2026-09-25T07:23:13.080Z"
 }
