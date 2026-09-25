@@ -1,4 +1,4 @@
-// QCO Data Pipeline — fetch.js — v2026.09.26-5
+// QCO Data Pipeline — fetch.js — v2026.09.26-7
 // Repo: KGS-blog/Update-Coffee-Data — dijalankan via GitHub Actions (.github/workflows/)
 // Output:
 //   data/market-data.json  -> format lama dipertahankan (arabica/robusta/idrUsd + history)
@@ -118,7 +118,7 @@ function round2(n) { return Math.round(n * 100) / 100; }
     console.log("saved data/harga-harian.json:", seri.length, "titik");
   } catch (e) { errors.harian = e.message; }
 
-  // --- Berita kopi (NewsData.io utama, fallback Google News RSS) — v2026.09.26-5 ---
+  // --- Berita kopi (NewsData.io utama, fallback Google News RSS) — v2026.09.26-7 ---
   {
     const ND_KEY = process.env.NEWSDATA_KEY || "";
     const err = {};
@@ -132,7 +132,7 @@ function round2(n) { return Math.round(n * 100) / 100; }
       const arrE = (je && Array.isArray(je.artikel)) ? je.artikel : [];
       if (arrE.length) {
         pool.push.apply(pool, arrE.map(function (a) {
-          return { judul: a.judul, tautan: a.tautan, tanggal: a.tanggal, sumber: a.sumber || "Engine KGS", ringkasan: a.ringkasan || "" };
+          return { judul: a.judul, tautan: a.tautan, tanggal: a.tanggal, sumber: a.sumber || "Engine KGS", ringkasan: a.ringkasan || "", asal: "engine" };
         }));
         diag.engine = "sukses " + arrE.length;
       } else { diag.engine = "kosong"; }
@@ -191,8 +191,8 @@ function round2(n) { return Math.round(n * 100) / 100; }
       const relevan = uniq.filter(function (a) { return KOPI_RX.test(String(a.judul || "")); });
       // Komposisi: engine (kurasi) SELALU hadir (kuota 10), sisanya diisi terbaru dari API/RSS
       const byDate = function (a, b) { return (Date.parse(b.tanggal) || 0) - (Date.parse(a.tanggal) || 0); };
-      const eng = relevan.filter(function (a) { return String(a.sumber).indexOf("Engine") !== -1; }).sort(byDate).slice(0, 10);
-      const lain = relevan.filter(function (a) { return String(a.sumber).indexOf("Engine") === -1; }).sort(byDate);
+      const eng = relevan.filter(function (a) { return a.asal === "engine"; }).sort(byDate).slice(0, 10);
+      const lain = relevan.filter(function (a) { return a.asal !== "engine"; }).sort(byDate);
       const seenE = new Set(eng.map(function (a) { return String(a.tautan || a.judul); }));
       let simpan = eng.concat(lain.filter(function (a) { const k = String(a.tautan || a.judul); if (seenE.has(k)) return false; seenE.add(k); return true; })).slice(0, 25);
       sumberBerita = "Engine KGS + NewsData + RSS";
@@ -233,7 +233,7 @@ function round2(n) { return Math.round(n * 100) / 100; }
     }
   }
 
-  // --- USDA FAS PSD — v2026.09.26-5 ---
+  // --- USDA FAS PSD — v2026.09.26-7 ---
   // Berdasarkan SDK terbukti (chhayly/usda-fas-sdk, April 2026):
   // host BARU api.fas.usda.gov, header X-Api-Key + Accept: application/json
   {
@@ -354,34 +354,39 @@ function round2(n) { return Math.round(n * 100) / 100; }
     let arsip = { batas_batch: 6, batches: [] };
     try { arsip = JSON.parse(fs.readFileSync(ARSIP_A, "utf8")); } catch (e0) {}
     let baru = null;
-    try { baru = JSON.parse(fs.readFileSync(path.join(OUT, "analisis-berita.json"), "utf8")); } catch (e1) {}
-    if (baru && Array.isArray(baru.grup)) {
-      const key = String(baru.periode || baru.dibuat || "");
-      arsip.batches = (arsip.batches || []).filter(function (b) { return String(b.periode || b.dibuat || "") !== key; });
-      arsip.batches.unshift({ dibuat: baru.dibuat, periode: baru.periode, jumlah_berita: baru.jumlah_berita, grup: baru.grup });
-      // impor file batch lama (analisis-batch-*.json) sekali jalan, lalu file dihapus
-      try {
-        const files = fs.readdirSync(OUT).filter(function (x) { return /^analisis-batch-.*\.json$/.test(x); });
-        files.forEach(function (fn) {
-          try {
-            const b = JSON.parse(fs.readFileSync(path.join(OUT, fn), "utf8"));
-            if (b && Array.isArray(b.grup)) {
-              const key = String(b.periode || b.dibuat || fn);
-              if (!arsip.batches.some(function (x) { return String(x.periode || x.dibuat || "") === key; })) {
-                arsip.batches.unshift({ dibuat: b.dibuat, periode: b.periode, jumlah_berita: b.jumlah_berita, grup: b.grup });
-                console.log("impor batch:", fn, "->", b.periode);
-              }
-              fs.unlinkSync(path.join(OUT, fn));
+    try { baru = JSON.parse(fs.readFileSync(path.join(OUT, "analisis-berita.json"), "utf8")); } catch (e1) { console.log("arsip: analisis-berita.json tidak terbaca:", e1.message); }
+    // terima dua format: batch tunggal ({grup:[...]}) atau arsip ({batches:[...]})
+    const daftarBaru = [];
+    if (baru && Array.isArray(baru.grup)) daftarBaru.push(baru);
+    if (baru && Array.isArray(baru.batches)) baru.batches.forEach(function (b) { if (b && Array.isArray(b.grup)) daftarBaru.push(b); });
+    daftarBaru.forEach(function (b) {
+      const key = String(b.periode || b.dibuat || "");
+      arsip.batches = (arsip.batches || []).filter(function (x) { return String(x.periode || x.dibuat || "") !== key; });
+      arsip.batches.unshift({ dibuat: b.dibuat, periode: b.periode, jumlah_berita: b.jumlah_berita, grup: b.grup });
+    });
+    if (daftarBaru.length) console.log("arsip: batch dari analisis-berita.json:", daftarBaru.length);
+    // impor file batch lama (analisis-batch-*.json) SELALU jalan (di luar penjagaan), lalu file dihapus
+    try {
+      const files = fs.readdirSync(OUT).filter(function (x) { return /^analisis-batch-.*\.json$/.test(x); });
+      files.forEach(function (fn) {
+        try {
+          const b = JSON.parse(fs.readFileSync(path.join(OUT, fn), "utf8"));
+          if (b && Array.isArray(b.grup)) {
+            const key = String(b.periode || b.dibuat || fn);
+            if (!arsip.batches.some(function (x) { return String(x.periode || x.dibuat || "") === key; })) {
+              arsip.batches.unshift({ dibuat: b.dibuat, periode: b.periode, jumlah_berita: b.jumlah_berita, grup: b.grup });
+              console.log("impor batch:", fn, "->", b.periode);
             }
-          } catch (eB) { console.log("impor gagal", fn, eB.message); }
-        });
-      } catch (eScan) {}
-      const cap = arsip.batas_batch || 6;
-      arsip.batches = arsip.batches.slice(0, cap);
-      arsip.diperbarui = now;
-      fs.writeFileSync(ARSIP_A, JSON.stringify(arsip, null, 1));
-      console.log("saved data/analisis-arsip.json:", arsip.batches.length, "batch");
-    }
+            fs.unlinkSync(path.join(OUT, fn));
+          }
+        } catch (eB) { console.log("impor gagal", fn, eB.message); }
+      });
+    } catch (eScan) {}
+    const cap = arsip.batas_batch || 6;
+    arsip.batches = (arsip.batches || []).slice(0, cap);
+    arsip.diperbarui = now;
+    fs.writeFileSync(ARSIP_A, JSON.stringify(arsip, null, 1));
+    console.log("saved data/analisis-arsip.json:", arsip.batches.length, "batch");
   } catch (eAr) { console.log("arsip analisis skip:", eAr.message); }
 
   data.meta.lastUpdated = now;
@@ -393,7 +398,11 @@ function round2(n) { return Math.round(n * 100) / 100; }
   {
     try {
       const jb = await getJSON("https://kgs-blog.github.io/coffee-feed/bps.json");
-      const arrB = Array.isArray(jb) ? jb : ((jb && Array.isArray(jb.data)) ? jb.data : ((jb && Array.isArray(jb.bulanan)) ? jb.bulanan : []));
+      let arrB = Array.isArray(jb) ? jb : ((jb && Array.isArray(jb.data)) ? jb.data : ((jb && Array.isArray(jb.bulanan)) ? jb.bulanan : []));
+      if (!arrB.length && jb && typeof jb === "object") {
+        const vals = Object.keys(jb).map(function (k) { return jb[k]; }).filter(Array.isArray);
+        if (vals.length) arrB = vals.reduce(function (a, b2) { return a.length >= b2.length ? a : b2; }, []);
+      }
       if (arrB.length) {
         const ambB = function () { for (let i = 0; i < arguments.length - 1; i++) { const v = arguments[i]; if (v !== undefined && v !== null && v !== "") return v; } return ""; };
         const flatB = arrB.map(function (r) {
