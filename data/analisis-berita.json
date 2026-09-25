@@ -2,14 +2,14 @@
  "dibuat": "2026-09-25",
  "periode": "23–25 September 2026",
  "jumlah_berita": 25,
- "catatan": "Analisis ditulis oleh Ganjar Satyanagara dari penggabungan berita terkini. Untuk memperbarui: jalankan workflow lalu minta analisis baru.",
+ "catatan": "Analisis ditulis oleh Ganjar Satyanagara dari penggabungan berita terkini. Berita yang konteksnya di luar Indonesia dicatat sebagai konteks global dan tidak dijadikan bukti untuk pasar lokal. Untuk memperbarui: jalankan workflow lalu minta analisis baru.",
  "grup": [
   {
    "id": "konsumsi-domestik",
    "judul": "Kedai Kopi Jadi Ruang Hidup: Sinyal Kuat Permintaan Domestik",
    "ringkasan": "12 dari 25 berita pekan ini tentang kedai dan konsumsi — kopi dijadikan ruang kerja dan gaya hidup generasi muda, dengan harga masuk menyentuh Rp10 ribuan.",
-   "isi": "<p style=\"margin-bottom: 18px; text-align: left;\">Dua puluh lima berita kopi pekan ini (23–25 September) menunjukkan satu pola yang tidak bisa dianggap remeh: <strong>liputan kedai dan konsumsi mendominasi jauh di atas berita komoditas</strong>. Dari Senayan hingga Surabaya Selatan, dari kisah Litterly Coffee yang berawal dari hobi hingga kolaborasi Fore Coffee dengan Tahilalats — media massa sedang menulis tentang kopi sebagai <em>ruang hidup</em>, bukan sekadar minuman.</p><p style=\"margin-bottom: 18px; text-align: left;\">Ada tiga sinyal yang saya tangkap sebagai praktisi. Pertama, <strong>generasi muda memakai kedai sebagai kantor ketiga</strong> — detik dan investor.id sama-sama menulis soal anak muda yang berlama-lama di coffee shop untuk skripsi hingga kerjaan. Ini menjelaskan pertumbuhan konsumsi domestik yang konsisten: mereka tidak datang untuk biji terbaik, tapi untuk ruang; dan kopi ikut terjual berkali-kali dalam satu sesi.</p><p style=\"margin-bottom: 18px; text-align: left;\">Kedua, <strong>harga masuk semakin rendah</strong>. Tribun Travel menulis Kopi Jhonly Boyolali dengan vibes Bandung mulai Rp10 ribuan. Ini segmen volume — bukan untuk dinikmati sebagai prestise, tapi sebagai kebiasaan harian. Bagi prosesor dan eksportir, segmen inilah yang kelak menyerap robusta domestik ketika harga internasional turun.</p><p style=\"margin-bottom: 18px; text-align: left;\">Ketiga, <strong>kedai lokal kini menarik perhatian global</strong> — sampai John Cena mampir ke sebuah kedai lokal di Bellingham menjadi berita. Ditambah kemitraan RRI dengan Portola Grand Arabia dan pop-up brand lokal, arahnya jelas: kedai adalah medium branding yang hidup.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Artinya untuk bisnis Anda:</strong> permintaan domestik bukan lagi cerita sampingan. Kalau Anda prosesor, pikirkan format RTD dan kemasan siap minum untuk segmen massa; kalau Anda eksportir, ingat bahwa kualitas konsistensi untuk pasar domestik kini sama menantangnya dengan pasar luar — kedai-kedai inilah yang kelak menjadi penentu standar rasa di Indonesia.</p>",
-   "jumlah_sumber": 12,
+   "isi": "<p style=\"margin-bottom: 18px; text-align: left;\">Dua puluh lima berita kopi pekan ini (23–25 September) menunjukkan satu pola yang tidak bisa dianggap remeh: <strong>liputan kedai dan konsumsi mendominasi jauh di atas berita komoditas</strong>. Dari Senayan hingga Surabaya Selatan, dari kisah Litterly Coffee yang berawal dari hobi hingga kolaborasi Fore Coffee dengan Tahilalats — media massa sedang menulis tentang kopi sebagai <em>ruang hidup</em>, bukan sekadar minuman.</p><p style=\"margin-bottom: 18px; text-align: left;\">Ada tiga sinyal yang saya tangkap sebagai praktisi. Pertama, <strong>generasi muda memakai kedai sebagai kantor ketiga</strong> — detik dan investor.id sama-sama menulis soal anak muda yang berlama-lama di coffee shop untuk skripsi hingga kerjaan. Ini menjelaskan pertumbuhan konsumsi domestik yang konsisten: mereka tidak datang untuk biji terbaik, tapi untuk ruang; dan kopi ikut terjual berkali-kali dalam satu sesi.</p><p style=\"margin-bottom: 18px; text-align: left;\">Kedua, <strong>harga masuk semakin rendah</strong>. Tribun Travel menulis Kopi Jhonly Boyolali dengan vibes Bandung mulai Rp10 ribuan. Ini segmen volume — bukan untuk dinikmati sebagai prestise, tapi sebagai kebiasaan harian. Bagi prosesor dan eksportir, segmen inilah yang kelak menyerap robusta domestik ketika harga internasional turun.</p><p style=\"margin-bottom: 18px; text-align: left;\">Ketiga, <strong>kolaborasi brand mulai menjadi mesin kedai</strong> — Fore Coffee menggandeng Tahilalats untuk pop-up dan merchandise edisi terbatas, sementara Kopi Mont Blanc merangkai kemitraan panjang dengan RRI. Arahnya jelas: kedai bukan lagi sekadar tempat minum, melainkan medium branding yang hidup.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Artinya untuk bisnis Anda:</strong> permintaan domestik bukan lagi cerita sampingan. Kalau Anda prosesor, pikirkan format RTD dan kemasan siap minum untuk segmen massa; kalau Anda eksportir, ingat bahwa kualitas konsistensi untuk pasar domestik kini sama menantangnya dengan pasar luar — kedai-kedai inilah yang kelak menjadi penentu standar rasa di Indonesia.</p>",
+   "jumlah_sumber": 11,
    "sumber": [
     {
      "judul": "5 Coffee Shop di Senayan yang Seru Buat Nongkrong, Kopinya Enak!",
@@ -55,11 +55,6 @@
      "judul": "Dari Ngopi ke Investasi: 3 Pelajaran Bisnis Kedai Kopi untuk Gen Z",
      "media": "investor.id",
      "tanggal": "24 Sep 2026"
-    },
-    {
-     "judul": "John Cena terlihat di Bellingham mengunjungi kedai kopi lokal",
-     "media": "rakyatpos.id",
-     "tanggal": "25 Sep 2026"
     },
     {
      "judul": "Fore Coffee gandeng Tahilalats hadirkan pop-up dan merchandise edisi terbatas",
