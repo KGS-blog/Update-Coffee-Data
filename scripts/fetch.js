@@ -1,4 +1,4 @@
-// QCO Data Pipeline — fetch.js — v2026.09.25-6
+// QCO Data Pipeline — fetch.js — v2026.09.26-1
 // Repo: KGS-blog/Update-Coffee-Data — dijalankan via GitHub Actions (.github/workflows/)
 // Output:
 //   data/market-data.json  -> format lama dipertahankan (arabica/robusta/idrUsd + history)
@@ -118,13 +118,25 @@ function round2(n) { return Math.round(n * 100) / 100; }
     console.log("saved data/harga-harian.json:", seri.length, "titik");
   } catch (e) { errors.harian = e.message; }
 
-  // --- Berita kopi (NewsData.io utama, fallback Google News RSS) — v2026.09.25-6 ---
+  // --- Berita kopi (NewsData.io utama, fallback Google News RSS) — v2026.09.26-1 ---
   {
     const ND_KEY = process.env.NEWSDATA_KEY || "";
     const err = {};
     const diag = {};
     let artikel = null;
     let sumberBerita = "";
+    const pool = [];
+    // 0) ENGINE KGS — sumber utama, artikel terkurasi + ringkasan
+    try {
+      const je = await getJSON("https://kgs-blog.github.io/coffee-feed/berita.json");
+      const arrE = (je && Array.isArray(je.artikel)) ? je.artikel : [];
+      if (arrE.length) {
+        pool.push.apply(pool, arrE.map(function (a) {
+          return { judul: a.judul, tautan: a.tautan, tanggal: a.tanggal, sumber: a.sumber || "Engine KGS", ringkasan: a.ringkasan || "" };
+        }));
+        diag.engine = "sukses " + arrE.length;
+      } else { diag.engine = "kosong"; }
+    } catch (eE) { diag.engine = "ERR " + eE.message; }
     const UA_BROWSER = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36";
     async function getTextUA(url) {
       const r = await fetch(url, { headers: { "User-Agent": UA_BROWSER, "Accept": "application/rss+xml,application/xml,text/html,*/*" } });
@@ -143,11 +155,10 @@ function round2(n) { return Math.round(n * 100) / 100; }
         try {
           const jn = await getJSON(url);
           if (jn && jn.status === "success" && Array.isArray(jn.results) && jn.results.length) {
-            artikel = jn.results.map(function (a) {
+            pool.push.apply(pool, jn.results.map(function (a) {
               return { judul: a.title, tautan: a.link, tanggal: a.pubDate, sumber: a.source_name || a.source_id || "" };
-            });
-            sumberBerita = "NewsData.io";
-            diag.newsdata = "sukses " + artikel.length;
+            }));
+            diag.newsdata = "sukses " + jn.results.length;
             break;
           }
           diag.newsdata = "status=" + (jn && jn.status) + " " + JSON.stringify(jn).slice(0, 160);
@@ -156,29 +167,33 @@ function round2(n) { return Math.round(n * 100) / 100; }
     } else {
       diag.newsdata = "key tidak di-set";
     }
-    if (!artikel) {
+    if (pool.length < 25) {
       try {
         const xml = await getTextUA("https://news.google.com/rss/search?q=%22kopi%22+OR+%22coffee%22&hl=id&gl=ID&ceid=ID:id");
         const items = xml.match(/<item>[\s\S]*?<\/item>/g) || [];
         if (!items.length) err.rss = "RSS merespons tapi 0 item (kemungkinan halaman consent Google)";
         const clean = function (s) { return String(s || "").replace(/<!\[CDATA\[|\]\]>/g, "").replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&#39;/g, "'").trim(); };
-        artikel = items.slice(0, 25).map(function (it) {
+        pool.push.apply(pool, items.slice(0, 25).map(function (it) {
           const ti = (it.match(/<title>([\s\S]*?)<\/title>/) || [])[1] || "";
           const li = (it.match(/<link>([\s\S]*?)<\/link>/) || [])[1] || "";
           const pd = (it.match(/<pubDate>([\s\S]*?)<\/pubDate>/) || [])[1] || "";
           const sr = (it.match(/<source[^>]*>([\s\S]*?)<\/source>/) || [])[1] || "";
           return { judul: clean(ti), tautan: li.trim(), tanggal: pd, sumber: clean(sr) };
-        });
-        if (artikel.length) sumberBerita = "Google News RSS";
+        }));
+        
       } catch (e3) { err.rss = e3.message; }
     }
+    artikel = pool;
     if (artikel && artikel.length) {
-      // hanya simpan berita yang benar-benar berkopi (judul mengandung kata kopi/coffee)
       const KOPI_RX = /kopi|coffee|arabica|robusta/i;
-      // TANPA fallback: hanya simpan yang benar-benar berkopi. Kosong = jujur, bukan junk.
-      const simpan = artikel.filter(function (a) { return KOPI_RX.test(String(a.judul || "")); });
-      console.log("berita relevan:", simpan.length, "dari", artikel.length);
-      diag.rss = artikel.length;
+      const seen = new Set();
+      const uniq = artikel.filter(function (a) { const k = String(a.tautan || a.judul); if (seen.has(k)) return false; seen.add(k); return true; });
+      let simpan = uniq.filter(function (a) { return KOPI_RX.test(String(a.judul || "")); });
+      simpan.sort(function (a, b) { return (Date.parse(b.tanggal) || 0) - (Date.parse(a.tanggal) || 0); });
+      simpan = simpan.slice(0, 25);
+      sumberBerita = "Engine KGS + NewsData + RSS";
+      console.log("berita relevan:", simpan.length, "dari", uniq.length);
+      diag.rss = "ok";
       fs.writeFileSync(path.join(OUT, "berita.json"), JSON.stringify({ sumber: sumberBerita, artikel: simpan, diagnostik: diag, fetched: now }));
       // ARSIP BULANAN: kumulatif per bulan, dedupe by tautan
       try {
@@ -201,7 +216,7 @@ function round2(n) { return Math.round(n * 100) / 100; }
     }
   }
 
-  // --- USDA FAS PSD — v2026.09.25-6 ---
+  // --- USDA FAS PSD — v2026.09.26-1 ---
   // Berdasarkan SDK terbukti (chhayly/usda-fas-sdk, April 2026):
   // host BARU api.fas.usda.gov, header X-Api-Key + Accept: application/json
   {
@@ -321,7 +336,34 @@ function round2(n) { return Math.round(n * 100) / 100; }
   fs.writeFileSync(mPath, JSON.stringify(data, null, 2));
   console.log("saved data/market-data.json");
 
-  // --- BPS ekspor HS 0901 ---
+  // --- BPS ekspor HS 0901: ENGINE dulu, API langsung sebagai fallback ---
+  {
+    try {
+      const jb = await getJSON("https://kgs-blog.github.io/coffee-feed/bps.json");
+      const arrB = Array.isArray(jb) ? jb : ((jb && Array.isArray(jb.data)) ? jb.data : ((jb && Array.isArray(jb.bulanan)) ? jb.bulanan : []));
+      if (arrB.length) {
+        const ambB = function () { for (let i = 0; i < arguments.length - 1; i++) { const v = arguments[i]; if (v !== undefined && v !== null && v !== "") return v; } return ""; };
+        const flatB = arrB.map(function (r) {
+          return {
+            bulan: ambB(r.bulan, r.periode, r.month),
+            tahun: ambB(r.tahun, r.year, r.Year),
+            nilaiUSD: ambB(r.nilaiUSD, r.nilai_usd, r.value, r.usd, r.Value),
+            nettoKg: ambB(r.nettoKg, r.netto_kg, r.netweight, r.netto, r.kg),
+            negara: ambB(r.negara, r.countryName, r.ctr, r.destinasi)
+          };
+        });
+        fs.writeFileSync(path.join(OUT, "ekspor.json"), JSON.stringify({
+          sumber: "Engine KGS (data BPS)",
+          data: flatB,
+          mentah: jb,
+          fetched: now
+        }, null, 1));
+        console.log("saved data/ekspor.json dari ENGINE:", flatB.length, "entri");
+      } else {
+        throw new Error("engine bps kosong");
+      }
+    } catch (eB) {
+      console.log("engine bps gagal, fallback API langsung:", eB.message);
   if (BPS_KEY) {
     try {
       const j = await getJSON("https://webapi.bps.go.id/v1/api/dataexim/sumber/1/kodehs/09/jenishs/2/tahun/" + YEAR + "/periode/1/key/" + BPS_KEY);
@@ -350,6 +392,8 @@ function round2(n) { return Math.round(n * 100) / 100; }
     } catch (e) { errors.ekspor = e.message; }
   } else {
     errors.ekspor = "BPS_API_KEY tidak di-set";
+  }
+    }
   }
 
   console.log(JSON.stringify({ date: now, errors }, null, 2));
