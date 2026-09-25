@@ -180,6 +180,18 @@ function round2(n) { return Math.round(n * 100) / 100; }
       console.log("berita relevan:", simpan.length, "dari", artikel.length);
       diag.rss = artikel.length;
       fs.writeFileSync(path.join(OUT, "berita.json"), JSON.stringify({ sumber: sumberBerita, artikel: simpan, diagnostik: diag, fetched: now }));
+      // ARSIP BULANAN: kumulatif per bulan, dedupe by tautan
+      try {
+        const bln = now.slice(0, 7);
+        const arsipPath = path.join(OUT, "arsip", "berita-" + bln + ".json");
+        fs.mkdirSync(path.join(OUT, "arsip"), { recursive: true });
+        let arsip = { bulan: bln, artikel: [] };
+        try { arsip = JSON.parse(fs.readFileSync(arsipPath, "utf8")); } catch (e0) {}
+        const seen = new Set((arsip.artikel || []).map(function (a) { return a.tautan; }));
+        simpan.forEach(function (a) { if (!seen.has(a.tautan)) { arsip.artikel.push(a); seen.add(a.tautan); } });
+        fs.writeFileSync(arsipPath, JSON.stringify(arsip, null, 1));
+        console.log("saved data/arsip/berita-" + bln + ".json:", arsip.artikel.length, "artikel terkumpul");
+      } catch (eA) { console.log("arsip skip:", eA.message); }
       console.log("saved data/berita.json:", simpan.length, "artikel dari", sumberBerita);
     } else {
       const pesan = JSON.stringify(err);
