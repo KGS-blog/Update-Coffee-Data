@@ -1,4 +1,4 @@
-// QCO Data Pipeline — fetch.js — v2026.09.26-7
+// QCO Data Pipeline — fetch.js — v2026.09.26-8
 // Repo: KGS-blog/Update-Coffee-Data — dijalankan via GitHub Actions (.github/workflows/)
 // Output:
 //   data/market-data.json  -> format lama dipertahankan (arabica/robusta/idrUsd + history)
@@ -118,7 +118,7 @@ function round2(n) { return Math.round(n * 100) / 100; }
     console.log("saved data/harga-harian.json:", seri.length, "titik");
   } catch (e) { errors.harian = e.message; }
 
-  // --- Berita kopi (NewsData.io utama, fallback Google News RSS) — v2026.09.26-7 ---
+  // --- Berita kopi (NewsData.io utama, fallback Google News RSS) — v2026.09.26-8 ---
   {
     const ND_KEY = process.env.NEWSDATA_KEY || "";
     const err = {};
@@ -167,7 +167,7 @@ function round2(n) { return Math.round(n * 100) / 100; }
     } else {
       diag.newsdata = "key tidak di-set";
     }
-    if (pool.length < 25) {
+    {
       try {
         const xml = await getTextUA("https://news.google.com/rss/search?q=%22kopi%22+OR+%22coffee%22&hl=id&gl=ID&ceid=ID:id");
         const items = xml.match(/<item>[\s\S]*?<\/item>/g) || [];
@@ -188,7 +188,8 @@ function round2(n) { return Math.round(n * 100) / 100; }
       const KOPI_RX = /kopi|coffee|arabica|robusta/i;
       const seen = new Set();
       const uniq = artikel.filter(function (a) { const k = String(a.tautan || a.judul); if (seen.has(k)) return false; seen.add(k); return true; });
-      const relevan = uniq.filter(function (a) { return KOPI_RX.test(String(a.judul || "")); });
+      // engine sudah terkurasi: lolos tanpa filter judul. Filter kopi hanya untuk NewsData/RSS.
+      const relevan = uniq.filter(function (a) { return a.asal === "engine" || KOPI_RX.test(String(a.judul || "")); });
       // Komposisi: engine (kurasi) SELALU hadir (kuota 10), sisanya diisi terbaru dari API/RSS
       const byDate = function (a, b) { return (Date.parse(b.tanggal) || 0) - (Date.parse(a.tanggal) || 0); };
       const eng = relevan.filter(function (a) { return a.asal === "engine"; }).sort(byDate).slice(0, 10);
@@ -211,13 +212,13 @@ function round2(n) { return Math.round(n * 100) / 100; }
         fs.writeFileSync(arsipPath, JSON.stringify(arsip, null, 1));
         console.log("saved data/arsip/berita-" + bln + ".json:", arsip.artikel.length, "artikel terkumpul");
       } catch (eA) { console.log("arsip skip:", eA.message); }
-      // MASTER KUMULATIF untuk tab Clustering: dedupe by tautan, FIFO cap 500
+      // MASTER KUMULATIF untuk tab Clustering: SELURUH relevan (bukan cuma top-25), dedupe, FIFO cap 500
       try {
         const ALL_PATH = path.join(OUT, "berita-all.json");
         let all = { artikel: [] };
         try { all = JSON.parse(fs.readFileSync(ALL_PATH, "utf8")); } catch (e0) {}
         const seenA = new Set((all.artikel || []).map(function (a) { return String(a.tautan || a.judul); }));
-        simpan.forEach(function (a) { const k = String(a.tautan || a.judul); if (!seenA.has(k)) { all.artikel.push(a); seenA.add(k); } });
+        relevan.forEach(function (a) { const k = String(a.tautan || a.judul); if (!seenA.has(k)) { all.artikel.push(a); seenA.add(k); } });
         all.artikel.sort(function (a, b) { return (Date.parse(b.tanggal) || 0) - (Date.parse(a.tanggal) || 0); });
         if (all.artikel.length > 500) all.artikel = all.artikel.slice(0, 500);
         all.fetched = now;
@@ -233,7 +234,7 @@ function round2(n) { return Math.round(n * 100) / 100; }
     }
   }
 
-  // --- USDA FAS PSD — v2026.09.26-7 ---
+  // --- USDA FAS PSD — v2026.09.26-8 ---
   // Berdasarkan SDK terbukti (chhayly/usda-fas-sdk, April 2026):
   // host BARU api.fas.usda.gov, header X-Api-Key + Accept: application/json
   {
