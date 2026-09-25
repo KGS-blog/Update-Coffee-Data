@@ -1,4 +1,4 @@
-// QCO Data Pipeline — fetch.js — v2026.09.24-18
+// QCO Data Pipeline — fetch.js — v2026.09.24-19
 // Repo: KGS-blog/Update-Coffee-Data — dijalankan via GitHub Actions (.github/workflows/)
 // Output:
 //   data/market-data.json  -> format lama dipertahankan (arabica/robusta/idrUsd + history)
@@ -118,7 +118,7 @@ function round2(n) { return Math.round(n * 100) / 100; }
     console.log("saved data/harga-harian.json:", seri.length, "titik");
   } catch (e) { errors.harian = e.message; }
 
-  // --- Berita kopi (NewsData.io utama, fallback Google News RSS) — v2026.09.24-18 ---
+  // --- Berita kopi (NewsData.io utama, fallback Google News RSS) — v2026.09.24-19 ---
   {
     const ND_KEY = process.env.NEWSDATA_KEY || "";
     const err = {};
@@ -237,7 +237,7 @@ function round2(n) { return Math.round(n * 100) / 100; }
     }
   }
 
-  // --- USDA FAS PSD — v2026.09.24-18 ---
+  // --- USDA FAS PSD — v2026.09.24-19 ---
   // Berdasarkan SDK terbukti (chhayly/usda-fas-sdk, April 2026):
   // host BARU api.fas.usda.gov, header X-Api-Key + Accept: application/json
   {
@@ -300,11 +300,18 @@ function round2(n) { return Math.round(n * 100) / 100; }
         // peta attributeId -> nama bila baris hanya punya ID
         let attrMap = {};
         try {
-          const at = await usdaGet(BASE + "/api/psd/commodity/" + coffeeCode + "/attributes");
+          const at = await usdaGet(BASE + "/api/psd/commodityAttributes");
           const atArr = Array.isArray(at) ? at : [];
-          atArr.forEach(function (a) { attrMap[String(a.attributeId || a.id)] = a.attributeName || a.attributeDescription || a.name || ""; });
+          atArr.forEach(function (a) { attrMap[String(a.attributeId !== undefined ? a.attributeId : a.id)] = a.attributeName || a.attributeDescription || a.name || ""; });
           coba.push("attributes:" + atArr.length);
         } catch (e3) { coba.push("attributes:ERR " + e3.message); }
+        const unitMap = {};
+        try {
+          const un = await usdaGet(BASE + "/api/psd/unitsOfMeasure");
+          const unArr = Array.isArray(un) ? un : [];
+          unArr.forEach(function (x) { unitMap[String(x.unitId !== undefined ? x.unitId : x.id)] = x.unitDescription || x.description || x.name || ""; });
+          coba.push("units:" + unArr.length);
+        } catch (e3b) { coba.push("units:ERR " + e3b.message); }
 
         const idn = rows.arr.filter(function (r) {
           const cc = String(r.countryCode !== undefined ? r.countryCode : "");
@@ -325,7 +332,7 @@ function round2(n) { return Math.round(n * 100) / 100; }
             tahun: ambil(r.marketYear, r.MarketYear, r.year, r.Year),
             atribut: ambil(r.attributeName, r.attributeDescription, r.publicAttributeName, r.attribute, (r.attributeId !== undefined ? attrMap[String(r.attributeId)] : ""), r.name),
             nilai: ambil(r.value, r.Value, r.Value1, r.val),
-            satuan: ambil(r.unitDescription, r.unit, r.UnitDescription, r.unitName),
+            satuan: ambil(unitMap[String(r.unitId)], r.unitDescription, r.unit, r.UnitDescription, r.unitName),
             negara: ambil(r.countryName, r.name, r.gencCode, r.country)
           };
         }).filter(function (r) { return String(r.atribut) !== ""; });
