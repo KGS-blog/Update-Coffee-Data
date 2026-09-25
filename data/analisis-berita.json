@@ -1,119 +1,124 @@
 {
- "dibuat": "2026-09-26",
- "periode": "Mei–September 2026 (batch terkini 14–25 September)",
- "jumlah_berita": 30,
- "catatan": "Analisis ditulis oleh Ganjar Satyanagara dari penggabungan berita engine KGS (AEKI, Kemendag, SCAI, Jakpat, Tanamera). Berita yang konteksnya di luar Indonesia dicatat sebagai konteks global dan tidak dijadikan bukti untuk pasar lokal. Untuk memperbarui: jalankan workflow lalu minta analisis baru.",
- "grup": [
+ "diperbarui": "2026-09-26",
+ "batas_batch": 6,
+ "batches": [
   {
-   "id": "ekspor-daya-saing",
-   "judul_id": "Ekspor Bergerak di Dua Ujung: Green Bean Bermerek dan Industri Pendukung",
-   "judul_en": "Exports Moving at Both Ends: Branded Green Beans and Supporting Industries",
-   "ringkasan_id": "Java Halu lepas 10 ton ke Inggris (Rp2,64 M); CFU Klaten jadi pemasok 900 gerai hingga pasar global.",
-   "ringkasan_en": "Java Halu shipped 10 tons to the UK (IDR 2.64bn); CFU Klaten supplies 900 shops and reached global markets.",
-   "isi_id": "<p style=\"margin-bottom: 18px; text-align: left;\">Dua berita Kemendag dalam batch ini memberi bukti konkret yang jarang kita dapat dari liputan harian: <strong>ekspor kopi Indonesia sedang bergerak di dua ujung sekaligus</strong> — green bean bermerek daerah ke pasar Eropa, dan industri pendukung (peralatan kedai) yang menembus pasar global.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Temuan 1: ekspor bermerek daerah mulai bernilai.</strong> Java Halu Coffee melepas 10 ton green bean senilai USD 155 ribu (Rp2,64 miliar) ke Inggris, dengan kolaborasi Kemendag dan Pemprov Jawa Barat. Angka ini penting dibaca pelan: ini bukan ekspor komoditas anonim — ini kopi dengan nama, asal (Bandung Barat), dan cerita. Pelepasan resmi oleh pejabat Kemendag menandakan pola dukungan pemerintah yang mulai berpindah dari seremoni ke fasilitasi terukur.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Temuan 2: rantai nilai pendukung ikut naik kelas.</strong> CFU asal Klaten — usaha yang berawal dari penyewaan penggergajian kayu pada 1998 — kini menjadi pemasok perlengkapan bagi 900 gerai kopi dan menembus pasar global. Ini bukan berita kopi sebagai minuman, melainkan kopi sebagai industri: pertumbuhan gerai menciptakan pasar peralatan, dan pasar peralatan menciptakan eksportir baru dari sektor yang tidak kita duga.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Implikasi:</strong> ketika pembeli Eropa mulai menerima green bean bernilai Rp2,64 miliar per batch kecil, diferensiasi asal menjadi penentu harga — bukan lagi sekadar diferensial atas ICE. Dan pertumbuhan 900 gerai domestik yang menyerap peralatan lokal menegaskan bahwa permintaan domestik kini menggerakkan industri hulu-nya sendiri.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Rekomendasi aksi:</strong> prosesor di daerah — bangun narasi batch Anda (nama, kebun, proses) sebelum mencari buyer; CFU membuktikan pasar global menghargai konsistensi lebih dari skala. Buyer internasional — batch bermerek daerah sebesar 10 ton adalah ukuran ideal untuk uji pasar tanpa risiko container penuh.</p>",
-   "isi_en": "<p style=\"margin-bottom: 18px; text-align: left;\">Two Kemendag stories in this batch provide rare hard evidence: <strong>Indonesian coffee exports are moving at both ends at once</strong> — branded regional green beans into Europe, and supporting industries (café equipment) breaking into global markets.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Finding 1: regional branded exports are gaining value.</strong> Java Halu Coffee shipped 10 tons of green beans worth USD 155,000 (IDR 2.64 billion) to the UK, backed by Kemendag and West Java's provincial government. Read this number slowly: this is not anonymous commodity export — it is coffee with a name, an origin (Bandung Barat), and a story. A formal send-off by Kemendag officials signals government support shifting from ceremony to measurable facilitation.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Finding 2: the supporting value chain is upgrading too.</strong> CFU from Klaten — a business that started by renting a sawmill in 1998 — is now a supplier to 900 coffee shops and has entered global markets. This is not coffee-as-beverage news; it is coffee-as-industry: shop growth creates an equipment market, and the equipment market creates new exporters from sectors we didn't expect.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Implication:</strong> when European buyers accept small branded batches worth IDR 2.64 billion, origin differentiation sets the price — not merely a differential over ICE. And 900 domestic shops absorbing local equipment confirm that domestic demand now drives its own upstream industry.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Recommended actions:</strong> regional processors — build your batch narrative (name, farm, process) before seeking buyers; CFU proves global markets reward consistency more than scale. International buyers — a 10-ton regional branded batch is the ideal test-market size without full-container risk.</p>",
-   "jumlah_sumber": 2,
-   "sumber": [
+   "dibuat": "2026-09-26",
+   "periode": "Mei–September 2026 (batch terkini 14–25 September)",
+   "jumlah_berita": 30,
+   "grup": [
     {
-     "judul": "Kemendag Perkuat Kolaborasi Ekspor dengan Pemerintah Daerah, Lepas Ekspor Kopi Jawa Barat Senilai Rp2,64 Miliar ke Inggris",
-     "media": "Kemendag",
-     "tanggal": "22 Agu 2026"
+     "id": "ekspor-daya-saing",
+     "judul_id": "Ekspor Bergerak di Dua Ujung: Green Bean Bermerek dan Industri Pendukung",
+     "judul_en": "Exports Moving at Both Ends: Branded Green Beans and Supporting Industries",
+     "ringkasan_id": "Java Halu lepas 10 ton ke Inggris (Rp2,64 M); CFU Klaten jadi pemasok 900 gerai hingga pasar global.",
+     "ringkasan_en": "Java Halu shipped 10 tons to the UK (IDR 2.64bn); CFU Klaten supplies 900 shops and reached global markets.",
+     "isi_id": "<p style=\"margin-bottom: 18px; text-align: left;\">Dua berita Kemendag dalam batch ini memberi bukti konkret yang jarang kita dapat dari liputan harian: <strong>ekspor kopi Indonesia sedang bergerak di dua ujung sekaligus</strong> — green bean bermerek daerah ke pasar Eropa, dan industri pendukung (peralatan kedai) yang menembus pasar global.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Temuan 1: ekspor bermerek daerah mulai bernilai.</strong> Java Halu Coffee melepas 10 ton green bean senilai USD 155 ribu (Rp2,64 miliar) ke Inggris, dengan kolaborasi Kemendag dan Pemprov Jawa Barat. Angka ini penting dibaca pelan: ini bukan ekspor komoditas anonim — ini kopi dengan nama, asal (Bandung Barat), dan cerita. Pelepasan resmi oleh pejabat Kemendag menandakan pola dukungan pemerintah yang mulai berpindah dari seremoni ke fasilitasi terukur.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Temuan 2: rantai nilai pendukung ikut naik kelas.</strong> CFU asal Klaten — usaha yang berawal dari penyewaan penggergajian kayu pada 1998 — kini menjadi pemasok perlengkapan bagi 900 gerai kopi dan menembus pasar global. Ini bukan berita kopi sebagai minuman, melainkan kopi sebagai industri: pertumbuhan gerai menciptakan pasar peralatan, dan pasar peralatan menciptakan eksportir baru dari sektor yang tidak kita duga.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Implikasi:</strong> ketika pembeli Eropa mulai menerima green bean bernilai Rp2,64 miliar per batch kecil, diferensiasi asal menjadi penentu harga — bukan lagi sekadar diferensial atas ICE. Dan pertumbuhan 900 gerai domestik yang menyerap peralatan lokal menegaskan bahwa permintaan domestik kini menggerakkan industri hulu-nya sendiri.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Rekomendasi aksi:</strong> prosesor di daerah — bangun narasi batch Anda (nama, kebun, proses) sebelum mencari buyer; CFU membuktikan pasar global menghargai konsistensi lebih dari skala. Buyer internasional — batch bermerek daerah sebesar 10 ton adalah ukuran ideal untuk uji pasar tanpa risiko container penuh.</p>",
+     "isi_en": "<p style=\"margin-bottom: 18px; text-align: left;\">Two Kemendag stories in this batch provide rare hard evidence: <strong>Indonesian coffee exports are moving at both ends at once</strong> — branded regional green beans into Europe, and supporting industries (café equipment) breaking into global markets.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Finding 1: regional branded exports are gaining value.</strong> Java Halu Coffee shipped 10 tons of green beans worth USD 155,000 (IDR 2.64 billion) to the UK, backed by Kemendag and West Java's provincial government. Read this number slowly: this is not anonymous commodity export — it is coffee with a name, an origin (Bandung Barat), and a story. A formal send-off by Kemendag officials signals government support shifting from ceremony to measurable facilitation.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Finding 2: the supporting value chain is upgrading too.</strong> CFU from Klaten — a business that started by renting a sawmill in 1998 — is now a supplier to 900 coffee shops and has entered global markets. This is not coffee-as-beverage news; it is coffee-as-industry: shop growth creates an equipment market, and the equipment market creates new exporters from sectors we didn't expect.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Implication:</strong> when European buyers accept small branded batches worth IDR 2.64 billion, origin differentiation sets the price — not merely a differential over ICE. And 900 domestic shops absorbing local equipment confirm that domestic demand now drives its own upstream industry.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Recommended actions:</strong> regional processors — build your batch narrative (name, farm, process) before seeking buyers; CFU proves global markets reward consistency more than scale. International buyers — a 10-ton regional branded batch is the ideal test-market size without full-container risk.</p>",
+     "jumlah_sumber": 2,
+     "sumber": [
+      {
+       "judul": "Kemendag Perkuat Kolaborasi Ekspor dengan Pemerintah Daerah, Lepas Ekspor Kopi Jawa Barat Senilai Rp2,64 Miliar ke Inggris",
+       "media": "Kemendag",
+       "tanggal": "22 Agu 2026"
+      },
+      {
+       "judul": "Kisah CFU Asal Klaten Menembus Pasar Lokal dan Global, Dari Penggergajian Sederhana ke Pemasok Perlengkapan 900 Gerai Kopi",
+       "media": "Kemendag",
+       "tanggal": "14 Sep 2026"
+      }
+     ]
     },
     {
-     "judul": "Kisah CFU Asal Klaten Menembus Pasar Lokal dan Global, Dari Penggergajian Sederhana ke Pemasok Perlengkapan 900 Gerai Kopi",
-     "media": "Kemendag",
-     "tanggal": "14 Sep 2026"
-    }
-   ]
-  },
-  {
-   "id": "konsumsi-domestik",
-   "judul_id": "Konsumsi Tembus 1 Kg Per Kapita: Pasar Domestik Resmi Setara Eksportir",
-   "judul_en": "Consumption Breaks 1 Kg Per Capita: Domestic Market Now Equals Exporters",
-   "ringkasan_id": "1,04 kg per kapita, 288 juta kg total, 19 juta mata pencaharian — domestik kini pesaing volume serius ekspor.",
-   "ringkasan_en": "1.04 kg per capita, 288 million kg total, 19 million livelihoods — domestic now rivals export volumes.",
-   "isi_id": "<p style=\"margin-bottom: 18px; text-align: left;\">SCAI mencatat tonggak yang layak ditempatkan di atas meja setiap pengambil keputusan: <strong>konsumsi kopi nasional menembus 1,04 kg per kapita per tahun</strong> — setelah lebih dari satu dekade stagnan di ratusan gram. Di balik angka itu: 288 juta kg konsumsi tercatat dan sekitar 19 juta penduduk yang hidup dari sektor kopi.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Why it matters:</strong> 0,27 cangkir per kapita per hari berarti kopi telah bergeser dari minuman sesekali ke ritual harian massal. Survei Jakpat (1.238 responden) memperkuatnya: kopi dan teh tetap mendominasi pilihan minuman, sementara matcha menguat di posisi premium — sinyal bahwa konsumen Indonesia bersedia membayar lebih untuk minuman berkualitas, dan kopi adalah kategorinya yang paling matang.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Temuan format:</strong> Tanamera memperkenalkan Draft Coffee di Grand Hyatt — kopi dari keran, disajikan di kolam renang hotel bintang lima. Ini bukan gimmick; ini ekspansi format. Konsumen premium kini menemukan kopi di luar konteks kedai: hotel, festival, kolam renang. Kategori 'cold & draft' sedang membentuk ulang musim panas kopi Indonesia.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Implikasi bagi rantai pasok:</strong> konsumsi domestik 288 juta kg setara ±4,8 juta kantong 60 kg — berada dalam orde yang sama dengan ekspor. Artinya: setiap keputusan suplai kini harus menghitung domestik sebagai pesaing serius volume, bukan residu. Produsen yang hanya melihat pasar luar akan terkejut saat musim ramai domestik menyerap stok robusta.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Rekomendasi aksi:</strong> prosesor — siapkan kontrak pasokan terpisah untuk kanal domestik (RTD, kantor, hotel); buyer ekspor — kalender suplai Anda harus menghindari puncak musim libur domestik (Des–Jan) ketika kompetisi stok paling ketat.</p>",
-   "isi_en": "<p style=\"margin-bottom: 18px; text-align: left;\">SCAI recorded a milestone that belongs on every decision-maker's desk: <strong>national coffee consumption broke through 1.04 kg per capita per year</strong> — after more than a decade stuck at a few hundred grams. Behind the figure: 288 million kg of recorded consumption and roughly 19 million Indonesians living off the coffee sector.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Why it matters:</strong> 0.27 cups per capita per day means coffee has shifted from occasional drink to mass daily ritual. Jakpat's survey (1,238 respondents) reinforces it: coffee and tea still dominate beverage choices while matcha strengthens at the premium end — a signal that Indonesian consumers will pay more for quality drinks, and coffee is the most mature category.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Format finding:</strong> Tanamera introduced Draft Coffee at Grand Hyatt — coffee from a tap, served poolside at a five-star hotel. This is not a gimmick; it is format expansion. Premium consumers now find coffee outside cafés: hotels, festivals, pools. The cold-and-draft category is reshaping Indonesia's coffee summer.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Supply-chain implication:</strong> 288 million kg domestic consumption equals roughly 4.8 million 60-kg bags — the same order of magnitude as exports. Every supply decision must now count domestic as a serious volume competitor, not residue. Producers who only watch export markets will be surprised when the domestic festive season absorbs robusta stocks.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Recommended actions:</strong> processors — prepare separate supply contracts for domestic channels (RTD, offices, hotels); export buyers — your supply calendar must avoid the domestic holiday peak (Dec–Jan) when stock competition is tightest.</p>",
-   "jumlah_sumber": 3,
-   "sumber": [
-    {
-     "judul": "Konsumsi Kopi Indonesia Tembus 1 Kilogram Per Kapita, Catat Sejarah Baru",
-     "media": "SCAI",
-     "tanggal": "1 Des 2025"
+     "id": "konsumsi-domestik",
+     "judul_id": "Konsumsi Tembus 1 Kg Per Kapita: Pasar Domestik Resmi Setara Eksportir",
+     "judul_en": "Consumption Breaks 1 Kg Per Capita: Domestic Market Now Equals Exporters",
+     "ringkasan_id": "1,04 kg per kapita, 288 juta kg total, 19 juta mata pencaharian — domestik kini pesaing volume serius ekspor.",
+     "ringkasan_en": "1.04 kg per capita, 288 million kg total, 19 million livelihoods — domestic now rivals export volumes.",
+     "isi_id": "<p style=\"margin-bottom: 18px; text-align: left;\">SCAI mencatat tonggak yang layak ditempatkan di atas meja setiap pengambil keputusan: <strong>konsumsi kopi nasional menembus 1,04 kg per kapita per tahun</strong> — setelah lebih dari satu dekade stagnan di ratusan gram. Di balik angka itu: 288 juta kg konsumsi tercatat dan sekitar 19 juta penduduk yang hidup dari sektor kopi.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Why it matters:</strong> 0,27 cangkir per kapita per hari berarti kopi telah bergeser dari minuman sesekali ke ritual harian massal. Survei Jakpat (1.238 responden) memperkuatnya: kopi dan teh tetap mendominasi pilihan minuman, sementara matcha menguat di posisi premium — sinyal bahwa konsumen Indonesia bersedia membayar lebih untuk minuman berkualitas, dan kopi adalah kategorinya yang paling matang.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Temuan format:</strong> Tanamera memperkenalkan Draft Coffee di Grand Hyatt — kopi dari keran, disajikan di kolam renang hotel bintang lima. Ini bukan gimmick; ini ekspansi format. Konsumen premium kini menemukan kopi di luar konteks kedai: hotel, festival, kolam renang. Kategori 'cold & draft' sedang membentuk ulang musim panas kopi Indonesia.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Implikasi bagi rantai pasok:</strong> konsumsi domestik 288 juta kg setara ±4,8 juta kantong 60 kg — berada dalam orde yang sama dengan ekspor. Artinya: setiap keputusan suplai kini harus menghitung domestik sebagai pesaing serius volume, bukan residu. Produsen yang hanya melihat pasar luar akan terkejut saat musim ramai domestik menyerap stok robusta.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Rekomendasi aksi:</strong> prosesor — siapkan kontrak pasokan terpisah untuk kanal domestik (RTD, kantor, hotel); buyer ekspor — kalender suplai Anda harus menghindari puncak musim libur domestik (Des–Jan) ketika kompetisi stok paling ketat.</p>",
+     "isi_en": "<p style=\"margin-bottom: 18px; text-align: left;\">SCAI recorded a milestone that belongs on every decision-maker's desk: <strong>national coffee consumption broke through 1.04 kg per capita per year</strong> — after more than a decade stuck at a few hundred grams. Behind the figure: 288 million kg of recorded consumption and roughly 19 million Indonesians living off the coffee sector.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Why it matters:</strong> 0.27 cups per capita per day means coffee has shifted from occasional drink to mass daily ritual. Jakpat's survey (1,238 respondents) reinforces it: coffee and tea still dominate beverage choices while matcha strengthens at the premium end — a signal that Indonesian consumers will pay more for quality drinks, and coffee is the most mature category.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Format finding:</strong> Tanamera introduced Draft Coffee at Grand Hyatt — coffee from a tap, served poolside at a five-star hotel. This is not a gimmick; it is format expansion. Premium consumers now find coffee outside cafés: hotels, festivals, pools. The cold-and-draft category is reshaping Indonesia's coffee summer.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Supply-chain implication:</strong> 288 million kg domestic consumption equals roughly 4.8 million 60-kg bags — the same order of magnitude as exports. Every supply decision must now count domestic as a serious volume competitor, not residue. Producers who only watch export markets will be surprised when the domestic festive season absorbs robusta stocks.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Recommended actions:</strong> processors — prepare separate supply contracts for domestic channels (RTD, offices, hotels); export buyers — your supply calendar must avoid the domestic holiday peak (Dec–Jan) when stock competition is tightest.</p>",
+     "jumlah_sumber": 3,
+     "sumber": [
+      {
+       "judul": "Konsumsi Kopi Indonesia Tembus 1 Kilogram Per Kapita, Catat Sejarah Baru",
+       "media": "SCAI",
+       "tanggal": "1 Des 2025"
+      },
+      {
+       "judul": "Coffee and Tea Continue to Dominate, While Matcha Strengthens Its Premium Position",
+       "media": "Jakpat",
+       "tanggal": "7 Jul 2026"
+      },
+      {
+       "judul": "Draft Coffee Poolside — Grand Splash Vol. 5 at Grand Hyatt Jakarta",
+       "media": "Tanamera",
+       "tanggal": "20 Jul 2026"
+      }
+     ]
     },
     {
-     "judul": "Coffee and Tea Continue to Dominate, While Matcha Strengthens Its Premium Position",
-     "media": "Jakpat",
-     "tanggal": "7 Jul 2026"
+     "id": "edukasi-industri",
+     "judul_id": "Kurikulum Industri Mulai Tertulis: dari Panduan Buyer ke Kampus",
+     "judul_en": "Industry Curriculum Being Written: from Buyer Guides to Campus",
+     "ringkasan_id": "AEKI menerbitkan panduan penilaian kualitas buyer dan tamping dasar; Tanamera membawa kurikulum ke Poltekpar.",
+     "ringkasan_en": "AEKI published buyer quality-assessment and basic tamping guides; Tanamera brought curriculum to Poltekpar.",
+     "isi_id": "<p style=\"margin-bottom: 18px; text-align: left;\">Tiga konten edukasi dalam batch ini — dua dari AEKI dan satu program Tanamera dengan Poltekpar Palembang — menunjukkan <strong>infrastruktur pengetahuan industri mulai terbentuk</strong>, dan arahnya sangat spesifik.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Temuan 1: kurikulum buyer mulai tertulis.</strong> AEKI menerbitkan panduan menilai kualitas untuk buyer internasional: identitas lot, kondisi fisik, profil sensori, konsistensi — bukan sekadar origin dan cup score. Ini signifikan karena selama ini standar penilaian berada di kepala individu; sekarang mulai didokumentasikan dan bisa diajarkan. Bagi pembeli, panduan semacam ini menaikkan kualitas negosiasi; bagi produsen, ini peta persis standar yang akan diminta.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Temuan 2: edukasi teknis menyentuh level dasar.</strong> Panduan tamping AEKI untuk pemula — meratakan bubuk, tamper sejajar, tekan sekali stabil — terlihat sederhana, tetapi menandakan bahwa basis pengetahuan kini menjangkau barista pemula di seluruh Indonesia. Kualitas cangkir di gerai-gerai baru ditentukan di titik-titik kecil seperti ini.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Temuan 3: industri turun ke kampus.</strong> Tanamera membawa kurikulum green-bean-to-cup ke Poltekpar Palembang: mahasiswa pariwisata belajar V60, roasting, dan bisnis kopi. Ini investasi jangka panjang yang cerdas — generasi perhotelan Indonesia sedang dibentuk dengan literasi kopi.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Rekomendasi aksi:</strong> buyer — gunakan panduan AEKI sebagai checklist pemeriksaan sampel; produsor — samakan dokumen lot Anda dengan kategori penilaian tersebut sebelum mengirim sampel; semua pelaku — konten edukasi adalah sinyal arah standar pasar, bacalah sebagai peta, bukan hanya artikel.</p>",
+     "isi_en": "<p style=\"margin-bottom: 18px; text-align: left;\">Three educational pieces in this batch — two from AEKI and one Tanamera program with Poltekpar Palembang — show <strong>industry knowledge infrastructure taking shape</strong>, and its direction is very specific.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Finding 1: a buyer curriculum is being written down.</strong> AEKI published a guide to assessing quality for international buyers: lot identity, physical condition, sensory profile, consistency — not merely origin and cup score. This matters because assessment standards used to live in individuals' heads; they are now being documented and can be taught. For buyers, such guides raise negotiation quality; for producers, it is the precise map of what will be asked.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Finding 2: technical education reaches the base.</strong> AEKI's tamping guide for beginners — distributing grounds, keeping the tamper level, one stable press — looks simple, but signals that the knowledge base now reaches novice baristas nationwide. Cup quality at new shops is decided at small points like this.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Finding 3: industry goes to campus.</strong> Tanamera brought a green-bean-to-cup curriculum to Poltekpar Palembang: hospitality students learning V60, roasting, and the coffee business. This is smart long-term investment — Indonesia's hospitality generation is being formed with coffee literacy.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Recommended actions:</strong> buyers — use the AEKI guide as your sample-inspection checklist; producers — align your lot documents with those assessment categories before sending samples; all players — educational content is a signal of market-standard direction; read it as a map, not just an article.</p>",
+     "jumlah_sumber": 3,
+     "sumber": [
+      {
+       "judul": "Cara Menilai Kualitas Kopi untuk Buyer Internasional",
+       "media": "AEKI",
+       "tanggal": "18 Sep 2026"
+      },
+      {
+       "judul": "Cara Tamping Kopi untuk Pemula: Posisi, Kerataan, dan Latihan",
+       "media": "AEKI",
+       "tanggal": "22 Sep 2026"
+      },
+      {
+       "judul": "Tanamera Coffee x Poltekpar Palembang: Sharing Coffee Knowledge with the Next Generation",
+       "media": "Tanamera",
+       "tanggal": "14 Des 2025"
+      }
+     ]
     },
     {
-     "judul": "Draft Coffee Poolside — Grand Splash Vol. 5 at Grand Hyatt Jakarta",
-     "media": "Tanamera",
-     "tanggal": "20 Jul 2026"
-    }
-   ]
-  },
-  {
-   "id": "edukasi-industri",
-   "judul_id": "Kurikulum Industri Mulai Tertulis: dari Panduan Buyer ke Kampus",
-   "judul_en": "Industry Curriculum Being Written: from Buyer Guides to Campus",
-   "ringkasan_id": "AEKI menerbitkan panduan penilaian kualitas buyer dan tamping dasar; Tanamera membawa kurikulum ke Poltekpar.",
-   "ringkasan_en": "AEKI published buyer quality-assessment and basic tamping guides; Tanamera brought curriculum to Poltekpar.",
-   "isi_id": "<p style=\"margin-bottom: 18px; text-align: left;\">Tiga konten edukasi dalam batch ini — dua dari AEKI dan satu program Tanamera dengan Poltekpar Palembang — menunjukkan <strong>infrastruktur pengetahuan industri mulai terbentuk</strong>, dan arahnya sangat spesifik.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Temuan 1: kurikulum buyer mulai tertulis.</strong> AEKI menerbitkan panduan menilai kualitas untuk buyer internasional: identitas lot, kondisi fisik, profil sensori, konsistensi — bukan sekadar origin dan cup score. Ini signifikan karena selama ini standar penilaian berada di kepala individu; sekarang mulai didokumentasikan dan bisa diajarkan. Bagi pembeli, panduan semacam ini menaikkan kualitas negosiasi; bagi produsen, ini peta persis standar yang akan diminta.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Temuan 2: edukasi teknis menyentuh level dasar.</strong> Panduan tamping AEKI untuk pemula — meratakan bubuk, tamper sejajar, tekan sekali stabil — terlihat sederhana, tetapi menandakan bahwa basis pengetahuan kini menjangkau barista pemula di seluruh Indonesia. Kualitas cangkir di gerai-gerai baru ditentukan di titik-titik kecil seperti ini.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Temuan 3: industri turun ke kampus.</strong> Tanamera membawa kurikulum green-bean-to-cup ke Poltekpar Palembang: mahasiswa pariwisata belajar V60, roasting, dan bisnis kopi. Ini investasi jangka panjang yang cerdas — generasi perhotelan Indonesia sedang dibentuk dengan literasi kopi.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Rekomendasi aksi:</strong> buyer — gunakan panduan AEKI sebagai checklist pemeriksaan sampel; produsor — samakan dokumen lot Anda dengan kategori penilaian tersebut sebelum mengirim sampel; semua pelaku — konten edukasi adalah sinyal arah standar pasar, bacalah sebagai peta, bukan hanya artikel.</p>",
-   "isi_en": "<p style=\"margin-bottom: 18px; text-align: left;\">Three educational pieces in this batch — two from AEKI and one Tanamera program with Poltekpar Palembang — show <strong>industry knowledge infrastructure taking shape</strong>, and its direction is very specific.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Finding 1: a buyer curriculum is being written down.</strong> AEKI published a guide to assessing quality for international buyers: lot identity, physical condition, sensory profile, consistency — not merely origin and cup score. This matters because assessment standards used to live in individuals' heads; they are now being documented and can be taught. For buyers, such guides raise negotiation quality; for producers, it is the precise map of what will be asked.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Finding 2: technical education reaches the base.</strong> AEKI's tamping guide for beginners — distributing grounds, keeping the tamper level, one stable press — looks simple, but signals that the knowledge base now reaches novice baristas nationwide. Cup quality at new shops is decided at small points like this.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Finding 3: industry goes to campus.</strong> Tanamera brought a green-bean-to-cup curriculum to Poltekpar Palembang: hospitality students learning V60, roasting, and the coffee business. This is smart long-term investment — Indonesia's hospitality generation is being formed with coffee literacy.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Recommended actions:</strong> buyers — use the AEKI guide as your sample-inspection checklist; producers — align your lot documents with those assessment categories before sending samples; all players — educational content is a signal of market-standard direction; read it as a map, not just an article.</p>",
-   "jumlah_sumber": 3,
-   "sumber": [
-    {
-     "judul": "Cara Menilai Kualitas Kopi untuk Buyer Internasional",
-     "media": "AEKI",
-     "tanggal": "18 Sep 2026"
-    },
-    {
-     "judul": "Cara Tamping Kopi untuk Pemula: Posisi, Kerataan, dan Latihan",
-     "media": "AEKI",
-     "tanggal": "22 Sep 2026"
-    },
-    {
-     "judul": "Tanamera Coffee x Poltekpar Palembang: Sharing Coffee Knowledge with the Next Generation",
-     "media": "Tanamera",
-     "tanggal": "14 Des 2025"
-    }
-   ]
-  },
-  {
-   "id": "brand-event",
-   "judul_id": "Brand Menjadi Mitra Acara: Pasar B2B yang Tersembunyi",
-   "judul_en": "Brands as Event Partners: A Hidden B2B Market",
-   "ringkasan_id": "Tanamera hadiri GIIAS, GJAW, Soundrenaline, IPA Convex — kanal event korporat dengan margin lebih baik dari ritel.",
-   "ringkasan_en": "Tanamera at GIIAS, GJAW, Soundrenaline, IPA Convex — a corporate-event channel with better margins than retail.",
-   "isi_id": "<p style=\"margin-bottom: 18px; text-align: left;\">Lima dari tiga puluh berita batch ini berasal dari satu brand — dan polanya konsisten: <strong>Tanamera telah menjadikan diri mitra penyedia kopi untuk acara</strong>, bukan lagi sekadar menjual di kedai. GIIAS (Mitsubishi, Polytron, KIA), GJAW (Mandiri Finance, BYD, Changan, Mercedes-Benz), Soundrenaline, IPA Convex empat tahun berturut, hingga kolam renang Grand Hyatt.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Temuan 1: kanal B2B-event adalah pasar tersembunyi yang terukur.</strong> Setiap pameran otomotif, konvensi industri, atau festival musik adalah ratusan ribu konsumen premium dalam 3–5 hari, dengan budget hospitality dari brand tuan rumah. Tanamera tidak membayar sewa booth — mereka dibayar mitra, atau setidaknya biayanya ditanggung sponsorship. Margin strukturalnya jauh lebih baik daripada ritel.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Temuan 2: konsistensi multi-tahun membangun moat.</strong> Empat tahun berturut di IPA Convex, empat gelombang di pameran otomotif — mitra korporat memperpanjang kontrak karena coffee service yang andal di event adalah operasi logistik, bukan sekadar seduhan. Ini pasar yang menutup pintu bagi pendatang baru tanpa rekam jejak.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Temuan 3: brand juga jadi instrumen inklusi.</strong> Workshop kopi untuk teman-teman Down syndrome bersama Westin dan Yayasan POTADS memperluas peran brand ke ruang sosial — yang semakin dinilai mitra korporat saat memilih vendor.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Rekomendasi aksi:</strong> roastery menengah — petakan kalender event B2B 2027 (otomotif, energi, perbankan) dan tawarkan paket hospitality, mulai dari booth mitra kecil; prosesor — channel event adalah showcase langsung ke konsumen premium tanpa biaya distribusi ritel; catat bahwa kebutuhan di sini adalah konsistensi volume dan kecepatan, bukan skor cup tertinggi.</p>",
-   "isi_en": "<p style=\"margin-bottom: 18px; text-align: left;\">Five of the thirty stories in this batch come from one brand — and the pattern is consistent: <strong>Tanamera has made itself the coffee partner for events</strong>, no longer just selling in cafés. GIIAS (Mitsubishi, Polytron, KIA), GJAW (Mandiri Finance, BYD, Changan, Mercedes-Benz), Soundrenaline, four consecutive years at IPA Convex, and the Grand Hyatt pool deck.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Finding 1: the B2B-event channel is a measurable hidden market.</strong> Every auto show, industry convention, or music festival is hundreds of thousands of premium consumers over 3–5 days, with hospitality budgets from the host brands. Tanamera doesn't pay booth rent — partners pay them, or costs are covered by sponsorship. The structural margin far exceeds retail.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Finding 2: multi-year consistency builds a moat.</strong> Four straight years at IPA Convex, four waves of auto shows — corporate partners renew because reliable coffee service at events is a logistics operation, not just brewing. This is a market that closes its door to newcomers without a track record.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Finding 3: brands also become instruments of inclusion.</strong> The coffee workshop for friends with Down syndrome with Westin and Yayasan POTADS extends the brand's role into social space — increasingly valued by corporate partners when choosing vendors.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Recommended actions:</strong> mid-size roasters — map the 2027 B2B event calendar (automotive, energy, banking) and offer hospitality packages, starting from small partner booths; processors — the event channel is a direct showcase to premium consumers without retail distribution costs; note that what is needed here is volume consistency and speed, not the highest cup score.</p>",
-   "jumlah_sumber": 5,
-   "sumber": [
-    {
-     "judul": "Tanamera Coffee at GJAW",
-     "media": "Tanamera",
-     "tanggal": "19 Sep 2026"
-    },
-    {
-     "judul": "Coffee in Motion: Tanamera Coffee at GIIAS 2026",
-     "media": "Tanamera",
-     "tanggal": "12 Agu 2026"
-    },
-    {
-     "judul": "Coffee in Rhythm: Tanamera Coffee at Soundrenaline Sana Sini Jakarta 2026",
-     "media": "Tanamera",
-     "tanggal": "21 Jul 2026"
-    },
-    {
-     "judul": "Tanamera Coffee at IPA Convex: Four Years of Coffee and Partnership",
-     "media": "Tanamera",
-     "tanggal": "26 Mei 2026"
-    },
-    {
-     "judul": "CSR Disability Coffee Workshop",
-     "media": "Tanamera",
-     "tanggal": "26 Mei 2026"
+     "id": "brand-event",
+     "judul_id": "Brand Menjadi Mitra Acara: Pasar B2B yang Tersembunyi",
+     "judul_en": "Brands as Event Partners: A Hidden B2B Market",
+     "ringkasan_id": "Tanamera hadiri GIIAS, GJAW, Soundrenaline, IPA Convex — kanal event korporat dengan margin lebih baik dari ritel.",
+     "ringkasan_en": "Tanamera at GIIAS, GJAW, Soundrenaline, IPA Convex — a corporate-event channel with better margins than retail.",
+     "isi_id": "<p style=\"margin-bottom: 18px; text-align: left;\">Lima dari tiga puluh berita batch ini berasal dari satu brand — dan polanya konsisten: <strong>Tanamera telah menjadikan diri mitra penyedia kopi untuk acara</strong>, bukan lagi sekadar menjual di kedai. GIIAS (Mitsubishi, Polytron, KIA), GJAW (Mandiri Finance, BYD, Changan, Mercedes-Benz), Soundrenaline, IPA Convex empat tahun berturut, hingga kolam renang Grand Hyatt.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Temuan 1: kanal B2B-event adalah pasar tersembunyi yang terukur.</strong> Setiap pameran otomotif, konvensi industri, atau festival musik adalah ratusan ribu konsumen premium dalam 3–5 hari, dengan budget hospitality dari brand tuan rumah. Tanamera tidak membayar sewa booth — mereka dibayar mitra, atau setidaknya biayanya ditanggung sponsorship. Margin strukturalnya jauh lebih baik daripada ritel.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Temuan 2: konsistensi multi-tahun membangun moat.</strong> Empat tahun berturut di IPA Convex, empat gelombang di pameran otomotif — mitra korporat memperpanjang kontrak karena coffee service yang andal di event adalah operasi logistik, bukan sekadar seduhan. Ini pasar yang menutup pintu bagi pendatang baru tanpa rekam jejak.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Temuan 3: brand juga jadi instrumen inklusi.</strong> Workshop kopi untuk teman-teman Down syndrome bersama Westin dan Yayasan POTADS memperluas peran brand ke ruang sosial — yang semakin dinilai mitra korporat saat memilih vendor.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Rekomendasi aksi:</strong> roastery menengah — petakan kalender event B2B 2027 (otomotif, energi, perbankan) dan tawarkan paket hospitality, mulai dari booth mitra kecil; prosesor — channel event adalah showcase langsung ke konsumen premium tanpa biaya distribusi ritel; catat bahwa kebutuhan di sini adalah konsistensi volume dan kecepatan, bukan skor cup tertinggi.</p>",
+     "isi_en": "<p style=\"margin-bottom: 18px; text-align: left;\">Five of the thirty stories in this batch come from one brand — and the pattern is consistent: <strong>Tanamera has made itself the coffee partner for events</strong>, no longer just selling in cafés. GIIAS (Mitsubishi, Polytron, KIA), GJAW (Mandiri Finance, BYD, Changan, Mercedes-Benz), Soundrenaline, four consecutive years at IPA Convex, and the Grand Hyatt pool deck.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Finding 1: the B2B-event channel is a measurable hidden market.</strong> Every auto show, industry convention, or music festival is hundreds of thousands of premium consumers over 3–5 days, with hospitality budgets from the host brands. Tanamera doesn't pay booth rent — partners pay them, or costs are covered by sponsorship. The structural margin far exceeds retail.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Finding 2: multi-year consistency builds a moat.</strong> Four straight years at IPA Convex, four waves of auto shows — corporate partners renew because reliable coffee service at events is a logistics operation, not just brewing. This is a market that closes its door to newcomers without a track record.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Finding 3: brands also become instruments of inclusion.</strong> The coffee workshop for friends with Down syndrome with Westin and Yayasan POTADS extends the brand's role into social space — increasingly valued by corporate partners when choosing vendors.</p><p style=\"margin-bottom: 18px; text-align: left;\"><strong>Recommended actions:</strong> mid-size roasters — map the 2027 B2B event calendar (automotive, energy, banking) and offer hospitality packages, starting from small partner booths; processors — the event channel is a direct showcase to premium consumers without retail distribution costs; note that what is needed here is volume consistency and speed, not the highest cup score.</p>",
+     "jumlah_sumber": 5,
+     "sumber": [
+      {
+       "judul": "Tanamera Coffee at GJAW",
+       "media": "Tanamera",
+       "tanggal": "19 Sep 2026"
+      },
+      {
+       "judul": "Coffee in Motion: Tanamera Coffee at GIIAS 2026",
+       "media": "Tanamera",
+       "tanggal": "12 Agu 2026"
+      },
+      {
+       "judul": "Coffee in Rhythm: Tanamera Coffee at Soundrenaline Sana Sini Jakarta 2026",
+       "media": "Tanamera",
+       "tanggal": "21 Jul 2026"
+      },
+      {
+       "judul": "Tanamera Coffee at IPA Convex: Four Years of Coffee and Partnership",
+       "media": "Tanamera",
+       "tanggal": "26 Mei 2026"
+      },
+      {
+       "judul": "CSR Disability Coffee Workshop",
+       "media": "Tanamera",
+       "tanggal": "26 Mei 2026"
+      }
+     ]
     }
    ]
   }
