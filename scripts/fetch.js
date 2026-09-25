@@ -1,4 +1,4 @@
-// QCO Data Pipeline — fetch.js — v2026.09.25-3
+// QCO Data Pipeline — fetch.js — v2026.09.25-4
 // Repo: KGS-blog/Update-Coffee-Data — dijalankan via GitHub Actions (.github/workflows/)
 // Output:
 //   data/market-data.json  -> format lama dipertahankan (arabica/robusta/idrUsd + history)
@@ -118,10 +118,11 @@ function round2(n) { return Math.round(n * 100) / 100; }
     console.log("saved data/harga-harian.json:", seri.length, "titik");
   } catch (e) { errors.harian = e.message; }
 
-  // --- Berita kopi (NewsData.io utama, fallback Google News RSS) — v2026.09.25-3 ---
+  // --- Berita kopi (NewsData.io utama, fallback Google News RSS) — v2026.09.25-4 ---
   {
     const ND_KEY = process.env.NEWSDATA_KEY || "";
     const err = {};
+    const diag = {};
     let artikel = null;
     let sumberBerita = "";
     const UA_BROWSER = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36";
@@ -143,17 +144,18 @@ function round2(n) { return Math.round(n * 100) / 100; }
               return { judul: a.title, tautan: a.link, tanggal: a.pubDate, sumber: a.source_name || a.source_id || "" };
             });
             sumberBerita = "NewsData.io";
+            diag.newsdata = "sukses " + artikel.length;
             break;
           }
-          err.newsdata = JSON.stringify(jn).slice(0, 200);
-        } catch (e2) { err.newsdata = e2.message; }
+          diag.newsdata = "status=" + (jn && jn.status) + " " + JSON.stringify(jn).slice(0, 160);
+        } catch (e2) { diag.newsdata = "ERR " + e2.message; }
       }
     } else {
-      err.newsdata = "NEWSDATA_KEY tidak di-set sebagai secret";
+      diag.newsdata = "key tidak di-set";
     }
     if (!artikel) {
       try {
-        const xml = await getTextUA("https://news.google.com/rss/search?q=kopi+indonesia&hl=id&gl=ID&ceid=ID:id");
+        const xml = await getTextUA("https://news.google.com/rss/search?q=%22kopi%22+OR+%22coffee%22&hl=id&gl=ID&ceid=ID:id");
         const items = xml.match(/<item>[\s\S]*?<\/item>/g) || [];
         if (!items.length) err.rss = "RSS merespons tapi 0 item (kemungkinan halaman consent Google)";
         const clean = function (s) { return String(s || "").replace(/<!\[CDATA\[|\]\]>/g, "").replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&#39;/g, "'").trim(); };
@@ -173,7 +175,8 @@ function round2(n) { return Math.round(n * 100) / 100; }
       // TANPA fallback: hanya simpan yang benar-benar berkopi. Kosong = jujur, bukan junk.
       const simpan = artikel.filter(function (a) { return KOPI_RX.test(String(a.judul || "")); });
       console.log("berita relevan:", simpan.length, "dari", artikel.length);
-      fs.writeFileSync(path.join(OUT, "berita.json"), JSON.stringify({ sumber: sumberBerita, artikel: simpan, fetched: now }));
+      diag.rss = artikel.length;
+      fs.writeFileSync(path.join(OUT, "berita.json"), JSON.stringify({ sumber: sumberBerita, artikel: simpan, diagnostik: diag, fetched: now }));
       console.log("saved data/berita.json:", simpan.length, "artikel dari", sumberBerita);
     } else {
       const pesan = JSON.stringify(err);
@@ -242,7 +245,7 @@ function round2(n) { return Math.round(n * 100) / 100; }
     }
   }
 
-  // --- USDA FAS PSD — v2026.09.25-3 ---
+  // --- USDA FAS PSD — v2026.09.25-4 ---
   // Berdasarkan SDK terbukti (chhayly/usda-fas-sdk, April 2026):
   // host BARU api.fas.usda.gov, header X-Api-Key + Accept: application/json
   {
