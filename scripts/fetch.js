@@ -1,4 +1,4 @@
-// QCO Data Pipeline — fetch.js — v2026.09.25-1
+// QCO Data Pipeline — fetch.js — v2026.09.25-2
 // Repo: KGS-blog/Update-Coffee-Data — dijalankan via GitHub Actions (.github/workflows/)
 // Output:
 //   data/market-data.json  -> format lama dipertahankan (arabica/robusta/idrUsd + history)
@@ -118,7 +118,7 @@ function round2(n) { return Math.round(n * 100) / 100; }
     console.log("saved data/harga-harian.json:", seri.length, "titik");
   } catch (e) { errors.harian = e.message; }
 
-  // --- Berita kopi (NewsData.io utama, fallback Google News RSS) — v2026.09.25-1 ---
+  // --- Berita kopi (NewsData.io utama, fallback Google News RSS) — v2026.09.25-2 ---
   {
     const ND_KEY = process.env.NEWSDATA_KEY || "";
     const err = {};
@@ -168,8 +168,13 @@ function round2(n) { return Math.round(n * 100) / 100; }
       } catch (e3) { err.rss = e3.message; }
     }
     if (artikel && artikel.length) {
-      fs.writeFileSync(path.join(OUT, "berita.json"), JSON.stringify({ sumber: sumberBerita, artikel: artikel, fetched: now }));
-      console.log("saved data/berita.json:", artikel.length, "artikel dari", sumberBerita);
+      // hanya simpan berita yang benar-benar berkopi (judul mengandung kata kopi/coffee)
+      const KOPI_RX = /kopi|coffee|arabica|robusta/i;
+      const relevan = artikel.filter(function (a) { return KOPI_RX.test(String(a.judul || "")); });
+      const simpan = relevan.length >= 5 ? relevan : artikel;
+      console.log("berita relevan:", relevan.length, "dari", artikel.length);
+      fs.writeFileSync(path.join(OUT, "berita.json"), JSON.stringify({ sumber: sumberBerita, artikel: simpan, fetched: now }));
+      console.log("saved data/berita.json:", simpan.length, "artikel dari", sumberBerita);
     } else {
       const pesan = JSON.stringify(err);
       fs.writeFileSync(path.join(OUT, "berita.json"), JSON.stringify({ status: "Error", message: pesan, sumber: "-", artikel: [], fetched: now }));
@@ -237,7 +242,7 @@ function round2(n) { return Math.round(n * 100) / 100; }
     }
   }
 
-  // --- USDA FAS PSD — v2026.09.25-1 ---
+  // --- USDA FAS PSD — v2026.09.25-2 ---
   // Berdasarkan SDK terbukti (chhayly/usda-fas-sdk, April 2026):
   // host BARU api.fas.usda.gov, header X-Api-Key + Accept: application/json
   {
