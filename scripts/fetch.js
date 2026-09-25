@@ -1,4 +1,4 @@
-// QCO Data Pipeline — fetch.js — v2026.09.26-1
+// QCO Data Pipeline — fetch.js — v2026.09.26-3
 // Repo: KGS-blog/Update-Coffee-Data — dijalankan via GitHub Actions (.github/workflows/)
 // Output:
 //   data/market-data.json  -> format lama dipertahankan (arabica/robusta/idrUsd + history)
@@ -118,7 +118,7 @@ function round2(n) { return Math.round(n * 100) / 100; }
     console.log("saved data/harga-harian.json:", seri.length, "titik");
   } catch (e) { errors.harian = e.message; }
 
-  // --- Berita kopi (NewsData.io utama, fallback Google News RSS) — v2026.09.26-1 ---
+  // --- Berita kopi (NewsData.io utama, fallback Google News RSS) — v2026.09.26-3 ---
   {
     const ND_KEY = process.env.NEWSDATA_KEY || "";
     const err = {};
@@ -216,7 +216,7 @@ function round2(n) { return Math.round(n * 100) / 100; }
     }
   }
 
-  // --- USDA FAS PSD — v2026.09.26-1 ---
+  // --- USDA FAS PSD — v2026.09.26-3 ---
   // Berdasarkan SDK terbukti (chhayly/usda-fas-sdk, April 2026):
   // host BARU api.fas.usda.gov, header X-Api-Key + Accept: application/json
   {
@@ -363,39 +363,10 @@ function round2(n) { return Math.round(n * 100) / 100; }
         throw new Error("engine bps kosong");
       }
     } catch (eB) {
-      console.log("engine bps gagal, fallback API langsung:", eB.message);
-  if (BPS_KEY) {
-    try {
-      const j = await getJSON("https://webapi.bps.go.id/v1/api/dataexim/sumber/1/kodehs/09/jenishs/2/tahun/" + YEAR + "/periode/1/key/" + BPS_KEY);
-      if (j && j.status === "Error") throw new Error(j.message);
-      const arr = Array.isArray(j) ? j : (Array.isArray(j.data) ? j.data : []);
-      // kopi murni: hanya HS yang diawali 0901 (0902=teh, 0903=mate -> dibuang)
-      const kopi = arr.filter(function (d) { return String(d.kodehs || "").indexOf("0901") !== -1; });
-      const perBulan = {};
-      kopi.forEach(function (d) {
-        const b = String(d.bulan || "??").trim();
-        if (!perBulan[b]) perBulan[b] = { bulan: b, nilaiUSD: 0, nettoKg: 0 };
-        perBulan[b].nilaiUSD += Number(d.value) || 0;
-        perBulan[b].nettoKg += Number(d.netweight) || 0;
-      });
-      const bulanan = Object.values(perBulan).sort(function (a, b2) { return a.bulan.localeCompare(b2.bulan); });
-      const total = bulanan.reduce(function (s, b2) { s.nilaiUSD += b2.nilaiUSD; s.nettoKg += b2.nettoKg; return s; }, { nilaiUSD: 0, nettoKg: 0 });
-      fs.writeFileSync(path.join(OUT, "ekspor.json"), JSON.stringify({
-        sumber: "BPS dataexim — HS 0901 kopi, periode bulanan",
-        tahun: Number(YEAR),
-        jumlahEntriKopi: kopi.length,
-        bulanan: bulanan,
-        totalTahun: total,
-        fetched: now
-      }, null, 2));
-      console.log("saved data/ekspor.json");
-    } catch (e) { errors.ekspor = e.message; }
-  } else {
-    errors.ekspor = "BPS_API_KEY tidak di-set";
-  }
+      fs.writeFileSync(path.join(OUT, "ekspor.json"), JSON.stringify({ status: "Error", message: "Engine BPS: " + eB.message, data: [], fetched: now }));
+      console.log("engine bps error:", eB.message);
+      errors.ekspor = eB.message;
     }
   }
 
-  console.log(JSON.stringify({ date: now, errors }, null, 2));
-  process.exit(0); // jangan gagal total bila satu sumber error — file tetap ter-commit
-})();
+  })();
