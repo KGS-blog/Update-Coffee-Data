@@ -1,11 +1,1 @@
-{
-  "sumber": "BPS dataexim — HS 0901 kopi, periode bulanan",
-  "tahun": 2026,
-  "jumlahEntriKopi": 0,
-  "bulanan": [],
-  "totalTahun": {
-    "nilaiUSD": 0,
-    "nettoKg": 0
-  },
-  "fetched": "2026-09-25T16:53:07.129Z"
-}
+{"status":"Error","message":"Engine BPS: engine bps kosong","data":[],"fetched":"2026-09-25T19:55:32.823Z"}
