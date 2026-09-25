@@ -1,4 +1,4 @@
-// QCO Data Pipeline — fetch.js — v2026.09.24-19
+// QCO Data Pipeline — fetch.js — v2026.09.25-1
 // Repo: KGS-blog/Update-Coffee-Data — dijalankan via GitHub Actions (.github/workflows/)
 // Output:
 //   data/market-data.json  -> format lama dipertahankan (arabica/robusta/idrUsd + history)
@@ -118,7 +118,7 @@ function round2(n) { return Math.round(n * 100) / 100; }
     console.log("saved data/harga-harian.json:", seri.length, "titik");
   } catch (e) { errors.harian = e.message; }
 
-  // --- Berita kopi (NewsData.io utama, fallback Google News RSS) — v2026.09.24-19 ---
+  // --- Berita kopi (NewsData.io utama, fallback Google News RSS) — v2026.09.25-1 ---
   {
     const ND_KEY = process.env.NEWSDATA_KEY || "";
     const err = {};
@@ -132,8 +132,8 @@ function round2(n) { return Math.round(n * 100) / 100; }
     }
     if (ND_KEY) {
       const urls = [
-        "https://newsdata.io/api/1/latest?apikey=" + ND_KEY + "&q=kopi&country=id&language=id&size=8",
-        "https://newsdata.io/api/1/latest?apikey=" + ND_KEY + "&q=kopi&language=id&size=8"
+        "https://newsdata.io/api/1/latest?apikey=" + ND_KEY + "&q=kopi&country=id&language=id&size=25",
+        "https://newsdata.io/api/1/latest?apikey=" + ND_KEY + "&q=kopi&language=id&size=25"
       ];
       for (const url of urls) {
         try {
@@ -157,7 +157,7 @@ function round2(n) { return Math.round(n * 100) / 100; }
         const items = xml.match(/<item>[\s\S]*?<\/item>/g) || [];
         if (!items.length) err.rss = "RSS merespons tapi 0 item (kemungkinan halaman consent Google)";
         const clean = function (s) { return String(s || "").replace(/<!\[CDATA\[|\]\]>/g, "").replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&#39;/g, "'").trim(); };
-        artikel = items.slice(0, 8).map(function (it) {
+        artikel = items.slice(0, 25).map(function (it) {
           const ti = (it.match(/<title>([\s\S]*?)<\/title>/) || [])[1] || "";
           const li = (it.match(/<link>([\s\S]*?)<\/link>/) || [])[1] || "";
           const pd = (it.match(/<pubDate>([\s\S]*?)<\/pubDate>/) || [])[1] || "";
@@ -237,7 +237,7 @@ function round2(n) { return Math.round(n * 100) / 100; }
     }
   }
 
-  // --- USDA FAS PSD — v2026.09.24-19 ---
+  // --- USDA FAS PSD — v2026.09.25-1 ---
   // Berdasarkan SDK terbukti (chhayly/usda-fas-sdk, April 2026):
   // host BARU api.fas.usda.gov, header X-Api-Key + Accept: application/json
   {
