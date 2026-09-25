@@ -1,4 +1,4 @@
-// QCO Data Pipeline — fetch.js — v2026.09.26-4
+// QCO Data Pipeline — fetch.js — v2026.09.26-5
 // Repo: KGS-blog/Update-Coffee-Data — dijalankan via GitHub Actions (.github/workflows/)
 // Output:
 //   data/market-data.json  -> format lama dipertahankan (arabica/robusta/idrUsd + history)
@@ -118,7 +118,7 @@ function round2(n) { return Math.round(n * 100) / 100; }
     console.log("saved data/harga-harian.json:", seri.length, "titik");
   } catch (e) { errors.harian = e.message; }
 
-  // --- Berita kopi (NewsData.io utama, fallback Google News RSS) — v2026.09.26-4 ---
+  // --- Berita kopi (NewsData.io utama, fallback Google News RSS) — v2026.09.26-5 ---
   {
     const ND_KEY = process.env.NEWSDATA_KEY || "";
     const err = {};
@@ -188,11 +188,15 @@ function round2(n) { return Math.round(n * 100) / 100; }
       const KOPI_RX = /kopi|coffee|arabica|robusta/i;
       const seen = new Set();
       const uniq = artikel.filter(function (a) { const k = String(a.tautan || a.judul); if (seen.has(k)) return false; seen.add(k); return true; });
-      let simpan = uniq.filter(function (a) { return KOPI_RX.test(String(a.judul || "")); });
-      simpan.sort(function (a, b) { return (Date.parse(b.tanggal) || 0) - (Date.parse(a.tanggal) || 0); });
-      simpan = simpan.slice(0, 25);
+      const relevan = uniq.filter(function (a) { return KOPI_RX.test(String(a.judul || "")); });
+      // Komposisi: engine (kurasi) SELALU hadir (kuota 10), sisanya diisi terbaru dari API/RSS
+      const byDate = function (a, b) { return (Date.parse(b.tanggal) || 0) - (Date.parse(a.tanggal) || 0); };
+      const eng = relevan.filter(function (a) { return String(a.sumber).indexOf("Engine") !== -1; }).sort(byDate).slice(0, 10);
+      const lain = relevan.filter(function (a) { return String(a.sumber).indexOf("Engine") === -1; }).sort(byDate);
+      const seenE = new Set(eng.map(function (a) { return String(a.tautan || a.judul); }));
+      let simpan = eng.concat(lain.filter(function (a) { const k = String(a.tautan || a.judul); if (seenE.has(k)) return false; seenE.add(k); return true; })).slice(0, 25);
       sumberBerita = "Engine KGS + NewsData + RSS";
-      console.log("berita relevan:", simpan.length, "dari", uniq.length);
+      console.log("berita relevan:", simpan.length, "dari", uniq.length, "| engine:", eng.length);
       diag.rss = "ok";
       fs.writeFileSync(path.join(OUT, "berita.json"), JSON.stringify({ sumber: sumberBerita, artikel: simpan, diagnostik: diag, fetched: now }));
       // ARSIP BULANAN: kumulatif per bulan, dedupe by tautan
@@ -229,7 +233,7 @@ function round2(n) { return Math.round(n * 100) / 100; }
     }
   }
 
-  // --- USDA FAS PSD — v2026.09.26-4 ---
+  // --- USDA FAS PSD — v2026.09.26-5 ---
   // Berdasarkan SDK terbukti (chhayly/usda-fas-sdk, April 2026):
   // host BARU api.fas.usda.gov, header X-Api-Key + Accept: application/json
   {
