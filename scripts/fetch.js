@@ -229,6 +229,15 @@ function round2(n) { return Math.round(n * 100) / 100; }
             });
           }
         } catch (eOv) {}
+        // TERAPKAN override pengguna
+        try {
+          const ov = JSON.parse(fs.readFileSync(path.join(OUT, "klaster-final.json"), "utf8"));
+          if (Array.isArray(ov)) {
+            const map = {};
+            ov.forEach(function (o) { map[String(o.tautan)] = o.klaster; });
+            all.artikel = (all.artikel || []).map(function (a) { const k = String(a.tautan || a.judul); return map[k] ? Object.assign({}, a, { klaster_user: map[k] }) : a; });
+          }
+        } catch (eOv) {}
         const seenA = new Set((all.artikel || []).map(function (a) { return String(a.tautan || a.judul); }));
         relevan.forEach(function (a) { const k = String(a.tautan || a.judul); if (!seenA.has(k)) { all.artikel.push(a); seenA.add(k); } });
         all.artikel.sort(function (a, b) { return (Date.parse(b.tanggal) || 0) - (Date.parse(a.tanggal) || 0); });
