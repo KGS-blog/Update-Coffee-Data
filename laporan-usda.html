@@ -1,9 +1,54 @@
 <!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
 <head>
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '1498535007132214');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=1498535007132214&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QEG849B3YY"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-QEG849B3YY');
+</script>
+<!-- End Google Analytics -->
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ganjar Satyanagara | Laporan Kopi Indonesia & USDA</title>
+
+<!-- SEO & Social Meta -->
+<meta name="description" content="Laporan komprehensif kopi Indonesia: data live USDA PSD, clustering otomatis 800+ berita kopi per topik, analisis mingguan, dan tren harga untuk pembeli global.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#9749;</text></svg>">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Q Coffee Outlook - Laporan USDA & Berita">
+<meta property="og:title" content="Ganjar Satyanagara | Laporan Kopi Indonesia & USDA">
+<meta property="og:description" content="Data USDA resmi, clustering berita kopi terkini, dan analisis pasar Indonesia dengan 800+ artikel dari 120+ sumber media global.">
+<meta property="og:url" content="https://KGS-blog.github.io/Update-Coffee-Data/laporan-usda.html">
+<meta property="og:image" content="https://i.imgur.com/vgcEMB2.png">
+<meta property="og:locale" content="id_ID">
+<meta property="og:locale:alternate" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ganjar Satyanagara | Laporan Kopi Indonesia & USDA">
+<meta name="twitter:description" content="Laporan komprehensif kopi: data USDA, 800+ berita dikelompokkan per topik strategis, grafik tren, dan insights mingguan.">
+<meta name="twitter:image" content="https://i.imgur.com/vgcEMB2.png">
+
 <!-- laporan-usda.html — v2026.09.26-12 | hash #berita auto-buka tab Clustering Berita; tab1 live-only, tab2 Clustering, tab3 Analisis, ID/EN -->
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -591,7 +636,7 @@ tailwind.config = {
 <div class="max-w-7xl mx-auto px-6 lg:px-8">
 <div class="flex items-center justify-between h-16">
     <!-- Logo -->
-    <a href="index.html" class="flex items-center gap-3">
+    <a href="https://KGS-blog.github.io/Blog/index.html" class="flex items-center gap-3">
         <div class="w-10 h-10 bg-coffee-800 rounded-lg flex items-center justify-center"><span class="text-white font-serif font-bold text-lg">KG</span></div>
         <div class="hidden sm:block">
             <h1 class="font-serif font-bold text-xl text-coffee-900 leading-tight">Ganjar Satyanagara</h1>
@@ -600,10 +645,10 @@ tailwind.config = {
     </a>
     <!-- External Nav Links -->
     <div class="flex items-center gap-3 md:gap-5">
-        <a href="https://KGS-blog.github.io/Blog" class="nav-link flex items-center gap-2 text-xs md:text-sm">
+        <a href="https://KGS-blog.github.io/Blog/index.html" class="nav-link flex items-center gap-2 text-xs md:text-sm">
             <i class="fas fa-arrow-left text-xs"></i><span data-i18n="nav_back" class="hidden sm:inline">Kembali ke Blog</span><span class="inline sm:hidden">Blog</span>
         </a>
-        <a href="kalkulator.html" class="nav-link flex items-center gap-2 text-xs md:text-sm" data-i18n="nav_calc"><span class="hidden sm:inline">Kalkulator</span><span class="inline sm:hidden">Kalk</span></a>
+        <a href="https://KGS-blog.github.io/Blog/kalkulator.html" class="nav-link flex items-center gap-2 text-xs md:text-sm" data-i18n="nav_calc"><span class="hidden sm:inline">Kalkulator</span><span class="inline sm:hidden">Kalk</span></a>
         <div class="h-5 w-px bg-coffee-200 hidden md:block"></div>
         <div class="flex items-center gap-1 bg-coffee-100 rounded-lg p-1">
             <button type="button" id="btn-id" class="lang-btn active text-xs" onclick="setLanguage('id')">ID</button>
@@ -929,9 +974,9 @@ function loadBPSPanel() {
         </div>
     </div>
     <div class="flex gap-6 text-sm">
-        <a href="index.html" class="hover:text-white transition-colors" data-i18n="footer_blog">Blog</a>
-        <a href="kalkulator.html" class="hover:text-white transition-colors" data-i18n="footer_calc">Kalkulator</a>
-        <a href="laporan-usda.html" class="hover:text-white transition-colors" data-i18n="footer_usda">Laporan USDA</a>
+        <a href="https://KGS-blog.github.io/Blog/index.html" class="hover:text-white transition-colors" data-i18n="footer_blog">Blog</a>
+        <a href="https://KGS-blog.github.io/Blog/kalkulator.html" class="hover:text-white transition-colors" data-i18n="footer_calc">Kalkulator</a>
+        <a href="https://KGS-blog.github.io/Update-Coffee-Data/laporan-usda.html" class="hover:text-white transition-colors" data-i18n="footer_usda">Laporan USDA</a>
     </div>
     <p class="text-sm text-coffee-500" data-i18n="footer_copyright">2026 Ganjar Satyanagara</p>
 </div>
