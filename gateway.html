@@ -26,6 +26,105 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-QEG849B3YY');
+
+    // GA4 Event Tracking Functions
+    window.__scrollEvents = {}; // Track scroll events per article
+
+    // Track article clicks from featured, grid, or sidebar
+    function trackArticleClick(articleId, articleTitle, section = 'grid', category = 'general') {
+        gtag('event', 'article_click', {
+            'article_id': articleId,
+            'article_title': articleTitle,
+            'section': section,
+            'category': category
+        });
+    }
+
+    // Track scroll depth (25%, 50%, 75%, 100%)
+    function initScrollDepthTracking(articleId, articleTitle, category = 'general') {
+        if (!window.__scrollEvents[articleId]) {
+            window.__scrollEvents[articleId] = {
+                tracked_25: false,
+                tracked_50: false,
+                tracked_75: false,
+                tracked_100: false
+            };
+        }
+
+        const handleScroll = function() {
+            const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            if (scrollHeight === 0) return;
+
+            const scrollPercent = Math.round((window.scrollY / scrollHeight) * 100);
+            const events = window.__scrollEvents[articleId];
+
+            if (scrollPercent >= 25 && !events.tracked_25) {
+                gtag('event', 'scroll_depth', {
+                    'scroll_percentage': 25,
+                    'article_id': articleId,
+                    'article_title': articleTitle,
+                    'category': category
+                });
+                events.tracked_25 = true;
+            }
+            if (scrollPercent >= 50 && !events.tracked_50) {
+                gtag('event', 'scroll_depth', {
+                    'scroll_percentage': 50,
+                    'article_id': articleId,
+                    'article_title': articleTitle,
+                    'category': category
+                });
+                events.tracked_50 = true;
+            }
+            if (scrollPercent >= 75 && !events.tracked_75) {
+                gtag('event', 'scroll_depth', {
+                    'scroll_percentage': 75,
+                    'article_id': articleId,
+                    'article_title': articleTitle,
+                    'category': category
+                });
+                events.tracked_75 = true;
+            }
+            if (scrollPercent >= 100 && !events.tracked_100) {
+                gtag('event', 'scroll_depth', {
+                    'scroll_percentage': 100,
+                    'article_id': articleId,
+                    'article_title': articleTitle,
+                    'category': category
+                });
+                events.tracked_100 = true;
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+    }
+
+    // Track internal link clicks
+    function trackInternalLink(linkTarget, sourceArticle, linkType = 'article') {
+        gtag('event', 'internal_link_click', {
+            'link_target': linkTarget,
+            'source_article': sourceArticle,
+            'link_type': linkType
+        });
+    }
+
+    // Track external link clicks
+    function trackExternalLink(url, sourceArticle) {
+        gtag('event', 'external_link_click', {
+            'url': url,
+            'source_article': sourceArticle
+        });
+    }
+
+    // Track read time
+    function trackReadTime(articleId, timeOnPage, estimatedReadTime, completionPercent = 0) {
+        gtag('event', 'article_read_time', {
+            'article_id': articleId,
+            'time_on_page': timeOnPage,
+            'estimated_read_time': estimatedReadTime,
+            'completion': completionPercent
+        });
+    }
     </script>
     <!-- End Google Analytics -->
 
@@ -44,6 +143,9 @@
     <meta property="og:image" content="https://i.imgur.com/vgcEMB2.png">
     <meta property="og:locale" content="id_ID">
     <meta property="og:locale:alternate" content="en_US">
+    <!-- Article Publication Meta Tags (updated dynamically) -->
+    <meta property="article:published_time" content="">
+    <meta property="article:modified_time" content="">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Ganjar Satyanagara | Data & Berita Kopi Indonesia">
     <meta name="twitter:description" content="Laporan USDA, clustering berita kopi terkini, dan analisis mingguan dari 800+ artikel untuk insights pasar kopi Indonesia.">
@@ -619,10 +721,39 @@
             localStorage.setItem("preferredLang", lang);
         }
 
+        // Generate Organization schema markup for gateway page
+        function generateOrganizationSchema() {
+            const schema = {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "name": "Q Coffee Outlook - Gateway Hub",
+                "description": "Hub gateway ke data dan analisis pasar kopi Indonesia - laporan USDA, clustering berita, dan insight mingguan dari 800+ artikel kopi terkini.",
+                "url": "https://KGS-blog.github.io/Update-Coffee-Data/",
+                "image": "https://i.imgur.com/vgcEMB2.png",
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "Q Coffee Outlook",
+                    "url": "https://blog.qcoid.com",
+                    "logo": "https://i.imgur.com/vgcEMB2.png",
+                    "founder": {
+                        "@type": "Person",
+                        "name": "Ganjar Satyanagara"
+                    }
+                }
+            };
+            const schemaScript = document.createElement('script');
+            schemaScript.type = 'application/ld+json';
+            schemaScript.textContent = JSON.stringify(schema);
+            document.head.appendChild(schemaScript);
+        }
+
         // Initialize
         document.addEventListener("DOMContentLoaded", function() {
             const saved = localStorage.getItem("preferredLang") || "id";
             setLanguage(saved);
+
+            // Generate schema markup
+            generateOrganizationSchema();
 
             // Update footer date
             const now = new Date();
