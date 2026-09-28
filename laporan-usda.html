@@ -26,6 +26,105 @@ window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', 'G-QEG849B3YY');
+
+// GA4 Event Tracking Functions
+window.__scrollEvents = {}; // Track scroll events per article
+
+// Track article clicks from featured, grid, or sidebar
+function trackArticleClick(articleId, articleTitle, section = 'grid', category = 'general') {
+    gtag('event', 'article_click', {
+        'article_id': articleId,
+        'article_title': articleTitle,
+        'section': section,
+        'category': category
+    });
+}
+
+// Track scroll depth (25%, 50%, 75%, 100%)
+function initScrollDepthTracking(articleId, articleTitle, category = 'general') {
+    if (!window.__scrollEvents[articleId]) {
+        window.__scrollEvents[articleId] = {
+            tracked_25: false,
+            tracked_50: false,
+            tracked_75: false,
+            tracked_100: false
+        };
+    }
+
+    const handleScroll = function() {
+        const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+        if (scrollHeight === 0) return;
+
+        const scrollPercent = Math.round((window.scrollY / scrollHeight) * 100);
+        const events = window.__scrollEvents[articleId];
+
+        if (scrollPercent >= 25 && !events.tracked_25) {
+            gtag('event', 'scroll_depth', {
+                'scroll_percentage': 25,
+                'article_id': articleId,
+                'article_title': articleTitle,
+                'category': category
+            });
+            events.tracked_25 = true;
+        }
+        if (scrollPercent >= 50 && !events.tracked_50) {
+            gtag('event', 'scroll_depth', {
+                'scroll_percentage': 50,
+                'article_id': articleId,
+                'article_title': articleTitle,
+                'category': category
+            });
+            events.tracked_50 = true;
+        }
+        if (scrollPercent >= 75 && !events.tracked_75) {
+            gtag('event', 'scroll_depth', {
+                'scroll_percentage': 75,
+                'article_id': articleId,
+                'article_title': articleTitle,
+                'category': category
+            });
+            events.tracked_75 = true;
+        }
+        if (scrollPercent >= 100 && !events.tracked_100) {
+            gtag('event', 'scroll_depth', {
+                'scroll_percentage': 100,
+                'article_id': articleId,
+                'article_title': articleTitle,
+                'category': category
+            });
+            events.tracked_100 = true;
+        }
+    };
+
+    window.addEventListener('scroll', handleScroll, { passive: true });
+}
+
+// Track internal link clicks
+function trackInternalLink(linkTarget, sourceArticle, linkType = 'article') {
+    gtag('event', 'internal_link_click', {
+        'link_target': linkTarget,
+        'source_article': sourceArticle,
+        'link_type': linkType
+    });
+}
+
+// Track external link clicks
+function trackExternalLink(url, sourceArticle) {
+    gtag('event', 'external_link_click', {
+        'url': url,
+        'source_article': sourceArticle
+    });
+}
+
+// Track read time
+function trackReadTime(articleId, timeOnPage, estimatedReadTime, completionPercent = 0) {
+    gtag('event', 'article_read_time', {
+        'article_id': articleId,
+        'time_on_page': timeOnPage,
+        'estimated_read_time': estimatedReadTime,
+        'completion': completionPercent
+    });
+}
 </script>
 <!-- End Google Analytics -->
 
@@ -44,6 +143,9 @@ gtag('config', 'G-QEG849B3YY');
 <meta property="og:image" content="https://i.imgur.com/vgcEMB2.png">
 <meta property="og:locale" content="id_ID">
 <meta property="og:locale:alternate" content="en_US">
+<!-- Article Publication Meta Tags (updated dynamically) -->
+<meta property="article:published_time" content="">
+<meta property="article:modified_time" content="">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Ganjar Satyanagara | Laporan Kopi Indonesia & USDA">
 <meta name="twitter:description" content="Laporan komprehensif kopi: data USDA, 800+ berita dikelompokkan per topik strategis, grafik tren, dan insights mingguan.">
@@ -1057,6 +1159,63 @@ function showShareToast(msg) {
         alert(msg);
     }
 }
+
+// Generate BlogPosting schema markup for SEO
+function generateBlogPostingSchema(title, description, imageUrl, datePublished, dateModified) {
+    const schema = {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": title,
+        "description": description,
+        "image": imageUrl || "https://i.imgur.com/vgcEMB2.png",
+        "datePublished": datePublished || new Date().toISOString(),
+        "dateModified": dateModified || new Date().toISOString(),
+        "author": {
+            "@type": "Person",
+            "name": "Ganjar Satyanagara",
+            "url": "https://blog.qcoid.com"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Q Coffee Outlook",
+            "url": "https://KGS-blog.github.io/Update-Coffee-Data/",
+            "logo": "https://i.imgur.com/vgcEMB2.png"
+        },
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://KGS-blog.github.io/Update-Coffee-Data/laporan-usda.html"
+        }
+    };
+
+    const schemaScript = document.createElement('script');
+    schemaScript.type = 'application/ld+json';
+    schemaScript.textContent = JSON.stringify(schema);
+    document.head.appendChild(schemaScript);
+}
+
+// Update article publication meta tags for SEO
+function updateArticleMetaTags(title, description, datePublished, dateModified) {
+    const pubMeta = document.querySelector('meta[property="article:published_time"]');
+    const modMeta = document.querySelector('meta[property="article:modified_time"]');
+    const ogTitleMeta = document.querySelector('meta[property="og:title"]');
+    const ogDescMeta = document.querySelector('meta[property="og:description"]');
+
+    if (pubMeta) pubMeta.setAttribute('content', datePublished || new Date().toISOString());
+    if (modMeta) modMeta.setAttribute('content', dateModified || datePublished || new Date().toISOString());
+    if (ogTitleMeta) ogTitleMeta.setAttribute('content', title || "Ganjar Satyanagara | Laporan Kopi Indonesia & USDA");
+    if (ogDescMeta) ogDescMeta.setAttribute('content', description || "Data USDA resmi, clustering berita kopi terkini, dan analisis pasar Indonesia");
+}
+
+// Initialize schemas on page load
+document.addEventListener("DOMContentLoaded", function() {
+    generateBlogPostingSchema(
+        "Laporan Kopi Indonesia & USDA",
+        "Data USDA resmi, clustering berita kopi terkini, dan analisis pasar Indonesia dengan 800+ artikel dari 120+ sumber media global.",
+        "https://i.imgur.com/vgcEMB2.png",
+        new Date().toISOString(),
+        new Date().toISOString()
+    );
+});
 </script>
 </body>
 </html>
