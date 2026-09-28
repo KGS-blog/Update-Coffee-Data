@@ -25,9 +25,9 @@ const translations = {
     // USDA Section
     "usda_label": { id: "Data Resmi", en: "Official Data" },
     "usda_title": { id: "Data Laporan BPS - USDA", en: "BPS - USDA Coffee Report" },
-    "usda_desc": { 
-        id: "Perkembangan produksi, ekspor, dan pasar kopi Indonesia berdasarkan data resmi USDA Foreign Agricultural Service (FAS).", 
-        en: "Production, export, and market developments of Indonesian coffee based on official USDA Foreign Agricultural Service (FAS) data." 
+    "usda_desc": {
+        id: "Perkembangan produksi, ekspor, dan pasar kopi Indonesia berdasarkan data resmi USDA Foreign Agricultural Service (FAS).",
+        en: "Production, export, and market developments of Indonesian coffee based on official USDA Foreign Agricultural Service (FAS) data."
     },
     "usda_production": { id: "Produksi (ribu kantong)", en: "Production (thousand bags)" },
     "usda_export": { id: "Ekspor (ribu kantong)", en: "Export (thousand bags)" },
@@ -73,23 +73,23 @@ const translations = {
     "hist_monthly": { id: "Harga Bulanan", en: "Monthly Price" },
     "hist_rate": { id: "Kurs Bulanan", en: "Monthly Rate" },
     "hist_event_title": { id: "Event Pasar Signifikan (5 Tahun Terakhir)", en: "Significant Market Events (Last 5 Years)" },
-    "hist_event_desc": { 
-        id: "Enam peristiwa besar yang mengguncang pasar kopi global dan dampak langsungnya terhadap FOB Indonesia.", 
-        en: "Six major events that shook the global coffee market and their direct impact on Indonesian FOB prices." 
+    "hist_event_desc": {
+        id: "Enam peristiwa besar yang mengguncang pasar kopi global dan dampak langsungnya terhadap FOB Indonesia.",
+        en: "Six major events that shook the global coffee market and their direct impact on Indonesian FOB prices."
     },
     "hist_period": { id: "Periode", en: "Period" },
     "hist_price_move": { id: "Pergerakan Harga", en: "Price Movement" },
     "hist_cause": { id: "Penyebab Utama", en: "Primary Cause" },
     "hist_impact": { id: "Dampak FOB Indonesia", en: "Impact on Indonesia FOB" },
     "hist_insight": { id: "Insight", en: "Insight" },
-    "hist_insight_text": { 
-        id: "5 dari 6 event dipicu oleh cuaca ekstrem atau geopolitik. Hanya 1 event (Apr–Mei 2026) yang murni fundamental pasar. Volatilitas kopi >60% berasal dari supply shock.", 
-        en: "5 of 6 events were triggered by extreme weather or geopolitics. Only 1 event (Apr-May 2026) was pure market fundamentals. Coffee volatility >60% comes from supply shocks." 
+    "hist_insight_text": {
+        id: "5 dari 6 event dipicu oleh cuaca ekstrem atau geopolitik. Hanya 1 event (Apr–Mei 2026) yang murni fundamental pasar. Volatilitas kopi >60% berasal dari supply shock.",
+        en: "5 of 6 events were triggered by extreme weather or geopolitics. Only 1 event (Apr-May 2026) was pure market fundamentals. Coffee volatility >60% comes from supply shocks."
     },
     "hist_warning_title": { id: "Early Warning System", en: "Early Warning System" },
-    "hist_warning_desc": { 
-        id: "Empat kategori sinyal yang harus dipantau 24/7 untuk mengantisipasi pergerakan pasar sebelum terjadi.", 
-        en: "Four categories of signals that must be monitored 24/7 to anticipate market movements before they happen." 
+    "hist_warning_desc": {
+        id: "Empat kategori sinyal yang harus dipantau 24/7 untuk mengantisipasi pergerakan pasar sebelum terjadi.",
+        en: "Four categories of signals that must be monitored 24/7 to anticipate market movements before they happen."
     },
     "hist_weather_alert": { id: "Weather Alert", en: "Weather Alert" },
     "hist_logistics": { id: "Logistics & Freight", en: "Logistics & Freight" },
@@ -344,7 +344,7 @@ function generateAnalysisFromClustering() {
         if (cluster.persen) ringkasan_en += "This topic represents " + cluster.persen + "% of all news.";
 
         // Generate content
-        var headlines = items.slice(0, 5).map(function(a) { return "\u2022 " + (a.judul || "No title"); }).join("\n");
+        var headlines = items.slice(0, 5).map(function(a) { return "• " + (a.judul || "No title"); }).join("\n");
         var isi_id = "Berita terkini dalam klaster ini:\n\n" + headlines + "\n\nTotal: " + items.length + " artikel tercatat dalam sistem.";
         var isi_en = "Latest news in this cluster:\n\n" + headlines + "\n\nTotal: " + items.length + " articles recorded.";
 
@@ -394,7 +394,7 @@ function loadAnalisisDashboard() {
                 // Archive found - use it
                 var batches = Array.isArray(j.batches) ? j.batches : (j.grup ? [{ dibuat: j.dibuat, periode: j.periode, grup: j.grup }] : []);
                 var perTerbaru = (j.batches && j.batches[0] && j.batches[0].periode) || j.periode;
-                if (periode && perTerbaru) periode.textContent = "Periode terbaru: " + perTerbaru + " \u00b7 " + batches.length + " batch terarsip";
+                if (periode && perTerbaru) periode.textContent = "Periode terbaru: " + perTerbaru + " · " + batches.length + " batch terarsip";
                 renderAnalysis(batches, box, "archive");
             })
             .catch(function() {
@@ -402,7 +402,7 @@ function loadAnalisisDashboard() {
                 if (window.BERITA_HASIL_CLUSTERING) {
                     var autoGen = generateAnalysisFromClustering();
                     if (autoGen) {
-                        if (periode) periode.textContent = "Periode terbaru: " + autoGen.periode + " \u00b7 Auto-generated from clustering";
+                        if (periode) periode.textContent = "Periode terbaru: " + autoGen.periode + " · Auto-generated from clustering";
                         renderAnalysis([autoGen], box, "auto");
                     } else {
                         renderAnalysis([], box, "error");
@@ -424,6 +424,14 @@ function renderAnalysis(batches, box, source) {
         box.innerHTML = '<div class="text-center py-6 text-coffee-400 text-sm">Analisis belum tersedia.</div>';
         return;
     }
+
+    // Check if BERITA_KLASTER is defined
+    if (!window.BERITA_KLASTER || !Array.isArray(window.BERITA_KLASTER)) {
+        console.error("[renderAnalysis] ERROR: BERITA_KLASTER not loaded! typeof:", typeof window.BERITA_KLASTER);
+        box.innerHTML = '<div class="text-center py-6 text-coffee-400 text-sm">BERITA_KLASTER gagal dimuat. Muat ulang halaman.</div>';
+        return;
+    }
+
     console.log("[loadAnalisisDashboard] Rendering " + source + " — " + batches.length + " batch(es)");
     var esc = function (s) { return String(s == null ? "" : s).replace(/</g, "&lt;").replace(/"/g, "&quot;"); };
     var renderGrup = function (g, heading, periodeStr) {
@@ -454,7 +462,7 @@ function renderAnalysis(batches, box, source) {
             }
         });
         console.log("[Analysis] Periode " + bt.periode + " (" + source + ") || clusters:", allIds.join(", "));
-        var slotHtml = BERITA_KLASTER.map(function (k) {
+        var slotHtml = window.BERITA_KLASTER.map(function (k) {
             var g = null;
             var lookupKey = k.analisis_id || k.slug;
 
@@ -467,7 +475,7 @@ function renderAnalysis(batches, box, source) {
         }).join("");
 
         Object.keys(byAnalisisId).forEach(function(id) {
-            var found = BERITA_KLASTER.some(function(k) { return (k.analisis_id === id || k.slug === id); });
+            var found = window.BERITA_KLASTER.some(function(k) { return (k.analisis_id === id || k.slug === id); });
             if (!found) legacy.push(byAnalisisId[id]);
         });
         var legacyHtml = legacy.map(function (g) { return renderGrup(g, "", bt.periode || ""); }).join("");
@@ -651,7 +659,7 @@ tailwind.config = {
         </p>
     </div>
 
-    
+
     <!-- Social Share -->
     <div class="share-bar">
         <span class="share-label"><i class="fas fa-share-alt mr-1"></i>Bagikan</span>
@@ -772,14 +780,14 @@ function loadBPSPanel() {
                             if (r.trade_flow === "export" && (!lex || y > (num(lex.year) || 0))) lex = r;
                             if (r.trade_flow === "import" && (!lim || y > (num(lim.year) || 0))) lim = r;
                         });
-                        if (lex) rows.push(["Ekspor " + lex.year, fmt(num(lex.volume)) + " ton \u00b7 USD " + fmt(num(lex.value)) + " ribu"]);
-                        if (lim) rows.push(["Impor " + lim.year, fmt(num(lim.volume)) + " ton \u00b7 USD " + fmt(num(lim.value)) + " ribu"]);
+                        if (lex) rows.push(["Ekspor " + lex.year, fmt(num(lex.volume)) + " ton · USD " + fmt(num(lex.value)) + " ribu"]);
+                        if (lim) rows.push(["Impor " + lim.year, fmt(num(lim.volume)) + " ton · USD " + fmt(num(lim.value)) + " ribu"]);
                     }
                     var cat = ds.map(function (d) { return (d && d.title) ? String(d.title) : ""; }).filter(Boolean);
                     if (rows.length) {
                         box.innerHTML = '<ul class="list-disc pl-5 space-y-1">' + rows.map(function (rw) { return "<li><strong>" + esc(rw[0]) + ":</strong> " + esc(rw[1]) + "</li>"; }).join("") + "</ul>"
                             + tblHtml
-                            + (cat.length ? '<div class="text-xs text-coffee-400 mt-2">Dataset engine: ' + esc(cat.join(" \u00b7 ")) + "</div>" : "")
+                            + (cat.length ? '<div class="text-xs text-coffee-400 mt-2">Dataset engine: ' + esc(cat.join(" · ")) + "</div>" : "")
                             + '<div class="text-xs text-coffee-400 mt-1">Sumber: BPS (publikasi 05100.26021) via Engine KGS.</div>';
                     } else {
                         var tot = ds.reduce(function (a, d) { return a + (d && Array.isArray(d.records) ? d.records.length : 0); }, 0);
@@ -795,7 +803,7 @@ function loadBPSPanel() {
                     var kgTxt = "";
                     if (d.nettoKg !== undefined && d.nettoKg !== null && d.nettoKg !== "") {
                         var kgN = Number(d.nettoKg);
-                        kgTxt = " \u00b7 " + (isNaN(kgN) ? String(d.nettoKg).replace(/</g, "&lt;") : kgN.toLocaleString("id-ID")) + " kg";
+                        kgTxt = " · " + (isNaN(kgN) ? String(d.nettoKg).replace(/</g, "&lt;") : kgN.toLocaleString("id-ID")) + " kg";
                     }
                     box.innerHTML = "<strong>" + String(d.bulan || "").replace(/</g, "&lt;") + " " + String(ek.tahun || "").replace(/</g, "&lt;") + ":</strong> USD " + usdTxt + kgTxt;
                     return;
@@ -854,7 +862,7 @@ function loadBPSPanel() {
         <p class="text-lg text-coffee-500 max-w-3xl mx-auto mt-2" data-i18n="hist_desc">
             Pergerakan harga Arabica C-Market, Robusta London, dan kurs IDR/USD dalam 5 tahun terakhir.
         </p>
-        
+
 
     <!-- Social Share -->
     <div class="share-bar">
@@ -869,7 +877,7 @@ function loadBPSPanel() {
 
     </div>
 
-    
+
 </div>
 </section>
 
