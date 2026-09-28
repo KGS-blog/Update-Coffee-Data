@@ -462,17 +462,16 @@ function renderAnalysis(batches, box, source) {
             }
         });
         console.log("[Analysis] Periode " + bt.periode + " (" + source + ") || clusters:", allIds.join(", "));
-        var slotHtml = window.BERITA_KLASTER.map(function (k) {
-            var g = null;
-            var lookupKey = k.analisis_id || k.slug;
-
-            if (lookupKey) {
-                g = byAnalisisId[lookupKey];
-            }
-
-            if (!g) return '<article class="card p-6 md:p-8 mb-8" style="border-style:dashed;border-color:#e0d5c5"><div class="mb-3"><span class="text-xs font-bold px-3 py-1 rounded-full bg-coffee-100 text-coffee-500">' + esc((currentLang === "en" && k.nama_en) ? k.nama_en : k.nama) + '</span></div><p class="text-sm text-coffee-400 italic">' + (currentLang === "en" ? "Analysis for this group is being prepared." : "Analisis grup ini sedang disiapkan.") + '</p></article>';
-            return renderGrup(g, (currentLang === "en" && k.nama_en) ? k.nama_en : k.nama, bt.periode || "");
-        }).join("");
+        // Only render clusters with actual data — filter out empty ones
+        var slotHtml = window.BERITA_KLASTER
+            .filter(function(k) {
+                var lookupKey = k.analisis_id || k.slug;
+                return lookupKey && byAnalisisId[lookupKey];
+            })
+            .map(function (k) {
+                var g = byAnalisisId[k.analisis_id || k.slug];
+                return renderGrup(g, (currentLang === "en" && k.nama_en) ? k.nama_en : k.nama, bt.periode || "");
+            }).join("");
 
         Object.keys(byAnalisisId).forEach(function(id) {
             var found = window.BERITA_KLASTER.some(function(k) { return (k.analisis_id === id || k.slug === id); });
