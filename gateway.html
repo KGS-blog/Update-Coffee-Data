@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ganjar Satyanagara | Update Coffee Data Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        :root {
+            --coffee-50: #FAF7F2;
+            --coffee-100: #F5EFEB;
+            --coffee-200: #E8DED7;
+            --coffee-300: #D4B5A0;
+            --coffee-400: #C9956F;
+            --coffee-500: #B8814F;
+            --coffee-600: #8B6239;
+            --coffee-700: #6B4423;
+            --coffee-800: #4A2C16;
+            --coffee-900: #2D1B0D;
+        }
+
+        body {
+            background-color: var(--coffee-50);
+            color: var(--coffee-900);
+            font-family: 'Inter', sans-serif;
+        }
+
+        .card {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: all 0.3s ease;
+        }
+
+        .card:hover {
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            transform: translateY(-2px);
+        }
+
+        .btn-primary {
+            background-color: var(--coffee-700);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--coffee-800);
+            transform: scale(1.05);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--coffee-800) 0%, var(--coffee-700) 100%);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+            opacity: 0.95;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+            margin: 40px 0;
+        }
+
+        .feature-card {
+            padding: 32px;
+            text-align: center;
+            border-left: 4px solid var(--coffee-600);
+        }
+
+        .feature-card i {
+            font-size: 2.5rem;
+            color: var(--coffee-600);
+            margin-bottom: 16px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--coffee-800);
+        }
+
+        .feature-card p {
+            color: var(--coffee-600);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .lang-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: white;
+            border-radius: 50px;
+            padding: 8px 16px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            display: flex;
+            gap: 8px;
+            z-index: 50;
+        }
+
+        .lang-btn {
+            padding: 6px 12px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 0.875rem;
+            transition: all 0.3s ease;
+        }
+
+        .lang-btn.active {
+            background: var(--coffee-700);
+            color: white;
+        }
+
+        .lang-btn.inactive {
+            color: var(--coffee-600);
+            background: transparent;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin: 40px 0;
+        }
+
+        .stat-box {
+            background: var(--coffee-700);
+            color: white;
+            padding: 24px;
+            border-radius: 8px;
+            text-align: center;
+        }
+
+        .stat-box .number {
+            font-size: 2rem;
+            font-weight: 700;
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .stat-box .label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+        }
+
+        .cta-section {
+            background: linear-gradient(135deg, var(--coffee-700) 0%, var(--coffee-800) 100%);
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+            margin: 60px 0;
+            border-radius: 12px;
+        }
+
+        .cta-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .cta-section .btn-primary {
+            background-color: white;
+            color: var(--coffee-800);
+            margin-top: 20px;
+        }
+
+        .cta-section .btn-primary:hover {
+            background-color: var(--coffee-100);
+        }
+
+        footer {
+            background-color: var(--coffee-900);
+            color: white;
+            padding: 40px 20px;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        footer a {
+            color: var(--coffee-300);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: white;
+        }
+
+        .nav-back {
+            display: inline-block;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            background: var(--coffee-100);
+            color: var(--coffee-700);
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+
+        .nav-back:hover {
+            background: var(--coffee-200);
+        }
+    </style>
+</head>
+<body>
+    <!-- Language Toggle -->
+    <div class="lang-toggle">
+        <button class="lang-btn active" id="langIdBtn" onclick="setLanguage('id')">ID</button>
+        <button class="lang-btn inactive" id="langEnBtn" onclick="setLanguage('en')">EN</button>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <h1 data-i18n="title">Data dan Berita Kopi Indonesia</h1>
+        <p data-i18n="subtitle">Platform Analisis & Laporan Kopi | Indonesian Coffee Data & Analysis Platform</p>
+        <p style="font-size: 1.1rem; opacity: 0.9; margin-bottom: 30px;">Pilih laporan yang ingin Anda jelajahi:</p>
+    </div>
+
+    <!-- Main Content -->
+    <div style="max-width: 1200px; margin: 0 auto; padding: 40px 20px;">
+
+        <!-- Back Button -->
+        <a href="https://KGS-blog.github.io/Blog/index.html" class="nav-back" data-i18n="nav_back">← Kembali ke Blog</a>
+
+        <!-- Features Section -->
+        <section style="margin: 60px 0;">
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; text-align: center; margin-bottom: 40px; color: var(--coffee-800);" data-i18n="features_title">Fitur Utama</h2>
+
+            <div class="feature-grid">
+                <!-- Feature 1: Live PSD -->
+                <div class="card feature-card">
+                    <i class="fas fa-database"></i>
+                    <h3 data-i18n="feature_live_title">Data Pasokan & Distribusi</h3>
+                    <p data-i18n="feature_live_desc">Data real-time USDA PSD untuk produksi, ekspor, dan konsumsi kopi Indonesia yang diperbarui otomatis.</p>
+                </div>
+
+                <!-- Feature 2: Clustering -->
+                <div class="card feature-card">
+                    <i class="fas fa-sitemap"></i>
+                    <h3 data-i18n="feature_cluster_title">Clustering Berita Otomatis</h3>
+                    <p data-i18n="feature_cluster_desc">Sistem clustering AI mengelompokkan 800+ artikel berita kopi ke dalam 10 topik strategis dengan 810+ keyword industri.</p>
+                </div>
+
+                <!-- Feature 3: Analysis -->
+                <div class="card feature-card">
+                    <i class="fas fa-lightbulb"></i>
+                    <h3 data-i18n="feature_analysis_title">Analisis & Insight</h3>
+                    <p data-i18n="feature_analysis_desc">Ringkasan mingguan dari penggabungan berita terkini per topik dengan rekomendasi aksi untuk pelaku industri.</p>
+                </div>
+
+                <!-- Feature 4: Bilingual -->
+                <div class="card feature-card">
+                    <i class="fas fa-globe"></i>
+                    <h3 data-i18n="feature_bilingual_title">Dukungan Bilingual</h3>
+                    <p data-i18n="feature_bilingual_desc">Seluruh platform tersedia dalam bahasa Indonesia dan Inggris untuk jangkauan pasar global.</p>
+                </div>
+
+                <!-- Feature 5: Market Calculator -->
+                <div class="card feature-card">
+                    <i class="fas fa-calculator"></i>
+                    <h3 data-i18n="feature_calc_title">Kalkulator Harga Pasar</h3>
+                    <p data-i18n="feature_calc_desc">Konversi otomatis harga ICE C-Market ke Rupiah per kilogram dengan diferensial pasar domestik.</p>
+                </div>
+
+                <!-- Feature 6: GitHub Pages -->
+                <div class="card feature-card">
+                    <i class="fas fa-rocket"></i>
+                    <h3 data-i18n="feature_auto_title">Update Otomatis</h3>
+                    <p data-i18n="feature_auto_desc">GitHub Actions mengupdate data setiap 6 jam tanpa downtime, di-deploy ke GitHub Pages.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statistics Section -->
+        <section style="margin: 60px 0;">
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; text-align: center; margin-bottom: 40px; color: var(--coffee-800);" data-i18n="stats_title">Data Coverage</h2>
+            <div class="stats-grid">
+                <div class="stat-box">
+                    <span class="number">800+</span>
+                    <span class="label" data-i18n="stat_articles">Artikel Berita</span>
+                </div>
+                <div class="stat-box">
+                    <span class="number">10</span>
+                    <span class="label" data-i18n="stat_clusters">Topik Strategis</span>
+                </div>
+                <div class="stat-box">
+                    <span class="number">810+</span>
+                    <span class="label" data-i18n="stat_keywords">Keyword Industri</span>
+                </div>
+                <div class="stat-box">
+                    <span class="number">120+</span>
+                    <span class="label" data-i18n="stat_sources">Sumber Media</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3-Way CTA Section -->
+        <div class="cta-section" style="background: linear-gradient(135deg, var(--coffee-100) 0%, var(--coffee-50) 100%); padding: 60px 20px; border-radius: 16px; margin: 60px 0;">
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; text-align: center; margin-bottom: 50px; color: var(--coffee-800);" data-i18n="main_cta_title">Pilih Laporan yang Anda Butuhkan</h2>
+
+            <div class="feature-grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); margin-bottom: 0;">
+                <!-- CTA 1: USDA Data -->
+                <div class="card" style="padding: 40px; text-align: center; display: flex; flex-direction: column; justify-content: space-between; border-top: 4px solid var(--coffee-700);">
+                    <div>
+                        <i class="fas fa-database" style="font-size: 3rem; color: var(--coffee-700); margin-bottom: 20px;"></i>
+                        <h3 style="font-size: 1.4rem; font-weight: 700; color: var(--coffee-800); margin-bottom: 15px;" data-i18n="cta1_title">Data Laporan BPS - USDA</h3>
+                        <p style="color: var(--coffee-600); line-height: 1.6; font-size: 0.95rem; margin-bottom: 30px;" data-i18n="cta1_desc">Data resmi produksi, ekspor, dan pasar kopi Indonesia dari USDA dengan grafik trend 5 tahun dan analisis mendalam.</p>
+                    </div>
+                    <a href="laporan-usda.html#section-usda" class="btn-primary" style="background-color: var(--coffee-700); margin-top: auto;">
+                        <i class="fas fa-chart-line" style="margin-right: 8px;"></i>
+                        <span data-i18n="btn_usda">Buka Laporan USDA</span>
+                    </a>
+                </div>
+
+                <!-- CTA 2: Clustering Berita -->
+                <div class="card" style="padding: 40px; text-align: center; display: flex; flex-direction: column; justify-content: space-between; border-top: 4px solid var(--coffee-600);">
+                    <div>
+                        <i class="fas fa-sitemap" style="font-size: 3rem; color: var(--coffee-600); margin-bottom: 20px;"></i>
+                        <h3 style="font-size: 1.4rem; font-weight: 700; color: var(--coffee-800); margin-bottom: 15px;" data-i18n="cta2_title">Clustering Berita Kopi Terkini</h3>
+                        <p style="color: var(--coffee-600); line-height: 1.6; font-size: 0.95rem; margin-bottom: 30px;" data-i18n="cta2_desc">800+ artikel berita kopi dikelompokkan otomatis per topik strategis dengan 810+ keyword industri untuk analisis mendalam.</p>
+                    </div>
+                    <a href="laporan-usda.html#section-historical" class="btn-primary" style="background-color: var(--coffee-600); margin-top: auto;">
+                        <i class="fas fa-newspaper" style="margin-right: 8px;"></i>
+                        <span data-i18n="btn_clustering">Buka Clustering Berita</span>
+                    </a>
+                </div>
+
+                <!-- CTA 3: Report Kopi Terkini -->
+                <div class="card" style="padding: 40px; text-align: center; display: flex; flex-direction: column; justify-content: space-between; border-top: 4px solid var(--coffee-500);">
+                    <div>
+                        <i class="fas fa-lightbulb" style="font-size: 3rem; color: var(--coffee-500); margin-bottom: 20px;"></i>
+                        <h3 style="font-size: 1.4rem; font-weight: 700; color: var(--coffee-800); margin-bottom: 15px;" data-i18n="cta3_title">Report Kopi Terkini</h3>
+                        <p style="color: var(--coffee-600); line-height: 1.6; font-size: 0.95rem; margin-bottom: 30px;" data-i18n="cta3_desc">Ringkasan mingguan dari penggabungan berita terkini per topik dengan rekomendasi aksi untuk pelaku industri kopi.</p>
+                    </div>
+                    <a href="laporan-usda.html#section-update" class="btn-primary" style="background-color: var(--coffee-500); margin-top: auto;">
+                        <i class="fas fa-chart-bar" style="margin-right: 8px;"></i>
+                        <span data-i18n="btn_report">Buka Report Terkini</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- How It Works Section -->
+        <section style="margin: 60px 0;">
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; text-align: center; margin-bottom: 40px; color: var(--coffee-800);" data-i18n="howitworks_title">Bagaimana Cara Kerjanya</h2>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px;">
+                <div class="card" style="padding: 24px;">
+                    <div style="background: var(--coffee-100); width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--coffee-700); margin-bottom: 16px;">1</div>
+                    <h4 style="font-weight: 600; margin-bottom: 12px; color: var(--coffee-800);" data-i18n="step1_title">Fetch Data</h4>
+                    <p style="color: var(--coffee-600); font-size: 0.95rem;" data-i18n="step1_desc">GitHub Actions mengambil data real-time dari USDA, Yahoo Finance, dan sumber media berita setiap 6 jam.</p>
+                </div>
+
+                <div class="card" style="padding: 24px;">
+                    <div style="background: var(--coffee-100); width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--coffee-700); margin-bottom: 16px;">2</div>
+                    <h4 style="font-weight: 600; margin-bottom: 12px; color: var(--coffee-800);" data-i18n="step2_title">Cluster & Analyze</h4>
+                    <p style="color: var(--coffee-600); font-size: 0.95rem;" data-i18n="step2_desc">Sistem clustering AI mengelompokkan berita ke dalam 10 topik strategis dengan substring matching 810+ keyword.</p>
+                </div>
+
+                <div class="card" style="padding: 24px;">
+                    <div style="background: var(--coffee-100); width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; color: var(--coffee-700); margin-bottom: 16px;">3</div>
+                    <h4 style="font-weight: 600; margin-bottom: 12px; color: var(--coffee-800);" data-i18n="step3_title">Deploy & Visualize</h4>
+                    <p style="color: var(--coffee-600); font-size: 0.95rem;" data-i18n="step3_desc">Data ditayangkan di GitHub Pages dengan Chart.js interaktif, dashboard real-time, dan laporan bilingual.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tabs Info -->
+        <section style="margin: 60px 0;">
+            <h2 style="font-family: 'Playfair Display', serif; font-size: 2.5rem; text-align: center; margin-bottom: 40px; color: var(--coffee-800);" data-i18n="report_title">Konten Laporan</h2>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+                <!-- Tab 1: USDA Data -->
+                <div class="card" style="padding: 24px;">
+                    <div style="background: var(--coffee-700); color: white; padding: 12px 16px; border-radius: 50px; display: inline-block; margin-bottom: 16px; font-weight: 600; font-size: 0.85rem;" data-i18n="tab1_label">Tab 1: Data Resmi</div>
+                    <h4 style="font-weight: 600; margin-bottom: 12px; color: var(--coffee-800);" data-i18n="tab1_title">Data Laporan BPS - USDA</h4>
+                    <p style="color: var(--coffee-600); font-size: 0.95rem; margin-bottom: 12px;" data-i18n="tab1_desc">Perkembangan produksi, ekspor, dan pasar kopi Indonesia berdasarkan data resmi USDA Foreign Agricultural Service (FAS).</p>
+                    <ul style="color: var(--coffee-600); font-size: 0.9rem; margin-left: 20px;">
+                        <li data-i18n="tab1_item1">📊 Grafik tren produksi 5 tahun</li>
+                        <li data-i18n="tab1_item2">🌍 Top 10 negara tujuan ekspor</li>
+                        <li data-i18n="tab1_item3">💹 Tren harga vs ICE</li>
+                        <li data-i18n="tab1_item4">📈 Pasokan & distribusi (PSD)</li>
+                    </ul>
+                </div>
+
+                <!-- Tab 2: Live News Clustering -->
+                <div class="card" style="padding: 24px;">
+                    <div style="background: var(--coffee-700); color: white; padding: 12px 16px; border-radius: 50px; display: inline-block; margin-bottom: 16px; font-weight: 600; font-size: 0.85rem;" data-i18n="tab2_label">Tab 2: Clustering Berita</div>
+                    <h4 style="font-weight: 600; margin-bottom: 12px; color: var(--coffee-800);" data-i18n="tab2_title">Clustering Berita Kopi Terkini</h4>
+                    <p style="color: var(--coffee-600); font-size: 0.95rem; margin-bottom: 12px;" data-i18n="tab2_desc">Pengelompokan real-time 800+ artikel berita kopi ke dalam 10 topik strategis untuk melihat tren pasar terkini.</p>
+                    <ul style="color: var(--coffee-600); font-size: 0.9rem; margin-left: 20px;">
+                        <li data-i18n="tab2_item1">🎯 10 topik strategis industri</li>
+                        <li data-i18n="tab2_item2">📰 120+ sumber media terintegrasi</li>
+                        <li data-i18n="tab2_item3">🔄 Update otomatis setiap 6 jam</li>
+                        <li data-i18n="tab2_item4">🏷️ 810+ keyword industri kopi</li>
+                    </ul>
+                </div>
+
+                <!-- Tab 3: Weekly Analysis -->
+                <div class="card" style="padding: 24px;">
+                    <div style="background: var(--coffee-700); color: white; padding: 12px 16px; border-radius: 50px; display: inline-block; margin-bottom: 16px; font-weight: 600; font-size: 0.85rem;" data-i18n="tab3_label">Tab 3: Analisis Dashboard</div>
+                    <h4 style="font-weight: 600; margin-bottom: 12px; color: var(--coffee-800);" data-i18n="tab3_title">Report Kopi Terkini</h4>
+                    <p style="color: var(--coffee-600); font-size: 0.95rem; margin-bottom: 12px;" data-i18n="tab3_desc">Ringkasan analisis mingguan dari penggabungan berita terkini per topik dengan insight dan rekomendasi aksi.</p>
+                    <ul style="color: var(--coffee-600); font-size: 0.9rem; margin-left: 20px;">
+                        <li data-i18n="tab3_item1">✍️ Analisis mendalam 6 batch terakhir</li>
+                        <li data-i18n="tab3_item2">💡 Insight & temuan strategis</li>
+                        <li data-i18n="tab3_item3">🎯 Rekomendasi aksi per stakeholder</li>
+                        <li data-i18n="tab3_item4">📎 Sumber berita terverifikasi</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <h3 style="font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 20px;" data-i18n="footer_title">Update Coffee Data</h3>
+            <p data-i18n="footer_desc">Platform analisis data kopi Indonesia yang diperbarui secara otomatis setiap 6 jam.</p>
+
+            <div style="margin: 30px 0; padding: 20px 0; border-top: 1px solid rgba(255,255,255,0.1);">
+                <p style="margin-bottom: 12px;">
+                    <a href="laporan-usda.html" data-i18n="footer_report">Laporan Lengkap</a> •
+                    <a href="https://github.com/KGS-blog/update-coffee-data" target="_blank" data-i18n="footer_github">GitHub Repository</a> •
+                    <a href="https://ganjar.id" data-i18n="footer_blog">Blog Utama</a>
+                </p>
+            </div>
+
+            <p style="font-size: 0.9rem; opacity: 0.8;">
+                <span data-i18n="footer_author">Oleh Ganjar Satyanagara</span> •
+                <span data-i18n="footer_license">Data diperbarui otomatis via GitHub Actions</span> •
+                <span id="footer-date"></span>
+            </p>
+            <p style="font-size: 0.85rem; opacity: 0.7; margin-top: 12px;" data-i18n="footer_source">Sumber: USDA FAS, Yahoo Finance, Media Berita Kopi Indonesia</p>
+        </div>
+    </footer>
+
+    <script>
+        // Bilingual support
+        let currentLang = "id";
+
+        const translations = {
+            // Hero
+            "title": { id: "Update Coffee Data", en: "Update Coffee Data" },
+            "subtitle": { id: "Platform Analisis Kopi Indonesia | Indonesian Coffee Analysis Platform", en: "Indonesian Coffee Analysis Platform" },
+            "btn_open_report": { id: "Buka Laporan", en: "Open Report" },
+            "nav_back": { id: "← Kembali ke Blog", en: "← Back to Blog" },
+
+            // Features
+            "features_title": { id: "Fitur Utama", en: "Main Features" },
+            "feature_live_title": { id: "Data Pasokan & Distribusi", en: "Supply & Distribution Data" },
+            "feature_live_desc": { id: "Data real-time USDA PSD untuk produksi, ekspor, dan konsumsi kopi Indonesia yang diperbarui otomatis.", en: "Real-time USDA PSD data for Indonesian coffee production, export, and consumption updated automatically." },
+            "feature_cluster_title": { id: "Clustering Berita Otomatis", en: "Automatic News Clustering" },
+            "feature_cluster_desc": { id: "Sistem clustering AI mengelompokkan 800+ artikel berita kopi ke dalam 10 topik strategis dengan 810+ keyword industri.", en: "AI clustering system groups 800+ coffee news articles into 10 strategic topics with 810+ industry keywords." },
+            "feature_analysis_title": { id: "Data dan Berita Kopi Indonesia", en: "Coffee News Data & Indonesia Insights" },
+            "feature_analysis_desc": { id: "Ringkasan mingguan dari penggabungan berita terkini per topik dengan rekomendasi aksi untuk pelaku industri.", en: "Weekly summaries of combined latest news per topic with action recommendations for industry stakeholders." },
+            "feature_bilingual_title": { id: "Dukungan Bilingual", en: "Bilingual Support" },
+            "feature_bilingual_desc": { id: "Seluruh platform tersedia dalam bahasa Indonesia dan Inggris untuk jangkauan pasar global.", en: "Entire platform available in Indonesian and English for global market reach." },
+            "feature_calc_title": { id: "Kalkulator Harga Pasar", en: "Market Price Calculator" },
+            "feature_calc_desc": { id: "Konversi otomatis harga ICE C-Market ke Rupiah per kilogram dengan diferensial pasar domestik.", en: "Automatic conversion of ICE C-Market prices to Rupiah per kilogram with domestic market differential." },
+            "feature_auto_title": { id: "Update Otomatis", en: "Automatic Updates" },
+            "feature_auto_desc": { id: "GitHub Actions mengupdate data setiap 6 jam tanpa downtime, di-deploy ke GitHub Pages.", en: "GitHub Actions updates data every 6 hours without downtime, deployed to GitHub Pages." },
+
+            // Stats
+            "stats_title": { id: "Cakupan Data", en: "Data Coverage" },
+            "stat_articles": { id: "Artikel Berita", en: "News Articles" },
+            "stat_clusters": { id: "Topik Strategis", en: "Strategic Topics" },
+            "stat_keywords": { id: "Keyword Industri", en: "Industry Keywords" },
+            "stat_sources": { id: "Sumber Media", en: "Media Sources" },
+
+            // CTA
+            "cta_title": { id: "Siap Mengeksplorasi Data Kopi Indonesia?", en: "Ready to Explore Indonesian Coffee Data?" },
+            "cta_desc": { id: "Akses laporan lengkap dengan analisis mendalam, grafik interaktif, dan dashboard real-time sekarang.", en: "Access complete report with in-depth analysis, interactive charts, and real-time dashboards now." },
+            "btn_explore": { id: "Jelajahi Laporan Lengkap →", en: "Explore Full Report →" },
+
+            // How It Works
+            "howitworks_title": { id: "Bagaimana Cara Kerjanya", en: "How It Works" },
+            "step1_title": { id: "Fetch Data", en: "Fetch Data" },
+            "step1_desc": { id: "GitHub Actions mengambil data real-time dari USDA, Yahoo Finance, dan sumber media berita setiap 6 jam.", en: "GitHub Actions fetches real-time data from USDA, Yahoo Finance, and news sources every 6 hours." },
+            "step2_title": { id: "Cluster & Analyze", en: "Cluster & Analyze" },
+            "step2_desc": { id: "Sistem clustering AI mengelompokkan berita ke dalam 10 topik strategis dengan substring matching 810+ keyword.", en: "AI clustering system groups news into 10 strategic topics with substring matching of 810+ keywords." },
+            "step3_title": { id: "Deploy & Visualize", en: "Deploy & Visualize" },
+            "step3_desc": { id: "Data ditayangkan di GitHub Pages dengan Chart.js interaktif, dashboard real-time, dan laporan bilingual.", en: "Data displayed on GitHub Pages with interactive Chart.js, real-time dashboards, and bilingual reports." },
+
+            // Report Content
+            "report_title": { id: "Konten Laporan", en: "Report Content" },
+            "tab1_label": { id: "Tab 1: Data Resmi", en: "Tab 1: Official Data" },
+            "tab1_title": { id: "Data Laporan BPS - USDA", en: "BPS - USDA Report Data" },
+            "tab1_desc": { id: "Perkembangan produksi, ekspor, dan pasar kopi Indonesia berdasarkan data resmi USDA Foreign Agricultural Service (FAS).", en: "Development of Indonesian coffee production, export, and market based on official USDA FAS data." },
+            "tab1_item1": { id: "📊 Grafik tren produksi 5 tahun", en: "📊 5-year production trend chart" },
+            "tab1_item2": { id: "🌍 Top 10 negara tujuan ekspor", en: "🌍 Top 10 export destination countries" },
+            "tab1_item3": { id: "💹 Tren harga vs ICE", en: "💹 Price trend vs ICE" },
+            "tab1_item4": { id: "📈 Pasokan & distribusi (PSD)", en: "📈 Supply & Distribution (PSD)" },
+
+            "tab2_label": { id: "Tab 2: Clustering Berita", en: "Tab 2: News Clustering" },
+            "tab2_title": { id: "Clustering Berita Kopi Terkini", en: "Latest Coffee News Clustering" },
+            "tab2_desc": { id: "Pengelompokan real-time 800+ artikel berita kopi ke dalam 10 topik strategis untuk melihat tren pasar terkini.", en: "Real-time grouping of 800+ coffee news articles into 10 strategic topics to see latest market trends." },
+            "tab2_item1": { id: "🎯 10 topik strategis industri", en: "🎯 10 strategic industry topics" },
+            "tab2_item2": { id: "📰 120+ sumber media terintegrasi", en: "📰 120+ integrated media sources" },
+            "tab2_item3": { id: "🔄 Update otomatis setiap 6 jam", en: "🔄 Automatic update every 6 hours" },
+            "tab2_item4": { id: "🏷️ 810+ keyword industri kopi", en: "🏷️ 810+ coffee industry keywords" },
+
+            "tab3_label": { id: "Tab 3: Analisis Dashboard", en: "Tab 3: Analysis Dashboard" },
+            "tab3_title": { id: "Report Kopi Terkini", en: "Latest Coffee Report" },
+            "tab3_desc": { id: "Ringkasan analisis mingguan dari penggabungan berita terkini per topik dengan insight dan rekomendasi aksi.", en: "Weekly analysis summaries of combined latest news per topic with insights and action recommendations." },
+            "tab3_item1": { id: "✍️ Analisis mendalam 6 batch terakhir", en: "✍️ In-depth analysis of latest 6 batches" },
+            "tab3_item2": { id: "💡 Insight & temuan strategis", en: "💡 Insights & strategic findings" },
+            "tab3_item3": { id: "🎯 Rekomendasi aksi per stakeholder", en: "🎯 Action recommendations per stakeholder" },
+            "tab3_item4": { id: "📎 Sumber berita terverifikasi", en: "📎 Verified news sources" },
+
+            // Footer
+            "footer_title": { id: "Update Coffee Data", en: "Update Coffee Data" },
+            "footer_desc": { id: "Platform analisis data kopi Indonesia yang diperbarui secara otomatis setiap 6 jam.", en: "Indonesian coffee data analysis platform updated automatically every 6 hours." },
+            "footer_report": { id: "Laporan Lengkap", en: "Full Report" },
+            "footer_github": { id: "GitHub Repository", en: "GitHub Repository" },
+            "footer_blog": { id: "Blog Utama", en: "Main Blog" },
+            "footer_author": { id: "Oleh Ganjar Satyanagara", en: "By Ganjar Satyanagara" },
+            "footer_license": { id: "Data diperbarui otomatis via GitHub Actions", en: "Data updated automatically via GitHub Actions" },
+            "footer_source": { id: "Sumber: USDA FAS, Yahoo Finance, Media Berita Kopi Indonesia", en: "Source: USDA FAS, Yahoo Finance, Indonesian Coffee News Media" }
+        };
+
+        function setLanguage(lang) {
+            currentLang = lang;
+
+            // Update active button
+            document.getElementById("langIdBtn").classList.toggle("active", lang === "id");
+            document.getElementById("langIdBtn").classList.toggle("inactive", lang !== "id");
+            document.getElementById("langEnBtn").classList.toggle("active", lang === "en");
+            document.getElementById("langEnBtn").classList.toggle("inactive", lang !== "en");
+
+            // Update all elements with data-i18n
+            document.querySelectorAll("[data-i18n]").forEach(el => {
+                const key = el.getAttribute("data-i18n");
+                if (translations[key]) {
+                    el.textContent = translations[key][lang];
+                }
+            });
+
+            localStorage.setItem("preferredLang", lang);
+        }
+
+        // Initialize
+        document.addEventListener("DOMContentLoaded", function() {
+            const saved = localStorage.getItem("preferredLang") || "id";
+            setLanguage(saved);
+
+            // Update footer date
+            const now = new Date();
+            const dateStr = now.toLocaleDateString("id-ID", {day:"numeric", month:"long", year:"numeric"});
+            document.getElementById("footer-date").textContent = currentLang === "id" ? `Terakhir update: ${dateStr}` : `Last updated: ${dateStr}`;
+        });
+    </script>
+</body>
+</html>
