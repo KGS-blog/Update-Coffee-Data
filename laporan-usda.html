@@ -797,6 +797,19 @@ tailwind.config = {
 </div>
 </div>
 
+<!-- BREADCRUMB NAVIGATION -->
+<nav class="bg-coffee-50 border-b border-coffee-100 py-3 sticky top-0 z-40" aria-label="Breadcrumb">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <ol class="flex items-center space-x-2 text-sm flex-wrap">
+      <li><a href="https://KGS-blog.github.io/Blog/index.html" class="text-coffee-600 hover:text-coffee-900"><i class="fas fa-home mr-1"></i>Blog</a></li>
+      <li><span class="text-coffee-400">/</span></li>
+      <li><span class="text-coffee-600">Laporan & Analisis</span></li>
+      <li><span class="text-coffee-400">/</span></li>
+      <li class="text-coffee-900 font-medium">Laporan USDA</li>
+    </ol>
+  </div>
+</nav>
+
 <!-- Spacer for double navbar -->
 <div class="h-32 lg:h-36"></div>
 
@@ -1068,6 +1081,71 @@ function loadBPSPanel() {
 
 
 </div>
+</section>
+
+<!-- RELATED TOOLS & RESOURCES SECTION -->
+<section class="py-16 bg-cream border-t border-coffee-100">
+  <div class="max-w-7xl mx-auto px-6 lg:px-8">
+    <div class="mb-12">
+      <h2 class="font-serif text-4xl font-bold text-coffee-900 mb-3">Tools & Resources</h2>
+      <p class="text-lg text-coffee-600 leading-relaxed">Enhance your market analysis with our calculator and reference resources</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <!-- KALKULATOR CARD -->
+      <div class="group bg-white rounded-xl border border-coffee-100 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden">
+        <div class="h-32 bg-gradient-to-br from-coffee-700 to-coffee-800 flex items-center justify-center">
+          <i class="fas fa-calculator text-white text-5xl opacity-30"></i>
+        </div>
+        <div class="p-6">
+          <h3 class="font-serif text-2xl font-bold text-coffee-900 mb-2">Real-Time Price Calculator</h3>
+          <p class="text-coffee-600 mb-6 text-sm leading-relaxed">Instantly convert ICE C-Market prices to Indonesian Rupiah per kilogram. Track market differentials, analyze weekly trends, and make real-time trading decisions with live data calculations.</p>
+          <div class="flex items-center gap-3 text-xs text-coffee-500 mb-4">
+            <span><i class="fas fa-bolt text-orange-500 mr-1"></i>Real-time</span>
+            <span><i class="fas fa-sync text-blue-500 mr-1"></i>Auto-Update</span>
+            <span><i class="fas fa-chart-line text-green-500 mr-1"></i>Trending</span>
+          </div>
+          <a href="https://KGS-blog.github.io/Blog/kalkulator.html" class="inline-flex items-center px-4 py-2 rounded-lg bg-coffee-800 text-white hover:bg-coffee-700 transition-colors font-medium text-sm">
+            Open Calculator <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- REFERENCE CENTER CARD -->
+      <div class="group bg-white rounded-xl border border-coffee-100 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden">
+        <div class="h-32 bg-gradient-to-br from-coffee-600 to-coffee-700 flex items-center justify-center">
+          <i class="fas fa-book-open text-white text-5xl opacity-30"></i>
+        </div>
+        <div class="p-6">
+          <h3 class="font-serif text-2xl font-bold text-coffee-900 mb-2">Coffee Market Reference Center</h3>
+          <p class="text-coffee-600 mb-6 text-sm leading-relaxed">Complete resource hub for Indonesian coffee industry. Access buyer guides, supplier evaluation frameworks, export regulations, market entry strategies, and comprehensive market analysis all in one platform.</p>
+          <div class="flex items-center gap-3 text-xs text-coffee-500 mb-4">
+            <span><i class="fas fa-book text-blue-500 mr-1"></i>Guides</span>
+            <span><i class="fas fa-list-check text-green-500 mr-1"></i>Checklists</span>
+            <span><i class="fas fa-globe text-orange-500 mr-1"></i>Export Info</span>
+          </div>
+          <a href="https://KGS-blog.github.io/Blog/index.html" class="inline-flex items-center px-4 py-2 rounded-lg bg-coffee-800 text-white hover:bg-coffee-700 transition-colors font-medium text-sm">
+            Explore Reference Center <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- INTEGRATION INFO -->
+    <div class="mt-12 p-6 bg-white rounded-lg border border-coffee-200">
+      <div class="flex items-start gap-4">
+        <div class="w-12 h-12 bg-coffee-100 rounded-lg flex items-center justify-center flex-shrink-0">
+          <i class="fas fa-link text-coffee-800 text-xl"></i>
+        </div>
+        <div>
+          <h3 class="font-serif font-bold text-coffee-900 mb-1">Integrated Intelligence Platform</h3>
+          <p class="text-sm text-coffee-600">
+            This comprehensive market report works best alongside our price calculator and reference resources. Use the report data to identify market opportunities, the calculator for real-time pricing decisions, and the reference center for regulatory compliance and business guidance.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- FOOTER -->
