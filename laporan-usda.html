@@ -1,163 +1,10 @@
 <!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
 <head>
-<!-- Meta Pixel Code -->
-<script>
-!function(f,b,e,v,n,t,s)
-{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];
-s.parentNode.insertBefore(t,s)}(window, document,'script',
-'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '1498535007132214');
-fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1498535007132214&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Meta Pixel Code -->
-
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-QEG849B3YY"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-QEG849B3YY');
-
-// GA4 Event Tracking Functions
-window.__scrollEvents = {}; // Track scroll events per article
-
-// Track article clicks from featured, grid, or sidebar
-function trackArticleClick(articleId, articleTitle, section = 'grid', category = 'general') {
-    gtag('event', 'article_click', {
-        'article_id': articleId,
-        'article_title': articleTitle,
-        'section': section,
-        'category': category
-    });
-}
-
-// Track scroll depth (25%, 50%, 75%, 100%)
-function initScrollDepthTracking(articleId, articleTitle, category = 'general') {
-    if (!window.__scrollEvents[articleId]) {
-        window.__scrollEvents[articleId] = {
-            tracked_25: false,
-            tracked_50: false,
-            tracked_75: false,
-            tracked_100: false
-        };
-    }
-
-    const handleScroll = function() {
-        const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-        if (scrollHeight === 0) return;
-
-        const scrollPercent = Math.round((window.scrollY / scrollHeight) * 100);
-        const events = window.__scrollEvents[articleId];
-
-        if (scrollPercent >= 25 && !events.tracked_25) {
-            gtag('event', 'scroll_depth', {
-                'scroll_percentage': 25,
-                'article_id': articleId,
-                'article_title': articleTitle,
-                'category': category
-            });
-            events.tracked_25 = true;
-        }
-        if (scrollPercent >= 50 && !events.tracked_50) {
-            gtag('event', 'scroll_depth', {
-                'scroll_percentage': 50,
-                'article_id': articleId,
-                'article_title': articleTitle,
-                'category': category
-            });
-            events.tracked_50 = true;
-        }
-        if (scrollPercent >= 75 && !events.tracked_75) {
-            gtag('event', 'scroll_depth', {
-                'scroll_percentage': 75,
-                'article_id': articleId,
-                'article_title': articleTitle,
-                'category': category
-            });
-            events.tracked_75 = true;
-        }
-        if (scrollPercent >= 100 && !events.tracked_100) {
-            gtag('event', 'scroll_depth', {
-                'scroll_percentage': 100,
-                'article_id': articleId,
-                'article_title': articleTitle,
-                'category': category
-            });
-            events.tracked_100 = true;
-        }
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-}
-
-// Track internal link clicks
-function trackInternalLink(linkTarget, sourceArticle, linkType = 'article') {
-    gtag('event', 'internal_link_click', {
-        'link_target': linkTarget,
-        'source_article': sourceArticle,
-        'link_type': linkType
-    });
-}
-
-// Track external link clicks
-function trackExternalLink(url, sourceArticle) {
-    gtag('event', 'external_link_click', {
-        'url': url,
-        'source_article': sourceArticle
-    });
-}
-
-// Track read time
-function trackReadTime(articleId, timeOnPage, estimatedReadTime, completionPercent = 0) {
-    gtag('event', 'article_read_time', {
-        'article_id': articleId,
-        'time_on_page': timeOnPage,
-        'estimated_read_time': estimatedReadTime,
-        'completion': completionPercent
-    });
-}
-</script>
-<!-- End Google Analytics -->
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Ganjar Satyanagara | Laporan Kopi Indonesia & USDA</title>
-
-<!-- SEO & Social Meta -->
-<meta name="description" content="Laporan komprehensif kopi Indonesia: data live USDA PSD, clustering otomatis 800+ berita kopi per topik, analisis mingguan, dan tren harga untuk pembeli global.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#9749;</text></svg>">
-<meta property="og:type" content="website">
-<meta property="og:site_name" content="Q Coffee Outlook - Laporan USDA & Berita">
-<meta property="og:title" content="Ganjar Satyanagara | Laporan Kopi Indonesia & USDA">
-<meta property="og:description" content="Data USDA resmi, clustering berita kopi terkini, dan analisis pasar Indonesia dengan 800+ artikel dari 120+ sumber media global.">
-<meta property="og:url" content="https://KGS-blog.github.io/Update-Coffee-Data/laporan-usda.html">
-<meta property="og:image" content="https://i.imgur.com/vgcEMB2.png">
-<meta property="og:locale" content="id_ID">
-<meta property="og:locale:alternate" content="en_US">
-<!-- Article Publication Meta Tags (updated dynamically) -->
-<meta property="article:published_time" content="2026-09-23T00:00:00Z">
-<meta property="article:modified_time" content="2026-09-29T00:00:00Z">
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="Ganjar Satyanagara | Laporan Kopi Indonesia & USDA">
-<meta name="twitter:description" content="Laporan komprehensif kopi: data USDA, 800+ berita dikelompokkan per topik strategis, grafik tren, dan insights mingguan.">
-<meta name="twitter:image" content="https://i.imgur.com/vgcEMB2.png">
-
-<!-- Canonical & Language Alternates (SEO) -->
-<link rel="canonical" href="https://KGS-blog.github.io/Update-Coffee-Data/laporan-usda.html">
-<link rel="alternate" hreflang="id" href="https://KGS-blog.github.io/Update-Coffee-Data/laporan-usda.html">
-<link rel="alternate" hreflang="en" href="https://KGS-blog.github.io/Update-Coffee-Data/laporan-usda.html">
-<link rel="alternate" hreflang="x-default" href="https://KGS-blog.github.io/Update-Coffee-Data/laporan-usda.html">
-
-<!-- laporan-usda.html — v2026.09.26-12 | hash #berita auto-buka tab Clustering Berita; tab1 live-only, tab2 Clustering, tab3 Analisis, ID/EN -->
+<!-- laporan-usda.html — v2026.09.30-13 | with admin clustering edit panel | hash #berita auto-buka tab Clustering Berita; tab1 live-only, tab2 Clustering, tab3 Analisis, ID/EN -->
 <script src="https://cdn.tailwindcss.com"></script>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
@@ -178,9 +25,9 @@ const translations = {
     // USDA Section
     "usda_label": { id: "Data Resmi", en: "Official Data" },
     "usda_title": { id: "Data Laporan BPS - USDA", en: "BPS - USDA Coffee Report" },
-    "usda_desc": {
-        id: "Perkembangan produksi, ekspor, dan pasar kopi Indonesia berdasarkan data resmi USDA Foreign Agricultural Service (FAS).",
-        en: "Production, export, and market developments of Indonesian coffee based on official USDA Foreign Agricultural Service (FAS) data."
+    "usda_desc": { 
+        id: "Perkembangan produksi, ekspor, dan pasar kopi Indonesia berdasarkan data resmi USDA Foreign Agricultural Service (FAS).", 
+        en: "Production, export, and market developments of Indonesian coffee based on official USDA Foreign Agricultural Service (FAS) data." 
     },
     "usda_production": { id: "Produksi (ribu kantong)", en: "Production (thousand bags)" },
     "usda_export": { id: "Ekspor (ribu kantong)", en: "Export (thousand bags)" },
@@ -226,23 +73,23 @@ const translations = {
     "hist_monthly": { id: "Harga Bulanan", en: "Monthly Price" },
     "hist_rate": { id: "Kurs Bulanan", en: "Monthly Rate" },
     "hist_event_title": { id: "Event Pasar Signifikan (5 Tahun Terakhir)", en: "Significant Market Events (Last 5 Years)" },
-    "hist_event_desc": {
-        id: "Enam peristiwa besar yang mengguncang pasar kopi global dan dampak langsungnya terhadap FOB Indonesia.",
-        en: "Six major events that shook the global coffee market and their direct impact on Indonesian FOB prices."
+    "hist_event_desc": { 
+        id: "Enam peristiwa besar yang mengguncang pasar kopi global dan dampak langsungnya terhadap FOB Indonesia.", 
+        en: "Six major events that shook the global coffee market and their direct impact on Indonesian FOB prices." 
     },
     "hist_period": { id: "Periode", en: "Period" },
     "hist_price_move": { id: "Pergerakan Harga", en: "Price Movement" },
     "hist_cause": { id: "Penyebab Utama", en: "Primary Cause" },
     "hist_impact": { id: "Dampak FOB Indonesia", en: "Impact on Indonesia FOB" },
     "hist_insight": { id: "Insight", en: "Insight" },
-    "hist_insight_text": {
-        id: "5 dari 6 event dipicu oleh cuaca ekstrem atau geopolitik. Hanya 1 event (Apr–Mei 2026) yang murni fundamental pasar. Volatilitas kopi >60% berasal dari supply shock.",
-        en: "5 of 6 events were triggered by extreme weather or geopolitics. Only 1 event (Apr-May 2026) was pure market fundamentals. Coffee volatility >60% comes from supply shocks."
+    "hist_insight_text": { 
+        id: "5 dari 6 event dipicu oleh cuaca ekstrem atau geopolitik. Hanya 1 event (Apr–Mei 2026) yang murni fundamental pasar. Volatilitas kopi >60% berasal dari supply shock.", 
+        en: "5 of 6 events were triggered by extreme weather or geopolitics. Only 1 event (Apr-May 2026) was pure market fundamentals. Coffee volatility >60% comes from supply shocks." 
     },
     "hist_warning_title": { id: "Early Warning System", en: "Early Warning System" },
-    "hist_warning_desc": {
-        id: "Empat kategori sinyal yang harus dipantau 24/7 untuk mengantisipasi pergerakan pasar sebelum terjadi.",
-        en: "Four categories of signals that must be monitored 24/7 to anticipate market movements before they happen."
+    "hist_warning_desc": { 
+        id: "Empat kategori sinyal yang harus dipantau 24/7 untuk mengantisipasi pergerakan pasar sebelum terjadi.", 
+        en: "Four categories of signals that must be monitored 24/7 to anticipate market movements before they happen." 
     },
     "hist_weather_alert": { id: "Weather Alert", en: "Weather Alert" },
     "hist_logistics": { id: "Logistics & Freight", en: "Logistics & Freight" },
@@ -315,6 +162,19 @@ const translations = {
     "upd_arabika_usd": { id: "Arabika USD/kg", en: "Arabica USD/kg" },
     "upd_kurs": { id: "Kurs IDR/USD", en: "IDR/USD Rate" },
     "upd_footer": { id: "Sumber Data: BPS · USDA FAS · AEKI · Bappebti · Kementan · BMKG · ICO | Mei 2026", en: "Data Sources: BPS · USDA FAS · AEKI · Bappebti · Ministry of Agriculture · BMKG · ICO | May 2026" },
+
+    // Admin Panel
+    "admin_title": { id: "Mode Edit Clustering", en: "Clustering Edit Mode" },
+    "admin_refresh": { id: "Refresh", en: "Refresh" },
+    "admin_total": { id: "Total artikel", en: "Total articles" },
+    "admin_ai_recommended": { id: "AI", en: "AI" },
+    "admin_instructions": { id: "Pilih kotak untuk ubah cluster, lalu Download & Upload", en: "Select dropdown to change cluster, then Download & Upload" },
+    "admin_download": { id: "Download & Upload", en: "Download & Upload" },
+    "admin_success": { id: "klaster-final.json terdownload. Upload ke folder data/ repo Update-Coffee-Data", en: "klaster-final.json downloaded. Upload to data/ folder in Update-Coffee-Data repo" },
+    "admin_password_prompt": { id: "Masukkan password untuk mengakses Mode Edit Klaster", en: "Enter password to access Clustering Edit Mode" },
+    "admin_password_error": { id: "Password salah!", en: "Wrong password!" },
+    "admin_login": { id: "Masuk", en: "Login" },
+    "admin_cancel": { id: "Batal", en: "Cancel" },
 
     // Footer
     "footer_name": { id: "Ganjar Satyanagara", en: "Ganjar Satyanagara" },
@@ -497,7 +357,7 @@ function generateAnalysisFromClustering() {
         if (cluster.persen) ringkasan_en += "This topic represents " + cluster.persen + "% of all news.";
 
         // Generate content
-        var headlines = items.slice(0, 5).map(function(a) { return "• " + (a.judul || "No title"); }).join("\n");
+        var headlines = items.slice(0, 5).map(function(a) { return "\u2022 " + (a.judul || "No title"); }).join("\n");
         var isi_id = "Berita terkini dalam klaster ini:\n\n" + headlines + "\n\nTotal: " + items.length + " artikel tercatat dalam sistem.";
         var isi_en = "Latest news in this cluster:\n\n" + headlines + "\n\nTotal: " + items.length + " articles recorded.";
 
@@ -547,7 +407,7 @@ function loadAnalisisDashboard() {
                 // Archive found - use it
                 var batches = Array.isArray(j.batches) ? j.batches : (j.grup ? [{ dibuat: j.dibuat, periode: j.periode, grup: j.grup }] : []);
                 var perTerbaru = (j.batches && j.batches[0] && j.batches[0].periode) || j.periode;
-                if (periode && perTerbaru) periode.textContent = "Periode terbaru: " + perTerbaru + " · " + batches.length + " batch terarsip";
+                if (periode && perTerbaru) periode.textContent = "Periode terbaru: " + perTerbaru + " \u00b7 " + batches.length + " batch terarsip";
                 renderAnalysis(batches, box, "archive");
             })
             .catch(function() {
@@ -555,7 +415,7 @@ function loadAnalisisDashboard() {
                 if (window.BERITA_HASIL_CLUSTERING) {
                     var autoGen = generateAnalysisFromClustering();
                     if (autoGen) {
-                        if (periode) periode.textContent = "Periode terbaru: " + autoGen.periode + " · Auto-generated from clustering";
+                        if (periode) periode.textContent = "Periode terbaru: " + autoGen.periode + " \u00b7 Auto-generated from clustering";
                         renderAnalysis([autoGen], box, "auto");
                     } else {
                         renderAnalysis([], box, "error");
@@ -600,7 +460,7 @@ function renderAnalysis(batches, box, source) {
             '<div class="flex items-center gap-3 flex-wrap mb-3"><span class="text-xs font-bold px-3 py-1 rounded-full bg-coffee-100 text-coffee-700">' + esc(g.jumlah_sumber) + ' berita digabungkan</span></div>' +
             '<h3 class="font-serif text-xl md:text-2xl font-bold text-coffee-900 mb-3">' + esc((currentLang === "en" && g.judul_en) ? g.judul_en : (g.judul_id || g.judul) || "") + '</h3>' +
             '<p class="text-xs text-coffee-500 mb-3 italic">' + esc((currentLang === "en" && g.ringkasan_en) ? g.ringkasan_en : (g.ringkasan_id || g.ringkasan) || "") + '</p>' +
-            '<div class="text-sm text-coffee-700 leading-relaxed" style="text-align:left;">' + ((currentLang === "en" && g.isi_en) ? g.isi_en : (g.isi_id || g.isi) || "") + '</div>' +
+            '<div class="text-sm text-coffee-700 leading-relaxed whitespace-pre-wrap" style="text-align:left;">' + esc((currentLang === "en" && g.isi_en) ? g.isi_en : (g.isi_id || g.isi) || "") + '</div>' +
             '<p class="text-xs text-coffee-400 mt-4">Oleh: Ganjar Satyanagara &middot; ' + esc(periodeStr || "") + '</p>' +
             '<details class="mt-5 pt-4 border-t border-coffee-100"><summary class="cursor-pointer text-xs font-semibold text-coffee-500 uppercase tracking-wide">Sumber berita (' + esc(g.jumlah_sumber) + ')</summary><ul class="mt-3 text-sm text-coffee-600 list-none pl-0">' + sumber + '</ul></details></article>';
     };
@@ -615,16 +475,17 @@ function renderAnalysis(batches, box, source) {
             }
         });
         console.log("[Analysis] Periode " + bt.periode + " (" + source + ") || clusters:", allIds.join(", "));
-        // Only render clusters with actual data — filter out empty ones
-        var slotHtml = window.BERITA_KLASTER
-            .filter(function(k) {
-                var lookupKey = k.analisis_id || k.slug;
-                return lookupKey && byAnalisisId[lookupKey];
-            })
-            .map(function (k) {
-                var g = byAnalisisId[k.analisis_id || k.slug];
-                return renderGrup(g, (currentLang === "en" && k.nama_en) ? k.nama_en : k.nama, bt.periode || "");
-            }).join("");
+        var slotHtml = window.BERITA_KLASTER.map(function (k) {
+            var g = null;
+            var lookupKey = k.analisis_id || k.slug;
+
+            if (lookupKey) {
+                g = byAnalisisId[lookupKey];
+            }
+
+            if (!g) return '<article class="card p-6 md:p-8 mb-8" style="border-style:dashed;border-color:#e0d5c5"><div class="mb-3"><span class="text-xs font-bold px-3 py-1 rounded-full bg-coffee-100 text-coffee-500">' + esc((currentLang === "en" && k.nama_en) ? k.nama_en : k.nama) + '</span></div><p class="text-sm text-coffee-400 italic">' + (currentLang === "en" ? "Analysis for this group is being prepared." : "Analisis grup ini sedang disiapkan.") + '</p></article>';
+            return renderGrup(g, (currentLang === "en" && k.nama_en) ? k.nama_en : k.nama, bt.periode || "");
+        }).join("");
 
         Object.keys(byAnalisisId).forEach(function(id) {
             var found = window.BERITA_KLASTER.some(function(k) { return (k.analisis_id === id || k.slug === id); });
@@ -648,7 +509,114 @@ document.addEventListener("DOMContentLoaded", function() {
     var timeStr = now.toLocaleDateString("id-ID", {day:"numeric", month:"long", year:"numeric", hour:"2-digit", minute:"2-digit"});
     var el = document.getElementById("usda-last-updated");
     if (el) el.textContent = "Terakhir update: " + timeStr;
-});;
+
+    // Check admin auth on load
+    const auth = sessionStorage.getItem("qco_admin_auth_laporan");
+    if (auth) {
+        document.getElementById("admin-btn-laporan").classList.add("flex");
+        document.getElementById("admin-btn-laporan").classList.remove("hidden");
+    } else {
+        document.getElementById("admin-btn-laporan").classList.remove("flex");
+        document.getElementById("admin-btn-laporan").classList.add("hidden");
+    }
+});
+
+// ========== ADMIN PANEL FUNCTIONS ==========
+let adminEditData = [];
+
+function showAdminPanel() {
+    const auth = sessionStorage.getItem("qco_admin_auth_laporan");
+    if (!auth) {
+        document.getElementById("admin-password-modal").classList.remove("hidden");
+        document.getElementById("admin-password-laporan").value = "";
+        document.getElementById("admin-password-error-laporan").classList.add("hidden");
+        setTimeout(() => document.getElementById("admin-password-laporan").focus(), 100);
+        return;
+    }
+    openAdminPanel();
+}
+
+function closeAdminPasswordModal() {
+    document.getElementById("admin-password-modal").classList.add("hidden");
+}
+
+function submitAdminPassword(event) {
+    event.preventDefault();
+    const pw = document.getElementById("admin-password-laporan").value;
+    if (pw === "qco2026") {
+        sessionStorage.setItem("qco_admin_auth_laporan", "1");
+        closeAdminPasswordModal();
+        openAdminPanel();
+    } else {
+        document.getElementById("admin-password-error-laporan").classList.remove("hidden");
+        document.getElementById("admin-password-laporan").value = "";
+        document.getElementById("admin-password-laporan").focus();
+    }
+}
+
+function openAdminPanel() {
+    document.getElementById("admin-panel-laporan").classList.remove("hidden");
+    loadEditClusteringData();
+}
+
+function closeAdminPanel() {
+    document.getElementById("admin-panel-laporan").classList.add("hidden");
+}
+
+function loadEditClusteringData() {
+    const box = document.getElementById("edit-clustering-content");
+    box.innerHTML = '<p class="text-sm text-coffee-400 text-center py-8"><i class="fas fa-spinner fa-spin mr-2"></i>Loading...</p>';
+
+    fetch("https://KGS-blog.github.io/Update-Coffee-Data/data/berita-all.json", { cache: "no-store" })
+        .then(r => { if (!r.ok) throw 0; return r.json(); })
+        .then(j => {
+            const artikel = (j && j.artikel) || [];
+            adminEditData = artikel;
+
+            const esc = (s) => String(s || "").replace(/</g, "&lt;").replace(/"/g, "&quot;");
+
+            box.innerHTML = '<p class="text-xs text-coffee-500 mb-3"><strong>' + artikel.length + ' artikel</strong>. Rekomendasi AI ditandai; pilih untuk ubah, lalu Download & Upload.</p>' +
+                '<div style="max-height:500px;overflow-y:auto;background:white;border-radius:8px;">' +
+                artikel.map((a, idx) => {
+                    const t = String(a.judul || "").toLowerCase();
+                    const rec = BERITA_KLASTER.filter(k => k.kunci.some(kw => t.indexOf(kw) !== -1))[0];
+                    const cur = a.klaster_user || (rec ? rec.nama : "Lainnya");
+                    const opt = BERITA_KLASTER.map(k => '<option value="' + k.nama + '"' + (k.nama === cur ? ' selected' : '') + '>' + k.nama + '</option>').join('') + '<option value="Lainnya"' + (cur === "Lainnya" ? ' selected' : '') + '>Lainnya</option>';
+                    return '<div class="flex items-center gap-2 py-2 px-3 border-b border-coffee-50 hover:bg-coffee-50">' +
+                        '<span class="text-xs text-coffee-400 w-6">' + (idx + 1) + '</span>' +
+                        '<a href="' + esc(a.tautan) + '" target="_blank" class="flex-1 text-xs text-coffee-800 hover:underline" style="display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical;overflow:hidden;">' + esc(a.judul) + '</a>' +
+                        '<select data-idx="' + idx + '" class="edit-klaster-select text-[11px] border border-coffee-200 rounded px-1 py-0.5">' + opt + '</select>' +
+                        (a.klaster_user ? '' : '<span class="text-[9px] px-1 rounded bg-coffee-100 text-coffee-500">AI</span>') +
+                        '</div>';
+                }).join('') +
+                '</div>';
+        })
+        .catch(() => { box.innerHTML = '<div class="text-sm text-coffee-400 text-center py-4">Data tidak tersedia. Coba refresh.</div>'; });
+}
+
+function downloadClusteringFile() {
+    const sel = document.querySelectorAll(".edit-klaster-select");
+    const out = [];
+    sel.forEach(s => {
+        const a = adminEditData[parseInt(s.getAttribute("data-idx"), 10)];
+        if (a) out.push({ tautan: a.tautan, klaster: s.value });
+    });
+
+    const blob = new Blob([JSON.stringify(out, null, 1)], { type: "application/json" });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "klaster-final.json";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+    URL.revokeObjectURL(link.href);
+
+    showToastAdminPanel(currentLang === "id" ? "klaster-final.json terdownload. Upload ke folder data/ repo Update-Coffee-Data, lalu Run workflow." : "klaster-final.json downloaded. Upload to data/ folder in Update-Coffee-Data repo, then run workflow.");
+}
+
+function showToastAdminPanel(msg) {
+    alert(msg);
+}
 </script>
 <style type="text/tailwindcss">
 @layer base { body { @apply font-sans text-coffee-800 bg-cream; } h1,h2,h3,h4,h5,h6 { @apply font-serif; } }
@@ -744,7 +712,7 @@ tailwind.config = {
 <div class="max-w-7xl mx-auto px-6 lg:px-8">
 <div class="flex items-center justify-between h-16">
     <!-- Logo -->
-    <a href="https://KGS-blog.github.io/Blog/index.html" class="flex items-center gap-3">
+    <a href="index.html" class="flex items-center gap-3">
         <div class="w-10 h-10 bg-coffee-800 rounded-lg flex items-center justify-center"><span class="text-white font-serif font-bold text-lg">KG</span></div>
         <div class="hidden sm:block">
             <h1 class="font-serif font-bold text-xl text-coffee-900 leading-tight">Ganjar Satyanagara</h1>
@@ -753,15 +721,19 @@ tailwind.config = {
     </a>
     <!-- External Nav Links -->
     <div class="flex items-center gap-3 md:gap-5">
-        <a href="https://KGS-blog.github.io/Blog/index.html" class="nav-link flex items-center gap-2 text-xs md:text-sm">
+        <a href="index.html" class="nav-link flex items-center gap-2 text-xs md:text-sm">
             <i class="fas fa-arrow-left text-xs"></i><span data-i18n="nav_back" class="hidden sm:inline">Kembali ke Blog</span><span class="inline sm:hidden">Blog</span>
         </a>
-        <a href="https://KGS-blog.github.io/Blog/kalkulator.html" class="nav-link flex items-center gap-2 text-xs md:text-sm" data-i18n="nav_calc"><span class="hidden sm:inline">Kalkulator</span><span class="inline sm:hidden">Kalk</span></a>
+        <a href="kalkulator.html" class="nav-link flex items-center gap-2 text-xs md:text-sm" data-i18n="nav_calc"><span class="hidden sm:inline">Kalkulator</span><span class="inline sm:hidden">Kalk</span></a>
         <div class="h-5 w-px bg-coffee-200 hidden md:block"></div>
         <div class="flex items-center gap-1 bg-coffee-100 rounded-lg p-1">
             <button type="button" id="btn-id" class="lang-btn active text-xs" onclick="setLanguage('id')">ID</button>
             <button type="button" id="btn-en" class="lang-btn inactive text-xs" onclick="setLanguage('en')">EN</button>
         </div>
+        <button type="button" id="admin-btn-laporan" onclick="showAdminPanel()" class="hidden items-center gap-2 text-sm text-coffee-600 hover:text-coffee-900">
+            <i class="fas fa-lock text-xs"></i>
+            <span data-i18n="admin_title">Mode Edit Clustering</span>
+        </button>
     </div>
 </div>
 </div>
@@ -797,19 +769,6 @@ tailwind.config = {
 </div>
 </div>
 
-<!-- BREADCRUMB NAVIGATION -->
-<nav class="bg-coffee-50 border-b border-coffee-100 py-3 sticky top-0 z-40" aria-label="Breadcrumb">
-  <div class="max-w-7xl mx-auto px-6 lg:px-8">
-    <ol class="flex items-center space-x-2 text-sm flex-wrap">
-      <li><a href="https://KGS-blog.github.io/Blog/index.html" class="text-coffee-600 hover:text-coffee-900"><i class="fas fa-home mr-1"></i>Blog</a></li>
-      <li><span class="text-coffee-400">/</span></li>
-      <li><span class="text-coffee-600">Laporan & Analisis</span></li>
-      <li><span class="text-coffee-400">/</span></li>
-      <li class="text-coffee-900 font-medium">Laporan USDA</li>
-    </ol>
-  </div>
-</nav>
-
 <!-- Spacer for double navbar -->
 <div class="h-32 lg:h-36"></div>
 
@@ -824,7 +783,7 @@ tailwind.config = {
         </p>
     </div>
 
-
+    
     <!-- Social Share -->
     <div class="share-bar">
         <span class="share-label"><i class="fas fa-share-alt mr-1"></i>Bagikan</span>
@@ -945,14 +904,14 @@ function loadBPSPanel() {
                             if (r.trade_flow === "export" && (!lex || y > (num(lex.year) || 0))) lex = r;
                             if (r.trade_flow === "import" && (!lim || y > (num(lim.year) || 0))) lim = r;
                         });
-                        if (lex) rows.push(["Ekspor " + lex.year, fmt(num(lex.volume)) + " ton · USD " + fmt(num(lex.value)) + " ribu"]);
-                        if (lim) rows.push(["Impor " + lim.year, fmt(num(lim.volume)) + " ton · USD " + fmt(num(lim.value)) + " ribu"]);
+                        if (lex) rows.push(["Ekspor " + lex.year, fmt(num(lex.volume)) + " ton \u00b7 USD " + fmt(num(lex.value)) + " ribu"]);
+                        if (lim) rows.push(["Impor " + lim.year, fmt(num(lim.volume)) + " ton \u00b7 USD " + fmt(num(lim.value)) + " ribu"]);
                     }
                     var cat = ds.map(function (d) { return (d && d.title) ? String(d.title) : ""; }).filter(Boolean);
                     if (rows.length) {
                         box.innerHTML = '<ul class="list-disc pl-5 space-y-1">' + rows.map(function (rw) { return "<li><strong>" + esc(rw[0]) + ":</strong> " + esc(rw[1]) + "</li>"; }).join("") + "</ul>"
                             + tblHtml
-                            + (cat.length ? '<div class="text-xs text-coffee-400 mt-2">Dataset engine: ' + esc(cat.join(" · ")) + "</div>" : "")
+                            + (cat.length ? '<div class="text-xs text-coffee-400 mt-2">Dataset engine: ' + esc(cat.join(" \u00b7 ")) + "</div>" : "")
                             + '<div class="text-xs text-coffee-400 mt-1">Sumber: BPS (publikasi 05100.26021) via Engine KGS.</div>';
                     } else {
                         var tot = ds.reduce(function (a, d) { return a + (d && Array.isArray(d.records) ? d.records.length : 0); }, 0);
@@ -968,7 +927,7 @@ function loadBPSPanel() {
                     var kgTxt = "";
                     if (d.nettoKg !== undefined && d.nettoKg !== null && d.nettoKg !== "") {
                         var kgN = Number(d.nettoKg);
-                        kgTxt = " · " + (isNaN(kgN) ? String(d.nettoKg).replace(/</g, "&lt;") : kgN.toLocaleString("id-ID")) + " kg";
+                        kgTxt = " \u00b7 " + (isNaN(kgN) ? String(d.nettoKg).replace(/</g, "&lt;") : kgN.toLocaleString("id-ID")) + " kg";
                     }
                     box.innerHTML = "<strong>" + String(d.bulan || "").replace(/</g, "&lt;") + " " + String(ek.tahun || "").replace(/</g, "&lt;") + ":</strong> USD " + usdTxt + kgTxt;
                     return;
@@ -1027,7 +986,7 @@ function loadBPSPanel() {
         <p class="text-lg text-coffee-500 max-w-3xl mx-auto mt-2" data-i18n="hist_desc">
             Pergerakan harga Arabica C-Market, Robusta London, dan kurs IDR/USD dalam 5 tahun terakhir.
         </p>
-
+        
 
     <!-- Social Share -->
     <div class="share-bar">
@@ -1042,7 +1001,7 @@ function loadBPSPanel() {
 
     </div>
 
-
+    
 </div>
 </section>
 
@@ -1083,71 +1042,6 @@ function loadBPSPanel() {
 </div>
 </section>
 
-<!-- RELATED TOOLS & RESOURCES SECTION -->
-<section class="py-16 bg-cream border-t border-coffee-100">
-  <div class="max-w-7xl mx-auto px-6 lg:px-8">
-    <div class="mb-12">
-      <h2 class="font-serif text-4xl font-bold text-coffee-900 mb-3">Tools & Resources</h2>
-      <p class="text-lg text-coffee-600 leading-relaxed">Enhance your market analysis with our calculator and reference resources</p>
-    </div>
-
-    <div class="grid md:grid-cols-2 gap-8">
-      <!-- KALKULATOR CARD -->
-      <div class="group bg-white rounded-xl border border-coffee-100 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden">
-        <div class="h-32 bg-gradient-to-br from-coffee-700 to-coffee-800 flex items-center justify-center">
-          <i class="fas fa-calculator text-white text-5xl opacity-30"></i>
-        </div>
-        <div class="p-6">
-          <h3 class="font-serif text-2xl font-bold text-coffee-900 mb-2">Real-Time Price Calculator</h3>
-          <p class="text-coffee-600 mb-6 text-sm leading-relaxed">Instantly convert ICE C-Market prices to Indonesian Rupiah per kilogram. Track market differentials, analyze weekly trends, and make real-time trading decisions with live data calculations.</p>
-          <div class="flex items-center gap-3 text-xs text-coffee-500 mb-4">
-            <span><i class="fas fa-bolt text-orange-500 mr-1"></i>Real-time</span>
-            <span><i class="fas fa-sync text-blue-500 mr-1"></i>Auto-Update</span>
-            <span><i class="fas fa-chart-line text-green-500 mr-1"></i>Trending</span>
-          </div>
-          <a href="https://KGS-blog.github.io/Blog/kalkulator.html" class="inline-flex items-center px-4 py-2 rounded-lg bg-coffee-800 text-white hover:bg-coffee-700 transition-colors font-medium text-sm">
-            Open Calculator <i class="fas fa-arrow-right ml-2"></i>
-          </a>
-        </div>
-      </div>
-
-      <!-- REFERENCE CENTER CARD -->
-      <div class="group bg-white rounded-xl border border-coffee-100 shadow-sm hover:shadow-lg transition-all duration-300 overflow-hidden">
-        <div class="h-32 bg-gradient-to-br from-coffee-600 to-coffee-700 flex items-center justify-center">
-          <i class="fas fa-book-open text-white text-5xl opacity-30"></i>
-        </div>
-        <div class="p-6">
-          <h3 class="font-serif text-2xl font-bold text-coffee-900 mb-2">Coffee Market Reference Center</h3>
-          <p class="text-coffee-600 mb-6 text-sm leading-relaxed">Complete resource hub for Indonesian coffee industry. Access buyer guides, supplier evaluation frameworks, export regulations, market entry strategies, and comprehensive market analysis all in one platform.</p>
-          <div class="flex items-center gap-3 text-xs text-coffee-500 mb-4">
-            <span><i class="fas fa-book text-blue-500 mr-1"></i>Guides</span>
-            <span><i class="fas fa-list-check text-green-500 mr-1"></i>Checklists</span>
-            <span><i class="fas fa-globe text-orange-500 mr-1"></i>Export Info</span>
-          </div>
-          <a href="https://KGS-blog.github.io/Blog/index.html" class="inline-flex items-center px-4 py-2 rounded-lg bg-coffee-800 text-white hover:bg-coffee-700 transition-colors font-medium text-sm">
-            Explore Reference Center <i class="fas fa-arrow-right ml-2"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <!-- INTEGRATION INFO -->
-    <div class="mt-12 p-6 bg-white rounded-lg border border-coffee-200">
-      <div class="flex items-start gap-4">
-        <div class="w-12 h-12 bg-coffee-100 rounded-lg flex items-center justify-center flex-shrink-0">
-          <i class="fas fa-link text-coffee-800 text-xl"></i>
-        </div>
-        <div>
-          <h3 class="font-serif font-bold text-coffee-900 mb-1">Integrated Intelligence Platform</h3>
-          <p class="text-sm text-coffee-600">
-            This comprehensive market report works best alongside our price calculator and reference resources. Use the report data to identify market opportunities, the calculator for real-time pricing decisions, and the reference center for regulatory compliance and business guidance.
-          </p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- FOOTER -->
 <footer class="bg-coffee-950 text-coffee-300 py-12 mt-12">
 <div class="max-w-7xl mx-auto px-6 lg:px-8">
@@ -1160,9 +1054,9 @@ function loadBPSPanel() {
         </div>
     </div>
     <div class="flex gap-6 text-sm">
-        <a href="https://KGS-blog.github.io/Blog/index.html" class="hover:text-white transition-colors" data-i18n="footer_blog">Blog</a>
-        <a href="https://KGS-blog.github.io/Blog/kalkulator.html" class="hover:text-white transition-colors" data-i18n="footer_calc">Kalkulator</a>
-        <a href="https://KGS-blog.github.io/Update-Coffee-Data/laporan-usda.html" class="hover:text-white transition-colors" data-i18n="footer_usda">Laporan USDA</a>
+        <a href="index.html" class="hover:text-white transition-colors" data-i18n="footer_blog">Blog</a>
+        <a href="kalkulator.html" class="hover:text-white transition-colors" data-i18n="footer_calc">Kalkulator</a>
+        <a href="laporan-usda.html" class="hover:text-white transition-colors" data-i18n="footer_usda">Laporan USDA</a>
     </div>
     <p class="text-sm text-coffee-500" data-i18n="footer_copyright">2026 Ganjar Satyanagara</p>
 </div>
@@ -1237,63 +1131,63 @@ function showShareToast(msg) {
         alert(msg);
     }
 }
-
-// Generate BlogPosting schema markup for SEO
-function generateBlogPostingSchema(title, description, imageUrl, datePublished, dateModified) {
-    const schema = {
-        "@context": "https://schema.org",
-        "@type": "BlogPosting",
-        "headline": title,
-        "description": description,
-        "image": imageUrl || "https://i.imgur.com/vgcEMB2.png",
-        "datePublished": datePublished || new Date().toISOString(),
-        "dateModified": dateModified || new Date().toISOString(),
-        "author": {
-            "@type": "Person",
-            "name": "Ganjar Satyanagara",
-            "url": "https://blog.qcoid.com"
-        },
-        "publisher": {
-            "@type": "Organization",
-            "name": "Q Coffee Outlook",
-            "url": "https://KGS-blog.github.io/Update-Coffee-Data/",
-            "logo": "https://i.imgur.com/vgcEMB2.png"
-        },
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://KGS-blog.github.io/Update-Coffee-Data/laporan-usda.html"
-        }
-    };
-
-    const schemaScript = document.createElement('script');
-    schemaScript.type = 'application/ld+json';
-    schemaScript.textContent = JSON.stringify(schema);
-    document.head.appendChild(schemaScript);
-}
-
-// Update article publication meta tags for SEO
-function updateArticleMetaTags(title, description, datePublished, dateModified) {
-    const pubMeta = document.querySelector('meta[property="article:published_time"]');
-    const modMeta = document.querySelector('meta[property="article:modified_time"]');
-    const ogTitleMeta = document.querySelector('meta[property="og:title"]');
-    const ogDescMeta = document.querySelector('meta[property="og:description"]');
-
-    if (pubMeta) pubMeta.setAttribute('content', datePublished || new Date().toISOString());
-    if (modMeta) modMeta.setAttribute('content', dateModified || datePublished || new Date().toISOString());
-    if (ogTitleMeta) ogTitleMeta.setAttribute('content', title || "Ganjar Satyanagara | Laporan Kopi Indonesia & USDA");
-    if (ogDescMeta) ogDescMeta.setAttribute('content', description || "Data USDA resmi, clustering berita kopi terkini, dan analisis pasar Indonesia");
-}
-
-// Initialize schemas on page load
-document.addEventListener("DOMContentLoaded", function() {
-    generateBlogPostingSchema(
-        "Laporan Kopi Indonesia & USDA",
-        "Data USDA resmi, clustering berita kopi terkini, dan analisis pasar Indonesia dengan 800+ artikel dari 120+ sumber media global.",
-        "https://i.imgur.com/vgcEMB2.png",
-        new Date().toISOString(),
-        new Date().toISOString()
-    );
-});
 </script>
+
+<!-- PASSWORD MODAL FOR ADMIN PANEL -->
+<div id="admin-password-modal" class="hidden fixed inset-0 z-[999] flex items-center justify-center bg-black/50">
+    <div class="bg-white rounded-2xl shadow-2xl p-8 w-full max-w-sm mx-4">
+        <div class="text-center mb-6">
+            <div class="w-12 h-12 bg-coffee-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <i class="fas fa-lock text-coffee-700 text-xl"></i>
+            </div>
+            <h2 class="font-serif text-2xl font-bold text-coffee-900">Admin Panel</h2>
+            <p class="text-sm text-coffee-500 mt-1" data-i18n="admin_password_prompt">Masukkan password untuk mengakses Mode Edit Klaster</p>
+        </div>
+        <form onsubmit="submitAdminPassword(event)">
+            <input type="password" id="admin-password-laporan" placeholder="Password" class="w-full px-4 py-3 border border-coffee-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-coffee-600 mb-4 text-center text-lg tracking-widest" autocomplete="off">
+            <div id="admin-password-error-laporan" class="text-red-500 text-sm text-center mb-4 hidden" data-i18n="admin_password_error">Password salah!</div>
+            <div class="flex gap-3">
+                <button type="button" onclick="closeAdminPasswordModal()" class="flex-1 px-4 py-2 border border-coffee-300 text-coffee-700 rounded-lg hover:bg-coffee-50" data-i18n="admin_cancel">Batal</button>
+                <button type="submit" class="flex-1 px-4 py-2 bg-coffee-800 text-white rounded-lg hover:bg-coffee-700" data-i18n="admin_login">Masuk</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- ADMIN PANEL -->
+<div id="admin-panel-laporan" class="hidden fixed inset-0 z-[998] bg-black/50 flex items-end">
+    <div class="bg-white w-full max-h-[90vh] overflow-y-auto">
+        <div class="flex items-center justify-between p-6 border-b border-coffee-100">
+            <h2 class="font-serif text-2xl font-bold text-coffee-900" data-i18n="admin_title">Mode Edit Clustering</h2>
+            <button type="button" onclick="closeAdminPanel()" class="text-coffee-600 hover:text-coffee-900">
+                <i class="fas fa-times text-2xl"></i>
+            </button>
+        </div>
+
+        <div class="p-6">
+            <div class="flex items-center justify-between mb-4">
+                <p class="text-xs text-coffee-500" data-i18n="admin_instructions">Pilih kotak untuk ubah cluster, lalu Download & Upload</p>
+                <button type="button" onclick="loadEditClusteringData()" class="px-3 py-1 bg-coffee-100 text-coffee-700 text-xs font-semibold rounded-lg hover:bg-coffee-200">
+                    <i class="fas fa-redo mr-1"></i>
+                    <span data-i18n="admin_refresh">Refresh</span>
+                </button>
+            </div>
+
+            <div id="edit-clustering-content" class="bg-coffee-50 rounded-lg p-4 border border-coffee-100" style="max-height:60vh;overflow-y:auto;">
+                <p class="text-sm text-coffee-400 text-center py-8">
+                    <i class="fas fa-spinner fa-spin mr-2"></i>Loading...
+                </p>
+            </div>
+
+            <div class="mt-4 flex gap-2">
+                <button type="button" onclick="closeAdminPanel()" class="flex-1 px-4 py-2 border border-coffee-300 text-coffee-700 rounded-lg hover:bg-coffee-50">Close</button>
+                <button type="button" onclick="downloadClusteringFile()" class="flex-1 px-4 py-3 bg-coffee-800 text-white rounded-lg hover:bg-coffee-700 font-semibold">
+                    <i class="fas fa-download mr-2"></i>
+                    <span data-i18n="admin_download">Download & Upload</span>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
 </body>
 </html>
