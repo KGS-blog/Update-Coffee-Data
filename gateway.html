@@ -1,16 +1,154 @@
 <!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
 <head>
+    <!-- Meta Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '1498535007132214');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=1498535007132214&ev=PageView&noscript=1"
+    /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-QEG849B3YY"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-QEG849B3YY');
+
+    window.__scrollEvents = {};
+
+    function trackArticleClick(articleId, articleTitle, section = 'grid', category = 'general') {
+        gtag('event', 'article_click', {
+            'article_id': articleId,
+            'article_title': articleTitle,
+            'section': section,
+            'category': category
+        });
+    }
+
+    function initScrollDepthTracking(articleId, articleTitle, category = 'general') {
+        if (!window.__scrollEvents[articleId]) {
+            window.__scrollEvents[articleId] = {
+                tracked_25: false,
+                tracked_50: false,
+                tracked_75: false,
+                tracked_100: false
+            };
+        }
+
+        const handleScroll = function() {
+            const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+            if (scrollHeight === 0) return;
+
+            const scrollPercent = Math.round((window.scrollY / scrollHeight) * 100);
+            const events = window.__scrollEvents[articleId];
+
+            if (scrollPercent >= 25 && !events.tracked_25) {
+                gtag('event', 'scroll_depth', {
+                    'scroll_percentage': 25,
+                    'article_id': articleId,
+                    'article_title': articleTitle,
+                    'category': category
+                });
+                events.tracked_25 = true;
+            }
+            if (scrollPercent >= 50 && !events.tracked_50) {
+                gtag('event', 'scroll_depth', {
+                    'scroll_percentage': 50,
+                    'article_id': articleId,
+                    'article_title': articleTitle,
+                    'category': category
+                });
+                events.tracked_50 = true;
+            }
+            if (scrollPercent >= 75 && !events.tracked_75) {
+                gtag('event', 'scroll_depth', {
+                    'scroll_percentage': 75,
+                    'article_id': articleId,
+                    'article_title': articleTitle,
+                    'category': category
+                });
+                events.tracked_75 = true;
+            }
+            if (scrollPercent >= 100 && !events.tracked_100) {
+                gtag('event', 'scroll_depth', {
+                    'scroll_percentage': 100,
+                    'article_id': articleId,
+                    'article_title': articleTitle,
+                    'category': category
+                });
+                events.tracked_100 = true;
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+    }
+
+    function trackInternalLink(linkTarget, sourceArticle, linkType = 'article') {
+        gtag('event', 'internal_link_click', {
+            'link_target': linkTarget,
+            'source_article': sourceArticle,
+            'link_type': linkType
+        });
+    }
+
+    function trackExternalLink(url, sourceArticle) {
+        gtag('event', 'external_link_click', {
+            'url': url,
+            'source_article': sourceArticle
+        });
+    }
+
+    function trackReadTime(articleId, timeOnPage, estimatedReadTime, completionPercent = 0) {
+        gtag('event', 'article_read_time', {
+            'article_id': articleId,
+            'time_on_page': timeOnPage,
+            'estimated_read_time': estimatedReadTime,
+            'completion': completionPercent
+        });
+    }
+    </script>
+    <!-- End Google Analytics -->
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Q Coffee Outlook - Data Kopi Indonesia</title>
+    <title>Ganjar Satyanagara | Update Coffee Data Hub</title>
 
-    <meta name="description" content="Platform analisis kopi Indonesia - laporan USDA, clustering berita, dan insight terkini.">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>☕</text></svg>">
-    <meta property="og:title" content="Q Coffee Outlook - Data Kopi Indonesia">
-    <meta property="og:description" content="Laporan USDA, clustering berita, dan analisis kopi Indonesia yang diperbarui otomatis.">
+    <!-- SEO & Social Meta -->
+    <meta name="description" content="Hub gateway ke data dan analisis pasar kopi Indonesia - laporan USDA, clustering berita, dan insight mingguan dari 800+ artikel kopi terkini.">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>&#9749;</text></svg>">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Q Coffee Outlook - Gateway Hub">
+    <meta property="og:title" content="Ganjar Satyanagara | Data dan Berita Kopi Indonesia">
+    <meta property="og:description" content="Platform analisis kopi Indonesia: laporan USDA, clustering berita, dan insights mingguan untuk pembeli dan stakeholder global.">
     <meta property="og:url" content="https://KGS-blog.github.io/Update-Coffee-Data/">
     <meta property="og:image" content="https://i.imgur.com/vgcEMB2.png">
+    <meta property="og:locale" content="id_ID">
+    <meta property="og:locale:alternate" content="en_US">
+    <meta property="article:published_time" content="">
+    <meta property="article:modified_time" content="">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Ganjar Satyanagara | Data & Berita Kopi Indonesia">
+    <meta name="twitter:description" content="Laporan USDA, clustering berita kopi terkini, dan analisis mingguan dari 800+ artikel untuk insights pasar kopi Indonesia.">
+    <meta name="twitter:image" content="https://i.imgur.com/vgcEMB2.png">
+
+    <!-- Canonical & Language Alternates (SEO) -->
+    <link rel="canonical" href="https://KGS-blog.github.io/Update-Coffee-Data/">
+    <link rel="alternate" hreflang="id" href="https://KGS-blog.github.io/Update-Coffee-Data/">
+    <link rel="alternate" hreflang="en" href="https://KGS-blog.github.io/Update-Coffee-Data/">
+    <link rel="alternate" hreflang="x-default" href="https://KGS-blog.github.io/Update-Coffee-Data/">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -192,21 +330,21 @@
         <!-- Three Main CTA Buttons -->
         <div class="cta-buttons">
             <!-- Button 1: USDA Data -->
-            <a href="laporan-usda.html#section-usda" class="cta-btn">
+            <a href="laporan-usda.html#section-usda" class="cta-btn" onclick="trackArticleClick('gateway-tab1', 'USDA Report', 'gateway')">
                 <i class="fas fa-database"></i>
                 <span class="cta-btn-title" id="btn1-title">Data Laporan USDA</span>
                 <span class="cta-btn-desc" id="btn1-desc">Produksi, ekspor, dan pasar kopi</span>
             </a>
 
             <!-- Button 2: Clustering Berita -->
-            <a href="laporan-usda.html#section-historical" class="cta-btn">
+            <a href="laporan-usda.html#section-historical" class="cta-btn" onclick="trackArticleClick('gateway-tab2', 'News Clustering', 'gateway')">
                 <i class="fas fa-newspaper"></i>
                 <span class="cta-btn-title" id="btn2-title">Clustering Berita</span>
                 <span class="cta-btn-desc" id="btn2-desc">800+ artikel dikelompokkan per topik</span>
             </a>
 
             <!-- Button 3: Report Terkini -->
-            <a href="laporan-usda.html#section-update" class="cta-btn">
+            <a href="laporan-usda.html#section-update" class="cta-btn" onclick="trackArticleClick('gateway-tab3', 'Latest Report', 'gateway')">
                 <i class="fas fa-chart-line"></i>
                 <span class="cta-btn-title" id="btn3-title">Report Terkini</span>
                 <span class="cta-btn-desc" id="btn3-desc">Analisis dan insight mingguan</span>
@@ -269,9 +407,37 @@
             localStorage.setItem("preferredLang", lang);
         }
 
+        // Generate Organization schema markup for gateway page
+        function generateOrganizationSchema() {
+            const schema = {
+                "@context": "https://schema.org",
+                "@type": "WebPage",
+                "name": "Q Coffee Outlook - Gateway Hub",
+                "description": "Hub gateway ke data dan analisis pasar kopi Indonesia - laporan USDA, clustering berita, dan insight mingguan dari 800+ artikel kopi terkini.",
+                "url": "https://KGS-blog.github.io/Update-Coffee-Data/",
+                "image": "https://i.imgur.com/vgcEMB2.png",
+                "publisher": {
+                    "@type": "Organization",
+                    "name": "Q Coffee Outlook",
+                    "url": "https://blog.qcoid.com",
+                    "logo": "https://i.imgur.com/vgcEMB2.png",
+                    "founder": {
+                        "@type": "Person",
+                        "name": "Ganjar Satyanagara"
+                    }
+                }
+            };
+            const schemaScript = document.createElement('script');
+            schemaScript.type = 'application/ld+json';
+            schemaScript.textContent = JSON.stringify(schema);
+            document.head.appendChild(schemaScript);
+        }
+
         document.addEventListener("DOMContentLoaded", function() {
             const saved = localStorage.getItem("preferredLang") || "id";
             setLanguage(saved);
+
+            generateOrganizationSchema();
 
             const now = new Date();
             const dateStr = now.toLocaleDateString(currentLang === "id" ? "id-ID" : "en-US",
