@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "mode": "auto",
+  "lookback_days": 14,
+  "max_topics": 3,
+  "selected_cluster_ids": [],
+  "minimum_articles_per_topic": 3,
+  "language": "id"
+}

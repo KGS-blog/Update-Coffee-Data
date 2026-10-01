@@ -68,7 +68,7 @@ For production reliability, consider upgrading to Barchart OnDemand or Alpha Van
 🔄 Data Update History
 View all updates in commit history.
 🌐 HTML Report
-The main report page is laporan-usda.html. Upload this to your GitHub Pages repo (e.g., Blog repo).
+The public coffee news portal is kabar-kopi.html. Keep laporan-usda.html as a compatibility redirect for older links.
 It fetches live data from:
 plain
 Copy

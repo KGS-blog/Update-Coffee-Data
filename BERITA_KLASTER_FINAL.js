@@ -43,6 +43,7 @@ const BERITA_KLASTER = [
  * @returns {Object} - Result object dengan clustered articles dan metadata
  */
 function clusterBerita(artikel) {
+    const definitions = (typeof window !== "undefined" && Array.isArray(window.BERITA_KLASTER)) ? window.BERITA_KLASTER : BERITA_KLASTER;
     const result = {
         success: true,
         total_artikel: artikel.length,
@@ -52,7 +53,7 @@ function clusterBerita(artikel) {
     };
 
     // Initialize clusters
-    const kl = BERITA_KLASTER.map(k => ({
+    const kl = definitions.map(k => ({
         nama: k.nama,
         nama_en: k.nama_en,
         slug: k.slug,
@@ -68,20 +69,20 @@ function clusterBerita(artikel) {
     // Clustering logic
     artikel.forEach(a => {
         const t = String(a.judul || "").toLowerCase();
-        const hit = kl.find(k => k.kunci.some(kw => t.indexOf(kw) !== -1));
+        const saved = String(a.cluster_id || a.cluster_name || a.klaster_user || "").toLowerCase();
+        const hit = kl.find(k => saved && [k.slug, k.nama].some(v => String(v || "").toLowerCase() === saved))
+            || kl.find(k => k.kunci.some(kw => t.indexOf(kw) !== -1));
         (hit || lainnya).items.push(a);
     });
 
     // Calculate percentages
-    artikel.forEach((_, idx) => {
-        if (kl[idx]) {
-            kl[idx].jumlah = kl[idx].items.length;
-            kl[idx].persen = Math.round((kl[idx].jumlah / artikel.length) * 100);
-        }
+    kl.forEach(k => {
+        k.jumlah = k.items.length;
+        k.persen = artikel.length ? Math.round((k.jumlah / artikel.length) * 100) : 0;
     });
 
     lainnya.jumlah = lainnya.items.length;
-    lainnya.persen = Math.round((lainnya.jumlah / artikel.length) * 100);
+    lainnya.persen = artikel.length ? Math.round((lainnya.jumlah / artikel.length) * 100) : 0;
 
     // Return formatted result
     result.klaster = kl.filter(k => k.items.length > 0);
@@ -145,3 +146,7 @@ if (typeof window !== 'undefined') {
 }
 
 console.log(`[BERITA_KLASTER_FINAL.js] Loaded - ${BERITA_KLASTER.length} clusters, 810+ keywords`);
+
+if (typeof module !== "undefined" && module.exports) {
+    module.exports = { BERITA_KLASTER, clusterBerita };
+}

@@ -132,7 +132,7 @@ function round2(n) { return Math.round(n * 100) / 100; }
       const arrE = (je && Array.isArray(je.artikel)) ? je.artikel : [];
       if (arrE.length) {
         pool.push.apply(pool, arrE.map(function (a) {
-          return { judul: a.judul, tautan: a.tautan, tanggal: a.tanggal, sumber: a.sumber || "Engine KGS", ringkasan: a.ringkasan || "", asal: "engine" };
+          return { judul: a.judul, tautan: a.tautan, tanggal: a.tanggal, sumber: a.sumber || "Engine KGS", ringkasan: a.ringkasan || a.deskripsi || "", asal: "engine" };
         }));
         diag.engine = "sukses " + arrE.length;
       } else { diag.engine = "kosong"; }
@@ -156,7 +156,7 @@ function round2(n) { return Math.round(n * 100) / 100; }
           const jn = await getJSON(url);
           if (jn && jn.status === "success" && Array.isArray(jn.results) && jn.results.length) {
             pool.push.apply(pool, jn.results.map(function (a) {
-              return { judul: a.title, tautan: a.link, tanggal: a.pubDate, sumber: a.source_name || a.source_id || "" };
+              return { judul: a.title, tautan: a.link, tanggal: a.pubDate, sumber: a.source_name || a.source_id || "", ringkasan: a.description || a.content || "" };
             }));
             diag.newsdata = "sukses " + jn.results.length;
             break;
@@ -178,7 +178,8 @@ function round2(n) { return Math.round(n * 100) / 100; }
           const li = (it.match(/<link>([\s\S]*?)<\/link>/) || [])[1] || "";
           const pd = (it.match(/<pubDate>([\s\S]*?)<\/pubDate>/) || [])[1] || "";
           const sr = (it.match(/<source[^>]*>([\s\S]*?)<\/source>/) || [])[1] || "";
-          return { judul: clean(ti), tautan: li.trim(), tanggal: pd, sumber: clean(sr) };
+          const ds = (it.match(/<description>([\s\S]*?)<\/description>/) || [])[1] || "";
+          return { judul: clean(ti), tautan: li.trim(), tanggal: pd, sumber: clean(sr), ringkasan: clean(ds) };
         }));
         
       } catch (e3) { err.rss = e3.message; }
@@ -207,8 +208,12 @@ function round2(n) { return Math.round(n * 100) / 100; }
         fs.mkdirSync(path.join(OUT, "arsip"), { recursive: true });
         let arsip = { bulan: bln, artikel: [] };
         try { arsip = JSON.parse(fs.readFileSync(arsipPath, "utf8")); } catch (e0) {}
-        const seen = new Set((arsip.artikel || []).map(function (a) { return a.tautan; }));
-        simpan.forEach(function (a) { if (!seen.has(a.tautan)) { arsip.artikel.push(a); seen.add(a.tautan); } });
+        const byUrl = new Map((arsip.artikel || []).map(function (a) { return [String(a.tautan || a.judul), a]; }));
+        simpan.forEach(function (a) {
+          const k = String(a.tautan || a.judul), old = byUrl.get(k);
+          if (!old) { arsip.artikel.push(a); byUrl.set(k, a); }
+          else if (!old.ringkasan && a.ringkasan) old.ringkasan = a.ringkasan;
+        });
         fs.writeFileSync(arsipPath, JSON.stringify(arsip, null, 1));
         console.log("saved data/arsip/berita-" + bln + ".json:", arsip.artikel.length, "artikel terkumpul");
       } catch (eA) { console.log("arsip skip:", eA.message); }
@@ -229,17 +234,16 @@ function round2(n) { return Math.round(n * 100) / 100; }
             });
           }
         } catch (eOv) {}
-        // TERAPKAN override pengguna
-        try {
-          const ov = JSON.parse(fs.readFileSync(path.join(OUT, "klaster-final.json"), "utf8"));
-          if (Array.isArray(ov)) {
-            const map = {};
-            ov.forEach(function (o) { map[String(o.tautan)] = o.klaster; });
-            all.artikel = (all.artikel || []).map(function (a) { const k = String(a.tautan || a.judul); return map[k] ? Object.assign({}, a, { klaster_user: map[k] }) : a; });
+        const byUrl = new Map((all.artikel || []).map(function (a, idx) { return [String(a.tautan || a.judul), idx]; }));
+        relevan.forEach(function (a) {
+          const k = String(a.tautan || a.judul);
+          if (!byUrl.has(k)) { all.artikel.push(a); byUrl.set(k, all.artikel.length - 1); }
+          else {
+            const old = all.artikel[byUrl.get(k)];
+            if (!old.ringkasan && a.ringkasan) old.ringkasan = a.ringkasan;
+            if (!old.sumber && a.sumber) old.sumber = a.sumber;
           }
-        } catch (eOv) {}
-        const seenA = new Set((all.artikel || []).map(function (a) { return String(a.tautan || a.judul); }));
-        relevan.forEach(function (a) { const k = String(a.tautan || a.judul); if (!seenA.has(k)) { all.artikel.push(a); seenA.add(k); } });
+        });
         all.artikel.sort(function (a, b) { return (Date.parse(b.tanggal) || 0) - (Date.parse(a.tanggal) || 0); });
         if (all.artikel.length > 500) all.artikel = all.artikel.slice(0, 500);
         all.fetched = now;
