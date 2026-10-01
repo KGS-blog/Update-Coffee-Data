@@ -1,6 +1,26 @@
 {
   "artikel": [
     {
+      "judul": "Musim Buah Anomali Resmi Diluncurkan di International Coffee Day, Membawa Pengalaman Baru Menikmati Sisi Fruity dari Kopi - Kabarindoraya.com",
+      "tautan": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPSFBJdTJ6S21nM1ZxemExamZYdHJYQnlIUXZFLVlvNEdESFZpWVVna3FFQ2c5bkxiOElaMUlITFN1TFdkT0JSbE5SX25hSlUzV19FVnZ0U0FnV3NoTlA4X0dmMVpzN1pmQ25XbDRyNkNSeGVIQnBoM1RYQ2Q4Rmw0OV9wZWhFbGluZjNWRGlEN1pqLW5DY1dVSmtzLTVIcFF4Mm9zNkNTdl9rekFDY3NQYzB4YnF1anZyczZmZmpJN3I5X3dyUTBNUjdtbmZHS2RQWk1mVDh0ODR1UkZlNTA4?oc=5",
+      "tanggal": "Thu, 01 Oct 2026 19:50:00 GMT",
+      "sumber": "Kabarindoraya.com",
+      "ringkasan": "<a href=\"https://news.google.com/rss/articles/CBMi3wFBVV95cUxPSFBJdTJ6S21nM1ZxemExamZYdHJYQnlIUXZFLVlvNEdESFZpWVVna3FFQ2c5bkxiOElaMUlITFN1TFdkT0JSbE5SX25hSlUzV19FVnZ0U0FnV3NoTlA4X0dmMVpzN1pmQ25XbDRyNkNSeGVIQnBoM1RYQ2Q4Rmw0OV9wZWhFbGluZjNWRGlEN1pqLW5DY1dVSmtzLTVIcFF4Mm9zNkNTdl9rekFDY3NQYzB4YnF1anZyczZmZmpJN3I5X3dyUTBNUjdtbmZHS2RQWk1mVDh0ODR1UkZlNTA4?oc=5\" target=\"_blank\">Musim Buah Anomali Resmi Diluncurkan di International Coffee Day, Membawa Pengalaman Baru Menikmati Sisi Fruity dari Kopi</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Kabarindoraya.com</font>",
+      "cluster_id": "riset-tren-konsumen",
+      "cluster_name": "Riset & Tren Konsumen",
+      "cluster_assignment": "keyword"
+    },
+    {
+      "judul": "COFFEE & DRIVE: EV & HYBRID EXPERIENCE MAKASSAR - Bank Syariah Indonesia",
+      "tautan": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5uS1hHZ3VpX19adFp6RjJGRGpKdkxZQWRLYWZoS0NzWFFTMmlrcGFJd19rZ3RWUk1FVDU5T0lEZlZBcG5VTXBLX2R2X01INnJ6YU51bUNRU3ZXRUNZUTNLLWxVZzdoNHpPQjZKTW5zWW5ldmN3dHE2UlJCT3NMaWc?oc=5",
+      "tanggal": "Thu, 01 Oct 2026 19:05:25 GMT",
+      "sumber": "Bank Syariah Indonesia",
+      "ringkasan": "<a href=\"https://news.google.com/rss/articles/CBMif0FVX3lxTE5uS1hHZ3VpX19adFp6RjJGRGpKdkxZQWRLYWZoS0NzWFFTMmlrcGFJd19rZ3RWUk1FVDU5T0lEZlZBcG5VTXBLX2R2X01INnJ6YU51bUNRU3ZXRUNZUTNLLWxVZzdoNHpPQjZKTW5zWW5ldmN3dHE2UlJCT3NMaWc?oc=5\" target=\"_blank\">COFFEE & DRIVE: EV & HYBRID EXPERIENCE MAKASSAR</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">Bank Syariah Indonesia</font>",
+      "cluster_id": "produksi-panen",
+      "cluster_name": "Produksi & Panen",
+      "cluster_assignment": "keyword"
+    },
+    {
       "judul": "Mengenal Andanu Prasetyo, Sosok di Balik Kopi Tuku - MetroTVNews.com",
       "tautan": "https://news.google.com/rss/articles/CBMilgFBVV95cUxOUjZKTkN1U2k3ZmpabVRrQkt6eTBjTV9zX1lSbDBEa3Exak1fM0tTdGxsdUVldm95dmdLRkVNOHVuVG5yWDJKVm81WmhQTVVuZXdTLVoxd0hWNnlNV3dnNjJzNUlwMXpYYTBTRm1qXzh5TFBzOTFkZmprdWw2R0NPOEkwOWJnRUN4RU56ZXI2dVZNVzV6YUE?oc=5",
       "tanggal": "Thu, 01 Oct 2026 14:48:49 GMT",
@@ -803,7 +823,8 @@
       "sumber": "Pemerintah Kabupaten Probolinggo",
       "cluster_id": "produksi-panen",
       "cluster_name": "Produksi & Panen",
-      "cluster_assignment": "keyword"
+      "cluster_assignment": "keyword",
+      "ringkasan": "<a href=\"https://news.google.com/rss/articles/CBMiugFBVV95cUxPZjczblVUeU1PWERPc0o3S2JtbDNSZmtEWW1YLVMxZGtFWkNlcHVVZnhvQnVaRU12bmpZdzJaemthTUZJOXNCUFNTRjM2OXk2NWVMa3NUa0w0dmxfTllqTFM4TlgyUGlfdWNDaDgwOXZVM1lyR3Z4ZEwwbG5pTVVXUk5RMmRFVWNjSVpucDQzV3h0dW5CMWxTUjZuekkxc0JSel9oQkYyejhfYjNhSzlGSFBEVF8tVUhkNWc?oc=5\" target=\"_blank\">Baznas Kabupaten Probolinggo Dorong Petani Kopi Desa Sumberduren Kembangkan Ekonomi Umat</a>&nbsp;&nbsp;<font color=\"#6f6f6f\">probolinggokab.go.id</font>"
     },
     {
       "judul": "Roemah Koffie Hadirkan Omakase Coffee Experience - olenka.id",
@@ -2298,5 +2319,5 @@
       "cluster_assignment": "keyword"
     }
   ],
-  "fetched": "2026-10-01T20:24:46.856Z"
+  "fetched": "2026-10-01T22:29:21.394Z"
 }
