@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated_at": "2026-10-01T20:18:41.672Z",
-  "feed_fetched": "2026-10-01T20:18:37.992Z",
+  "generated_at": "2026-10-01T20:24:51.173Z",
+  "feed_fetched": "2026-10-01T20:24:46.856Z",
   "mode": "auto",
   "settings": {
     "version": 1,
@@ -18,52 +18,49 @@
       "cluster_id": "kedai-konsumsi-gaya-hidup",
       "cluster_name": "Kedai, Konsumsi & Gaya Hidup",
       "period_days": 14,
-      "generated_at": "2026-10-01T20:18:41.672Z",
+      "generated_at": "2026-10-01T20:24:51.173Z",
       "status": "ai_generated",
-      "fingerprint": "ec1adda595afe515e5f676583cf518882f202abed12e549d0e78b18db4f0f90f",
+      "fingerprint": "8ec078b2973469f94b3f2a8801dd2ef373584063d0a6909af84199911ff80bfe",
       "article": {
-        "title": "Kedai, Konsumsi, & Gaya Hidup: Ketika Kopi Mencari Kita",
-        "summary": "Sepekan terakhir, kopi muncul di ruang-ruang yang kian beragam: dari pasar tradisional lewat gerobak listrik, ke rumah sakit untuk meredakan cemas, hingga acara publik yang menargetkan ribuan pengunjung baru di luar lingkaran komunitas [5][11][1]. Di belakang layar, pemasok mendorong coffeepreneur dengan paket solusi menu dan kudapan mungil, sementara sebagian kedai menawarkan pengalaman yang lebih kuratorial atau berlatar pemandangan kota [2][7][6][3]. Polanya bukan satu arus besar, melainkan serangkaian percobaan untuk memperluas momen minum kopi ke lebih banyak konteks hidup harian.",
-        "lead": "Bayangkan pagi di pasar: di antara tumpukan sayur, sebuah gerobak listrik berhenti, menurunkan cup-cup kopi yang baru diseduh. Bukan kafe besar, tapi upaya membawa kafe ke tempat orang benar-benar berada—langkah yang kini ditempuh Jago Coffee lewat armada gerobak listrik yang menyasar pasar [5].",
+        "title": "Kedai, Konsumsi, dan Gaya Hidup: Ngopi Kian Fleksibel, dari Pasar Tematik sampai Gerobak Listrik",
+        "summary": "Pasar Kopi Lokal 2026 di Malang memasang target 4.000 pengunjung, seraya mengangkat kopi lokal ke luar lingkar komunitasnya [1]. Pemasok bahan minuman dan pastry mengumumkan dukungan untuk coffeepreneur dan bakepreneur lewat inovasi menu, termasuk format bite‑sized pastry [2][7]. Di sisi pengalaman, sebagian pelaku menawarkan omakase coffee dan ada kedai yang menambah menu makanan berat sebagai pendamping [6][9][12].",
+        "lead": "Di lapangan, titik temu ngopi ikut bergeser: Point Coffee menonjolkan lokasi berpanorama di Ambon [3], RSUD Klungkung membuka coffee shop di area rumah sakit [11], dan Jago Coffee memperkenalkan gerobak listrik sebagai opsi layanan bergerak [5]. Polanya sederhana: kopi mencoba mendekat ke rutinitas harian dan ke ruang yang orang sudah kunjungi, bukan menunggu orang datang ke tempat khusus.",
         "sections": [
           {
-            "heading": "Kopi keluar dari lingkaran komunitas",
+            "heading": "Format layanan: tetap, bergerak, dan menumpang ruang sehari-hari",
             "paragraphs": [
-              "Ambisi memperluas audiens terlihat terang-terangan. Di Malang, Pasar Kopi Lokal 2026 menyatakan target 4.000 pengunjung—sebuah sasaran yang menunjukkan keinginan membawa kopi lokal ke publik yang lebih luas, meski untuk sekarang baru sebatas target panitia [1]. Di tempat lain, kopi dipakai sebagai bahasa pertemuan: agenda coffee morning kepolisian setempat dipakai untuk menguatkan kedekatan layanan dengan warga [8], sementara RSUD Klungkung membuka coffee shop di area rumah sakit untuk membantu mengurangi rasa cemas pengunjung [11].",
-              "Garis besarnya sederhana: kopi dicoba sebagai jembatan. Bukan hanya ruang nongkrong, melainkan medium untuk menyapa warga di ruang-ruang yang sebelumnya jarang disentuh budaya ngopi formal."
+              "Beberapa contoh terbaru menunjukkan penyedia merapat ke arus lalu lintas orang. Point Coffee mengemas pengalaman ngopi sambil menikmati pemandangan kota Ambon—sebuah penekanan pada lokasi yang menyuguhkan aktivitas santai plus kopi [3]. Di layanan publik, RSUD Klungkung menghadirkan coffee shop di area rumah sakit sebagai fasilitas bagi pengunjung; klaimnya, keberadaan kedai diharapkan membantu mengurangi kecemasan pengunjung [11]. Jago Coffee memperkenalkan gerobak listrik ke pasar, sebuah langkah yang membuat layanan makin mobile dan berpotensi lebih mudah ditemui di titik keramaian [5]."
             ]
           },
           {
-            "heading": "Format kedai bergeser: dari view ke omakase",
+            "heading": "Menu: dari pastry mungil ke lauk kenyang",
             "paragraphs": [
-              "Sebagian pemain mengangkat pengalaman ruang. Di Ambon, sebuah gerai menawarkan sensasi menyeruput sambil menatap kota dari ketinggian—menjual panorama sebagai bagian dari rasa [3]. Di sisi lain, Roemah Koffie memperkenalkan ‘omakase coffee’, pengalaman minum yang dikurasi barista dari awal sampai akhir, mirip duduk di bar chef yang menata alur hidangan [6].",
-              "Dua pendekatan ini sama-sama menekankan cerita di cangkir: entah lewat latar tempat yang mengundang, atau melalui ritual terstruktur yang membuat kita berhenti sejenak dan memperhatikan apa yang kita minum. Belum jelas seberapa luas adopsinya, tetapi keduanya menunjukkan bahwa “kedai” kini juga soal dramaturgi pengalaman, bukan sekadar meja dan colokan."
+              "Di dapur, pemasok mendorong variasi sajian. Indomilk FnB Solutions mengumumkan dukungan untuk pelaku coffee dan bakery lewat inovasi menu, termasuk bite‑sized pastry yang mudah dipadankan dengan minuman berbasis kopi [2][7]. Di sisi kedai, Jioo Coffee & Eatery Batu menegaskan bahwa tempat ngopi bisa sekaligus jadi tempat makan; mereka menyebut menu seperti nasi cumi hingga paru balado [12]. Dua arus ini—‘teman ngopi’ yang ringan dan hidangan yang mengenyangkan—menunjukkan cara berbeda untuk membuat kunjungan lebih bernilai bagi pelanggan."
             ]
           },
           {
-            "heading": "Dapur belakang: menu sebagai alat ajak",
+            "heading": "Pengalaman kurasi dan acara tematik",
             "paragraphs": [
-              "Dorongan untuk menjangkau penikmat baru juga datang dari sisi pasokan. Indomilk FnB Solutions berbicara tentang dukungan ke coffeepreneur dan bakepreneur lewat inovasi menu, termasuk dorongan pada pastry berukuran sekali gigit—format yang memudahkan pemesanan cepat dan porsi coba-coba [2][7].",
-              "Di Batu, satu kedai memadukan kopi dengan hidangan lengkap seperti nasi cumi sampai paru balado—bukan konsep baru, tapi menegaskan strategi lama yang kembali relevan: ajak orang masuk lewat makanan, lalu tinggal kenalkan kopinya [12]. Apa hasilnya? Kita belum punya data dampak, namun arahnya jelas: semakin banyak pintu masuk ke cangkir yang sama, dari kudapan kecil sampai piring besar."
+              "Roemah Koffie memperkenalkan Omakase Coffee Experience, format yang mengandalkan kurasi barista dan urutan saji sebagai inti pengalaman [6][9]. Di ranah acara, Pasar Kopi Lokal 2026 menargetkan 4.000 pengunjung dan menyatakan misi membawa kopi lokal Malang keluar dari lingkar komunitas—artinya, mencoba menjangkau publik yang lebih luas lewat satu wadah yang jelas waktunya dan tempatnya [1]. Keduanya adalah contoh bagaimana kopi diposisikan bukan hanya sebagai produk, tetapi sebagai rangkaian pengalaman yang dibingkai dengan format tertentu."
             ]
           }
         ],
-        "conclusion": "Jika beberapa tahun lalu kita mengejar kedai, kini justru kedai—atau setidaknya kopinya—yang mencari kita. Gerobak menyambangi pasar, coffee corner muncul di rumah sakit, sementara sebagian gerai merapikan dramaturgi rasa. Tidak semua eksperimen akan bertahan, tetapi benang yang layak dipertahankan adalah kedekatan: kopi yang paham konteks tempat ia disajikan. Bagi penikmat, ini kabar baik—lebih banyak cara menemukan momen kopi yang pas untuk hari yang berbeda-beda.",
+        "conclusion": "Benang yang tampak dari potongan kabar di atas: kopi merapat ke keseharian lewat format yang lebih fleksibel, sementara isi cangkir dan piring pendampingnya ikut dirapikan agar cocok untuk berbagai momen. Ini bukan bukti perubahan pasar, melainkan deretan pilihan taktis—dari event, lokasi, sampai menu—yang mencoba memudahkan orang bertemu kopi dengan cara yang mereka suka.",
         "recommendations": [
           {
-            "audience": "Pemilik kedai kecil",
-            "action": "Uji paket ‘kopi + kudapan kecil’ pada jam sibuk pagi/siang untuk memudahkan keputusan cepat pelanggan baru.",
-            "basis": "Dukungan pemasok pada pastry berukuran sekali gigit menandakan format yang mendorong pembelian spontan [2][7]."
+            "audience": "Pemilik kedai kecil/baru",
+            "action": "Uji pendamping minuman yang ringkas (misalnya pastry kecil) sebelum menambah menu besar, mengikuti contoh dorongan inovasi menu dari pemasok.",
+            "basis": "Ada pemasok yang mengumumkan dukungan dan inovasi bite‑sized pastry untuk coffeepreneur dan bakepreneur [2][7]."
           },
           {
-            "audience": "Penyelenggara acara/komunitas kopi",
-            "action": "Rancang aktivitas lintas minat (musik, pasar kreatif, demo masak) agar menarik pengunjung di luar komunitas inti.",
-            "basis": "Target 4.000 pengunjung di ajang kopi Malang menyorot ambisi keluar dari lingkaran komunitas, tapi butuh pengait yang relevan untuk publik luas [1]."
+            "audience": "Penggiat/penyelenggara komunitas kopi",
+            "action": "Pertimbangkan partisipasi di pasar tematik saat tersedia untuk mempertemukan produk dengan khalayak lebih luas.",
+            "basis": "Pasar Kopi Lokal 2026 menargetkan 4.000 pengunjung dan bertujuan keluar dari lingkar komunitas [1]."
           },
           {
-            "audience": "Brand/supplier",
-            "action": "Kemitraan dengan titik nontradisional seperti pasar, fasilitas kesehatan, atau layanan publik untuk menghadirkan kopi yang mudah dijangkau.",
-            "basis": "Gerobak listrik ke pasar dan coffee shop di rumah sakit menunjukkan kanal alternatif pertemuan dengan konsumen [5][11]."
+            "audience": "Pengelola fasilitas publik",
+            "action": "Evaluasi kelayakan titik kopi di area yang sudah ramai dikunjungi orang.",
+            "basis": "RSUD Klungkung membuka coffee shop di area rumah sakit dengan tujuan memberi kenyamanan bagi pengunjung [11]."
           }
         ],
         "source_urls": [
@@ -73,11 +70,11 @@
           "https://news.google.com/rss/articles/CBMirgFBVV95cUxPRl9yVGF3bFd3cXdDbHhkc3lqTGdTeXFKVXlocXRKa2ViWFJveDJnV1NVRW9OTXFOTFJfeS1Nc1Y1aVVCMFBVcU5BRC16R283cmJSX1cyTnhGdDJoSmMyVWRDUTkxVHpXODV0MExiYWQ2NmtMMWw2akE5Tkktbnl1R3ptTzVET2MxazdneElXd052T3dOdE5pa3dXSEFtOTZJaXlfMHNaejFUdUh6bEHSAbMBQVVfeXFMUDRCOVNmSGZJVFNpRGJWSTR4RXZFVWtvNll4S3Y0RUFISGR2ZTlubWNvV0hPTGRpdlJmVXNxUFVVWW1YM2M3V3hVdUtsTXUyRFpfWTZwaEw2TWZlUUNSUVVEVUU0OTl6REctX1hfRUxQRTdsbTlYUU9qZkdVa1lTTUpCMWUzU0JEU1FaMXVocEFaTnUwbG5xQW4wWU05TThpZzBhWDZxQTYwQkJlZEUtbVV1THc?oc=5",
           "https://news.google.com/rss/articles/CBMikAFBVV95cUxQVHVGcllqR0NWRzVoUm1tYVY1SWE5Tl9tdzFFXzJDaFR3aEZZSllTdWdwZkJXTW5uUl9MVnhhbXdCVFVzX3czTjJJZHhLYzExQ0NzcEFRSllZZTRZQW5MbHlrblE0eU9xa1BGYWFHNzgwNVY3M0x0eWNqbUdwRnp1c1ROVXFrN3l1bkxzYjdvNnA?oc=5",
           "https://news.google.com/rss/articles/CBMiswFBVV95cUxPVFpfbzNHczdkVnh1NzRPWm9lLWVZaUh5MWZUZHJud0pGVElCcWQ4OG5TaXZLQ0RnbWZOWHhKcWx1UWZrQXB4Y1lGTGFaNXNPbE1kdVh6Q1ZHeDBwZkExWXlvQVFxblRzYzVKZllPLWpkWjR6MXZqNm54d05JYWVBRFVQQWY2R1Z3WlZZTGFtaUJtd3BhejNIaVdkR21WWDB4TUFuZms3c0tUZE5VU2lNcmMxRQ?oc=5",
-          "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPSENWNEhHX0Z2UW40a2pZUWNvNF9odVRrcVZaajZ2WE9hTmtpcXdOTkhPbXJkeGhXeEZxbVpqclFPN2xLR0N2aEgwZFFLZkdFMG5BRldobDNadVpwY1R3Z3IxY0wzUG1RcnhQOUNJdThLRGpXMkR2QmtxbC1tNldWUVY4SkN6RlRNQkV4Zm1sM1d3R0l2MnRTRkRDUHJBdjRXQTNUSWV0NFl0MkhIVmRTQjdla0wyMlNSSE44ZThjQ1V3UE9Vb2lHSkhpV29lUll1dHpaUFg2U29NSWt3eUZwUU8yZDVfampOZ0VaRFBnaw?oc=5",
+          "https://news.google.com/rss/articles/CBMidEFVX3lxTE1nbkdxM2hmZnJpYlJYQXVSMlotUHJMUjdlQUd3Mi1uVUFuQTlCQ1poaXlqQWdiQ3FSM3lVVHpma29ELXdvR29UcFNaZExjeDdvSGRjQng4WmZwQVUxX2s5Yl9FWFpmSUZCeUR6b2FqWW5iUmY20gF6QVVfeXFMTmhUOEtZLUxGYVBRQ0JjZjMxOG0tSDVtLU8waFZ6dUFJSnIzWXFoa3VSQlZZQXAxTmNEZmRjQUhKekIyQzlHdm95Q2NaMjB6YXY5MktaMzNYamZoY05MN0w3OTJHS1ZqZFRZVnNJR01WQ2dlZW9fbUdxMkE?oc=5",
           "https://news.google.com/rss/articles/CBMirAFBVV95cUxOc3hjeU1jd0h3Y3FrVWhhbVNSVDBwMzdrYkFvTHRST3VqQTNDRTVrVklrME11NFVhSlBGZktObndXVW9MNHJUZXgxRGVIbXczam1admdXZVpRVmVNM1E5ajBGdjVEV05jdXZwOTFpb0FSN1p5OVByMW1hT0pvZXN4WUZwNHZOOWhEWmFGenBBbWxGeUtpLWI1SkRianEzUm1mMU1kb3AzdWZKZjBY?oc=5",
           "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQRTAxM0VtTHVPSU5GdElLc014WGt3bEJOVVZ0VHdiQ0NiUUVuMEhEa1QxREptdVNqSHZKbzNudkl5WkJWUXpjcHl0WUpQRS1nb01sT19PRmdnRU9KRVJmU0RSa2hUYjlFRUg2RE9UbnN2M2NxUXR0U2Z5MWlNVmJEOWxIWmdyRVk4c1Mybmx4bGJMeFpBZW9kMjRXNmlRWXhLLVQ5aW1xUTVYd2tZbk5ac2duNW9kMWV4OEV6RlIxc3BrNzBraHliYjFGQUZwTFdRTHfSAdcBQVVfeXFMUGNWSWg3ck54VHRkb0s2RnltakR1NlpXZGExbDJLdm9MS0N4cnBZVU1WQTAyVmpYUTh3VGNLNXBTU2tYQUI4OVRYQnVPUi1TSjNKeDNkYldiM2daZmVVdTZjMDFQcENRdlFvRDZoMlpHQWVfejNEUVlJOXBjZUJtTzJEZDdLS0UxYUs4SUUzU2ZRcThrX0l2ekFGN0tuZVVsUUljbTVoLUJDOGdCQzd1b3NDbV9IMW1ZVU9yeHNUVExsR3VSQmpBUFhwZFJlRjIzSWdyaExSNFU?oc=5"
         ],
-        "evidence_note": "Sebagian besar kabar adalah pengumuman perusahaan/instansi tanpa data hasil, sehingga dampak nyatanya belum terukur."
+        "evidence_note": "Sebagian kabar berupa pengumuman dan target pihak terkait; tidak ada data dampak atau hasil implementasi di sumber."
       },
       "input_sources": [
         {
@@ -170,59 +167,64 @@
       "cluster_id": "riset-tren-konsumen",
       "cluster_name": "Riset & Tren Konsumen",
       "period_days": 14,
-      "generated_at": "2026-10-01T20:18:41.672Z",
+      "generated_at": "2026-10-01T20:24:51.173Z",
       "status": "ai_generated",
-      "fingerprint": "bd9bb2923b6617b591856ffdea8a30514fbc1881feef50c78eefe9cd941cdc30",
+      "fingerprint": "9494b9c84bdf22a54fc45e1b175afa5d0edb918120f57332923cb03d12ee95cc",
       "article": {
-        "title": "Kopi, Diskon, dan Narasi Kesehatan: Membaca Gerak Konsumen di Awal Oktober",
-        "summary": "Awal Oktober diwarnai Hari Kopi Internasional: media dan pelaku usaha mendorong promo, mengangkat tema resmi tahun ini, sampai kampanye pencitraan kopi Indonesia [1][2][3][4]. Dalam waktu yang sama, kesehatan ikut dibicarakan—dari jantung sampai usus–otak—serta imbauan agar kopi tidak menggantikan istirahat [5][6][7][8][9]. Sebagian besar berupa pengumuman tanpa data dampak ke perilaku membeli, jadi kita lebih melihat arah pesan ketimbang bukti perubahan selera.",
-        "lead": "Di satu sudut, ada paket minuman berdua seharga Rp50 ribu yang bikin orang nanya, “Yuk ngopi sekarang?”; di sudut lain, hotel membagikan kopi gratis untuk tamu. Dua contoh sederhana ini cukup menunjukkan bagaimana momen 1 Oktober disulap jadi alasan untuk ‘klik pesan’ atau mampir sebentar sebelum jam kerja [1][2].",
+        "title": "Riset & Tren Konsumen Kopi: Kesehatan, Keselamatan, dan Promo di Hari Kopi 2026",
+        "summary": "Hari Kopi Internasional 2026 mengusung tema “Coffee is Part of the Solution” [1]. Pemberitaan di Indonesia pada momen ini banyak membingkai kopi lewat tiga nada: manfaat/risiko kesehatan [4][5][6], pesan keselamatan saat mengemudi [7][8], serta promo dan dorongan penjenamaan kopi Indonesia [2][3][9].",
+        "lead": "Di antara sorotan kesehatan, ada pemberitaan penelitian yang menyebut kopi berdampak kuat pada otak dan mikrobioma usus [6]. Pada saat yang sama, kampanye keselamatan jalan menekankan bahwa kopi bukan pengganti istirahat bagi mahasiswa atau pengendara yang mengantuk [8].",
         "sections": [
           {
-            "heading": "Event jadi pemantik belanja, tapi datanya belum kelihatan",
+            "heading": "Kesehatan sebagai bingkai utama",
             "paragraphs": [
-              "Tema resmi International Coffee Day tahun ini—“Coffee is Part of the Solution”—memberi panggung buat merek mengaitkan kopi dengan isu yang lebih besar, dari keberlanjutan sampai keseharian [3]. Di level nasional, pemerintah juga mendorong penguatan merek kopi Indonesia di ajang dagang, artinya panggung cerita ‘kopi kita’ sedang dibesarkan [4]. Namun sebagian besar rilis dan pemberitaan kali ini adalah pengumuman: belum ada angka keterlibatan, penjualan, atau siapa yang benar-benar terdorong beli karena momen ini. Praktis, yang bisa kita baca baru taktik: menjadikan hari peringatan sebagai “musim belanja” kopi."
+              "Narasi kesehatan menonjol. Ada artikel yang merangkum klaim manfaat, mulai dari menjaga berat badan hingga menurunkan depresi [4]. Ada juga ajakan mengenali dampak kopi pada jantung, yang menempatkan konsumsi sebagai sesuatu yang perlu dipahami konteksnya [5]. Selain itu, sebuah pemberitaan menyebut penelitian terbaru menemukan kopi punya dampak kuat pada otak dan mikrobioma usus [6]. Rincian metodologi dan ukurannya tidak dipaparkan di berita-berita tersebut, tapi arahnya jelas: kopi dibicarakan bukan sekadar soal rasa, melainkan kaitannya dengan fungsi tubuh dan kesehatan sehari-hari [4][5][6]."
             ]
           },
           {
-            "heading": "Kesehatan: antara klaim manfaat dan batas realitas",
+            "heading": "Pesan keselamatan: kopi bukan pengganti tidur",
             "paragraphs": [
-              "Beberapa artikel mengulas dampak kopi pada jantung atau manfaat lain seperti berat badan dan mood—konten semacam ini ramai tiap peringatan, tetapi variasi hasil riset membuatnya perlu dibaca hati-hati [5][6]. Ada juga rujukan pada penelitian terbaru soal efek kuat kopi terhadap otak dan mikrobioma usus; menarik, tapi detail metodologi dan implikasi praktis untuk peminum harian belum jelas di pemberitaan singkat [9]. Di sisi perilaku, kampanye keselamatan mengingatkan mahasiswa: secangkir kopi bukan pengganti tidur, apalagi sebelum berkendara—pesan sederhana yang justru paling langsung ke keputusan harian [7][8]."
+              "Kampanye di level kampus dan daerah mengingatkan batas kopi sebagai penolong kantuk. Asmo Sulsel mengedukasi mahasiswa soal bahaya berkendara saat mengantuk, memakai tema kopi sebagai pintu diskusi [7]. Dalam pesan yang sama, ditegaskan bahwa secangkir kopi bukan pengganti waktu tidur—sebuah penekanan yang sederhana tapi penting untuk konteks keselamatan jalan [8]. Intinya, program-program ini mendorong konsumsi yang sadar: kalau lelah, istirahat adalah langkah utama; kopi hanya pelengkap, bukan solusi tunggal [7][8]."
             ]
           },
           {
-            "heading": "Cerita asal sebagai pembeda di rak",
+            "heading": "Momentum promo dan penjenamaan",
             "paragraphs": [
-              "Narasi identitas juga mengemuka: liputan tentang kopi Aceh sebagai warisan dan identitas mempertegas bahwa ‘asal-usul’ tetap jadi kartu penting saat memikat konsumen [10]. Digabung dengan dorongan branding nasional, arahnya jelas: membuat kopi terasa bukan sekadar kafein, tapi juga cerita yang layak dibawa pulang [4]. Apakah cerita ini mendorong pembelian? Belum ada buktinya di laporan yang ada; namun untuk konsumen, label asal dan kisah di baliknya tetap berguna sebagai petunjuk rasa dan nilai yang ingin didukung."
+              "Sejumlah pelaku usaha memanfaatkan Hari Kopi dengan penawaran terbatas, misalnya paket minuman hemat dan kopi gratis untuk tamu hotel [2][3]. Di tingkat kebijakan promosi, pemerintah mendorong penjenamaan nasional kopi Indonesia pada ajang Trade Expo Indonesia 2026 [9]. Ada pula penekanan identitas daerah, seperti sorotan terhadap Kopi Aceh sebagai warisan yang melekat pada jati diri [10]. Ketiganya—promo ritel, pameran dagang, dan identitas daerah—adalah bentuk pengumuman atau klaim; bahan yang tersedia tidak menunjukkan dampaknya pada perilaku belanja atau preferensi rasa konsumen [2][3][9][10]."
             ]
           }
         ],
-        "conclusion": "Yang muncul dari awal Oktober bukan perubahan selera yang tiba-tiba, melainkan adu narasi: hemat-hemat seru, sehat-sehat realistis, dan cerita asal yang kuat. Kalau Anda peminum kopi, tiga hal itulah kompas sederhana saat memilih: apakah harganya pas, dampaknya ke tubuh masuk akal, dan ceritanya nyambung dengan nilai Anda. Bagi merek, pekerjaan rumahnya justru merangkai ketiganya secara konsisten—bukan sekadar mengikuti kalender, tapi membuat setiap cangkir terasa relevan di luar sehari peringatan.",
+        "conclusion": "Jika ditarik garis besar, momen 1 Oktober dipakai untuk tiga hal: mengaitkan kopi dengan kesehatan, menegaskan batasnya dalam keselamatan, dan menawarkan paket harga atau penjenamaan. Ini lebih menggambarkan cara kopi diposisikan ke publik daripada bukti perubahan perilaku. Untuk membaca arah konsumsi, publik masih perlu data survei atau penjualan yang tidak tersedia di rangkaian berita ini.",
         "recommendations": [
           {
-            "audience": "Kedai/roaster",
-            "action": "Uji paket edisi tema (misalnya satu origin + kartu cerita singkat) saat momen peringatan, lalu lanjutkan di luar momen agar tidak terasa ‘sekali lewat’.",
-            "basis": "Narasi identitas dan dorongan branding nasional sedang digencarkan; konsumen butuh jembatan konkret di titik beli [4][10]."
+            "audience": "Kedai/brand",
+            "action": "Pertimbangkan paket sederhana berbasis momen tematik (misalnya bundling dua minuman) yang jelas harganya dan mudah ditebus.",
+            "basis": "Ada contoh promo minuman hemat dan kopi gratis yang memanfaatkan Hari Kopi Internasional [2][3]."
           },
           {
-            "audience": "Konsumen",
-            "action": "Jangan pakai kopi untuk ‘menutup’ kurang tidur, apalagi sebelum berkendara; jika tertarik klaim kesehatan, cek konteks risetnya dulu.",
-            "basis": "Imbauan keselamatan dan liputan kesehatan menekankan batas peran kafein di keseharian [5][7][8][9]."
+            "audience": "Konsumen/pengendara",
+            "action": "Jadikan kopi sebagai pendamping, bukan pengganti tidur, terutama sebelum berkendara.",
+            "basis": "Pesan keselamatan menekankan kopi tidak menggantikan istirahat [8]."
+          },
+          {
+            "audience": "Penulis/pengelola kanal informasi",
+            "action": "Saat mengangkat manfaat atau risiko, sertakan rujukan riset yang lengkap agar pembaca paham konteksnya.",
+            "basis": "Banyak klaim kesehatan disebut di berita tanpa rincian metodologi [4][5][6]."
           }
         ],
         "source_urls": [
+          "https://news.google.com/rss/articles/CBMisgFBVV95cUxOa1k3cVhsdVNza0RNUVRMNllGc0FZUDFGZVFpVEZ2d3MzeDZOcE45YTRIS0lmcVR3NWI0blgzdWQ3Z2ZuQzJveG01N3FYcnZPV00zLTVJdGd4c0JFRDRTdTk4VEc3Y2dRTkN1MEtiZHlETjlOSlBFeWRWT2ZCVWhLX09WT3MwVm1tdGpFTHlsMjhIcjdIZFN4amQ1VU12THVJNVp5eTFqaG93enBwcjd4RTZR?oc=5",
           "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNaGR0Qi1PdUtWNHRnWjJWWmdsTElxQ2VXd1Y1d3g0dHVWOFFSbkc3M0FLa3NTTUFoYThTSE5MYy0wRHNncFVxeE1MZWtPZlpDb1NsdGxsVDFzQUdoVUdURHRFXzlzWlc2Z2tlMUZwQ28tZHdhM3Q0UnVJQ3paYlRVU3JoeWxtY0xpR1dkejBaa3lucHUtdnVXa0o3OFVrdjJITnRwemg1ZkwwbkhBZDBwWmd5dUxiWXpu?oc=5",
           "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPRHVZeXJReDFzNGhJUjBRVExZczUwckdTWlB5NC1kdDFlTVpPUXQ5YlpjdGNiQ3VqQ01NYXpLQ29JNUl2VHBFajNaQkVxMGRBaks3dmdXelYyMWxFOEtIMjEwTjl6Zm16OWRScGpBb0pHV0l1ZkxTTFNVT0lfX1ZFNjBCZm1tdXd1SVlBZWM3RFFTTEF0YWdyaVI0ZGtmUFljMVFLc0RUWHc?oc=5",
-          "https://news.google.com/rss/articles/CBMisgFBVV95cUxOa1k3cVhsdVNza0RNUVRMNllGc0FZUDFGZVFpVEZ2d3MzeDZOcE45YTRIS0lmcVR3NWI0blgzdWQ3Z2ZuQzJveG01N3FYcnZPV00zLTVJdGd4c0JFRDRTdTk4VEc3Y2dRTkN1MEtiZHlETjlOSlBFeWRWT2ZCVWhLX09WT3MwVm1tdGpFTHlsMjhIcjdIZFN4amQ1VU12THVJNVp5eTFqaG93enBwcjd4RTZR?oc=5",
-          "https://news.google.com/rss/articles/CBMisAFBVV95cUxOVldRMk1FWFc4WDVrQ1hFc2lMQU1hR3k5OHkybkdDNFMxMDI1U2JEcXRpN19rVUFxT3NHZjhNWmFuam8zYzc2c3FHZlNqTUN2eEJsY1NROW9XQ29peUZfVmlGM1JZSkpnRGlFdHR1di1GNmc3Zm9fNDNFZHhCZ2QzVzZIeFVLQlVYR1AzeG5vcEFDaTljb1RBUGc3NnJxdTR2cDZwUXRKYlpnX0w1YlZaU9IBtgFBVV95cUxOanJoWkFoNVZTSWdtalFhbW1vSDBSTFY1Z1RCam1QdDNRZjkxb2diVGI1TzZRRS1XVC1yajNfS2ZISkkxWktkekhaTUNIUk1aVXdkdkVnZVItVWQybHF2YWFyRlBYemhCRDZPb3BFbmRYS0daNWkwN2F2Q3IwXzR3UUxObE5ULW5Yc09aUzZ4ZGU2VDdCeTJ5allrbVJvMnB3N0kwUE1wb1M2RGZkZ2Vtanp3bWdhUQ?oc=5",
-          "https://news.google.com/rss/articles/CBMikwFBVV95cUxPaFZQazRkY1JJT25TeUZPQmYtLUgzczczdlo2MDdyWDNXOXljUU1sQjd0NUF4T0pqQXB5eUdNUHFuMjFrNW1MNlk1dk0wWjk2VS1lRFVmMW9xY25hUW5OeXVfalJBaUg5M2tpdlhyblZFYlpob2NGX3JoelhXU0lwYXZjbmFqcnZqemhGRkh4dnZDV3c?oc=5",
           "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQajhzaXk5TVprZjJDZktkbVJ4M1ZkdzNiR010bXR1em9qRHg4N00ybFF1d2NfeHBKTm9ZX2pjenlRY3MydVdLUjBBUVVoRkpJb3BackFZVmhHbmczVlRjSDJYU1VGbVlmYXhaR2Rybl9PcTBoZmcyV0w3Q0RwZzJidkdaTlBsSXBNeHRSSnRycTZQR2N2aVZYTFNYRy1CdHNTUEF4WDcyTWlTRUZ4bUl5YWctdGhEZ0VMVGx1Rm5WVEphb0E1WWJLNU4zYTRlRTRaSXpVd0VMMElPSEhVQjE1TnFoc3o2OG14ellV0gHqAUFVX3lxTE96WHRQbUZzVTNaeGpxOE5BOUxhUFNNWkQyNERXNUIwRkhCM3BuaHZvSjd3UHU0N0pYSkhmU0E3eFZtZGkySkY0Z05NamxHVFhFSE9mRVJQdWd4RVZHMFhObVFUUXNvV3lsaDdNVGJXRFFBeWtfdFNoQmhicklBc0pBYjUtX3dKZ3ItNE9rNjZUQXVMRS1rMjRlYl9RbmhORjBUclM4NVhfZlRlajRYVE1QN1lHa3NwZUhmZUkzY1FhS05TTEtSMjUxd2NLWWlCcGhDVTcyckR4OTlrMjdZZW5BTS1PT3lCQlp4Zw?oc=5",
-          "https://news.google.com/rss/articles/CBMiogFBVV95cUxQUEZDSThJUnJqQktJZFJJcUt4d1NXYUlaVnBvT3JwWmN0NzBYOXNwUUtBd1B6THVjTUdkcEhzNjZDR0lUTy10Y2tiRTkxY2Z3S2t2UWRvUGZ2M19qOWRTcHRabXFzMmFMZ2NHeFdFQ1Q5TWtBME85aGVaUGtIUV9icUdwbkxYMGI3RF9ROU9xUGlYaWlDQThjdW5EdXJhUUZPYlE?oc=5",
-          "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQS2E0cXBtRkcxV3lQU0stamVWNXhfVHBRTEJDcU8tN3JBOTcyNjRraVlMWVppYmprMDVwckpxbVRTRkpBRlh5bmRuVDJkMTNlc3JnSzhCb25wYUs1T05WaFV3VGRRMWY4ejZ6TlZaeTBiUjZxVnRVVjhCSE5NeWhNNXc2ZjVmZjJGZGIwd0duMEpzeDVXa0FDZnV0WG5QVWc0bXkxd2dULUlCNHUyZGt4anlmc2pQMjR3?oc=5",
+          "https://news.google.com/rss/articles/CBMikwFBVV95cUxPaFZQazRkY1JJT25TeUZPQmYtLUgzczczdlo2MDdyWDNXOXljUU1sQjd0NUF4T0pqQXB5eUdNUHFuMjFrNW1MNlk1dk0wWjk2VS1lRFVmMW9xY25hUW5OeXVfalJBaUg5M2tpdlhyblZFYlpob2NGX3JoelhXU0lwYXZjbmFqcnZqemhGRkh4dnZDV3c?oc=5",
           "https://news.google.com/rss/articles/CBMipwFBVV95cUxOVGxoOTAyM0plX0QtQ0xmX2JHMHFLWWN0UHhMa2RldmloUHRxQmVYZjJqOFpjSHNYQUhFdC1YX1J5c2dwR0J6VlFoM2hnN0hSSi1MNEwtLWhaRmZsNFNkSTNFMEJrR0RmRG5CdV9TMkY2T3hneV9TSWdsZk9Ld1ZUUGVRX3BGdkthUjRnTXQ3Uk44QThEbU1MV0Ewd3NuTVJZNWNpQl9jQQ?oc=5",
+          "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQS2E0cXBtRkcxV3lQU0stamVWNXhfVHBRTEJDcU8tN3JBOTcyNjRraVlMWVppYmprMDVwckpxbVRTRkpBRlh5bmRuVDJkMTNlc3JnSzhCb25wYUs1T05WaFV3VGRRMWY4ejZ6TlZaeTBiUjZxVnRVVjhCSE5NeWhNNXc2ZjVmZjJGZGIwd0duMEpzeDVXa0FDZnV0WG5QVWc0bXkxd2dULUlCNHUyZGt4anlmc2pQMjR3?oc=5",
+          "https://news.google.com/rss/articles/CBMiogFBVV95cUxQUEZDSThJUnJqQktJZFJJcUt4d1NXYUlaVnBvT3JwWmN0NzBYOXNwUUtBd1B6THVjTUdkcEhzNjZDR0lUTy10Y2tiRTkxY2Z3S2t2UWRvUGZ2M19qOWRTcHRabXFzMmFMZ2NHeFdFQ1Q5TWtBME85aGVaUGtIUV9icUdwbkxYMGI3RF9ROU9xUGlYaWlDQThjdW5EdXJhUUZPYlE?oc=5",
+          "https://news.google.com/rss/articles/CBMisAFBVV95cUxOVldRMk1FWFc4WDVrQ1hFc2lMQU1hR3k5OHkybkdDNFMxMDI1U2JEcXRpN19rVUFxT3NHZjhNWmFuam8zYzc2c3FHZlNqTUN2eEJsY1NROW9XQ29peUZfVmlGM1JZSkpnRGlFdHR1di1GNmc3Zm9fNDNFZHhCZ2QzVzZIeFVLQlVYR1AzeG5vcEFDaTljb1RBUGc3NnJxdTR2cDZwUXRKYlpnX0w1YlZaU9IBtgFBVV95cUxOanJoWkFoNVZTSWdtalFhbW1vSDBSTFY1Z1RCam1QdDNRZjkxb2diVGI1TzZRRS1XVC1yajNfS2ZISkkxWktkekhaTUNIUk1aVXdkdkVnZVItVWQybHF2YWFyRlBYemhCRDZPb3BFbmRYS0daNWkwN2F2Q3IwXzR3UUxObE5ULW5Yc09aUzZ4ZGU2VDdCeTJ5allrbVJvMnB3N0kwUE1wb1M2RGZkZ2Vtanp3bWdhUQ?oc=5",
           "https://news.google.com/rss/articles/CBMitwFBVV95cUxNazJ6MlRaR3VnVkF2dUhnY29uVGI0X1BGTTFSeUFxU1llNzEyaWIwQ29qRUgyR2dSdXduRlB4YW9Yb3Q1VFlBdkxZUmMyczlEMVBIZks1TVh1Q3lqX1M0NlAtWTBRR1VFSmREY1ZLSTFvN1V6b2RRcXZZRE1OQWVNSFRyS3RkTk1RT1NXRE1qQjFRcGs1OW9uT3BwZFV0bWJldW9lcS1yRlV2Q01zR29QNVliaTV3Nm8?oc=5"
         ],
-        "evidence_note": "Sebagian besar rujukan adalah pengumuman Hari Kopi Internasional tanpa data dampak ke perilaku beli, jadi kesimpulan dibatasi pada arah pesan dan framing di media."
+        "evidence_note": "Sebagian besar sumber berupa pengumuman atau ringkasan berita; rincian metodologi riset dan data perilaku konsumen tidak tersedia."
       },
       "input_sources": [
         {
@@ -315,58 +317,65 @@
       "cluster_id": "produksi-panen",
       "cluster_name": "Produksi & Panen",
       "period_days": 14,
-      "generated_at": "2026-10-01T20:18:41.672Z",
+      "generated_at": "2026-10-01T20:24:51.173Z",
       "status": "ai_generated",
-      "fingerprint": "c57cb7c6f4b52421e49e22d7ae3eb2638e0b92d539f4a6725733b490c039aded",
+      "fingerprint": "c9504eecf9b0c24f3833cbb67834220ce60a5f2b57ea6a66593c7cea9d0b1b61",
       "article": {
-        "title": "Produksi & Panen Kopi: Luas Lahan Bertambah, Panen Harus Makin Cermat",
-        "summary": "Di hulu perkopian, pemerintah menargetkan perluasan 99.000 hektare untuk tanaman kopi dan menyatakan memperkuat kesiapan daerah menghadapi aturan anti-deforestasi Uni Eropa (EUDR) [3][4]. Sejumlah daerah memulai langkah, seperti penanaman 40 ribu bibit di Tapanuli Utara dan dorongan kebun di 328 kampung di Jayawijaya [8][5]. Sementara itu, varietas Yellow Bourbon sudah dibudidayakan di Garut—varietas yang menuntut panen cermat—menandai perhatian pada mutu selain penambahan lahan [2].",
-        "lead": "Bayangkan memanen kopi yang matang, tapi warnanya tetap kuning. Itulah Yellow Bourbon—buahnya tidak memerah saat siap petik—yang kini ditanam di Garut [2]. Dari kebun, keputusan sesederhana waktu dan cara memetik bisa mengangkat rasa di cangkir; dan tahun ini, kabar dari hulu menunjukkan skala kebun melebar sementara standar panennya perlu ditajamkan.",
+        "title": "Produksi & Panen Kopi: Ekspansi Lahan, Gelombang Bibit, dan PR EUDR",
+        "summary": "Kementerian Pertanian menyiapkan perluasan tanaman kopi seluas 99.000 hektare [3]. Di daerah, Jayawijaya menggerakkan pengembangan kebun di 328 kampung, sementara 40 ribu bibit Arabika ditanam perdana di Tapanuli Utara [5][7][8]. Pemerintah juga menyatakan memperkuat kesiapan daerah menghadapi European Union Deforestation Regulation (EUDR) untuk mendorong praktik berkelanjutan pada komoditas termasuk kopi [4].",
+        "lead": "Di sisi bahan tanam, pemberitaan menyoroti keberadaan varietas Yellow Bourbon yang dibudidayakan di Garut [2]. Ini membuka ruang pilihan varietas bagi petani dan pembeli yang memikirkan panen dengan profil tertentu.",
         "sections": [
           {
-            "heading": "Luas Bertambah, Hasil Tidak Instan",
+            "heading": "Ekspansi lahan: target besar, hasilnya ditentukan eksekusi",
             "paragraphs": [
-              "Kementerian Pertanian mengumumkan kesiapan 99.000 hektare untuk perluasan tanaman kopi [3]. Di lapangan, program penanaman juga mulai berjalan: 40 ribu bibit arabika ditanam perdana di Tapanuli Utara [8], dan Pemkab Jayawijaya mendorong pengembangan kebun kopi di 328 kampung [5]. Ini kabar penting, tetapi sifatnya masih tahap awal—pohon perlu waktu beberapa musim untuk produktif, dan hasil sangat dipengaruhi mutu bibit, perawatan, serta ketersediaan pemetik saat panen."
+              "Kementerian Pertanian menyiapkan perluasan tanaman kopi seluas 99.000 hektare [3]. Angka ini besar di atas kertas, namun masih tahap penyiapan sehingga dampak ke produksi belum bisa diukur dari informasi yang tersedia. Arah produksi akan ditentukan oleh bagaimana lahan itu benar-benar dibuka, diisi bibit, dan dikelola di lapangan—mulai dari penjadwalan tanam hingga pemeliharaan awal. Tanpa kejelasan tahapan dan lokasi, sulit menilai seberapa cepat tambahan areal ini kelak menyumbang panen."
             ]
           },
           {
-            "heading": "Panen Selektif Menentukan Rasa",
+            "heading": "Gelombang penanaman di daerah",
             "paragraphs": [
-              "Varietas seperti Yellow Bourbon menantang kebiasaan: buah matang berwarna kuning memerlukan mata terlatih agar petik selektif benar-benar terjadi [2]. Bahkan untuk varietas lain, panen bertahap (cherry merah saja) biasanya lebih aman bagi mutu dibanding memetik borongan sekaligus. Konsekuensinya, jadwal panen jadi lebih rapat dan biaya tenaga kerja bisa naik; tanpa perencanaan, perluasan kebun bisa menghasilkan volume, tetapi rasa di cangkir berisiko rata-rata saja."
+              "Di beberapa titik, langkah tanam sudah bergerak. Jayawijaya mendorong pengembangan kebun kopi di 328 kampung yang berada pada empat kelurahan [5]. Di Tapanuli Utara, 40 ribu bibit Arabika ditanam perdana melalui program Polbangtan Kementan [7][8]. Langkah-langkah ini memperluas basis kebun dan menandai fase awal siklus produksi di wilayah tersebut. Namun, informasi yang tersedia baru mencakup jumlah kampung dan bibit; belum ada detail teknis atau jadwal panen yang bisa dijadikan acuan untuk menilai output."
             ]
           },
           {
-            "heading": "EUDR dan Jejak Lahan: Pekerjaan Rumah Sejak Sekarang",
+            "heading": "Aturan pasar: kesiapan EUDR dan arah budidaya",
             "paragraphs": [
-              "Pemerintah menyatakan memperkuat kesiapan daerah menghadapi EUDR untuk sawit, kakao, dan kopi [4]. Bagi kopi, artinya jejak lahan dan rantai pasok perlu jelas agar hasil panen tidak beririsan dengan deforestasi. Ini terkait langsung dengan rencana perluasan: blok baru harus bersih secara legal dan terpetakan, sementara sistem pencatatan kebun dan panen harus rapi. Dalam pemberitaan tersebut belum dijelaskan rincian teknis dukungan untuk petani kecil, jadi kesiapan nyata di desa masih menjadi tanda tanya [4]."
+              "Bersamaan dengan ekspansi dan tanam, Kementan menyatakan memperkuat kesiapan daerah menghadapi EUDR serta mendorong praktik berkelanjutan untuk sawit, kakao, dan kopi [4]. Bagi kopi, ini memberi sinyal bahwa rencana perluasan dan penanaman baru perlu dibingkai dalam prinsip keberlanjutan sejak awal—mulai dari perencanaan lahan hingga pengelolaan kebun—agar sejalan dengan kebijakan pasar yang berlaku. Tanpa langkah tersebut, evaluasi keberhasilan tidak hanya soal tonase panen, tetapi juga soal kesesuaian praktik dengan tuntutan keberlanjutan."
+            ]
+          },
+          {
+            "heading": "Varietas sebagai pilihan produksi",
+            "paragraphs": [
+              "Keberadaan Yellow Bourbon di Garut menegaskan variasi bahan tanam ada di tingkat daerah [2]. Informasi ini relevan bagi produsen dan pembeli yang mempertimbangkan karakter panen dan proses, sekaligus menunjukkan bahwa pengembangan varietas tidak hanya terjadi di sentra besar. Dalam konteks ekspansi, pilihan varietas akan turut menentukan fokus budidaya dan standar panen yang diincar."
             ]
           }
         ],
-        "conclusion": "Menambah hektare gampang ditulis di papan target; menjadikannya panen yang bersih jejak lahannya dan enak di cangkir butuh disiplin harian. Musim-musim ke depan akan ditentukan oleh dua hal yang sering luput: siapa yang memetik apa, dan di lahan mana kebun itu berdiri. Kalau dua hal itu beres, penambahan luas tanam tidak hanya menambah karung, tapi juga menambah karakter.",
+        "conclusion": "Polanya jelas: ada dorongan memperluas areal dan menanam bibit baru, bersamaan dengan ajakan memperkuat keberlanjutan. Ke depan, makna langkah-langkah ini untuk produksi dan panen akan bergantung pada eksekusi di kebun serta kedisiplinan menerapkan prinsip yang diminta pasar.",
         "recommendations": [
           {
-            "audience": "Roaster dan pembeli hilir",
-            "action": "Mulai minta peta kebun serta bukti kepatuhan EUDR (lokasi, tanggal tanam, catatan panen) dari pemasok sejak dini.",
-            "basis": "Kementan menyatakan memperkuat kesiapan menghadapi EUDR untuk komoditas termasuk kopi [4]."
+            "audience": "Pemerintah daerah dan dinas perkebunan",
+            "action": "Selaraskan program perluasan dan penanaman dengan agenda kesiapan EUDR Kementan; ikuti dan sebarluaskan materi sosialisasi yang tersedia.",
+            "basis": "Kementan menyatakan memperkuat kesiapan daerah menghadapi EUDR untuk komoditas termasuk kopi [4]."
           },
           {
-            "audience": "Pemda, koperasi, dan kelompok tani",
-            "action": "Selaraskan perluasan dan penanaman baru dengan pelatihan petik selektif serta rencana kebutuhan pemetik per blok; varietas seperti Yellow Bourbon butuh perhatian ekstra saat panen.",
-            "basis": "Ada target perluasan 99.000 ha dan penanaman baru di Taput serta dorongan kebun di Jayawijaya, sementara Yellow Bourbon telah ditanam di Garut [3][8][5][2]."
+            "audience": "Kelompok tani di Tapanuli Utara",
+            "action": "Ikuti pendampingan penanaman dan informasi teknis dari Polbangtan/Kementan yang terkait penanaman perdana 40 ribu bibit Arabika.",
+            "basis": "Penanaman perdana 40 ribu bibit Arabika di Taput dilaporkan [7][8]."
           },
           {
-            "audience": "Pembeli kafe/komunitas",
-            "action": "Jika menemukan kopi Yellow Bourbon asal Garut, tanyakan praktik panennya; cerita panen selektif membantu menghargai harga dan rasa.",
-            "basis": "Yellow Bourbon dibudidayakan di Garut dan menuntut petik selektif [2]."
+            "audience": "Roaster dan pembeli green bean",
+            "action": "Konfirmasi ke pelaku lokal di Garut mengenai ketersediaan Yellow Bourbon bila ingin mengeksplorasi profil varietas tersebut.",
+            "basis": "Laporan menyebut varietas Yellow Bourbon ditanam di Garut [2]."
           }
         ],
         "source_urls": [
           "https://news.google.com/rss/articles/CBMilwFBVV95cUxQZkNDVDBOMklNd3hxcnV6aGVsWkE2R0QzelhWbWItOTJERUpUcDR6dk4wLVAtaTE4LVpubWo4VVhheDBmN2t0VzZkTjRFZG9IU0U5VXFLcFpXdG5LMWJvQW84N1kyLXIyVVZxaVBSUDFXZllneldvRXF3QW1kUGZRVUZpSnhFa2tCbkNXTXNQS2hFZUpOc01r?oc=5",
           "https://news.google.com/rss/articles/CBMivgFBVV95cUxQZnNPb3BkUjNTM1ZlVTNTb0pWWkRlSkx6NHJ5bTY2NWJEeVN0Q21Qc2Nic3M5bUxNUHE2WXkwSndXMnhnQTZZd3ZiMERZcG5rN3dxMENpdHRRUlhSUDRTM1psZXBuNklhSkplU21NbWdULTBaekc2Umt2NTFrdlRuUmRzYkFhd2tmRDAxdktDbUFRc2l0MDM4OTdzY3Y1TnBlTFQ1MGZhVy10cUc3eEFocldyaWpUOVBiTGoxY3BR?oc=5",
           "https://news.google.com/rss/articles/CBMixgFBVV95cUxQaXRlLXJ2LThxNHFPbUxrcUdqNmpEUUlUTUl6UlRYeGwyaW5Cc0N1VF9WWEV2VENnSWVfRGM1dGphWlJiZHpLYmtXYmgtZXhOZ2FTa1Zfcmg4dkFtXzdqQkVZVlM2SUZralFGVUtUNkJLaWw3YnJvUVpRTjdZdWk1N09GaXhWZUZGUi1QVEs3MFpOblRVTmdRS1ZWZDRxUVlQZWFJbFpPLWFEMzRtd3RGMExFZkM3cGF4VTd4QXdBRExucjh3c0E?oc=5",
+          "https://news.google.com/rss/articles/CBMixAFBVV95cUxQOHQxSmllWDdDMDlVWWM3SUpZZXkzYU5CdzlaSFlDdzlDZHJxRGhQNFZwVFd2YWp4ckJTVy1RZHNpVmxpZTZQSE9ZdEtQMnI5TU1TSllXbVRvY0dTNWk0SFlVY2t5QmhVOFRIcUxBbjYyYkM0anhnNkRUVmdNSmppOTlDd180UjlRckpBVU4tN21qWHZGaUhXQVZxOG0wNk1OQkhDUGNfWmVFUk9Pc3dIbE81R1JnZ3JBci1aRWp6U2cydVFi?oc=5",
           "https://news.google.com/rss/articles/CBMivgFBVV95cUxOR0FiaFh4N2RhT25iSl9TYUV2cTFqdDZoeGwzZ0s5c0gxeWs1bERHcE1jMWJCZDhRVmVQZ3VuUWFXNUl6Tk9LYmNRbE1rcWpDck1NRV9OdUpXdWdGX09rRFZWbHoxMTNWZUxDNF82ZWxzTklrNmR3SExJVmNubFJ1UTRyNG9rVGxGWldVSmcxRFlHMUVWWHZCcERZQmdNNzZGQ2ViX3ZvY05XNFNJeEVPX05LYS16cnZieHJtd3NB?oc=5"
         ],
-        "evidence_note": "Sebagian sumber berupa pengumuman resmi tanpa rincian teknis atau jadwal, sehingga dampak riilnya belum dapat dinilai."
+        "evidence_note": "Sebagian materi adalah pengumuman/target; detail lokasi, jadwal, dan dampak ke panen belum dijelaskan dalam sumber."
       },
       "input_sources": [
         {
