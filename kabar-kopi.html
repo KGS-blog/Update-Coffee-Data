@@ -145,7 +145,8 @@
       $('#analysis-period').textContent=(data.status==='needs_api_key'?'Pembuatan artikel AI belum aktif: OPENAI_API_KEY belum dikonfigurasi. ':mode+' · feed diperbarui '+(data.feed_fetched||'waktu tidak tersedia')+' · artikel dibuat '+(data.generated_at||'belum tersedia')+'.');
       if(!list.length){$('#analysis-reports').innerHTML='<div class="empty">Belum ada artikel analisis yang dibuat untuk periode ini.</div>';return}
       $('#analysis-reports').innerHTML=list.map(x=>{
-        const a=x.article||{},refs=x.input_sources||[];
+        const a=x.article||{},usedUrls=new Set(a.source_urls||[]);let refs=(x.input_sources||[]).filter(s=>usedUrls.has(s.url));
+        if(!refs.length)refs=x.input_sources||[];
         const sources=refs.map(s=>{
           const url=safeUrl(s.url);
           const label='['+s.id+'] '+(s.source||'Sumber asli')+(shortSourceDate(s.published_at)?' · '+shortSourceDate(s.published_at):'');
