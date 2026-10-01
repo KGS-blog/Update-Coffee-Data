@@ -86,9 +86,9 @@ const editorialSchema = {
   type: "object", additionalProperties: false, required: ["title", "dek", "lead", "sections", "conclusion", "recommendations", "source_urls", "evidence_note"],
   properties: {
     title: { type: "string" }, dek: { type: "string" }, lead: { type: "string" },
-    sections: { type: "array", items: { type: "object", additionalProperties: false, required: ["heading", "paragraphs"], properties: { heading: { type: "string" }, paragraphs: { type: "array", items: { type: "string" } } } },
+    sections: { type: "array", items: { type: "object", additionalProperties: false, required: ["heading", "paragraphs"], properties: { heading: { type: "string" }, paragraphs: { type: "array", items: { type: "string" } } } } },
     conclusion: { type: "string" },
-    recommendations: { type: "array", items: { type: "object", additionalProperties: false, required: ["audience", "action", "basis"], properties: { audience: { type: "string" }, action: { type: "string" }, basis: { type: "string" } } },
+    recommendations: { type: "array", items: { type: "object", additionalProperties: false, required: ["audience", "action", "basis"], properties: { audience: { type: "string" }, action: { type: "string" }, basis: { type: "string" } } } },
     source_urls: { type: "array", items: { type: "string" } }, evidence_note: { type: "string" }
   }
 };
