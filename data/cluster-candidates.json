@@ -1,6 +1,7 @@
 {
   "version": 1,
-  "generated_at": null,
+  "generated_at": "2026-10-01T19:17:33.462Z",
   "minimum_support": 3,
+  "review_status": "needs_api_key",
   "candidates": []
 }

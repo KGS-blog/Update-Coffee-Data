@@ -1,5 +1,16 @@
 {
   "version": 1,
-  "generated_at": null,
-  "months": []
+  "generated_at": "2026-10-01T19:17:33.462Z",
+  "months": [
+    {
+      "month": "2026-09",
+      "file": "arsip/berita-2026-09.json",
+      "articles": 192
+    },
+    {
+      "month": "2026-10",
+      "file": "arsip/berita-2026-10.json",
+      "articles": 45
+    }
+  ]
 }

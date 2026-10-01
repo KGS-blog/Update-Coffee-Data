@@ -1,8 +1,17 @@
 {
   "version": 1,
-  "generated_at": null,
-  "feed_fetched": null,
+  "generated_at": "2026-10-01T19:17:33.462Z",
+  "feed_fetched": "2026-10-01T19:17:29.751Z",
   "mode": "auto",
+  "settings": {
+    "version": 1,
+    "mode": "auto",
+    "lookback_days": 14,
+    "max_topics": 3,
+    "selected_cluster_ids": [],
+    "minimum_articles_per_topic": 3,
+    "language": "id"
+  },
   "status": "needs_api_key",
   "articles": []
 }
