@@ -1,7 +1,7 @@
 {
   "meta": {
     "source": "Yahoo Finance via GitHub Actions",
-    "lastUpdated": "2026-10-02T12:09:22.583Z",
+    "lastUpdated": "2026-10-02T21:59:22.659Z",
     "nextUpdate": "Auto: GitHub Actions",
     "version": "1.0"
   },
@@ -9,9 +9,9 @@
     "symbol": "KC=F",
     "name": "Arabica C-Market",
     "unit": "cents/lb",
-    "current": 295.65,
-    "change": 6.4,
-    "changePercent": 2.21,
+    "current": 290.75,
+    "change": -4.9,
+    "changePercent": -1.66,
     "history": [
       {
         "month": "Jan 2021",
@@ -275,7 +275,7 @@
       },
       {
         "month": "Okt 2026",
-        "value": 295.65
+        "value": 290.75
       }
     ],
     "stale": false
@@ -551,9 +551,9 @@
     "symbol": "IDR=X",
     "name": "IDR/USD",
     "unit": "IDR/USD",
-    "current": 17932,
-    "change": 0,
-    "changePercent": 0,
+    "current": 17893,
+    "change": -39,
+    "changePercent": -0.22,
     "history": [
       {
         "month": "Jan 2021",
@@ -817,7 +817,7 @@
       },
       {
         "month": "Okt 2026",
-        "value": 17932
+        "value": 17893
       }
     ],
     "stale": false
