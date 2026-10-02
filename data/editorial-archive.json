@@ -1,7 +1,450 @@
 {
   "version": 1,
-  "generated_at": "2026-10-01T22:29:26.433Z",
+  "generated_at": "2026-10-02T04:50:33.975Z",
   "articles": [
+    {
+      "cluster_id": "kedai-konsumsi-gaya-hidup",
+      "cluster_name": "Kedai, Konsumsi & Gaya Hidup",
+      "period_days": 14,
+      "generated_at": "2026-10-02T04:50:33.975Z",
+      "status": "ai_generated",
+      "fingerprint": "628801809fd9dcb71f1085a13a80a9a42a0e7292658db02f8dc63737ac91752f",
+      "article": {
+        "title": "Kedai, Konsumsi, dan Gaya Hidup: Ke Mana Format Kopi Bergerak?",
+        "summary": "Pasar Kopi Lokal 2026 di Malang menargetkan 4.000 pengunjung, menandai upaya membawa kopi lokal keluar dari lingkaran komunitas saja [1]. Di Jakarta, daftar coffee shop yang nyaman untuk WFC bermunculan, menunjukkan fungsi kedai sebagai tempat kerja santai sekaligus temu teman [2]. Di saat bersamaan, pelaku dan merek mencoba format baru, dari omakase coffee sampai gerobak listrik yang menyasar keramaian pasar [3][4].",
+        "lead": "Di hulu suplai, penyedia bahan seperti Indomilk FnB Solutions menyatakan ingin mendorong coffeepreneur dan bakepreneur lewat inovasi menu [5]. Ada juga gerai yang menonjolkan lokasi—misalnya tawaran ngopi sambil melihat pemandangan Kota Ambon dari Point Coffee [7].",
+        "sections": [
+          {
+            "heading": "Ruang kerja atau rehat?",
+            "paragraphs": [
+              "Daftar rekomendasi coffee shop di Cikajang yang \"nyaman buat WFC dan nongkrong\" menguatkan fungsi ganda kedai: tempat kerja ringan dan tempat kumpul [2]. Di kota besar, kebutuhan colokan, kursi yang enak, dan suasana yang tidak bising jadi nilai praktis yang dicari.",
+              "Pada saat yang sama, liputan tentang Ineru Coffee & Matcha menggambarkan kedai sebagai “sanctuary” di tengah kota [6]. Dua potret ini serupa arahnya: kedai dimaknai lewat kegunaan sehari-hari—entah untuk fokus sebentar atau jeda singkat—bukan sekadar etalase menu."
+            ]
+          },
+          {
+            "heading": "Pengalaman tersusun di bar",
+            "paragraphs": [
+              "Roemah Koffie memperkenalkan omakase coffee experience—format terkurasi di mana urutan sajian ditentukan penyaji [3]. Ini adalah peluncuran konsep, belum ada data penerimaan pasar, tapi memberi opsi bagi penikmat yang ingin sesi lebih terarah.",
+              "Di sisi produk, Indomilk FnB Solutions menyebut dukungan pada pemilik kedai dan bakery melalui inovasi menu [5]. Klaimnya masih berupa pernyataan perusahaan, namun menunjukkan dorongan agar kedai menambah varian sajian tanpa harus mengubah arah bisnis besar-besaran."
+            ]
+          },
+          {
+            "heading": "Menjemput konsumen di titik ramai",
+            "paragraphs": [
+              "Panitia Pasar Kopi Lokal 2026 menargetkan 4.000 pengunjung—angka target, bukan hasil—sebagai cara mempertemukan merek kopi lokal dengan khalayak lebih luas [1]. Format pasar semacam ini biasanya memudahkan orang mencoba beberapa merek dalam satu kunjungan, walau detail pesertanya tidak dibahas dalam sumber.",
+              "Jago Coffee diberitakan membawa gerobak listrik ke pasar. Judul artikelnya mempertanyakan apakah kedai mulai ditinggalkan, namun yang pasti yang disampaikan adalah langkah mendatangi keramaian dengan format bergerak [4]. Ini bukan bukti perubahan perilaku konsumen secara umum, melainkan contoh pilihan kanal penjualan yang berbeda."
+            ]
+          }
+        ],
+        "conclusion": "Benang yang terlihat: kopi sedang dikemas agar pas dengan momen hidup yang spesifik—bekerja santai, rehat cepat, sesi terkurasi, atau kunjungan singkat di keramaian. Sebagian besar informasi yang ada berupa rencana dan peluncuran, jadi ini lebih valid dibaca sebagai peta pilihan format daripada ukuran keberhasilan. Bagi penikmat, kabar baiknya sederhana: makin banyak cara menikmati secangkir sesuai kebutuhan harian.",
+        "recommendations": [
+          {
+            "audience": "Pekerja remote di area Cikajang dan sekitarnya",
+            "action": "Gunakan daftar rekomendasi WFC untuk memilih kedai dengan suasana kerja yang cocok.",
+            "basis": "Daftar coffee shop WFC di Cikajang dirilis oleh media kuliner [2]."
+          },
+          {
+            "audience": "Penikmat yang ingin sesi terkurasi",
+            "action": "Cek jadwal dan detail omakase coffee experience di Roemah Koffie sebelum berkunjung.",
+            "basis": "Peluncuran konsep omakase coffee experience diumumkan oleh Roemah Koffie [3]."
+          },
+          {
+            "audience": "Pemilik kedai kecil/rumahan",
+            "action": "Pertimbangkan penawaran inovasi menu dari penyedia bahan jika relevan dengan dapur dan pelanggan Anda.",
+            "basis": "Indomilk FnB Solutions menyatakan mendukung coffeepreneur dan bakepreneur lewat inovasi menu [5]."
+          }
+        ],
+        "source_urls": [
+          "https://news.google.com/rss/articles/CBMiygFBVV95cUxPcHZ3N3ZLZzRUUjlKaUNhRjhqVmFGZ3Q4Q3lrOW9MNThRRHRpYllsN25IbW9vcU03VUQwYk9DUXZxbWx3OXVncEZqLVBoT3NsZDJ6Nm5iWVZ3RGNNbzRIUlVCV2lJUG1hLXRHUG9DeUFiZHhOWmhPTHViQVlZS2lHLTlaYkdQaFJTSG5zMHlCZ01jRE8yTkhZcVFteDBLdnJRRVJ2TTdrSmRib19OVWZhTEkxT25UT3pTLTROajFnUlJwOWNYcWNTYm5n?oc=5",
+          "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPWXA0dTdVbWVWWW15UExUcnctOVZGLUlNd2EtOXFUMHpDNVBZTmFIMllQMloxVnRrSFJLTjVDcGVuVXhCUnQ4VkFWUU12M2JBTFJ2cVdJMjFGSW1ZSzFYLXNlUzhmbURKNlo3Q3pnVmZmT2hjUGVUb3VybGRCREh4Q05aelJKRk5LcGZDa0ktZEJrblhGNllqcnpRSDNIeHhra3E2TlJVcUx3YzNRYU5VYVhfdm5iN0N4MF9z0gHAAUFVX3lxTFAtd0Ffem5OTGZZZ2c5Y29JX3VPcE96SjZrSW1fOFFDRnY4cGoybkNadFBudUpiQ2pwb1hlVzFWdGtiT0RYM3FSRUFmb3RVUE5ESjdSa0lWaGhfYWRlU0xBcVFXbVBMQkc0bEV2aGt5bVFsbVlYOHhQM0hSN3FsRmoyVTFnSEo3a2lVNnplcUcxYUJCbnBzR0lNSGlSWkg3VTE1M2E2V1U3RXI3UFpxNW1URUxrbTExSFUxUTlsMm52RQ?oc=5",
+          "https://news.google.com/rss/articles/CBMikAFBVV95cUxQVHVGcllqR0NWRzVoUm1tYVY1SWE5Tl9tdzFFXzJDaFR3aEZZSllTdWdwZkJXTW5uUl9MVnhhbXdCVFVzX3czTjJJZHhLYzExQ0NzcEFRSllZZTRZQW5MbHlrblE0eU9xa1BGYWFHNzgwNVY3M0x0eWNqbUdwRnp1c1ROVXFrN3l1bkxzYjdvNnA?oc=5",
+          "https://news.google.com/rss/articles/CBMirgFBVV95cUxPRl9yVGF3bFd3cXdDbHhkc3lqTGdTeXFKVXlocXRKa2ViWFJveDJnV1NVRW9OTXFOTFJfeS1Nc1Y1aVVCMFBVcU5BRC16R283cmJSX1cyTnhGdDJoSmMyVWRDUTkxVHpXODV0MExiYWQ2NmtMMWw2akE5Tkktbnl1R3ptTzVET2MxazdneElXd052T3dOdE5pa3dXSEFtOTZJaXlfMHNaejFUdUh6bEHSAbMBQVVfeXFMUDRCOVNmSGZJVFNpRGJWSTR4RXZFVWtvNll4S3Y0RUFISGR2ZTlubWNvV0hPTGRpdlJmVXNxUFVVWW1YM2M3V3hVdUtsTXUyRFpfWTZwaEw2TWZlUUNSUVVEVUU0OTl6REctX1hfRUxQRTdsbTlYUU9qZkdVa1lTTUpCMWUzU0JEU1FaMXVocEFaTnUwbG5xQW4wWU05TThpZzBhWDZxQTYwQkJlZEUtbVV1THc?oc=5",
+          "https://news.google.com/rss/articles/CBMitAFBVV95cUxQRGJzNEFGakRHRzJMXzRSZW8yTkNTVnVBMEVNdWVjQ0JuRENMMFoxYUQzSWthMy1KalNJUklGMExMS20xODhiX3VJSURDVHozcnZNR3ZnUnhSVm41bWtpNHdRaW1yUEx4Z2kzZkRvTDcxVVBfRUxjVm5kQ0NPOGZRdUFiUmh5QWRYN1QxRnZMYUlOdzJUUmV3NnNVYUVwUjFIZDVCWHZfRnRRcG9MRlR6dWhGdnU?oc=5",
+          "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNU3phU19FeHVRWDZJMWRVMlZDcHp2ZVR5QnFYR0Q0NlZsV2gxeGRMOEZjWEV2ZHFrUUdfaDNkeElLVjY4clhDQ2lhVVBjZFk0SS02ZXdKUE1iVWRPZkVWRWh4VUp0SWxpQTFvRGJOTTZuLWxkOXpySEw5V0lGeFZXQml6MG1rREVpVHNwNTNMWUF1d2FWTmViVGdsZ3ZpaDVuR0laWnFYVWJLM1VXWkRvWWZyeHFjd0RWam9va1RnazE?oc=5",
+          "https://news.google.com/rss/articles/CBMipAFBVV95cUxQUkFHQWNtTHYwSmlpTWtiOGdMdkdXMV9ReUQ2X0xJMmxBZWRpaWpPcFVpTzVoUk41ZW1xV05IR2ZTR0RhQ3ZvbFRwTTdtVVRycll0Wk84SmxwZ0t3Uk1kSktLWWZzRDlEaGhYVDdCSGpfbXNXQ0E5M2o3LVg2LTJGTVRzc0pUb0c4TjhsNjBZVzhQNlF5M3AxOWdlM0xNaFJJUDcySg?oc=5"
+        ],
+        "evidence_note": "Sebagian besar sumber berupa pengumuman atau liputan singkat tanpa data kinerja, jadi analisis ini membaca pola format, bukan menilai dampaknya."
+      },
+      "input_sources": [
+        {
+          "id": "1",
+          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxNU3phU19FeHVRWDZJMWRVMlZDcHp2ZVR5QnFYR0Q0NlZsV2gxeGRMOEZjWEV2ZHFrUUdfaDNkeElLVjY4clhDQ2lhVVBjZFk0SS02ZXdKUE1iVWRPZkVWRWh4VUp0SWxpQTFvRGJOTTZuLWxkOXpySEw5V0lGeFZXQml6MG1rREVpVHNwNTNMWUF1d2FWTmViVGdsZ3ZpaDVuR0laWnFYVWJLM1VXWkRvWWZyeHFjd0RWam9va1RnazE?oc=5",
+          "title": "Ineru Coffee & Matcha, a Sanctuary in the Concrete Wilderness - Kompas.id",
+          "source": "Kompas.id",
+          "published_at": "Fri, 02 Oct 2026 00:33:15 GMT"
+        },
+        {
+          "id": "2",
+          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPWXA0dTdVbWVWWW15UExUcnctOVZGLUlNd2EtOXFUMHpDNVBZTmFIMllQMloxVnRrSFJLTjVDcGVuVXhCUnQ4VkFWUU12M2JBTFJ2cVdJMjFGSW1ZSzFYLXNlUzhmbURKNlo3Q3pnVmZmT2hjUGVUb3VybGRCREh4Q05aelJKRk5LcGZDa0ktZEJrblhGNllqcnpRSDNIeHhra3E2TlJVcUx3YzNRYU5VYVhfdm5iN0N4MF9z0gHAAUFVX3lxTFAtd0Ffem5OTGZZZ2c5Y29JX3VPcE96SjZrSW1fOFFDRnY4cGoybkNadFBudUpiQ2pwb1hlVzFWdGtiT0RYM3FSRUFmb3RVUE5ESjdSa0lWaGhfYWRlU0xBcVFXbVBMQkc0bEV2aGt5bVFsbVlYOHhQM0hSN3FsRmoyVTFnSEo3a2lVNnplcUcxYUJCbnBzR0lNSGlSWkg3VTE1M2E2V1U3RXI3UFpxNW1URUxrbTExSFUxUTlsMm52RQ?oc=5",
+          "title": "Nyaman Buat WFC dan Nongkrong, Ini 5 Rekomendasi Coffee Shop di Cikajang - detikFood",
+          "source": "detikFood",
+          "published_at": "Fri, 02 Oct 2026 00:00:21 GMT"
+        },
+        {
+          "id": "3",
+          "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPcHZ3N3ZLZzRUUjlKaUNhRjhqVmFGZ3Q4Q3lrOW9MNThRRHRpYllsN25IbW9vcU03VUQwYk9DUXZxbWx3OXVncEZqLVBoT3NsZDJ6Nm5iWVZ3RGNNbzRIUlVCV2lJUG1hLXRHUG9DeUFiZHhOWmhPTHViQVlZS2lHLTlaYkdQaFJTSG5zMHlCZ01jRE8yTkhZcVFteDBLdnJRRVJ2TTdrSmRib19OVWZhTEkxT25UT3pTLTROajFnUlJwOWNYcWNTYm5n?oc=5",
+          "title": "Kopi Lokal Malang Dibawa Keluar dari Lingkaran Komunitas, Pasar Kopi Lokal 2026 Targetkan 4.000 Pengunjung - MalangVoice",
+          "source": "MalangVoice",
+          "published_at": "Thu, 01 Oct 2026 14:03:21 GMT"
+        },
+        {
+          "id": "4",
+          "url": "https://news.google.com/rss/articles/CBMitAFBVV95cUxQRGJzNEFGakRHRzJMXzRSZW8yTkNTVnVBMEVNdWVjQ0JuRENMMFoxYUQzSWthMy1KalNJUklGMExMS20xODhiX3VJSURDVHozcnZNR3ZnUnhSVm41bWtpNHdRaW1yUEx4Z2kzZkRvTDcxVVBfRUxjVm5kQ0NPOGZRdUFiUmh5QWRYN1QxRnZMYUlOdzJUUmV3NnNVYUVwUjFIZDVCWHZfRnRRcG9MRlR6dWhGdnU?oc=5",
+          "title": "Indomilk FnB Solutions Dukung Coffeepreneur dan Bakepreneur Lewat Inovasi Menu - investor.id",
+          "source": "investor.id",
+          "published_at": "Thu, 01 Oct 2026 11:19:29 GMT"
+        },
+        {
+          "id": "5",
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQUkFHQWNtTHYwSmlpTWtiOGdMdkdXMV9ReUQ2X0xJMmxBZWRpaWpPcFVpTzVoUk41ZW1xV05IR2ZTR0RhQ3ZvbFRwTTdtVVRycll0Wk84SmxwZ0t3Uk1kSktLWWZzRDlEaGhYVDdCSGpfbXNXQ0E5M2o3LVg2LTJGTVRzc0pUb0c4TjhsNjBZVzhQNlF5M3AxOWdlM0xNaFJJUDcySg?oc=5",
+          "title": "Point Coffee Tawarkan Sensasi Ngopi Sambil Menikmati View Kota Ambon - Bedah Nusantara",
+          "source": "Bedah Nusantara",
+          "published_at": "Thu, 01 Oct 2026 03:44:35 GMT"
+        },
+        {
+          "id": "6",
+          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPVi12R1J6R0pzWklWWFY0cEJ1MDNmLUY4OGtvWEQzNWJ6ekxIWHpfV3Q3RzdYcklhRFVUMWtPZURvTEJVendHMzFCXzMtcVlieFRRaWpOWUNWeWY5UXFJVG9zMmFaa2hOZ1I1UmNtUTlMQkpua2ZraS1HUE9zVzIyVjRDUVFyMm5oNl91SzJERE5XNXNGMGNIZkRramc5Ym1UcHoxNzFGNFI5V3F1eU5fT0xWNlZFdUdnak4wRlc3OE0?oc=5",
+          "title": "Apakah cangkir kopi menuliskan akhir kisah epik Ronaldo bersama Portugal? - Goal.com",
+          "source": "Goal.com",
+          "published_at": "Wed, 30 Sep 2026 20:27:00 GMT"
+        },
+        {
+          "id": "7",
+          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPRl9yVGF3bFd3cXdDbHhkc3lqTGdTeXFKVXlocXRKa2ViWFJveDJnV1NVRW9OTXFOTFJfeS1Nc1Y1aVVCMFBVcU5BRC16R283cmJSX1cyTnhGdDJoSmMyVWRDUTkxVHpXODV0MExiYWQ2NmtMMWw2akE5Tkktbnl1R3ptTzVET2MxazdneElXd052T3dOdE5pa3dXSEFtOTZJaXlfMHNaejFUdUh6bEHSAbMBQVVfeXFMUDRCOVNmSGZJVFNpRGJWSTR4RXZFVWtvNll4S3Y0RUFISGR2ZTlubWNvV0hPTGRpdlJmVXNxUFVVWW1YM2M3V3hVdUtsTXUyRFpfWTZwaEw2TWZlUUNSUVVEVUU0OTl6REctX1hfRUxQRTdsbTlYUU9qZkdVa1lTTUpCMWUzU0JEU1FaMXVocEFaTnUwbG5xQW4wWU05TThpZzBhWDZxQTYwQkJlZEUtbVV1THc?oc=5",
+          "title": "Kedai Kopi Mulai Ditinggalkan? Jago Coffee Bawa Gerobak Listrik ke Pasar - Warta Ekonomi",
+          "source": "Warta Ekonomi",
+          "published_at": "Wed, 30 Sep 2026 15:16:00 GMT"
+        },
+        {
+          "id": "8",
+          "url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxQVHVGcllqR0NWRzVoUm1tYVY1SWE5Tl9tdzFFXzJDaFR3aEZZSllTdWdwZkJXTW5uUl9MVnhhbXdCVFVzX3czTjJJZHhLYzExQ0NzcEFRSllZZTRZQW5MbHlrblE0eU9xa1BGYWFHNzgwNVY3M0x0eWNqbUdwRnp1c1ROVXFrN3l1bkxzYjdvNnA?oc=5",
+          "title": "Roemah Koffie Hadirkan Omakase Coffee Experience - TopBusiness.id",
+          "source": "TopBusiness.id",
+          "published_at": "Wed, 30 Sep 2026 00:54:00 GMT"
+        },
+        {
+          "id": "9",
+          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPVFpfbzNHczdkVnh1NzRPWm9lLWVZaUh5MWZUZHJud0pGVElCcWQ4OG5TaXZLQ0RnbWZOWHhKcWx1UWZrQXB4Y1lGTGFaNXNPbE1kdVh6Q1ZHeDBwZkExWXlvQVFxblRzYzVKZllPLWpkWjR6MXZqNm54d05JYWVBRFVQQWY2R1Z3WlZZTGFtaUJtd3BhejNIaVdkR21WWDB4TUFuZms3c0tUZE5VU2lNcmMxRQ?oc=5",
+          "title": "Indomilk FnB Solutions Perkuat Coffee dan Bakery lewat Inovasi Bite-Sized Pastry - indoposco",
+          "source": "indoposco",
+          "published_at": "Tue, 29 Sep 2026 14:42:08 GMT"
+        },
+        {
+          "id": "10",
+          "url": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxPSENWNEhHX0Z2UW40a2pZUWNvNF9odVRrcVZaajZ2WE9hTmtpcXdOTkhPbXJkeGhXeEZxbVpqclFPN2xLR0N2aEgwZFFLZkdFMG5BRldobDNadVpwY1R3Z3IxY0wzUG1RcnhQOUNJdThLRGpXMkR2QmtxbC1tNldWUVY4SkN6RlRNQkV4Zm1sM1d3R0l2MnRTRkRDUHJBdjRXQTNUSWV0NFl0MkhIVmRTQjdla0wyMlNSSE44ZThjQ1V3UE9Vb2lHSkhpV29lUll1dHpaUFg2U29NSWt3eUZwUU8yZDVfampOZ0VaRFBnaw?oc=5",
+          "title": "Coffee Morning Kapolres Pagar Alam Bersama Personel Satlantas, Perkuat Pelayanan dan Kedekatan dengan Masyarakat - tribratanews.sumsel.polri.go.id",
+          "source": "tribratanews.sumsel.polri.go.id",
+          "published_at": "Tue, 29 Sep 2026 12:10:52 GMT"
+        },
+        {
+          "id": "11",
+          "url": "https://news.google.com/rss/articles/CBMidEFVX3lxTE1nbkdxM2hmZnJpYlJYQXVSMlotUHJMUjdlQUd3Mi1uVUFuQTlCQ1poaXlqQWdiQ3FSM3lVVHpma29ELXdvR29UcFNaZExjeDdvSGRjQng4WmZwQVUxX2s5Yl9FWFpmSUZCeUR6b2FqWW5iUmY20gF6QVVfeXFMTmhUOEtZLUxGYVBRQ0JjZjMxOG0tSDVtLU8waFZ6dUFJSnIzWXFoa3VSQlZZQXAxTmNEZmRjQUhKekIyQzlHdm95Q2NaMjB6YXY5MktaMzNYamZoY05MN0w3OTJHS1ZqZFRZVnNJR01WQ2dlZW9fbUdxMkE?oc=5",
+          "title": "Roemah Koffie Hadirkan Omakase Coffee Experience - olenka.id",
+          "source": "olenka.id",
+          "published_at": "Tue, 29 Sep 2026 07:50:00 GMT"
+        },
+        {
+          "id": "12",
+          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPdHhIa1BvUnJMY0pONlc3Y3NOVF9HYk51UUhUQmpwVlZHcUdlNXQxLUltbFE2Ti14M3h3LUxZMThxd3V6cjh3U1dveFZsOU1HT1F2Wm5jd1I0cWw3Z1Q5NUJ2R3JnMTlQcHR4eFQzQWRwMXV5SkVIU2hvSmFWdG9ONG1nM09ZVGF2QmNOeHFYUmhjWTNaTnc?oc=5",
+          "title": "Luckin Coffee rencanakan ekspansi ke pasar Telu... - Pluang",
+          "source": "Pluang",
+          "published_at": "Tue, 29 Sep 2026 00:55:00 GMT"
+        }
+      ]
+    },
+    {
+      "cluster_id": "riset-tren-konsumen",
+      "cluster_name": "Riset & Tren Konsumen",
+      "period_days": 14,
+      "generated_at": "2026-10-02T04:50:33.975Z",
+      "status": "ai_generated",
+      "fingerprint": "beb99f4b8d69f2f8a5c6845cfda153e8664b56470cf2c502c8adb4be6b2b7905",
+      "article": {
+        "title": "Riset & Tren Konsumen: Pola Permintaan di Hari Kopi Internasional 2026",
+        "summary": "Pada 1 Oktober 2026, momen Hari Kopi Internasional diisi promo dan rilis menu: J.CO menawarkan paket dua minuman Rp50.000, sementara seri bertema fruity “Musim Buah Anomali” diumumkan di media [1][2][3]. Pemberitaan juga padat soal kesehatan—dari daftar manfaat, dampak bagi jantung, sampai klaim riset efek kopi pada otak dan mikrobioma—serta pengingat bahwa kopi tidak menggantikan tidur [4][5][6][7]. Ada perayaan di Roma dan liputan soal kopi Aceh sebagai identitas budaya, menambah warna pada percakapan konsumen [9][10].",
+        "lead": "Di luar promo dan produk baru, kampanye keselamatan untuk mahasiswa di Sulawesi Selatan menegaskan bahwa secangkir kopi bukan pengganti istirahat; kopi dipakai sebagai pengait untuk membahas risiko berkendara saat mengantuk [7][8]. Perayaan publik juga terlihat di Roma, menunjukkan bagaimana momen tahunan ini dipakai untuk mengumpulkan komunitas penyuka kopi [9].",
+        "sections": [
+          {
+            "heading": "Harga hemat dan rasa fruity: apa yang ditawarkan",
+            "paragraphs": [
+              "Promo J.CO “hemat berdua Rp50.000” memberi opsi harga terjangkau pada hari yang sama, memposisikan pembelian berpasangan sebagai ajakan yang jelas bagi konsumen nilai [1]. Di saat bersamaan, “Musim Buah Anomali” diluncurkan dan menonjolkan sisi fruity dari kopi. Dari sudut pandang konsumen, ini menyodorkan jalur eksplorasi rasa yang mudah dipahami—manis-buah—tanpa mengharuskan pengetahuan teknis tentang proses atau origin [2][3].",
+              "Dua pendekatan ini—harga yang jelas dan rasa yang tegas—muncul berbarengan pada momen tematik. Keduanya tidak otomatis menunjukkan perubahan selera pasar, tetapi cukup kuat untuk membingkai pilihan: datang karena hemat, atau datang untuk mencoba profil rasa yang berbeda [1][2][3]."
+            ]
+          },
+          {
+            "heading": "Kesehatan: topik yang terus dicari",
+            "paragraphs": [
+              "Sejumlah media pada hari itu mendorong pembahasan soal tubuh dan kopi: daftar manfaat (termasuk pengelolaan berat badan dan depresi), ajakan mengenali dampaknya bagi jantung, serta kabar penelitian yang menyebut pengaruh kopi pada otak dan mikrobioma usus [4][5][6]. Isi dan penekanan setiap artikel bisa berbeda, namun dari sudut konsumen hasil akhirnya sama: orang diingatkan menimbang aspek kesehatan saat memesan dan minum kopi.",
+              "Karena laporan-laporan tersebut tidak menyajikan satu kesimpulan kuantitatif bersama, aman untuk menyimpulkan bahwa topik kesehatan sedang ramai dibicarakan, bukan bahwa efek tertentu pasti terjadi pada semua orang. Bagi pembaca, ini berarti informasi hadir sebagai rujukan awal, bukan vonis final [4][5][6]."
+            ]
+          },
+          {
+            "heading": "Komunitas, edukasi, dan identitas",
+            "paragraphs": [
+              "Kampanye keselamatan di kampus menegaskan pesan sederhana: kantuk harus diatasi dengan istirahat, bukan sekadar kopi. Kopi dijadikan pintu pembuka diskusi, tetapi inti sarannya tetap soal tidur dan kewaspadaan saat berkendara [7][8]. Ini relevan bagi konsumen muda yang akrab dengan kopi dalam aktivitas belajar dan mobilitas sehari-hari.",
+              "Di tingkat komunitas yang lebih luas, ada perayaan publik di Roma, sementara di Indonesia muncul liputan yang mengaitkan kopi Aceh dengan identitas budaya. Keduanya menunjukkan bagaimana minum kopi sering dibingkai sebagai praktik sosial dan kultural—bukan hanya transaksi di kasir [9][10]."
+            ]
+          }
+        ],
+        "conclusion": "Dari momen satu hari itu, pola yang terlihat sederhana: harga jelas, rasa yang mudah dibayangkan, dan percakapan soal kesehatan. Ini belum membuktikan perubahan selera atau pergeseran pasar, tetapi cukup memberi peta topik yang menonjol di kepala konsumen ketika mereka memutuskan: beli karena hemat, coba karena penasaran rasa, atau pikirkan lagi karena faktor tubuh.",
+        "recommendations": [
+          {
+            "audience": "Kedai kopi independen",
+            "action": "Jika merilis menu tematik, pertimbangkan satu varian dengan profil fruity yang jelas sebagai opsi eksplorasi rasa.",
+            "basis": "Ada peluncuran seri bertema fruity yang menonjolkan sisi buah dari kopi pada momen yang sama [2][3]."
+          },
+          {
+            "audience": "Penyelenggara acara kampus/komunitas",
+            "action": "Sisipkan pesan bahwa kopi tidak menggantikan tidur saat membahas kewaspadaan dan keselamatan.",
+            "basis": "Kampanye lokal menekankan bahaya berkendara mengantuk dan mengingatkan kopi bukan pengganti istirahat [7][8]."
+          },
+          {
+            "audience": "Peminum kopi",
+            "action": "Cek syarat promo sebelum datang agar pembelian sesuai ekspektasi harga.",
+            "basis": "Ada promo paket dua minuman dengan harga tertentu yang diumumkan untuk Hari Kopi Internasional [1]."
+          }
+        ],
+        "source_urls": [
+          "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNaGR0Qi1PdUtWNHRnWjJWWmdsTElxQ2VXd1Y1d3g0dHVWOFFSbkc3M0FLa3NTTUFoYThTSE5MYy0wRHNncFVxeE1MZWtPZlpDb1NsdGxsVDFzQUdoVUdURHRFXzlzWlc2Z2tlMUZwQ28tZHdhM3Q0UnVJQ3paYlRVU3JoeWxtY0xpR1dkejBaa3lucHUtdnVXa0o3OFVrdjJITnRwemg1ZkwwbkhBZDBwWmd5dUxiWXpu?oc=5",
+          "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPSFBJdTJ6S21nM1ZxemExamZYdHJYQnlIUXZFLVlvNEdESFZpWVVna3FFQ2c5bkxiOElaMUlITFN1TFdkT0JSbE5SX25hSlUzV19FVnZ0U0FnV3NoTlA4X0dmMVpzN1pmQ25XbDRyNkNSeGVIQnBoM1RYQ2Q4Rmw0OV9wZWhFbGluZjNWRGlEN1pqLW5DY1dVSmtzLTVIcFF4Mm9zNkNTdl9rekFDY3NQYzB4YnF1anZyczZmZmpJN3I5X3dyUTBNUjdtbmZHS2RQWk1mVDh0ODR1UkZlNTA4?oc=5",
+          "https://news.google.com/rss/articles/CBMipgFBVV95cUxQZTFYWTdyUHZXb3BCNnJSbFdabnpWYnR1QjNWOUs1cUJGSkVOUG9Hc2QxTEppcTRRZmo4TXJOSDJsOTc0TkZKSjh4U2J5MWRjZzBaZnhfd0tZT0tkb3VkRm4wTFgtZjZBNndzVHFnbUtsZzBFd2NwS2FneGFmVmZmNXNDeVJPU0xNcUN6dnh2Z0ljUWNtMVR5QTYyZ2Q5blBuMmdlbGN3?oc=5",
+          "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQajhzaXk5TVprZjJDZktkbVJ4M1ZkdzNiR010bXR1em9qRHg4N00ybFF1d2NfeHBKTm9ZX2pjenlRY3MydVdLUjBBUVVoRkpJb3BackFZVmhHbmczVlRjSDJYU1VGbVlmYXhaR2Rybl9PcTBoZmcyV0w3Q0RwZzJidkdaTlBsSXBNeHRSSnRycTZQR2N2aVZYTFNYRy1CdHNTUEF4WDcyTWlTRUZ4bUl5YWctdGhEZ0VMVGx1Rm5WVEphb0E1WWJLNU4zYTRlRTRaSXpVd0VMMElPSEhVQjE1TnFoc3o2OG14ellV0gHqAUFVX3lxTE96WHRQbUZzVTNaeGpxOE5BOUxhUFNNWkQyNERXNUIwRkhCM3BuaHZvSjd3UHU0N0pYSkhmU0E3eFZtZGkySkY0Z05NamxHVFhFSE9mRVJQdWd4RVZHMFhObVFUUXNvV3lsaDdNVGJXRFFBeWtfdFNoQmhicklBc0pBYjUtX3dKZ3ItNE9rNjZUQXVMRS1rMjRlYl9RbmhORjBUclM4NVhfZlRlajRYVE1QN1lHa3NwZUhmZUkzY1FhS05TTEtSMjUxd2NLWWlCcGhDVTcyckR4OTlrMjdZZW5BTS1PT3lCQlp4Zw?oc=5",
+          "https://news.google.com/rss/articles/CBMikwFBVV95cUxPaFZQazRkY1JJT25TeUZPQmYtLUgzczczdlo2MDdyWDNXOXljUU1sQjd0NUF4T0pqQXB5eUdNUHFuMjFrNW1MNlk1dk0wWjk2VS1lRFVmMW9xY25hUW5OeXVfalJBaUg5M2tpdlhyblZFYlpob2NGX3JoelhXU0lwYXZjbmFqcnZqemhGRkh4dnZDV3c?oc=5",
+          "https://news.google.com/rss/articles/CBMipwFBVV95cUxOVGxoOTAyM0plX0QtQ0xmX2JHMHFLWWN0UHhMa2RldmloUHRxQmVYZjJqOFpjSHNYQUhFdC1YX1J5c2dwR0J6VlFoM2hnN0hSSi1MNEwtLWhaRmZsNFNkSTNFMEJrR0RmRG5CdV9TMkY2T3hneV9TSWdsZk9Ld1ZUUGVRX3BGdkthUjRnTXQ3Uk44QThEbU1MV0Ewd3NuTVJZNWNpQl9jQQ?oc=5",
+          "https://news.google.com/rss/articles/CBMiogFBVV95cUxQUEZDSThJUnJqQktJZFJJcUt4d1NXYUlaVnBvT3JwWmN0NzBYOXNwUUtBd1B6THVjTUdkcEhzNjZDR0lUTy10Y2tiRTkxY2Z3S2t2UWRvUGZ2M19qOWRTcHRabXFzMmFMZ2NHeFdFQ1Q5TWtBME85aGVaUGtIUV9icUdwbkxYMGI3RF9ROU9xUGlYaWlDQThjdW5EdXJhUUZPYlE?oc=5",
+          "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQS2E0cXBtRkcxV3lQU0stamVWNXhfVHBRTEJDcU8tN3JBOTcyNjRraVlMWVppYmprMDVwckpxbVRTRkpBRlh5bmRuVDJkMTNlc3JnSzhCb25wYUs1T05WaFV3VGRRMWY4ejZ6TlZaeTBiUjZxVnRVVjhCSE5NeWhNNXc2ZjVmZjJGZGIwd0duMEpzeDVXa0FDZnV0WG5QVWc0bXkxd2dULUlCNHUyZGt4anlmc2pQMjR3?oc=5",
+          "https://news.google.com/rss/articles/CBMikwFBVV95cUxPdnFZUlVpTDhNZ1JRR2ZFZ0wtQlJmV2hkR2lWZ2JKazZSTWhDXzF4NGVxNHJoVWViY0xvWEo3SkxaRlIyV09fNjlRLWlOOFV4bWFSSkg0STZNS1ZEOUVHTUY0c3MtTENSSHh6RTRBOUQxZzBYYVFTYkFDMEsyTWdlMkwzam92aGlrNl81MTQ4Qi1uUlHSAZYBQVVfeXFMT3U1UnpkQzRMSnBmUk5teU5IQU1PVElXay1sOGRhOHFqek5aNVl5S1hDa2cyUzBfUUhLRlJNNUlwOWhJTjZJN3FYSFRpNzN4aXJNcTdnWmhmcW1XdTlOUTN4MHdrTzJXVnpQTVlOaWM0Ym4ycm03Y3dPS2t1TkNJQUd2X3JsUk5kTVpCZUVuMEx0NzVvaEtn?oc=5",
+          "https://news.google.com/rss/articles/CBMitwFBVV95cUxNazJ6MlRaR3VnVkF2dUhnY29uVGI0X1BGTTFSeUFxU1llNzEyaWIwQ29qRUgyR2dSdXduRlB4YW9Yb3Q1VFlBdkxZUmMyczlEMVBIZks1TVh1Q3lqX1M0NlAtWTBRR1VFSmREY1ZLSTFvN1V6b2RRcXZZRE1OQWVNSFRyS3RkTk1RT1NXRE1qQjFRcGs1OW9uT3BwZFV0bWJldW9lcS1yRlV2Q01zR29QNVliaTV3Nm8?oc=5"
+        ],
+        "evidence_note": "Mayoritas sumber berupa pengumuman/liputan singkat tanpa data penjualan atau survei perilaku, sehingga analisis menyorot tema percakapan, bukan dampak pasar terukur."
+      },
+      "input_sources": [
+        {
+          "id": "1",
+          "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNc1gzQVg2TXdGOEZKZkozenpIM1QyOUpfa3piclk5YWJKbUZjQV9iN0lfZkkyRXhHSlZTa0hCdVB4aWFISGhHLVJiRDIxc3IyanA2TTYzcGt0TVRoa3pOTXN2bXZMbFZ3NXBqbkFCa09ranExa0Z6N0pRREV3ZWpGWjQxM19jTWJIU0syWjJNN1FzUy0zd3JRci1KN2hmMWZpdklCM3AySUxDX2d6T1JmazBoeF9WLVZaQjc3UGMtY0dYamRId19DRU02eHM?oc=5",
+          "title": "Pengaruh preferensi dalam memilih menikmati kopi di coffee shop Halaman 1 - Kompasiana.com",
+          "source": "Kompasiana.com",
+          "published_at": "Fri, 02 Oct 2026 02:46:58 GMT"
+        },
+        {
+          "id": "2",
+          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQZTFYWTdyUHZXb3BCNnJSbFdabnpWYnR1QjNWOUs1cUJGSkVOUG9Hc2QxTEppcTRRZmo4TXJOSDJsOTc0TkZKSjh4U2J5MWRjZzBaZnhfd0tZT0tkb3VkRm4wTFgtZjZBNndzVHFnbUtsZzBFd2NwS2FneGFmVmZmNXNDeVJPU0xNcUN6dnh2Z0ljUWNtMVR5QTYyZ2Q5blBuMmdlbGN3?oc=5",
+          "title": "“Musim Buah Anomali” Resmi Diluncurkan di International Coffee Day – Berita – Informasi – Investigasi Hukum Online - radaronline.id",
+          "source": "radaronline.id",
+          "published_at": "Fri, 02 Oct 2026 02:36:19 GMT"
+        },
+        {
+          "id": "3",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPdnFZUlVpTDhNZ1JRR2ZFZ0wtQlJmV2hkR2lWZ2JKazZSTWhDXzF4NGVxNHJoVWViY0xvWEo3SkxaRlIyV09fNjlRLWlOOFV4bWFSSkg0STZNS1ZEOUVHTUY0c3MtTENSSHh6RTRBOUQxZzBYYVFTYkFDMEsyTWdlMkwzam92aGlrNl81MTQ4Qi1uUlHSAZYBQVVfeXFMT3U1UnpkQzRMSnBmUk5teU5IQU1PVElXay1sOGRhOHFqek5aNVl5S1hDa2cyUzBfUUhLRlJNNUlwOWhJTjZJN3FYSFRpNzN4aXJNcTdnWmhmcW1XdTlOUTN4MHdrTzJXVnpQTVlOaWM0Ym4ycm03Y3dPS2t1TkNJQUd2X3JsUk5kTVpCZUVuMEx0NzVvaEtn?oc=5",
+          "title": "Potret perayaan Hari Kopi Internasional di Roma - ANTARA News",
+          "source": "ANTARA News",
+          "published_at": "Fri, 02 Oct 2026 02:25:32 GMT"
+        },
+        {
+          "id": "4",
+          "url": "https://news.google.com/rss/articles/CBMi3wFBVV95cUxPSFBJdTJ6S21nM1ZxemExamZYdHJYQnlIUXZFLVlvNEdESFZpWVVna3FFQ2c5bkxiOElaMUlITFN1TFdkT0JSbE5SX25hSlUzV19FVnZ0U0FnV3NoTlA4X0dmMVpzN1pmQ25XbDRyNkNSeGVIQnBoM1RYQ2Q4Rmw0OV9wZWhFbGluZjNWRGlEN1pqLW5DY1dVSmtzLTVIcFF4Mm9zNkNTdl9rekFDY3NQYzB4YnF1anZyczZmZmpJN3I5X3dyUTBNUjdtbmZHS2RQWk1mVDh0ODR1UkZlNTA4?oc=5",
+          "title": "Musim Buah Anomali Resmi Diluncurkan di International Coffee Day, Membawa Pengalaman Baru Menikmati Sisi Fruity dari Kopi - Kabarindoraya.com",
+          "source": "Kabarindoraya.com",
+          "published_at": "Thu, 01 Oct 2026 19:50:00 GMT"
+        },
+        {
+          "id": "5",
+          "url": "https://news.google.com/rss/articles/CBMi6wFBVV95cUxQajhzaXk5TVprZjJDZktkbVJ4M1ZkdzNiR010bXR1em9qRHg4N00ybFF1d2NfeHBKTm9ZX2pjenlRY3MydVdLUjBBUVVoRkpJb3BackFZVmhHbmczVlRjSDJYU1VGbVlmYXhaR2Rybl9PcTBoZmcyV0w3Q0RwZzJidkdaTlBsSXBNeHRSSnRycTZQR2N2aVZYTFNYRy1CdHNTUEF4WDcyTWlTRUZ4bUl5YWctdGhEZ0VMVGx1Rm5WVEphb0E1WWJLNU4zYTRlRTRaSXpVd0VMMElPSEhVQjE1TnFoc3o2OG14ellV0gHqAUFVX3lxTE96WHRQbUZzVTNaeGpxOE5BOUxhUFNNWkQyNERXNUIwRkhCM3BuaHZvSjd3UHU0N0pYSkhmU0E3eFZtZGkySkY0Z05NamxHVFhFSE9mRVJQdWd4RVZHMFhObVFUUXNvV3lsaDdNVGJXRFFBeWtfdFNoQmhicklBc0pBYjUtX3dKZ3ItNE9rNjZUQXVMRS1rMjRlYl9RbmhORjBUclM4NVhfZlRlajRYVE1QN1lHa3NwZUhmZUkzY1FhS05TTEtSMjUxd2NLWWlCcGhDVTcyckR4OTlrMjdZZW5BTS1PT3lCQlp4Zw?oc=5",
+          "title": "Hari Kopi Internasional, Ini Sederet Manfaat Meminum Kopi: Dari Jaga Berat Badan hingga Kurangi Depresi - women.okezone.com",
+          "source": "women.okezone.com",
+          "published_at": "Thu, 01 Oct 2026 13:05:31 GMT"
+        },
+        {
+          "id": "6",
+          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQUEZDSThJUnJqQktJZFJJcUt4d1NXYUlaVnBvT3JwWmN0NzBYOXNwUUtBd1B6THVjTUdkcEhzNjZDR0lUTy10Y2tiRTkxY2Z3S2t2UWRvUGZ2M19qOWRTcHRabXFzMmFMZ2NHeFdFQ1Q5TWtBME85aGVaUGtIUV9icUdwbkxYMGI3RF9ROU9xUGlYaWlDQThjdW5EdXJhUUZPYlE?oc=5",
+          "title": "Secangkir Kopi Bukan Pengganti Istirahat, Asmo Sulsel Ingatkan Mahasiswa - Makassar Terkini",
+          "source": "Makassar Terkini",
+          "published_at": "Thu, 01 Oct 2026 12:22:00 GMT"
+        },
+        {
+          "id": "7",
+          "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPX0dTcjdwb1g4YTJ0ZXZBYnppTXlfRXYxbnd1X2I4OW41NldHQlBzNzFkb0puZmhOYWRhZ1lhZG03dDlJR0IwNGtNVGZ0UmZRcWhwX2tHbjVUa21YT0o3RTlaNFBRWHJIYWQ5aExZclFRS0hLa1YzeHAzVkdCcWVjMnFwOHUwZ0hSbXRZc1FFSXp2R3k2S3QwbU5MTWJPRjR0czJLWktDMlQ4X09NT25lQzhPQm11YVRBRW1CT2Y4b25KUE5qeFE0?oc=5",
+          "title": "Menilik Sejarah Hari Kopi Internasional 1 Oktober yang Kini Melekat Jadi Starter Pack Gaya Hidup Gen Z - AFU.id",
+          "source": "AFU.id",
+          "published_at": "Thu, 01 Oct 2026 09:24:47 GMT"
+        },
+        {
+          "id": "8",
+          "url": "https://news.google.com/rss/articles/CBMikwFBVV95cUxPaFZQazRkY1JJT25TeUZPQmYtLUgzczczdlo2MDdyWDNXOXljUU1sQjd0NUF4T0pqQXB5eUdNUHFuMjFrNW1MNlk1dk0wWjk2VS1lRFVmMW9xY25hUW5OeXVfalJBaUg5M2tpdlhyblZFYlpob2NGX3JoelhXU0lwYXZjbmFqcnZqemhGRkh4dnZDV3c?oc=5",
+          "title": "Hari Kopi Internasional, Kenali Dampaknya bagi Jantung - RRI.co.id",
+          "source": "RRI.co.id",
+          "published_at": "Thu, 01 Oct 2026 09:15:00 GMT"
+        },
+        {
+          "id": "9",
+          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQS2E0cXBtRkcxV3lQU0stamVWNXhfVHBRTEJDcU8tN3JBOTcyNjRraVlMWVppYmprMDVwckpxbVRTRkpBRlh5bmRuVDJkMTNlc3JnSzhCb25wYUs1T05WaFV3VGRRMWY4ejZ6TlZaeTBiUjZxVnRVVjhCSE5NeWhNNXc2ZjVmZjJGZGIwd0duMEpzeDVXa0FDZnV0WG5QVWc0bXkxd2dULUlCNHUyZGt4anlmc2pQMjR3?oc=5",
+          "title": "Asmo Sulsel edukasi mahasiswa bahaya berkendara saat mengantuk lewat kopi - ANTARA News Sultra",
+          "source": "ANTARA News Sultra",
+          "published_at": "Thu, 01 Oct 2026 05:40:43 GMT"
+        },
+        {
+          "id": "10",
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOVGxoOTAyM0plX0QtQ0xmX2JHMHFLWWN0UHhMa2RldmloUHRxQmVYZjJqOFpjSHNYQUhFdC1YX1J5c2dwR0J6VlFoM2hnN0hSSi1MNEwtLWhaRmZsNFNkSTNFMEJrR0RmRG5CdV9TMkY2T3hneV9TSWdsZk9Ld1ZUUGVRX3BGdkthUjRnTXQ3Uk44QThEbU1MV0Ewd3NuTVJZNWNpQl9jQQ?oc=5",
+          "title": "Penelitian terbaru: Kopi memiliki dampak yang kuat pada otak dan mikrobioma usus. - Vietnam.vn",
+          "source": "Vietnam.vn",
+          "published_at": "Thu, 01 Oct 2026 04:17:40 GMT"
+        },
+        {
+          "id": "11",
+          "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxNazJ6MlRaR3VnVkF2dUhnY29uVGI0X1BGTTFSeUFxU1llNzEyaWIwQ29qRUgyR2dSdXduRlB4YW9Yb3Q1VFlBdkxZUmMyczlEMVBIZks1TVh1Q3lqX1M0NlAtWTBRR1VFSmREY1ZLSTFvN1V6b2RRcXZZRE1OQWVNSFRyS3RkTk1RT1NXRE1qQjFRcGs1OW9uT3BwZFV0bWJldW9lcS1yRlV2Q01zR29QNVliaTV3Nm8?oc=5",
+          "title": "Hari Kopi Internasional, Kopi Aceh Jadi Warisan dan Identitas Dunia - RRI.co.id",
+          "source": "RRI.co.id",
+          "published_at": "Thu, 01 Oct 2026 03:44:00 GMT"
+        },
+        {
+          "id": "12",
+          "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNaGR0Qi1PdUtWNHRnWjJWWmdsTElxQ2VXd1Y1d3g0dHVWOFFSbkc3M0FLa3NTTUFoYThTSE5MYy0wRHNncFVxeE1MZWtPZlpDb1NsdGxsVDFzQUdoVUdURHRFXzlzWlc2Z2tlMUZwQ28tZHdhM3Q0UnVJQ3paYlRVU3JoeWxtY0xpR1dkejBaa3lucHUtdnVXa0o3OFVrdjJITnRwemg1ZkwwbkhBZDBwWmd5dUxiWXpu?oc=5",
+          "title": "Spesial International Coffee Day 2026, Ada Promo J.CO Minuman Hemat Berdua Cuma 50K - kontan.co.id",
+          "source": "kontan.co.id",
+          "published_at": "Thu, 01 Oct 2026 03:04:14 GMT"
+        }
+      ]
+    },
+    {
+      "cluster_id": "produksi-panen",
+      "cluster_name": "Produksi & Panen",
+      "period_days": 14,
+      "generated_at": "2026-10-02T04:50:33.975Z",
+      "status": "ai_generated",
+      "fingerprint": "159ec7519b273a9b8ca35eb16934f8c8d0c76ed86dc3e04f9f5eb5cdc26fe6df",
+      "article": {
+        "title": "Produksi & Panen Kopi: Ekspansi Lahan, Kesiapan Aturan, dan Bibit Baru di Hulu",
+        "summary": "Indonesia menggerakkan produksi kopi dari hulu: Kementan menyiapkan 99.000 hektare untuk perluasan tanaman kopi [1]. Di tingkat daerah, Jayawijaya mendorong kebun kopi di 328 kampung, sementara 40 ribu bibit Arabika ditanam perdana di Tapanuli Utara [2][3]. Bersamaan, Kementan menyatakan penguatan kesiapan menghadapi EUDR untuk mendorong kopi berkelanjutan [4].",
+        "lead": "Di lapangan, muncul sinyal keragaman bahan tanam: varietas Yellow Bourbon dilaporkan dibudidayakan di Garut [5]. Semua langkah ini masih tahap persiapan; dampaknya pada panen baru bisa dinilai setelah program berjalan.",
+        "sections": [
+          {
+            "heading": "Ekspansi lahan: angka ada, eksekusi jadi kunci",
+            "paragraphs": [
+              "Angka 99.000 hektare untuk perluasan tanaman kopi memberi gambaran arah kebijakan di tingkat nasional, meski sumber belum merinci sebaran lokasi dan tahapan tanam [1]. Contoh konkret di daerah muncul dalam skala lebih kecil: penanaman perdana 40 ribu bibit Arabika di Tapanuli Utara menunjukkan pekerjaan awal yang sifatnya membangun fondasi [3]. Di fase seperti ini, konsistensi distribusi bibit, penyiapan lahan, dan pendampingan budi daya akan menentukan bagaimana kebun memasuki masa panen yang stabil di tahun-tahun mendatang."
+            ]
+          },
+          {
+            "heading": "Regulasi pasar: EUDR menuntut kesiapan sejak dini",
+            "paragraphs": [
+              "Kementan menyebut penguatan kesiapan daerah menghadapi EUDR dan dorongan praktik berkelanjutan untuk komoditas termasuk kopi [4]. Implikasinya sederhana: proyek perluasan dan penanaman baru—baik yang berskala nasional maupun inisiatif daerah—perlu diselaraskan sejak awal dengan tata kelola yang rapi. Jika hulu menyiapkan data dan praktik budidaya yang terdokumentasi, proses pascapanen hingga pemasaran akan lebih siap saat standar diterapkan."
+            ]
+          },
+          {
+            "heading": "Ragam varietas: pilihan benih hari ini, profil panen besok",
+            "paragraphs": [
+              "Laporan tentang Yellow Bourbon yang ditanam di Garut menandakan keragaman varietas mulai tampak di kebun lokal [5]. Di Papua, dorongan pengembangan kebun kopi di 328 kampung menunjukkan perluasan basis tanam yang berpotensi melibatkan banyak petani [2]. Keputusan bahan tanam di tahap awal akan memengaruhi arah kualitas saat panen; pendampingan varietas, teknik budidaya, dan penanganan pascapanen akan menjadi faktor pembeda ketika buah mulai masuk ke pengolahan."
+            ]
+          }
+        ],
+        "conclusion": "Arah besarnya jelas: ada perluasan lahan, penguatan standar, dan penanaman awal yang berjalan di beberapa daerah. Ini fase menata hulu—ukuran keberhasilan baru bisa dibaca ketika kebun masuk ritme panen dan rantai pasok mampu memenuhi syarat mutu serta kepatuhan pasar yang dituju.",
+        "recommendations": [
+          {
+            "audience": "Kelompok tani dan pendamping lapangan",
+            "action": "Mulai menata pencatatan kebun (lokasi, luas, tahun tanam, sumber bibit) dan SOP budidaya sejak awal.",
+            "basis": "Kementan menyebut penguatan kesiapan daerah menghadapi EUDR dan dorongan praktik berkelanjutan untuk kopi [4]."
+          },
+          {
+            "audience": "Pemda dan dinas terkait",
+            "action": "Sinkronkan program distribusi bibit dan pelatihan budidaya dengan target perluasan 99.000 hektare agar kesiapan hulu seragam.",
+            "basis": "Target perluasan lahan di tingkat nasional dan contoh tanam perdana di daerah menunjukkan perlunya koordinasi eksekusi [1][3]."
+          }
+        ],
+        "source_urls": [
+          "https://news.google.com/rss/articles/CBMilwFBVV95cUxQZkNDVDBOMklNd3hxcnV6aGVsWkE2R0QzelhWbWItOTJERUpUcDR6dk4wLVAtaTE4LVpubWo4VVhheDBmN2t0VzZkTjRFZG9IU0U5VXFLcFpXdG5LMWJvQW84N1kyLXIyVVZxaVBSUDFXZllneldvRXF3QW1kUGZRVUZpSnhFa2tCbkNXTXNQS2hFZUpOc01r?oc=5",
+          "https://news.google.com/rss/articles/CBMixgFBVV95cUxQaXRlLXJ2LThxNHFPbUxrcUdqNmpEUUlUTUl6UlRYeGwyaW5Cc0N1VF9WWEV2VENnSWVfRGM1dGphWlJiZHpLYmtXYmgtZXhOZ2FTa1Zfcmg4dkFtXzdqQkVZVlM2SUZralFGVUtUNkJLaWw3YnJvUVpRTjdZdWk1N09GaXhWZUZGUi1QVEs3MFpOblRVTmdRS1ZWZDRxUVlQZWFJbFpPLWFEMzRtd3RGMExFZkM3cGF4VTd4QXdBRExucjh3c0E?oc=5",
+          "https://news.google.com/rss/articles/CBMixAFBVV95cUxQOHQxSmllWDdDMDlVWWM3SUpZZXkzYU5CdzlaSFlDdzlDZHJxRGhQNFZwVFd2YWp4ckJTVy1RZHNpVmxpZTZQSE9ZdEtQMnI5TU1TSllXbVRvY0dTNWk0SFlVY2t5QmhVOFRIcUxBbjYyYkM0anhnNkRUVmdNSmppOTlDd180UjlRckpBVU4tN21qWHZGaUhXQVZxOG0wNk1OQkhDUGNfWmVFUk9Pc3dIbE81R1JnZ3JBci1aRWp6U2cydVFi?oc=5",
+          "https://news.google.com/rss/articles/CBMivgFBVV95cUxQZnNPb3BkUjNTM1ZlVTNTb0pWWkRlSkx6NHJ5bTY2NWJEeVN0Q21Qc2Nic3M5bUxNUHE2WXkwSndXMnhnQTZZd3ZiMERZcG5rN3dxMENpdHRRUlhSUDRTM1psZXBuNklhSkplU21NbWdULTBaekc2Umt2NTFrdlRuUmRzYkFhd2tmRDAxdktDbUFRc2l0MDM4OTdzY3Y1TnBlTFQ1MGZhVy10cUc3eEFocldyaWpUOVBiTGoxY3BR?oc=5",
+          "https://news.google.com/rss/articles/CBMitgFBVV95cUxPT21IeUFOQ1BQdlZQdkZmSkp5MlJXbV9HM25iNlRPY29WdFJ6V0sxY29GREVfUW1EN2JSMGd6UFhBOThhVUstV1RmTGxrYy1NeHBuaDJfWDhsZFpkZ1YzMERHMk05TkVNMlNOaDIxUzhOWld6bURFY3ltRXZyQXZ2SXNSM3VSZEhQYkxxek1MdUJBQWotRVUzbGJwaE1Vd3I2Wnp2T092ZUpCZGNsTFF5NGFxNC1BZw?oc=5"
+        ],
+        "evidence_note": "Beberapa sumber adalah rencana/program dan belum memuat data hasil panen atau dampaknya."
+      },
+      "input_sources": [
+        {
+          "id": "1",
+          "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOd25YOGVGVHhEVTFQM2ZNUzdBQ0hoWktLWEtYdmFicmd5aEJ6RVhjN2U2X2FRSzN2Rmtic1NnNlg4Ti01UlUxVFhUNm5jR21adHhfVVVDSDRQQktMX3BFRjU5a0VZMzJLVFE5OTY1UU5yNHJuZUxlNnY2bGNpa0pPSGhGSWZMVC14T1FJTktiNktadlI0NHc3X0x0QXpfWVNyaDYwa3hFMWdYaDRoYW8wNnl6b0ptQS1mQTQ0LS1nalNLUjA?oc=5",
+          "title": "Secangkir Kopi Pesawaran, Sejuta Cerita dari Rumah Petani Hutan Halaman 1 - Kompasiana.com",
+          "source": "Kompasiana.com",
+          "published_at": "Fri, 02 Oct 2026 03:58:38 GMT"
+        },
+        {
+          "id": "2",
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOZndoOUJra19JTjcyaUNKSUhsRHRyTEVpWDdnTDRDdFFoRkJoY25xOTQ3M2Z6N0FGTm95WWJwcGZsSVFfSHJNVWFORG94SklyYWNyYnVUb3J4MFZNcVAwT0g1R1ZWdW1PX3VONS03LXkwUEpJQmVwWEttdnFmTEMtNlNUejZHc1JydGJrQnFJSG1ORHZHSElDdW1wS3FfeG5QRzJBQ0w2WQ?oc=5",
+          "title": "Ineru Coffee & Matcha, Suaka di Tengah Belantara Beton - Kompas.id",
+          "source": "Kompas.id",
+          "published_at": "Fri, 02 Oct 2026 00:33:15 GMT"
+        },
+        {
+          "id": "3",
+          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQTmRnTFpQWUJoOG1yOEFLMXB3cm5jWlAzOWJvZmRCa2I2Wk1hcEZrVGVrNkladmQxZ2JkeV9KM1ZfQXE2eGJ6LXg1RFUtQ3JBd0pzTVd4eGotbkg0RmszYkUtZVAxcExrVHpMNTdTREtHT2w3WGUwaldfbHliOEZ4WEFtSnY4ZndRVWlSbDE1WEpZbUVtQ0ZMaFRnMEhQU3lSXy15MTZHR05GMWM?oc=5",
+          "title": "Ineru Coffee & Matcha, Suaka di Tengah Belantara Beton - Kompas.id",
+          "source": "Kompas.id",
+          "published_at": "Fri, 02 Oct 2026 00:33:15 GMT"
+        },
+        {
+          "id": "4",
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPc3ZCN3hVbmZ6T0RtOUFjUExJTWpudVJGWDhVWkE2ejZTZmNxZmU2a1pCOWNpN2JqaU1JYVZkUVBZaGg3VmZSSXV1RVJwckx3T3Y0S3JUaUdydXVzU1d0R0lFZm1neE5DdGUtT3daVXM5TzVKeUloYk9XRkhyd0d1TTh5bDdGT2M?oc=5",
+          "title": "COFFEE & DRIVE: EV & HYBRID EXPERIENCE GIIAS SEMARANG - Bank Syariah Indonesia",
+          "source": "Bank Syariah Indonesia",
+          "published_at": "Thu, 01 Oct 2026 23:26:56 GMT"
+        },
+        {
+          "id": "5",
+          "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE5uS1hHZ3VpX19adFp6RjJGRGpKdkxZQWRLYWZoS0NzWFFTMmlrcGFJd19rZ3RWUk1FVDU5T0lEZlZBcG5VTXBLX2R2X01INnJ6YU51bUNRU3ZXRUNZUTNLLWxVZzdoNHpPQjZKTW5zWW5ldmN3dHE2UlJCT3NMaWc?oc=5",
+          "title": "COFFEE & DRIVE: EV & HYBRID EXPERIENCE MAKASSAR - Bank Syariah Indonesia",
+          "source": "Bank Syariah Indonesia",
+          "published_at": "Thu, 01 Oct 2026 19:05:25 GMT"
+        },
+        {
+          "id": "6",
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQMlRlMGluQWRnYi14VjdoOXRTT2hMZjNKeG02cWhyc0lPdDhDLVh3M0FfTnY2djZvNUVVTm9lYzhwT29HeDJEXzhqMUw0WlQzTHEyZ3RLd0l5cURXSDJLbXg5bVVmcHgtVTBTVHF4QlJsYVpiSFhwYTNxZmFucThHa3dFMlRoT1JTUk5nZUpDVkJoVTJuSkxJa2RiSFRBY1FYckpBUw?oc=5",
+          "title": "Pecinta Kopi Semarang, % Arabica dari Kyoto Kini Hadir di 23 Semarang - Metro Jateng",
+          "source": "Metro Jateng",
+          "published_at": "Thu, 01 Oct 2026 14:10:39 GMT"
+        },
+        {
+          "id": "7",
+          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPT21IeUFOQ1BQdlZQdkZmSkp5MlJXbV9HM25iNlRPY29WdFJ6V0sxY29GREVfUW1EN2JSMGd6UFhBOThhVUstV1RmTGxrYy1NeHBuaDJfWDhsZFpkZ1YzMERHMk05TkVNMlNOaDIxUzhOWld6bURFY3ltRXZyQXZ2SXNSM3VSZEhQYkxxek1MdUJBQWotRVUzbGJwaE1Vd3I2Wnp2T092ZUpCZGNsTFF5NGFxNC1BZw?oc=5",
+          "title": "Video: Yellow Bourbon, Kopi Langka yang Ternyata Ditanam di Garut - 20.detik.com",
+          "source": "20.detik.com",
+          "published_at": "Thu, 01 Oct 2026 12:38:17 GMT"
+        },
+        {
+          "id": "8",
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQZkNDVDBOMklNd3hxcnV6aGVsWkE2R0QzelhWbWItOTJERUpUcDR6dk4wLVAtaTE4LVpubWo4VVhheDBmN2t0VzZkTjRFZG9IU0U5VXFLcFpXdG5LMWJvQW84N1kyLXIyVVZxaVBSUDFXZllneldvRXF3QW1kUGZRVUZpSnhFa2tCbkNXTXNQS2hFZUpOc01r?oc=5",
+          "title": "Kementan Siapkan 99.000 Hektare untuk Perluasan Tanaman Kopi - Majalah HORTUS Archipelago",
+          "source": "Majalah HORTUS Archipelago",
+          "published_at": "Thu, 01 Oct 2026 09:45:26 GMT"
+        },
+        {
+          "id": "9",
+          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQZnNPb3BkUjNTM1ZlVTNTb0pWWkRlSkx6NHJ5bTY2NWJEeVN0Q21Qc2Nic3M5bUxNUHE2WXkwSndXMnhnQTZZd3ZiMERZcG5rN3dxMENpdHRRUlhSUDRTM1psZXBuNklhSkplU21NbWdULTBaekc2Umt2NTFrdlRuUmRzYkFhd2tmRDAxdktDbUFRc2l0MDM4OTdzY3Y1TnBlTFQ1MGZhVy10cUc3eEFocldyaWpUOVBiTGoxY3BR?oc=5",
+          "title": "Kementan Perkuat Kesiapan Daerah Hadapi EUDR, Dorong Sawit, Kakao, dan Kopi Berkelanjutan - pertanian.go.id",
+          "source": "pertanian.go.id",
+          "published_at": "Thu, 01 Oct 2026 06:10:00 GMT"
+        },
+        {
+          "id": "10",
+          "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQaXRlLXJ2LThxNHFPbUxrcUdqNmpEUUlUTUl6UlRYeGwyaW5Cc0N1VF9WWEV2VENnSWVfRGM1dGphWlJiZHpLYmtXYmgtZXhOZ2FTa1Zfcmg4dkFtXzdqQkVZVlM2SUZralFGVUtUNkJLaWw3YnJvUVpRTjdZdWk1N09GaXhWZUZGUi1QVEs3MFpOblRVTmdRS1ZWZDRxUVlQZWFJbFpPLWFEMzRtd3RGMExFZkM3cGF4VTd4QXdBRExucjh3c0E?oc=5",
+          "title": "Pemkab Jayawijaya dorong pengembangan kebun kopi di 328 kampung pada empat kelurahan - ANTARA News Papua",
+          "source": "ANTARA News Papua",
+          "published_at": "Thu, 01 Oct 2026 04:33:33 GMT"
+        },
+        {
+          "id": "11",
+          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNeUU2TTZLYnNrelFfS0xyRm5EcFdSOThNakowakFzUW1hbWpoTXkxeTliTzBZalhmVzF0RmZKTExKcl9lOTFYMmJMYmtQaWJ6U3BEYmVDeklzSkZQX1EzbFFIOURHSGNlSFBtUUZVVTVuNWZpemp3YnUwYlB3WUZLejE2Z1dscllWdk52ZGJoMnpxWHZRWmVaUWt0ZG1ESGZlMG9mMkNDU2M3TFVqdmN4LTktaw?oc=5",
+          "title": "Mahasiswa Teknik Industri UMB Ajak Zainn Coffee Olah Ampas Kopi Jadi Media Tanam - jurnalpost.com",
+          "source": "jurnalpost.com",
+          "published_at": "Wed, 30 Sep 2026 11:12:34 GMT"
+        },
+        {
+          "id": "12",
+          "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxQOHQxSmllWDdDMDlVWWM3SUpZZXkzYU5CdzlaSFlDdzlDZHJxRGhQNFZwVFd2YWp4ckJTVy1RZHNpVmxpZTZQSE9ZdEtQMnI5TU1TSllXbVRvY0dTNWk0SFlVY2t5QmhVOFRIcUxBbjYyYkM0anhnNkRUVmdNSmppOTlDd180UjlRckpBVU4tN21qWHZGaUhXQVZxOG0wNk1OQkhDUGNfWmVFUk9Pc3dIbE81R1JnZ3JBci1aRWp6U2cydVFi?oc=5",
+          "title": "Polbangtan Kementan Dorong Pengembangan Kopi Arabika di Taput, 40 Ribu Bibit Ditanam Perdana - indexsumut.com",
+          "source": "indexsumut.com",
+          "published_at": "Wed, 30 Sep 2026 02:43:00 GMT"
+        }
+      ]
+    },
     {
       "cluster_id": "riset-tren-konsumen",
       "cluster_name": "Riset & Tren Konsumen",

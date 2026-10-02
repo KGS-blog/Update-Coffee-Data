@@ -1,7 +1,7 @@
 {
   "meta": {
     "source": "Yahoo Finance via GitHub Actions",
-    "lastUpdated": "2026-10-01T22:29:21.394Z",
+    "lastUpdated": "2026-10-02T04:50:30.715Z",
     "nextUpdate": "Auto: GitHub Actions",
     "version": "1.0"
   },
@@ -551,9 +551,9 @@
     "symbol": "IDR=X",
     "name": "IDR/USD",
     "unit": "IDR/USD",
-    "current": 17940,
-    "change": 8,
-    "changePercent": 0.04,
+    "current": 17932,
+    "change": -8,
+    "changePercent": -0.04,
     "history": [
       {
         "month": "Jan 2021",
@@ -817,7 +817,7 @@
       },
       {
         "month": "Okt 2026",
-        "value": 17940
+        "value": 17932
       }
     ],
     "stale": false
