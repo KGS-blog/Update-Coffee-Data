@@ -7,6 +7,7 @@ const crypto = require("node:crypto");
 const { BERITA_KLASTER } = require("../BERITA_KLASTER_FINAL.js");
 
 const DATA = path.join(__dirname, "..", "data");
+const REMOTE_CLUSTER_DECISIONS_URL = "https://raw.githubusercontent.com/KGS-blog/Blog/main/kabar-kopi-cluster-decisions.json";
 const read = (name, fallback) => {
   try { return JSON.parse(fs.readFileSync(path.join(DATA, name), "utf8")); }
   catch (_) { return fallback; }
@@ -17,6 +18,29 @@ const slug = s => String(s || "").normalize("NFKD").toLowerCase().replace(/[^a-z
 const articleKey = a => String(a.tautan || a.link || a.judul || a.title || "");
 const titleOf = a => String(a.judul || a.title || "").trim();
 const dateOf = a => Date.parse(a.tanggal || a.pubDate || "") || 0;
+
+async function syncEditorClusterDecisions() {
+  try {
+    const response = await fetch(REMOTE_CLUSTER_DECISIONS_URL, { cache: "no-store" });
+    if (response.status === 404) return;
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const remote = await response.json();
+    if (!remote || !Array.isArray(remote.accepted_candidate_ids) || !Array.isArray(remote.rejected_candidate_ids)) {
+      throw new Error("format keputusan tidak valid");
+    }
+    const local = read("cluster-decisions.json", { overrides: [] });
+    write("cluster-decisions.json", {
+      version: 1,
+      overrides: Array.isArray(remote.overrides) ? remote.overrides : (local.overrides || []),
+      accepted_candidate_ids: [...new Set(remote.accepted_candidate_ids.map(String))],
+      rejected_candidate_ids: [...new Set(remote.rejected_candidate_ids.map(String))],
+      updated_at: remote.updated_at || null
+    });
+    console.log("loaded editor cluster decisions from Blog repo");
+  } catch (error) {
+    console.log("using the last local cluster decisions:", error.message);
+  }
+}
 
 function buildArchiveIndex() {
   const dir = path.join(DATA, "arsip");
@@ -176,6 +200,7 @@ async function generateEditorial(articles, taxonomy) {
 }
 
 async function main() {
+  await syncEditorClusterDecisions();
   buildArchiveIndex();
   const taxonomy = effectiveTaxonomy();
   const source = read("berita-all.json", { artikel: [] });

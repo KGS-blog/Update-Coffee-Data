@@ -74,3 +74,7 @@ plain
 Copy
 https://KGS-blog.github.io/Update-Coffee-Data/data/market-data.json
 Make sure Update-Coffee-Data repo has GitHub Pages enabled.
+
+## Kabar Kopi cluster review
+
+AI cluster candidates appear in the **Klaster baru untuk ditinjau** panel on the Semua Berita Kopi tab. Editors can accept or reject a candidate there after signing in with the blog admin password. The decision is stored by the authenticated Cloudflare Worker in `KGS-blog/Blog/kabar-kopi-cluster-decisions.json`; the next scheduled portal-data run imports it into `data/cluster-decisions.json` and applies it to clustering. The decision can take up to six hours to appear in the processed feed.
