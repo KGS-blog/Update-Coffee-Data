@@ -32,6 +32,16 @@ jobs:
         run: node scripts/process-portal-data.js
       - name: Publish crawlable editorial pages and sitemap
         run: node scripts/generate-editorial-pages.js
+      - name: Sync generated analysis to Kabar Kopi member API
+        if: ${{ secrets.MEVO_SYNC_SECRET != '' }}
+        env:
+          MEVO_SYNC_SECRET: ${{ secrets.MEVO_SYNC_SECRET }}
+        run: |
+          curl --fail --silent --show-error \
+            -H "Authorization: Bearer ${MEVO_SYNC_SECRET}" \
+            -H "Content-Type: application/json" \
+            --data-binary @data/editorial-current.json \
+            https://blog-api.qcoid.com/api/admin/premium/sync
       - name: Commit and push if changed
         run: |
           git config user.name 'github-actions[bot]'
