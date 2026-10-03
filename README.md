@@ -1,10 +1,10 @@
 QBridge Coffee Market Data
-Auto-updating live market data for coffee futures and IDR/USD exchange rate, deployed via GitHub Pages + GitHub Actions.
+Auto-updating coffee reference prices and IDR/USD exchange rate, deployed via GitHub Pages + GitHub Actions.
 📊 Data Sources
 Table
 Asset	Symbol	Source	Unit
 Arabica C-Market	KC=F	Yahoo Finance	cents/lb
-Robusta London	RM=F	Yahoo Finance	USD/ton
+Robusta group indicator	ICO-ROBUSTAS	International Coffee Organization	US cents/lb; converted to USD/ton equivalent for calculator
 IDR/USD	IDR=X	Yahoo Finance	IDR per 1 USD
 🚀 Setup
 1. Create Repository
@@ -43,8 +43,9 @@ Copy
 └── README.md
 🔧 How It Works
 GitHub Actions runs every 6 hours (or manual trigger)
-fetch-prices.js calls Yahoo Finance API for KC=F, RM=F, IDR=X
-Data is appended to data/market-data.json history array
+scripts/fetch.js obtains Arabica and IDR/USD from Yahoo Finance and the daily Robustas group indicator from the ICO public indicator feed.
+ICO Robustas is not the ICE London futures contract. The feed stores its original value (US cents/lb), observation date, and source URL, plus a converted USD/metric-ton equivalent used by the calculator.
+This feed does not create a synthetic history for ICO Robustas; do not infer a historical chart from the calculator equivalent.
 JSON is committed back to repo
 GitHub Pages serves updated JSON at same domain (no CORS!)
 HTML fetches ./data/market-data.json via fetch() and renders Chart.js
@@ -56,7 +57,8 @@ fetch('./data/market-data.json')
   .then(r => r.json())
   .then(data => {
     // data.arabica.history[] → Chart.js
-    // data.robusta.history[] → Chart.js
+    // data.robusta.sourceValue → ICO Robustas in US cents/lb
+    // data.robusta.sourceDate → date of the ICO observation
     // data.idrUsd.history[] → Chart.js
   });
 Because HTML and JSON are on the same domain (*.github.io), no CORS issues!

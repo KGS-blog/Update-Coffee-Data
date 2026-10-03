@@ -3,9 +3,8 @@
 // Output:
 //   data/market-data.json  -> format lama dipertahankan (arabica/robusta/idrUsd + history)
 //   data/ekspor.json       -> validated BPS coffee trade records by HS code
-// Sumber: Yahoo Finance v8 (KC=F, RM=F, IDR=X) + BPS. Tanpa dependency npm.
-// Catatan: RM=F (Robusta London) tidak tersedia di Yahoo -> robusta ditandai stale,
-// nilai terakhir dipertahankan agar tidak ada angka palsu yang mengaku live.
+// Sumber: Yahoo Finance v8 (KC=F, IDR=X), ICO daily Robustas indicator, dan BPS.
+// ICO Robustas adalah indikator grup dalam US cents/lb, bukan kuotasi futures ICE.
 
 const fs = require("fs");
 const path = require("path");
@@ -49,11 +48,12 @@ function round2(n) { return Math.round(n * 100) / 100; }
     data = {
       meta: { source: "Yahoo Finance via GitHub Actions", version: "2.0", historyNote: "Riwayat sebelum Sep 2026 adalah baseline ilustratif; data mulai Sep 2026 adalah data riil harian." },
       arabica: { symbol: "KC=F", name: "Arabica C-Market", unit: "cents/lb", history: [] },
-      robusta: { symbol: "RM=F", name: "Robusta London", unit: "USD/ton", history: [] },
+      robusta: { symbol: "ICO-ROBUSTAS", name: "ICO Robustas Daily Indicator", unit: "USD/ton equivalent", history: [] },
       idrUsd: { symbol: "IDR=X", name: "IDR/USD", unit: "IDR/USD", history: [] }
     };
   }
   if (!data.meta) data.meta = {};
+  data.meta.source = "Yahoo Finance (Arabica, IDR/USD) + International Coffee Organization (ICO Robustas daily indicator) via GitHub Actions";
   const label = monthLabel();
   const errors = {};
 
@@ -82,21 +82,38 @@ function round2(n) { return Math.round(n * 100) / 100; }
     console.log("IDR/USD:", data.idrUsd.current);
   } catch (e) { errors.kurs = e.message; data.idrUsd.stale = true; }
 
-  // --- Robusta RM=F (umumnya tidak tersedia di Yahoo -> jujur: stale) ---
+  // --- ICO Robustas daily group indicator (US cents/lb -> USD/metric ton equivalent) ---
   try {
-    let p = await yahoo("RM=F");
-    if (p < 1000) p = p * 1000;
-    const prev = data.robusta.current || p;
+    const ico = await getJSON("https://data.ico.org/api/globe/icip");
+    const daily = Array.isArray(ico && ico.daily) ? ico.daily : [];
+    const points = daily.filter(x => x && /^\d{4}-\d{2}-\d{2}$/.test(x.date) && Number.isFinite(Number(x.ROBUSTAS)) && Number(x.ROBUSTAS) > 0).sort((a, b) => a.date.localeCompare(b.date));
+    if (!points.length) throw new Error("ICO tidak mengirim nilai Robustas harian");
+    const latest = points[points.length - 1];
+    const sourceCentsLb = Number(latest.ROBUSTAS);
+    // Convert cents/lb to USD per metric tonne: 1 cent/lb = 22.0462262185 USD/t.
+    const p = Math.round(sourceCentsLb * 22.0462262185);
+    const ageDays = (Date.now() - Date.parse(latest.date + "T00:00:00Z")) / 86400000;
+    if (ageDays < -1 || ageDays > 7) throw new Error("data ICO terakhir terlalu lama: " + latest.date);
+    const previous = points.length > 1 ? Number(points[points.length - 2].ROBUSTAS) : sourceCentsLb;
+    const previousTon = Math.round(previous * 22.0462262185);
+    data.robusta.symbol = "ICO-ROBUSTAS";
+    data.robusta.name = "ICO Robustas Daily Indicator";
+    data.robusta.unit = "USD/ton equivalent";
     data.robusta.current = Math.round(p);
-    data.robusta.change = Math.round(p - prev);
-    data.robusta.changePercent = prev ? round2((p - prev) / prev * 100) : 0;
+    data.robusta.change = Math.round(p - previousTon);
+    data.robusta.changePercent = previousTon ? round2((p - previousTon) / previousTon * 100) : 0;
+    data.robusta.sourceValue = sourceCentsLb;
+    data.robusta.sourceUnit = "US cents/lb";
+    data.robusta.sourceDate = latest.date;
+    data.robusta.sourceUrl = "https://www.ico.org/resources/public-market-information/";
+    data.robusta.lastUpdated = now;
+    data.robusta.history = []; // No synthetic or monthly-mean history presented as daily observations.
     data.robusta.stale = false;
-    upsertMonth(data.robusta.history, label, data.robusta.current);
-    console.log("Robusta:", data.robusta.current, "USD/ton");
+    console.log("ICO Robustas:", sourceCentsLb, "US cents/lb (", data.robusta.current, "USD/t equivalent), date", latest.date);
   } catch (e) {
     errors.robusta = e.message;
-    data.robusta.stale = true; // nilai terakhir dipertahankan, ditandai tidak segar
-    console.log("Robusta: RM=F tidak tersedia -> stale (nilai terakhir dipertahankan)");
+    data.robusta.stale = true; // retain last successful value, never present it as current
+    console.log("ICO Robustas unavailable -> stale:", e.message);
   }
 
   // --- Seri harian 6 bulan (untuk analisis deskriptif di blog) ---
