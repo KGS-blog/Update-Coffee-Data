@@ -2,7 +2,7 @@
 // Repo: KGS-blog/Update-Coffee-Data — dijalankan via GitHub Actions (.github/workflows/)
 // Output:
 //   data/market-data.json  -> format lama dipertahankan (arabica/robusta/idrUsd + history)
-//   data/ekspor.json       -> BPS dataexim HS 0901 (butuh secret BPS_API_KEY)
+//   data/ekspor.json       -> validated BPS coffee trade records by HS code
 // Sumber: Yahoo Finance v8 (KC=F, RM=F, IDR=X) + BPS. Tanpa dependency npm.
 // Catatan: RM=F (Robusta London) tidak tersedia di Yahoo -> robusta ditandai stale,
 // nilai terakhir dipertahankan agar tidak ada angka palsu yang mengaku live.
@@ -420,36 +420,54 @@ function round2(n) { return Math.round(n * 100) / 100; }
   fs.writeFileSync(mPath, JSON.stringify(data, null, 2));
   console.log("saved data/market-data.json");
 
-  // --- BPS ekspor HS 0901: ENGINE dulu, API langsung sebagai fallback ---
+  // --- BPS coffee exports: read only the validated coffee trade-by-HS dataset ---
   {
     try {
       const jb = await getJSON("https://kgs-blog.github.io/coffee-feed/bps.json");
-      let arrB = Array.isArray(jb) ? jb : ((jb && Array.isArray(jb.data)) ? jb.data : ((jb && Array.isArray(jb.bulanan)) ? jb.bulanan : []));
-      if (!arrB.length && jb && typeof jb === "object") {
-        const vals = Object.keys(jb).map(function (k) { return jb[k]; }).filter(Array.isArray);
-        if (vals.length) arrB = vals.reduce(function (a, b2) { return a.length >= b2.length ? a : b2; }, []);
-      }
-      if (arrB.length) {
-        const ambB = function () { for (let i = 0; i < arguments.length - 1; i++) { const v = arguments[i]; if (v !== undefined && v !== null && v !== "") return v; } return ""; };
-        const flatB = arrB.map(function (r) {
-          return {
-            bulan: ambB(r.bulan, r.periode, r.month),
-            tahun: ambB(r.tahun, r.year, r.Year),
-            nilaiUSD: ambB(r.nilaiUSD, r.nilai_usd, r.value, r.usd, r.Value),
-            nettoKg: ambB(r.nettoKg, r.netto_kg, r.netweight, r.netto, r.kg),
-            negara: ambB(r.negara, r.countryName, r.ctr, r.destinasi)
-          };
-        });
-        fs.writeFileSync(path.join(OUT, "ekspor.json"), JSON.stringify({
-          sumber: "Engine KGS (data BPS)",
-          data: flatB,
-          mentah: jb,
-          fetched: now
-        }, null, 1));
-        console.log("saved data/ekspor.json dari ENGINE:", flatB.length, "entri");
-      } else {
-        throw new Error("engine bps kosong");
-      }
+      const datasets = Array.isArray(jb && jb.datasets) ? jb.datasets : [];
+      const tradeDataset = datasets.find(function (dataset) { return dataset && dataset.id === "bps_coffee_trade_hs"; });
+      const records = tradeDataset && Array.isArray(tradeDataset.records) ? tradeDataset.records : [];
+      const exportRecords = records.filter(function (row) {
+        // This dataset is already coffee-only; its rows do not populate `commodity`.
+        return row && row.trade_flow === "export" &&
+          Number.isFinite(Number(row.year)) && Number.isFinite(Number(row.volume)) &&
+          Number.isFinite(Number(row.value)) && Number.isFinite(Number(row.value_usd)) && Boolean(row.hs_code);
+      }).map(function (row) {
+        return {
+          source: row.source || "BPS",
+          year: Number(row.year),
+          geography: row.geography || "Indonesia",
+          trade_flow: row.trade_flow,
+          hs_code: String(row.hs_code),
+          hs_description_id: row.hs_description_id || "",
+          volume: Number(row.volume),
+          volume_unit: row.volume_unit || "ton",
+          value: Number(row.value),
+          value_unit: row.value_unit || "",
+          value_usd: Number(row.value_usd),
+          raw_volume: row.raw_volume || "",
+          raw_value: row.raw_value || "",
+          source_note: row.scope_note || "",
+          publication_url: row.publication_url || "",
+          publication_revised_at: row.publication_revised_at || "",
+          table: row.table || "",
+          validation: row.validation || ""
+        };
+      });
+      const years = exportRecords.map(function (row) { return row.year; });
+      const output = {
+        status: exportRecords.length ? "success" : "no_data",
+        sumber: "BPS via KGS Coffee Feed",
+        dataset_id: tradeDataset ? tradeDataset.id : "bps_coffee_trade_hs",
+        judul: tradeDataset ? tradeDataset.title : "Perdagangan kopi menurut kode HS",
+        fetched: now,
+        data: exportRecords,
+        tahun: years.length ? { dari: Math.min.apply(null, years), hingga: Math.max.apply(null, years) } : null,
+        catatan: tradeDataset ? (tradeDataset.usage_note || "") : "Dataset perdagangan kopi menurut kode HS belum ditemukan."
+      };
+      fs.writeFileSync(path.join(OUT, "ekspor.json"), JSON.stringify(output, null, 2));
+      if (exportRecords.length) console.log("saved data/ekspor.json: BPS coffee exports", exportRecords.length, "records");
+      else { errors.ekspor = "dataset BPS coffee trade HS belum memuat baris ekspor tervalidasi"; console.log("BPS coffee exports: no validated rows"); }
     } catch (eB) {
       fs.writeFileSync(path.join(OUT, "ekspor.json"), JSON.stringify({ status: "Error", message: "Engine BPS: " + eB.message, data: [], fetched: now }));
       console.log("engine bps error:", eB.message);
