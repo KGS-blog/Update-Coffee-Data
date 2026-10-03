@@ -223,8 +223,9 @@
     function renderGeneratedEditorial(data){
       generatedEditorialData=data;
       const list=data.articles||[];
-      const mode=data.mode==='editor'?'Pilihan editor':'Pilihan otomatis';
-      $('#analysis-period').textContent=(data.status==='needs_api_key'?'Pembuatan artikel AI belum aktif: OPENAI_API_KEY belum dikonfigurasi. ':mode+' · feed diperbarui '+(data.feed_fetched||'waktu tidak tersedia')+' · artikel dibuat '+(data.generated_at||'belum tersedia')+'.');
+      const mode=language==='en'?(data.mode==='editor'?'Editor-selected':'Automatically selected'):(data.mode==='editor'?'Pilihan editor':'Pilihan otomatis');
+      const dateLabel=value=>{const date=new Date(value||'');return Number.isNaN(date.getTime())?(value||'not available'):new Intl.DateTimeFormat(language==='en'?'en-GB':'id-ID',{dateStyle:'medium',timeStyle:'short'}).format(date)};
+      $('#analysis-period').textContent=(data.status==='needs_api_key'?(language==='en'?'AI article generation is not active: OPENAI_API_KEY is not configured. ':'Pembuatan artikel AI belum aktif: OPENAI_API_KEY belum dikonfigurasi. '):mode+(language==='en'?' · feed updated ':' · feed diperbarui ')+dateLabel(data.feed_fetched)+(language==='en'?' · articles generated ':' · artikel dibuat ')+dateLabel(data.generated_at)+'.');
       if(!list.length){$('#analysis-reports').innerHTML='<div class="empty">Belum ada artikel analisis yang dibuat untuk periode ini.</div>';return}
       $('#analysis-reports').innerHTML=list.map(x=>{
         const a=(language==='en'?x.article_en:x.article)||{};
@@ -236,7 +237,7 @@
           const label='['+s.id+'] '+(s.source||'Sumber asli')+(shortSourceDate(s.published_at)?' · '+shortSourceDate(s.published_at):'');
           return '<a href="'+esc(url||'#')+'" target="_blank" rel="noopener noreferrer" title="'+esc(s.title||'Buka sumber asli')+'">'+esc(label)+'</a>';
         }).join('');
-        return '<article class="report-card"><span class="candidate-badge">Artikel analisis AI · '+esc(x.cluster_name||x.cluster_id)+' · '+esc(x.period_days)+' hari</span><h3>'+esc(a.title||'Analisis pasar kopi')+'</h3><p><strong>'+esc(a.summary||a.dek||'')+'</strong></p><p>'+esc(a.lead||'')+'</p>'+(a.sections||[]).map(s=>'<h4>'+esc(s.heading||'')+'</h4>'+(s.paragraphs||[]).map(p=>'<p>'+esc(p)+'</p>').join('')).join('')+'<h4>Kesimpulan</h4><p>'+esc(a.conclusion||'')+'</p><h4>Rekomendasi</h4><ul>'+(a.recommendations||[]).map(r=>'<li><strong>'+esc(r.audience)+':</strong> '+esc(r.action)+' <span class="source-line">Dasar: '+esc(r.basis)+'</span></li>').join('')+'</ul><p class="source-line">Batas bukti: '+esc(a.evidence_note||'')+'</p><div class="report-sources" aria-label="Sumber berita bernomor">'+sources+'</div></article>';
+        return '<article class="report-card"><span class="candidate-badge">'+(language==='en'?'AI analysis · ':'Artikel analisis AI · ')+esc(language==='en'?clusterLabel(x.cluster_name||x.cluster_id):(x.cluster_name||x.cluster_id))+' · '+esc(x.period_days)+' '+(language==='en'?'days':'hari')+'</span><h3>'+esc(a.title||'Analisis pasar kopi')+'</h3><p><strong>'+esc(a.summary||a.dek||'')+'</strong></p><p>'+esc(a.lead||'')+'</p>'+(a.sections||[]).map(s=>'<h4>'+esc(s.heading||'')+'</h4>'+(s.paragraphs||[]).map(p=>'<p>'+esc(p)+'</p>').join('')).join('')+'<h4>Kesimpulan</h4><p>'+esc(a.conclusion||'')+'</p><h4>Rekomendasi</h4><ul>'+(a.recommendations||[]).map(r=>'<li><strong>'+esc(r.audience)+':</strong> '+esc(r.action)+' <span class="source-line">Dasar: '+esc(r.basis)+'</span></li>').join('')+'</ul><p class="source-line">Batas bukti: '+esc(a.evidence_note||'')+'</p><div class="report-sources" aria-label="Sumber berita bernomor">'+sources+'</div></article>';
       }).join('');
     }
     function renderLegacyArchive(j){
