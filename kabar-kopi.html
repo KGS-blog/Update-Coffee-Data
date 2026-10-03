@@ -5,6 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Portal berita, data, dan analisis khusus kopi Indonesia dan dunia.">
   <title>Kabar Kopi — Berita, Data & Analisis Industri Kopi</title>
+  <link rel="canonical" href="https://kgs-blog.github.io/Update-Coffee-Data/kabar-kopi.html">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Kabar Kopi">
+  <meta property="og:title" content="Kabar Kopi — Berita, Data & Analisis Industri Kopi">
+  <meta property="og:description" content="Berita kopi dari berbagai sumber, data industri, peta topik, dan analisis editorial berbasis pemberitaan.">
+  <meta property="og:url" content="https://kgs-blog.github.io/Update-Coffee-Data/kabar-kopi.html">
+  <meta property="og:locale" content="id_ID">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta name="twitter:card" content="summary">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Kabar Kopi","url":"https://kgs-blog.github.io/Update-Coffee-Data/kabar-kopi.html","description":"Berita, data, dan analisis industri kopi Indonesia dan dunia.","inLanguage":["id","en"]}</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700;800&display=swap" rel="stylesheet">
@@ -51,6 +61,7 @@
     function translated(value){if(language!=='en')return value;let out=value;for(const [id,en] of Object.entries(translations).sort((a,b)=>b[0].length-a[0].length)){if(id.length>10&&out.includes(id))out=out.split(id).join(en)}out=out.replace(/(\d[\d,.]*) berita pendukung/g,'$1 supporting stories').replace(/(\d[\d,.]*) berita/g,'$1 stories');return out}
     function translateNode(node){if(!node.isConnected||!node.parentElement)return;if(!textOriginal.has(node))textOriginal.set(node,node.nodeValue);const value=translated(textOriginal.get(node));if(node.nodeValue!==value)node.nodeValue=value;}
     function setLanguage(next){language=next==='en'?'en':'id';try{localStorage.setItem('kabar-kopi-language',language)}catch(_){}document.documentElement.lang=language;document.title=language==='en'?'Kabar Kopi — Coffee Industry News, Data & Analysis':'Kabar Kopi — Berita, Data & Analisis Industri Kopi';$$('[data-language]').forEach(b=>{const active=b.dataset.language===language;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active))});const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);while(walker.nextNode())translateNode(walker.currentNode);$$('[placeholder],[aria-label]').forEach(el=>['placeholder','aria-label'].forEach(attr=>{const key='data-i18n-original-'+attr;if(!el.hasAttribute(key))el.setAttribute(key,el.getAttribute(attr)||'');const original=el.getAttribute(key);el.setAttribute(attr,language==='en'?(translations[original]||original):original)}));if(clusterResult)mapClusters(clusterResult);if(clusterCandidateData?.candidates)renderCandidates(clusterCandidateData);if(generatedEditorialData)renderGeneratedEditorial(generatedEditorialData);if(legacyArchiveData)renderLegacyArchive(legacyArchiveData);}
+    const setLanguageBase=setLanguage;setLanguage=function(next){setLanguageBase(next);const description=language==='en'?'Coffee news from multiple sources, industry data, topic maps, and editorial analysis based on current coverage.':'Berita kopi dari berbagai sumber, data industri, peta topik, dan analisis editorial berbasis pemberitaan.';const meta=$('meta[name="description"]');if(meta)meta.content=description;const og=$('meta[property="og:description"]');if(og)og.content=description;const ogTitle=$('meta[property="og:title"]');if(ogTitle)ogTitle.content=document.title;const locale=$('meta[property="og:locale"]');if(locale)locale.content=language==='en'?'en_US':'id_ID';};
     const textObserver=new MutationObserver(records=>{for(const record of records)for(const node of record.addedNodes){if(node.nodeType===Node.TEXT_NODE)translateNode(node);else if(node.nodeType===Node.ELEMENT_NODE){const walker=document.createTreeWalker(node,NodeFilter.SHOW_TEXT);while(walker.nextNode())translateNode(walker.currentNode)}}});
     textObserver.observe(document.body,{childList:true,subtree:true});$$('[data-language]').forEach(b=>b.addEventListener('click',()=>setLanguage(b.dataset.language)));
     const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
@@ -74,7 +85,8 @@
     let clusterCandidateData={candidates:[]},clusterEditorSession='',pendingClusterDecision=null,clusterDecisionNotice='';
     const EDITOR_API='https://blog-api.qcoid.com/api';
     const pageSize=24;
-    function activate(name){$$('.nav button[data-tab]').forEach(b=>b.classList.toggle('active',b.dataset.tab===name));$$('.section').forEach(s=>s.classList.toggle('active',s.id==='tab-'+name));if(name==='berita')setTimeout(()=>$('#news-search').focus({preventScroll:true}),80);window.scrollTo({top:0,behavior:'smooth'});}
+    function activate(name,updateUrl=true){if(!['beranda','berita','analisis'].includes(name))name='beranda';$$('.nav button[data-tab]').forEach(b=>b.classList.toggle('active',b.dataset.tab===name));$$('.section').forEach(s=>s.classList.toggle('active',s.id==='tab-'+name));if(updateUrl&&location.hash!=='#'+name)history.pushState({tab:name},'', '#'+name);if(name==='berita')setTimeout(()=>$('#news-search').focus({preventScroll:true}),80);window.scrollTo({top:0,behavior:'smooth'});}
+    window.addEventListener('popstate',()=>activate(location.hash.slice(1),false));
     $$('.nav button[data-tab]').forEach(b=>b.addEventListener('click',()=>activate(b.dataset.tab)));
     $$('[data-go]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();activate(a.dataset.go)}));
     $('#home-topics').addEventListener('click',e=>{const b=e.target.closest('[data-topic]');if(b){activate('berita');$('#news-topic').value=b.dataset.topic;renderNews(true)}});
@@ -220,6 +232,7 @@
       finally{if(submit)submit.disabled=false;}
     });
     $('#cluster-editor-cancel').addEventListener('click',()=>{pendingClusterDecision=null;$('#cluster-editor-password').value='';$('#cluster-editor-status').textContent='';$('#cluster-editor-access').hidden=true;});
+    function editorialPageUrl(item,lang){const id=(item.cluster_id||item.cluster_name||item.article?.title||'analisis-pasar-kopi').normalize('NFKD').replace(/[\u0300-\u036f]/g,'').toLowerCase().replace(/&/g,' dan ').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,70)||'analisis-pasar-kopi';return 'analisis-kopi/'+id+'-'+(lang==='en'?'en':'id')+'.html';}
     function renderGeneratedEditorial(data){
       generatedEditorialData=data;
       const list=data.articles||[];
@@ -237,7 +250,8 @@
           const label='['+s.id+'] '+(s.source||'Sumber asli')+(shortSourceDate(s.published_at)?' · '+shortSourceDate(s.published_at):'');
           return '<a href="'+esc(url||'#')+'" target="_blank" rel="noopener noreferrer" title="'+esc(s.title||'Buka sumber asli')+'">'+esc(label)+'</a>';
         }).join('');
-        return '<article class="report-card"><span class="candidate-badge">'+(language==='en'?'AI analysis · ':'Artikel analisis AI · ')+esc(language==='en'?clusterLabel(x.cluster_name||x.cluster_id):(x.cluster_name||x.cluster_id))+' · '+esc(x.period_days)+' '+(language==='en'?'days':'hari')+'</span><h3>'+esc(a.title||'Analisis pasar kopi')+'</h3><p><strong>'+esc(a.summary||a.dek||'')+'</strong></p><p>'+esc(a.lead||'')+'</p>'+(a.sections||[]).map(s=>'<h4>'+esc(s.heading||'')+'</h4>'+(s.paragraphs||[]).map(p=>'<p>'+esc(p)+'</p>').join('')).join('')+'<h4>Kesimpulan</h4><p>'+esc(a.conclusion||'')+'</p><h4>Rekomendasi</h4><ul>'+(a.recommendations||[]).map(r=>'<li><strong>'+esc(r.audience)+':</strong> '+esc(r.action)+' <span class="source-line">Dasar: '+esc(r.basis)+'</span></li>').join('')+'</ul><p class="source-line">Batas bukti: '+esc(a.evidence_note||'')+'</p><div class="report-sources" aria-label="Sumber berita bernomor">'+sources+'</div></article>';
+        const reportUrl=editorialPageUrl(x,language);const readText=language==='en'?'Read full analysis →':'Baca analisis lengkap →';
+        return '<article class="report-card"><span class="candidate-badge">'+(language==='en'?'AI analysis · ':'Artikel analisis AI · ')+esc(language==='en'?clusterLabel(x.cluster_name||x.cluster_id):(x.cluster_name||x.cluster_id))+' · '+esc(x.period_days)+' '+(language==='en'?'days':'hari')+'</span><h3><a href="'+esc(reportUrl)+'">'+esc(a.title||'Analisis pasar kopi')+'</a></h3><p><strong>'+esc(a.summary||a.dek||'')+'</strong></p><p>'+esc(a.lead||'')+'</p><div class="report-sources" aria-label="Sumber berita bernomor">'+sources+'</div><p><a href="'+esc(reportUrl)+'" class="report-read-link">'+readText+'</a></p></article>';
       }).join('');
     }
     function renderLegacyArchive(j){
