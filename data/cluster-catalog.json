@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-10-03T04:33:24.812Z",
+  "generated_at": "2026-10-03T07:47:45.105Z",
   "clusters": [
     {
       "slug": "harga-pasar",
@@ -1385,6 +1385,29 @@
         "pertumbuhan penjualan",
         "diskon",
         "promo"
+      ]
+    },
+    {
+      "slug": "budaya-sastra-kopi",
+      "nama": "Budaya & Sastra Kopi",
+      "nama_en": "Budaya & Sastra Kopi",
+      "analisis_id": "budaya-sastra-kopi",
+      "kunci": [
+        "budaya",
+        "sastra",
+        "novel",
+        "cerita",
+        "fiksi",
+        "esai",
+        "puisi",
+        "tradisi",
+        "sosiologi",
+        "Bourdieu",
+        "narasi",
+        "Budaya",
+        "&",
+        "Sastra",
+        "Kopi"
       ]
     }
   ]

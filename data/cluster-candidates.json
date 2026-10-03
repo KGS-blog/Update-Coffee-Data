@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-10-03T04:33:24.812Z",
+  "generated_at": "2026-10-03T07:47:45.105Z",
   "minimum_support": 3,
   "review_status": "ai_review_enabled",
   "candidates": [
@@ -27,7 +27,7 @@
         "https://news.google.com/rss/articles/CBMivAFBVV95cUxNMkxibGZRYU00ZWN6aVR6ME5heXNoQlpDaWZpNThZYnY3TGczSFNoeUtGQ2dnU21XVjh1d2VNMU9pWUl0YzI2NVJuX3Fpb2tUeUF5TkRGS3ZGcFM5YWc4WDN5a2h6Q3VVTEw1MjhIbDdDeExaY25iQW9ZQnUxNHREUVFBdmFjZEk0UHVraS10RVdHdlR1R3BmT09GX0p2Rmd2VWdTQXZJTVV6SVRXUHVJa1lOMjNsczkzOFVXVdIBwgFBVV95cUxPTUFCaGltbWtTeWdWa2Qzai1lQ0NqYW5Nc1cwWElRQ2JaYzJtb0FKa2lZbXp1TFFRc3lSTnh2bnBuVVE0Tno1aS1CaFJpVHhWLWdaRzRxRGJpdU4tckl1SmhaMmZRSF9UNEtxajNwMjNSUVk3WjdUYkdpSk1qSGYxeWpNeWpMOWhIemlKbWhpZUpvdnctLVV1WkFCXzMxOXZxeENKVDVkMTQ0LWd2bE1GaWlOd1lObVZmTkljX1V3eEZldw?oc=5"
       ],
       "rationale": "Sedikitnya tiga artikel bertema kopi dalam konteks budaya/sastra yang tidak sesuai dengan kategori industri, kedai, event, atau teknik seduh.",
-      "status": "pending",
+      "status": "accepted",
       "first_suggested_at": "2026-10-01T19:32:54.975Z",
       "last_updated_at": "2026-10-01T19:32:54.975Z"
     }
