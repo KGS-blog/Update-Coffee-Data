@@ -3,7 +3,7 @@ const path = require('node:path');
 const { BERITA_KLASTER } = require('../BERITA_KLASTER_FINAL.js');
 
 const ROOT = path.resolve(__dirname, '..');
-const SITE = 'https://kgs-blog.github.io/Update-Coffee-Data';
+const SITE = 'https://kabarkopi.qcoid.com';
 const sourcePath = path.join(ROOT, 'data/editorial-current.json');
 const doc = fs.existsSync(sourcePath) ? JSON.parse(fs.readFileSync(sourcePath, 'utf8')) : { articles: [] };
 const reports = (doc.articles || []).filter(item => item.status === 'ai_generated' || item.status === 'editor_selected');
