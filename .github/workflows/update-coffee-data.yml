@@ -33,9 +33,9 @@ jobs:
       - name: Publish crawlable editorial pages and sitemap
         run: node scripts/generate-editorial-pages.js
       - name: Sync generated analysis to Kabar Kopi member API
-        if: ${{ secrets.MEVO_SYNC_SECRET != '' }}
         env:
           MEVO_SYNC_SECRET: ${{ secrets.MEVO_SYNC_SECRET }}
+        if: ${{ env.MEVO_SYNC_SECRET != '' }}
         run: |
           curl --fail --silent --show-error \
             -H "Authorization: Bearer ${MEVO_SYNC_SECRET}" \
