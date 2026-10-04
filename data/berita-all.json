@@ -1,6 +1,42 @@
 {
   "artikel": [
     {
+      "judul": "FCE 2026 Hari Ketiga, Penggiat Kopi NTT Diajak Tingkatkan Kualitas hingga Buka Peluang Ekspor",
+      "tautan": "https://kupang.tribunnews.com/provinsi-ntt/982088/fce-2026-hari-ketiga-penggiat-kopi-ntt-diajak-tingkatkan-kualitas-hingga-buka-peluang-ekspor",
+      "tanggal": "2026-10-04 07:44:57",
+      "sumber": "Tribun News",
+      "ringkasan": "Pius mengatakan, kemampuan dan pencapaian seseorang dalam industri tidak akan cukup apabila tidak dibarengi dengan sikap yang baik.",
+      "asal": "newsdata",
+      "link_type": "publisher_article",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned"
+    },
+    {
+      "judul": "Gabungkan Kopi dan Terasi, Minuman Baru di Vietnam Ini Bikin Penasaran",
+      "tautan": "https://www.kompas.com/food/read/2026/10/04/140028175/gabungkan-kopi-dan-terasi-minuman-baru-di-vietnam-ini-bikin-penasaran",
+      "tanggal": "2026-10-04 07:00:28",
+      "sumber": "Kompas.com",
+      "ringkasan": "Eksperimen minuman di Vietnam ini dibuat dari bahan yang tidak biasa. Kopi dan terasi fermentasi jadi bahan utamanya. Ternyata ini rasanya.",
+      "asal": "newsdata",
+      "link_type": "publisher_article",
+      "cluster_id": "ekspor-daya-saing",
+      "cluster_name": "Ekspor & Daya Saing",
+      "cluster_assignment": "keyword"
+    },
+    {
+      "judul": "BRK Reborn, Bisakah Sistem Baru Mengubah Nasib Petani Kopi Bondowoso? (Bagian 3–Tamat)",
+      "tautan": "https://beritajatim.com/brk-reborn-bisakah-sistem-baru-mengubah-nasib-petani-kopi-bondowoso-bagian-3-tamat",
+      "tanggal": "2026-10-04 05:08:27",
+      "sumber": "Berita Jawa Timur",
+      "ringkasan": "BRK Reborn, Bisakah Sistem Baru Mengubah Nasib Petani Kopi Bondowoso? (Bagian 3–Tamat) . 👇 Bondowoso sedang mencoba membangun kembali konsep Bondowoso Republik Kopi melalui pendekatan yang berbeda. -- Ikuti kami di 👉https://bit.ly/392voLE #beritaviral #jawatimur #viral berita #beritaterkini #terpopuler #news #beritajatim #infojatim #newsupdate #FYI #fyp",
+      "asal": "newsdata",
+      "link_type": "publisher_article",
+      "cluster_id": "produksi-panen",
+      "cluster_name": "Produksi & Panen",
+      "cluster_assignment": "keyword"
+    },
+    {
       "judul": "Dari Cherry ke Green Bean, ke Mana Perginya Nilai Kopi Bondowoso? (Bagian 2)",
       "tautan": "https://beritajatim.com/dari-cherry-ke-green-bean-kemana-perginya-nilai-kopi-bondowoso-bagian-2",
       "tanggal": "2026-10-04 03:04:13",
@@ -483,5 +519,5 @@
       "link_type": "publisher_article"
     }
   ],
-  "fetched": "2026-10-04T16:46:55.947Z"
+  "fetched": "2026-10-04T21:04:11.662Z"
 }
