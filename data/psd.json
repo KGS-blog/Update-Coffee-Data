@@ -1,5 +1,5 @@
 {
-  "sumber": "USDA FAS PSD API — Indonesia",
+  "sumber": "USDA FAS PSD API",
   "data": [
     {
       "tahun": "2026",
@@ -135,5 +135,5 @@
       "negara": "Indonesia"
     }
   ],
-  "fetched": "2026-10-04T12:01:52.114Z"
+  "fetched": "2026-10-04T14:24:17.428Z"
 }
