@@ -358,7 +358,10 @@ function round2(n) { return Math.round(n * 100) / 100; }
           const n = String(r.countryName || r.name || "").toUpperCase();
           return cc === idCode || cc === "536" || g === "ID" || n.indexOf("INDONESIA") !== -1;
         });
-        const pakai = idn.length ? idn : rows.arr.slice(0, 50);
+        if (!idn.length) {
+          rows = null;
+        }
+        const pakai = idn;
         const ambil = function () {
           for (let i = 0; i < arguments.length - 1; i++) {
             const v = arguments[i];
@@ -375,17 +378,23 @@ function round2(n) { return Math.round(n * 100) / 100; }
             negara: ambil(r.countryName, r.name, r.gencCode, r.country)
           };
         }).filter(function (r) { return String(r.atribut) !== ""; });
-        fs.writeFileSync(path.join(OUT, "psd.json"), JSON.stringify({
-          sumber: "USDA FAS PSD — " + rows.sumber,
-          percobaan: coba,
-          contohBaris: rows.arr[0],
-          data: flat.length ? flat : pakai,
-          fetched: now
-        }, null, 2));
-        console.log("saved data/psd.json:", flat.length, "atribut |", coba.join(" | "));
+        if (rows && flat.length) {
+          fs.writeFileSync(path.join(OUT, "psd.json"), JSON.stringify({
+            sumber: "USDA FAS PSD API",
+            data: flat.map(function (row) { return { tahun: row.tahun, atribut: row.atribut, nilai: row.nilai, satuan: row.satuan, negara: "Indonesia" }; }),
+            fetched: now
+          }, null, 2));
+          console.log("saved data/psd.json:", flat.length, "atribut");
+        } else {
+          const previous = (function () { try { return JSON.parse(fs.readFileSync(path.join(OUT, "psd.json"), "utf8")); } catch (_) { return { data: [] }; } })();
+          fs.writeFileSync(path.join(OUT, "psd.json"), JSON.stringify({ status: "stale", sumber: "USDA FAS PSD API", message: "Pembaruan data gagal; nilai terakhir ditampilkan bila tersedia.", data: previous.data || [], fetched: previous.fetched || "", attempted_at: now }, null, 2));
+          errors.psd = "USDA returned no attributable Indonesia records";
+          console.log("psd.json stale: no attributable Indonesia records");
+        }
       } else {
-        fs.writeFileSync(path.join(OUT, "psd.json"), JSON.stringify({ status: "Error", message: "Gagal semua varian: " + coba.join(" | "), data: [], fetched: now }));
-        console.log("psd.json Error:", coba.join(" | "));
+        const previous = (function () { try { return JSON.parse(fs.readFileSync(path.join(OUT, "psd.json"), "utf8")); } catch (_) { return { data: [] }; } })();
+        fs.writeFileSync(path.join(OUT, "psd.json"), JSON.stringify({ status: "stale", sumber: "USDA FAS PSD API", message: "Pembaruan data gagal; nilai terakhir ditampilkan bila tersedia.", data: previous.data || [], fetched: previous.fetched || "", attempted_at: now }));
+        console.log("psd.json stale:", coba.join(" | "));
         errors.psd = "kosong";
       }
     }

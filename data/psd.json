@@ -1,155 +1,138 @@
 {
-  "sumber": "USDA FAS PSD — /api/psd/commodity/0711100/country/ID/year/2026",
-  "percobaan": [
-    "countries:251 id=ID",
-    "commodities:63 kopi=[\"0711100:Coffee, Green\"]",
-    "/api/psd/commodity/0711100/country/ID/year/2026 -> 19",
-    "attributes:85",
-    "units:42"
-  ],
-  "contohBaris": {
-    "commodityCode": "0711100",
-    "countryCode": "ID",
-    "marketYear": "2026",
-    "calendarYear": "2026",
-    "month": "07",
-    "attributeId": 20,
-    "unitId": 2,
-    "value": 751
-  },
+  "sumber": "USDA FAS PSD API — Indonesia",
   "data": [
     {
       "tahun": "2026",
       "atribut": "Beginning Stocks",
       "nilai": 751,
       "satuan": "(1000 60 KG BAGS)   ",
-      "negara": ""
+      "negara": "Indonesia"
     },
     {
       "tahun": "2026",
       "atribut": "Arabica Production",
       "nilai": 1380,
       "satuan": "(1000 60 KG BAGS)   ",
-      "negara": ""
+      "negara": "Indonesia"
     },
     {
       "tahun": "2026",
       "atribut": "Robusta Production",
       "nilai": 10000,
       "satuan": "(1000 60 KG BAGS)   ",
-      "negara": ""
+      "negara": "Indonesia"
     },
     {
       "tahun": "2026",
       "atribut": "Other Production",
       "nilai": 0,
       "satuan": "(1000 60 KG BAGS)   ",
-      "negara": ""
+      "negara": "Indonesia"
     },
     {
       "tahun": "2026",
       "atribut": "Production",
       "nilai": 11380,
       "satuan": "(1000 60 KG BAGS)   ",
-      "negara": ""
+      "negara": "Indonesia"
     },
     {
       "tahun": "2026",
       "atribut": "Bean Imports",
       "nilai": 400,
       "satuan": "(1000 60 KG BAGS)   ",
-      "negara": ""
+      "negara": "Indonesia"
     },
     {
       "tahun": "2026",
       "atribut": "Roast & Ground Imports",
       "nilai": 20,
       "satuan": "(1000 60 KG BAGS)   ",
-      "negara": ""
+      "negara": "Indonesia"
     },
     {
       "tahun": "2026",
       "atribut": "Soluble Imports",
       "nilai": 1000,
       "satuan": "(1000 60 KG BAGS)   ",
-      "negara": ""
+      "negara": "Indonesia"
     },
     {
       "tahun": "2026",
       "atribut": "Imports",
       "nilai": 1420,
       "satuan": "(1000 60 KG BAGS)   ",
-      "negara": ""
+      "negara": "Indonesia"
     },
     {
       "tahun": "2026",
       "atribut": "Total Supply",
       "nilai": 13551,
       "satuan": "(1000 60 KG BAGS)   ",
-      "negara": ""
+      "negara": "Indonesia"
     },
     {
       "tahun": "2026",
       "atribut": "Bean Exports",
       "nilai": 7000,
       "satuan": "(1000 60 KG BAGS)   ",
-      "negara": ""
+      "negara": "Indonesia"
     },
     {
       "tahun": "2026",
       "atribut": "Roast & Ground Exports",
       "nilai": 50,
       "satuan": "(1000 60 KG BAGS)   ",
-      "negara": ""
+      "negara": "Indonesia"
     },
     {
       "tahun": "2026",
       "atribut": "Soluble Exports",
       "nilai": 1000,
       "satuan": "(1000 60 KG BAGS)   ",
-      "negara": ""
+      "negara": "Indonesia"
     },
     {
       "tahun": "2026",
       "atribut": "Exports",
       "nilai": 8050,
       "satuan": "(1000 60 KG BAGS)   ",
-      "negara": ""
+      "negara": "Indonesia"
     },
     {
       "tahun": "2026",
       "atribut": "Rst,Ground Dom. Consum",
       "nilai": 3280,
       "satuan": "(1000 60 KG BAGS)   ",
-      "negara": ""
+      "negara": "Indonesia"
     },
     {
       "tahun": "2026",
       "atribut": "Soluble Dom. Cons.",
       "nilai": 1550,
       "satuan": "(1000 60 KG BAGS)   ",
-      "negara": ""
+      "negara": "Indonesia"
     },
     {
       "tahun": "2026",
       "atribut": "Domestic Consumption",
       "nilai": 4830,
       "satuan": "(1000 60 KG BAGS)   ",
-      "negara": ""
+      "negara": "Indonesia"
     },
     {
       "tahun": "2026",
       "atribut": "Ending Stocks",
       "nilai": 671,
       "satuan": "(1000 60 KG BAGS)   ",
-      "negara": ""
+      "negara": "Indonesia"
     },
     {
       "tahun": "2026",
       "atribut": "Total Distribution",
       "nilai": 13551,
       "satuan": "(1000 60 KG BAGS)   ",
-      "negara": ""
+      "negara": "Indonesia"
     }
   ],
   "fetched": "2026-10-04T12:01:52.114Z"

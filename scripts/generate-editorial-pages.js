@@ -31,9 +31,12 @@ fs.mkdirSync(output, { recursive: true });
 const esc = value => String(value || '').replace(/[&<>"']/g, char => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[char]));
 const slugify = value => String(value || '').normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/&/g,' dan ').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,70) || 'analisis-pasar-kopi';
 const safeUrl = value => { try { const url = new URL(value); return ['https:','http:'].includes(url.protocol) ? url.href : ''; } catch (_) { return ''; } };
+const sourceRouteLabel = value => { try { return new URL(value).hostname === 'news.google.com' ? ' · tautan Google News' : ''; } catch (_) { return ''; } };
 const fmtID = value => new Intl.NumberFormat('id-ID').format(value);
 const lastDataDate = [psdDoc.fetched, exportDoc.fetched].filter(Boolean).sort().at(-1);
-const dataUpdated = lastDataDate ? `Data terakhir diperbarui ${new Intl.DateTimeFormat('id-ID',{day:'numeric',month:'short',year:'numeric',timeZone:'UTC'}).format(new Date(lastDataDate))}` : 'Tanggal pembaruan data tidak tersedia';
+const dataUpdated = psdDoc.status === 'stale'
+  ? `Data USDA: pembaruan terakhir berhasil ${psdDoc.fetched ? new Intl.DateTimeFormat('id-ID',{day:'numeric',month:'short',year:'numeric',timeZone:'UTC'}).format(new Date(psdDoc.fetched)) : 'tanggal tidak tersedia'}`
+  : lastDataDate ? `Data terakhir diperbarui ${new Intl.DateTimeFormat('id-ID',{day:'numeric',month:'short',year:'numeric',timeZone:'UTC'}).format(new Date(lastDataDate))}` : 'Tanggal pembaruan data tidak tersedia';
 const psdRows = psdDoc.data || [];
 const psdYear = Math.max(0, ...psdRows.map(row => Number(row.tahun) || 0));
 const psdLabels = { Production: 'Produksi', Exports: 'Ekspor', 'Domestic Consumption': 'Konsumsi domestik', 'Ending Stocks': 'Stok akhir' };
@@ -54,15 +57,17 @@ const newsDate = item => item.tanggal ? new Intl.DateTimeFormat('id-ID',{day:'nu
 const categories = (clustering.klaster || []).slice();
 if ((clustering.lainnya_items || []).length) categories.push({ nama: 'Lainnya', items: clustering.lainnya_items });
 categories.sort((a,b)=>(b.items||[]).length-(a.items||[]).length);
-const topicChips = categories.slice(0,10).map(c=>`<button class="topic-chip" data-topic="${esc(c.nama)}">${esc(c.nama)} · ${fmtID((c.items||[]).length)}</button>`).join('');
-const topicRows = categories.slice(0,10).map(c=>`<div class="topic-row"><button data-topic="${esc(c.nama)}">${esc(c.nama)}</button><span>${fmtID((c.items||[]).length)} berita</span></div>`).join('') || '<p class="empty">Peta topik belum tersedia.</p>';
+const classifiedCategories = categories.filter(c => String(c.nama).toLocaleLowerCase('id') !== 'lainnya');
+const unclassifiedCount = (clustering.lainnya_items || []).length;
+const topicChips = classifiedCategories.slice(0,10).map(c=>`<button class="topic-chip" data-topic="${esc(c.nama)}">${esc(c.nama)} · ${fmtID((c.items||[]).length)}</button>`).join('') + (unclassifiedCount ? `<span class="topic-chip" aria-label="Berita belum terklasifikasi">Belum terklasifikasi · ${fmtID(unclassifiedCount)}</span>` : '');
+const topicRows = classifiedCategories.slice(0,10).map(c=>`<div class="topic-row"><button data-topic="${esc(c.nama)}">${esc(c.nama)}</button><span>${fmtID((c.items||[]).length)} berita</span></div>`).join('') + (unclassifiedCount ? `<div class="topic-row"><span>Belum terklasifikasi</span><span>${fmtID(unclassifiedCount)} berita</span></div>` : '') || '<p class="empty">Peta topik belum tersedia.</p>';
 const totalNews = Number(clustering.total_artikel) || (feed.artikel||[]).length;
 const topicNames = new Map(categories.flatMap(c=>(c.items||[]).map(item=>[String(item.tautan||''),c.nama])));
 const newsCards = feedArticles.slice().sort((a,b)=>Date.parse(b.tanggal||'')-Date.parse(a.tanggal||'')).slice(0,24).map(item=>{
   const url=safeUrl(item.tautan), title=esc(item.judul||'Berita kopi'), cluster=esc(topicNames.get(String(item.tautan||''))||'Lainnya');
-  return `<article class="news-card"><span class="category">${cluster}</span><h2 class="news-title">${url?`<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${title}</a>`:title}</h2><div class="meta">${esc(item.sumber||'Sumber berita')}${newsDate(item)?` <i class="dot"></i> ${newsDate(item)}`:''}</div>${item.ringkasan?`<p class="news-desc">${esc(item.ringkasan)}</p>`:''}</article>`;
+  return `<article class="news-card"><span class="category">${cluster}</span><h2 class="news-title">${url?`<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${title}</a>`:title}</h2><div class="meta">${esc(item.sumber||'Sumber berita')}${newsDate(item)?` <i class="dot"></i> ${newsDate(item)}`:''}${sourceRouteLabel(url)}</div>${item.ringkasan?`<p class="news-desc">${esc(item.ringkasan)}</p>`:''}</article>`;
 }).join('');
-const analysisCards = categories.map((c,index)=>{const count=(c.items||[]).length, share=totalNews?count/totalNews*100:0, avg=categories.length?totalNews/categories.length:0;return `<article class="analysis-card"><div class="eyebrow">${fmtID(count)} berita</div><div class="num">${Math.round(share)}%</div><h3>${esc(c.nama)}</h3><p>${avg?(count/avg).toLocaleString('id-ID',{maximumFractionDigits:1}):'0'}× rata-rata volume klaster · peringkat ${index+1} dari ${categories.length}</p><div class="bar" aria-label="Porsi dari seluruh berita"><i style="width:${Math.max(1,share)}%"></i></div></article>`}).join('');
+const analysisCards = classifiedCategories.map((c,index)=>{const count=(c.items||[]).length, share=totalNews?count/totalNews*100:0, avg=classifiedCategories.length?totalNews/classifiedCategories.length:0;return `<article class="analysis-card"><div class="eyebrow">${fmtID(count)} berita</div><div class="num">${Math.round(share)}%</div><h3>${esc(c.nama)}</h3><p>${avg?(count/avg).toLocaleString('id-ID',{maximumFractionDigits:1}):'0'}× rata-rata volume klaster · peringkat ${index+1} dari ${classifiedCategories.length}</p><div class="bar" aria-label="Porsi dari seluruh berita"><i style="width:${Math.max(1,share)}%"></i></div></article>`}).join('');
 const publicReports = reports.map(item=>{const article=item.article||{}, page=`analisis-kopi/${fileFor(item,'id')}`, cluster=BERITA_KLASTER.find(entry=>entry.slug===item.cluster_id||entry.nama===item.cluster_name), used=new Set(article.source_urls||[]);let refs=(item.input_sources||[]).filter(s=>used.has(s.url));if(!refs.length)refs=item.input_sources||[];const sources=refs.map(s=>{const u=safeUrl(s.url);return u?`<li><a href="${esc(u)}" rel="noopener noreferrer">[${esc(s.id)}] ${esc(s.source||'Sumber asli')}${s.title?` — ${esc(s.title)}`:''}</a></li>`:''}).filter(Boolean).join('');return `<article class="report-card"><span class="candidate-badge">Artikel analisis · Publik · ${esc(item.cluster_name||cluster?.nama||'Kopi')} · ${esc(item.period_days||'')} hari</span><h3><a href="${esc(page)}">${esc(article.title||'Analisis pasar kopi')}</a></h3>${article.summary?`<p><strong>${esc(article.summary)}</strong></p>`:''}${article.lead?`<p>${esc(article.lead)}</p>`:''}<p class="source-line">Analisis editorial otomatis dari berita yang dihimpun. Kategori dan jumlah berita menunjukkan pola pemberitaan, bukan verifikasi kebenaran klaim atau dampak ekonomi.</p>${sources?`<details><summary>Sumber yang dikutip (${refs.length})</summary><ol>${sources}</ol></details>`:''}<p><a href="${esc(page)}">Baca analisis lengkap, kesimpulan, rekomendasi, sumber, dan batas bukti →</a></p></article>`}).join('');
 function renderPage(item, language) {
   const en = language === 'en';
@@ -125,7 +130,7 @@ if (leadNews) {
 const latest = latestNews.slice(1).map(item => {
   const url = safeUrl(item.tautan);
   const title = esc(item.judul || 'Berita kopi');
-  return `<li>${url ? `<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${title}</a>` : title}<div class="meta">${esc(item.sumber || 'Sumber berita')}${item.tanggal ? ` <i class="dot"></i> ${esc(new Intl.DateTimeFormat('id-ID',{day:'numeric',month:'short',year:'numeric'}).format(new Date(item.tanggal)))}` : ''}</div></li>`;
+  return `<li>${url ? `<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${title}</a>` : title}<div class="meta">${esc(item.sumber || 'Sumber berita')}${item.tanggal ? ` <i class="dot"></i> ${esc(new Intl.DateTimeFormat('id-ID',{day:'numeric',month:'short',year:'numeric'}).format(new Date(item.tanggal)))}` : ''}${sourceRouteLabel(url)}</div></li>`;
 }).join('');
 if (latest) portal = portal.replace('<!-- STATIC_LATEST -->', latest);
 fs.writeFileSync(path.join(ROOT, 'index.html'), portal);

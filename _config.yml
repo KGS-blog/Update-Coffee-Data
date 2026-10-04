@@ -1,0 +1,3 @@
+# Keep workflow review state out of the public GitHub Pages site output.
+exclude:
+  - data/cluster-candidates.json
