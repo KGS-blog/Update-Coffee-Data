@@ -280,7 +280,7 @@
       const list=data.articles||[];
       const mode=language==='en'?(data.mode==='editor'?'Editor-selected':'Automatically selected'):(data.mode==='editor'?'Pilihan editor':'Pilihan otomatis');
       const dateLabel=value=>{const date=new Date(value||'');return Number.isNaN(date.getTime())?(value||'not available'):new Intl.DateTimeFormat(language==='en'?'en-GB':'id-ID',{dateStyle:'medium',timeStyle:'short'}).format(date)};
-      $('#analysis-period').textContent=(data.status==='needs_api_key'?(language==='en'?'AI article generation is not active: OPENAI_API_KEY is not configured. ':'Pembuatan artikel AI belum aktif: OPENAI_API_KEY belum dikonfigurasi. '):mode+(language==='en'?' · feed updated ':' · feed diperbarui ')+dateLabel(data.feed_fetched)+(language==='en'?' · articles generated ':' · artikel dibuat ')+dateLabel(data.generated_at)+'.');
+      $('#analysis-period').textContent=data.status==='retained_previous'?(language==='en'?'Showing the last published editorial. There are not yet enough direct publisher sources for a new report, so this analysis has not been updated. ':'Menampilkan editorial terakhir yang diterbitkan. Belum cukup sumber penerbit langsung untuk membuat laporan baru, jadi analisis ini belum diperbarui. ')+dateLabel(data.generated_at)+'.':(data.status==='needs_api_key'?(language==='en'?'AI article generation is not active: OPENAI_API_KEY is not configured. ':'Pembuatan artikel AI belum aktif: OPENAI_API_KEY belum dikonfigurasi. '):mode+(language==='en'?' · feed updated ':' · feed diperbarui ')+dateLabel(data.feed_fetched)+(language==='en'?' · articles generated ':' · artikel dibuat ')+dateLabel(data.generated_at)+'.');
       if(!list.length){$('#analysis-reports').innerHTML='<div class="empty">'+(language==='en'?'No editorial analysis is available for this period yet.':'Belum ada analisis editorial untuk periode ini.')+'</div>';return}
       $('#analysis-reports').innerHTML=list.map(x=>{
         const a=(language==='en'?x.article_en:x.article)||{};
@@ -290,7 +290,8 @@
         const sources=refs.map(s=>{
           const url=safeUrl(s.url);
           const label='['+s.id+'] '+(s.source||'Sumber asli')+(shortSourceDate(s.published_at)?' · '+shortSourceDate(s.published_at):'');
-          return '<a href="'+esc(url||'#')+'" target="_blank" rel="noopener noreferrer" title="'+esc(s.title||'Buka sumber asli')+'">'+esc(label)+'</a>';
+          const viaGoogle=!!url&&new URL(url).hostname==='news.google.com';
+          return '<a href="'+esc(url||'#')+'" target="_blank" rel="noopener noreferrer" title="'+esc(s.title||'Buka sumber asli')+'">'+esc(label+(viaGoogle?(language==='en'?' · Google News aggregator':' · agregator Google News'):''))+'</a>';
         }).join('');
         const reportUrl=editorialPageUrl(x,language);const readText=language==='en'?'Read full analysis →':'Baca analisis lengkap →';
         const fullReport='<p><a href="'+esc(reportUrl)+'" class="report-read-link">'+readText+'</a></p>';

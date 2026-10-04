@@ -309,7 +309,9 @@ async function generateEditorial(articles, taxonomy) {
       if (previous) out.push(previous);
     }
   }
-  const next = { version: 1, generated_at: now, feed_fetched: read("berita-all.json", {}).fetched || null, mode: requested.length ? "editor" : "auto", settings, status: process.env.OPENAI_API_KEY ? (out.length ? "ready" : "no_eligible_topics") : "needs_api_key", articles: out };
+  const retainedPrevious = out.length === 0 && (old.articles || []).length > 0;
+  if (retainedPrevious) out.push(...old.articles);
+  const next = { version: 1, generated_at: now, feed_fetched: read("berita-all.json", {}).fetched || null, mode: requested.length ? "editor" : "auto", settings, status: retainedPrevious ? "retained_previous" : process.env.OPENAI_API_KEY ? (out.length ? "ready" : "no_eligible_topics") : "needs_api_key", articles: out };
   if (process.env.OPENAI_API_KEY) {
     const history = read("editorial-archive.json", { version: 1, articles: [] });
     const additions = out.filter(a => !(history.articles || []).some(h => h.fingerprint === a.fingerprint));
