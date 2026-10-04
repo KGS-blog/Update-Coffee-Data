@@ -57,13 +57,32 @@ function getKeywordCluster(article) {
   return BERITA_KLASTER.find(c => c.kunci.some(k => title.includes(String(k).toLowerCase()))) || null;
 }
 
+// Strong, contextual signals take precedence over broad legacy assignments.
+// For example, "coffee + resmi dibuka/hadir" describes a venue launch, not
+// literary or cultural commentary merely because its title also mentions kopi.
+function getHighConfidenceCluster(article, taxonomy) {
+  const title = titleOf(article).toLowerCase();
+  const opening = /\b(resmi\s+dibuka|resmi\s+hadir|dibuka|hadir|soft\s+opening|grand\s+opening|buka\s+cabang|spot\s+ngopi\s+baru|tempat\s+nongkrong\s+baru)\b/.test(title);
+  const coffeeBusiness = /\b(kopi|coffee)\b/.test(title);
+  const venue = /\b(kedai|kafe|cafe|café|gerai|outlet|coffee\s*shop|coffee\s*bar|resto|restoran|spot\s+ngopi|tempat\s+nongkrong)\b/.test(title);
+  const eventContext = /\b(pasar|festival|kompetisi|lomba|pameran|munas|hari\s+kopi|coffee\s+day|party|konferensi|seminar|gjaw|soundrenaline)\b/.test(title);
+  const namedVenueOpening = /\b(kopi|coffee)\b.*\b(resmi\s+dibuka|resmi\s+hadir|dibuka|hadir)\b/.test(title);
+  if (coffeeBusiness && !eventContext && (venue || (opening && namedVenueOpening))) {
+    return taxonomy.find(c => c.slug === "kedai-konsumsi-gaya-hidup") || null;
+  }
+  return null;
+}
+
 function effectiveTaxonomy() {
   const generated = read("cluster-candidates.json", { candidates: [] });
   const decisions = read("cluster-decisions.json", {});
   const accepted = new Set(decisions.accepted_candidate_ids || []);
   const custom = (generated.candidates || []).filter(c => accepted.has(c.id)).map(c => ({
     slug: c.id, nama: c.name, nama_en: c.name_en || c.name, analisis_id: c.id,
-    kunci: [...new Set([...(c.suggested_keywords || []), ...(c.name || "").split(/\s+/)])]
+    // Never turn generic label words (especially "kopi" or "&") into
+    // matching keywords. Candidate assignments remain AI/editor reviewed.
+    kunci: [...new Set(c.suggested_keywords || [])]
+      .filter(k => String(k).trim().length >= 4 && !["kopi", "coffee", "budaya", "culture", "sastra"].includes(String(k).trim().toLowerCase()))
   }));
   const all = [...BERITA_KLASTER, ...custom.filter(c => !BERITA_KLASTER.some(base => base.slug === c.slug))];
   write("cluster-catalog.json", { version: 1, generated_at: now, clusters: all.map(({ slug, nama, nama_en, analisis_id, kunci }) => ({ slug, nama, nama_en, analisis_id, kunci })) });
@@ -82,10 +101,13 @@ function applyEditorialDecisions(articles, taxonomy) {
     const key = articleKey(a);
     const chosen = overrideMap.get(key);
     const selected = chosen ? (byId.get(chosen) || byName.get(chosen.toLowerCase())) : null;
-    const fixed = selected || (a.cluster_id ? byId.get(String(a.cluster_id)) : null) || taxonomy.find(c => c.kunci.some(k => titleOf(a).toLowerCase().includes(String(k).toLowerCase()))) || null;
+    const contextual = getHighConfidenceCluster(a, taxonomy);
+    const keyword = getKeywordCluster(a);
+    const fixed = selected || contextual || (a.cluster_id ? byId.get(String(a.cluster_id)) : null) || keyword || null;
     const next = { ...a, cluster_id: fixed ? fixed.slug : "lainnya", cluster_name: fixed ? fixed.nama : "Lainnya" };
     if (selected) next.cluster_assignment = "editor";
-    else if (fixed && getKeywordCluster(a)) next.cluster_assignment = "keyword";
+    else if (contextual) next.cluster_assignment = "rule_context";
+    else if (keyword) next.cluster_assignment = "keyword";
     else if (fixed) next.cluster_assignment = a.cluster_assignment || "preserved";
     else next.cluster_assignment = "unassigned";
     if (!fixed) unknown.push(next);
@@ -206,11 +228,16 @@ async function generateEditorial(articles, taxonomy) {
 
 async function main() {
   await syncEditorClusterDecisions();
-  buildArchiveIndex();
   const taxonomy = effectiveTaxonomy();
   const source = read("berita-all.json", { artikel: [] });
   const { articles, unknown } = applyEditorialDecisions(Array.isArray(source.artikel) ? source.artikel : [], taxonomy);
   source.artikel = articles;
+  if (process.argv.includes("--reclassify-only")) {
+    write("berita-all.json", source);
+    console.log("contextual reclassification applied to", articles.filter(a => a.cluster_assignment === "rule_context").length, "articles");
+    return;
+  }
+  buildArchiveIndex();
   source.fetched = source.fetched || now;
 
   const reviewed = articles.filter(a => a.cluster_assignment === "unassigned" && !a.cluster_ai_reviewed_at).slice(0, 80);

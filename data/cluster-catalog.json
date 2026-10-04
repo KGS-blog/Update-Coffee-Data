@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-10-04T05:06:24.992Z",
+  "generated_at": "2026-10-04T06:56:58.094Z",
   "clusters": [
     {
       "slug": "harga-pasar",
@@ -1393,8 +1393,6 @@
       "nama_en": "Budaya & Sastra Kopi",
       "analisis_id": "budaya-sastra-kopi",
       "kunci": [
-        "budaya",
-        "sastra",
         "novel",
         "cerita",
         "fiksi",
@@ -1403,11 +1401,7 @@
         "tradisi",
         "sosiologi",
         "Bourdieu",
-        "narasi",
-        "Budaya",
-        "&",
-        "Sastra",
-        "Kopi"
+        "narasi"
       ]
     }
   ]
