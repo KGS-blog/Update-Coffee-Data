@@ -1,7 +1,629 @@
 {
   "version": 1,
-  "generated_at": "2026-10-04T05:06:24.992Z",
+  "generated_at": "2026-10-04T12:01:56.767Z",
   "articles": [
+    {
+      "cluster_id": "kedai-konsumsi-gaya-hidup",
+      "cluster_name": "Kedai, Konsumsi & Gaya Hidup",
+      "period_days": 14,
+      "generated_at": "2026-10-04T12:01:56.767Z",
+      "status": "ai_generated",
+      "fingerprint": "0f4cc96b16148cc2b89c02f70d41018bd702cf1725eb596c6638accd1dc68cff",
+      "article": {
+        "title": "Minggu Ini di Kedai Kopi: Pembukaan di Jambi–BSD–Lampung, Ruang Belajar, dan Aturan Jam Kerja",
+        "summary": "Dalam sepekan, beberapa kedai baru dibuka: Jati Coffee di Jambi, Benang Kopi di ibis Styles Serpong BSD, dan Elha Coffee & Resto di Lampung [1][3][4]. Liputan lain menyorot kafe ramah tugas di Mataram, tempat ngopi plus buku di Medan, dan kolaborasi kopi–seni di Art Jakarta [6][5][8]. Di waktu yang sama, BKPSDM Kukar berencana sidak kafe untuk menertibkan ASN saat jam kerja [7].",
+        "lead": "Jati Coffee mengangkat potensi kopi lokal dan mendapat dukungan politik bagi UMKM, Benang Kopi memilih berlokasi di hotel, sementara Elha Coffee & Resto diposisikan sebagai bagian dari komitmen pariwisata; ketiganya adalah pengumuman tanpa data dampak yang terukur [2][1][3][4].",
+        "sections": [
+          {
+            "heading": "Pembukaan di Titik Ramai",
+            "paragraphs": [
+              "Tiga rilis pembukaan menonjol minggu ini. Jati Coffee resmi hadir di Kota Jambi, dengan narasi mendorong UMKM dan mengangkat potensi kopi lokal [1][2]. Di Tangerang Selatan, Benang Kopi dibuka di ibis Styles Serpong BSD City—pilihan lokasi yang sudah memiliki arus tamu hotel [3]. Di Lampung, Elha Coffee and Resto melakukan grand opening sebagai wujud komitmen Lembah Hijau mendukung pariwisata; ini disampaikan sebagai pernyataan komitmen, bukan hasil yang sudah terjadi [4]."
+            ]
+          },
+          {
+            "heading": "Ruang Belajar dan Komunitas",
+            "paragraphs": [
+              "Fungsi kedai sebagai tempat nugas terlihat dari daftar lima coffee shop di Mataram yang disebut “low budget” dan nyaman untuk belajar atau nongkrong [6]. Di Medan, Kedeboox menggabungkan kopi dan buku sebagai konsep ruang temu komunitas sekaligus tempat membaca [5]. Contoh-contoh ini menunjukkan bagaimana media lokal menyorot aspek kegunaan dan keterjangkauan, meski belum ada ukuran formal tentang pergeseran selera atau skala pengunjung."
+            ]
+          },
+          {
+            "heading": "Kemitraan Gaya Hidup",
+            "paragraphs": [
+              "Kopi juga tampil dalam kolaborasi seni. Djournal menggandeng seniman Darbotz untuk menghadirkan pengalaman kopi–seni di Art Jakarta 2026—sebuah aktivasi merek di ranah budaya populer [8]. Di sisi lokasi, memilih ruang yang sudah punya arus kunjungan seperti properti hotel—seperti yang dilakukan Benang Kopi—adalah keputusan penempatan yang diberitakan, tanpa klaim hasil bisnis [3]."
+            ]
+          },
+          {
+            "heading": "Jam Kerja dan Nongkrong",
+            "paragraphs": [
+              "Di Kutai Kartanegara, BKPSDM menyatakan akan melakukan sidak ke kafe dan warung kopi untuk mencari ASN yang nongkrong saat jam kerja [7]. Ini memperlihatkan perhatian regulator pada penggunaan kafe di siang hari oleh pekerja sektor publik; sejauh ini baru berupa rencana penertiban pada satu wilayah, bukan kebijakan nasional atau indikator perubahan perilaku secara luas."
+            ]
+          }
+        ],
+        "conclusion": "Gambaran pekan ini: kedai kopi terus diangkat dalam konteks lokasi strategis, ruang belajar/komunitas, dan kolaborasi budaya, sementara regulator setempat menata perilaku jam kerja. Bahan yang tersedia didominasi pengumuman, jadi kita melihat arah pilihan lokasi dan format acara, bukan dampak pasar.",
+        "recommendations": [
+          {
+            "audience": "Pengelola kedai di kawasan wisata atau properti hospitality",
+            "action": "Selaraskan jam layanan, penempatan papan informasi, dan paket menu dengan arus tamu lokasi (hotel/destinasi) saat peluncuran awal.",
+            "basis": "Pembukaan Benang Kopi di hotel dan positioning Elha Coffee & Resto pada ekosistem pariwisata adalah pengumuman lokasi/komitmen [3][4]."
+          },
+          {
+            "audience": "Mahasiswa dan pekerja jarak jauh di Mataram",
+            "action": "Manfaatkan rekomendasi lokal untuk memilih kedai yang ramah nugas dan terjangkau sebelum memutuskan tempat rutin.",
+            "basis": "Daftar lima coffee shop “low budget” dan nyaman untuk nugas di Mataram [6]."
+          },
+          {
+            "audience": "Manajer kedai di daerah dengan rencana penertiban jam kerja",
+            "action": "Tinjau SOP layanan siang hari dan komunikasi ke pelanggan terkait kepatuhan aturan setempat (misalnya signage kebijakan jam kerja).",
+            "basis": "Rencana sidak kafe oleh BKPSDM Kukar untuk ASN pada jam kerja [7]."
+          }
+        ],
+        "source_urls": [
+          "https://news.google.com/rss/articles/CBMirAFBVV95cUxONUlIVDd4STkyalMzdnVaYzNJLUZNTWpnNUNzWDlkT0ZaWk1KQlRORkd3Szg5eEt5cVdIUlBGODgzNkR1OVRaOHpGc0o2bUF0bGExd0Vsa1N5ZndSUDBiYzgyZGo4UW96NFBkWUZpYkRrQ0dBQTFNMEhrdTVGNEtVekJwVzktYlQ5dWRrV3BiSVRoVkthNFA2NDhLVDNTeGhRaUdjTWg0NllNdUVI?oc=5",
+          "https://news.google.com/rss/articles/CBMirgFBVV95cUxNeG4xcENHQVViWFJHVjZ2S2lDVXBJUHl1THl6bUxhYXlFM1hlUDJYRHB1cC02SG9KejN6Q0lxYzg5U0RsY2V5dmRua3BaNTVyMmxhTDQ2NlB5Q1RybEVrcU9xVTI5TnI3SjZiN0NtNmJJc0E2OWwxZ25ZMENtMW9TQUhyOTQwSm1BRFozQTFvVEFSbnZrT1FRVGt3OVFLWVNwczQteXItaXdLV1hucWc?oc=5",
+          "https://news.google.com/rss/articles/CBMingFBVV95cUxQSUs2MWx4VXJKTjRDR3hVSEtKY0l3RXFYcWNPZWZneGtEcmoxRVJDRjZxY3FOb19pdEU4VFdScEtBM3pNMUgyOG5UWUF3WmRMaS1PeHBSTEd5eUJ0ZXFLZkFyQTVYVHdGM2xkRVBoZEtHdFFOQkFFZUpOUTBxQndJbGs2OUFPMVdZcWhBUHpId0xEdzNUeFhKejlnZnk2Zw?oc=5",
+          "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNcjhSb2dGUlJrVnhFNGpteUhLd3RMYVZoOW1TbTFINkpjU2t0X1VoemVvOWJxMG84ajU1Y3NzZGc3YXNiX1o4aUEtSk9VWDlWMnhGN2oyMm5taEpwMGlzZ2VpaU1YY0ppTDE4RkdRS1kweGV3VGpCQm9yUmF4XzJOemVDcy14LTNqeW15dHdHWmdDLWotT0lYd29SbEJPV3dYS2NoMnhqUG4wYWVrTDN1MlRUV2RsaW9rQ0xtSE42WGlzdjhqalh1c9IBzgFBVV95cUxPVEFTZENwaW9fUldzdjJWR3F6ZmVBVVVDUzduUGRoUEMxc2JpSDJfMG5SUkVseHhZLXdEbk1oMTl5T0VPTHc3NlFJaVJwZmdCWHE4bjVvN1VndXZjQlR2WkJKUDVUQkNMcW1abGxNa1c1LWNhX1pKY2Y0UkJqTG5ndUtSYjJUR0MxUGtQZVI3UjZxOTZvQ1Q0RkpTV1p5UlFtcHVJZHdZZk9Kd1dIelI3NWI3TmdpSVhrcks1c0xSNXY0WWw5NEdkUEc3V21CQQ?oc=5",
+          "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPZS1MSGhBc3M4cG9KVjdicnVmVE5DR25uVWQ5SkZEWTUxZ3hHdWg3bUhLMTRYMmhoN05WWEVVeWpyMm4ydGlDQWVfaFgzd2NtU3o4d2RENDhIa0RHTGRBdFc3amtFYzZVUzdkMW1OeEplVkhxNGtXWlRjM0xGMGt2MDlTR0d2Z0RSWG9tYndkSk5CVUhjVjFnN0F1NGhSdGQ2SFRxbGJubm9OS3dCYU50R1ExS1k0enowMUZGMXNMWmk?oc=5",
+          "https://news.google.com/rss/articles/CBMivAFBVV95cUxPX25oWHd4UWpwNWlUXzFSUjQ5ZFRjbTJnX3JncTdiYWZJa1VscGs2RUdsemJWNjlJV0I2aDhQTGt0T011d2lfaEFWWjF6Q18tOUlBZFR0cEpMdHJDbDA1Q01UUFFRT1FLNERWWlZpN3o4Z2tSY1ZBZUlqT3UzTk9ZZ3ZqMUo3UXZXbU9VX3Y0UFpBSVUtaE5VbjlJaDJ5Q3R3cG40RFJPWmR6VkpLdXc0MWV4c2NsZlRBQjdBeQ?oc=5",
+          "https://news.google.com/rss/articles/CBMixgFBVV95cUxQbHB4QmZZVzFCQTR6UGxMaENfN3Y4VEJ0ZWRkV1FEWl9kWThyU24tVkswZEhTUmZJbFBEWElHMDlCTHlDQ3RBMllRYU1sc1pRaERSSkZ4ZXpHbTJwSFEtczd4NG04d2VNVWh3VnZlYkFRakI0TDRTU2p0d1VFaGhRT2RwWXdNZ2dCNmliel96NWI2elBZT0JreU8tTXQ2RFRDRG92N2o5bFVYYzdPeUp0TVI4NmxXREN3UHRHNXpPMkt5czdXbnc?oc=5",
+          "https://news.google.com/rss/articles/CBMibEFVX3lxTE1kRW5GajZVOVNkRFV6c25fd0hNRXVzOUNFSW9qdHRSVHlXVUNsYTRkbTNrdWdRUW9hbmNzSkxtSmx0NmV6bXdHQ0hGQzF4OW9YMV9NQVRhVDdOaUVDZzFtc1lPbDlXaDdsbEkwdg?oc=5"
+        ],
+        "evidence_note": "Sebagian besar sumber adalah pengumuman pembukaan/agenda dan liputan lokal tanpa data penjualan atau kunjungan, sehingga analisis berfokus pada pola lokasi dan format acara, bukan dampaknya."
+      },
+      "article_en": {
+        "title": "This Week in Coffee Shops: Openings in Jambi, BSD and Lampung; Study Spots and Work-Hour Checks",
+        "summary": "Several new venues opened this week: Jati Coffee in Jambi, Benang Kopi at ibis Styles Serpong BSD, and Elha Coffee & Resto in Lampung [1][3][4]. Local coverage also highlighted budget-friendly study cafes in Mataram, a coffee-plus-books hangout in Medan, and a coffee–art tie-in at Art Jakarta [6][5][8]. Meanwhile, officials in Kutai Kartanegara plan café inspections to curb civil servants lingering during office hours [7].",
+        "lead": "Jati Coffee framed its launch around local coffee potential and received political backing for MSMEs, Benang Kopi picked a hotel property, and Elha Coffee & Resto was positioned as part of a tourism commitment—each presented as announcements without measured outcomes [2][1][3][4].",
+        "sections": [
+          {
+            "heading": "Opening Where Footfall Already Exists",
+            "paragraphs": [
+              "Three launches stood out. Jati Coffee officially opened in Jambi with messaging about lifting local coffee and MSME support [1][2]. In South Tangerang, Benang Kopi debuted inside ibis Styles Serpong BSD City—an address with built-in hotel traffic [3]. In Lampung, Elha Coffee & Resto held its grand opening as part of Lembah Hijau’s stated support for tourism; that is a commitment statement, not reported results [4]."
+            ]
+          },
+          {
+            "heading": "Study Rooms and Community Corners",
+            "paragraphs": [
+              "Cafes continue to double as work/study spots: a local list in Mataram flagged five “low budget,” study-friendly options [6]. In Medan, Kedeboox blends coffee with books, positioning itself as a space for reading and community [5]. These examples show how local media frame utility and affordability, without offering formal measures of changing taste or traffic."
+            ]
+          },
+          {
+            "heading": "Lifestyle Pairings",
+            "paragraphs": [
+              "Coffee crossed into culture and hospitality. Djournal teamed up with artist Darbotz for a coffee–art experience at Art Jakarta 2026—brand activation in a cultural setting [8]. On placement, choosing a site with existing visitor flow—like a hotel property for Benang Kopi—is reported as a location decision rather than a claim of business impact [3]."
+            ]
+          },
+          {
+            "heading": "Work Hours Meet Café Culture",
+            "paragraphs": [
+              "In Kutai Kartanegara, the civil service agency said it will inspect cafés and coffee stalls to find civil servants hanging out during office hours [7]. This points to local oversight of daytime café use by public employees; so far it is a regional plan, not a national policy or proof of broader behavioral change."
+            ]
+          }
+        ],
+        "conclusion": "This week’s map of headlines places coffee at the intersection of strategic locations, study/community use, and cultural tie-ins, while local regulators set boundaries around work-hour behavior. Given announcement-heavy sources, we can read location and format choices—not market impact.",
+        "recommendations": [
+          {
+            "audience": "Operators near tourist sites or hospitality properties",
+            "action": "Align service hours, signage, and menu bundles with on-site visitor flows at launch.",
+            "basis": "Benang Kopi’s hotel placement and Elha Coffee & Resto’s tourism positioning were reported as location/commitment announcements [3][4]."
+          },
+          {
+            "audience": "Students and remote workers in Mataram",
+            "action": "Lean on local roundups to shortlist budget-friendly, study-suitable cafés before picking a regular spot.",
+            "basis": "Five “low budget,” study-friendly café recommendations in Mataram [6]."
+          },
+          {
+            "audience": "Managers in regions planning work-hour checks",
+            "action": "Review daytime SOPs and customer comms to reflect local compliance expectations (e.g., posted policies on office hours).",
+            "basis": "Planned café inspections by the Kutai Kartanegara civil service agency [7]."
+          }
+        ],
+        "source_urls": [
+          "https://news.google.com/rss/articles/CBMirAFBVV95cUxONUlIVDd4STkyalMzdnVaYzNJLUZNTWpnNUNzWDlkT0ZaWk1KQlRORkd3Szg5eEt5cVdIUlBGODgzNkR1OVRaOHpGc0o2bUF0bGExd0Vsa1N5ZndSUDBiYzgyZGo4UW96NFBkWUZpYkRrQ0dBQTFNMEhrdTVGNEtVekJwVzktYlQ5dWRrV3BiSVRoVkthNFA2NDhLVDNTeGhRaUdjTWg0NllNdUVI?oc=5",
+          "https://news.google.com/rss/articles/CBMirgFBVV95cUxNeG4xcENHQVViWFJHVjZ2S2lDVXBJUHl1THl6bUxhYXlFM1hlUDJYRHB1cC02SG9KejN6Q0lxYzg5U0RsY2V5dmRua3BaNTVyMmxhTDQ2NlB5Q1RybEVrcU9xVTI5TnI3SjZiN0NtNmJJc0E2OWwxZ25ZMENtMW9TQUhyOTQwSm1BRFozQTFvVEFSbnZrT1FRVGt3OVFLWVNwczQteXItaXdLV1hucWc?oc=5",
+          "https://news.google.com/rss/articles/CBMingFBVV95cUxQSUs2MWx4VXJKTjRDR3hVSEtKY0l3RXFYcWNPZWZneGtEcmoxRVJDRjZxY3FOb19pdEU4VFdScEtBM3pNMUgyOG5UWUF3WmRMaS1PeHBSTEd5eUJ0ZXFLZkFyQTVYVHdGM2xkRVBoZEtHdFFOQkFFZUpOUTBxQndJbGs2OUFPMVdZcWhBUHpId0xEdzNUeFhKejlnZnk2Zw?oc=5",
+          "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNcjhSb2dGUlJrVnhFNGpteUhLd3RMYVZoOW1TbTFINkpjU2t0X1VoemVvOWJxMG84ajU1Y3NzZGc3YXNiX1o4aUEtSk9VWDlWMnhGN2oyMm5taEpwMGlzZ2VpaU1YY0ppTDE4RkdRS1kweGV3VGpCQm9yUmF4XzJOemVDcy14LTNqeW15dHdHWmdDLWotT0lYd29SbEJPV3dYS2NoMnhqUG4wYWVrTDN1MlRUV2RsaW9rQ0xtSE42WGlzdjhqalh1c9IBzgFBVV95cUxPVEFTZENwaW9fUldzdjJWR3F6ZmVBVVVDUzduUGRoUEMxc2JpSDJfMG5SUkVseHhZLXdEbk1oMTl5T0VPTHc3NlFJaVJwZmdCWHE4bjVvN1VndXZjQlR2WkJKUDVUQkNMcW1abGxNa1c1LWNhX1pKY2Y0UkJqTG5ndUtSYjJUR0MxUGtQZVI3UjZxOTZvQ1Q0RkpTV1p5UlFtcHVJZHdZZk9Kd1dIelI3NWI3TmdpSVhrcks1c0xSNXY0WWw5NEdkUEc3V21CQQ?oc=5",
+          "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPZS1MSGhBc3M4cG9KVjdicnVmVE5DR25uVWQ5SkZEWTUxZ3hHdWg3bUhLMTRYMmhoN05WWEVVeWpyMm4ydGlDQWVfaFgzd2NtU3o4d2RENDhIa0RHTGRBdFc3amtFYzZVUzdkMW1OeEplVkhxNGtXWlRjM0xGMGt2MDlTR0d2Z0RSWG9tYndkSk5CVUhjVjFnN0F1NGhSdGQ2SFRxbGJubm9OS3dCYU50R1ExS1k0enowMUZGMXNMWmk?oc=5",
+          "https://news.google.com/rss/articles/CBMivAFBVV95cUxPX25oWHd4UWpwNWlUXzFSUjQ5ZFRjbTJnX3JncTdiYWZJa1VscGs2RUdsemJWNjlJV0I2aDhQTGt0T011d2lfaEFWWjF6Q18tOUlBZFR0cEpMdHJDbDA1Q01UUFFRT1FLNERWWlZpN3o4Z2tSY1ZBZUlqT3UzTk9ZZ3ZqMUo3UXZXbU9VX3Y0UFpBSVUtaE5VbjlJaDJ5Q3R3cG40RFJPWmR6VkpLdXc0MWV4c2NsZlRBQjdBeQ?oc=5",
+          "https://news.google.com/rss/articles/CBMixgFBVV95cUxQbHB4QmZZVzFCQTR6UGxMaENfN3Y4VEJ0ZWRkV1FEWl9kWThyU24tVkswZEhTUmZJbFBEWElHMDlCTHlDQ3RBMllRYU1sc1pRaERSSkZ4ZXpHbTJwSFEtczd4NG04d2VNVWh3VnZlYkFRakI0TDRTU2p0d1VFaGhRT2RwWXdNZ2dCNmliel96NWI2elBZT0JreU8tTXQ2RFRDRG92N2o5bFVYYzdPeUp0TVI4NmxXREN3UHRHNXpPMkt5czdXbnc?oc=5",
+          "https://news.google.com/rss/articles/CBMibEFVX3lxTE1kRW5GajZVOVNkRFV6c25fd0hNRXVzOUNFSW9qdHRSVHlXVUNsYTRkbTNrdWdRUW9hbmNzSkxtSmx0NmV6bXdHQ0hGQzF4OW9YMV9NQVRhVDdOaUVDZzFtc1lPbDlXaDdsbEkwdg?oc=5"
+        ],
+        "evidence_note": "Most sources are local opening/event announcements without sales or footfall metrics, so the analysis focuses on placement and format choices rather than impact."
+      },
+      "input_sources": [
+        {
+          "id": "1",
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxONUlIVDd4STkyalMzdnVaYzNJLUZNTWpnNUNzWDlkT0ZaWk1KQlRORkd3Szg5eEt5cVdIUlBGODgzNkR1OVRaOHpGc0o2bUF0bGExd0Vsa1N5ZndSUDBiYzgyZGo4UW96NFBkWUZpYkRrQ0dBQTFNMEhrdTVGNEtVekJwVzktYlQ5dWRrV3BiSVRoVkthNFA2NDhLVDNTeGhRaUdjTWg0NllNdUVI?oc=5",
+          "title": "Jati Coffee Resmi Dibuka, PKS Jambi Siap Dorong UMKM Naik Kelas - beritajambi.co",
+          "source": "beritajambi.co",
+          "published_at": "Sun, 04 Oct 2026 09:03:02 GMT"
+        },
+        {
+          "id": "2",
+          "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNcjhSb2dGUlJrVnhFNGpteUhLd3RMYVZoOW1TbTFINkpjU2t0X1VoemVvOWJxMG84ajU1Y3NzZGc3YXNiX1o4aUEtSk9VWDlWMnhGN2oyMm5taEpwMGlzZ2VpaU1YY0ppTDE4RkdRS1kweGV3VGpCQm9yUmF4XzJOemVDcy14LTNqeW15dHdHWmdDLWotT0lYd29SbEJPV3dYS2NoMnhqUG4wYWVrTDN1MlRUV2RsaW9rQ0xtSE42WGlzdjhqalh1c9IBzgFBVV95cUxPVEFTZENwaW9fUldzdjJWR3F6ZmVBVVVDUzduUGRoUEMxc2JpSDJfMG5SUkVseHhZLXdEbk1oMTl5T0VPTHc3NlFJaVJwZmdCWHE4bjVvN1VndXZjQlR2WkJKUDVUQkNMcW1abGxNa1c1LWNhX1pKY2Y0UkJqTG5ndUtSYjJUR0MxUGtQZVI3UjZxOTZvQ1Q0RkpTV1p5UlFtcHVJZHdZZk9Kd1dIelI3NWI3TmdpSVhrcks1c0xSNXY0WWw5NEdkUEc3V21CQQ?oc=5",
+          "title": "Grand Opening Elha Coffee and Resto Lampung, Wujud Komitmen Lembah Hijau Dukung Pariwisata - VIVA Lampung",
+          "source": "VIVA Lampung",
+          "published_at": "Sun, 04 Oct 2026 08:42:00 GMT"
+        },
+        {
+          "id": "3",
+          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPZS1MSGhBc3M4cG9KVjdicnVmVE5DR25uVWQ5SkZEWTUxZ3hHdWg3bUhLMTRYMmhoN05WWEVVeWpyMm4ydGlDQWVfaFgzd2NtU3o4d2RENDhIa0RHTGRBdFc3amtFYzZVUzdkMW1OeEplVkhxNGtXWlRjM0xGMGt2MDlTR0d2Z0RSWG9tYndkSk5CVUhjVjFnN0F1NGhSdGQ2SFRxbGJubm9OS3dCYU50R1ExS1k0enowMUZGMXNMWmk?oc=5",
+          "title": "Kedeboox, Tempat Nongkrong Hits di Medan yang Memadukan Kopi dan Buku - Bisnis Style",
+          "source": "Bisnis Style",
+          "published_at": "Sun, 04 Oct 2026 02:35:14 GMT"
+        },
+        {
+          "id": "4",
+          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPSFMtZUY5b0NjdFczaEFpUjNfSzJheUFiSEloRWdwZ0ZZMTJUaFFyVllsMEltS3p3RlNTM0N5VW9OTHUwTTZ0VXhSX3VZcENmUnJDb2N0c094ZTNIV0JEVGg5dmJsd1BGQkh3Nk5DNXZfc1NnR3RvNzlUaXk2eEJHZnN3ZzdRUzJNaVUtVjdGcUVPd05nSHRLX20xNWgwS2pKUm83Q2ZjT19uS3g1Vzhfa28tajg3cG13M08zU3B3?oc=5",
+          "title": "Benang Kopi Hadir di ibis Styles Serpong BSD City, Jadi Spot Ngopi Baru untuk Warga BSD - tangselpos.id",
+          "source": "tangselpos.id",
+          "published_at": "Sun, 04 Oct 2026 01:18:00 GMT"
+        },
+        {
+          "id": "5",
+          "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxQNVg3YVhhQXB2V0NISGIwaG5McGRyZkY4S1kzWW5PU01BY1NUMlliTld0OTZwSFhic25YRVNIUWFKczhJOEl4cHVOSURYRmNmbGxrejZkSVZUbkdSbFVWZ2NoSUtMNHluMmJ4aVBuNW1FTHNfUFd0RVdjU3VlTmZnMkRIVEpMcTZaUC1iSEdtcl9nc1RJV1VSdWdyUUZwd1pzTk1vWE1jWHVrV2F2UmpjQVg4V2FxYV9qOVHSAb8BQVVfeXFMTUZ4OUlTTldEOTlNS3RIU1VEUkRHNGZoblpLMDREcW9qUUxzLXM3SEkzNzEyaDBQVFB3UG9IM3luVWdjVG9TSzJMYXNNYXJ2a3ppbFFzMUU2dE4tXzcyNzFQc3JYNzY5anhCdkp6VW9JYl9xN3lobDlXNGxZamtrTHNxWnRjcDNjaHNoMkRweVBKc283Uno4ZmpwODJsZ0hfRG53N1hTNkpnU3RvbVdsZG5zaURYUklITG51azJnbDQ?oc=5",
+          "title": "Siapa Pemilik Fore Coffee? Inilah Sosok dan Total Kekayaannya - IDN Times",
+          "source": "IDN Times",
+          "published_at": "Sun, 04 Oct 2026 00:02:00 GMT"
+        },
+        {
+          "id": "6",
+          "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQbHB4QmZZVzFCQTR6UGxMaENfN3Y4VEJ0ZWRkV1FEWl9kWThyU24tVkswZEhTUmZJbFBEWElHMDlCTHlDQ3RBMllRYU1sc1pRaERSSkZ4ZXpHbTJwSFEtczd4NG04d2VNVWh3VnZlYkFRakI0TDRTU2p0d1VFaGhRT2RwWXdNZ2dCNmliel96NWI2elBZT0JreU8tTXQ2RFRDRG92N2o5bFVYYzdPeUp0TVI4NmxXREN3UHRHNXpPMkt5czdXbnc?oc=5",
+          "title": "Kafe dan Warung Kopi Bakal Disidak, BKPSDM Kukar Cari ASN yang Nongkrong Saat Jam Kerja - Poskota Kaltim",
+          "source": "Poskota Kaltim",
+          "published_at": "Sat, 03 Oct 2026 18:21:52 GMT"
+        },
+        {
+          "id": "7",
+          "url": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1kRW5GajZVOVNkRFV6c25fd0hNRXVzOUNFSW9qdHRSVHlXVUNsYTRkbTNrdWdRUW9hbmNzSkxtSmx0NmV6bXdHQ0hGQzF4OW9YMV9NQVRhVDdOaUVDZzFtc1lPbDlXaDdsbEkwdg?oc=5",
+          "title": "Djournal x Darbotz, Hadirkan Pengalaman Kopi dan Seni di Art Jakarta 2026 - Marketing.co.id",
+          "source": "Marketing.co.id",
+          "published_at": "Sat, 03 Oct 2026 14:52:18 GMT"
+        },
+        {
+          "id": "8",
+          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPX25oWHd4UWpwNWlUXzFSUjQ5ZFRjbTJnX3JncTdiYWZJa1VscGs2RUdsemJWNjlJV0I2aDhQTGt0T011d2lfaEFWWjF6Q18tOUlBZFR0cEpMdHJDbDA1Q01UUFFRT1FLNERWWlZpN3o4Z2tSY1ZBZUlqT3UzTk9ZZ3ZqMUo3UXZXbU9VX3Y0UFpBSVUtaE5VbjlJaDJ5Q3R3cG40RFJPWmR6VkpLdXc0MWV4c2NsZlRBQjdBeQ?oc=5",
+          "title": "Lima Rekomendasi Coffee Shop di Mataram untuk Nugas dan Nongkrong, “Low Budget” dan Nyaman - SUARANTB.com",
+          "source": "SUARANTB.com",
+          "published_at": "Sat, 03 Oct 2026 13:25:11 GMT"
+        },
+        {
+          "id": "9",
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPUDE5VDNZM2EyVnF4ZEcwdTI4RjdaWTAxdHk1aGZuMG9TVjZWLUZObGpiRHlucFM5ei0tQ3BNcHJURVBqSUN3UHpURktYX2FjNHNWZGRoNUlZUEdaeVF2U1doUlFkNFJTckx0Q2lCdi1uLWxOa1ZtSEswSjdJUGxpRHJUNHR1cGlEQkJmSnllaE9YNFBFakEwWXVRdmNIaFlfV2E2Zg?oc=5",
+          "title": "Benang Kopi Hadir dengan Konsep Coffee Shop di ibis Styles Serpong BSD City - Lensa Banten",
+          "source": "Lensa Banten",
+          "published_at": "Sat, 03 Oct 2026 11:23:20 GMT"
+        },
+        {
+          "id": "10",
+          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNWEdMVWVPb1JJdm0xY1NNcmY5VlVoWVdDSEVObG8yTkFjanhDMGpzekpCXzJxdmJUWWc5R1dJTFllYldYN0VDbFBITVdsV0VLU3pqbDBWOE54a1lGVnFheWo2bG45QTVXQkJ5bWdpb0stSmRHZEJ2QWdvVUlzNHNfMFZ4V2JfMVJqSTIyTEExenV2bExTd2NVNjZnNXk?oc=5",
+          "title": "Benang Kopi – Coffee Shop Tempat Ngopi Baru di Kawasan BSD City - PalapaNews",
+          "source": "PalapaNews",
+          "published_at": "Sat, 03 Oct 2026 09:42:24 GMT"
+        },
+        {
+          "id": "11",
+          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQSUs2MWx4VXJKTjRDR3hVSEtKY0l3RXFYcWNPZWZneGtEcmoxRVJDRjZxY3FOb19pdEU4VFdScEtBM3pNMUgyOG5UWUF3WmRMaS1PeHBSTEd5eUJ0ZXFLZkFyQTVYVHdGM2xkRVBoZEtHdFFOQkFFZUpOUTBxQndJbGs2OUFPMVdZcWhBUHpId0xEdzNUeFhKejlnZnk2Zw?oc=5",
+          "title": "Benang Kopi Resmi Hadir di ibis Styles Serpong BSD City - Media Indonesia",
+          "source": "Media Indonesia",
+          "published_at": "Sat, 03 Oct 2026 09:07:38 GMT"
+        },
+        {
+          "id": "12",
+          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNeG4xcENHQVViWFJHVjZ2S2lDVXBJUHl1THl6bUxhYXlFM1hlUDJYRHB1cC02SG9KejN6Q0lxYzg5U0RsY2V5dmRua3BaNTVyMmxhTDQ2NlB5Q1RybEVrcU9xVTI5TnI3SjZiN0NtNmJJc0E2OWwxZ25ZMENtMW9TQUhyOTQwSm1BRFozQTFvVEFSbnZrT1FRVGt3OVFLWVNwczQteXItaXdLV1hucWc?oc=5",
+          "title": "Jati Coffee Resmi Dibuka di Kota Jambi, Angkat Potensi Kopi Lokal - jambiprima.com",
+          "source": "jambiprima.com",
+          "published_at": "Sat, 03 Oct 2026 08:03:32 GMT"
+        }
+      ]
+    },
+    {
+      "cluster_id": "produksi-panen",
+      "cluster_name": "Produksi & Panen",
+      "period_days": 14,
+      "generated_at": "2026-10-04T12:01:56.767Z",
+      "status": "ai_generated",
+      "fingerprint": "e60e71b3d0a2e06af86462676dde13302423f954e144bb9d40bc99398338aae5",
+      "article": {
+        "title": "Produksi & Panen Kopi: Akses, Pascapanen, dan Pendampingan Mendominasi Kabar Pekan Ini",
+        "summary": "Dari Mamasa hingga Sukabumi, kabar utama pekan ini soal produksi dan panen kopi datang dari level daerah: perbaikan jembatan untuk membuka akses pengeringan, pendampingan untuk menaikkan mutu dan produksi, serta penguatan teknologi pascapanen. Ada pula penamaan origin baru di lereng Merapi yang ditawarkan sebagai potensi ekonomi bagi petani. Seluruhnya memberi sinyal dorongan di hulu dan pascapanen, meski tanpa angka capaian yang dipublikasikan.",
+        "lead": "Semua kabar bersifat lokal; tidak ada data volume panen atau harga yang dilaporkan, tetapi arahnya jelas: membuka akses ke lokasi panen dan jemur, memperkuat tahapan pascapanen, dan membangun identitas asal sebagai landasan pemasaran.",
+        "sections": [
+          {
+            "heading": "Akses fisik yang menentukan alur panen",
+            "paragraphs": [
+              "Dua pemberitaan dari Mamasa menempatkan infrastruktur sebagai prasyarat produksi: jembatan lapuk diperbaiki agar akses petani kembali terbuka, termasuk menuju lokasi pengeringan kopi [1][2]. Ini masalah mendasar yang sering luput dari diskusi mutu. Tanpa jembatan dan jalan yang bisa dilalui, panen tersendat, risiko cacat pascapanen naik, dan biaya angkut melonjak. Fakta bahwa perbaikan dilakukan lewat kolaborasi kampus dan warga memperlihatkan solusi yang pragmatis, namun tetap berskala lokal [1][2]. Hingga kini, tidak ada data berapa banyak komoditas yang terbantu atau berapa persen biaya yang terpangkas—yang jelas, hambatan fisik sedang ditangani di titik paling awal rantai pasok."
+            ]
+          },
+          {
+            "heading": "Pascapanen sebagai tumpuan mutu",
+            "paragraphs": [
+              "Di Sukabumi, Kopi Gunung Kramat disebut diperkuat teknologi pascapanen untuk menembus pasar global [4]. Ini menegaskan bahwa pengeringan, penyortiran, dan penanganan pascapanen lain menjadi kunci mutu yang bisa dilabelkan dan dijual. Upaya membuka akses ke lokasi jemur di Mamasa juga bergerak di arah yang sama: menjaga tahapan pengeringan agar stabil dan konsisten [1][2]. Namun, kabar yang tersedia berbentuk pernyataan program dan tujuan; belum ada metrik mutu (misalnya kadar air, defect rate) atau bukti penetrasi pasar yang dipublikasikan. Dengan kata lain, arahnya pas, tetapi ukuran keberhasilan belum diumumkan."
+            ]
+          },
+          {
+            "heading": "Pendampingan dan penamaan origin: janji yang perlu diukur",
+            "paragraphs": [
+              "Bank Indonesia NTB mendampingi petani kopi Sajang untuk meningkatkan kualitas dan produksi [3]. Ini dukungan teknis yang lazim dibutuhkan kelompok tani, terutama untuk standar proses dan efisiensi. Di sisi lain, penamaan ‘Kopi Nirmalagiri’ di lereng Merapi diajukan sebagai potensi ekonomi baru bagi petani setempat [5]. Keduanya adalah sinyal pembenahan hulu: satu lewat peningkatan kapasitas, satu lagi lewat identitas produk. Posisi ini wajar, namun kita perlu membedakan antara fakta kegiatan (pendampingan sedang berjalan) dan klaim/tujuan (produksi meningkat, pasar terbuka) yang belum disertai angka atau studi dampak. Tanpa baseline dan tindak lanjut terukur, sulit menilai daya ubah di lapangan."
+            ]
+          }
+        ],
+        "conclusion": "Pola minggu ini konsisten: hambatan fisik diatasi, tahapan pascapanen diperkuat, dan identitas asal diperkenalkan. Itu semua penting untuk menstabilkan panen dan menaikkan mutu, tetapi bukti kuantitatif belum tersedia. Langkah berikutnya yang krusial adalah mengaitkan inisiatif ini dengan metrik sederhana agar manfaatnya bisa dibaca lintas musim.",
+        "recommendations": [
+          {
+            "audience": "Pemerintah daerah di sentra kopi",
+            "action": "Prioritaskan perbaikan akses dasar (jembatan, jalan ke lokasi jemur) jelang puncak panen.",
+            "basis": "Di Mamasa, akses pengeringan kembali terbuka setelah perbaikan jembatan, menunjukkan hambatan fisik bisa langsung mengganggu alur panen [1][2]."
+          },
+          {
+            "audience": "Kelompok tani/koperasi",
+            "action": "Audit dan tingkatkan tahapan pascapanen (pengeringan, sortasi, penyimpanan) untuk konsistensi mutu.",
+            "basis": "Penguatan teknologi pascapanen di Sukabumi diposisikan untuk mendukung akses pasar; mutu pascapanen adalah fondasi yang bisa dikendalikan di tingkat petani [4]."
+          },
+          {
+            "audience": "Penyelenggara program (lembaga keuangan/pemerintah)",
+            "action": "Sertakan baseline dan tindak lanjut terukur saat mengumumkan pendampingan peningkatan kualitas/produksi.",
+            "basis": "Pendampingan BI NTB menargetkan mutu dan produksi, namun tanpa angka awal dan pelacakan, dampaknya sulit dievaluasi [3]."
+          }
+        ],
+        "source_urls": [
+          "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNdmczTmRXZFdCWVVPaG5WWlQyTXBaNmVlbjNEaUFlbE5Yd1ZHbWpkMm5wOVBsU3JoaWlHcGhLdHhicDk5ekVoT3ROTW5Ha0hKTUtZUUlSMUNEZlRnV29hSGtfemVHRWc0ZEQxRF96djdzX042WmtMQmZpLTh1Y2o0eEZNYlVPMDZGY3FYSldWSk0yU0ZNRVNOa3lKb1JQQkphSFRLZWdQRGXSAa4BQVVfeXFMUGd5elgxLXFqS2M3OElQekJSTGswYkNNSjJGS1NCcmRySmU4aDExQ3pxWGk1S01ZVkU5Wk42bW5vemZyN1BmaWYyenJfSE5sdVB1STdUR1RNUk9Ta2RDb1c2TnJFc1JISTFRbHV1cWItZ2RtT0RLeFZ2SGpxeXVmWUNsa1FsMHFQZFozcjNZejFub19JX2ZvTnVQNkJrYjY4a0dyWVZEa1ZhM2pKRWZ3?oc=5",
+          "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNbGg1dmJtQjRPdlFFUjVOc2l1YVZGRjFoT3U4QzJndURZOWRkVlBWekQtS2R5amJaTEdhSFNGWEtGRTMwWU1GMjFDLVJzR3hOaHVUb1paOHJrcV9SYkd5VFlsUUxsVE1SRnNJRHF4S0ZFN3F2djJMSWl2OGVPNURwLWJDN2lBNDhtWUEzUlQxNlZQNGpSdXF2SFlOY1NmT29fOFhnZ25VOFZTWDRDRlpCcW1RWmlraXJra0Eyc3pnT0hycXBJc0dnQ0Jtc3A0NTQ1LW93T2V3?oc=5",
+          "https://news.google.com/rss/articles/CBMitgFBVV95cUxNUnpWMDIwTUNoV0Z0a1FUQjQ5emRLY2s4T1pjMTJJdXZFLXk0bGxaZVhUbG0tb0dGSHFkc01EYW1YYXZQTG96UDlSSVBqazR0S0s3bWQ1TS0zbXd3ZjB3bmllVXVleWp4bXFBaU1PQXFTZFoteE5fU21PdHlDazNDZWhCZld1YmJrcnVDRjRnaklLMjUtaWxTdmxuZnotekZSb0VlNGdDMlJNbkJTaFRDVmRLYVp2dw?oc=5",
+          "https://news.google.com/rss/articles/CBMiYkFVX3lxTFB5NWxIZ2x5c2dDRnlQb0dwSVRqM1pkSUZsQ01hTGMxLV8waGFjZWNZNk5CV01pdVVsNjRTZDk1Z00wd19zRHpzRFlaV2trSmZOQWRLSHdoZFF6VW9zSmVqT25n?oc=5",
+          "https://news.google.com/rss/articles/CBMisgFBVV95cUxNQlVOc3hJZngzLVYzdlpJbDFIbDFST29YdXBncVBrd2pNVXpxeUZDSFNNN1dqYTEwanBXaGNTUk14dWN0cURuVWYyWXl5eUphMkp0Z0Nud1Y3UG14MVBzSlJVZ093OW9HUmk1ZzBFWHJZTTFkVFJKaVo0eC1iZnNCWXM5bmdsY2E2Z2JnNkFQOS1jRDN5OWlYRm5qUlRpSmZqNnQ5Yk9YcWZMZl9QZFZpNjNn?oc=5"
+        ],
+        "evidence_note": "Kabar bersifat lokal dan sebagian besar berupa program/potensi; tidak ada angka produksi, harga, atau dampak terukur yang dilaporkan di sumber."
+      },
+      "article_en": {
+        "title": "Coffee Production & Harvest: Access, Post‑Harvest Steps, and Coaching Lead This Week’s Updates",
+        "summary": "From Mamasa to Sukabumi, this week’s production-and-harvest news is local: bridge repairs to restore access to drying areas, coaching to lift quality and output, and post‑harvest tech upgrades. There’s also a new origin name on Merapi’s slopes presented as an economic opportunity. Together they signal upstream and post‑harvest pushes, though no published performance numbers accompany them.",
+        "lead": "All items are regional; none report harvest volumes or prices, but the direction is clear: fix access to fields and drying sites, strengthen post‑harvest work, and build origin identity as a marketing base.",
+        "sections": [
+          {
+            "heading": "Physical access drives harvest flow",
+            "paragraphs": [
+              "Two reports from Mamasa put infrastructure up front: a rickety bridge was repaired so farmers can move again, including to their coffee drying sites [1][2]. This is a basic issue often missed in quality debates. Without passable bridges and roads, harvests stall, post‑harvest defects risk rising, and transport costs climb. The fixes came through campus–community collaboration—pragmatic but still local in scope [1][2]. There are no figures yet on volumes helped or costs reduced; what’s clear is that a physical bottleneck at the very start of the chain is being addressed."
+            ]
+          },
+          {
+            "heading": "Post‑harvest as the quality backbone",
+            "paragraphs": [
+              "In Sukabumi, Gunung Kramat coffee is said to be reinforced with post‑harvest technology to reach global markets [4]. That underlines drying, sorting, and other post‑harvest steps as the controllable core of quality. The reopened access to drying areas in Mamasa points the same way: keep drying stable and consistent [1][2]. Still, what we have are program statements and goals; there are no published metrics (e.g., moisture, defect rates) or verified market entries. The direction makes sense, but success indicators aren’t public yet."
+            ]
+          },
+          {
+            "heading": "Coaching and origin naming: promises that need measuring",
+            "paragraphs": [
+              "Bank Indonesia’s NTB office is assisting Sajang farmers to improve quality and production [3]. That’s the kind of technical support farm groups typically need for process standards and efficiency. Meanwhile, the ‘Nirmalagiri’ label on Merapi’s slopes is presented as a new economic opportunity for local farmers [5]. Both are upstream signals—one via capacity-building, one via product identity. It’s important to separate ongoing activities (coaching is happening) from claims/objectives (higher output, market access) that currently lack numbers or impact studies. Without a baseline and follow‑up, it’s hard to gauge real change on the ground."
+            ]
+          }
+        ],
+        "conclusion": "This week’s pattern is consistent: remove physical bottlenecks, reinforce post‑harvest, and introduce origin identity. These are sensible foundations for steadier harvests and better quality, but there’s no quantitative evidence yet. The next step is to tie initiatives to simple metrics so benefits can be tracked across seasons.",
+        "recommendations": [
+          {
+            "audience": "Local governments in coffee regions",
+            "action": "Prioritize basic access fixes (bridges, roads to drying sites) ahead of peak harvests.",
+            "basis": "In Mamasa, drying access was restored after bridge repairs, showing how physical hurdles can immediately disrupt harvest flow [1][2]."
+          },
+          {
+            "audience": "Farmer groups/co‑ops",
+            "action": "Audit and upgrade post‑harvest steps (drying, sorting, storage) for consistent quality.",
+            "basis": "Sukabumi’s post‑harvest tech push is positioned to support market access; post‑harvest quality is what farmers can directly control [4]."
+          },
+          {
+            "audience": "Program owners (financial institutions/government)",
+            "action": "Publish baselines and follow‑ups when announcing coaching to boost quality/production.",
+            "basis": "The NTB assistance targets quality and output, but without starting points and tracking, impact is hard to evaluate [3]."
+          }
+        ],
+        "source_urls": [
+          "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNdmczTmRXZFdCWVVPaG5WWlQyTXBaNmVlbjNEaUFlbE5Yd1ZHbWpkMm5wOVBsU3JoaWlHcGhLdHhicDk5ekVoT3ROTW5Ha0hKTUtZUUlSMUNEZlRnV29hSGtfemVHRWc0ZEQxRF96djdzX042WmtMQmZpLTh1Y2o0eEZNYlVPMDZGY3FYSldWSk0yU0ZNRVNOa3lKb1JQQkphSFRLZWdQRGXSAa4BQVVfeXFMUGd5elgxLXFqS2M3OElQekJSTGswYkNNSjJGS1NCcmRySmU4aDExQ3pxWGk1S01ZVkU5Wk42bW5vemZyN1BmaWYyenJfSE5sdVB1STdUR1RNUk9Ta2RDb1c2TnJFc1JISTFRbHV1cWItZ2RtT0RLeFZ2SGpxeXVmWUNsa1FsMHFQZFozcjNZejFub19JX2ZvTnVQNkJrYjY4a0dyWVZEa1ZhM2pKRWZ3?oc=5",
+          "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNbGg1dmJtQjRPdlFFUjVOc2l1YVZGRjFoT3U4QzJndURZOWRkVlBWekQtS2R5amJaTEdhSFNGWEtGRTMwWU1GMjFDLVJzR3hOaHVUb1paOHJrcV9SYkd5VFlsUUxsVE1SRnNJRHF4S0ZFN3F2djJMSWl2OGVPNURwLWJDN2lBNDhtWUEzUlQxNlZQNGpSdXF2SFlOY1NmT29fOFhnZ25VOFZTWDRDRlpCcW1RWmlraXJra0Eyc3pnT0hycXBJc0dnQ0Jtc3A0NTQ1LW93T2V3?oc=5",
+          "https://news.google.com/rss/articles/CBMitgFBVV95cUxNUnpWMDIwTUNoV0Z0a1FUQjQ5emRLY2s4T1pjMTJJdXZFLXk0bGxaZVhUbG0tb0dGSHFkc01EYW1YYXZQTG96UDlSSVBqazR0S0s3bWQ1TS0zbXd3ZjB3bmllVXVleWp4bXFBaU1PQXFTZFoteE5fU21PdHlDazNDZWhCZld1YmJrcnVDRjRnaklLMjUtaWxTdmxuZnotekZSb0VlNGdDMlJNbkJTaFRDVmRLYVp2dw?oc=5",
+          "https://news.google.com/rss/articles/CBMiYkFVX3lxTFB5NWxIZ2x5c2dDRnlQb0dwSVRqM1pkSUZsQ01hTGMxLV8waGFjZWNZNk5CV01pdVVsNjRTZDk1Z00wd19zRHpzRFlaV2trSmZOQWRLSHdoZFF6VW9zSmVqT25n?oc=5",
+          "https://news.google.com/rss/articles/CBMisgFBVV95cUxNQlVOc3hJZngzLVYzdlpJbDFIbDFST29YdXBncVBrd2pNVXpxeUZDSFNNN1dqYTEwanBXaGNTUk14dWN0cURuVWYyWXl5eUphMkp0Z0Nud1Y3UG14MVBzSlJVZ093OW9HUmk1ZzBFWHJZTTFkVFJKaVo0eC1iZnNCWXM5bmdsY2E2Z2JnNkFQOS1jRDN5OWlYRm5qUlRpSmZqNnQ5Yk9YcWZMZl9QZFZpNjNn?oc=5"
+        ],
+        "evidence_note": "Coverage is local and mostly program- or potential-oriented; sources report no production, price, or quantified impact data."
+      },
+      "input_sources": [
+        {
+          "id": "1",
+          "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQSG9kQWpza2RkQVZoaFB4YVNoUktCVG0tSzk4TGg0NXh0WWtHV0hMWTNtQkhUQkNxV2lnUXFKdnVxRGs1dVJFNjRxTFFfcG5RSnpCYklNS0VlT2pJdV9FRlFlVXdPUUlDOXpxU0h2b1Z6RDBfSmNUMHFZcm1PS3hWeWRmVzJvczhtR1BNNXN1bk9DRnJFaW5KdmdKMHVOWWhrVkdRQUt2QmlEdw?oc=5",
+          "title": "BRK Reborn, Bisakah Sistem Baru Mengubah Nasib Petani Kopi Bondowoso? (Bagian 3–Tamat) - beritajatim.com",
+          "source": "beritajatim.com",
+          "published_at": "Sun, 04 Oct 2026 05:08:27 GMT"
+        },
+        {
+          "id": "2",
+          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQUDQwQVl1SElQd0ZBTnEtRlpDblBMcW1BREhxb0lhcXBONy1tNWxQeEQxbjFYbk4tNlVZUC1kX0loRHNIMll5Y1Y4TURBVlAzeFdDZEJ3a2dKRm9wLXNpTFo4SEF5RVdhQk12NDZtSlJJQ3pOeDlGcWc3X1Q2SWxaRFRPNURhc3g1ZVhRWWhRaV9rQTNJQXJQS0pRNDlkdk9uN3NkaWVMT3lEank5bkxxT09QMXZsSEVxemhr0gG6AUFVX3lxTE9xNFMyd2JKdDZiVVdKeE1JdVdoY2t3TVpLQ1FUSkJFbGNUX0htRXI3enNweGJPak15Ui1PMUpzbElhUnNwMTRYM09TNDRqT0Q2akhNbnlTSHV4S1dLU3EwQUhmN1pxdTVuZ3RHV2hhYVNwRUYwempBZkJ0Rzg4X05DN1VGOTA5cmhrOGd6VkxTVnNmbldLc2UxM2tTVGtSOWpUNUh0cWlXWFlWNks3enRIQm9yaGc1TmQ3UQ?oc=5",
+          "title": "Bukan Sekadar Pengusir Kantuk, Kopi Ternyata Baik untuk Kesehatan Usus - National Geographic Indonesia",
+          "source": "National Geographic Indonesia",
+          "published_at": "Sun, 04 Oct 2026 03:00:00 GMT"
+        },
+        {
+          "id": "3",
+          "url": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNQlVOc3hJZngzLVYzdlpJbDFIbDFST29YdXBncVBrd2pNVXpxeUZDSFNNN1dqYTEwanBXaGNTUk14dWN0cURuVWYyWXl5eUphMkp0Z0Nud1Y3UG14MVBzSlJVZ093OW9HUmk1ZzBFWHJZTTFkVFJKaVo0eC1iZnNCWXM5bmdsY2E2Z2JnNkFQOS1jRDN5OWlYRm5qUlRpSmZqNnQ5Yk9YcWZMZl9QZFZpNjNn?oc=5",
+          "title": "Kopi Nirmalagiri Jadi Potensi Ekonomi Baru Petani di Lereng Merapi - RRI.co.id",
+          "source": "RRI.co.id",
+          "published_at": "Sun, 04 Oct 2026 02:05:00 GMT"
+        },
+        {
+          "id": "4",
+          "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNdmczTmRXZFdCWVVPaG5WWlQyTXBaNmVlbjNEaUFlbE5Yd1ZHbWpkMm5wOVBsU3JoaWlHcGhLdHhicDk5ekVoT3ROTW5Ha0hKTUtZUUlSMUNEZlRnV29hSGtfemVHRWc0ZEQxRF96djdzX042WmtMQmZpLTh1Y2o0eEZNYlVPMDZGY3FYSldWSk0yU0ZNRVNOa3lKb1JQQkphSFRLZWdQRGXSAa4BQVVfeXFMUGd5elgxLXFqS2M3OElQekJSTGswYkNNSjJGS1NCcmRySmU4aDExQ3pxWGk1S01ZVkU5Wk42bW5vemZyN1BmaWYyenJfSE5sdVB1STdUR1RNUk9Ta2RDb1c2TnJFc1JISTFRbHV1cWItZ2RtT0RLeFZ2SGpxeXVmWUNsa1FsMHFQZFozcjNZejFub19JX2ZvTnVQNkJrYjY4a0dyWVZEa1ZhM2pKRWZ3?oc=5",
+          "title": "TEP UB Perbaiki Jembatan Lapuk demi Buka Akses Petani Kopi Mamasa - detikNews",
+          "source": "detikNews",
+          "published_at": "Sat, 03 Oct 2026 09:20:11 GMT"
+        },
+        {
+          "id": "5",
+          "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxNbGg1dmJtQjRPdlFFUjVOc2l1YVZGRjFoT3U4QzJndURZOWRkVlBWekQtS2R5amJaTEdhSFNGWEtGRTMwWU1GMjFDLVJzR3hOaHVUb1paOHJrcV9SYkd5VFlsUUxsVE1SRnNJRHF4S0ZFN3F2djJMSWl2OGVPNURwLWJDN2lBNDhtWUEzUlQxNlZQNGpSdXF2SFlOY1NmT29fOFhnZ25VOFZTWDRDRlpCcW1RWmlraXJra0Eyc3pnT0hycXBJc0dnQ0Jtc3A0NTQ1LW93T2V3?oc=5",
+          "title": "Gotong Royong Perbaiki Jembatan, Patriot Transmigrasi dan Warga Mamasa Buka Akses Pengeringan Kopi - MetroTVNews.com",
+          "source": "MetroTVNews.com",
+          "published_at": "Sat, 03 Oct 2026 07:03:01 GMT"
+        },
+        {
+          "id": "6",
+          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNUnpWMDIwTUNoV0Z0a1FUQjQ5emRLY2s4T1pjMTJJdXZFLXk0bGxaZVhUbG0tb0dGSHFkc01EYW1YYXZQTG96UDlSSVBqazR0S0s3bWQ1TS0zbXd3ZjB3bmllVXVleWp4bXFBaU1PQXFTZFoteE5fU21PdHlDazNDZWhCZld1YmJrcnVDRjRnaklLMjUtaWxTdmxuZnotekZSb0VlNGdDMlJNbkJTaFRDVmRLYVp2dw?oc=5",
+          "title": "BI NTB mendampingi petani kopi Sajang tingkatkan kualitas dan produksi - ANTARA News Mataram",
+          "source": "ANTARA News Mataram",
+          "published_at": "Fri, 02 Oct 2026 23:55:30 GMT"
+        },
+        {
+          "id": "7",
+          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPXzVQTjFlMW9YdUFNeElfZnFDbllsZkgydklXSlE5a3VFU3pQV3BzdHNhTm43dXBpbHpPb2hyazI2VkVhZkxCZ2dSbDV5UkJSNldod1R6Q1N5eERkVlE1WUxSSTliWlY5eDRWdENOejJFMmFCRExxNnlTTEVfV18xS1plZXI0VHFmdlZtTlRvekgtMVlKRDBwNFFHY0tETmtjdS16VkRB?oc=5",
+          "title": "Pesta Kopi di Solo, Solo Coffee Party 2026 Hadirkan 100 Tenant - Tribun Travel",
+          "source": "Tribun Travel",
+          "published_at": "Fri, 02 Oct 2026 08:20:51 GMT"
+        },
+        {
+          "id": "8",
+          "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFB5NWxIZ2x5c2dDRnlQb0dwSVRqM1pkSUZsQ01hTGMxLV8waGFjZWNZNk5CV01pdVVsNjRTZDk1Z00wd19zRHpzRFlaV2trSmZOQWRLSHdoZFF6VW9zSmVqT25n?oc=5",
+          "title": "Dari Cisolok ke Pasar Global, Kopi Gunung Kramat Sukabumi Diperkuat Teknologi Pascapanen - Sukabuminow.com",
+          "source": "Sukabuminow.com",
+          "published_at": "Fri, 02 Oct 2026 07:33:22 GMT"
+        },
+        {
+          "id": "9",
+          "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxOd25YOGVGVHhEVTFQM2ZNUzdBQ0hoWktLWEtYdmFicmd5aEJ6RVhjN2U2X2FRSzN2Rmtic1NnNlg4Ti01UlUxVFhUNm5jR21adHhfVVVDSDRQQktMX3BFRjU5a0VZMzJLVFE5OTY1UU5yNHJuZUxlNnY2bGNpa0pPSGhGSWZMVC14T1FJTktiNktadlI0NHc3X0x0QXpfWVNyaDYwa3hFMWdYaDRoYW8wNnl6b0ptQS1mQTQ0LS1nalNLUjA?oc=5",
+          "title": "Secangkir Kopi Pesawaran, Sejuta Cerita dari Rumah Petani Hutan Halaman 1 - Kompasiana.com",
+          "source": "Kompasiana.com",
+          "published_at": "Fri, 02 Oct 2026 03:58:38 GMT"
+        },
+        {
+          "id": "10",
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOZndoOUJra19JTjcyaUNKSUhsRHRyTEVpWDdnTDRDdFFoRkJoY25xOTQ3M2Z6N0FGTm95WWJwcGZsSVFfSHJNVWFORG94SklyYWNyYnVUb3J4MFZNcVAwT0g1R1ZWdW1PX3VONS03LXkwUEpJQmVwWEttdnFmTEMtNlNUejZHc1JydGJrQnFJSG1ORHZHSElDdW1wS3FfeG5QRzJBQ0w2WQ?oc=5",
+          "title": "Ineru Coffee & Matcha, Suaka di Tengah Belantara Beton - Kompas.id",
+          "source": "Kompas.id",
+          "published_at": "Fri, 02 Oct 2026 00:33:15 GMT"
+        },
+        {
+          "id": "11",
+          "url": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxQTmRnTFpQWUJoOG1yOEFLMXB3cm5jWlAzOWJvZmRCa2I2Wk1hcEZrVGVrNkladmQxZ2JkeV9KM1ZfQXE2eGJ6LXg1RFUtQ3JBd0pzTVd4eGotbkg0RmszYkUtZVAxcExrVHpMNTdTREtHT2w3WGUwaldfbHliOEZ4WEFtSnY4ZndRVWlSbDE1WEpZbUVtQ0ZMaFRnMEhQU3lSXy15MTZHR05GMWM?oc=5",
+          "title": "Ineru Coffee & Matcha, Suaka di Tengah Belantara Beton - Kompas.id",
+          "source": "Kompas.id",
+          "published_at": "Fri, 02 Oct 2026 00:33:15 GMT"
+        },
+        {
+          "id": "12",
+          "url": "https://news.google.com/rss/articles/CBMihwFBVV95cUxPc3ZCN3hVbmZ6T0RtOUFjUExJTWpudVJGWDhVWkE2ejZTZmNxZmU2a1pCOWNpN2JqaU1JYVZkUVBZaGg3VmZSSXV1RVJwckx3T3Y0S3JUaUdydXVzU1d0R0lFZm1neE5DdGUtT3daVXM5TzVKeUloYk9XRkhyd0d1TTh5bDdGT2M?oc=5",
+          "title": "COFFEE & DRIVE: EV & HYBRID EXPERIENCE GIIAS SEMARANG - Bank Syariah Indonesia",
+          "source": "Bank Syariah Indonesia",
+          "published_at": "Thu, 01 Oct 2026 23:26:56 GMT"
+        }
+      ]
+    },
+    {
+      "cluster_id": "harga-pasar",
+      "cluster_name": "Harga & Pasar",
+      "period_days": 14,
+      "generated_at": "2026-10-04T12:01:56.767Z",
+      "status": "ai_generated",
+      "fingerprint": "96abe4dc5594a9e98b11c3271d718b463607283732dd3857247e013b2b9f7add",
+      "article": {
+        "title": "Pasar Kopi: US$6,6 miliar ekspor Vietnam; ekspor RI tertekan, ritel tetap bergerak",
+        "summary": "Dalam sembilan bulan pertama, ekspor kopi Vietnam menghasilkan US$6,6 miliar [1]. Di Indonesia, pelemahan permintaan untuk kopi dan besi beriringan dengan penurunan dua digit pada ekspor sektor pertanian dan tambang [2]. Di sisi ritel, Kopi Kenangan melaporkan pendapatan bruto Rp3,7 triliun selama setahun [3].",
+        "lead": "Sinyal lain menambah konteks: pada Juli 2026, kopi berada di puncak daftar nilai ekspor hasil pertanian [4]; sejumlah peritel menggelar promo Hari Kopi Internasional [5]; dan Kemendag mendorong program “Branding Indonesian Coffee” setelah ekspor kopi anjlok [6].",
+        "sections": [
+          {
+            "heading": "Nadi perdagangan regional: menguat di satu tempat, melemah di tempat lain",
+            "paragraphs": [
+              "Angka dari Vietnam menunjukkan mesin ekspor yang kencang: US$6,6 miliar dalam sembilan bulan pertama tahun ini [1]. Di saat yang sama, GoodStats mencatat kopi menempati peringkat teratas nilai ekspor hasil pertanian pada Juli 2026 [4]. Namun lanskap Indonesia tidak seragam: CNBC Indonesia memberitakan ekspor pertanian dan tambang turun dua digit di tengah permintaan kopi dan besi yang loyo [2].",
+              "Gambaran ini menandakan perbedaan kinerja lintas pasar. Untuk pelaku, peluang ekspor sangat bergantung pada tujuan pengiriman dan proposisi produk, bukan satu sinyal harga global yang sama untuk semua."
+            ]
+          },
+          {
+            "heading": "Sinyal hilir: ritel dan format penjualan bergerak",
+            "paragraphs": [
+              "Di dalam negeri, skala ritel besar tetap terlihat. Kopi Kenangan membukukan pendapatan bruto Rp3,7 triliun selama setahun [3]. Momentum Hari Kopi Internasional juga dimanfaatkan peritel dengan promo bertema kopi, yang umumnya ditujukan menarik trafik dan transaksi [5].",
+              "Di sisi format penjualan, model gerobak listrik disebut mempermudah bisnis penjualan kopi—opsi yang menurunkan hambatan operasional dan membuka titik jual baru [10]. Bagi pelaku ritel dan UKM, kombinasi skala jaringan, momentum tematik, dan format ringan bisa menjadi cara mempertahankan perputaran ketika ekspor sedang tidak bersahabat."
+            ]
+          },
+          {
+            "heading": "Kebijakan dan inisiatif lokal: dari branding hingga ekspor komunitas",
+            "paragraphs": [
+              "Sebagai respons atas penurunan ekspor kopi, Kemendag mendorong penguatan “Branding Indonesian Coffee” [6]. Di tingkat akar rumput, kelompok pemuda desa hutan di Batang berhasil mengolah kopi lokal menjadi komoditas ekspor [7], sementara Sultan HB X mendorong pengembangan kopi Merapi sebagai sumber pendapatan warga [8].",
+              "Di ranah industri, pengakuan terhadap inisiatif berkelanjutan juga muncul—Coop Coffee Group meraih penghargaan keberlanjutan industri kopi [9]. Rangkaian sinyal ini menunjukkan jalur perbaikan yang berlapis: penguatan merek asal, dorongan pemerintah daerah, aksi komunitas, dan standar keberlanjutan."
+            ]
+          }
+        ],
+        "conclusion": "Garis besarnya: pasar kopi sedang terbelah. Kinerja ekspor kuat di sebagian wilayah namun melemah di Indonesia, sementara sisi ritel dan inisiatif lokal terus bergerak. Bagi pelaku, membaca permintaan per tujuan, memperkuat identitas produk, dan menjaga akses ke konsumen menjadi kunci—tanpa berasumsi ada satu sinyal harga yang berlaku untuk semua.",
+        "recommendations": [
+          {
+            "audience": "Eksportir kopi Indonesia",
+            "action": "Manfaatkan program “Branding Indonesian Coffee” untuk memperkuat narasi asal, kemasan, dan partisipasi di ajang promosi resmi.",
+            "basis": "Didorong Kemendag setelah ekspor kopi anjlok [6]."
+          },
+          {
+            "audience": "Kedai kopi/UKM",
+            "action": "Uji model gerobak listrik atau format mobile untuk membuka titik jual baru dan aktifkan promo saat momentum tematik seperti Hari Kopi Internasional.",
+            "basis": "Model gerobak listrik mempermudah operasional [10] dan ada promo tematik yang dimanfaatkan peritel [5]."
+          },
+          {
+            "audience": "Kelompok tani/koperasi",
+            "action": "Pelajari model Batang: olah kopi lokal bersama dan arahkan ke pasar ekspor bila persyaratan terpenuhi.",
+            "basis": "Kelompok pemuda desa hutan di Batang berhasil membawa kopi lokal ke pasar ekspor [7]."
+          }
+        ],
+        "source_urls": [
+          "https://news.google.com/rss/articles/CBMifkFVX3lxTE9XOV9KUnBSd0VzUGowZHZwbnROWE1JcE1VdklRZ0lLRGVnVk9KcjlJT2FfV0hhYUlsNmd4RXg2dnNNV3gzeUNvWm5GZl9MMEttalJGZ1VpVGVNSmNkU0FvQ3M0dDFoZUVqRXNrVVhmWXJXaGEzZ1lEVzZDWjRWZw?oc=5",
+          "https://news.google.com/rss/articles/CBMixAFBVV95cUxPYUpFRzhhUXdCeEQ3WjQtUjhtWWVuUVNwZlNLQ0RCZE9yeGpMYUJrU3FObEJ0Ulg0VzVpc1R2V3hSeGtqaDAyaHM5TG1CaGswMXNqOGh6Yl9yc3dyaUtFZlVPSi1lNmZpMVUyblVuR2c3MGxNTXY4NXVIalVKbjRIWGRFZEU1d3RxOEdRWmJEc2J0TWlCN3JQUWw4Z0Nrd0pBUE5RbERSXzJiV2d1X2JIV3ctamhmaGlseTFRekJmajd6aXhm0gHKAUFVX3lxTE5HWW9URkZId0U0QjBQTW1UVWxUdjBISm44X01OV2YzZVpyazdTN2g4dVg5VjI1dDBpRklqSEY5dXFDT2pLajU5b05aRVZTOGFPZFF1dnZWcDM5VEpxcU5oWlJvNzl1OVVsNUxtYzE4OGFRb3ExTEZYVWtpbzJlMmtCVmtMbU94NjJCTl9vT1BRdWFoa3VKbEFKbE1jYVhuanZIT1VRSW5kWU5vNUhrcFlzTkh3N0RvWUVNeHBXMW8yZ3V1SHhoT0lpWmc?oc=5",
+          "https://news.google.com/rss/articles/CBMioAFBVV95cUxOcU5sQmJWTlZVcy1PekFDOVZkSlFnUVRBRE04WU1XNFBJV0FxWGZMX01nTlJ5N2g1SXNjS3p5VE9VVnRkM0RkTjFOTVQxdXAzVWxPYW9OUEZ2SGJadk9HeEZvNkJ0YVMwNkVDZzBrR2Q4b210RDNYbnIyeVVodGk2NWd2QVBqNm9xUE1QM1oyX3J2OXRHaW1ycU90RURubGpq0gGaAUFVX3lxTFBUZXdXTE1lN1pJMEl6ckFibHRiWVJDcVBiem9UZWtkN043VVZDb2VzU3Q2b2o1ekVHcEJYWDZIaDFZV3dpbWxyMndVY1p1ZXUtYTVhb3ducVdJSjlSTlJ1ZnZJMnhfLTRwYVlYdnViNkUxUUtUbXA0cmJCaGM4LWl1NVpwSzEtMnBpZ0xEblVqcnpQQ05UNmFwVXc?oc=5",
+          "https://news.google.com/rss/articles/CBMiogFBVV95cUxOUmxSY1lTU2JwVmN4RDlQTXdVbUdwMEk1YkI1QkpNNkRjSUFyY0JobGJLQV9YcjNCMnZCcDF4TmZhci1Ud1Fob29EREJUQjZtUGVZbHRqUUZ0bjI4WHQ2ZmZoWVVMX0lqVVNLbGdyX0dvRXNFZkRpYTdxQTFkeGlEXzlYeFlMMmdMdU5yZnQzc2JRRWQ4NmpoRXpud29MVkZJSGc?oc=5",
+          "https://news.google.com/rss/articles/CBMirgFBVV95cUxNSVI0NWJxenZNWDNtYjhyQTlMMTZMS25JeFV1dDRZVjVVSmQ0OFpKSF8wTFRQN056bERZTTJLSzNWWmZRZUhzcFhpLW84cExXU0VuNG8wcE5lbFBNTDBoM2xkOHRjbVloU0hwMDN2WmhhTW5iR2lBS29md0l3U1NFZlJWWWl2empsRzIteEpZY0F4djgyTUJackVSNkZwaThWaW95bEU3Qk1pSTRNT3fSAbMBQVVfeXFMT0NXbmtxNnh2c3c4NHNRQmdSVm1aY3ljbF9QaWlCLXBTVENCRUttQ2dwR3BvNkVnVHFkTVRuWHdUMUx3MUtZdVZvS3BxQ1BQY28xX1BsNjFTcjI1dVpTVVpOMmM0ZWFaZTVfTWY0MjUwanl2OE43X0lxc3A1Q2F1MERCakFCMjdvczJ6NGpya3kxdHBqWlVfand1UzEwTDZNb1BKQTdZWHZsMGdQTlBwTzdENDQ?oc=5",
+          "https://news.google.com/rss/articles/CBMitgFBVV95cUxPN294Mm92WWdjb3JfVnV4Q0RLTEFyakxwYkZTS3BkaldBaThyOWI2dnEzR196UVVpcHM2VFhLS3Jyc2U4OEpfT3FWdldldGJDdXp5Mm5VaWw5bmQxT2x4WWZRbmo1M214VjNISGw5TWxYLTRCSkRCaFpHSU1jU3pRbFBHVlVPeHVMSjZqcjBMMUR3WTVfeWVINDR5UHhTbGNlcUVhN2RNeVNiNXJHbVN6TnVVQ2JrUQ?oc=5",
+          "https://news.google.com/rss/articles/CBMixgFBVV95cUxOalZoamk3ZGQ2Y0U2eXNuRXJHNTh4NWtkSE0ySVBDUlkxTmM4MFVEWU9oMXVlS25NMzJlU2dfN3lqazVvV3U4M0dwOE1FYy1rV0xGYUhWSl9nY25CMUVnV3ZqQUlHS0htZnphdWt6WnlvY2ZrTlI5cXB5d1ZTck9acFFwUmFQYVdtcUEtZGVhSHFvUkhlcWc4MHEwd3dvVENpVFNLSkZ5WDBReWFsdTFDY2wwNUg4dVJodERFdlViX014eW1wLVE?oc=5",
+          "https://news.google.com/rss/articles/CBMiswFBVV95cUxNcmViZjFJU1JzbXhXNjBSR3VCM0RiWGFBbkNmN3V5VzVZWmVGOVZvYVVIT1F2STY0em5fcEJFOVJOdElnLWIzeFgxLUJ4VXgyUUE5eXBSdnFnb1l4c2dBNzJTSjhTZGRDaVRxTGE0VHJ0RUw5WjdENVVVaF83N21qUlplVHlQckZOVFNXRElpclRydldfNHowYUR2ZGl5dlItNWZZTEpsYkhLZ0xfLWRaTWNUdw?oc=5",
+          "https://news.google.com/rss/articles/CBMiygFBVV95cUxPeXA2Wno5UFlfaUVTakpzbTNyWVlfaWtPSTM4d296ck1qVGFpNEFiR2dsTGIybGhmTlk3a2tqbGZ0NVZXdDd4aUhWZ1JXN1A5R2N2M1d6clBOYV9hWjF6RWtFeHREd0ZyOU42Q3JnT2tTVXRvOHp5OVBYRGtTLTVqOUxqeHZ1MUFyM1lWbmQ0ZExxRjdDTDk4TE0yVmNEXzRmemYtSWpSQkt5ckZ6ZWhIYzIwRENJaE0tTjFkclJYSVV0OHgwQzZJMlp3?oc=5",
+          "https://news.google.com/rss/articles/CBMirwFBVV95cUxNenhJVUduQ2ZldzZTUWNxVXBNN2tGUGNLbTdHTGlwT293TjN6ZVI0dTlwLTVCQ01teUUyaFJIYzRNeGEzOWpSS25mVlVHZW84RXZvVTExQnlhM1VsRnVaWW1uOUM1UDhCZTZQUlB4NlQ1RnBTOWFnMTU2UF9ET3lzbHhEQnJJNlpnR19DWV9XUkdSRHUzc2RESjVFdGhpTWlONWt1dllQdk02U3dVVUlJ?oc=5"
+        ],
+        "evidence_note": "Sebagian besar rujukan berupa judul/siaran singkat; data harga rinci dan periode persis beberapa angka tidak tersedia di sumber."
+      },
+      "article_en": {
+        "title": "Coffee markets: Vietnam’s $6.6bn exports, Indonesia’s export slump, retail keeps moving",
+        "summary": "Vietnam’s coffee exports brought in $6.6 billion in the first nine months [1]. Indonesia saw double‑digit declines in agriculture and mining exports amid weak demand for coffee and iron [2]. On the retail side, Kopi Kenangan reported Rp3.7 trillion in gross revenue over a year [3].",
+        "lead": "A few other signals round out the picture: in July 2026, coffee topped the agricultural export value ranking [4]; retailers ran International Coffee Day promos [5]; and the Trade Ministry pushed a “Branding Indonesian Coffee” drive after coffee exports plunged [6].",
+        "sections": [
+          {
+            "heading": "Regional trade pulse: strength in one place, softness in another",
+            "paragraphs": [
+              "Vietnam’s number points to a strong export engine: $6.6 billion in the first nine months of the year [1]. At the same time, GoodStats listed coffee at the top of agricultural export value in July 2026 [4]. But Indonesia’s picture is mixed: CNBC Indonesia reported double‑digit declines in agriculture and mining exports amid weak demand for coffee and iron [2].",
+              "Taken together, performance varies by market. For operators, export prospects hinge on destination demand and product competitiveness rather than a single global price signal."
+            ]
+          },
+          {
+            "heading": "Downstream signals: retail and formats keep moving",
+            "paragraphs": [
+              "Domestically, large‑scale retail remains visible. Kopi Kenangan booked Rp3.7 trillion in gross revenue over a year [3]. Retailers also leaned on International Coffee Day promotions, typically used to drive traffic and transactions [5].",
+              "On go‑to‑market, an electric cart model is reported to make coffee vending easier—an option that lowers operational barriers and opens new points of sale [10]. For retailers and SMEs, the mix of network scale, themed moments, and light formats can help maintain turnover when exports are less friendly."
+            ]
+          },
+          {
+            "heading": "Policy and local initiatives: from branding to community exports",
+            "paragraphs": [
+              "Responding to weaker coffee exports, the Trade Ministry is pushing stronger “Branding Indonesian Coffee” [6]. On the ground, a youth group in Batang processed local coffee into an export commodity [7], while Sultan HB X encouraged developing Merapi coffee as a community income source [8].",
+              "Industry recognition also surfaced—Coop Coffee Group received a sustainability award in coffee [9]. These signals point to layered paths forward: origin branding, local government backing, community action, and sustainability standards."
+            ]
+          }
+        ],
+        "conclusion": "Bottom line: the coffee market is split. Export performance is strong in some places but soft in Indonesia, while retail activity and local initiatives continue. Players should read destination demand, strengthen origin identity, and keep access to consumers—without assuming a single price signal fits all.",
+        "recommendations": [
+          {
+            "audience": "Indonesian coffee exporters",
+            "action": "Tap the “Branding Indonesian Coffee” program to sharpen origin storytelling, packaging, and participation in official promotion events.",
+            "basis": "Driven by the Trade Ministry after coffee exports fell [6]."
+          },
+          {
+            "audience": "Cafes/SMEs",
+            "action": "Pilot electric carts or other mobile formats to open new locations at lower cost, and activate promos around themed moments like International Coffee Day.",
+            "basis": "Electric carts ease coffee vending [10] and retailers used themed promos [5]."
+          },
+          {
+            "audience": "Farmer groups/co-ops",
+            "action": "Study the Batang model: process local coffee collectively and channel it to export markets where requirements are met.",
+            "basis": "A Batang youth group turned local coffee into an export commodity [7]."
+          }
+        ],
+        "source_urls": [
+          "https://news.google.com/rss/articles/CBMifkFVX3lxTE9XOV9KUnBSd0VzUGowZHZwbnROWE1JcE1VdklRZ0lLRGVnVk9KcjlJT2FfV0hhYUlsNmd4RXg2dnNNV3gzeUNvWm5GZl9MMEttalJGZ1VpVGVNSmNkU0FvQ3M0dDFoZUVqRXNrVVhmWXJXaGEzZ1lEVzZDWjRWZw?oc=5",
+          "https://news.google.com/rss/articles/CBMixAFBVV95cUxPYUpFRzhhUXdCeEQ3WjQtUjhtWWVuUVNwZlNLQ0RCZE9yeGpMYUJrU3FObEJ0Ulg0VzVpc1R2V3hSeGtqaDAyaHM5TG1CaGswMXNqOGh6Yl9yc3dyaUtFZlVPSi1lNmZpMVUyblVuR2c3MGxNTXY4NXVIalVKbjRIWGRFZEU1d3RxOEdRWmJEc2J0TWlCN3JQUWw4Z0Nrd0pBUE5RbERSXzJiV2d1X2JIV3ctamhmaGlseTFRekJmajd6aXhm0gHKAUFVX3lxTE5HWW9URkZId0U0QjBQTW1UVWxUdjBISm44X01OV2YzZVpyazdTN2g4dVg5VjI1dDBpRklqSEY5dXFDT2pLajU5b05aRVZTOGFPZFF1dnZWcDM5VEpxcU5oWlJvNzl1OVVsNUxtYzE4OGFRb3ExTEZYVWtpbzJlMmtCVmtMbU94NjJCTl9vT1BRdWFoa3VKbEFKbE1jYVhuanZIT1VRSW5kWU5vNUhrcFlzTkh3N0RvWUVNeHBXMW8yZ3V1SHhoT0lpWmc?oc=5",
+          "https://news.google.com/rss/articles/CBMioAFBVV95cUxOcU5sQmJWTlZVcy1PekFDOVZkSlFnUVRBRE04WU1XNFBJV0FxWGZMX01nTlJ5N2g1SXNjS3p5VE9VVnRkM0RkTjFOTVQxdXAzVWxPYW9OUEZ2SGJadk9HeEZvNkJ0YVMwNkVDZzBrR2Q4b210RDNYbnIyeVVodGk2NWd2QVBqNm9xUE1QM1oyX3J2OXRHaW1ycU90RURubGpq0gGaAUFVX3lxTFBUZXdXTE1lN1pJMEl6ckFibHRiWVJDcVBiem9UZWtkN043VVZDb2VzU3Q2b2o1ekVHcEJYWDZIaDFZV3dpbWxyMndVY1p1ZXUtYTVhb3ducVdJSjlSTlJ1ZnZJMnhfLTRwYVlYdnViNkUxUUtUbXA0cmJCaGM4LWl1NVpwSzEtMnBpZ0xEblVqcnpQQ05UNmFwVXc?oc=5",
+          "https://news.google.com/rss/articles/CBMiogFBVV95cUxOUmxSY1lTU2JwVmN4RDlQTXdVbUdwMEk1YkI1QkpNNkRjSUFyY0JobGJLQV9YcjNCMnZCcDF4TmZhci1Ud1Fob29EREJUQjZtUGVZbHRqUUZ0bjI4WHQ2ZmZoWVVMX0lqVVNLbGdyX0dvRXNFZkRpYTdxQTFkeGlEXzlYeFlMMmdMdU5yZnQzc2JRRWQ4NmpoRXpud29MVkZJSGc?oc=5",
+          "https://news.google.com/rss/articles/CBMirgFBVV95cUxNSVI0NWJxenZNWDNtYjhyQTlMMTZMS25JeFV1dDRZVjVVSmQ0OFpKSF8wTFRQN056bERZTTJLSzNWWmZRZUhzcFhpLW84cExXU0VuNG8wcE5lbFBNTDBoM2xkOHRjbVloU0hwMDN2WmhhTW5iR2lBS29md0l3U1NFZlJWWWl2empsRzIteEpZY0F4djgyTUJackVSNkZwaThWaW95bEU3Qk1pSTRNT3fSAbMBQVVfeXFMT0NXbmtxNnh2c3c4NHNRQmdSVm1aY3ljbF9QaWlCLXBTVENCRUttQ2dwR3BvNkVnVHFkTVRuWHdUMUx3MUtZdVZvS3BxQ1BQY28xX1BsNjFTcjI1dVpTVVpOMmM0ZWFaZTVfTWY0MjUwanl2OE43X0lxc3A1Q2F1MERCakFCMjdvczJ6NGpya3kxdHBqWlVfand1UzEwTDZNb1BKQTdZWHZsMGdQTlBwTzdENDQ?oc=5",
+          "https://news.google.com/rss/articles/CBMitgFBVV95cUxPN294Mm92WWdjb3JfVnV4Q0RLTEFyakxwYkZTS3BkaldBaThyOWI2dnEzR196UVVpcHM2VFhLS3Jyc2U4OEpfT3FWdldldGJDdXp5Mm5VaWw5bmQxT2x4WWZRbmo1M214VjNISGw5TWxYLTRCSkRCaFpHSU1jU3pRbFBHVlVPeHVMSjZqcjBMMUR3WTVfeWVINDR5UHhTbGNlcUVhN2RNeVNiNXJHbVN6TnVVQ2JrUQ?oc=5",
+          "https://news.google.com/rss/articles/CBMixgFBVV95cUxOalZoamk3ZGQ2Y0U2eXNuRXJHNTh4NWtkSE0ySVBDUlkxTmM4MFVEWU9oMXVlS25NMzJlU2dfN3lqazVvV3U4M0dwOE1FYy1rV0xGYUhWSl9nY25CMUVnV3ZqQUlHS0htZnphdWt6WnlvY2ZrTlI5cXB5d1ZTck9acFFwUmFQYVdtcUEtZGVhSHFvUkhlcWc4MHEwd3dvVENpVFNLSkZ5WDBReWFsdTFDY2wwNUg4dVJodERFdlViX014eW1wLVE?oc=5",
+          "https://news.google.com/rss/articles/CBMiswFBVV95cUxNcmViZjFJU1JzbXhXNjBSR3VCM0RiWGFBbkNmN3V5VzVZWmVGOVZvYVVIT1F2STY0em5fcEJFOVJOdElnLWIzeFgxLUJ4VXgyUUE5eXBSdnFnb1l4c2dBNzJTSjhTZGRDaVRxTGE0VHJ0RUw5WjdENVVVaF83N21qUlplVHlQckZOVFNXRElpclRydldfNHowYUR2ZGl5dlItNWZZTEpsYkhLZ0xfLWRaTWNUdw?oc=5",
+          "https://news.google.com/rss/articles/CBMiygFBVV95cUxPeXA2Wno5UFlfaUVTakpzbTNyWVlfaWtPSTM4d296ck1qVGFpNEFiR2dsTGIybGhmTlk3a2tqbGZ0NVZXdDd4aUhWZ1JXN1A5R2N2M1d6clBOYV9hWjF6RWtFeHREd0ZyOU42Q3JnT2tTVXRvOHp5OVBYRGtTLTVqOUxqeHZ1MUFyM1lWbmQ0ZExxRjdDTDk4TE0yVmNEXzRmemYtSWpSQkt5ckZ6ZWhIYzIwRENJaE0tTjFkclJYSVV0OHgwQzZJMlp3?oc=5",
+          "https://news.google.com/rss/articles/CBMirwFBVV95cUxNenhJVUduQ2ZldzZTUWNxVXBNN2tGUGNLbTdHTGlwT293TjN6ZVI0dTlwLTVCQ01teUUyaFJIYzRNeGEzOWpSS25mVlVHZW84RXZvVTExQnlhM1VsRnVaWW1uOUM1UDhCZTZQUlB4NlQ1RnBTOWFnMTU2UF9ET3lzbHhEQnJJNlpnR19DWV9XUkdSRHUzc2RESjVFdGhpTWlONWt1dllQdk02U3dVVUlJ?oc=5"
+        ],
+        "evidence_note": "Most items are headlines/announcements; granular price data and precise time spans for some figures are not available in the sources."
+      },
+      "input_sources": [
+        {
+          "id": "1",
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNZmlNeEVERkszZlBXandPRGo3eHFfcjZvVWNlM0hSZDlBSF91Q2ZyM1loT0RrbEVfalA5NWFyM05yTmdrWE9wZGM2aXVfX2tpNHZFVUZfajR6T2VnelRqVWotVEQwOERTQkZxNlhSTjN2QWxURU15enJESnNKTlRRYi1QZkt1Y0ctcG9QRkxPRGc2SG10U3hyTFg2M3UyRmFsUGo2Tw?oc=5",
+          "title": "Hari Kopi Internasional, Momentum Hargai Perjuangan Petani - RRI.co.id",
+          "source": "RRI.co.id",
+          "published_at": "Sun, 04 Oct 2026 11:08:00 GMT"
+        },
+        {
+          "id": "2",
+          "url": "https://news.google.com/rss/articles/CBMifkFVX3lxTE9XOV9KUnBSd0VzUGowZHZwbnROWE1JcE1VdklRZ0lLRGVnVk9KcjlJT2FfV0hhYUlsNmd4RXg2dnNNV3gzeUNvWm5GZl9MMEttalJGZ1VpVGVNSmNkU0FvQ3M0dDFoZUVqRXNrVVhmWXJXaGEzZ1lEVzZDWjRWZw?oc=5",
+          "title": "Ekspor kopi menghasilkan pendapatan sebesar 6,6 miliar dolar AS setelah 9 bulan. - vietnam.vn",
+          "source": "vietnam.vn",
+          "published_at": "Sun, 04 Oct 2026 04:24:20 GMT"
+        },
+        {
+          "id": "3",
+          "url": "https://news.google.com/rss/articles/CBMiogFBVV95cUxOUmxSY1lTU2JwVmN4RDlQTXdVbUdwMEk1YkI1QkpNNkRjSUFyY0JobGJLQV9YcjNCMnZCcDF4TmZhci1Ud1Fob29EREJUQjZtUGVZbHRqUUZ0bjI4WHQ2ZmZoWVVMX0lqVVNLbGdyX0dvRXNFZkRpYTdxQTFkeGlEXzlYeFlMMmdMdU5yZnQzc2JRRWQ4NmpoRXpud29MVkZJSGc?oc=5",
+          "title": "10 Hasil Pertanian dengan Nilai Ekspor Terbesar Juli 2026, Kopi di Puncak - GoodStats",
+          "source": "GoodStats",
+          "published_at": "Sun, 04 Oct 2026 02:30:00 GMT"
+        },
+        {
+          "id": "4",
+          "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPeXA2Wno5UFlfaUVTakpzbTNyWVlfaWtPSTM4d296ck1qVGFpNEFiR2dsTGIybGhmTlk3a2tqbGZ0NVZXdDd4aUhWZ1JXN1A5R2N2M1d6clBOYV9hWjF6RWtFeHREd0ZyOU42Q3JnT2tTVXRvOHp5OVBYRGtTLTVqOUxqeHZ1MUFyM1lWbmQ0ZExxRjdDTDk4TE0yVmNEXzRmemYtSWpSQkt5ckZ6ZWhIYzIwRENJaE0tTjFkclJYSVV0OHgwQzZJMlp3?oc=5",
+          "title": "Coop Coffee Group Sabet Penghargaan Keberlanjutan Industri Kopi di Prominent Awards 2026 - MetroTVNews.com",
+          "source": "MetroTVNews.com",
+          "published_at": "Fri, 02 Oct 2026 04:47:32 GMT"
+        },
+        {
+          "id": "5",
+          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNSVI0NWJxenZNWDNtYjhyQTlMMTZMS25JeFV1dDRZVjVVSmQ0OFpKSF8wTFRQN056bERZTTJLSzNWWmZRZUhzcFhpLW84cExXU0VuNG8wcE5lbFBNTDBoM2xkOHRjbVloU0hwMDN2WmhhTW5iR2lBS29md0l3U1NFZlJWWWl2empsRzIteEpZY0F4djgyTUJackVSNkZwaThWaW95bEU3Qk1pSTRNT3fSAbMBQVVfeXFMT0NXbmtxNnh2c3c4NHNRQmdSVm1aY3ljbF9QaWlCLXBTVENCRUttQ2dwR3BvNkVnVHFkTVRuWHdUMUx3MUtZdVZvS3BxQ1BQY28xX1BsNjFTcjI1dVpTVVpOMmM0ZWFaZTVfTWY0MjUwanl2OE43X0lxc3A1Q2F1MERCakFCMjdvczJ6NGpya3kxdHBqWlVfand1UzEwTDZNb1BKQTdZWHZsMGdQTlBwTzdENDQ?oc=5",
+          "title": "Promo Cuan Hari Kopi Sedunia hingga Tanda Tubuh Kekurangan Serat - detikFood",
+          "source": "detikFood",
+          "published_at": "Fri, 02 Oct 2026 03:30:29 GMT"
+        },
+        {
+          "id": "6",
+          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxOcU5sQmJWTlZVcy1PekFDOVZkSlFnUVRBRE04WU1XNFBJV0FxWGZMX01nTlJ5N2g1SXNjS3p5VE9VVnRkM0RkTjFOTVQxdXAzVWxPYW9OUEZ2SGJadk9HeEZvNkJ0YVMwNkVDZzBrR2Q4b210RDNYbnIyeVVodGk2NWd2QVBqNm9xUE1QM1oyX3J2OXRHaW1ycU90RURubGpq0gGaAUFVX3lxTFBUZXdXTE1lN1pJMEl6ckFibHRiWVJDcVBiem9UZWtkN043VVZDb2VzU3Q2b2o1ekVHcEJYWDZIaDFZV3dpbWxyMndVY1p1ZXUtYTVhb3ducVdJSjlSTlJ1ZnZJMnhfLTRwYVlYdnViNkUxUUtUbXA0cmJCaGM4LWl1NVpwSzEtMnBpZ0xEblVqcnpQQ05UNmFwVXc?oc=5",
+          "title": "Kopi Kenangan Raup Pendapatan Bruto Rp 3,7 Triliun Selama Setahun - kontan.co.id",
+          "source": "kontan.co.id",
+          "published_at": "Fri, 02 Oct 2026 02:56:20 GMT"
+        },
+        {
+          "id": "7",
+          "url": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPYUpFRzhhUXdCeEQ3WjQtUjhtWWVuUVNwZlNLQ0RCZE9yeGpMYUJrU3FObEJ0Ulg0VzVpc1R2V3hSeGtqaDAyaHM5TG1CaGswMXNqOGh6Yl9yc3dyaUtFZlVPSi1lNmZpMVUyblVuR2c3MGxNTXY4NXVIalVKbjRIWGRFZEU1d3RxOEdRWmJEc2J0TWlCN3JQUWw4Z0Nrd0pBUE5RbERSXzJiV2d1X2JIV3ctamhmaGlseTFRekJmajd6aXhm0gHKAUFVX3lxTE5HWW9URkZId0U0QjBQTW1UVWxUdjBISm44X01OV2YzZVpyazdTN2g4dVg5VjI1dDBpRklqSEY5dXFDT2pLajU5b05aRVZTOGFPZFF1dnZWcDM5VEpxcU5oWlJvNzl1OVVsNUxtYzE4OGFRb3ExTEZYVWtpbzJlMmtCVmtMbU94NjJCTl9vT1BRdWFoa3VKbEFKbE1jYVhuanZIT1VRSW5kWU5vNUhrcFlzTkh3N0RvWUVNeHBXMW8yZ3V1SHhoT0lpWmc?oc=5",
+          "title": "Permintaan Kopi-Besi Loyo, Ekspor Pertanian & Tambang RI Turun 2 Digit - cnbcindonesia.com",
+          "source": "cnbcindonesia.com",
+          "published_at": "Thu, 01 Oct 2026 08:00:00 GMT"
+        },
+        {
+          "id": "8",
+          "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPN294Mm92WWdjb3JfVnV4Q0RLTEFyakxwYkZTS3BkaldBaThyOWI2dnEzR196UVVpcHM2VFhLS3Jyc2U4OEpfT3FWdldldGJDdXp5Mm5VaWw5bmQxT2x4WWZRbmo1M214VjNISGw5TWxYLTRCSkRCaFpHSU1jU3pRbFBHVlVPeHVMSjZqcjBMMUR3WTVfeWVINDR5UHhTbGNlcUVhN2RNeVNiNXJHbVN6TnVVQ2JrUQ?oc=5",
+          "title": "Ekspor Kopi Anjlok, Kemendag Dorong Branding Indonesian Coffee - Validnews",
+          "source": "Validnews",
+          "published_at": "Thu, 01 Oct 2026 03:13:00 GMT"
+        },
+        {
+          "id": "9",
+          "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOalZoamk3ZGQ2Y0U2eXNuRXJHNTh4NWtkSE0ySVBDUlkxTmM4MFVEWU9oMXVlS25NMzJlU2dfN3lqazVvV3U4M0dwOE1FYy1rV0xGYUhWSl9nY25CMUVnV3ZqQUlHS0htZnphdWt6WnlvY2ZrTlI5cXB5d1ZTck9acFFwUmFQYVdtcUEtZGVhSHFvUkhlcWc4MHEwd3dvVENpVFNLSkZ5WDBReWFsdTFDY2wwNUg4dVJodERFdlViX014eW1wLVE?oc=5",
+          "title": "Kelompok Pemuda Desa Hutan di Batang Berhasil Olah Kopi Lokal Jadi Komoditas Ekspor - Pemerintah Kabupaten Batang",
+          "source": "Pemerintah Kabupaten Batang",
+          "published_at": "Wed, 30 Sep 2026 05:16:43 GMT"
+        },
+        {
+          "id": "10",
+          "url": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQZ2ZYaGkyVF8xZk5OdHFCOVhUTUQyVkNfZGZCaDVYUjZwbEpxYXc0NWZISGNVUDYxMU5vWFduMkZQcGlURE85X1FmbE9ybVYwUGhNNENJV3ozR0hCRmFYNHhJZWo1dkhQT25TeDNtYklNckF3RnE4YUtWa1lWQWRDazk5bWs1OE5lNE1jQmhB0gGTAUFVX3lxTE1lVFRIQjlLaFBORnpLWTREbzdCWmhQZzIxZXdDVDNCVGhNaVZLbUhHN1FWdUcyNV9nYVN2SHVkdTVIX1Uwd01Cckd1Mzc5YlpuZDR2eElVYXNBaUo5SlRMZEI5MGJRLWduNlNaOGVub1JaVmZMNTZlY0pZR3hibXd4UUxXb0g4TkNKMUwxcFVxZzJvMA?oc=5",
+          "title": "5 Menu Best Seller Point Coffee, Ada Caramel Macchiato! - IDN Times",
+          "source": "IDN Times",
+          "published_at": "Wed, 30 Sep 2026 03:20:00 GMT"
+        },
+        {
+          "id": "11",
+          "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNcmViZjFJU1JzbXhXNjBSR3VCM0RiWGFBbkNmN3V5VzVZWmVGOVZvYVVIT1F2STY0em5fcEJFOVJOdElnLWIzeFgxLUJ4VXgyUUE5eXBSdnFnb1l4c2dBNzJTSjhTZGRDaVRxTGE0VHJ0RUw5WjdENVVVaF83N21qUlplVHlQckZOVFNXRElpclRydldfNHowYUR2ZGl5dlItNWZZTEpsYkhLZ0xfLWRaTWNUdw?oc=5",
+          "title": "Sultan HB X mendorong pengembangan kopi Merapi sumber pendapatan warga - ANTARA News Yogyakarta",
+          "source": "ANTARA News Yogyakarta",
+          "published_at": "Tue, 29 Sep 2026 13:48:50 GMT"
+        },
+        {
+          "id": "12",
+          "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNenhJVUduQ2ZldzZTUWNxVXBNN2tGUGNLbTdHTGlwT293TjN6ZVI0dTlwLTVCQ01teUUyaFJIYzRNeGEzOWpSS25mVlVHZW84RXZvVTExQnlhM1VsRnVaWW1uOUM1UDhCZTZQUlB4NlQ1RnBTOWFnMTU2UF9ET3lzbHhEQnJJNlpnR19DWV9XUkdSRHUzc2RESjVFdGhpTWlONWt1dllQdk02U3dVVUlJ?oc=5",
+          "title": "Dekati Konsumen, Model Gerobak Listrik Permudah Bisnis Penjualan Kopi - Media Indonesia",
+          "source": "Media Indonesia",
+          "published_at": "Tue, 29 Sep 2026 11:55:00 GMT"
+        }
+      ]
+    },
     {
       "cluster_id": "kedai-konsumsi-gaya-hidup",
       "cluster_name": "Kedai, Konsumsi & Gaya Hidup",
