@@ -24,6 +24,7 @@ const linkTypeOf = value => {
     return host === "google.com" || host.endsWith(".google.com") || host === "news.google.com" ? "aggregator_redirect" : "publisher_article";
   } catch (_) { return "unknown"; }
 };
+const isAggregatorArticle = article => article?.link_type === "aggregator_redirect" || linkTypeOf(articleKey(article)) === "aggregator_redirect";
 
 async function syncEditorClusterDecisions() {
   try {
@@ -324,7 +325,7 @@ async function main() {
   const taxonomy = effectiveTaxonomy();
   const source = read("berita-all.json", { artikel: [] });
   const { articles, unknown } = applyEditorialDecisions(Array.isArray(source.artikel) ? source.artikel : [], taxonomy);
-  source.artikel = articles;
+  source.artikel = articles.filter(a => !isAggregatorArticle(a));
   if (process.argv.includes("--reclassify-only")) {
     write("berita-all.json", source);
     console.log("evidence-based reclassification applied to", articles.filter(a => ["rule_context", "rule_evidence"].includes(a.cluster_assignment)).length, "articles");
@@ -334,7 +335,7 @@ async function main() {
   source.fetched = source.fetched || now;
 
   const CLUSTER_REVIEW_VERSION = 2;
-  const reviewed = articles.filter(a => a.cluster_assignment === "unassigned" && Number(a.cluster_review_version || 0) < CLUSTER_REVIEW_VERSION).slice(0, 80);
+  const reviewed = articles.filter(a => !isAggregatorArticle(a) && a.cluster_assignment === "unassigned" && Number(a.cluster_review_version || 0) < CLUSTER_REVIEW_VERSION).slice(0, 80);
   let aiResult = { assignments: [], candidates: [] };
   let aiReviewSucceeded = false;
   if (reviewed.length && process.env.OPENAI_API_KEY) {
@@ -356,10 +357,10 @@ async function main() {
   }
   write("berita-all.json", source);
   const oldCandidates = read("cluster-candidates.json", { candidates: [] });
-  const trulyUnassigned = unknown.filter(a => a.cluster_assignment === "unassigned");
+  const trulyUnassigned = unknown.filter(a => !isAggregatorArticle(a) && a.cluster_assignment === "unassigned");
   write("cluster-candidates.json", mergeCandidates(oldCandidates, aiResult.candidates, trulyUnassigned));
   const updated = read("berita-all.json", { artikel: [] }).artikel;
-  await generateEditorial(updated, taxonomy);
+  await generateEditorial(updated.filter(a => !isAggregatorArticle(a)), taxonomy);
   console.log("portal data processed:", updated.length, "articles;", reviewed.length, "unmatched reviewed;", unknown.length, "unmatched total");
 }
 

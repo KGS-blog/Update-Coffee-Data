@@ -14,15 +14,15 @@ const catalog = fs.existsSync(catalogPath) ? JSON.parse(fs.readFileSync(catalogP
 const decisions = fs.existsSync(decisionsPath) ? JSON.parse(fs.readFileSync(decisionsPath, 'utf8')) : { overrides: [] };
 const definitions = Array.isArray(catalog.clusters) && catalog.clusters.length ? catalog.clusters : BERITA_KLASTER;
 const overrides = new Map((decisions.overrides || []).map(item => [String(item.url || item.tautan || ''), item.cluster_id || item.klaster]));
-const feedArticles = (feed.artikel || []).map(item => {
+const directPublisherUrl = value => { try { const url = new URL(String(value || '')); return url.protocol === 'https:' && url.hostname !== 'news.google.com' && !url.hostname.endsWith('.google.com'); } catch (_) { return false; } };
+const directFeedArticles = (feed.artikel || []).filter(item => item.link_type !== 'aggregator_redirect' && directPublisherUrl(item.tautan));
+const feedArticles = directFeedArticles.map(item => {
   const cluster = overrides.get(String(item.tautan || ''));
   return cluster ? { ...item, cluster_id: cluster, cluster_assignment: 'editor_override' } : item;
 });
 global.window = { BERITA_KLASTER: definitions };
 const clustering = clusterBerita(feedArticles);
 delete global.window;
-const directPublisherUrl = value => { try { const url = new URL(String(value || '')); return url.protocol === 'https:' && url.hostname !== 'news.google.com' && !url.hostname.endsWith('.google.com'); } catch (_) { return false; } };
-const directFeedArticles = (feed.artikel || []).filter(item => item.link_type !== 'aggregator_redirect' && directPublisherUrl(item.tautan));
 const latestNews = directFeedArticles.slice().sort((a, b) => Date.parse(b.tanggal || '') - Date.parse(a.tanggal || '')).slice(0, 6);
 const psdDoc = fs.existsSync(path.join(ROOT, 'data/psd.json')) ? JSON.parse(fs.readFileSync(path.join(ROOT, 'data/psd.json'), 'utf8')) : { data: [] };
 const exportDoc = fs.existsSync(path.join(ROOT, 'data/ekspor.json')) ? JSON.parse(fs.readFileSync(path.join(ROOT, 'data/ekspor.json'), 'utf8')) : { data: [] };

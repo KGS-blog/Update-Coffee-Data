@@ -51,6 +51,67 @@ function headlineKey(article) {
   }
   return title.normalize("NFKC").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim();
 }
+function decodeXmlText(value) {
+  return String(value || "").replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, "$1").replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&#39;|&apos;/g, "'").trim();
+}
+function xmlTag(block, name) {
+  const match = String(block || "").match(new RegExp("<(?:[\\w.-]+:)?" + name + "(?:\\s[^>]*)?>([\\s\\S]*?)<\\/(?:[\\w.-]+:)?" + name + ">", "i"));
+  return match ? decodeXmlText(match[1]) : "";
+}
+function isGoogleHost(value) {
+  try { const host = new URL(String(value || "")).hostname.toLowerCase(); return host === "google.com" || host.endsWith(".google.com"); }
+  catch (_) { return false; }
+}
+function htmlAttr(tag, name) {
+  const escaped = name.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const match = String(tag || "").match(new RegExp("\\b" + escaped + "\\s*=\\s*([\\\"'])(.*?)\\1", "i"));
+  return match ? decodeXmlText(match[2]).replace(/&amp;/g, "&") : "";
+}
+async function resolveGoogleNewsPublisher(url) {
+  try {
+    const response = await fetch(url, { headers: UA, redirect: "follow", signal: AbortSignal.timeout(10000) });
+    const finalUrl = response.url || url;
+    if (!isGoogleHost(finalUrl)) return finalUrl;
+    const html = (await response.text()).slice(0, 1200000);
+    const linkTags = html.match(/<link\b[^>]*>/gi) || [];
+    for (const tag of linkTags) {
+      const rel = htmlAttr(tag, "rel").toLowerCase().split(/\s+/);
+      const candidate = htmlAttr(tag, "href");
+      if (rel.includes("canonical") && candidate && !isGoogleHost(candidate)) return candidate;
+    }
+    const metaTags = html.match(/<meta\b[^>]*>/gi) || [];
+    for (const tag of metaTags) {
+      const key = (htmlAttr(tag, "property") || htmlAttr(tag, "name")).toLowerCase();
+      const candidate = htmlAttr(tag, "content");
+      if (["og:url", "article:published_url"].includes(key) && candidate && !isGoogleHost(candidate)) return candidate;
+    }
+  } catch (_) {}
+  return "";
+}
+async function getGoogleNewsCandidates() {
+  const queries = ["kopi Indonesia", "coffee Indonesia arabica robusta"];
+  const found = [];
+  for (const query of queries) {
+    try {
+      const url = "https://news.google.com/rss/search?q=" + encodeURIComponent(query) + "&hl=id&gl=ID&ceid=ID:id";
+      const response = await fetch(url, { headers: UA, signal: AbortSignal.timeout(12000) });
+      if (!response.ok) throw new Error("HTTP " + response.status);
+      const xml = await response.text();
+      for (const block of xml.match(/<item\b[^>]*>[\s\S]*?<\/item>/gi) || []) {
+        const title = xmlTag(block, "title");
+        const link = xmlTag(block, "link");
+        if (!title || !link || !/^https?:\/\//i.test(link)) continue;
+        const sourceTag = (block.match(/<(?:[\w.-]+:)?source\b[^>]*>[\s\S]*?<\/(?:[\w.-]+:)?source>/i) || [""])[0];
+        const source = decodeXmlText(sourceTag.replace(/^<[\s\S]*?>/, "").replace(/<\/[\s\S]*$/, ""));
+        found.push({ judul: title, tautan: link, tanggal: xmlTag(block, "pubDate"), sumber: source || "Google News", asal: "google_news", aggregator: "Google News", link_type: "aggregator_redirect", resolution_status: "unresolved" });
+      }
+    } catch (error) {
+      console.log("Google News discovery skipped:", error.message);
+    }
+  }
+  const seen = new Set();
+  return found.filter(item => { const key = headlineKey(item); if (!key || seen.has(key)) return false; seen.add(key); return true; }).slice(0, 6);
+}
 
 (async () => {
   const now = new Date().toISOString();
@@ -202,9 +263,20 @@ function headlineKey(article) {
     } else {
       diag.newsdata = "key tidak di-set";
     }
-    // Google News RSS is deliberately not queried: its opaque redirects are
-    // not original publisher article URLs and are unsuitable as citations.
-    diag.google_news_rss = "tidak digunakan sebagai sumber artikel";
+    // Google News is a small discovery source only. Resolve its redirect to a
+    // publisher URL when possible; unresolved items remain explicitly labeled.
+    const rssCandidates = await getGoogleNewsCandidates();
+    const resolvedCandidates = await Promise.all(rssCandidates.map(async function (item) {
+      const publisherUrl = await resolveGoogleNewsPublisher(item.tautan);
+      if (publisherUrl && !isGoogleHost(publisherUrl)) {
+        return Object.assign({}, item, { tautan_google_news: item.tautan, tautan: publisherUrl, link_type: "publisher", resolution_status: "resolved" });
+      }
+      return item;
+    }));
+    const rssDirect = resolvedCandidates.filter(a => a.resolution_status === "resolved");
+    const rssUnresolved = resolvedCandidates.filter(a => a.resolution_status !== "resolved");
+    pool.push.apply(pool, rssDirect);
+    diag.google_news_rss = "kandidat " + rssCandidates.length + "; URL penerbit terverifikasi " + rssDirect.length + "; tetap agregator " + rssUnresolved.length;
     const artikel = pool;
     if (artikel && artikel.length) {
       const KOPI_RX = /kopi|coffee|arabica|robusta/i;
@@ -212,7 +284,7 @@ function headlineKey(article) {
       const seenTitles = new Set();
       const uniq = artikel.filter(function (a) {
         const href = String(a.tautan || "");
-        if (!/^https?:\/\//i.test(href) || isGoogleNewsRedirect(href)) return false;
+        if (!/^https?:\/\//i.test(href) || isGoogleNewsRedirect(href) || a.link_type === "aggregator_redirect") return false;
         const k = href || String(a.judul || "");
         if (seen.has(k)) return false;
         seen.add(k);
@@ -228,8 +300,19 @@ function headlineKey(article) {
       const eng = relevan.filter(function (a) { return a.asal === "engine"; }).sort(byDate).slice(0, 10);
       const lain = relevan.filter(function (a) { return a.asal !== "engine"; }).sort(byDate);
       const seenE = new Set(eng.map(function (a) { return String(a.tautan || a.judul); }));
-      let simpan = eng.concat(lain.filter(function (a) { const k = String(a.tautan || a.judul); if (seenE.has(k)) return false; seenE.add(k); return true; })).slice(0, 25);
-      sumberBerita = "Engine KGS + NewsData (tautan artikel penerbit)";
+      const directSimpan = eng.concat(lain.filter(function (a) { const k = String(a.tautan || a.judul); if (seenE.has(k)) return false; seenE.add(k); return true; })).slice(0, 25);
+      const directTitles = new Set(directSimpan.map(headlineKey));
+      const distinctUnresolved = rssUnresolved.filter(function (a) {
+        const title = headlineKey(a);
+        return title && !directTitles.has(title) && KOPI_RX.test(String(a.judul || ""));
+      });
+      // At most one aggregator item per nine direct stories, capped at two.
+      // Thus Google News can never exceed 10% of the visible latest feed.
+      const aggregatorCap = Math.min(2, Math.floor(directSimpan.length / 9));
+      const aggregators = distinctUnresolved.sort(byDate).slice(0, aggregatorCap);
+      const simpan = directSimpan.concat(aggregators);
+      sumberBerita = "Engine KGS + NewsData (tautan penerbit)" + (aggregators.length ? " + Google News (agregator, " + aggregators.length + ")" : "");
+      diag.google_news_published = aggregators.length + " dari maksimum " + aggregatorCap + " item agregator; porsi " + (simpan.length ? Math.round(aggregators.length / simpan.length * 100) : 0) + "%";
       console.log("berita relevan:", simpan.length, "dari", uniq.length, "| engine:", eng.length);
       if (!eng.length && !lain.length) diag.feed = "tidak ada berita dengan tautan artikel langsung";
       fs.writeFileSync(path.join(OUT, "berita.json"), JSON.stringify({ sumber: sumberBerita, artikel: simpan, diagnostik: diag, fetched: now }));
@@ -263,6 +346,9 @@ function headlineKey(article) {
         const ALL_PATH = path.join(OUT, "berita-all.json");
         let all = { artikel: [] };
         try { all = JSON.parse(fs.readFileSync(ALL_PATH, "utf8")); } catch (e0) {}
+        // Keep the clustering/search master focused on publisher sources.
+        // Unresolved aggregator records remain searchable in monthly archives.
+        all.artikel = (all.artikel || []).filter(function (a) { return a.link_type !== "aggregator_redirect" && !isGoogleNewsRedirect(a.tautan || a.link); });
         // TERAPKAN override pengguna (klaster-final.json: [{tautan, klaster}])
         try {
           const ov = JSON.parse(fs.readFileSync(path.join(OUT, "klaster-final.json"), "utf8"));
@@ -276,7 +362,7 @@ function headlineKey(article) {
           }
         } catch (eOv) {}
         const byUrl = new Map((all.artikel || []).map(function (a, idx) { return [String(a.tautan || a.judul), idx]; }));
-        relevan.forEach(function (a) {
+        directSimpan.concat(aggregators).forEach(function (a) {
           const k = String(a.tautan || a.judul);
           if (!byUrl.has(k)) { all.artikel.push(a); byUrl.set(k, all.artikel.length - 1); }
           else {
