@@ -9,6 +9,8 @@ const doc = fs.existsSync(sourcePath) ? JSON.parse(fs.readFileSync(sourcePath, '
 const feedPath = path.join(ROOT, 'data/berita-all.json');
 const feed = fs.existsSync(feedPath) ? JSON.parse(fs.readFileSync(feedPath, 'utf8')) : { artikel: [] };
 const latestNews = (feed.artikel || []).slice().sort((a, b) => Date.parse(b.tanggal || '') - Date.parse(a.tanggal || '')).slice(0, 6);
+const psdDoc = fs.existsSync(path.join(ROOT, 'data/psd.json')) ? JSON.parse(fs.readFileSync(path.join(ROOT, 'data/psd.json'), 'utf8')) : { data: [] };
+const exportDoc = fs.existsSync(path.join(ROOT, 'data/ekspor.json')) ? JSON.parse(fs.readFileSync(path.join(ROOT, 'data/ekspor.json'), 'utf8')) : { data: [] };
 const reports = (doc.articles || []).filter(item => item.status === 'ai_generated' || item.status === 'editor_selected');
 const output = path.join(ROOT, 'analisis-kopi');
 fs.mkdirSync(output, { recursive: true });
@@ -16,6 +18,24 @@ fs.mkdirSync(output, { recursive: true });
 const esc = value => String(value || '').replace(/[&<>"']/g, char => ({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[char]));
 const slugify = value => String(value || '').normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/&/g,' dan ').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,70) || 'analisis-pasar-kopi';
 const safeUrl = value => { try { const url = new URL(value); return ['https:','http:'].includes(url.protocol) ? url.href : ''; } catch (_) { return ''; } };
+const fmtID = value => new Intl.NumberFormat('id-ID').format(value);
+const lastDataDate = [psdDoc.fetched, exportDoc.fetched].filter(Boolean).sort().at(-1);
+const dataUpdated = lastDataDate ? `Data terakhir diperbarui ${new Intl.DateTimeFormat('id-ID',{day:'numeric',month:'short',year:'numeric',timeZone:'UTC'}).format(new Date(lastDataDate))}` : 'Tanggal pembaruan data tidak tersedia';
+const psdRows = psdDoc.data || [];
+const psdYear = Math.max(0, ...psdRows.map(row => Number(row.tahun) || 0));
+const psdLabels = { Production: 'Produksi', Exports: 'Ekspor', 'Domestic Consumption': 'Konsumsi domestik', 'Ending Stocks': 'Stok akhir' };
+const psdSummary = Object.entries(psdLabels).map(([key, label]) => {
+  const row = psdRows.find(item => Number(item.tahun) === psdYear && item.atribut === key);
+  return row ? `<div class="stat"><strong>${fmtID(Number(row.nilai))}</strong><span>${label} · MY ${psdYear}</span></div>` : '';
+}).join('') || '<div class="empty">Data USDA belum tersedia.</div>';
+const exportRows = (exportDoc.data || []).filter(row => !row.trade_flow || row.trade_flow === 'export');
+const exportYear = Math.max(0, ...exportRows.map(row => Number(row.year) || 0));
+const latestExports = exportRows.filter(row => Number(row.year) === exportYear);
+const exportVolume = latestExports.reduce((sum, row) => sum + (Number(row.volume) || 0), 0);
+const exportValue = latestExports.reduce((sum, row) => sum + (Number(row.value_usd) || 0), 0);
+const exportSummary = exportVolume || exportValue
+  ? `<div class="stat"><strong>${fmtID(exportVolume)} ton</strong><span>Volume ekspor ${exportYear}</span></div><div class="stat"><strong>US$ ${(exportValue / 1e9).toLocaleString('id-ID',{maximumFractionDigits:2})} miliar</strong><span>Nilai ekspor ${exportYear}</span></div>`
+  : '<div class="empty">Data perdagangan BPS belum tersedia.</div>';
 const fileFor = (item, language) => `${slugify(item.cluster_id || item.cluster_name || item.article?.title || item.article_en?.title)}-${language}.html`;
 function renderPage(item, language) {
   const en = language === 'en';
@@ -52,6 +72,9 @@ function renderPage(item, language) {
 }
 
 let portal = fs.readFileSync(path.join(ROOT, 'scripts/templates/kabar-kopi.html'), 'utf8');
+portal = portal.replace('<!-- STATIC_PSD_TIME -->', esc(dataUpdated))
+  .replace('<!-- STATIC_PSD_SUMMARY -->', psdSummary)
+  .replace('<!-- STATIC_BPS_SUMMARY -->', exportSummary);
 const leadNews = latestNews[0];
 if (leadNews) {
   const leadUrl = safeUrl(leadNews.tautan);
