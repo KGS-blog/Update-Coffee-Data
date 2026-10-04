@@ -42,10 +42,10 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
         run: node scripts/process-portal-data.js
-      - name: Render direct-source headlines into crawlable HTML
-        run: node scripts/render-static-news.js
       - name: Publish crawlable editorial pages and sitemap
         run: node scripts/generate-editorial-pages.js
+      - name: Render direct-source headlines into crawlable HTML
+        run: node scripts/render-static-news.js
       - name: Save private editor cluster queue
         env:
           MEVO_SYNC_SECRET: ${{ secrets.MEVO_SYNC_SECRET }}
@@ -58,4 +58,4 @@ jobs:
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add -A data/ analisis-kopi/ en/ index.html kabar-kopi.html sitemap.xml
-          git diff --staged --quiet || (git commit -m "data: update [$(date -u +%Y-%m-%d %H:%M UTC)]" && git push)
+          git diff --staged --quiet || (git commit -m "data: update [$(date -u +'%Y-%m-%d %H:%M UTC')]" && git push)
