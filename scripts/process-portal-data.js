@@ -18,6 +18,12 @@ const slug = s => String(s || "").normalize("NFKD").toLowerCase().replace(/[^a-z
 const articleKey = a => String(a.tautan || a.link || a.judul || a.title || "");
 const titleOf = a => String(a.judul || a.title || "").trim();
 const dateOf = a => Date.parse(a.tanggal || a.pubDate || "") || 0;
+const linkTypeOf = value => {
+  try {
+    const host = new URL(String(value || "")).hostname.toLowerCase();
+    return host === "google.com" || host.endsWith(".google.com") || host === "news.google.com" ? "aggregator_redirect" : "publisher_article";
+  } catch (_) { return "unknown"; }
+};
 
 async function syncEditorClusterDecisions() {
   try {
@@ -52,12 +58,43 @@ function buildArchiveIndex() {
   write("arsip/index.json", { version: 1, generated_at: now, months });
 }
 
-function getKeywordCluster(article) {
+function getKeywordCluster(article, taxonomy = BERITA_KLASTER) {
   const title = titleOf(article).toLowerCase();
-  // Event and consumer research require contextual evidence; their large,
-  // overlapping keyword lists must not act as generic fallback categories.
-  return BERITA_KLASTER.find(c => !["event-kompetisi", "riset-tren-konsumen"].includes(c.slug)
-    && c.kunci.some(k => title.includes(String(k).toLowerCase()))) || null;
+  // "Coffee morning" is often a government/office meeting with only a coffee
+  // name in its title; it is not a coffee-industry event by itself.
+  if (/\bcoffee morning\b/.test(title) && !/\b(kopi|coffee shop|coffeehouse|kedai kopi|barista|roastery|roastery|green bean|biji kopi|perkebunan kopi|petani kopi|industri kopi)\b/.test(title)) return null;
+  // Generic words occur across the taxonomy and are not enough to classify a
+  // headline. Rank matches by specificity and require a clear winning margin.
+  const broad = new Set([
+    "kopi", "coffee", "brand", "merek", "global", "internasional", "international", "ekspor", "export", "impor", "import",
+    "harga", "price", "pasar", "market", "produksi", "production", "industri", "industry", "pemerintah", "government",
+    "petani", "farmer", "kebun", "farm", "panen", "harvest", "acara", "event", "promosi", "promotion", "training",
+    "pelatihan", "workshop", "seminar", "pertumbuhan", "growth", "berita", "news", "data", "sustainability", "keberlanjutan"
+  ]);
+  const topicPhrases = {
+    "harga-pasar": ["harga kopi", "harga arabika", "harga robusta", "pasokan kopi", "permintaan kopi", "harga c-market"],
+    "produksi-panen": ["petani kopi", "panen kopi", "produksi kopi", "budidaya kopi", "kebun kopi", "peremajaan kopi", "pascapanen kopi", "pasca panen kopi", "hasil panen kopi"],
+    "ekspor-daya-saing": ["ekspor kopi", "ekspor green bean", "daya saing kopi", "pasar ekspor kopi", "buyer kopi"],
+    "kedai-konsumsi-gaya-hidup": ["kedai kopi", "gerai kopi", "tempat ngopi", "menu kopi", "coffee shop", "coffeehouse"],
+    "barista-teknik-seduh": ["teknik seduh kopi", "menyeduh kopi", "mesin espresso", "latte art", "manual brew", "resep kopi"],
+    "kebijakan-regulasi": ["regulasi kopi", "sertifikasi kopi", "izin ekspor kopi", "eudr kopi", "kebijakan kopi"],
+    "pendidikan-industri": ["pelatihan kopi", "sekolah kopi", "akademi kopi", "kursus barista", "pelatihan barista"],
+    "brand-global": ["merek kopi", "brand kopi", "fore coffee", "starbucks", "kopi kenangan", "tanamera coffee", "luckin coffee"]
+  };
+  const scores = taxonomy.filter(c => !["event-kompetisi", "riset-tren-konsumen"].includes(c.slug)).map(cluster => {
+    let score = 0;
+    if ((topicPhrases[cluster.slug] || []).some(phrase => title.includes(phrase))) score = 5;
+    for (const raw of cluster.kunci) {
+      const term = String(raw || "").trim().toLowerCase();
+      if (term.length < 4 || broad.has(term) || !title.includes(term)) continue;
+      const words = term.split(/\s+/).length;
+      score = Math.max(score, words >= 3 || term.length >= 22 ? 5 : words === 2 || term.length >= 12 ? 4 : 3);
+    }
+    return { cluster, score };
+  }).filter(x => x.score > 0).sort((a, b) => b.score - a.score);
+  if (!scores.length || scores[0].score < 3) return null;
+  if (scores[1] && scores[0].score - scores[1].score < 2) return null;
+  return scores[0].cluster;
 }
 
 // Strong, contextual signals take precedence over broad legacy assignments.
@@ -113,13 +150,20 @@ function effectiveTaxonomy() {
   const generated = read("cluster-candidates.json", { candidates: [] });
   const decisions = read("cluster-decisions.json", {});
   const accepted = new Set(decisions.accepted_candidate_ids || []);
-  const custom = (generated.candidates || []).filter(c => accepted.has(c.id)).map(c => ({
+  const fromQueue = (generated.candidates || []).filter(c => accepted.has(c.id)).map(c => ({
     slug: c.id, nama: c.name, nama_en: c.name_en || c.name, analisis_id: c.id,
     // Never turn generic label words (especially "kopi" or "&") into
     // matching keywords. Candidate assignments remain AI/editor reviewed.
     kunci: [...new Set(c.suggested_keywords || [])]
       .filter(k => String(k).trim().length >= 4 && !["kopi", "coffee", "budaya", "culture", "sastra"].includes(String(k).trim().toLowerCase()))
   }));
+  // The review queue may live only in D1. Retain the definition already
+  // published in the catalog when its editor-approved ID is still accepted.
+  const priorCatalog = read("cluster-catalog.json", { clusters: [] });
+  const fromCatalog = (priorCatalog.clusters || []).filter(c => accepted.has(c.slug)
+    && !BERITA_KLASTER.some(base => base.slug === c.slug)
+    && !fromQueue.some(item => item.slug === c.slug));
+  const custom = [...fromQueue, ...fromCatalog];
   const all = [...BERITA_KLASTER, ...custom.filter(c => !BERITA_KLASTER.some(base => base.slug === c.slug))];
   write("cluster-catalog.json", { version: 1, generated_at: now, clusters: all.map(({ slug, nama, nama_en, analisis_id, kunci }) => ({ slug, nama, nama_en, analisis_id, kunci })) });
   return all;
@@ -143,10 +187,14 @@ function applyEditorialDecisions(articles, taxonomy) {
     const explicitlyUnassigned = !selected && a.cluster_assignment === "unassigned";
     const needsConsumerEventReview = !selected && !contextual && !consumerEvent && a.cluster_assignment !== "ai_existing"
       && previous && ["event-kompetisi", "riset-tren-konsumen"].includes(previous.slug);
-    const keyword = getKeywordCluster(a);
+    const keyword = getKeywordCluster(a, taxonomy);
     const holdForReview = explicitlyUnassigned || needsConsumerEventReview;
-    const fixed = selected || contextual || consumerEvent || (holdForReview ? null : previous) || (holdForReview ? null : keyword) || null;
-    const next = { ...a, cluster_id: fixed ? fixed.slug : "lainnya", cluster_name: fixed ? fixed.nama : "Lainnya" };
+    // Re-evaluate legacy keyword assignments using the specificity-ranked
+    // classifier. Preserve human/AI decisions, but never preserve a weak
+    // keyword guess as if it were an editorial decision.
+    const previousIsLegacyKeyword = a.cluster_assignment === "keyword";
+    const fixed = selected || contextual || consumerEvent || (holdForReview ? null : (previousIsLegacyKeyword ? null : previous)) || (holdForReview ? null : keyword) || null;
+    const next = { ...a, link_type: linkTypeOf(articleKey(a)), cluster_id: fixed ? fixed.slug : "lainnya", cluster_name: fixed ? fixed.nama : "Lainnya" };
     if (selected) next.cluster_assignment = "editor";
     else if (contextual) next.cluster_assignment = "rule_context";
     else if (consumerEvent) next.cluster_assignment = "rule_evidence";
@@ -285,7 +333,8 @@ async function main() {
   buildArchiveIndex();
   source.fetched = source.fetched || now;
 
-  const reviewed = articles.filter(a => a.cluster_assignment === "unassigned" && !a.cluster_ai_reviewed_at).slice(0, 80);
+  const CLUSTER_REVIEW_VERSION = 2;
+  const reviewed = articles.filter(a => a.cluster_assignment === "unassigned" && Number(a.cluster_review_version || 0) < CLUSTER_REVIEW_VERSION).slice(0, 80);
   let aiResult = { assignments: [], candidates: [] };
   let aiReviewSucceeded = false;
   if (reviewed.length && process.env.OPENAI_API_KEY) {
@@ -296,7 +345,7 @@ async function main() {
     const decisions = new Map((aiResult.assignments || []).map(x => [x.url, x]));
     const reviewedKeys = new Set(aiReviewSucceeded ? reviewed.map(articleKey) : []);
     for (const a of articles) {
-      if (reviewedKeys.has(articleKey(a))) a.cluster_ai_reviewed_at = now;
+      if (reviewedKeys.has(articleKey(a))) { a.cluster_ai_reviewed_at = now; a.cluster_review_version = CLUSTER_REVIEW_VERSION; }
       const d = decisions.get(articleKey(a));
       if (!d) continue;
       const material = `${titleOf(a)} ${String(a.ringkasan || a.deskripsi || a.description || "")}`.replace(/<[^>]*>/g, " ").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim();

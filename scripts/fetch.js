@@ -38,6 +38,19 @@ function upsertMonth(history, label, value) {
   if (ex) ex.value = value; else history.push({ month: label, value: value });
 }
 function round2(n) { return Math.round(n * 100) / 100; }
+function isGoogleNewsRedirect(value) {
+  try { const host = new URL(String(value || "")).hostname.toLowerCase(); return host === "google.com" || host.endsWith(".google.com"); }
+  catch (_) { return false; }
+}
+function headlineKey(article) {
+  let title = String(article && (article.judul || article.title) || "").trim();
+  const source = String(article && (article.sumber || article.source_name) || "").trim();
+  if (source) {
+    const suffix = " - " + source;
+    if (title.toLowerCase().endsWith(suffix.toLowerCase())) title = title.slice(0, -suffix.length);
+  }
+  return title.normalize("NFKC").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim();
+}
 
 (async () => {
   const now = new Date().toISOString();
@@ -135,12 +148,10 @@ function round2(n) { return Math.round(n * 100) / 100; }
     console.log("saved data/harga-harian.json:", seri.length, "titik");
   } catch (e) { errors.harian = e.message; }
 
-  // --- Berita kopi (NewsData.io utama, fallback Google News RSS) — v2026.09.26-9 ---
+  // --- Berita kopi (tautan artikel penerbit sebagai prioritas) ---
   {
     const ND_KEY = process.env.NEWSDATA_KEY || "";
-    const err = {};
     const diag = {};
-    let artikel = null;
     let sumberBerita = "";
     const pool = [];
     // 0) ENGINE KGS — sumber utama, artikel terkurasi + ringkasan
@@ -149,74 +160,78 @@ function round2(n) { return Math.round(n * 100) / 100; }
       const arrE = (je && Array.isArray(je.artikel)) ? je.artikel : [];
       if (arrE.length) {
         pool.push.apply(pool, arrE.map(function (a) {
-          return { judul: a.judul, tautan: a.tautan, tanggal: a.tanggal, sumber: a.sumber || "Engine KGS", ringkasan: a.ringkasan || a.deskripsi || "", asal: "engine" };
+          return { judul: a.judul, tautan: a.tautan, tanggal: a.tanggal, sumber: a.sumber || "Engine KGS", ringkasan: a.ringkasan || a.deskripsi || "", asal: "engine", link_type: "publisher" };
         }));
         diag.engine = "sukses " + arrE.length;
       } else { diag.engine = "kosong"; }
     } catch (eE) { diag.engine = "ERR " + eE.message; }
-    const UA_BROWSER = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0 Safari/537.36";
-    async function getTextUA(url) {
-      const r = await fetch(url, { headers: { "User-Agent": UA_BROWSER, "Accept": "application/rss+xml,application/xml,text/html,*/*" } });
-      if (!r.ok) throw new Error("HTTP " + r.status);
-      return r.text();
-    }
     if (ND_KEY) {
       const enc = encodeURIComponent;
-      const urls = [
-        "https://newsdata.io/api/1/latest?apikey=" + ND_KEY + "&qInTitle=" + enc("kopi") + "&country=id&language=id&size=25",
-        "https://newsdata.io/api/1/latest?apikey=" + ND_KEY + "&q=" + enc("kopi indonesia") + "&language=id&size=25",
-        "https://newsdata.io/api/1/latest?apikey=" + ND_KEY + "&q=" + enc("arabica OR robusta") + "&language=id&size=25",
-        "https://newsdata.io/api/1/latest?apikey=" + ND_KEY + "&q=kopi&country=id&language=id&size=25"
+      // Free plan permits at most 10 results per request. Pull several focused
+      // searches and retain the publisher's article URL from `link`.
+      const searches = [
+        "qInTitle=" + enc("kopi") + "&country=id&language=id",
+        "q=" + enc("kopi indonesia") + "&country=id&language=id",
+        "q=" + enc("arabica OR robusta") + "&language=id"
       ];
-      for (const url of urls) {
+      async function newsDataGet(query) {
+        const response = await fetch("https://newsdata.io/api/1/latest?apikey=" + ND_KEY + "&" + query + "&size=10", { headers: UA });
+        const json = await response.json().catch(() => ({}));
+        if (!response.ok) {
+          const detail = json?.results?.message || json?.message || "permintaan ditolak";
+          throw new Error("HTTP " + response.status + ": " + String(detail).slice(0, 140));
+        }
+        return json;
+      }
+      let collected = 0;
+      for (const query of searches) {
         try {
-          const jn = await getJSON(url);
+          const jn = await newsDataGet(query);
           if (jn && jn.status === "success" && Array.isArray(jn.results) && jn.results.length) {
-            pool.push.apply(pool, jn.results.map(function (a) {
-              return { judul: a.title, tautan: a.link, tanggal: a.pubDate, sumber: a.source_name || a.source_id || "", ringkasan: a.description || a.content || "" };
+            const direct = jn.results.filter(a => /^https?:\/\//i.test(String(a.link || "")) && !/^(https?:\/\/)?(news\.google\.com|google\.com)\//i.test(String(a.link || "")));
+            pool.push.apply(pool, direct.map(function (a) {
+              return { judul: a.title, tautan: a.link, tanggal: a.pubDate, sumber: a.source_name || a.source_id || "", ringkasan: a.description || a.content || "", asal: "newsdata", link_type: "publisher" };
             }));
-            diag.newsdata = "sukses " + jn.results.length;
-            break;
+            collected += direct.length;
+            diag.newsdata = "sukses " + collected + " tautan penerbit langsung";
+          } else {
+            diag.newsdata = "status=" + (jn && jn.status) + " " + String(jn && (jn.results?.message || jn.message) || "").slice(0, 120);
           }
-          diag.newsdata = "status=" + (jn && jn.status) + " " + JSON.stringify(jn).slice(0, 160);
         } catch (e2) { diag.newsdata = "ERR " + e2.message; }
       }
     } else {
       diag.newsdata = "key tidak di-set";
     }
-    {
-      try {
-        const xml = await getTextUA("https://news.google.com/rss/search?q=%22kopi%22+OR+%22coffee%22&hl=id&gl=ID&ceid=ID:id");
-        const items = xml.match(/<item>[\s\S]*?<\/item>/g) || [];
-        if (!items.length) err.rss = "RSS merespons tapi 0 item (kemungkinan halaman consent Google)";
-        const clean = function (s) { return String(s || "").replace(/<!\[CDATA\[|\]\]>/g, "").replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&#39;/g, "'").trim(); };
-        pool.push.apply(pool, items.slice(0, 25).map(function (it) {
-          const ti = (it.match(/<title>([\s\S]*?)<\/title>/) || [])[1] || "";
-          const li = (it.match(/<link>([\s\S]*?)<\/link>/) || [])[1] || "";
-          const pd = (it.match(/<pubDate>([\s\S]*?)<\/pubDate>/) || [])[1] || "";
-          const sr = (it.match(/<source[^>]*>([\s\S]*?)<\/source>/) || [])[1] || "";
-          const ds = (it.match(/<description>([\s\S]*?)<\/description>/) || [])[1] || "";
-          return { judul: clean(ti), tautan: li.trim(), tanggal: pd, sumber: clean(sr), ringkasan: clean(ds) };
-        }));
-        
-      } catch (e3) { err.rss = e3.message; }
-    }
-    artikel = pool;
+    // Google News RSS is deliberately not queried: its opaque redirects are
+    // not original publisher article URLs and are unsuitable as citations.
+    diag.google_news_rss = "tidak digunakan sebagai sumber artikel";
+    const artikel = pool;
     if (artikel && artikel.length) {
       const KOPI_RX = /kopi|coffee|arabica|robusta/i;
       const seen = new Set();
-      const uniq = artikel.filter(function (a) { const k = String(a.tautan || a.judul); if (seen.has(k)) return false; seen.add(k); return true; });
-      // engine sudah terkurasi: lolos tanpa filter judul. Filter kopi hanya untuk NewsData/RSS.
+      const seenTitles = new Set();
+      const uniq = artikel.filter(function (a) {
+        const href = String(a.tautan || "");
+        if (!/^https?:\/\//i.test(href) || isGoogleNewsRedirect(href)) return false;
+        const k = href || String(a.judul || "");
+        if (seen.has(k)) return false;
+        seen.add(k);
+        const title = headlineKey(a);
+        if (title && seenTitles.has(title)) return false;
+        if (title) seenTitles.add(title);
+        return true;
+      });
+      // Engine is curated; NewsData results must still mention coffee in title.
       const relevan = uniq.filter(function (a) { return a.asal === "engine" || KOPI_RX.test(String(a.judul || "")); });
-      // Komposisi: engine (kurasi) SELALU hadir (kuota 10), sisanya diisi terbaru dari API/RSS
+      // Komposisi: engine terkurasi selalu hadir (maksimum 10), sisanya berita NewsData terbaru.
       const byDate = function (a, b) { return (Date.parse(b.tanggal) || 0) - (Date.parse(a.tanggal) || 0); };
       const eng = relevan.filter(function (a) { return a.asal === "engine"; }).sort(byDate).slice(0, 10);
       const lain = relevan.filter(function (a) { return a.asal !== "engine"; }).sort(byDate);
       const seenE = new Set(eng.map(function (a) { return String(a.tautan || a.judul); }));
       let simpan = eng.concat(lain.filter(function (a) { const k = String(a.tautan || a.judul); if (seenE.has(k)) return false; seenE.add(k); return true; })).slice(0, 25);
-      sumberBerita = "Engine KGS + NewsData + RSS";
+      sumberBerita = "Engine KGS + NewsData (tautan artikel penerbit)";
       console.log("berita relevan:", simpan.length, "dari", uniq.length, "| engine:", eng.length);
-      diag.rss = "ok";
+      if (!eng.length && !lain.length) diag.feed = "tidak ada berita dengan tautan artikel langsung";
       fs.writeFileSync(path.join(OUT, "berita.json"), JSON.stringify({ sumber: sumberBerita, artikel: simpan, diagnostik: diag, fetched: now }));
       // ARSIP BULANAN: kumulatif per bulan, dedupe by tautan
       try {
@@ -230,6 +245,15 @@ function round2(n) { return Math.round(n * 100) / 100; }
           const k = String(a.tautan || a.judul), old = byUrl.get(k);
           if (!old) { arsip.artikel.push(a); byUrl.set(k, a); }
           else if (!old.ringkasan && a.ringkasan) old.ringkasan = a.ringkasan;
+          if (!old && !isGoogleNewsRedirect(a.tautan)) {
+            const key = headlineKey(a);
+            const priorIndex = key ? arsip.artikel.findIndex(function (item) { return isGoogleNewsRedirect(item.tautan) && headlineKey(item) === key; }) : -1;
+            if (priorIndex >= 0) {
+              arsip.artikel[priorIndex] = Object.assign({}, arsip.artikel[priorIndex], a);
+              byUrl.set(k, arsip.artikel[priorIndex]);
+              arsip.artikel.pop();
+            }
+          }
         });
         fs.writeFileSync(arsipPath, JSON.stringify(arsip, null, 1));
         console.log("saved data/arsip/berita-" + bln + ".json:", arsip.artikel.length, "artikel terkumpul");
@@ -260,6 +284,17 @@ function round2(n) { return Math.round(n * 100) / 100; }
             if (!old.ringkasan && a.ringkasan) old.ringkasan = a.ringkasan;
             if (!old.sumber && a.sumber) old.sumber = a.sumber;
           }
+          if (byUrl.has(k) && !isGoogleNewsRedirect(a.tautan)) {
+            const index = byUrl.get(k);
+            const key = headlineKey(a);
+            const priorIndex = key ? all.artikel.findIndex(function (item, idx) { return idx !== index && isGoogleNewsRedirect(item.tautan) && headlineKey(item) === key; }) : -1;
+            if (priorIndex >= 0) {
+              all.artikel[priorIndex] = Object.assign({}, all.artikel[priorIndex], a);
+              all.artikel.splice(index, 1);
+              byUrl.clear();
+              all.artikel.forEach(function (item, idx) { byUrl.set(String(item.tautan || item.judul), idx); });
+            }
+          }
         });
         all.artikel.sort(function (a, b) { return (Date.parse(b.tanggal) || 0) - (Date.parse(a.tanggal) || 0); });
         if (all.artikel.length > 500) all.artikel = all.artikel.slice(0, 500);
@@ -269,7 +304,7 @@ function round2(n) { return Math.round(n * 100) / 100; }
       } catch (eAll) { console.log("berita-all skip:", eAll.message); }
       console.log("saved data/berita.json:", simpan.length, "artikel dari", sumberBerita);
     } else {
-      const pesan = JSON.stringify(err);
+      const pesan = JSON.stringify(diag);
       fs.writeFileSync(path.join(OUT, "berita.json"), JSON.stringify({ status: "Error", message: pesan, sumber: "-", artikel: [], fetched: now }));
       console.log("berita.json ditulis dengan status Error:", pesan);
       errors.berita = pesan;

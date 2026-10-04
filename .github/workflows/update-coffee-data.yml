@@ -42,6 +42,8 @@ jobs:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
           OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
         run: node scripts/process-portal-data.js
+      - name: Render direct-source headlines into crawlable HTML
+        run: node scripts/render-static-news.js
       - name: Publish crawlable editorial pages and sitemap
         run: node scripts/generate-editorial-pages.js
       - name: Save private editor cluster queue
