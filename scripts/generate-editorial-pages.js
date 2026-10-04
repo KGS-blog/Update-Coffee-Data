@@ -44,6 +44,9 @@ const psdSummary = Object.entries(psdLabels).map(([key, label]) => {
   const row = psdRows.find(item => Number(item.tahun) === psdYear && item.atribut === key);
   return row ? `<div class="stat"><strong>${fmtID(Number(row.nilai))}</strong><span>${label} · MY ${psdYear}</span></div>` : '';
 }).join('') || '<div class="empty">Data USDA belum tersedia.</div>';
+const psdMarketLabels = { Production:'Produksi total', 'Arabica Production':'Produksi Arabika', 'Robusta Production':'Produksi Robusta', Exports:'Ekspor total', 'Domestic Consumption':'Konsumsi domestik', 'Ending Stocks':'Stok akhir' };
+const psdMarketRows = Object.entries(psdMarketLabels).map(([key,label]) => { const row=psdRows.find(item=>Number(item.tahun)===psdYear&&item.atribut===key); return row?`<tr><th>${label}</th><td>MY ${psdYear}</td><td>${fmtID(Number(row.nilai))}</td></tr>`:'' }).filter(Boolean).join('');
+const psdMarketTable = psdMarketRows ? `<table class="market-table"><thead><tr><th>Indikator</th><th>Tahun pemasaran</th><th>Ribu kantong 60 kg</th></tr></thead><tbody>${psdMarketRows}</tbody></table>` : '<p class="empty">Data USDA PSD belum tersedia.</p>';
 const exportRows = (exportDoc.data || []).filter(row => !row.trade_flow || row.trade_flow === 'export');
 const exportYear = Math.max(0, ...exportRows.map(row => Number(row.year) || 0));
 const latestExports = exportRows.filter(row => Number(row.year) === exportYear);
@@ -127,6 +130,7 @@ portal = portal.replace('<!-- STATIC_PSD_TIME -->', esc(dataUpdated))
   .replace('<!-- STATIC_MARKET_ARABICA -->', marketSnapshotHtml(marketArabica, '¢/lb'))
   .replace('<!-- STATIC_MARKET_ROBUSTA -->', marketSnapshotHtml(marketRobusta, 'USD/ton ekuivalen', marketDoc.robusta?.sourceDate || ''))
   .replace('<!-- STATIC_MARKET_FX -->', marketSnapshotHtml(marketFx, 'IDR/USD'))
+  .replace('<!-- STATIC_USDA_MARKET_TABLE -->', psdMarketTable)
   .replace('<!-- STATIC_CALC_BASE -->', calcArabicaUsdKg.toFixed(3))
   .replace('<!-- STATIC_CALC_FX -->', String(Math.round(marketFx)))
   .replace('<!-- STATIC_EXPORT_TABLE -->', staticExportTable)
