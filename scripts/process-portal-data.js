@@ -32,7 +32,10 @@ const clusterContextHash = article => crypto.createHash("sha256").update(JSON.st
 
 async function syncEditorClusterDecisions() {
   try {
-    const response = await fetch(REMOTE_CLUSTER_DECISIONS_URL, { cache: "no-store" });
+    const response = await fetch(`${REMOTE_CLUSTER_DECISIONS_URL}?_=${Date.now()}`, {
+      cache: "no-store",
+      headers: { "Cache-Control": "no-cache" }
+    });
     if (response.status === 404) return;
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const remote = await response.json();
