@@ -69,24 +69,86 @@ function htmlAttr(tag, name) {
 }
 async function resolveGoogleNewsPublisher(url) {
   try {
-    const response = await fetch(url, { headers: UA, redirect: "follow", signal: AbortSignal.timeout(10000) });
+    const articleUrl = new URL(url);
+    if (!isGoogleHost(articleUrl.href) || !articleUrl.pathname.includes("/articles/")) return "";
+    const response = await fetch(url, { headers: UA, redirect: "follow", signal: AbortSignal.timeout(12000) });
     const finalUrl = response.url || url;
     if (!isGoogleHost(finalUrl)) return finalUrl;
+    if (!response.ok) return "";
     const html = (await response.text()).slice(0, 1200000);
-    const linkTags = html.match(/<link\b[^>]*>/gi) || [];
-    for (const tag of linkTags) {
-      const rel = htmlAttr(tag, "rel").toLowerCase().split(/\s+/);
-      const candidate = htmlAttr(tag, "href");
-      if (rel.includes("canonical") && candidate && !isGoogleHost(candidate)) return candidate;
-    }
-    const metaTags = html.match(/<meta\b[^>]*>/gi) || [];
-    for (const tag of metaTags) {
-      const key = (htmlAttr(tag, "property") || htmlAttr(tag, "name")).toLowerCase();
-      const candidate = htmlAttr(tag, "content");
-      if (["og:url", "article:published_url"].includes(key) && candidate && !isGoogleHost(candidate)) return candidate;
-    }
+    // Google News RSS article IDs are opaque. The publisher URL is returned by
+    // Google's own batchexecute RPC; it is not present in canonical/og:url.
+    const wiz = (html.match(/<c-wiz\b[^>]*\bdata-p=(?:"[^"]*"|'[^']*')[^>]*>/i) || [""])[0];
+    const encodedPayload = htmlAttr(wiz, "data-p");
+    if (!encodedPayload) return "";
+    let requestData;
+    try { requestData = JSON.parse(encodedPayload.replace("%.@.", '["garturlreq",')); }
+    catch (_) { return ""; }
+    if (!Array.isArray(requestData) || requestData.length < 8) return "";
+    const fReq = JSON.stringify([[ ["Fbv4je", JSON.stringify(requestData.slice(0, -6).concat(requestData.slice(-2))), "null", "generic"] ]]);
+    const rpc = await fetch("https://news.google.com/_/DotsSplashUi/data/batchexecute?rpcids=Fbv4je", {
+      method: "POST",
+      headers: Object.assign({}, UA, { "Content-Type": "application/x-www-form-urlencoded;charset=UTF-8", "Referer": "https://news.google.com/" }),
+      body: "f.req=" + encodeURIComponent(fReq),
+      signal: AbortSignal.timeout(12000)
+    });
+    if (!rpc.ok) return "";
+    const body = (await rpc.text()).replace(/^\)\]\}'\s*/, "");
+    const responseRows = JSON.parse(body);
+    const resultRow = responseRows.find(row => Array.isArray(row) && row[0] === "wrb.fr" && row[1] === "Fbv4je" && row[2]);
+    if (!resultRow) return "";
+    const result = JSON.parse(resultRow[2]);
+    const publisherUrl = result && result[1];
+    if (!publisherUrl || !/^https?:\/\//i.test(publisherUrl) || isGoogleHost(publisherUrl)) return "";
+    return publisherUrl;
   } catch (_) {}
   return "";
+}
+async function resolveArchivedGoogleNews(batchLimit, attemptedAt) {
+  const archiveDir = path.join(OUT, "arsip");
+  const recovered = [];
+  if (!fs.existsSync(archiveDir)) return recovered;
+  const archiveFiles = fs.readdirSync(archiveDir).filter(name => /^berita-\d{4}-\d{2}\.json$/.test(name)).sort();
+  const candidates = [];
+  for (const name of archiveFiles) {
+    const filePath = path.join(archiveDir, name);
+    let archive;
+    try { archive = JSON.parse(fs.readFileSync(filePath, "utf8")); } catch (_) { continue; }
+    (archive.artikel || []).forEach((article, index) => {
+      const url = String(article.tautan || article.link || "");
+      const attempted = Date.parse(article.resolution_attempted_at || "") || 0;
+      if (isGoogleNewsRedirect(url) && article.resolution_status !== "resolved" && attemptedAt - attempted >= 24 * 60 * 60 * 1000) {
+        candidates.push({ filePath, archive, article, index, url });
+      }
+    });
+  }
+  candidates.sort((a, b) => (Date.parse(a.article.tanggal) || 0) - (Date.parse(b.article.tanggal) || 0));
+  const changed = new Set();
+  for (const candidate of candidates.slice(0, batchLimit)) {
+    const publisherUrl = await resolveGoogleNewsPublisher(candidate.url);
+    const article = candidate.article;
+    article.resolution_attempted_at = new Date(attemptedAt).toISOString();
+    article.resolution_attempts = (Number(article.resolution_attempts) || 0) + 1;
+    if (publisherUrl && !isGoogleNewsRedirect(publisherUrl)) {
+      article.tautan_google_news = candidate.url;
+      article.tautan = publisherUrl;
+      article.link_type = "publisher";
+      article.resolution_status = "resolved";
+      recovered.push(article);
+    } else {
+      article.link_type = "aggregator_redirect";
+      article.resolution_status = "unresolved";
+    }
+    changed.add(candidate.filePath);
+    // Stay below Google's burst limits when processing older archive links.
+    await new Promise(resolve => setTimeout(resolve, 500));
+  }
+  changed.forEach(filePath => {
+    const archive = JSON.parse(fs.readFileSync(filePath, "utf8"));
+    fs.writeFileSync(filePath, JSON.stringify(archive, null, 1));
+  });
+  console.log("Google News archive resolution:", recovered.length, "publisher URLs; attempted", Math.min(candidates.length, batchLimit));
+  return recovered;
 }
 async function getGoogleNewsCandidates() {
   const queries = ["kopi Indonesia", "coffee Indonesia arabica robusta"];
@@ -276,7 +338,11 @@ async function getGoogleNewsCandidates() {
     const rssDirect = resolvedCandidates.filter(a => a.resolution_status === "resolved");
     const rssUnresolved = resolvedCandidates.filter(a => a.resolution_status !== "resolved");
     pool.push.apply(pool, rssDirect);
+    // Resolve a small historical batch each run so older aggregator-only
+    // archive entries can be restored to the publisher-backed clustering corpus.
+    const recoveredHistorical = await resolveArchivedGoogleNews(10, Date.now());
     diag.google_news_rss = "kandidat " + rssCandidates.length + "; URL penerbit terverifikasi " + rssDirect.length + "; tetap agregator " + rssUnresolved.length;
+    diag.google_news_archive = "dipulihkan ke sumber penerbit " + recoveredHistorical.length + " artikel lama pada proses ini; arsip lain diproses bertahap";
     const artikel = pool;
     if (artikel && artikel.length) {
       const KOPI_RX = /kopi|coffee|arabica|robusta/i;
@@ -362,8 +428,13 @@ async function getGoogleNewsCandidates() {
           }
         } catch (eOv) {}
         const byUrl = new Map((all.artikel || []).map(function (a, idx) { return [String(a.tautan || a.judul), idx]; }));
-        directSimpan.concat(aggregators).forEach(function (a) {
+        directSimpan.concat(aggregators, recoveredHistorical).forEach(function (a) {
           const k = String(a.tautan || a.judul);
+          const titleKey = headlineKey(a);
+          const duplicate = (all.artikel || []).some(function (existing) {
+            return String(existing.tautan || existing.link || "") === k || (titleKey && headlineKey(existing) === titleKey);
+          });
+          if (!byUrl.has(k) && duplicate) return;
           if (!byUrl.has(k)) { all.artikel.push(a); byUrl.set(k, all.artikel.length - 1); }
           else {
             const old = all.artikel[byUrl.get(k)];
