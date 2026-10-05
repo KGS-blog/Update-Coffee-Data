@@ -29,6 +29,23 @@ const clusterContextHash = article => crypto.createHash("sha256").update(JSON.st
   titleOf(article), article.coffee_relevance_context || "", article.content_excerpt || "",
   article.ringkasan || article.deskripsi || article.description || ""
 ])).digest("hex");
+const evidenceMatchesMaterial = (evidence, material) => {
+  const normalize = value => String(value || "").toLowerCase()
+    .replace(/<[^>]*>/g, " ").replace(/&nbsp;/gi, " ")
+    .normalize("NFKD").replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^\p{L}\p{N}]+/gu, " ").trim();
+  const quote = normalize(evidence);
+  const text = normalize(material);
+  if (quote.length < 12 || !text) return false;
+  if (text.includes(quote)) return true;
+  // Accept punctuation/formatting differences only when distinctive terms
+  // still match strongly; this avoids rejecting useful AI reviews wholesale.
+  const stop = new Set(["yang", "dan", "atau", "dari", "untuk", "dengan", "pada", "dalam", "ini", "itu", "the", "and", "for", "from", "with", "that", "this", "are", "was"]);
+  const terms = [...new Set(quote.split(/\s+/).filter(token => token.length >= 4 && !stop.has(token)))];
+  if (terms.length < 4) return false;
+  const matched = terms.filter(token => text.includes(token)).length;
+  return matched >= 4 && matched / terms.length >= 0.8;
+};
 
 async function syncEditorClusterDecisions() {
   try {
@@ -363,7 +380,7 @@ async function main() {
   buildArchiveIndex();
   source.fetched = source.fetched || now;
 
-  const CLUSTER_REVIEW_VERSION = 5;
+  const CLUSTER_REVIEW_VERSION = 6;
   const reviewed = articles.filter(a => !isAggregatorArticle(a) && a.cluster_assignment === "unassigned"
       && (Number(a.cluster_review_version || 0) < CLUSTER_REVIEW_VERSION || a.cluster_review_context_hash !== clusterContextHash(a)))
     .sort((a, b) => Number(b.source_type === "cie_curated_reference") - Number(a.source_type === "cie_curated_reference") || dateOf(b) - dateOf(a))
@@ -398,10 +415,9 @@ async function main() {
       const d = decisions.get(articleKey(a));
       const review = reviews.get(articleKey(a));
       if (review && reviewedKeys.has(articleKey(a))) {
-        const materialForReview = `${titleOf(a)} ${String(a.coffee_relevance_context || a.content_excerpt || a.ringkasan || a.deskripsi || a.description || "")}`.replace(/<[^>]*>/g, " ").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim();
-        const reviewEvidence = String(review.evidence || "").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim();
         const enoughContext = String(a.coffee_relevance_context || a.content_excerpt || a.ringkasan || a.deskripsi || a.description || "").replace(/<[^>]*>/g, " ").trim().length >= 80;
-        const verifiable = reviewEvidence.length >= 12 && materialForReview.includes(reviewEvidence);
+        const materialForReview = `${titleOf(a)} ${String(a.coffee_relevance_context || a.content_excerpt || a.ringkasan || a.deskripsi || a.description || "")}`;
+        const verifiable = evidenceMatchesMaterial(review.evidence, materialForReview);
         a.cluster_relevance_review = {
           relevance: enoughContext && verifiable ? review.relevance : "uncertain",
           title_context_match: enoughContext && verifiable ? review.title_context_match : "unclear",
@@ -412,11 +428,10 @@ async function main() {
         };
       }
       if (!d) continue;
-      const material = `${titleOf(a)} ${String(a.coffee_relevance_context || a.content_excerpt || a.ringkasan || a.deskripsi || a.description || "")}`.replace(/<[^>]*>/g, " ").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim();
-      const evidence = String(d.evidence || "").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim();
       const target = taxonomy.find(c => c.slug === d.cluster_id && d.confidence >= 0.85);
       const usableContext = String(a.coffee_relevance_context || a.content_excerpt || a.ringkasan || a.deskripsi || a.description || "").replace(/<[^>]*>/g, " ").trim();
-      if (target && !target.human_review_only && usableContext.length >= 80 && evidence.length >= 12 && material.includes(evidence)) { a.cluster_id = target.slug; a.cluster_name = target.nama; a.cluster_assignment = "ai_existing"; a.cluster_ai_reason = d.reason; a.cluster_ai_evidence = d.evidence; }
+      const material = `${titleOf(a)} ${String(a.coffee_relevance_context || a.content_excerpt || a.ringkasan || a.deskripsi || a.description || "")}`;
+      if (target && !target.human_review_only && usableContext.length >= 80 && evidenceMatchesMaterial(d.evidence, material)) { a.cluster_id = target.slug; a.cluster_name = target.nama; a.cluster_assignment = "ai_existing"; a.cluster_ai_reason = d.reason; a.cluster_ai_evidence = d.evidence; }
     }
   }
   write("berita-all.json", source);
