@@ -51,7 +51,7 @@ jobs:
           if [ -z "$MEVO_SYNC_SECRET" ]; then echo "::warning::MEVO_SYNC_SECRET belum disetel; antrean klaster masih memakai berkas repo sementara."; exit 0; fi
           endpoint='https://blog-api.qcoid.com/api/internal/cluster-candidates'
           response="$(curl --fail --silent --show-error -H "Authorization: Bearer $MEVO_SYNC_SECRET" "$endpoint")" || { echo "::warning::Penyimpanan antrean D1 belum siap; pembaruan data utama tetap berjalan."; exit 0; }
-          if node -e 'const d=JSON.parse(process.argv[1]); process.exit(d.needs_seed ? 0 : 1)' "$response"; then
+          if printf '%s' "$response" | node -e 'let raw=""; process.stdin.on("data", chunk => raw += chunk); process.stdin.on("end", () => process.exit(JSON.parse(raw).needs_seed ? 0 : 1));'; then
             response="$(curl --fail --silent --show-error 'https://raw.githubusercontent.com/KGS-blog/Update-Coffee-Data/main/data/cluster-candidates.json')" || { echo "::warning::Antrean klaster belum ada; pembaruan data utama tetap berjalan."; exit 0; }
             curl --fail --silent --show-error -X PUT -H "Authorization: Bearer $MEVO_SYNC_SECRET" -H 'Content-Type: application/json' --data-binary "$response" "$endpoint" >/dev/null || { echo "::warning::Migrasi D1 diperlukan; pembaruan data utama tetap berjalan."; exit 0; }
           fi
