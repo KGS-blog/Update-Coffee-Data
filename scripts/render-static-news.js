@@ -30,14 +30,14 @@ const formatDate = article => {
 const sourceOf = article => article.sumber || article.source_name || "Sumber penerbit";
 const categoryOf = article => article.cluster_name && article.cluster_name !== "Lainnya" ? article.cluster_name : "Berita kopi";
 const linkOf = article => article.tautan || article.link;
-const lead = articles.length ? `<article id="lead-story" class="lead"><div class="eyebrow">${escape(categoryOf(articles[0]))}</div><a class="lead-link" href="${escape(linkOf(articles[0]))}" target="_blank" rel="noopener noreferrer"><h1>${escape(articles[0].judul || articles[0].title)}</h1></a><p>${escape(sourceOf(articles[0]))} · ${escape(formatDate(articles[0]))} · Sumber artikel langsung</p></article>` : `<article id="lead-story" class="lead"><div class="eyebrow">Berita terbaru</div><h1>Berita kopi terbaru sedang dimuat</h1><p>Daftar berita akan tampil setelah feed diperbarui.</p></article>`;
+const lead = articles.length ? `<article id="lead-story" class="home-feature-card feed-feature"><div class="eyebrow">Pilihan feed · ${escape(categoryOf(articles[0]))}</div><a class="lead-link" href="${escape(linkOf(articles[0]))}" target="_blank" rel="noopener noreferrer"><h1>${escape(articles[0].judul || articles[0].title)}</h1></a><p>${escape(sourceOf(articles[0]))} · ${escape(formatDate(articles[0]))} · Sumber artikel langsung</p><a class="home-feature-link" href="#berita" data-go="berita">Buka semua berita →</a></article>` : `<article id="lead-story" class="home-feature-card feed-feature"><div class="eyebrow">Pilihan terbaru dari feed</div><h1>Berita kopi terbaru sedang dimuat</h1><p>Daftar berita akan tampil setelah feed diperbarui.</p><a class="home-feature-link" href="#berita" data-go="berita">Buka semua berita →</a></article>`;
 const latest = articles.slice(1).map(article => `<li><a href="${escape(linkOf(article))}" target="_blank" rel="noopener noreferrer">${escape(article.judul || article.title)}</a><div class="meta">${escape(sourceOf(article))} <i class="dot"></i> ${escape(formatDate(article))} · Sumber artikel langsung</div></li>`).join("");
 const targets = ["index.html", "kabar-kopi.html"];
 for (const filename of targets) {
   const htmlPath = path.join(root, filename);
   const html = fs.readFileSync(htmlPath, "utf8");
   const updated = html
-    .replace(/<article id="lead-story" class="lead">[\s\S]*?<\/article>/, lead)
+    .replace(/<article id="lead-story" class="(?:lead|home-feature-card feed-feature)">[\s\S]*?<\/article>/, lead)
     .replace(/(<ul id="home-latest" class="side-list">)[\s\S]*?(<\/ul>)/, `$1${latest}$2`);
   if (updated === html) throw new Error(`Homepage markup not found or unchanged in ${filename}.`);
   fs.writeFileSync(htmlPath, updated);

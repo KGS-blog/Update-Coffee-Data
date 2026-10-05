@@ -11,6 +11,7 @@ on:
       - 'scripts/process-portal-data.js'
       - 'scripts/fetch-news-context.py'
       - 'scripts/render-static-mevo-previews.js'
+      - 'scripts/render-static-news.js'
       - 'scripts/templates/kabar-kopi.html'
       - 'data/editorial-settings.json'
   schedule:
