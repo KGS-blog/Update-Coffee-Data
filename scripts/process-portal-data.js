@@ -138,9 +138,10 @@ function effectiveTaxonomy() {
   const accepted = new Set(decisions.accepted_candidate_ids || []);
   const fromQueue = (generated.candidates || []).filter(c => accepted.has(c.id)).map(c => ({
     slug: c.id, nama: c.name, nama_en: c.name_en || c.name, analisis_id: c.id,
+    human_review_only: !!c.human_review_only,
     // Never turn generic label words (especially "kopi" or "&") into
     // matching keywords. Candidate assignments remain AI/editor reviewed.
-    kunci: [...new Set(c.suggested_keywords || [])]
+    kunci: c.human_review_only ? [] : [...new Set(c.suggested_keywords || [])]
       .filter(k => String(k).trim().length >= 4 && !["kopi", "coffee", "budaya", "culture", "sastra"].includes(String(k).trim().toLowerCase()))
   }));
   // The review queue may live only in D1. Retain the definition already
@@ -151,22 +152,27 @@ function effectiveTaxonomy() {
     && !fromQueue.some(item => item.slug === c.slug));
   const custom = [...fromQueue, ...fromCatalog];
   const all = [...BERITA_KLASTER, ...custom.filter(c => !BERITA_KLASTER.some(base => base.slug === c.slug))];
-  write("cluster-catalog.json", { version: 1, generated_at: now, clusters: all.map(({ slug, nama, nama_en, analisis_id, kunci }) => ({ slug, nama, nama_en, analisis_id, kunci })) });
+  write("cluster-catalog.json", { version: 1, generated_at: now, clusters: all.map(({ slug, nama, nama_en, analisis_id, kunci, human_review_only }) => ({ slug, nama, nama_en, analisis_id, kunci, human_review_only: !!human_review_only })) });
   return all;
 }
 
 function applyEditorialDecisions(articles, taxonomy) {
   const decisions = read("cluster-decisions.json", { overrides: [] });
-  const overrideMap = new Map((decisions.overrides || []).map(x => [String(x.url || x.tautan), String(x.cluster_id || x.klaster || "")]));
+  const overrideMap = new Map((decisions.overrides || []).map(x => [String(x.url || x.tautan), x]));
   const legacy = read("klaster-final.json", []);
-  if (Array.isArray(legacy)) legacy.forEach(x => overrideMap.set(String(x.tautan || ""), String(x.cluster_id || x.klaster || "")));
+  if (Array.isArray(legacy)) legacy.forEach(x => overrideMap.set(String(x.tautan || ""), { cluster_id: String(x.cluster_id || x.klaster || "") }));
   const byId = new Map(taxonomy.map(c => [c.slug, c]));
   byId.set("lainnya", { slug: "lainnya", nama: "Lainnya", nama_en: "Other", kunci: [] });
   const byName = new Map(taxonomy.map(c => [c.nama.toLowerCase(), c]));
   const unknown = [];
   const updated = articles.map(a => {
     const key = articleKey(a);
-    const chosen = overrideMap.get(key);
+    const override = overrideMap.get(key);
+    const chosen = String(override?.cluster_id || override?.klaster || "");
+    if (override?.decision === "irrelevant" || chosen === "tidak-relevan") {
+      const next = { ...a, link_type: linkTypeOf(key), cluster_id: "tidak-relevan", cluster_name: "Tidak Relevan", cluster_assignment: "editor_irrelevant", editorial_relevance: "irrelevant", editorial_relevance_reason: String(override.reason || "Ditandai tidak relevan oleh editor.") };
+      return next;
+    }
     const selected = chosen ? (byId.get(chosen) || byName.get(chosen.toLowerCase())) : null;
     const contextual = getHighConfidenceCluster(a, taxonomy);
     const consumerEvent = getConsumerEventCluster(a, taxonomy);
@@ -195,10 +201,13 @@ function applyEditorialDecisions(articles, taxonomy) {
 }
 
 const clusterSuggestionSchema = {
-  type: "object", additionalProperties: false, required: ["assignments", "candidates"],
+  type: "object", additionalProperties: false, required: ["assignments", "candidates", "reviews"],
   properties: {
     assignments: { type: "array", items: { type: "object", additionalProperties: false, required: ["url", "cluster_id", "confidence", "reason", "evidence"], properties: {
       url: { type: "string" }, cluster_id: { type: "string" }, confidence: { type: "number" }, reason: { type: "string" }, evidence: { type: "string" }
+    } } },
+    reviews: { type: "array", items: { type: "object", additionalProperties: false, required: ["url", "relevance", "title_context_match", "suggested_cluster_id", "reason", "evidence"], properties: {
+      url: { type: "string" }, relevance: { type: "string", enum: ["relevant", "irrelevant", "uncertain"] }, title_context_match: { type: "string", enum: ["match", "mismatch", "unclear"] }, suggested_cluster_id: { type: "string" }, reason: { type: "string" }, evidence: { type: "string" }
     } } },
     candidates: { type: "array", items: { type: "object", additionalProperties: false, required: ["name", "name_en", "description", "description_en", "keywords", "urls", "reason"], properties: {
       name: { type: "string" }, name_en: { type: "string" }, description: { type: "string" }, description_en: { type: "string" }, keywords: { type: "array", items: { type: "string" } }, urls: { type: "array", items: { type: "string" } }, reason: { type: "string" }
@@ -254,6 +263,7 @@ function mergeCandidates(previous, proposals, unassigned, allArticles) {
       title: titleOf(a), source: String(a.sumber || a.source_name || ""), published_at: String(a.tanggal || a.pubDate || ""),
       excerpt: String(a.coffee_relevance_context || a.content_excerpt || a.ringkasan || a.deskripsi || a.description || "").replace(/<[^>]*>/g, " ").slice(0, 1100),
       context_status: a.extraction_status || (a.ringkasan || a.deskripsi || a.description ? "feed_excerpt" : "context_unavailable"),
+      relevance_review: a.cluster_relevance_review || null,
       status: "pending"
     });
   }
@@ -271,7 +281,22 @@ function mergeCandidates(previous, proposals, unassigned, allArticles) {
     const status = rejected.has(id) ? "rejected" : accepted.has(id) ? "accepted" : old && old.status !== "pending" ? old.status : "pending";
     existing.set(id, { id, name: p.name, name_en: p.name_en || p.name, description: p.description, description_en: p.description_en || p.description, suggested_keywords: [...new Set((p.keywords || []).map(k => String(k).trim()).filter(Boolean))].slice(0, 20), supporting_urls: urls, rationale: p.reason, status, first_suggested_at: old?.first_suggested_at || now, last_updated_at: now });
   }
-  return { version: 2, generated_at: now, minimum_support: 3, review_status: process.env.OPENAI_API_KEY ? "ai_review_enabled" : "needs_api_key", unassigned_articles: unassignedArticles, candidates: [...existing.values()].slice(0, 30) };
+  const regionSignals = /\b(gayo|toraja|flores|kintamani|mandailing|bajawa|wamena|temanggung|bondowoso|kerinci|sindoro|ijen|priangan|kopi daerah|coffee origin|single origin|asal-?usul kopi|origin kopi|kopi nusantara|kopi lokal daerah|terroir kopi)\b/i;
+  const communitySignals = /\b(komunitas|community|koperasi|cooperative|kelompok tani|farmer group|asosiasi|association|perkumpulan|komunitas barista|coffee community|pecinta kopi|petani kopi)\b/i;
+  const moderationSeeds = [
+    { id: "budaya-asal-usul", name: "Budaya & Asal-Usul", name_en: "Culture & Origin", description: "Liputan tentang identitas, tradisi, praktik, dan asal geografis kopi di daerah tertentu. Bukan sekadar berita yang kebetulan menyebut lokasi.", description_en: "Coverage of coffee identity, traditions, practices, and geographic origin in a specific region—not simply a story that happens to mention a place.", match: regionSignals, keywords: ["asal-usul kopi", "origin kopi", "kopi daerah", "single origin", "tradisi kopi", "budaya kopi"], reason: "Usulan editorial awal untuk meninjau liputan kopi yang berfokus pada daerah, asal, atau budaya setempat." },
+    { id: "komunitas-kopi", name: "Komunitas Kopi", name_en: "Coffee Communities", description: "Liputan yang pokok beritanya adalah komunitas, kelompok, koperasi, asosiasi, atau kegiatan kolektif dalam ekosistem kopi.", description_en: "Coverage whose main subject is a community, group, cooperative, association, or collective activity in the coffee ecosystem.", match: communitySignals, keywords: ["komunitas kopi", "coffee community", "koperasi kopi", "kelompok tani kopi", "asosiasi kopi"], reason: "Usulan editorial awal untuk meninjau liputan tentang kelompok dan komunitas dalam ekosistem kopi." }
+  ];
+  for (const seed of moderationSeeds) {
+    if (rejected.has(seed.id)) continue;
+    const support = (unassigned || []).filter(a => seed.match.test(`${titleOf(a)} ${a.coffee_relevance_context || a.content_excerpt || a.ringkasan || a.deskripsi || a.description || ""}`)).map(articleKey).filter(Boolean).slice(-12);
+    if (!support.length) continue;
+    const old = existing.get(seed.id);
+    existing.set(seed.id, { id: seed.id, name: seed.name, name_en: seed.name_en, description: seed.description, description_en: seed.description_en, suggested_keywords: seed.keywords, supporting_urls: support, rationale: seed.reason, human_review_only: true, status: accepted.has(seed.id) ? "accepted" : old?.status === "rejected" ? "rejected" : "pending", first_suggested_at: old?.first_suggested_at || now, last_updated_at: now });
+  }
+  const curatedIds = new Set(moderationSeeds.map(item => item.id));
+  const orderedCandidates = [...existing.values()].sort((a, b) => Number(curatedIds.has(b.id)) - Number(curatedIds.has(a.id)));
+  return { version: 2, generated_at: now, minimum_support: 3, review_status: process.env.OPENAI_API_KEY ? "ai_review_enabled" : "needs_api_key", unassigned_articles: unassignedArticles, candidates: orderedCandidates.slice(0, 30) };
 }
 
 function fingerprint(topicId, sources, settings) {
@@ -336,7 +361,7 @@ async function main() {
   buildArchiveIndex();
   source.fetched = source.fetched || now;
 
-  const CLUSTER_REVIEW_VERSION = 4;
+  const CLUSTER_REVIEW_VERSION = 5;
   const reviewed = articles.filter(a => !isAggregatorArticle(a) && a.cluster_assignment === "unassigned"
       && (Number(a.cluster_review_version || 0) < CLUSTER_REVIEW_VERSION || a.cluster_review_context_hash !== clusterContextHash(a)))
     .sort((a, b) => Number(b.source_type === "cie_curated_reference") - Number(a.source_type === "cie_curated_reference") || dateOf(b) - dateOf(a))
@@ -344,21 +369,37 @@ async function main() {
   let aiResult = { assignments: [], candidates: [] };
   let aiReviewSucceeded = false;
   if (reviewed.length && process.env.OPENAI_API_KEY) {
-    const compact = reviewed.map(a => ({ url: articleKey(a), title: titleOf(a), article_context: String(a.coffee_relevance_context || a.content_excerpt || a.ringkasan || a.deskripsi || a.description || "").replace(/<[^>]*>/g, " ").slice(0, 1800), context_status: a.extraction_status || "feed_excerpt_only", source: a.sumber || "", published_at: a.tanggal || "" }));
-    const instructions = "Baca konteks isi artikel yang diberikan, bukan sekadar judul. Cocokkan fokus utama artikel dengan definisi dan contoh yang sesuai pada klaster yang sudah ada. Prioritaskan bukti tentang subjek, peristiwa, dan hubungan antartopik dalam konteks; kemiripan satu kata bukan alasan menggabungkan. Jika hanya judul/cuplikannya yang tersedia, tingkatkan kehati-hatian. Jika konteks tidak cukup atau topik tidak cocok jelas, jangan keluarkan assignment: artikel tetap di Lainnya untuk ditinjau editor manusia. Assignment dengan confidence >=0.85 boleh masuk otomatis ke klaster yang sudah ada, tetapi ini bukan akurasi terkalibrasi. Sertakan evidence berupa kutipan pendek yang persis muncul dalam judul atau konteks; sistem menolak bukti yang tidak ditemukan. Riset & Tren Konsumen hanya untuk bukti tentang konsumen (survei, studi, statistik konsumsi, preferensi, perilaku, kebiasaan atau kesehatan konsumsi kopi); kata tren, budaya, atau data saja tidak cukup. Event & Kompetisi hanya bila acara/kompetisi/pameran/festival/workshop/seminar adalah pokok berita, bukan latar. Promosi pembukaan kedai bukan Budaya & Sastra. Jika sedikitnya tiga artikel yang ditinjau menunjukkan tema koheren yang belum tercakup, ajukan kandidat klaster baru, namun jangan mengklasifikasikan artikel ke kandidat baru otomatis. Gunakan URL persis dari input. Kategori tersedia: " + JSON.stringify(taxonomy.map(c => ({ id: c.slug, name: c.nama, description: c.slug === "riset-tren-konsumen" ? "Bukti riset atau data tentang preferensi, perilaku, kebiasaan, kesehatan, dan pola konsumsi kopi." : c.slug === "event-kompetisi" ? "Acara kopi sebagai subjek berita: agenda, festival, pameran, kompetisi, workshop, seminar, peserta, atau hasil." : c.kunci.slice(0, 12).join(", ")})));
+    const compact = reviewed.map(a => ({ url: articleKey(a), title: titleOf(a), article_context: String(a.coffee_relevance_context || a.content_excerpt || a.ringkasan || a.deskripsi || a.description || "").replace(/<[^>]*>/g, " ").slice(0, 1800), context_status: a.extraction_status || (a.ringkasan || a.deskripsi || a.description ? "feed_excerpt_only" : "context_unavailable"), source: a.sumber || "", published_at: a.tanggal || "" }));
+    const instructions = "Untuk SETIAP artikel, bandingkan judul dengan isi/cuplikannya. Tentukan apakah fokus isi benar-benar mendukung judul (match/mismatch/unclear), apakah artikel secara substansial relevan dengan industri kopi (relevant/irrelevant/uncertain), dan jelaskan alasan dengan bukti pendek yang dikutip persis. Penyebutan kopi sebagai latar, tempat kejadian, atau satu detail sampingan bukan relevansi substantif—contohnya berita kriminal yang hanya bermula di warung kopi atau berita tokoh yang hanya menyebut minum kopi. Status irrelevant adalah SARAN saja: jangan menghapus atau mengecualikan artikel otomatis; biarkan editor manusia menetapkan keputusan akhir. Setelah pengecekan relevansi, cocokkan fokus isi (bukan judul saja) dengan definisi klaster. Kemiripan satu kata tidak cukup. Jika judul dan konteks tidak selaras, konteks tidak cukup, atau klaster tidak cocok jelas, jangan keluarkan assignment: biarkan di Lainnya untuk editor. Assignment confidence >=0.85 boleh masuk otomatis hanya ke klaster standar; klaster human_review_only wajib ditetapkan editor satu per satu. Sertakan kutipan bukti persis dari judul/konteks dan jangan membuat bukti. Riset & Tren Konsumen memerlukan bukti tentang konsumen; Event & Kompetisi harus menjadi pokok berita. Klaster Budaya & Asal-Usul hanya jika asal/daerah/budaya kopi menjadi pokok isi; Komunitas Kopi hanya jika komunitas/kelompok menjadi pokok isi. Jika ada tema baru yang koheren, ajukan kandidat, jangan klasifikasikan otomatis. Gunakan URL persis dari input. Kategori: " + JSON.stringify(taxonomy.map(c => ({ id: c.slug, name: c.nama, human_review_only: !!c.human_review_only, description: c.kunci.slice(0, 12).join(", ")})));
     try { aiResult = await askAI("coffee_cluster_review", clusterSuggestionSchema, instructions, compact); aiReviewSucceeded = true; }
     catch (e) { console.log("AI cluster review skipped: " + e.message); }
     const decisions = new Map((aiResult.assignments || []).map(x => [x.url, x]));
+    const reviews = new Map((aiResult.reviews || []).map(x => [x.url, x]));
     const reviewedKeys = new Set(aiReviewSucceeded ? reviewed.map(articleKey) : []);
     for (const a of articles) {
       if (reviewedKeys.has(articleKey(a))) { a.cluster_ai_reviewed_at = now; a.cluster_review_version = CLUSTER_REVIEW_VERSION; a.cluster_review_context_hash = clusterContextHash(a); }
       const d = decisions.get(articleKey(a));
+      const review = reviews.get(articleKey(a));
+      if (review && reviewedKeys.has(articleKey(a))) {
+        const materialForReview = `${titleOf(a)} ${String(a.coffee_relevance_context || a.content_excerpt || a.ringkasan || a.deskripsi || a.description || "")}`.replace(/<[^>]*>/g, " ").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim();
+        const reviewEvidence = String(review.evidence || "").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim();
+        const enoughContext = String(a.coffee_relevance_context || a.content_excerpt || a.ringkasan || a.deskripsi || a.description || "").replace(/<[^>]*>/g, " ").trim().length >= 80;
+        const verifiable = reviewEvidence.length >= 12 && materialForReview.includes(reviewEvidence);
+        a.cluster_relevance_review = {
+          relevance: enoughContext && verifiable ? review.relevance : "uncertain",
+          title_context_match: enoughContext && verifiable ? review.title_context_match : "unclear",
+          suggested_cluster_id: String(review.suggested_cluster_id || "").slice(0, 80),
+          reason: String(!enoughContext ? "Cuplikan isi terlalu terbatas untuk menyimpulkan relevansi; editor perlu membuka sumber asli." : !verifiable ? "Dasar penilaian AI tidak cocok dengan kutipan yang tersedia; editor perlu memeriksa sumber asli." : review.reason || "").slice(0, 500),
+          evidence: verifiable ? String(review.evidence || "").slice(0, 300) : "",
+          reviewed_at: now
+        };
+      }
       if (!d) continue;
       const material = `${titleOf(a)} ${String(a.coffee_relevance_context || a.content_excerpt || a.ringkasan || a.deskripsi || a.description || "")}`.replace(/<[^>]*>/g, " ").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim();
       const evidence = String(d.evidence || "").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim();
       const target = taxonomy.find(c => c.slug === d.cluster_id && d.confidence >= 0.85);
       const usableContext = String(a.coffee_relevance_context || a.content_excerpt || a.ringkasan || a.deskripsi || a.description || "").replace(/<[^>]*>/g, " ").trim();
-      if (target && usableContext.length >= 80 && evidence.length >= 12 && material.includes(evidence)) { a.cluster_id = target.slug; a.cluster_name = target.nama; a.cluster_assignment = "ai_existing"; a.cluster_ai_reason = d.reason; a.cluster_ai_evidence = d.evidence; }
+      if (target && !target.human_review_only && usableContext.length >= 80 && evidence.length >= 12 && material.includes(evidence)) { a.cluster_id = target.slug; a.cluster_name = target.nama; a.cluster_assignment = "ai_existing"; a.cluster_ai_reason = d.reason; a.cluster_ai_evidence = d.evidence; }
     }
   }
   write("berita-all.json", source);
@@ -366,7 +407,7 @@ async function main() {
   const trulyUnassigned = articles.filter(a => !isAggregatorArticle(a) && a.cluster_assignment === "unassigned");
   write("cluster-candidates.json", mergeCandidates(oldCandidates, aiResult.candidates, trulyUnassigned, articles));
   const updated = read("berita-all.json", { artikel: [] }).artikel;
-  await generateEditorial(updated.filter(a => !isAggregatorArticle(a)), taxonomy);
+  await generateEditorial(updated.filter(a => !isAggregatorArticle(a) && a.cluster_assignment !== "editor_irrelevant"), taxonomy);
   console.log("portal data processed:", updated.length, "articles;", reviewed.length, "unmatched reviewed;", unknown.length, "unmatched total");
 }
 

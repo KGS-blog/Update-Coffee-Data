@@ -46,7 +46,7 @@ function clusterBerita(artikel) {
     const definitions = (typeof window !== "undefined" && Array.isArray(window.BERITA_KLASTER)) ? window.BERITA_KLASTER : BERITA_KLASTER;
     const result = {
         success: true,
-        total_artikel: artikel.length,
+        total_artikel: artikel.filter(a => String(a.cluster_assignment || "") !== "editor_irrelevant").length,
         clustering_timestamp: new Date().toISOString(),
         klaster: [],
         lainnya_items: []
@@ -67,7 +67,7 @@ function clusterBerita(artikel) {
     let lainnya = { nama: "Lainnya", nama_en: "Others", items: [] };
 
     // Clustering logic
-    artikel.forEach(a => {
+    artikel.filter(a => String(a.cluster_assignment || "") !== "editor_irrelevant").forEach(a => {
         const t = String(a.judul || "").toLowerCase();
         const saved = String(a.cluster_id || a.cluster_name || a.klaster_user || "").toLowerCase();
         const assignment = String(a.cluster_assignment || "").toLowerCase();

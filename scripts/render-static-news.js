@@ -17,7 +17,7 @@ const isDirectPublisherUrl = value => {
   } catch (_) { return false; }
 };
 const articles = (Array.isArray(feed.artikel) ? feed.artikel : [])
-  .filter(article => isDirectPublisherUrl(article.tautan || article.link))
+  .filter(article => article.cluster_assignment !== "editor_irrelevant" && isDirectPublisherUrl(article.tautan || article.link))
   .sort((a, b) => dateValue(b) - dateValue(a))
   .slice(0, 6);
 const formatDate = article => {
