@@ -380,7 +380,7 @@ async function main() {
   buildArchiveIndex();
   source.fetched = source.fetched || now;
 
-  const CLUSTER_REVIEW_VERSION = 6;
+  const CLUSTER_REVIEW_VERSION = 7;
   const reviewed = articles.filter(a => !isAggregatorArticle(a) && a.cluster_assignment === "unassigned"
       && (Number(a.cluster_review_version || 0) < CLUSTER_REVIEW_VERSION || a.cluster_review_context_hash !== clusterContextHash(a)))
     .sort((a, b) => Number(b.source_type === "cie_curated_reference") - Number(a.source_type === "cie_curated_reference") || dateOf(b) - dateOf(a))
@@ -392,7 +392,29 @@ async function main() {
     // context/relevance decision. One oversized response used to fail as a
     // whole and leave hundreds of stories in “Lainnya” without review.
     const reviewBatchSize = 20;
-    const instructions = "Untuk SETIAP artikel, bandingkan judul dengan isi/cuplikannya. Tentukan apakah fokus isi benar-benar mendukung judul (match/mismatch/unclear), apakah artikel secara substansial relevan dengan industri kopi (relevant/irrelevant/uncertain), dan jelaskan alasan dengan bukti pendek yang dikutip persis. Penyebutan kopi sebagai latar, tempat kejadian, atau satu detail sampingan bukan relevansi substantif—contohnya berita kriminal yang hanya bermula di warung kopi atau berita tokoh yang hanya menyebut minum kopi. Status irrelevant adalah SARAN saja: jangan menghapus atau mengecualikan artikel otomatis; biarkan editor manusia menetapkan keputusan akhir. Setelah pengecekan relevansi, cocokkan fokus isi (bukan judul saja) dengan definisi klaster. Kemiripan satu kata tidak cukup. Jika judul dan konteks tidak selaras, konteks tidak cukup, atau klaster tidak cocok jelas, jangan keluarkan assignment: biarkan di Lainnya untuk editor. Assignment confidence >=0.85 boleh masuk otomatis hanya ke klaster standar; klaster human_review_only wajib ditetapkan editor satu per satu. Sertakan kutipan bukti persis dari judul/konteks dan jangan membuat bukti. Riset & Tren Konsumen memerlukan bukti tentang konsumen; Event & Kompetisi harus menjadi pokok berita. Klaster Budaya & Asal-Usul hanya jika asal/daerah/budaya kopi menjadi pokok isi; Komunitas Kopi hanya jika komunitas/kelompok menjadi pokok isi. Jika ada tema baru yang koheren, ajukan kandidat, jangan klasifikasikan otomatis. Gunakan URL persis dari input. Kategori: " + JSON.stringify(taxonomy.map(c => ({ id: c.slug, name: c.nama, human_review_only: !!c.human_review_only, description: c.kunci.slice(0, 12).join(", ")})));
+    const clusterScopes = {
+      "kedai-konsumsi-gaya-hidup": "Kedai/kafe, pembukaan atau ekspansi gerai, menu dan pengalaman konsumen, pola konsumsi yang bukan riset terukur. Jangan pilih hanya karena kopi dikonsumsi di suatu tempat.",
+      "produksi-panen": "Budidaya dan kondisi kebun, petani dalam kegiatan produksi, panen, mutu hasil, pascapanen, pengolahan biji, cuaca, hama, produktivitas.",
+      "harga-pasar": "Harga kopi atau green bean, harga acuan dan futures, stok/pasokan/permintaan, transaksi dan dinamika pasar yang menjadi pokok artikel. Jangan pilih hanya karena artikel menyebut kata pasar.",
+      "ekspor-daya-saing": "Ekspor/impor kopi, perdagangan lintas negara, akses pasar, daya saing, tujuan dagang, dan nilai tambah untuk bersaing. Pastikan kopi menjadi pokok materi perdagangan.",
+      "edukasi-industri": "Pendidikan/pelatihan kopi, penelitian atau studi tentang industri kopi, rantai nilai/rantai pasok dan pengembangan kapasitas. Bedakan dari berita produksi lapangan, harga, atau kebijakan jika itulah fokus utama.",
+      "barista-teknik-seduh": "Teknik seduh, resep dan metode ekstraksi, keterampilan barista, konsentrat, peralatan seduh, dan pengetahuan teknis penyajian.",
+      "riset-tren-konsumen": "Survei/studi/data yang secara nyata mengukur preferensi, perilaku, kebiasaan atau konsumsi konsumen kopi. Penyebutan gaya hidup atau manfaat kesehatan tanpa bukti konsumen tidak cukup.",
+      "event-kompetisi": "Acara, festival, pameran, pelatihan terbuka, atau kompetisi kopi yang menjadi pokok isi; penyebutan acara sampingan tidak cukup.",
+      "brand-global": "Perusahaan atau merek kopi, produk, kepemimpinan, strategi, peluncuran, investasi, ekspansi atau masuk ke pasar baru.",
+      "kebijakan-regulasi": "Kebijakan pemerintah, regulasi, standar, program publik, atau keputusan kelembagaan yang secara langsung mengatur atau memengaruhi sektor kopi.",
+      "budaya-asal-usul": "Kisah, identitas, tradisi, praktik budaya, varietas atau asal geografis kopi yang menjadi pokok isi. Klaster ini perlu persetujuan moderator per artikel.",
+      "komunitas-kopi": "Komunitas, koperasi, kelompok tani, asosiasi atau gerakan kolektif dalam ekosistem kopi yang menjadi pokok isi. Klaster ini perlu persetujuan moderator per artikel."
+    };
+    const instructions = [
+      "Untuk SETIAP artikel, bandingkan judul dengan konteks isi. Nilai relevansi industri kopi (relevant/irrelevant/uncertain) dan kecocokan judul-isi (match/mismatch/unclear). Gunakan URL persis dari input dan sertakan bukti singkat yang dikutip persis; jangan membuat bukti.",
+      "Penyebutan kopi sebagai latar, tempat kejadian, produk sampingan, atau satu detail saja bukan relevansi substantif. Contoh: berita kriminal yang hanya bermula di warung kopi, berita tokoh yang hanya menyebut minum kopi, atau berita ekspor aneka komoditas yang hanya menyebut kopi dalam daftar panjang. Relevansi irrelevant hanya SARAN untuk editor; jangan menghapus artikel otomatis.",
+      "Untuk setiap artikel relevant dengan title_context_match=match, isi reviews.suggested_cluster_id dengan ID klaster TERBAIK yang benar-benar sesuai dengan pokok konteks, walaupun confidence belum cukup untuk penetapan otomatis. Jangan mengosongkan rekomendasi hanya karena artikel masih perlu moderasi. Jika tidak ada klaster yang jelas cocok, kosongkan rekomendasi dan bila ada tema baru yang didukung sedikitnya 3 URL berbeda, ajukan candidates.",
+      "Gunakan batas makna berikut untuk mencegah pencocokan dangkal: " + JSON.stringify(clusterScopes),
+      "Tentukan assignments terpisah dari rekomendasi: hanya keluarkan assignment ke klaster standar jika confidence >=0.85, konteks isi tersedia minimal 80 karakter, title-context match jelas, dan bukti dapat diverifikasi dari materi sumber. Jangan pernah mengeluarkan assignment otomatis ke klaster human_review_only; isikan rekomendasinya saja agar moderator menetapkannya per artikel.",
+      "Jika isi terlalu tipis, judul dan konteks tidak selaras, bukti tidak cukup, atau relevansi tidak pasti, jangan memberi assignment. Artikel tetap dalam antrean Lainnya sampai keputusan editor. Kemiripan satu kata tidak cukup. Jangan memilih event dari penyebutan acara sampingan, consumer research tanpa bukti konsumen, atau origin/community hanya karena nama daerah/kelompok muncul.",
+      "Untuk setiap review jelaskan alasan singkat dan sertakan bukti persis dari judul atau konteks. Kategori yang tersedia: " + JSON.stringify(taxonomy.map(c => ({ id:c.slug, name:c.nama, human_review_only:!!c.human_review_only, scope:clusterScopes[c.slug] || c.kunci.slice(0,12).join(", ") })))
+    ].join(" ");
     for (let offset = 0; offset < reviewed.length; offset += reviewBatchSize) {
       const batch = reviewed.slice(offset, offset + reviewBatchSize);
       const compact = batch.map(a => ({ url: articleKey(a), title: titleOf(a), article_context: String(a.coffee_relevance_context || a.content_excerpt || a.ringkasan || a.deskripsi || a.description || "").replace(/<[^>]*>/g, " ").slice(0, 1800), context_status: a.extraction_status || (a.ringkasan || a.deskripsi || a.description ? "feed_excerpt_only" : "context_unavailable"), source: a.sumber || "", published_at: a.tanggal || "" }));
