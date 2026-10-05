@@ -367,7 +367,7 @@ async function main() {
   const reviewed = articles.filter(a => !isAggregatorArticle(a) && a.cluster_assignment === "unassigned"
       && (Number(a.cluster_review_version || 0) < CLUSTER_REVIEW_VERSION || a.cluster_review_context_hash !== clusterContextHash(a)))
     .sort((a, b) => Number(b.source_type === "cie_curated_reference") - Number(a.source_type === "cie_curated_reference") || dateOf(b) - dateOf(a))
-    .slice(0, 80);
+    .slice(0, 160);
   let aiResult = { assignments: [], reviews: [], candidates: [] };
   const reviewedKeys = new Set();
   if (reviewed.length && process.env.OPENAI_API_KEY) {
