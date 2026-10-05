@@ -44,6 +44,7 @@ Copy
 🔧 How It Works
 GitHub Actions runs every 6 hours (or manual trigger)
 scripts/fetch.js obtains Arabica and IDR/USD from Yahoo Finance and the daily Robustas group indicator from the ICO public indicator feed.
+The same run imports `exports/coffee_relevant_articles.json` from `KGS-blog/coffee-intelligence-engine` into `data/coffee-reference-articles.json`. This is a separate reference corpus, not current news or automatic editorial input: the source records have no publication dates, so they are not assigned to monthly news archives or shown as latest stories. The importer deduplicates normalized URLs and equivalent Open Journal Systems view/download routes; matching titles alone are not enough to discard a record.
 ICO Robustas is not the ICE London futures contract. The feed stores its original value (US cents/lb), observation date, and source URL, plus a converted USD/metric-ton equivalent used by the calculator.
 This feed does not create a synthetic history for ICO Robustas; do not infer a historical chart from the calculator equivalent.
 JSON is committed back to repo

@@ -25,6 +25,8 @@ jobs:
           NEWSDATA_KEY: ${{ secrets.NEWSDATA_KEY }}
           USDA_API_KEY: ${{ secrets.USDA_API_KEY }}
         run: node scripts/fetch.js
+      - name: Import deduplicated coffee reference articles
+        run: node scripts/import-coffee-reference-articles.js
       - name: Load private editor cluster queue
         env:
           MEVO_SYNC_SECRET: ${{ secrets.MEVO_SYNC_SECRET }}
