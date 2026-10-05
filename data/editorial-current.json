@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated_at": "2026-10-05T09:48:20.600Z",
-  "feed_fetched": "2026-10-05T09:46:38.295Z",
+  "generated_at": "2026-10-05T10:38:48.515Z",
+  "feed_fetched": "2026-10-05T10:32:43.163Z",
   "mode": "auto",
   "settings": {
     "version": 1,
@@ -186,130 +186,133 @@
       "cluster_id": "event-kompetisi",
       "cluster_name": "Event & Kompetisi",
       "period_days": 14,
-      "generated_at": "2026-10-05T08:32:11.842Z",
+      "generated_at": "2026-10-05T10:38:48.515Z",
       "status": "ai_generated",
-      "fingerprint": "f15adeb195c415e4e8d6d35f001e6195a404cbe2075c035ebcd27f6e13d159b1",
+      "fingerprint": "ec59b7283c94d6428d813a49ecf873e8ba5c1d7909df721b04d8b8e2004649cd",
       "article": {
-        "title": "Event Kopi 2026: Sorotan dari Depok, Roma, dan Jawa Tengah",
-        "summary": "Di Detos Coffee & Snack Festival 2026 di Depok, Arabika Garut Yellow Bourbon disebut jadi produk yang paling diburu di stan Warung Biji [1]. Di Roma, Hari Kopi Internasional 2026 diisi Coffee Tasting Experience dengan kehadiran stan Republik Dominika [2], sementara Pemprov Jawa Tengah menayangkan pameran virtual arsip kopi era kolonial [3].",
-        "lead": "Ketiga kabar ini menempatkan acara kopi pada momen etalase—cicip rasa, stan negara, dan muatan sejarah—tanpa laporan kompetisi atau angka pengunjung/penjualan yang menyertai sumbernya.",
+        "title": "Event kopi pekan ini: varietal Garut ramai di Depok, FCE NTT dorong kualitas–ekspor, Roma rayakan Hari Kopi, Jateng buka pameran arsip",
+        "summary": "Di Depok, Arabika Garut Yellow Bourbon menjadi produk yang paling diburu di stan Warung Biji pada DETOS Coffee & Snack Festival 2026. Dalam waktu berdekatan, hari ketiga FCE 2026 di NTT menekankan peningkatan kualitas serta peluang ekspor, Roma menggelar Coffee Tasting Experience untuk Hari Kopi Internasional, dan Pemerintah Provinsi Jawa Tengah membuka pameran virtual arsip perjalanan kopi di wilayahnya [2][1][3][4].",
+        "lead": "Detail yang muncul di sumber cukup spesifik: sorotan varietal di Depok Town Square, ajakan naik kelas pada hari ketiga FCE 2026 di NTT, stan Republik Dominika pada sesi cicip di Roma, dan pameran virtual bertema arsip era kolonial di Jawa Tengah [2][1][3][4]. Seorang narasumber bernama Pius juga menekankan pentingnya sikap baik selain kemampuan dan pencapaian dalam industri [1].",
         "sections": [
           {
-            "heading": "Yang menonjol di festival lokal",
+            "heading": "Varietal lokal yang mencuat di festival ritel",
             "paragraphs": [
-              "Laporan Stapo.id menyebut Garut Yellow Bourbon sebagai “primadona” di stan Warung Biji pada Detos Coffee & Snack Festival 2026 di Depok Town Square; varian itu diburu penikmat seduhan manual [1]. Ini memberi sinyal apa yang menarik perhatian pengunjung di satu titik acara.",
-              "Namun, itu tetap klaim berbasis pengamatan di lokasi tanpa angka volume, pembanding antar-tenant, atau data transaksi. Jadi kesimpulannya terbatas: ada minat kuat terhadap satu varietas pada satu stan di sebuah festival, bukan bukti pergeseran selera pasar yang lebih luas [1]."
+              "Di ajang DETOS Coffee & Snack Festival 2026 di Depok Town Square, Arabika Garut Yellow Bourbon disebut menjadi produk yang paling diburu di stan Warung Biji oleh penikmat seduhan manual [2]. Fakta ini menggambarkan minat nyata pada varietal bernama dan asal spesifik di lingkungan festival ritel. Namun, ini adalah potret di satu stan dalam satu acara; kita tidak memiliki data pembelian lintas stan atau preferensi keseluruhan pengunjung festival untuk menyimpulkan pola lebih luas [2]. Bagi pelaku acara, sinyalnya sederhana: audiens manual brew merespons jelas pada penawaran yang teridentifikasi jelas varietal dan asalnya."
             ]
           },
           {
-            "heading": "Format perayaan di panggung internasional",
+            "heading": "Nada kebijakan di NTT: kualitas dan pintu ekspor",
             "paragraphs": [
-              "Liputan ANTARA dari Roma menyoroti Coffee Tasting Experience untuk memperingati Hari Kopi Internasional 2026, lengkap dengan sorotan stan Republik Dominika [2]. Ini menunjukkan format acara yang bertumpu pada aktivasi pencicipan dan representasi negara/asal.",
-              "Tidak ada rincian jumlah peserta, kurasi sesi, atau hasil komersial di bahan yang tersedia. Dengan kata lain, yang terdokumentasi adalah bentuk perayaannya—tasting sebagai wahana edukasi ringan—bukan dampak ekonominya [2]."
+              "Pada hari ketiga FCE 2026, penggiat kopi NTT diajak meningkatkan kualitas dan membuka peluang ekspor [1]. Pesan ini bersifat ajakan, bukan laporan capaian; tidak ada angka sertifikasi, kontrak, atau volume ekspor yang disebut di sumber [1]. Pius menambahkan penekanan pada aspek sikap baik sebagai landasan selain kemampuan teknis, menandai perhatian pada soft-skill di samping mutu produk [1]. Jika diimplementasikan, fokus seperti ini biasanya menyasar praktik pascapanen, kontrol mutu, dan kesiapan dokumen, tetapi sumber tidak merinci langkahnya, sehingga kita menahan diri dari menilai dampaknya."
             ]
           },
           {
-            "heading": "Warisan dan kurasi digital",
+            "heading": "Jembatan global dan memori lokal",
             "paragraphs": [
-              "Di dalam negeri, Pemerintah Provinsi Jawa Tengah mengumumkan pameran virtual arsip era kolonial dan perjalanan kopi di wilayah tersebut [3]. Muatannya bersifat edukasi-dokumenter, memori kolektif, bukan program dagang.",
-              "Jika suatu saat dihubungkan dengan festival atau tur kopi, bahan arsip seperti ini bisa menambah konteks asal-usul biji yang dicicipi pengunjung. Namun sumber saat ini hanya pengumuman pameran; belum ada indikasi kolaborasi lintas-acara [3]."
+              "Di Roma, peringatan Hari Kopi Internasional diisi dengan Coffee Tasting Experience yang menampilkan, antara lain, stan Republik Dominika [3]. Ini menunjukkan keberadaan ruang temu lintas negara, meski tanpa catatan jumlah peserta atau transaksi [3]. Sementara itu, Pemerintah Provinsi Jawa Tengah merilis pameran virtual bertema arsip era kolonial dan perjalanan kopi di wilayahnya, menempatkan kopi dalam konteks sejarah daerah [4]. Digabungkan, dua aktivitas ini memperlihatkan spektrum acara: dari cicip lintas negara hingga edukasi berbasis arsip—keduanya relevan bagi ekosistem kopi, meski ukuran dampaknya tidak tercantum di bahan sumber."
             ]
           }
         ],
-        "conclusion": "Potongan kabar ini mengarah pada lanskap event kopi 2026 yang lebih menonjolkan etalase rasa dan narasi asal ketimbang kompetisi. Manfaat praktisnya ada pada uji minat varietas di lapangan dan penguatan cerita yang menyertai cangkir, sejauh yang tercatat oleh sumber.",
+        "conclusion": "Rangkaian acara awal Oktober 2026 menampilkan tiga benang merah: varietal lokal yang menarik minat di level ritel, dorongan peningkatan kualitas dan ekspor di daerah penghasil, serta jembatan internasional dan pengingat sejarah. Ini memberi konteks tentang bagaimana kopi ditampilkan dan dibicarakan, tanpa memberi bukti kuantitatif yang memungkinkan penilaian hasil.",
         "recommendations": [
           {
-            "audience": "Roaster, peritel, dan UMKM yang ikut festival",
-            "action": "Uji penawaran seduhan manual yang menonjolkan varietas spesifik (mis. Garut Yellow Bourbon) dengan signage jelas dan opsi cicip berbayar.",
-            "basis": "Minat kuat pada Garut Yellow Bourbon di stan Warung Biji pada Detos Coffee & Snack Festival 2026 adalah temuan lapangan tunggal tanpa angka; perlakukan sebagai sinyal uji, bukan bukti pasar [1]."
+            "audience": "Stan/roaster yang ikut festival ritel",
+            "action": "Sertakan beberapa single origin berlabel varietal dan asal jelas serta kartu informasi singkat untuk audiens seduhan manual.",
+            "basis": "Garut Yellow Bourbon paling diburu di stan Warung Biji pada DETOS 2026, menandakan minat pada varietal bernama di konteks tersebut [2]."
           },
           {
-            "audience": "Penyelenggara acara/komunitas kopi",
-            "action": "Sediakan sesi Coffee Tasting Experience bertema negara/asal lewat kolaborasi dengan perwakilan resmi atau kedutaan.",
-            "basis": "Perayaan Hari Kopi Internasional di Roma menampilkan tasting dengan stan Republik Dominika [2]."
+            "audience": "Penyelenggara dan pemangku kepentingan FCE di NTT",
+            "action": "Turunkan ajakan kualitas–ekspor menjadi program pelatihan mutu dan kesiapan standar ekspor yang terjadwal.",
+            "basis": "Hari ketiga FCE 2026 menekankan peningkatan kualitas dan peluang ekspor, namun tanpa rincian langkah [1]."
           },
           {
-            "audience": "Pemda, museum, dan pengelola arsip",
-            "action": "Padukan (secara luring atau daring) pameran arsip kopi lokal dengan festival atau tur kopi untuk memperkaya konteks tanpa membebani program dagang.",
-            "basis": "Pengumuman pameran virtual arsip kopi era kolonial oleh Pemprov Jawa Tengah [3]."
+            "audience": "Pengelola pameran arsip di Jawa Tengah",
+            "action": "Tautkan pameran virtual dengan rujukan ke kebun, museum lokal, atau kedai yang relevan agar fungsi edukasinya mudah diakses publik.",
+            "basis": "Pameran virtual menempatkan kopi dalam konteks sejarah daerah, peluangnya ada pada penghubung ke sumber belajar lapangan [4]."
           }
         ],
         "source_urls": [
+          "https://kupang.tribunnews.com/provinsi-ntt/982088/fce-2026-hari-ketiga-penggiat-kopi-ntt-diajak-tingkatkan-kualitas-hingga-buka-peluang-ekspor",
           "https://stapo.id/news/garut-yellow-bourbon-jadi-primadona",
           "https://antaranews.com/berita/5767883/potret-perayaan-hari-kopi-internasional-di-roma",
           "https://jatengprov.go.id/publik/membaca-memori-masa-lalu-pameran-virtual-arsip-era-kolonial-dan-perjalanan-kopi-di-jawa-tengah/"
         ],
-        "evidence_note": "Sumber bersifat rilis/foto singkat tanpa angka penjualan atau data pengunjung; kesimpulan dibatasi pada fakta yang tercantum dan dikutip apa adanya."
+        "evidence_note": "Sumber yang ada berupa liputan singkat acara tanpa data kehadiran, transaksi, atau metrik hasil lain."
       },
       "article_en": {
-        "title": "Coffee events in 2026: snapshots from Depok, Rome, and Central Java",
-        "summary": "At the Detos Coffee & Snack Festival 2026 in Depok, the Arabica Garut Yellow Bourbon was described as the most sought-after item at Warung Biji’s booth [1]. Rome marked International Coffee Day 2026 with a Coffee Tasting Experience that included a Dominican Republic booth [2], while Central Java’s provincial government launched a virtual exhibition of colonial-era coffee archives [3].",
-        "lead": "Taken together, these notes point to showcase-driven programming—tastings, country booths, and heritage content—with no competitions or attendance/sales figures reported by the sources.",
+        "title": "Coffee events this week: Garut varietal draws crowds in Depok, NTT’s FCE pushes quality–exports, Rome marks International Coffee Day, Central Java opens archive exhibit",
+        "summary": "In Depok, the Arabica Garut Yellow Bourbon was the most sought-after item at Warung Biji’s booth during the DETOS Coffee & Snack Festival 2026. Around the same time, day three of FCE 2026 in NTT highlighted quality improvement and export openings, Rome hosted a Coffee Tasting Experience for International Coffee Day, and Central Java’s provincial government launched a virtual archive exhibition on coffee history [2][1][3][4].",
+        "lead": "The sources point to concrete details: a varietal highlight at Depok Town Square, a call to step up quality and explore exports on day three of FCE 2026 in NTT, a Dominican Republic booth at Rome’s tasting session, and a colonial-era archive themed virtual exhibition in Central Java [2][1][3][4]. A speaker named Pius also stressed the importance of good attitude alongside skills and achievements in the industry [1].",
         "sections": [
           {
-            "heading": "What stood out at a local festival",
+            "heading": "Local varietal stands out at a retail festival",
             "paragraphs": [
-              "Stapo.id reported Garut Yellow Bourbon as the “primadona” at Warung Biji’s booth during the Detos Coffee & Snack Festival 2026 in Depok Town Square, drawing manual-brew enthusiasts [1]. That signals what caught visitors’ eyes at a specific spot in the event.",
-              "Still, it’s an on-site observation without volume, cross-booth comparisons, or transaction data. The fair reading is modest: strong interest in one varietal at one booth in one festival—not evidence of a broader market shift [1]."
+              "At the 2026 DETOS Coffee & Snack Festival in Depok Town Square, the Arabica Garut Yellow Bourbon was reported as the most sought-after product among manual-brew fans at Warung Biji’s booth [2]. This signals clear interest in clearly labeled varietals and origins within a retail festival setting. Still, it is a snapshot from one booth at one event; we lack cross-booth purchase data or overall visitor preferences to generalize beyond that context [2]. For exhibitors, the takeaway is straightforward: a manual-brew audience responds to transparent varietal and origin information."
             ]
           },
           {
-            "heading": "How the international stage was framed",
+            "heading": "Policy tone in NTT: quality and export doors",
             "paragraphs": [
-              "ANTARA’s piece from Rome highlights a Coffee Tasting Experience for International Coffee Day 2026, with a photo of the Dominican Republic booth [2]. The format leans on tasting-led activation and country/origin representation.",
-              "There are no details on turnout, curation, or commercial outcomes in what’s available. In short, what’s documented is the form of celebration—tasting as light-touch education—rather than its economic effect [2]."
+              "On day three of FCE 2026, NTT coffee actors were encouraged to raise quality and open up export opportunities [1]. This is a call to action, not an outcomes report; the source does not cite certifications, contracts, or export volumes [1]. Pius further emphasized good attitude as a foundation alongside technical ability, reflecting attention to soft skills as well as product quality [1]. If implemented, such focus typically involves post-harvest practice, quality control, and export-readiness documentation, but the source does not specify steps, so we refrain from inferring impact."
             ]
           },
           {
-            "heading": "Heritage and digital curation",
+            "heading": "Global bridge and local memory",
             "paragraphs": [
-              "At home, Central Java’s provincial government announced a virtual exhibition of colonial-era archives and the region’s coffee journey [3]. The emphasis is educational and documentary rather than commercial.",
-              "If paired with festivals or city coffee tours, such archival material could enrich origin stories behind the cups visitors try. For now, the source is an announcement; there’s no sign of cross-event collaboration yet [3]."
+              "In Rome, International Coffee Day was marked with a Coffee Tasting Experience that included, among others, a Dominican Republic booth [3]. It illustrates a cross-country meeting point, though there are no attendance or transaction figures in the report [3]. Meanwhile, the Central Java Provincial Government launched a virtual exhibition on colonial-era archives and the region’s coffee journey, placing coffee within local historical context [4]. Taken together, these activities show a spectrum—from cross-border tastings to archive-based education—both relevant to the coffee ecosystem, even if their scale of impact is not documented in the sources."
             ]
           }
         ],
-        "conclusion": "Overall, this small sample suggests 2026 coffee events are centered on flavor showcases and origin narratives rather than competitions. The practical takeaway is to use events to test varietal interest and strengthen the story that travels with each cup, within the limits of what’s reported.",
+        "conclusion": "Early October 2026 brought three threads into view: consumer-facing varietal buzz, a regional push for quality and export readiness, and programming that connects coffee to global stages and local history. That frames how coffee is being presented and discussed, without providing quantitative evidence to judge outcomes.",
         "recommendations": [
           {
-            "audience": "Roasters, retailers, and small brands at festivals",
-            "action": "Pilot manual-brew offerings that spotlight specific varietals (e.g., Garut Yellow Bourbon) with clear signage and paid tasting options.",
-            "basis": "Single-source field note on strong interest in Garut Yellow Bourbon at Warung Biji’s booth; treat as a test signal, not market proof [1]."
+            "audience": "Festival exhibitors/roasters",
+            "action": "Stock clearly labeled single origins and concise info cards on varietal and origin for manual-brew audiences.",
+            "basis": "Garut Yellow Bourbon was the most sought-after at Warung Biji’s booth at DETOS 2026, indicating interest in named varietals in that setting [2]."
           },
           {
-            "audience": "Event organizers and coffee communities",
-            "action": "Program country/origin-themed Coffee Tasting Experience sessions in partnership with official representatives or embassies.",
-            "basis": "Rome’s International Coffee Day celebration featured a tasting with a Dominican Republic booth [2]."
+            "audience": "FCE organizers and stakeholders in NTT",
+            "action": "Translate the quality–export call into scheduled training on product quality and export standards.",
+            "basis": "Day three of FCE 2026 emphasized quality improvement and export opportunities but did not outline steps [1]."
           },
           {
-            "audience": "Local governments, museums, and archive managers",
-            "action": "Blend coffee-archive exhibitions with festivals or city coffee tours, on-site or online, to add context without overloading commercial programming.",
-            "basis": "Announcement of a virtual exhibition on colonial-era coffee archives by Central Java’s provincial government [3]."
+            "audience": "Central Java archive/tourism managers",
+            "action": "Cross-link the virtual exhibition to relevant farms, local museums, or cafes to make the educational pathway easy to access.",
+            "basis": "The exhibition positions coffee in regional history; linking it to field learning can extend its utility [4]."
           }
         ],
         "source_urls": [
+          "https://kupang.tribunnews.com/provinsi-ntt/982088/fce-2026-hari-ketiga-penggiat-kopi-ntt-diajak-tingkatkan-kualitas-hingga-buka-peluang-ekspor",
           "https://stapo.id/news/garut-yellow-bourbon-jadi-primadona",
           "https://antaranews.com/berita/5767883/potret-perayaan-hari-kopi-internasional-di-roma",
           "https://jatengprov.go.id/publik/membaca-memori-masa-lalu-pameran-virtual-arsip-era-kolonial-dan-perjalanan-kopi-di-jawa-tengah/"
         ],
-        "evidence_note": "Sources are brief photo-led notes/announcements without sales or attendance figures; conclusions stay within what’s explicitly reported."
+        "evidence_note": "The sources are brief event reports without attendance, transaction, or outcome metrics."
       },
       "input_sources": [
         {
           "id": "1",
+          "url": "https://kupang.tribunnews.com/provinsi-ntt/982088/fce-2026-hari-ketiga-penggiat-kopi-ntt-diajak-tingkatkan-kualitas-hingga-buka-peluang-ekspor",
+          "title": "FCE 2026 Hari Ketiga, Penggiat Kopi NTT Diajak Tingkatkan Kualitas hingga Buka Peluang Ekspor",
+          "source": "Tribun News",
+          "published_at": "2026-10-04 07:44:57"
+        },
+        {
+          "id": "2",
           "url": "https://stapo.id/news/garut-yellow-bourbon-jadi-primadona",
           "title": "Garut Yellow Bourbon Jadi Primadona Warung Biji di Detos Coffee & Snack Festival 2026 - Stapo.id",
           "source": "stapo.id",
           "published_at": "2026-10-01T00:00:00.000Z"
         },
         {
-          "id": "2",
+          "id": "3",
           "url": "https://antaranews.com/berita/5767883/potret-perayaan-hari-kopi-internasional-di-roma",
           "title": "Potret perayaan Hari Kopi Internasional di Roma",
           "source": "antaranews.com",
           "published_at": "2026-10-01T00:00:00.000Z"
         },
         {
-          "id": "3",
+          "id": "4",
           "url": "https://jatengprov.go.id/publik/membaca-memori-masa-lalu-pameran-virtual-arsip-era-kolonial-dan-perjalanan-kopi-di-jawa-tengah/",
           "title": "Membaca Memori Masa Lalu, Pameran Virtual Arsip Era Kolonial dan Perjalanan Kopi di Jawa Tengah - Pemerintah Provinsi Jawa Tengah",
           "source": "Pemerintah Provinsi Jawa Tengah",

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-10-05T09:48:20.600Z",
+  "generated_at": "2026-10-05T10:38:48.515Z",
   "clusters": [
     {
       "slug": "harga-pasar",
@@ -65,7 +65,8 @@
         "pergerakan harga",
         "volatility",
         "volatilitas"
-      ]
+      ],
+      "human_review_only": false
     },
     {
       "slug": "produksi-panen",
@@ -174,7 +175,8 @@
         "rejuvenasi",
         "replanting program",
         "peremajaan kebun"
-      ]
+      ],
+      "human_review_only": false
     },
     {
       "slug": "kebijakan-regulasi",
@@ -268,7 +270,8 @@
         "community rights",
         "indigenous",
         "adat"
-      ]
+      ],
+      "human_review_only": false
     },
     {
       "slug": "event-kompetisi",
@@ -308,7 +311,8 @@
         "ajang kopi",
         "tasting event",
         "coffee tasting event"
-      ]
+      ],
+      "human_review_only": false
     },
     {
       "slug": "barista-teknik-seduh",
@@ -456,7 +460,8 @@
         "kebersihan",
         "maintenance",
         "perawatan"
-      ]
+      ],
+      "human_review_only": false
     },
     {
       "slug": "riset-tren-konsumen",
@@ -490,7 +495,8 @@
         "konsumsi per kapita",
         "consumer habits",
         "preferensi minum kopi"
-      ]
+      ],
+      "human_review_only": false
     },
     {
       "slug": "kedai-konsumsi-gaya-hidup",
@@ -659,7 +665,8 @@
         "pedagang kaki lima",
         "homey",
         "coffee homey"
-      ]
+      ],
+      "human_review_only": false
     },
     {
       "slug": "ekspor-daya-saing",
@@ -838,7 +845,8 @@
         "kualitas ekspor",
         "award winner",
         "award international"
-      ]
+      ],
+      "human_review_only": false
     },
     {
       "slug": "edukasi-industri",
@@ -1022,7 +1030,8 @@
         "manual",
         "reference",
         "literature"
-      ]
+      ],
+      "human_review_only": false
     },
     {
       "slug": "brand-global",
@@ -1221,7 +1230,8 @@
         "pertumbuhan penjualan",
         "diskon",
         "promo"
-      ]
+      ],
+      "human_review_only": false
     }
   ]
 }
