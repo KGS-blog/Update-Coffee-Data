@@ -1,0 +1,23 @@
+{
+  "bulan": "2025-09",
+  "artikel": [
+    {
+      "judul": "Mengenali Kopi Arabika dan Robusta dari Cikajang, Garut - Kerta Koffie",
+      "tautan": "https://kertakoffie.com/mengenali-kopi-arabika-dan-robusta-dari-cikajang-garut",
+      "tanggal": "2025-09-20T19:06:13.000Z",
+      "sumber": "kertakoffie.com",
+      "ringkasan": "Saya tidak bisa membayangkan hari tanpa secangkir kopi. Aroma khasnya selalu jadi penyemangat baik itu pada pagi maupun sore hari. Kalau bicara soal kopi, sebenarnya ada dua jenis yang paling sering kita dengar: arabika dan robusta. Arabika biasanya tumbuh di dataran tinggi, punya aroma yang lebih kompleks, dan cita rasa yang cenderung lebih lembut. Sementar",
+      "link_type": "publisher_article",
+      "source_type": "cie_curated_reference",
+      "source_original_url": "https://kertakoffie.com/mengenali-kopi-arabika-dan-robusta-dari-cikajang-garut",
+      "source_content_sha256": "7cdf3de46879b654a9b3237ab910fd48287906d808a9ec5d7cb5cfcc547bf5d7",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "passed_cie_core",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    }
+  ]
+}

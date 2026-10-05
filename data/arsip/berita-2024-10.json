@@ -1,0 +1,41 @@
+{
+  "bulan": "2024-10",
+  "artikel": [
+    {
+      "judul": "Cara Menikmati Single Origin Coffee: Apa yang Harus Kamu Ketahui? - Kerta Koffie",
+      "tautan": "https://kertakoffie.com/cara-menikmati-single-origin-coffee-apa-yang-harus-kamu-ketahui",
+      "tanggal": "2024-10-15T08:56:11.000Z",
+      "sumber": "kertakoffie.com",
+      "ringkasan": "Single origin coffee adalah kopi yang berasal dari satu wilayah geografis tertentu—entah itu satu negara, satu wilayah, atau bahkan satu perkebunan. Jenis kopi ini menawarkan pengalaman rasa yang unik karena mencerminkan karakteristik spesifik dari tempat asalnya, yang dikenal dengan istilah terroir. Terroir merujuk pada kombinasi elemen seperti iklim, tanah",
+      "link_type": "publisher_article",
+      "source_type": "cie_curated_reference",
+      "source_original_url": "https://kertakoffie.com/cara-menikmati-single-origin-coffee-apa-yang-harus-kamu-ketahui",
+      "source_content_sha256": "fb29cb540be62193036049abd05106fd30dfeaca520ab2e6d1a04bb1708a332f",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "passed_cie_core",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    },
+    {
+      "judul": "Berhasil Tingkatkan Produktivitas Kebun Kopi, PalmCo Bawa Java Cofee Kembali Mendunia - AgroIndonesia",
+      "tautan": "https://agroindonesia.co.id/berhasil-tingkatkan-produktivitas-kebun-kopi-palmco-bawa-java-cofee-kembali-mendunia",
+      "tanggal": "2024-10-23T10:39:14.000Z",
+      "sumber": "agroindonesia.co.id",
+      "ringkasan": "HeadlinePerkebunan Share on Facebook Tweet on Twitter tweet Direktur Utama Holding Perkebunan PTPN III (Persero) Mohammad Abdul Ghani (kiri) bersama Dirut PalmCo Jatmiko Santosa saat di kebun kopi JCE, Bondowoso Jawa Timur. Sampai September tahun ini, JCE telah memproduksi 821 ton kopi arabika dan 32 persennya diserap pasar manca negara mulai dari Amerika hi",
+      "link_type": "publisher_article",
+      "source_type": "cie_curated_reference",
+      "source_original_url": "https://agroindonesia.co.id/berhasil-tingkatkan-produktivitas-kebun-kopi-palmco-bawa-java-cofee-kembali-mendunia",
+      "source_content_sha256": "fc726cd5eacbdfb402d9377830bc8628c7f49513e68fe0b415a18fcf5bec1557",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "passed_cie_core",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    }
+  ]
+}

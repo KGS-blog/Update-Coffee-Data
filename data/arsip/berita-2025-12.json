@@ -1,0 +1,23 @@
+{
+  "bulan": "2025-12",
+  "artikel": [
+    {
+      "judul": "Berita Sawit - Kukar Perkuat Sawit, Kopi, dan Kakao Lewat Kemitraan Pertanian Berkelanjutan - InfoSAWIT",
+      "tautan": "https://infosawit.com/2025/12/17/kukar-perkuat-sawit-kopi-dan-kakao-lewat-kemitraan-pertanian-berkelanjutan",
+      "tanggal": "2025-12-17T01:11:00.000Z",
+      "sumber": "infosawit.com",
+      "ringkasan": "Sustainability Dok. Istimewa/ Peresmian kemitraan antara Pemkab Kukar dan organisasi internasional Solidaridad, yang diarahkan untuk mempercepat transisi menuju pertanian berkelanjutan dan tangguh iklim. InfoSAWIT, TENGGARONG — Di tengah tekanan perubahan iklim dan kebutuhan mencari sumber pertumbuhan baru, Pemerintah Kabupaten Kutai Kartanegara (Kukar) mula",
+      "link_type": "publisher_article",
+      "source_type": "cie_curated_reference",
+      "source_original_url": "https://infosawit.com/2025/12/17/kukar-perkuat-sawit-kopi-dan-kakao-lewat-kemitraan-pertanian-berkelanjutan",
+      "source_content_sha256": "709c2ee3cdae410a53f2a110e1d3dddd346fe4b84f233a5b6d1c8f079de70aff",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "passed_cie_core",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    }
+  ]
+}

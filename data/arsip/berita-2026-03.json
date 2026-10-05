@@ -1,0 +1,23 @@
+{
+  "bulan": "2026-03",
+  "artikel": [
+    {
+      "judul": "Indonesian Green Coffee Exporter: Sourcing Premium Arabica & Robusta from Indonesia - Kerta Koffie",
+      "tautan": "https://kertakoffie.com/indonesian-green-coffee-exporter",
+      "tanggal": "2026-03-03T18:09:20.000Z",
+      "sumber": "kertakoffie.com",
+      "ringkasan": "Indonesia is one of the world’s most respected coffee-producing countries, known for its diverse terroir, volcanic soil, and complex flavor profiles. For roasters, importers, and specialty buyers worldwide, working with a reliable Indonesian green coffee exporter is the key to accessing consistent, traceable, and high-quality beans. In this article, we’ll ex",
+      "link_type": "publisher_article",
+      "source_type": "cie_curated_reference",
+      "source_original_url": "https://kertakoffie.com/indonesian-green-coffee-exporter",
+      "source_content_sha256": "57a451e34d05346fa707d4baad9bbdde7994fb577d661d07f0be9a2efa1065fc",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "passed_cie_core",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    }
+  ]
+}

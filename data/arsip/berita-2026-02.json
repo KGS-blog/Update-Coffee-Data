@@ -1,0 +1,23 @@
+{
+  "bulan": "2026-02",
+  "artikel": [
+    {
+      "judul": "Berita Sawit - Diva Tanzil Dipercaya Pacu Transformasi Petani Kopi Lewat Stronger Coffee Initiative di Sumatera - InfoSAWIT",
+      "tautan": "https://infosawit.com/2026/02/14/diva-tanzil-dipercaya-pacu-transformasi-petani-kopi-lewat-stronger-coffee-initiative-di-sumatera",
+      "tanggal": "2026-02-14T02:54:58.000Z",
+      "sumber": "infosawit.com",
+      "ringkasan": "Komoditas Dok. InfoSAWIT/ Regional Manager Stronger Coffee Initiative Asia, Chintara Diva Tanzil. InfoSAWIT, JAKARTA – Sejak bergabung dengan Louis Dreyfus Company (LDC) pada 2023, Chintara Diva Tanzil dipercaya memimpin strategi dan implementasi Stronger Coffee Initiative (SCI) untuk kawasan Asia—sebuah program yang tak sekadar berbicara soal komoditas, tet",
+      "link_type": "publisher_article",
+      "source_type": "cie_curated_reference",
+      "source_original_url": "https://infosawit.com/2026/02/14/diva-tanzil-dipercaya-pacu-transformasi-petani-kopi-lewat-stronger-coffee-initiative-di-sumatera",
+      "source_content_sha256": "d469c08aae79d783bfb49fcdc6185f22cfd13bd6a7b4cb372b1a9b4cee263066",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "passed_cie_core",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    }
+  ]
+}

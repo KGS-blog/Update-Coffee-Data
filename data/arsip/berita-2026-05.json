@@ -1,0 +1,41 @@
+{
+  "bulan": "2026-05",
+  "artikel": [
+    {
+      "judul": "Lewat Program PLN Peduli, Aroma Kopi Tiom Tembus Pasar Nasional",
+      "tautan": "https://agrofarm.co.id/2026/05/lewat-program-pln-peduli-aroma-kopi-tiom-tembus-pasar-nasional",
+      "tanggal": "2026-05-11T05:37:26.000Z",
+      "sumber": "agrofarm.co.id",
+      "ringkasan": "Lewat Program PLN Peduli, Aroma Kopi Tiom Tembus Pasar Nasional Perkebunan Kopi Indonesia/ist Published: 11 Mei, 2026 Reading time: 2 min. FacebookTwitterPinterestWhatsApp Agrofarm.co.id, Lanny Jaya-Aroma khas kopi meruak di atas dataran tinggi Bumi Cenderawasih, memantik senyum merekah para petani dari Distrik Tiom, Lanny Jaya, Papua Pegunungan. Kopi Tiom y",
+      "link_type": "publisher_article",
+      "source_type": "cie_curated_reference",
+      "source_original_url": "https://agrofarm.co.id/2026/05/lewat-program-pln-peduli-aroma-kopi-tiom-tembus-pasar-nasional",
+      "source_content_sha256": "2374eea6efe43e77b61fe801bc70b5cf18091e4eb2c99735587b4ba836e2db4b",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "passed_cie_core",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    },
+    {
+      "judul": "Dolar AS Menguat, Wamentan: Ini Peluang Perkuat Ekspor Kopi-Kelapa",
+      "tautan": "https://agrofarm.co.id/2026/05/dolar-as-menguat-wamentan-ini-peluang-perkuat-ekspor-kopi-kelapa",
+      "tanggal": "2026-05-28T10:36:28.000Z",
+      "sumber": "agrofarm.co.id",
+      "ringkasan": "Dolar AS Menguat, Wamentan: Ini Peluang Perkuat Ekspor Kopi-Kelapa Perkebunan Petani kopi/ist Published: 28 Mei, 2026 Reading time: 3 min. FacebookTwitterPinterestWhatsApp Agrofarm.co.id, Jakarta-Wakil Menteri Pertanian (Wamentan) sekaligus ad interim Menteri Pertanian, Sudaryono, menegaskan sektor pertanian kini menjadi salah satu mesin utama pertumbuhan ek",
+      "link_type": "publisher_article",
+      "source_type": "cie_curated_reference",
+      "source_original_url": "https://agrofarm.co.id/2026/05/dolar-as-menguat-wamentan-ini-peluang-perkuat-ekspor-kopi-kelapa",
+      "source_content_sha256": "f258cff8a47da8e159e0392206b83483caf9b052aa76a3624cc7d66d0f9f6d2f",
+      "extraction_status": "extracted",
+      "source_relevance": "MIXED",
+      "relevance_status": "passed_cie_mixed_keyword_rescreen",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    }
+  ]
+}

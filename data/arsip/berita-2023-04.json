@@ -1,0 +1,23 @@
+{
+  "bulan": "2023-04",
+  "artikel": [
+    {
+      "judul": "Berita Sawit - FOLUR Untuk Model Rantai Nilai Berkelanjutan Komoditas Sawit, Kopi dan Kakao - InfoSAWIT",
+      "tautan": "https://infosawit.com/2023/04/12/folur-untuk-model-rantai-nilai-berkelanjutan-komoditas-sawit-kopi-dan-kakao",
+      "tanggal": "2023-04-12T01:45:55.000Z",
+      "sumber": "infosawit.com",
+      "ringkasan": "Kementan Dok. Kementan InfoSAWIT, BOGOR – Proyek Global Environment Facility-Food Systems, Land Use, and Restoration (GEF-FOLUR) mendukung transformasi sistem pangan global dengan mempromosikan lanskap yang berkelanjutan dan terintegrasi serta rantai nilai komoditas yang efisien. Dalam Proyek FOLUR ini, Kementerian Pertanian melalui Ditjen Perkebunan berpart",
+      "link_type": "publisher_article",
+      "source_type": "cie_curated_reference",
+      "source_original_url": "https://infosawit.com/2023/04/12/folur-untuk-model-rantai-nilai-berkelanjutan-komoditas-sawit-kopi-dan-kakao",
+      "source_content_sha256": "2654f3dce881e862faacc79e349dd8f4d48e79c2f324580e5d635463d13166b3",
+      "extraction_status": "extracted",
+      "source_relevance": "MIXED",
+      "relevance_status": "passed_cie_mixed_keyword_rescreen",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    }
+  ]
+}

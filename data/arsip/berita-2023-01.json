@@ -1,0 +1,41 @@
+{
+  "bulan": "2023-01",
+  "artikel": [
+    {
+      "judul": "Bagaimana Menjadi Eksportir Kopi di indonesia? - KOPEN",
+      "tautan": "https://kopen.id/bagaimana-cara-menjadi-eksportir-kopi-indonesia",
+      "tanggal": "2023-01-25T08:52:32.000Z",
+      "sumber": "kopen.id",
+      "ringkasan": "Eksportir kopi Indonesia menjadi salah satu yang terbesar di dunia. Negara tujuan ekspor kopi dari Indonesia terbanyak adalah Amerika, Mesir, Malaysia, Jepang, dan Italia.Pertanian kopi sangat berkontribusi bagi sosial ekonomi negara mulai dari mendukung mata pencaharian petani kecil hingga kedai kopi yang tersebar luas di indonesia.Jenis Kopi yang Menjadi E",
+      "link_type": "publisher_article",
+      "source_type": "cie_curated_reference",
+      "source_original_url": "https://kopen.id/bagaimana-cara-menjadi-eksportir-kopi-indonesia",
+      "source_content_sha256": "58df0d5bd686a128ed4a89a825618013512e034bc4613db01a3403be434a3783",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "passed_cie_core",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    },
+    {
+      "judul": "Keunggulan Kopi Instan Tanpa Ampas - KOPEN",
+      "tautan": "https://kopen.id/keunggulan-kopi-instan-tanpa-ampas",
+      "tanggal": "2023-01-04T05:15:45.000Z",
+      "sumber": "kopen.id",
+      "ringkasan": "Menikmati kopi tidak hanya bisa dilakukan di warung atau kedai kopi saja. Saat ini, trend menikmati kopi juga banyak sekali caranya. Mulai dari kopi yang harus digiling terlebih dahulu bijinya, kemudian kopi instan seduh, hingga kopi instan tanpa ampas.Baru-baru ini, kepopuleran kopi instan tanpa ampas hadir bagi penggemar kopi yang dapat dinikmati di mana s",
+      "link_type": "publisher_article",
+      "source_type": "cie_curated_reference",
+      "source_original_url": "https://kopen.id/keunggulan-kopi-instan-tanpa-ampas",
+      "source_content_sha256": "4cb86386c7c111a97908b2a7934f7cc46e3775d2bebc99049651e08affc6b493",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "passed_cie_core",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    }
+  ]
+}

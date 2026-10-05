@@ -1,0 +1,23 @@
+{
+  "bulan": "2025-04",
+  "artikel": [
+    {
+      "judul": "Harga Makin Mahal, Perkebunan Kopi Brasil Gunakan Irigasi - AgroIndonesia",
+      "tautan": "https://agroindonesia.co.id/harga-makin-mahal-perkebunan-kopi-brasil-gunakan-irigasi",
+      "tanggal": "2025-04-01T03:49:08.000Z",
+      "sumber": "agroindonesia.co.id",
+      "ringkasan": "PerkebunanPertanian Share on Facebook Tweet on Twitter tweet Kebun kopi Brasil menggunakan irigasi. Foto: Reuters https://agroindonesia.co.id/wp-content/uploads/2026/08/mutuagung.jpegPerkebunan kopi yang terpanggang kemarau tahun lalu berdampak besar buat petani kopi Brasil. Pepohonan yang mengering membuat harga kopi global melonjak mencapai rekor global te",
+      "link_type": "publisher_article",
+      "source_type": "cie_curated_reference",
+      "source_original_url": "https://agroindonesia.co.id/harga-makin-mahal-perkebunan-kopi-brasil-gunakan-irigasi",
+      "source_content_sha256": "dcc4e36897a36cae72fbff541020248af093d3b6766d3ed3cfb5d13c78fef037",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "passed_cie_core",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    }
+  ]
+}

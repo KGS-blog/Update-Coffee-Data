@@ -1,0 +1,23 @@
+{
+  "bulan": "2011-06",
+  "artikel": [
+    {
+      "judul": "Indokom Citra Persada",
+      "tautan": "https://cikopi.com/2011/06/indokom-citra-persada",
+      "tanggal": "2011-06-23T19:29:59.000Z",
+      "sumber": "cikopi.com",
+      "ringkasan": "“The best chapters in our economic history are those that embrace the many, not the few” (David Cameron, British Conservative Party Leader, “World Economic Annual Meeting, Davos, 2009) Saimi Saleh (51) takes pleasure in being criticised by the farmers he coaches, even as far as being scolded by them. For Saimi, honesty and integrity are the most important as",
+      "link_type": "publisher_article",
+      "source_type": "cie_curated_reference",
+      "source_original_url": "https://cikopi.com/2011/06/indokom-citra-persada",
+      "source_content_sha256": "6d3d2519426cf13c3b6d9042a696140365b48aaba8bef459c3128075ba95afa6",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "passed_cie_core",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    }
+  ]
+}

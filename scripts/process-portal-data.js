@@ -56,7 +56,15 @@ function buildArchiveIndex() {
     const doc = read(path.join("arsip", file), { artikel: [] });
     return { month: file.match(/\d{4}-\d{2}/)[0], file: "arsip/" + file, articles: Array.isArray(doc.artikel) ? doc.artikel.length : 0 };
   });
-  write("arsip/index.json", { version: 1, generated_at: now, months });
+  const undatedReferences = read("arsip/berita-reference-undated.json", { artikel: [] });
+  write("arsip/index.json", {
+    version: 1,
+    generated_at: now,
+    months,
+    reference_collection: Array.isArray(undatedReferences.artikel) && undatedReferences.artikel.length
+      ? { label: "Referensi kopi tanpa tanggal publikasi", label_en: "Coffee references without a publication date", file: "arsip/berita-reference-undated.json", articles: undatedReferences.artikel.length }
+      : null
+  });
 }
 
 function getKeywordCluster(article, taxonomy = BERITA_KLASTER) {
@@ -336,8 +344,10 @@ async function main() {
   buildArchiveIndex();
   source.fetched = source.fetched || now;
 
-  const CLUSTER_REVIEW_VERSION = 2;
-  const reviewed = articles.filter(a => !isAggregatorArticle(a) && a.cluster_assignment === "unassigned" && Number(a.cluster_review_version || 0) < CLUSTER_REVIEW_VERSION).slice(0, 80);
+  const CLUSTER_REVIEW_VERSION = 3;
+  const reviewed = articles.filter(a => !isAggregatorArticle(a) && a.cluster_assignment === "unassigned" && Number(a.cluster_review_version || 0) < CLUSTER_REVIEW_VERSION)
+    .sort((a, b) => Number(b.source_type === "cie_curated_reference") - Number(a.source_type === "cie_curated_reference") || dateOf(b) - dateOf(a))
+    .slice(0, 80);
   let aiResult = { assignments: [], candidates: [] };
   let aiReviewSucceeded = false;
   if (reviewed.length && process.env.OPENAI_API_KEY) {

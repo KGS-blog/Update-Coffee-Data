@@ -1,0 +1,41 @@
+{
+  "bulan": "2025-03",
+  "artikel": [
+    {
+      "judul": "Gayo Black Forest: Single Origin Kopi dengan Nuansa Cokelat, Rum, dan Ceri yang Memikat - Kerta Koffie",
+      "tautan": "https://kertakoffie.com/gayo-black-forest",
+      "tanggal": "2025-03-18T04:05:37.000Z",
+      "sumber": "kertakoffie.com",
+      "ringkasan": "Indonesia telah lama dikenal sebagai salah satu penghasil kopi terbaik di dunia, dan di antara kekayaan kopinya, Kopi Gayo dari Aceh adalah salah satu mutiara yang tak tergantikan. Kini, kami memperkenalkan Gayo Black Forest , sebuah varietas single origin istimewa yang siap memanjakan lidah para penikmat kopi dengan notes cokelat, rum, dan ceri yang unik da",
+      "link_type": "publisher_article",
+      "source_type": "cie_curated_reference",
+      "source_original_url": "https://kertakoffie.com/gayo-black-forest",
+      "source_content_sha256": "a7754a561c6ba9e87481b69df112a3555ea33d99816e5ebc87d83399496720e3",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "passed_cie_core",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    },
+    {
+      "judul": "Berita Sawit - Regulasi EUDR, Jadi Tantangan bagi Petani Kopi dan Sawit Kecil - InfoSAWIT",
+      "tautan": "https://infosawit.com/2025/03/22/regulasi-eudr-jadi-tantangan-bagi-petani-kopi-dan-sawit-kecil",
+      "tanggal": "2025-03-21T20:28:00.000Z",
+      "sumber": "infosawit.com",
+      "ringkasan": "EUDR Dok. InfoSAWIT/ Wakil Menteri Luar Negeri Arif Havas Oegroseno. InfoSAWIT, JAKARTA – Wakil Menteri Luar Negeri Arif Havas Oegroseno mengungkapkan tantangan yang dihadapi petani kopi dan sawit kecil dalam memenuhi regulasi Uni Eropa (EU Deforestation Regulation/EUDR). saat membuka sebuah acara di Jakarta, ia menegaskan bahwa regulasi ini menuntut petani ",
+      "link_type": "publisher_article",
+      "source_type": "cie_curated_reference",
+      "source_original_url": "https://infosawit.com/2025/03/22/regulasi-eudr-jadi-tantangan-bagi-petani-kopi-dan-sawit-kecil",
+      "source_content_sha256": "a989a424722f5cd4584cdb9fcc7c85d675cf4d8dc65cc4cf8e3ba799948331c9",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "passed_cie_core",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    }
+  ]
+}

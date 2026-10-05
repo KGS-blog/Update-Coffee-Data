@@ -1,0 +1,23 @@
+{
+  "bulan": "2025-06",
+  "artikel": [
+    {
+      "judul": "Kopi Arabika PTPN Kian Digemari Masyarakat Dunia - AgroIndonesia",
+      "tautan": "https://agroindonesia.co.id/kopi-arabika-ptpn-kian-digemari-masyarakat-dunia",
+      "tanggal": "2025-06-02T09:49:50.000Z",
+      "sumber": "agroindonesia.co.id",
+      "ringkasan": "Perkebunan Share on Facebook Tweet on Twitter tweet https://agroindonesia.co.id/wp-content/uploads/2026/08/mutuagung.jpegKopi arabika hasil bumi Indonesia kian digemari di berbagai negara, mulai dari Timur Tengah, Eropa, hingga Amerika meski di tengah bayang-bayang tarif resiprokal yang diterapkan negeri Paman Sam tersebut. Sepanjang kuarter pertama 2025, te",
+      "link_type": "publisher_article",
+      "source_type": "cie_curated_reference",
+      "source_original_url": "https://agroindonesia.co.id/kopi-arabika-ptpn-kian-digemari-masyarakat-dunia",
+      "source_content_sha256": "3924ee7a27fe445903b7d09e02a80ee425b372e61693252a38decae3758782dd",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "passed_cie_core",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    }
+  ]
+}

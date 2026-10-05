@@ -1,0 +1,41 @@
+{
+  "bulan": "2026-06",
+  "artikel": [
+    {
+      "judul": "Ekspor Kopi Indonesia Tumbuh, tetapi Krisis Iklim Mengancam Masa Depan Kopi",
+      "tautan": "https://agrofarm.co.id/2026/06/ekspor-kopi-indonesia-tumbuh-tetapi-krisis-iklim-mengancam-masa-depan-kopi",
+      "tanggal": "2026-06-24T11:35:03.000Z",
+      "sumber": "agrofarm.co.id",
+      "ringkasan": "Ekspor Kopi Indonesia Tumbuh, tetapi Krisis Iklim Mengancam Masa Depan Kopi Perkebunan Perkebunan kopi (Foto/ist) Published: 24 Juni, 2026 Reading time: 3 min. FacebookTwitterPinterestWhatsApp Agrofarm.co.id – Di tengah pertumbuhan sektor kopi dan meningkatnya tekanan akibat perubahan iklim serta dinamika pasar global, diperlukan pendekatan yang mampu menjag",
+      "link_type": "publisher_article",
+      "source_type": "cie_curated_reference",
+      "source_original_url": "https://agrofarm.co.id/2026/06/ekspor-kopi-indonesia-tumbuh-tetapi-krisis-iklim-mengancam-masa-depan-kopi",
+      "source_content_sha256": "b24e72ac0f58567b7e09b3b7f9a8558046d3d88f91690af9706181f3b0bc3472",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "passed_cie_core",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    },
+    {
+      "judul": "Industri Kopi Indonesia Berpeluang Memperkuat Posisi di Pasar Global Melalui Kualitas dan Keberlanjutan",
+      "tautan": "https://harianbatakpos.com/industri-kopi-indonesia-berpeluang-memperkuat-posisi-di-pasar-global-melalui-kualitas-dan-keberlanjutan",
+      "tanggal": "2026-06-05T00:56:50.000Z",
+      "sumber": "harianbatakpos.com",
+      "ringkasan": "Ekonomi Indonesia Tetap Tangguh, Inflasi Terjaga, Manufaktur Kembali Ekspansi | Usir Ahli Hukum Tata Negara dari Sidang, 2 Hakim MK Dilaporkan ke MKMK | Mahkamah Konstitusi Seharusnya Menolak Gugatan Ijazah Gibran | Jaga Rupiah, Bank Indonesia Batasi Pembelian Dolar AS | Aturan Terbaru Saldo Minimum Bank Mandiri-BRI-BNI Berlaku Oktober 2026 | Berita Beranda ",
+      "link_type": "publisher_article",
+      "source_type": "cie_curated_reference",
+      "source_original_url": "https://harianbatakpos.com/industri-kopi-indonesia-berpeluang-memperkuat-posisi-di-pasar-global-melalui-kualitas-dan-keberlanjutan",
+      "source_content_sha256": "2fbebb2d3eb0d0203eb7f3309f8e5dbbac899b0a5917147f2d9c22aca47947a5",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "passed_cie_core",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    }
+  ]
+}

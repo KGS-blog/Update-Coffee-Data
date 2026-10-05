@@ -1,0 +1,59 @@
+{
+  "bulan": "2019-05",
+  "artikel": [
+    {
+      "judul": "Produksi Kopi Indonesia Bertambah, Harga Bisa Makin Turun - Kerta Koffie",
+      "tautan": "https://kertakoffie.com/produksi-kopi-indonesia-bertambah-harga-bisa-makin-turun",
+      "tanggal": "2019-05-18T23:33:16.000Z",
+      "sumber": "kertakoffie.com",
+      "ringkasan": "Produksi kopi di Indonesia diprediksi akan naik ke jumlah terbesarnya dalam empat tahun pada 2019. Imbasnya, pasokan kopi global akan meningkat dan harga komoditas ini dapat kian menyusut. Menurut estimasi median dari empat pedagang yang dihimpun Bloomberg, hasil panen kopi di Indonesia dapat mencapai 11,5 juta kantong, atau 690.000 metrik ton, dalam beberap",
+      "link_type": "publisher_article",
+      "source_type": "cie_curated_reference",
+      "source_original_url": "https://kertakoffie.com/produksi-kopi-indonesia-bertambah-harga-bisa-makin-turun",
+      "source_content_sha256": "a649dcabfcf8c07b7aa4730d6b4ea0ce9df80475ab7f2518e9a396cf832b0e5f",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "passed_cie_core",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    },
+    {
+      "judul": "Kopi Gunung Halu, baru panen. - Kerta Koffie",
+      "tautan": "https://kertakoffie.com/kopi-gunung-halu-baru-panen",
+      "tanggal": "2019-05-10T06:41:19.000Z",
+      "sumber": "kertakoffie.com",
+      "ringkasan": "Komoditas kopi penanganan secara organik memperoleh respons besar dari pasar ekspor, dimana pesanan calon pembeli dari Tiongkok, Jepang, dan Amerika Serikat sudah muncul menjelang musim panen kopi di Jawa Barat tahun 2019 ini. Pesanan tersebut juga muncul kepada panenan kopi organik Gunung Halu di Kecamatan Sindangkerta, Kabupaten Bandung Barat yang kini ber",
+      "link_type": "publisher_article",
+      "source_type": "cie_curated_reference",
+      "source_original_url": "https://kertakoffie.com/kopi-gunung-halu-baru-panen",
+      "source_content_sha256": "8dc36f888f07c71de912d20590291a7279ea8e18b9718296196af2ca877096a3",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "passed_cie_core",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    },
+    {
+      "judul": "Kaesang Bisnis Kopi Dengan Tujuan Mensejahterakan Petani - Kerta Koffie",
+      "tautan": "https://kertakoffie.com/kaesang-bisnis-kopi-dengan-tujuan-mensejahterakan-petani",
+      "tanggal": "2019-05-18T23:54:03.000Z",
+      "sumber": "kertakoffie.com",
+      "ringkasan": "Setelah sukses mengembangkan bisnis makanan berbahan dasar pisang. Kini putra ketiga presiden Joko Widodo, Kaesang Pangarep bersama dengan Ansari Kadir membuka kedai kopi Ternakopi by Kaesang. Setelah sukses mengembangkan bisnis makanan berbahan dasar pisang. Kini putra ketiga presiden Joko Widodo, Kaesang Pangarep bersama dengan Ansari Kadir membuka kedai k",
+      "link_type": "publisher_article",
+      "source_type": "cie_curated_reference",
+      "source_original_url": "https://kertakoffie.com/kaesang-bisnis-kopi-dengan-tujuan-mensejahterakan-petani",
+      "source_content_sha256": "48ed2ac6e9a0d564f1a3feaee8a22a8930721bb9ac3064659ee7e8c4691b9c8c",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "passed_cie_core",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    }
+  ]
+}

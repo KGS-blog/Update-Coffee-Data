@@ -1,0 +1,23 @@
+{
+  "bulan": "2024-12",
+  "artikel": [
+    {
+      "judul": "Harga Kopi Terbang Tinggi Dalam 50 Tahun Terakhir - AgroIndonesia",
+      "tautan": "https://agroindonesia.co.id/harga-kopi-terbang-tinggi-dalam-50-tahun-terakhir",
+      "tanggal": "2024-12-05T08:33:24.000Z",
+      "sumber": "agroindonesia.co.id",
+      "ringkasan": "PerkebunanPertanian Share on Facebook Tweet on Twitter tweet foto: Reuters https://agroindonesia.co.id/wp-content/uploads/2026/08/mutuagung.jpegHarga kopi makin harum dan melambung di pasar global, di mana harga mencetak rekor tertinggi dalam hampir setengah abad akibat buruknya cuaca di Brasil dan Vietnam. Kondisi ini memaksa roaster atau perusahaan penggil",
+      "link_type": "publisher_article",
+      "source_type": "cie_curated_reference",
+      "source_original_url": "https://agroindonesia.co.id/harga-kopi-terbang-tinggi-dalam-50-tahun-terakhir",
+      "source_content_sha256": "4c3921fd0a99ef794c2fcbe4dacd705a3b7059cde109a2a4c35e246072529a5f",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "passed_cie_core",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    }
+  ]
+}

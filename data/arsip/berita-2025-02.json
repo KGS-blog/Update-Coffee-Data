@@ -1,0 +1,59 @@
+{
+  "bulan": "2025-02",
+  "artikel": [
+    {
+      "judul": "Berita Sawit - Ketika Planter Sawit Bertemu Kopi, Memunculkan Gagasan dari Hati - InfoSAWIT",
+      "tautan": "https://infosawit.com/2025/02/19/ketika-planter-sawit-bertemu-kopi-memunculkan-gagasan-dari-hati",
+      "tanggal": "2025-02-19T02:38:08.000Z",
+      "sumber": "infosawit.com",
+      "ringkasan": "Planters Sawit Dok. InfoSAWIT/Para planter sawit saat bertandang ke Kafe Kopi Dari Hati Planter di PangkalanBun, belum lama ini. InfoSAWIT, JAKARTA – Di sebuah sore yang hangat di Pangkalan Bun, aroma kopi yang khas menyeruak dari sebuah kafe yang baru saja dibuka. Kafe ini bukan sekadar tempat menikmati kopi, tetapi juga menjadi ruang berbagi cerita, pengal",
+      "link_type": "publisher_article",
+      "source_type": "cie_curated_reference",
+      "source_original_url": "https://infosawit.com/2025/02/19/ketika-planter-sawit-bertemu-kopi-memunculkan-gagasan-dari-hati",
+      "source_content_sha256": "555c062bc4641c5fd7c2dae94330b18d47f308a5f7d82c1a51b3817a41ad78d7",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "passed_cie_core",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    },
+    {
+      "judul": "Aksi ‘Panic Buying’ Terbangkan Harga Kopi Global - AgroIndonesia",
+      "tautan": "https://agroindonesia.co.id/aksi-panic-buying-terbangkan-harga-kopi-global",
+      "tanggal": "2025-02-11T02:52:57.000Z",
+      "sumber": "agroindonesia.co.id",
+      "ringkasan": "PerkebunanKebun (On-Farm)Pasar Share on Facebook Tweet on Twitter tweet https://agroindonesia.co.id/wp-content/uploads/2026/08/mutuagung.jpegAksi panic buying membuat harga kontrak berjangka kopi di New York terbang lebih dari 6% pada perdagangan di bursa ICE, Senin (11/2). Harga ditutup mencetak rekor sejarah di atas 4,30 dolar AS/pon. Pelaku pasar menyebut",
+      "link_type": "publisher_article",
+      "source_type": "cie_curated_reference",
+      "source_original_url": "https://agroindonesia.co.id/aksi-panic-buying-terbangkan-harga-kopi-global",
+      "source_content_sha256": "af20c078dbfe83628b46e304323bdb96b348a4c79bb205e01cae811db1ae163c",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "passed_cie_core",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    },
+    {
+      "judul": "Berita Sawit - ICOPE 2025 Menguak Tumpang Sari Kopi dan Sawit, Ternyata Dimungkinkan - InfoSAWIT",
+      "tautan": "https://infosawit.com/2025/02/28/icope-2025-menguak-tumpang-sari-kopi-dan-sawit-ternyata-dimungkinkan",
+      "tanggal": "2025-02-28T08:58:11.000Z",
+      "sumber": "infosawit.com",
+      "ringkasan": "Tumpang Sari Dok. Sawit Fest 2021/foto: Bernadus Ritchard/Ilustrasi perkebunan sawit. InfoSAWIT, BALI – Konferensi Internasional tentang Kelapa Sawit dan Lingkungan (International Conference on Oil Palm & Environment/ICOPE) 2025 menyoroti praktik intercropping atau tumpang sari sebagai strategi utama dalam transformasi agro-ekologis perkebunan kelapa sawit. ",
+      "link_type": "publisher_article",
+      "source_type": "cie_curated_reference",
+      "source_original_url": "https://infosawit.com/2025/02/28/icope-2025-menguak-tumpang-sari-kopi-dan-sawit-ternyata-dimungkinkan",
+      "source_content_sha256": "05787c0a67bd059d2a0db59ce2dad37f8e078e724fa47d130852b5f21f7fa1f1",
+      "extraction_status": "extracted",
+      "source_relevance": "MIXED",
+      "relevance_status": "passed_cie_mixed_keyword_rescreen",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    }
+  ]
+}

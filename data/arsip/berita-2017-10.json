@@ -1,0 +1,41 @@
+{
+  "bulan": "2017-10",
+  "artikel": [
+    {
+      "judul": "List Eksportir Kopi Indonesia (Part 1)",
+      "tautan": "https://alamatelpon.com/2017/10/list-eksportir-kopi-indonesia-part-1.html",
+      "tanggal": "2017-10-19T10:21:00.000Z",
+      "sumber": "alamatelpon.com",
+      "ringkasan": "List Eksportir Kopi Indonesia (Part 1) Diposkan oleh Rosida Tri Kamis, Oktober 19, 2017 Posting Komentar List of coffee exporter company in Indonesia - Indonesia adalah salah satu negara produsen dan eksportir kopi paling besar di dunia. Indonesia memiliki perkebunan kopi cukup luas. Total areal perkebunan kopi di Indonesia sekitar 1,24 juta hektar. 933 hekt",
+      "link_type": "publisher_article",
+      "source_type": "cie_curated_reference",
+      "source_original_url": "https://alamatelpon.com/2017/10/list-eksportir-kopi-indonesia-part-1.html",
+      "source_content_sha256": "0611fa56a9fd56a5a1e7cf3690ba8425a58159e152cf0d86505f6d1afec7e390",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "passed_cie_core",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    },
+    {
+      "judul": "Daftar Perusahaan Exportir Kopi di Indonesia (Part 2)",
+      "tautan": "https://alamatelpon.com/2017/10/daftar-perusahaan-exportir-kopi-di-indonesia.html",
+      "tanggal": "2017-10-19T15:21:00.000Z",
+      "sumber": "alamatelpon.com",
+      "ringkasan": "Daftar Perusahaan Exportir Kopi di Indonesia (Part 2) Diposkan oleh Rosida Tri Kamis, Oktober 19, 2017 4 komentar List data perusahaan exportir kopi di Indonesia ini merupakan bagian kedua dari daftar nama, alamat, nomor telepon dan website perusahaan supplier kopi antar benua yang ada di Indonesia. Seperti kita tahu, minum kopi merupakan kebiasaan yang dige",
+      "link_type": "publisher_article",
+      "source_type": "cie_curated_reference",
+      "source_original_url": "https://alamatelpon.com/2017/10/daftar-perusahaan-exportir-kopi-di-indonesia.html",
+      "source_content_sha256": "4b367085ba1bd13276fe2128d77ab1b4ab8295c4e54a8bbacbfe37014844f785",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "passed_cie_core",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    }
+  ]
+}

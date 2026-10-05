@@ -1,0 +1,23 @@
+{
+  "bulan": "2025-11",
+  "artikel": [
+    {
+      "judul": "Menemukan Coffee Shop Terdekat di Jakarta: Antara Kafein, Kreativitas, dan Ketenangan - Kerta Koffie",
+      "tautan": "https://kertakoffie.com/menemukan-coffee-shop-terdekat-di-jakarta",
+      "tanggal": "2025-11-03T11:35:46.000Z",
+      "sumber": "kertakoffie.com",
+      "ringkasan": "Menemukan Coffee Shop Terdekat di Jakarta: Antara Kafein, Kreativitas, dan Ketenangan Jakarta bukan hanya tentang gedung tinggi, jalan macet, dan deadline yang tak pernah habis. Di balik hiruk pikuk ibu kota, ada satu tempat yang jadi pelarian banyak orang — coffee shop terdekat. Entah buat bekerja, bersantai, atau sekadar menikmati waktu sendiri, kafe kini ",
+      "link_type": "publisher_article",
+      "source_type": "cie_curated_reference",
+      "source_original_url": "https://kertakoffie.com/menemukan-coffee-shop-terdekat-di-jakarta",
+      "source_content_sha256": "7768d05cf64aff3703f05d8cd32bbb263ee9bfb23f7a5f011097f2aa1971d464",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "passed_cie_core",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "bulan": "2024-05",
+  "artikel": [
+    {
+      "judul": "Berita Sawit - Italia Tawarkan Solusi Teknis untuk Produk CPO dan Kopi Indonesia yang Terdampak Kebijakan EUDR - InfoSAWIT",
+      "tautan": "https://infosawit.com/2024/05/24/italia-tawarkan-solusi-teknis-untuk-produk-cpo-dan-kopi-indonesia-yang-terdampak-kebijakan-eudr",
+      "tanggal": "2024-05-24T06:25:37.000Z",
+      "sumber": "infosawit.com",
+      "ringkasan": "EUDR Dok. Kemendag/ Menteri Perdagangan Indonesia, Zulkifli Hasan bertemu Duta Besar Italia untuk Indonesia, Benedetto Latteri. InfoSAWIT, JAKARTA – Duta Besar Italia untuk Indonesia, Benedetto Latteri mengumumkan, bahwa pemerintah Italia, bersama dengan sektor swasta, menawarkan solusi teknis untuk produk ekspor unggulan Indonesia seperti minyak kelapa sawi",
+      "link_type": "publisher_article",
+      "source_type": "cie_curated_reference",
+      "source_original_url": "https://infosawit.com/2024/05/24/italia-tawarkan-solusi-teknis-untuk-produk-cpo-dan-kopi-indonesia-yang-terdampak-kebijakan-eudr",
+      "source_content_sha256": "a9315b6393160fe8741bded84fd2e831135698bd79a80f53540d8c811f61fdac",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "passed_cie_core",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "bulan": "2025-05",
+  "artikel": [
+    {
+      "judul": "Kopi Indonesia Siap Mendunia - AgroIndonesia",
+      "tautan": "https://agroindonesia.co.id/kopi-indonesia-siap-mendunia",
+      "tanggal": "2025-05-19T11:29:37.000Z",
+      "sumber": "agroindonesia.co.id",
+      "ringkasan": "Peluang Usaha Share on Facebook Tweet on Twitter tweet https://agroindonesia.co.id/wp-content/uploads/2026/08/mutuagung.jpegIndustri pengolahan kopi nasional terus menunjukkan kinerja yang positif dan berperan penting dalam mendorong pertumbuhan sektor industri agro. Sebagai salah satu produsen kopi terbesar di dunia, Indonesia memiliki potensi besar dalam p",
+      "link_type": "publisher_article",
+      "source_type": "cie_curated_reference",
+      "source_original_url": "https://agroindonesia.co.id/kopi-indonesia-siap-mendunia",
+      "source_content_sha256": "414889496ce5ed322a3886cc53914efa3f6de887c58263a209bc1e0046184258",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "passed_cie_core",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    }
+  ]
+}

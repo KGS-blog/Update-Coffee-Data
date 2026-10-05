@@ -1,0 +1,41 @@
+{
+  "bulan": "2025-08",
+  "artikel": [
+    {
+      "judul": "Harga Green Bean Kopi Arabika - Kerta Koffie",
+      "tautan": "https://kertakoffie.com/harga-green-bean-kopi-arabika",
+      "tanggal": "2025-08-28T10:18:58.000Z",
+      "sumber": "kertakoffie.com",
+      "ringkasan": "Green bean kopi Arabika adalah biji kopi mentah yang telah melalui proses pascapanen (seperti natural, honey, atau washed), tetapi belum disangrai. Komoditas ini menjadi bahan baku utama bagi roastery, café, hingga industri kopi instan. Harga green bean Arabika bervariasi, tergantung pada kualitas, asal daerah, proses, dan kondisi pasar global. 1. Faktor yan",
+      "link_type": "publisher_article",
+      "source_type": "cie_curated_reference",
+      "source_original_url": "https://kertakoffie.com/harga-green-bean-kopi-arabika",
+      "source_content_sha256": "15817112cdf465a41ffb7376db47a6e0e820e5f4bc99e71dfcb011f345ea6abe",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "passed_cie_core",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    },
+    {
+      "judul": "Update Harga Greenbean Arabika Terbaru dan Faktor yang Mempengaruhinya - Kerta Koffie",
+      "tautan": "https://kertakoffie.com/update-harga-greenbean-arabika-terbaru",
+      "tanggal": "2025-08-07T18:06:29.000Z",
+      "sumber": "kertakoffie.com",
+      "ringkasan": "Harga Greenbean Arabika: Apa yang Perlu Anda Ketahui? Industri kopi Indonesia terus berkembang, dan salah satu topik yang paling sering dicari oleh pelaku bisnis kopi adalah harga greenbean Arabika. Bagi para roastery, eksportir, maupun petani kopi, memahami harga dan faktor-faktor yang mempengaruhi fluktuasi harga greenbean sangat penting untuk strategi bis",
+      "link_type": "publisher_article",
+      "source_type": "cie_curated_reference",
+      "source_original_url": "https://kertakoffie.com/update-harga-greenbean-arabika-terbaru",
+      "source_content_sha256": "a6c9d9f80fba795ce9acbb46351f40ee99ddc52933ec60dc95cf844243a0f6d3",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "passed_cie_core",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    }
+  ]
+}

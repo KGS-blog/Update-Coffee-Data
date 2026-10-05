@@ -269,8 +269,9 @@
         const r=await fetch(DATA+'arsip/index.json',{cache:'no-store'});if(!r.ok)throw new Error('Indeks arsip tidak tersedia');
         const index=await r.json();const months=index.months||[];const docs=[];
         for(let i=0;i<months.length;i+=4){const part=await Promise.all(months.slice(i,i+4).map(async m=>{const res=await fetch(DATA+m.file,{cache:'no-store'});if(!res.ok)throw new Error('Arsip '+m.month+' gagal dimuat');return {month:m.month,doc:await res.json()}}));docs.push(...part)}
+        if(index.reference_collection?.file){const res=await fetch(DATA+index.reference_collection.file,{cache:'no-store'});if(!res.ok)throw new Error('Arsip referensi kopi gagal dimuat');docs.push({month:language==='en'?(index.reference_collection.label_en||'Undated references'):(index.reference_collection.label||'Referensi tanpa tanggal'),undatedReference:true,doc:await res.json()})}
         const current=new Set(allNews.concat(currentAggregators).map(a=>String(a.tautan||a.link||titleOf(a))));
-        archiveNews=docs.flatMap(d=>(d.doc.artikel||[]).map(a=>({...a,_topic:topicFor(a),_archiveMonth:d.month,_isArchive:true}))).filter(a=>{const k=String(a.tautan||a.link||titleOf(a));if(current.has(k))return false;current.add(k);return true}).sort((a,b)=>getDate(b)-getDate(a));
+        archiveNews=docs.flatMap(d=>(d.doc.artikel||[]).map(a=>({...a,_topic:topicFor(a),_archiveMonth:d.month,_undatedReference:!!d.undatedReference,_isArchive:true}))).filter(a=>{const k=String(a.tautan||a.link||titleOf(a));if(current.has(k))return false;current.add(k);return true}).sort((a,b)=>getDate(b)-getDate(a));
         $('#archive-status').textContent='Arsip siap · '+archiveNews.length.toLocaleString('id-ID')+' berita lama dari '+months.length+' bulan';
         return archiveNews;
       })().catch(e=>{archivePromise=null;$('#archive-status').textContent='Arsip tidak dapat dimuat: '+e.message;throw e});
@@ -285,7 +286,7 @@
       if(dir==='oldest')list.reverse();
       $('#result-count').textContent=list.length.toLocaleString('id-ID')+' berita';
       const next=list.slice(shown,shown+pageSize);
-      const cards=next.map(a=>{const u=safeUrl(a.tautan||a.link),viaGoogle=!!u&&new URL(u).hostname==='news.google.com';return '<article class="news-card"><span class="category">'+esc(a._topic)+'</span>'+(a._isArchive?'<span class="candidate-badge">Arsip '+esc(a._archiveMonth)+'</span>':'')+'<a class="news-title" '+(u?'href="'+esc(u)+'" target="_blank" rel="noopener noreferrer"':'')+'>'+esc(titleOf(a))+'</a><div class="meta">'+esc(nameOf(a))+' <i class="dot"></i> '+esc(dateText(a))+(viaGoogle?' <i class="dot"></i> '+(language==='en'?'Google News link':'tautan Google News'):'')+'</div></article>'}).join('');
+      const cards=next.map(a=>{const u=safeUrl(a.tautan||a.link),viaGoogle=!!u&&new URL(u).hostname==='news.google.com',archiveLabel=a._undatedReference?(language==='en'?'Undated reference':'Referensi tanpa tanggal'):(language==='en'?'Archive ':'Arsip ')+a._archiveMonth;return '<article class="news-card"><span class="category">'+esc(a._topic)+'</span>'+(a._isArchive?'<span class="candidate-badge">'+esc(archiveLabel)+'</span>':'')+'<a class="news-title" '+(u?'href="'+esc(u)+'" target="_blank" rel="noopener noreferrer"':'')+'>'+esc(titleOf(a))+'</a><div class="meta">'+esc(nameOf(a))+' <i class="dot"></i> '+esc(dateText(a))+(viaGoogle?' <i class="dot"></i> '+(language==='en'?'Google News link':'tautan Google News'):'')+'</div></article>'}).join('');
       $('#news-list').innerHTML=shown?$('#news-list').innerHTML+cards:(cards||'<div class="empty">Tidak ada berita yang cocok. Coba kata kunci atau topik lain.</div>');
       shown+=next.length;$('#load-more').hidden=shown>=list.length;$('#load-more').textContent='Muat berita berikutnya ('+Math.max(0,list.length-shown)+' tersisa)';
     }

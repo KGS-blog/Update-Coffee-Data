@@ -1,0 +1,41 @@
+{
+  "bulan": "2023-05",
+  "artikel": [
+    {
+      "judul": "Kopi Gayo Abysinia aka Longberry - Kerta Koffie",
+      "tautan": "https://kertakoffie.com/kopi-gayo-abysinia-aka-longberry",
+      "tanggal": "2023-05-17T02:11:47.000Z",
+      "sumber": "kertakoffie.com",
+      "ringkasan": "Di ketinggian perbukitan di Aceh Gayo, tepatnya di desa Pondok Gajah, Kecamatan Bener Meriah, hiduplah seorang petani kopi bernama Ahmad. Ahmad adalah sosok yang rendah hati dan penuh cinta terhadap tanah kelahirannya. Di tanah yang subur itu, dia membangun kebun kopi dengan biji kopi varietas Abysinia yang diwarisi dari leluhurnya. Ahmad merawat kebun kopi ",
+      "link_type": "publisher_article",
+      "source_type": "cie_curated_reference",
+      "source_original_url": "https://kertakoffie.com/kopi-gayo-abysinia-aka-longberry",
+      "source_content_sha256": "511ca94b694f092caf2ca480c3e70b7255a8de84b111db0fc5fac8e7954f3ec5",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "passed_cie_core",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    },
+    {
+      "judul": "Berita Sawit - Indonesia Tawarkan Sawit, Kopi dan kakao Pada Forum Bisnis Indonesia–Mesir - InfoSAWIT",
+      "tautan": "https://infosawit.com/2023/05/15/indonesia-tawarkan-sawit-kopi-dan-kakao-pada-forum-bisnis-indonesia-mesir",
+      "tanggal": "2023-05-15T07:59:13.000Z",
+      "sumber": "infosawit.com",
+      "ringkasan": "Kemendag Dok. Humas kemendag/Menteri Perdagangan, Zulkifli Hasan InfoSAWIT, KAIRO – Menteri Perdagangan Zulkifli Hasan menyampaikan, Indonesia dan Mesir akan terus memperkuat hubungan dagang yang saling menguntungkan. Selama tujuh dekade, Mesir telah menjadi salah satu mitra penting dalam hubungan dagang Indonesia di kancah global. Mesir adalah negara pertam",
+      "link_type": "publisher_article",
+      "source_type": "cie_curated_reference",
+      "source_original_url": "https://infosawit.com/2023/05/15/indonesia-tawarkan-sawit-kopi-dan-kakao-pada-forum-bisnis-indonesia-mesir",
+      "source_content_sha256": "bf6002bc897f5c43aadc7da2dceec8374c753ad87696d61d34f1e29be0ec0dcd",
+      "extraction_status": "extracted",
+      "source_relevance": "MIXED",
+      "relevance_status": "passed_cie_mixed_keyword_rescreen",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    }
+  ]
+}

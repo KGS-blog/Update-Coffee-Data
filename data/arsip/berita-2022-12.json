@@ -1,0 +1,41 @@
+{
+  "bulan": "2022-12",
+  "artikel": [
+    {
+      "judul": "KOPEN - Kopi Robusta Temanggung, Kopi Enak dari Pulau Jawa",
+      "tautan": "https://kopen.id/mengenal-lebih-dalam-kopi-robusta-temanggung",
+      "tanggal": "2022-12-21T04:20:02.000Z",
+      "sumber": "kopen.id",
+      "ringkasan": "Salah satu kopi yang memiliki cita rasa khas dan diminati oleh banyak orang, yaitu kopi robusta Temanggung. Bagi kamu para penggemar kopi, mungkin telah mengetahui bahwa kopi robusta identik dengan rasanya yang pahit.Lalu apa yang berbeda dari rasa khas yang dimiliki oleh kopi robusta Temanggung? Sebelum membahas lebih lanjut terkait kopi Temanggung, KOPEN a",
+      "link_type": "publisher_article",
+      "source_type": "cie_curated_reference",
+      "source_original_url": "https://kopen.id/mengenal-lebih-dalam-kopi-robusta-temanggung",
+      "source_content_sha256": "7f5bf2a99177fb223fde4bdc5f126754469bcd42fe8401a8df51b6a4bae95512",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "passed_cie_core",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    },
+    {
+      "judul": "Supplier Biji Kopi Kualitas Ekspor Terbaik - KOPEN",
+      "tautan": "https://kopen.id/supplier-biji-kopi-terbaik",
+      "tanggal": "2022-12-06T06:48:36.000Z",
+      "sumber": "kopen.id",
+      "ringkasan": "Minum kopi sudah menjadi kebutuhan sekaligus gaya hidup yang tidak bisa dipisahkan dari kehidupan masyarakat. Seiring meningkatnya permintaan produk kopi dari masyarakat, para supplier biji kopi pun terus memproduksi kopi dengan berbagai varian produk.Sebagai bagian dari gaya hidup, minum kopi juga sebaiknya diiringi dengan pengetahuan tentang seluk beluk du",
+      "link_type": "publisher_article",
+      "source_type": "cie_curated_reference",
+      "source_original_url": "https://kopen.id/supplier-biji-kopi-terbaik",
+      "source_content_sha256": "8e0545f8f548e2e7928bf66a91811aae68103d2b9f895f7ff9f743c1e0743d5f",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "passed_cie_core",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    }
+  ]
+}
