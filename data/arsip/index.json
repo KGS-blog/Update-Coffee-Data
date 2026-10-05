@@ -1,21 +1,11 @@
 {
   "version": 1,
-  "generated_at": "2026-10-05T07:53:06.202Z",
+  "generated_at": "2026-10-05T08:30:09.924Z",
   "months": [
     {
-      "month": "2001-07",
-      "file": "arsip/berita-2001-07.json",
-      "articles": 7
-    },
-    {
-      "month": "2001-08",
-      "file": "arsip/berita-2001-08.json",
-      "articles": 5
-    },
-    {
-      "month": "2001-09",
-      "file": "arsip/berita-2001-09.json",
-      "articles": 5
+      "month": "2008-01",
+      "file": "arsip/berita-2008-01.json",
+      "articles": 1
     },
     {
       "month": "2011-06",
@@ -23,14 +13,99 @@
       "articles": 1
     },
     {
+      "month": "2012-05",
+      "file": "arsip/berita-2012-05.json",
+      "articles": 1
+    },
+    {
+      "month": "2015-01",
+      "file": "arsip/berita-2015-01.json",
+      "articles": 2
+    },
+    {
+      "month": "2015-05",
+      "file": "arsip/berita-2015-05.json",
+      "articles": 1
+    },
+    {
+      "month": "2016-07",
+      "file": "arsip/berita-2016-07.json",
+      "articles": 1
+    },
+    {
+      "month": "2017-01",
+      "file": "arsip/berita-2017-01.json",
+      "articles": 3
+    },
+    {
+      "month": "2017-03",
+      "file": "arsip/berita-2017-03.json",
+      "articles": 1
+    },
+    {
+      "month": "2017-04",
+      "file": "arsip/berita-2017-04.json",
+      "articles": 2
+    },
+    {
       "month": "2017-10",
       "file": "arsip/berita-2017-10.json",
+      "articles": 3
+    },
+    {
+      "month": "2017-11",
+      "file": "arsip/berita-2017-11.json",
+      "articles": 1
+    },
+    {
+      "month": "2018-01",
+      "file": "arsip/berita-2018-01.json",
+      "articles": 4
+    },
+    {
+      "month": "2018-10",
+      "file": "arsip/berita-2018-10.json",
+      "articles": 1
+    },
+    {
+      "month": "2018-12",
+      "file": "arsip/berita-2018-12.json",
+      "articles": 1
+    },
+    {
+      "month": "2019-04",
+      "file": "arsip/berita-2019-04.json",
       "articles": 2
     },
     {
       "month": "2019-05",
       "file": "arsip/berita-2019-05.json",
-      "articles": 3
+      "articles": 4
+    },
+    {
+      "month": "2019-08",
+      "file": "arsip/berita-2019-08.json",
+      "articles": 1
+    },
+    {
+      "month": "2019-09",
+      "file": "arsip/berita-2019-09.json",
+      "articles": 1
+    },
+    {
+      "month": "2019-10",
+      "file": "arsip/berita-2019-10.json",
+      "articles": 1
+    },
+    {
+      "month": "2019-12",
+      "file": "arsip/berita-2019-12.json",
+      "articles": 2
+    },
+    {
+      "month": "2020-01",
+      "file": "arsip/berita-2020-01.json",
+      "articles": 2
     },
     {
       "month": "2020-04",
@@ -38,34 +113,114 @@
       "articles": 2
     },
     {
+      "month": "2020-11",
+      "file": "arsip/berita-2020-11.json",
+      "articles": 1
+    },
+    {
+      "month": "2020-12",
+      "file": "arsip/berita-2020-12.json",
+      "articles": 1
+    },
+    {
+      "month": "2021-03",
+      "file": "arsip/berita-2021-03.json",
+      "articles": 1
+    },
+    {
+      "month": "2021-04",
+      "file": "arsip/berita-2021-04.json",
+      "articles": 1
+    },
+    {
+      "month": "2021-05",
+      "file": "arsip/berita-2021-05.json",
+      "articles": 2
+    },
+    {
+      "month": "2021-06",
+      "file": "arsip/berita-2021-06.json",
+      "articles": 1
+    },
+    {
+      "month": "2021-09",
+      "file": "arsip/berita-2021-09.json",
+      "articles": 1
+    },
+    {
+      "month": "2021-10",
+      "file": "arsip/berita-2021-10.json",
+      "articles": 2
+    },
+    {
+      "month": "2021-11",
+      "file": "arsip/berita-2021-11.json",
+      "articles": 1
+    },
+    {
       "month": "2021-12",
       "file": "arsip/berita-2021-12.json",
       "articles": 1
     },
     {
+      "month": "2022-01",
+      "file": "arsip/berita-2022-01.json",
+      "articles": 6
+    },
+    {
+      "month": "2022-04",
+      "file": "arsip/berita-2022-04.json",
+      "articles": 1
+    },
+    {
+      "month": "2022-05",
+      "file": "arsip/berita-2022-05.json",
+      "articles": 2
+    },
+    {
+      "month": "2022-06",
+      "file": "arsip/berita-2022-06.json",
+      "articles": 2
+    },
+    {
+      "month": "2022-07",
+      "file": "arsip/berita-2022-07.json",
+      "articles": 1
+    },
+    {
+      "month": "2022-11",
+      "file": "arsip/berita-2022-11.json",
+      "articles": 1
+    },
+    {
       "month": "2022-12",
       "file": "arsip/berita-2022-12.json",
-      "articles": 2
+      "articles": 7
     },
     {
       "month": "2023-01",
       "file": "arsip/berita-2023-01.json",
-      "articles": 2
+      "articles": 8
+    },
+    {
+      "month": "2023-02",
+      "file": "arsip/berita-2023-02.json",
+      "articles": 1
     },
     {
       "month": "2023-04",
       "file": "arsip/berita-2023-04.json",
-      "articles": 1
+      "articles": 2
     },
     {
       "month": "2023-05",
       "file": "arsip/berita-2023-05.json",
-      "articles": 2
+      "articles": 3
     },
     {
       "month": "2023-06",
       "file": "arsip/berita-2023-06.json",
-      "articles": 1
+      "articles": 5
     },
     {
       "month": "2023-07",
@@ -73,34 +228,79 @@
       "articles": 1
     },
     {
+      "month": "2023-11",
+      "file": "arsip/berita-2023-11.json",
+      "articles": 1
+    },
+    {
+      "month": "2024-01",
+      "file": "arsip/berita-2024-01.json",
+      "articles": 3
+    },
+    {
+      "month": "2024-03",
+      "file": "arsip/berita-2024-03.json",
+      "articles": 3
+    },
+    {
       "month": "2024-05",
       "file": "arsip/berita-2024-05.json",
       "articles": 1
     },
     {
+      "month": "2024-06",
+      "file": "arsip/berita-2024-06.json",
+      "articles": 5
+    },
+    {
+      "month": "2024-07",
+      "file": "arsip/berita-2024-07.json",
+      "articles": 3
+    },
+    {
+      "month": "2024-08",
+      "file": "arsip/berita-2024-08.json",
+      "articles": 1
+    },
+    {
+      "month": "2024-09",
+      "file": "arsip/berita-2024-09.json",
+      "articles": 1
+    },
+    {
       "month": "2024-10",
       "file": "arsip/berita-2024-10.json",
-      "articles": 2
+      "articles": 6
+    },
+    {
+      "month": "2024-11",
+      "file": "arsip/berita-2024-11.json",
+      "articles": 1
     },
     {
       "month": "2024-12",
       "file": "arsip/berita-2024-12.json",
-      "articles": 1
+      "articles": 8
+    },
+    {
+      "month": "2025-01",
+      "file": "arsip/berita-2025-01.json",
+      "articles": 3
     },
     {
       "month": "2025-02",
       "file": "arsip/berita-2025-02.json",
-      "articles": 3
+      "articles": 4
     },
     {
       "month": "2025-03",
       "file": "arsip/berita-2025-03.json",
-      "articles": 2
+      "articles": 3
     },
     {
       "month": "2025-04",
       "file": "arsip/berita-2025-04.json",
-      "articles": 1
+      "articles": 2
     },
     {
       "month": "2025-05",
@@ -110,27 +310,27 @@
     {
       "month": "2025-06",
       "file": "arsip/berita-2025-06.json",
-      "articles": 1
+      "articles": 3
     },
     {
       "month": "2025-07",
       "file": "arsip/berita-2025-07.json",
-      "articles": 1
+      "articles": 4
     },
     {
       "month": "2025-08",
       "file": "arsip/berita-2025-08.json",
-      "articles": 2
+      "articles": 3
     },
     {
       "month": "2025-09",
       "file": "arsip/berita-2025-09.json",
-      "articles": 1
+      "articles": 2
     },
     {
       "month": "2025-10",
       "file": "arsip/berita-2025-10.json",
-      "articles": 2
+      "articles": 4
     },
     {
       "month": "2025-11",
@@ -140,7 +340,12 @@
     {
       "month": "2025-12",
       "file": "arsip/berita-2025-12.json",
-      "articles": 1
+      "articles": 6
+    },
+    {
+      "month": "2026-01",
+      "file": "arsip/berita-2026-01.json",
+      "articles": 2
     },
     {
       "month": "2026-02",
@@ -153,29 +358,34 @@
       "articles": 1
     },
     {
+      "month": "2026-04",
+      "file": "arsip/berita-2026-04.json",
+      "articles": 2
+    },
+    {
       "month": "2026-05",
       "file": "arsip/berita-2026-05.json",
-      "articles": 2
+      "articles": 3
     },
     {
       "month": "2026-06",
       "file": "arsip/berita-2026-06.json",
-      "articles": 2
+      "articles": 3
     },
     {
       "month": "2026-07",
       "file": "arsip/berita-2026-07.json",
-      "articles": 12
+      "articles": 20
     },
     {
       "month": "2026-08",
       "file": "arsip/berita-2026-08.json",
-      "articles": 14
+      "articles": 20
     },
     {
       "month": "2026-09",
       "file": "arsip/berita-2026-09.json",
-      "articles": 248
+      "articles": 277
     },
     {
       "month": "2026-10",
@@ -187,6 +397,6 @@
     "label": "Referensi kopi tanpa tanggal publikasi",
     "label_en": "Coffee references without a publication date",
     "file": "arsip/berita-reference-undated.json",
-    "articles": 188
+    "articles": 34
   }
 }

@@ -1,0 +1,47 @@
+{
+  "bulan": "2019-12",
+  "artikel": [
+    {
+      "judul": "IEEE Paper Template in A4",
+      "tautan": "https://e-jurnal.pnl.ac.id/infomedia/article/viewFile/1534/1371",
+      "tanggal": "2019-12",
+      "publication_date_precision": "month",
+      "publication_date_evidence": "Jurnal Infomedia Vol. 4 No. 2 Desember 2019 | P-ISSN: 2527-9858 E-ISSN: 2",
+      "sumber": "e-jurnal.pnl.ac.id",
+      "ringkasan": "Jurnal Infomedia Vol. 4 No. 2 Desember 2019 | P-ISSN: 2527-9858 E-ISSN: 2548-1180 60 Deskripsi Profil dan Karakter Usaha Tani Kopi Pagar Alam Berdasarkan Descriptive Statistics dan Korelasi Irmeilyana1, Ngudiantoro2, Desty Rodiah3 1,2 Jurusan Matematika Fakultas MIPA Universitas Sriwijaya 3 Jurusan Jurusan Teknik Informatika Fakultas Ilmu Komputer Universita",
+      "coffee_relevance_context": "Jurnal Infomedia Vol. 4 No. 2 Desember 2019 | P-ISSN: 2527-9858 E-ISSN: 2548-1180 60 Deskripsi Profil dan Karakter Usaha Tani Kopi Pagar Alam Berdasarkan Descriptive Statistics dan Korelasi Irmeilyana1, Ngudiantoro2, Desty Rodiah3 1,2 Jurusan Matematika Fakultas MIPA Universitas Sriwijaya 3 Jurusan Jurusan Te … urusan Jurusan Teknik Informatika Fakultas Ilmu Komputer Universitas Sriwijaya 1irmeilyana@unsri.ac.id , 2 ngudiantoro@unsri.ac.id Abstrak— Kopi Pagar Alam merupakan salah satu kopi Besemah dari Sumatera Selatan. Tujuan p enelitian pada paper ini adalah untuk mendeskripsikan profil dan karakter usaha tani kopi di Kota Paga … ultas Ilmu Komputer Universitas Sriwijaya 1irmeilyana@unsri.ac.id , 2 ngudiantoro@unsri.ac.id Abstrak— Kopi Pagar Alam merupakan salah satu kopi Besemah dari Sumatera Selatan. Tujuan p enelitian pada paper ini adalah untuk mendeskripsikan profil dan karakter usaha tani kopi di Kota Pagar Alam berdasarkan descriptive statis",
+      "link_type": "publisher_article",
+      "source_type": "cie_curated_reference",
+      "source_original_url": "https://e-jurnal.pnl.ac.id/infomedia/article/viewFile/1534/1371",
+      "source_content_sha256": "efb2549004a7c1c5dd51c1e118e40e08b2a513eeb3a15ac80d8916f44918fb31",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "passed_kabar_kopi_fulltext_coffee_signal",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    },
+    {
+      "judul": "Volume VIII No 2, Desember 2019 Buletin EXCELLENTIA (p-ISSN:2301-6019) hal (175-185) 175 PERSEPSI PETANI TERHADAP PERANAN KELOMPOK TANI…",
+      "tautan": "https://ejurnal.undana.ac.id/index.php/JEXCEL/article/download/1775/1361",
+      "tanggal": "2019-12",
+      "publication_date_precision": "month",
+      "publication_date_evidence": "Volume VIII No 2, Desember 2019 Buletin EXCELLENTIA (p-ISSN:2",
+      "sumber": "ejurnal.undana.ac.id",
+      "ringkasan": "Volume VIII No 2, Desember 2019 Buletin EXCELLENTIA (p-ISSN:2301-6019) hal (175-185) 175 PERSEPSI PETANI TERHADAP PERANAN KELOMPOK TANI FA MASA DALAM USAHATANI KOPI DI DESA BEIWALI KECAMATAN BAJAWA KABUPATEN NGADA Katarina Ngadha1&3), Serman Nikolaus2), Fidelis Klau2) 1)Mahasiswa Penyuluhan dan Komunikasi Pertanian Program Studi Agribisnis Fakultas Pertanian",
+      "coffee_relevance_context": "sember 2019 Buletin EXCELLENTIA (p-ISSN:2301-6019) hal (175-185) 175 PERSEPSI PETANI TERHADAP PERANAN KELOMPOK TANI FA MASA DALAM USAHATANI KOPI DI DESA BEIWALI KECAMATAN BAJAWA KABUPATEN NGADA Katarina Ngadha1&3), Serman Nikolaus2), Fidelis Klau2) 1)Mahasiswa Penyuluhan dan Komunikasi Pertanian Program Studi Agribisnis Fa … n Beiwali Village, Bajawa District, Ngada Regency in September 2018. With the aim of knowing: Characteristics of Fa Farmer Group members in coffee farming, Perception of coffee farmers to the role of Fa Masa farmer gro ups, Relationship between farmers' socio -economic factors and perceptions on the role of the Fa Masa Farme … rict, Ngada Regency in September 2018. With the aim of knowing: Characteristics of Fa Farmer Group members in coffee farming, Perception of coffee farmers to the role of Fa Masa farmer gro ups, Relationship between farmers' socio -economic factors and perceptions on the role of the Fa Masa Farmers Group in coffee farming in",
+      "link_type": "publisher_article",
+      "source_type": "cie_curated_reference",
+      "source_original_url": "https://ejurnal.undana.ac.id/index.php/JEXCEL/article/download/1775/1361",
+      "source_content_sha256": "6fd6a5aca35c0ae167260123a408061164bbe0cd469fb2d2e8c8a5b9e8c385b6",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "passed_kabar_kopi_fulltext_coffee_signal",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    }
+  ]
+}

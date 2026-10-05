@@ -4,7 +4,7 @@
     {
       "judul": "Ini Negara Penghasil Kopi Terbesar, Indonesia Ada di Urutan ke-4 - Kerta Koffie",
       "tautan": "https://kertakoffie.com/ini-negara-penghasil-kopi-terbesar-indonesia-ada-di-urutan-ke-4",
-      "tanggal": "2020-04-14T04:00:43.000Z",
+      "tanggal": "2020-04-01T00:00:00.000Z",
       "sumber": "kertakoffie.com",
       "ringkasan": "Tanaman kopi bisa tumbuh dengan baik di kawasan beriklim tropis. Wilayah perkebunan tanaman ini juga sangat luas, dari negara Amerika Selatan, beberapa negara yang ada di Afrika, dan Asia Tenggara. Dimana, negara-negara yang menghasilkan tanaman kopi terbesar juga berasal dari wilayah tersebut. Apa saja? Yuk, simak ulasannya berikut! Negara penghasil kopi te",
       "link_type": "publisher_article",
@@ -13,16 +13,19 @@
       "source_content_sha256": "abecc2c88810fd242d0b89417b70df1685dd45cb46b482402d49f84a3addda73",
       "extraction_status": "extracted",
       "source_relevance": "CORE",
-      "relevance_status": "passed_cie_core",
+      "relevance_status": "passed_kabar_kopi_fulltext_coffee_signal",
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "cluster_review_version": 0
+      "cluster_review_version": 0,
+      "publication_date_precision": "day",
+      "publication_date_evidence": "2020-04-14T04:00:43+00:00",
+      "coffee_relevance_context": "Tanaman kopi bisa tumbuh dengan baik di kawasan beriklim tropis. Wilayah perkebunan tanaman ini juga sangat luas, dari negara Amerika Selatan, beberapa negara yang ada di Afrika, dan Asia Teng … t luas, dari negara Amerika Selatan, beberapa negara yang ada di Afrika, dan Asia Tenggara. Dimana, negara-negara yang menghasilkan tanaman kopi terbesar juga berasal dari wilayah tersebut. Apa saja? Yuk, simak ulasannya berikut! Negara penghasil kopi terbesar di Asia Tenggara adalah Indonesia. Indonesia memiliki wilayah g … negara yang menghasilkan tanaman kopi terbesar juga berasal dari wilayah tersebut. Apa saja? Yuk, simak ulasannya berikut! Negara penghasil kopi terbesar di Asia Tenggara adalah Indonesia. Indonesia memiliki wilayah geografis yang cocok untuk pertumbuhan kopi, dengan beragam iklim dan ketinggian di berbagai daerah. Kopi In"
     },
     {
       "judul": "Kiat Bagi Pelaku Bisnis Kopi di Tengah Pandemi - Kerta Koffie",
       "tautan": "https://kertakoffie.com/kiat-bagi-pelaku-bisnis-kopi-di-tengah-pandemi",
-      "tanggal": "2020-04-10T23:27:19.000Z",
+      "tanggal": "2020-04-01T00:00:00.000Z",
       "sumber": "kertakoffie.com",
       "ringkasan": "Bagi sebagian besar pelaku usaha, wabah pandemi virus corona sudah menjadi momok tersendiri bagi mereka. Hampir semua kegiatan usaha saat ini lumpuh dikarenakan wabah pandemi tersebut, tak terkecuali salah satunya pada bisnis usaha kopi. Banyak kedai atau kafe kopi saat ini jumlah pengunjungnya sangat sedikit, atau bahkan tidak ada sama sekali. Kondisi terse",
       "link_type": "publisher_article",
@@ -31,11 +34,14 @@
       "source_content_sha256": "5d11579cdd8a40a9c75fd6c5868b5c99cdf49131e38ac8adccda756d491958a9",
       "extraction_status": "extracted",
       "source_relevance": "CORE",
-      "relevance_status": "passed_cie_core",
+      "relevance_status": "passed_kabar_kopi_fulltext_coffee_signal",
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "cluster_review_version": 0
+      "cluster_review_version": 0,
+      "publication_date_precision": "day",
+      "publication_date_evidence": "2020-04-10T23:27:19+00:00",
+      "coffee_relevance_context": "bagi mereka. Hampir semua kegiatan usaha saat ini lumpuh dikarenakan wabah pandemi tersebut, tak terkecuali salah satunya pada bisnis usaha kopi. Banyak kedai atau kafe kopi saat ini jumlah pengunjungnya sangat sedikit, atau bahkan tidak ada sama sekali. Kondisi tersebut tentu akan sangat berpengaruh dalam pendapatan usaha … iatan usaha saat ini lumpuh dikarenakan wabah pandemi tersebut, tak terkecuali salah satunya pada bisnis usaha kopi. Banyak kedai atau kafe kopi saat ini jumlah pengunjungnya sangat sedikit, atau bahkan tidak ada sama sekali. Kondisi tersebut tentu akan sangat berpengaruh dalam pendapatan usaha mereka. Maka dari itu, jika … adi. Karena terdapat himbauan untuk tidak berinteraksi dalam jarak dekat dan berkumpul pada suatu tempat, maka kamu bisa melayani penjualan kopi hanya dengan opsi dibawa pulang saja. Selain menjalankan bisnis, tentunya ini sebagai aksi kamu untuk menghimbau para pengunjung supaya peduli terhadap kondisi yang saat ini sedan"
     }
   ]
 }

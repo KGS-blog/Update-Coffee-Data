@@ -1,0 +1,47 @@
+{
+  "bulan": "2022-05",
+  "artikel": [
+    {
+      "judul": "Abuzard Ghifari, dkk./ Jurnal WKM Volume 10 No.1 Mei 2022: 1-8 p-ISSN: 2355-0171 e-ISSN: 2963-3001 *Corresponding author",
+      "tautan": "https://cot.unhas.ac.id/journals/index.php/jwkm/article/download/1592/1043",
+      "tanggal": "2022-05",
+      "publication_date_precision": "month",
+      "publication_date_evidence": "i, dkk./ Jurnal WKM Volume 10 No.1 Mei 2022: 1-8 p-ISSN: 2355-0171 e-ISSN",
+      "sumber": "cot.unhas.ac.id",
+      "ringkasan": "Abuzard Ghifari, dkk./ Jurnal WKM Volume 10 No.1 Mei 2022: 1-8 p-ISSN: 2355-0171 e-ISSN: 2963-3001 *Corresponding author. Tel.: +62-812-4393-2140 Jalan Poros Malino km. 6 Bontomarannu, Gowa Sulawesi Selatan, Indonesia, 92711 Arahan Pola Distribusi Pemasaran Kopi Pada Warung Kopi dan Kafe di Kota Makassar Abuzard Ghifari1)*, Ihsan2), Laode Muh. Asfan Mujahid3",
+      "coffee_relevance_context": "or. Tel.: +62-812-4393-2140 Jalan Poros Malino km. 6 Bontomarannu, Gowa Sulawesi Selatan, Indonesia, 92711 Arahan Pola Distribusi Pemasaran Kopi Pada Warung Kopi dan Kafe di Kota Makassar Abuzard Ghifari1)*, Ihsan2), Laode Muh. Asfan Mujahid3) 1)*Departemen Perencanaan Wilayah dan Kota, Fakultas Teknik, Universitas Hasanud … -4393-2140 Jalan Poros Malino km. 6 Bontomarannu, Gowa Sulawesi Selatan, Indonesia, 92711 Arahan Pola Distribusi Pemasaran Kopi Pada Warung Kopi dan Kafe di Kota Makassar Abuzard Ghifari1)*, Ihsan2), Laode Muh. Asfan Mujahid3) 1)*Departemen Perencanaan Wilayah dan Kota, Fakultas Teknik, Universitas Hasanuddin. Email: ghifa … epartemen Perencanaan Wilayah dan Kota Fakultas Teknik, Universitas Hasanuddin. Email: muhammadasfan@eng.unhas.ac.id ABSTRACT The growth of coffee in Makassar City is very rapid with the proliferation of coffee shops and kafes with different concepts, where the distribution of coffee is very influential in ensuring the stock",
+      "link_type": "publisher_article",
+      "source_type": "cie_curated_reference",
+      "source_original_url": "https://cot.unhas.ac.id/journals/index.php/jwkm/article/download/1592/1043",
+      "source_content_sha256": "162668a810350547b74025e121599048a6bbd6e835bed29d6266151a77f6d255",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "passed_kabar_kopi_fulltext_coffee_signal",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    },
+    {
+      "judul": "Dampak Cuaca Tak Menentu, Panen Kopi-Produksi Garam Menurun",
+      "tautan": "https://finance.detik.com/foto-bisnis/d-6101882/dampak-cuaca-tak-menentu-panen-kopi-produksi-garam-menurun",
+      "tanggal": "2022-05-01T00:00:00.000Z",
+      "publication_date_precision": "day",
+      "publication_date_evidence": "2022-05-30T14:05:47+07:00",
+      "sumber": "finance.detik.com",
+      "ringkasan": "Foto Bisnis Dampak Cuaca Tak Menentu, Panen Kopi-Produksi Garam Menurun Antara Foto - detikFinance Senin, 30 Mei 2022 14:05 WIB ... Tautan telah disalin Jakarta - Cuaca ekstrem berdampak pada para petani kopi dan garam di berbagai wilayah Indonesia. Mengaku mengalami penurunan produksi akibat anomali cuaca. Petani memanen kopi arabika di perladangan kawasan ",
+      "coffee_relevance_context": "Foto Bisnis Dampak Cuaca Tak Menentu, Panen Kopi-Produksi Garam Menurun Antara Foto - detikFinance Senin, 30 Mei 2022 14:05 WIB ... Tautan telah disalin Jakarta - Cuaca ekstrem berdampak pada para petani kopi dan garam di berbag … Menurun Antara Foto - detikFinance Senin, 30 Mei 2022 14:05 WIB ... Tautan telah disalin Jakarta - Cuaca ekstrem berdampak pada para petani kopi dan garam di berbagai wilayah Indonesia. Mengaku mengalami penurunan produksi akibat anomali cuaca. Petani memanen kopi arabika di perladangan kawasan lereng Gunung Sindoro Desa K … ak pada para petani kopi dan garam di berbagai wilayah Indonesia. Mengaku mengalami penurunan produksi akibat anomali cuaca. Petani memanen kopi arabika di perladangan kawasan lereng Gunung Sindoro Desa Kwadungan, Kledung, Temanggung, Jawa Tengah, Jumat (27/5/2022). Hujan masih kerap terjadi hingga akhir bulan Mei. Kemarau",
+      "link_type": "publisher_article",
+      "source_type": "cie_curated_reference",
+      "source_original_url": "https://finance.detik.com/foto-bisnis/d-6101882/dampak-cuaca-tak-menentu-panen-kopi-produksi-garam-menurun",
+      "source_content_sha256": "1ebde466c36dd15b8db5f43d0f0593f6e6b663c4cb337948952db2972fe4de26",
+      "extraction_status": "extracted",
+      "source_relevance": "MIXED",
+      "relevance_status": "passed_kabar_kopi_fulltext_coffee_signal",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    }
+  ]
+}

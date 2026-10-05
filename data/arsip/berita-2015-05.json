@@ -1,0 +1,26 @@
+{
+  "bulan": "2015-05",
+  "artikel": [
+    {
+      "judul": "Volume V, Number 1, May 2015 37 Implementasi Sertifikasi Fairtrade pada Kopi Gayo: Analisis Posisi Petani dalam Struktur…",
+      "tautan": "https://journal.ugm.ac.id/v3/JWTS/article/download/838/276",
+      "tanggal": "2015-05",
+      "publication_date_precision": "month",
+      "publication_date_evidence": "Volume V, Number 1, May 2015 37 Implementasi Sertifikasi F",
+      "sumber": "journal.ugm.ac.id",
+      "ringkasan": "Volume V, Number 1, May 2015 37 Implementasi Sertifikasi Fairtrade pada Kopi Gayo: Analisis Posisi Petani dalam Struktur Perdagangan Alternatif Harri Fajri Abstract Fair Trade is an international movement trying to save farmers and workers in Global South from unfair practices of trade. In the globalized economy era this move - ment is getting bigger. Howeve",
+      "coffee_relevance_context": "Volume V, Number 1, May 2015 37 Implementasi Sertifikasi Fairtrade pada Kopi Gayo: Analisis Posisi Petani dalam Struktur Perdagangan Alternatif Harri Fajri Abstract Fair Trade is an international movement trying to save farmers and workers in Global South … f corporations who are being avoided at the first time this movement began. This article discusses the implementation of Fair Trade on Gayo Coffee under Fairtrade certification scheme governed by Fairtrade La- beling Organization (FLO). It focuses on how FLO can transform farmer position in its commercial network. This artic … s commercial network. This article finds that certification scheme under FLO cannot guarantee farmer the best position in the international coffee chain. It argues that it is caused by the role of cooperation that is just dominated by few people instead farmers as a whole. Key word: Fairtrade, Gayo Coffee, Global South, Farm",
+      "link_type": "publisher_article",
+      "source_type": "cie_curated_reference",
+      "source_original_url": "https://journal.ugm.ac.id/v3/JWTS/article/download/838/276",
+      "source_content_sha256": "15a6e8a9ae1c3b2a05333fb087fb5ab72a10bb4625cfed9da1b74b5389ceda29",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "passed_kabar_kopi_fulltext_coffee_signal",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    }
+  ]
+}

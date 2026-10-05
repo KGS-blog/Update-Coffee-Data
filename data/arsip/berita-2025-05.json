@@ -4,7 +4,7 @@
     {
       "judul": "Kopi Indonesia Siap Mendunia - AgroIndonesia",
       "tautan": "https://agroindonesia.co.id/kopi-indonesia-siap-mendunia",
-      "tanggal": "2025-05-19T11:29:37.000Z",
+      "tanggal": "2025-05-01T00:00:00.000Z",
       "sumber": "agroindonesia.co.id",
       "ringkasan": "Peluang Usaha Share on Facebook Tweet on Twitter tweet https://agroindonesia.co.id/wp-content/uploads/2026/08/mutuagung.jpegIndustri pengolahan kopi nasional terus menunjukkan kinerja yang positif dan berperan penting dalam mendorong pertumbuhan sektor industri agro. Sebagai salah satu produsen kopi terbesar di dunia, Indonesia memiliki potensi besar dalam p",
       "link_type": "publisher_article",
@@ -13,11 +13,14 @@
       "source_content_sha256": "414889496ce5ed322a3886cc53914efa3f6de887c58263a209bc1e0046184258",
       "extraction_status": "extracted",
       "source_relevance": "CORE",
-      "relevance_status": "passed_cie_core",
+      "relevance_status": "passed_kabar_kopi_fulltext_coffee_signal",
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "cluster_review_version": 0
+      "cluster_review_version": 0,
+      "publication_date_precision": "day",
+      "publication_date_evidence": "2025-05-19T11:29:37+00:00",
+      "coffee_relevance_context": "ang Usaha Share on Facebook Tweet on Twitter tweet https://agroindonesia.co.id/wp-content/uploads/2026/08/mutuagung.jpegIndustri pengolahan kopi nasional terus menunjukkan kinerja yang positif dan berperan penting dalam mendorong pertumbuhan sektor industri agro. Sebagai salah satu produsen kopi terbesar di dunia, Indonesi … l terus menunjukkan kinerja yang positif dan berperan penting dalam mendorong pertumbuhan sektor industri agro. Sebagai salah satu produsen kopi terbesar di dunia, Indonesia memiliki potensi besar dalam pengembangan industri kopi yang terintegrasi dari hulu maupun hilirnya. Pada tahun 2024, realisasi produksi kopi olahan n … uhan sektor industri agro. Sebagai salah satu produsen kopi terbesar di dunia, Indonesia memiliki potensi besar dalam pengembangan industri kopi yang terintegrasi dari hulu maupun hilirnya. Pada tahun 2024, realisasi produksi kopi olahan nasional mencapai 1,04 juta ton dengan tingkat utilisasi sebesar 77 persen. Ekspor pro"
     }
   ]
 }

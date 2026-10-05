@@ -1,0 +1,47 @@
+{
+  "bulan": "2026-01",
+  "artikel": [
+    {
+      "judul": "Microsoft Word - 22081-78410-1-SM",
+      "tautan": "https://jurnal.unigal.ac.id/mimbaragribisnis/article/download/22081/pdf_1",
+      "tanggal": "2026-01",
+      "publication_date_precision": "month",
+      "publication_date_evidence": "2460-4321, E-ISSN: 2579-8340 Volume 12, Nomor 1, Januari 2026: 1244-1253 1244 Peran Perempu",
+      "sumber": "jurnal.unigal.ac.id",
+      "ringkasan": "Mimbar Agribisnis: Jurnal Pemikiran Masyarakat Ilmiah Berwawasan Agribisnis P-ISSN: 2460-4321, E-ISSN: 2579-8340 Volume 12, Nomor 1, Januari 2026: 1244-1253 1244 Peran Perempuan dalam UMKM Pengolahan Kopi Nagari Koto Tuo, Kabupaten Tanah Datar The Role of Women in Coffee Processing MSME’S Koto Tuo Village, Tanah Datar Regency Fayi Afifah1*, Muhammad Farrel S",
+      "coffee_relevance_context": "asan Agribisnis P-ISSN: 2460-4321, E-ISSN: 2579-8340 Volume 12, Nomor 1, Januari 2026: 1244-1253 1244 Peran Perempuan dalam UMKM Pengolahan Kopi Nagari Koto Tuo, Kabupaten Tanah Datar The Role of Women in Coffee Processing MSME’S Koto Tuo Village, Tanah Datar Regency Fayi Afifah1*, Muhammad Farrel Syabena2, Ninda Novita3 1 … omor 1, Januari 2026: 1244-1253 1244 Peran Perempuan dalam UMKM Pengolahan Kopi Nagari Koto Tuo, Kabupaten Tanah Datar The Role of Women in Coffee Processing MSME’S Koto Tuo Village, Tanah Datar Regency Fayi Afifah1*, Muhammad Farrel Syabena2, Ninda Novita3 1Universitas Bengkulu Jl. W.R Supratman, Kandang Limun, Bengkulu, In … , Medan, Indonesia *Email: fayi.afifah@unib.ac.id (Diterima 25-11-2025; Disetujui 21-01-2026) ABSTRAK Peran perempuan dalam UMKM pengolahan kopi di Indonesia sangat signifikan, terutama di Nagari Koto Tuo, Tanah Datar, Sumatera Barat. Studi kualitatif ini bertujuan mengidentifikasi kontribusi dan dampak sosial-ekonomi mere",
+      "link_type": "publisher_article",
+      "source_type": "cie_curated_reference",
+      "source_original_url": "https://jurnal.unigal.ac.id/mimbaragribisnis/article/download/22081/pdf_1",
+      "source_content_sha256": "c840aa49d1c53e55aa097e0dfb658733007bb796408730e756c1ff7099585802",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "passed_kabar_kopi_fulltext_coffee_signal",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    },
+    {
+      "judul": "Materi dari www.syekhnurjati.ac.id · 101",
+      "tautan": "https://syekhnurjati.ac.id/jurnal/index.php/dimasejati/article/download/24154/7503",
+      "tanggal": "2026",
+      "publication_date_precision": "year",
+      "publication_date_evidence": "25 Vol. 8, No. 1, 2026 DOI: 10.24235/dimasejati.51 .",
+      "sumber": "syekhnurjati.ac.id",
+      "ringkasan": "25 Vol. 8, No. 1, 2026 DOI: 10.24235/dimasejati.51 .000 Pemberdayaan Petani Kopi Temanggung Melalui Pelatihan Usaha Tani serta Pengendalian Hama dan Penyakit Ernoiz Antriyandarti1, Elika Joeniarti2, Susi Wuri Ani3, Rakhma Melati Sujarwo4, Muhammad Fariz Yoga Pranata5, Umar Surya Putra6, Nasrudin Ahmad Al Azam7 1,2,3,4,5 ,6,7Universitas Sebelas Maret, Surakar",
+      "coffee_relevance_context": "25 Vol. 8, No. 1, 2026 DOI: 10.24235/dimasejati.51 .000 Pemberdayaan Petani Kopi Temanggung Melalui Pelatihan Usaha Tani serta Pengendalian Hama dan Penyakit Ernoiz Antriyandarti1, Elika Joeniarti2, Susi Wuri Ani3, Rakhma Melati Sujarwo4, Muhammad Fariz Yoga P … urya Putra6, Nasrudin Ahmad Al Azam7 1,2,3,4,5 ,6,7Universitas Sebelas Maret, Surakarta, Indonesia A B S T R A C T Temanggung is one of the coffee producers in Central Java, but the productivity in Temanggung is still relatively low (0.7 tons/ha). Some causes of this condition include pest attacks and traditional cultivation … with fertilizer, so that Trichoderma spp. will later enter the soil and then spread. The result of this community service activity is that coffee farmers know how to manage their farming and can produce Trichoderma naturally and independently. Keywords: Coffee, Fusarium solani, Trichoderma spp ., farming, Participatory Rura",
+      "link_type": "publisher_article",
+      "source_type": "cie_curated_reference",
+      "source_original_url": "https://syekhnurjati.ac.id/jurnal/index.php/dimasejati/article/download/24154/7503",
+      "source_content_sha256": "aee2307f7b16742f1ddcd15c4982f9e3029d02750e45cc889180ff6eaa31113e",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "passed_kabar_kopi_fulltext_coffee_signal",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    }
+  ]
+}

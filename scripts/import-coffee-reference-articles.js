@@ -80,7 +80,9 @@ function deduplicate(rows, feedRows) {
     const internalReference = /^upload:[a-f0-9]{32,}$/i.test(String(raw.url || '').trim());
     if ((!url && !internalReference) || !title) { invalid++; continue; }
     const key = identityKey(raw.url);
-    if (feedKeys.has(key)) { overlapsWithFeed++; continue; }
+    // Keep feed overlaps in the source corpus for future metadata backfills.
+    // The merge step deduplicates them before publication.
+    if (feedKeys.has(key)) overlapsWithFeed++;
     const current = byIdentity.get(key);
     if (!current) {
       byIdentity.set(key, {
@@ -125,7 +127,8 @@ function deduplicate(rows, feedRows) {
   }
 
   if (!source || !Array.isArray(source.articles)) throw new Error('Format sumber tidak valid: articles harus berupa array.');
-  const candidates = source.articles.filter(row => row && row.relevance !== 'DISMISSED');
+  // Source relevance labels are metadata, not the final Kabar Kopi decision.
+  const candidates = source.articles.filter(Boolean);
   const latestFeed = readJson(path.join(ROOT, 'data', 'berita-all.json'), { artikel: [] });
   const currentFeed = readJson(path.join(ROOT, 'data', 'berita.json'), { artikel: [] });
   const mergedFeed = [...(latestFeed.artikel || []), ...(currentFeed.artikel || [])];
@@ -136,7 +139,8 @@ function deduplicate(rows, feedRows) {
   const extractionFields = [
     'extraction_status', 'extracted_at', 'extracted_from_url', 'resolved_url', 'source_content_type',
     'extraction_method', 'source_title', 'source_description', 'source_authors',
-    'source_published_date', 'content_char_count', 'content_sha256',
+    'source_published_date', 'publication_date_precision', 'publication_date_evidence',
+    'date_enrichment_version', 'coffee_relevance_context', 'content_char_count', 'content_sha256',
     'content_excerpt', 'exact_content_duplicate_ids', 'source_http_status', 'fetch_error', 'retry_after'
   ];
   for (const article of result.articles) {
@@ -161,8 +165,8 @@ function deduplicate(rows, feedRows) {
     note: 'Curated reference corpus. Items without a publication date are not treated as current news, chronological monthly archive entries, or automatic editorial input.',
     deduplication: {
       source_count: candidates.length,
-      duplicate_urls_or_article_aliases_removed: candidates.length - result.articles.length - result.invalid - result.overlapsWithFeed,
-      overlaps_with_news_feed_removed: result.overlapsWithFeed,
+      duplicate_urls_or_article_aliases_removed: candidates.length - result.articles.length - result.invalid,
+      overlaps_with_news_feed_retained_for_independent_screening: result.overlapsWithFeed,
       invalid_items_removed: result.invalid,
       internal_file_references_without_public_url: result.internalFileReferences,
       records_without_publication_date: result.articles.filter(article => !article.published_date).length,
@@ -173,7 +177,7 @@ function deduplicate(rows, feedRows) {
 
   fs.mkdirSync(path.dirname(OUTPUT), { recursive: true });
   fs.writeFileSync(OUTPUT, JSON.stringify(output));
-  console.log(`Coffee reference corpus: ${result.articles.length} records saved; ${output.deduplication.duplicate_urls_or_article_aliases_removed} URL/article-alias duplicates removed; ${result.overlapsWithFeed} feed overlaps removed; ${result.sameTitleGroups} repeated-title groups kept because titles alone are not safe deduplication keys.`);
+  console.log(`Coffee reference corpus: ${result.articles.length} records saved; ${output.deduplication.duplicate_urls_or_article_aliases_removed} URL/article-alias duplicates removed; ${result.overlapsWithFeed} feed overlaps retained for independent screening; ${result.sameTitleGroups} repeated-title groups kept because titles alone are not safe deduplication keys.`);
 })().catch(error => {
   console.error('Coffee reference import failed:', error.message);
   process.exitCode = 1;

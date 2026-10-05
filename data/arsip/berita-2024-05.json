@@ -4,20 +4,23 @@
     {
       "judul": "Berita Sawit - Italia Tawarkan Solusi Teknis untuk Produk CPO dan Kopi Indonesia yang Terdampak Kebijakan EUDR - InfoSAWIT",
       "tautan": "https://infosawit.com/2024/05/24/italia-tawarkan-solusi-teknis-untuk-produk-cpo-dan-kopi-indonesia-yang-terdampak-kebijakan-eudr",
-      "tanggal": "2024-05-24T06:25:37.000Z",
+      "tanggal": "2024-05-01T00:00:00.000Z",
       "sumber": "infosawit.com",
       "ringkasan": "EUDR Dok. Kemendag/ Menteri Perdagangan Indonesia, Zulkifli Hasan bertemu Duta Besar Italia untuk Indonesia, Benedetto Latteri. InfoSAWIT, JAKARTA – Duta Besar Italia untuk Indonesia, Benedetto Latteri mengumumkan, bahwa pemerintah Italia, bersama dengan sektor swasta, menawarkan solusi teknis untuk produk ekspor unggulan Indonesia seperti minyak kelapa sawi",
       "link_type": "publisher_article",
       "source_type": "cie_curated_reference",
       "source_original_url": "https://infosawit.com/2024/05/24/italia-tawarkan-solusi-teknis-untuk-produk-cpo-dan-kopi-indonesia-yang-terdampak-kebijakan-eudr",
-      "source_content_sha256": "a9315b6393160fe8741bded84fd2e831135698bd79a80f53540d8c811f61fdac",
+      "source_content_sha256": "5c0e440f6dea2568b0ddb3ca912a7fad1d3c6c957bfbce7b78e2aec7fbd87056",
       "extraction_status": "extracted",
       "source_relevance": "CORE",
-      "relevance_status": "passed_cie_core",
+      "relevance_status": "passed_kabar_kopi_fulltext_coffee_signal",
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "cluster_review_version": 0
+      "cluster_review_version": 0,
+      "publication_date_precision": "day",
+      "publication_date_evidence": "2024-05-24T06:25:37+00:00",
+      "coffee_relevance_context": "Italia, bersama dengan sektor swasta, menawarkan solusi teknis untuk produk ekspor unggulan Indonesia seperti minyak kelapa sawit (CPO) dan kopi yang terdampak kebijakan deforestasi Uni Eropa. Salah satu inovasi yang ditawarkan adalah skema sertifikasi untuk memastikan kepatuhan terhadap persyaratan kebijakan tersebut. Dal … an keberlanjutan ekspor produk unggulan Indonesia di pasar global. Dengan dukungan dan solusi teknis dari Italia, diharapkan produk CPO dan kopi Indonesia dapat terus memenuhi standar internasional dan tetap kompetitif di pasar Uni Eropa. (T2) Dibaca : 3,509 Dapatkan update berita InfoSAWIT setiap hari dengan bergabung di"
     }
   ]
 }

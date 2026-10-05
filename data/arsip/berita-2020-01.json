@@ -1,0 +1,47 @@
+{
+  "bulan": "2020-01",
+  "artikel": [
+    {
+      "judul": "126 Agritexts : Journal of Agricultural Extension",
+      "tautan": "https://jurnal.uns.ac.id/agritexts/article/download/45406/28529",
+      "tanggal": "2020",
+      "publication_date_precision": "year",
+      "publication_date_evidence": "Agricultural Extension. 2020. 44(2), 126-134, 2020 ISSN 2721-5903 (print) 2721-5",
+      "sumber": "jurnal.uns.ac.id",
+      "ringkasan": "126 Agritexts : Journal of Agricultural Extension. 2020. 44(2), 126-134, 2020 ISSN 2721-5903 (print) 2721-5911 (online) Kebutuhan Informasi Petani terhadap Informasi Standar Indikasi Geografis dan Pemasaran Kopi Arabika Java Sindoro-Sumbing Information Needs for Farmers’ Towards Standard Information of Geographic Indication and Marketing of Arabika Java Sind",
+      "coffee_relevance_context": "-134, 2020 ISSN 2721-5903 (print) 2721-5911 (online) Kebutuhan Informasi Petani terhadap Informasi Standar Indikasi Geografis dan Pemasaran Kopi Arabika Java Sindoro-Sumbing Information Needs for Farmers’ Towards Standard Information of Geographic Indication and Marketing of Arabika Java Sindoro-Sumbing Coffee Retno Rahayu … -Sumbing Information Needs for Farmers’ Towards Standard Information of Geographic Indication and Marketing of Arabika Java Sindoro-Sumbing Coffee Retno Rahayu Slamet, Hanifah Ihsaniyati, Arip Wijianto Program Studi Penyuluhan dan Komunikasi Pertanian Fakultas Pertanian Universitas Sebelas Maret Jl. Ir. Sutami No. 36 Kenting … affected information needs for farmers’ towards standard information of geographic indication and marketing of Arabika Java Sindoro-Sumbing coffee, and analyse correlation between the factors which affected information needs for farmers’ with standard of geographic indication and marketing of Arabika Java Sindoro-Sumbing cof",
+      "link_type": "publisher_article",
+      "source_type": "cie_curated_reference",
+      "source_original_url": "https://jurnal.uns.ac.id/agritexts/article/download/45406/28529",
+      "source_content_sha256": "2af2d0fe5fed00ae4194fce34ac86c8dea0aa2fb509c744c554a5916499e10e9",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "passed_kabar_kopi_fulltext_coffee_signal",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    },
+    {
+      "judul": "17 Analisis Efesiensi Tataniaga Kopi di Desa Ngarip Kecamatan Ulubelu Kabupaten Tanggamus Analysis of Coffee Marketing Efficiency i…",
+      "tautan": "https://jurnal.polinela.ac.id/JFA/article/download/1518/1122",
+      "tanggal": "2020",
+      "publication_date_precision": "year",
+      "publication_date_evidence": "ystem and Agribusiness Hal 18 Volume 4, Nomor 1, Tahun 2020 (KUB) - konsumen dan saluran",
+      "sumber": "jurnal.polinela.ac.id",
+      "ringkasan": "17 Analisis Efesiensi Tataniaga Kopi di Desa Ngarip Kecamatan Ulubelu Kabupaten Tanggamus Analysis of Coffee Marketing Efficiency i n Ngarip Village, Ulubelu Subdistrict, Tanggamus Regency Mohammad Welly Justiceawan1*, Marlinda Apriyani1, Fadila Marga Saty1 State Polytechnic of Lampung *E-mail : mwelly19@gmail.com ABSTRACT The research aimed to analyze coffe",
+      "coffee_relevance_context": "17 Analisis Efesiensi Tataniaga Kopi di Desa Ngarip Kecamatan Ulubelu Kabupaten Tanggamus Analysis of Coffee Marketing Efficiency i n Ngarip Village, Ulubelu Subdistrict, Tanggamus Regency Mohammad Welly Justiceawan1 … 17 Analisis Efesiensi Tataniaga Kopi di Desa Ngarip Kecamatan Ulubelu Kabupaten Tanggamus Analysis of Coffee Marketing Efficiency i n Ngarip Village, Ulubelu Subdistrict, Tanggamus Regency Mohammad Welly Justiceawan1*, Marlinda Apriyani1, Fadila Marga Saty1 State Polytechnic of Lampung * … 1*, Marlinda Apriyani1, Fadila Marga Saty1 State Polytechnic of Lampung *E-mail : mwelly19@gmail.com ABSTRACT The research aimed to analyze coffee marketing channels in Ngarip Village, Ulubelu Subdistrict, Tanggamus Regency, analyze marketing margins, and analyze Marketing Efficiency. The method u sed was a survey method usi",
+      "link_type": "publisher_article",
+      "source_type": "cie_curated_reference",
+      "source_original_url": "https://jurnal.polinela.ac.id/JFA/article/download/1518/1122",
+      "source_content_sha256": "b43f4c10023bcb6feb08d7a08b58d6b3ed615788954d803c83d522ae4fb7e429",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "passed_kabar_kopi_fulltext_coffee_signal",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    }
+  ]
+}

@@ -223,7 +223,7 @@
     $$('[data-go]').forEach(a=>a.addEventListener('click',e=>{e.preventDefault();activate(a.dataset.go)}));
     $('#home-topics').addEventListener('click',e=>{const b=e.target.closest('[data-topic]');if(b){activate('berita');$('#news-topic').value=b.dataset.topic;renderNews(true)}});
     function getDate(a){const d=new Date(a.tanggal||a.pubDate||'');return Number.isNaN(d.getTime())?0:d.getTime()}
-    function dateText(a){const t=getDate(a);return t?new Intl.DateTimeFormat(language==='en'?'en-GB':'id-ID',{day:'numeric',month:'short',year:'numeric'}).format(t):(language==='en'?'Date unavailable':'Tanggal tidak tersedia')}
+    function dateText(a){const t=getDate(a);if(!t)return language==='en'?'Date unavailable':'Tanggal tidak tersedia';const precision=a.publication_date_precision||'day';if(precision==='year')return new Intl.DateTimeFormat(language==='en'?'en-GB':'id-ID',{year:'numeric'}).format(t);if(precision==='month')return new Intl.DateTimeFormat(language==='en'?'en-GB':'id-ID',{month:'long',year:'numeric'}).format(t);return new Intl.DateTimeFormat(language==='en'?'en-GB':'id-ID',{day:'numeric',month:'short',year:'numeric'}).format(t)}
     function shortSourceDate(value){const t=Date.parse(value||'');return t?new Intl.DateTimeFormat(language==='en'?'en-GB':'id-ID',{day:'numeric',month:'short'}).format(t):''}
     function nameOf(a){return a.sumber||a.source_name||'Sumber berita'}
     function titleOf(a){return a.judul||a.title||'Tanpa judul'}

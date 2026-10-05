@@ -4,7 +4,7 @@
     {
       "judul": "Brewing Coffee di Rumah? Why Not! - KOPEN",
       "tautan": "https://kopen.id/brewing-coffee-di-rumah-why-not",
-      "tanggal": "2021-12-23T07:42:58.000Z",
+      "tanggal": "2021-12-01T00:00:00.000Z",
       "sumber": "kopen.id",
       "ringkasan": "Saat ini kopi sudah memasuki era Third wave coffee, dimana coffee sudah menjadi hal yang wajib konsumsi bagi para penikmatnya.Selain penghilang dahaga, kopi juga bisa memberikan energi bagi para penikmatnya. Beda kopi, beda pula teknik penyeduhannya. Ada 2 cara teknik brewing coffee yaitu dengan cara manual dan mesin. Namun biasanya, penikmat kopi lebih memi",
       "link_type": "publisher_article",
@@ -13,11 +13,14 @@
       "source_content_sha256": "75292a6c51ef47252ade1c7d8320135860d2a8bceb730a1456926d2bf717fa5e",
       "extraction_status": "extracted",
       "source_relevance": "CORE",
-      "relevance_status": "passed_cie_core",
+      "relevance_status": "passed_kabar_kopi_fulltext_coffee_signal",
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "cluster_review_version": 0
+      "cluster_review_version": 0,
+      "publication_date_precision": "day",
+      "publication_date_evidence": "2021-12-23T07:42:58+00:00",
+      "coffee_relevance_context": "Saat ini kopi sudah memasuki era Third wave coffee, dimana coffee sudah menjadi hal yang wajib konsumsi bagi para penikmatnya.Selain penghilang dahaga, kopi juga bisa memberikan energi bagi par … Saat ini kopi sudah memasuki era Third wave coffee, dimana coffee sudah menjadi hal yang wajib konsumsi bagi para penikmatnya.Selain penghilang dahaga, kopi juga bisa memberikan energi bagi para penikmatnya. Beda kopi, beda pula t … Saat ini kopi sudah memasuki era Third wave coffee, dimana coffee sudah menjadi hal yang wajib konsumsi bagi para penikmatnya.Selain penghilang dahaga, kopi juga bisa memberikan energi bagi para penikmatnya. Beda kopi, beda pula teknik penyeduha"
     }
   ]
 }

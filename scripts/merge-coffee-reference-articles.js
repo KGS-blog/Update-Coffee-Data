@@ -43,8 +43,18 @@ const identityKey = value => {
 };
 const titleKey = value => String(value || '').normalize('NFKC').toLocaleLowerCase()
   .replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
-const cleanDate = value => {
+const cleanDate = (value, precision) => {
   if (!value) return '';
+  const text = String(value).trim();
+  if (precision === 'year') {
+    const year = text.match(/20\d{2}/);
+    return year ? year[0] : '';
+  }
+  if (precision === 'month') {
+    const month = text.match(/(20\d{2})[-/.](\d{1,2})/);
+    return month && Number(month[2]) >= 1 && Number(month[2]) <= 12
+      ? `${month[1]}-${String(month[2]).padStart(2, '0')}` : '';
+  }
   const time = Date.parse(String(value));
   return Number.isFinite(time) ? new Date(time).toISOString() : '';
 };
@@ -65,28 +75,31 @@ const toPublicArticle = raw => {
   // Keep the curated title as display title. Some publisher pages repeat the
   // same text in both <title> and Open Graph metadata during extraction.
   const title = String(raw.title || raw.source_title || '').replace(/\s+/g, ' ').trim();
-  if (!url || !title || !['CORE', 'MIXED'].includes(String(raw.relevance || '').toUpperCase())) return null;
-  // Mixed-focus records only pass the second screen when the retrieved title
-  // or excerpt contains an explicit coffee signal. CORE is the source engine's
-  // already validated high-relevance class and remains eligible.
-  const material = `${title} ${raw.content_excerpt || raw.source_description || ''}`;
-  const coffeeSignal = /\b(kopi|coffee|coffea|arabica|robusta|espresso|café|cafe|green bean|biji kopi|coffeehouse|coffee shop)\b/i.test(material);
-  if (String(raw.relevance).toUpperCase() === 'MIXED' && !coffeeSignal) return null;
-  const date = cleanDate(raw.source_published_date) || cleanDate(raw.published_date);
+  if (!url || !title) return null;
+  // Treat the upstream relevance label as audit metadata, never as a gate.
+  // Screen the actual title, description, excerpt and fetched coffee context.
+  const material = `${title} ${raw.source_description || ''} ${raw.content_excerpt || ''} ${raw.coffee_relevance_context || ''}`;
+  const coffeeSignal = /\b(kopi|coffee|coffea|arabica|robusta|espresso|café|cafe|green\s+bean|biji kopi|coffeehouse|coffee shop|coffeehouse chain|coffee shop chain)\b/i.test(material);
+  if (!coffeeSignal) return null;
+  const date = cleanDate(raw.source_published_date, raw.publication_date_precision) || cleanDate(raw.published_date, raw.publication_date_precision);
+  const precision = raw.publication_date_precision || (/^20\d{2}$/.test(date) ? 'year' : /^20\d{2}-\d{2}$/.test(date) ? 'month' : date ? 'day' : null);
   const excerpt = String(raw.content_excerpt || raw.source_description || '').replace(/\s+/g, ' ').trim().slice(0, 360);
   return {
     judul: title,
     tautan: url,
     tanggal: date,
+    publication_date_precision: precision,
+    publication_date_evidence: raw.publication_date_evidence || null,
     sumber: sourceName(raw, url),
     ringkasan: excerpt,
+    coffee_relevance_context: String(raw.coffee_relevance_context || '').slice(0, 1100),
     link_type: 'publisher_article',
     source_type: 'cie_curated_reference',
     source_original_url: directUrl(raw.url) || url,
     source_content_sha256: raw.content_sha256 || null,
     extraction_status: raw.extraction_status || 'not_attempted',
-    source_relevance: String(raw.relevance).toUpperCase(),
-    relevance_status: String(raw.relevance).toUpperCase() === 'CORE' ? 'passed_cie_core' : 'passed_cie_mixed_keyword_rescreen',
+    source_relevance: String(raw.relevance || 'UNLABELED').toUpperCase(),
+    relevance_status: 'passed_kabar_kopi_fulltext_coffee_signal',
     cluster_id: 'lainnya',
     cluster_name: 'Lainnya',
     cluster_assignment: 'unassigned',
@@ -95,6 +108,9 @@ const toPublicArticle = raw => {
 };
 const articleKey = article => identityKey(article.tautan || article.link || article.url);
 const digest = article => String(article.source_content_sha256 || '').toLowerCase();
+const archiveMonth = article => article.publication_date_precision === 'year'
+  ? `${article.tanggal}-01`
+  : String(article.tanggal || '').slice(0, 7);
 
 const corpus = read(CORPUS_PATH, null);
 if (!corpus || !Array.isArray(corpus.articles)) throw new Error('Corpus referensi tidak tersedia atau format articles tidak valid.');
@@ -109,14 +125,13 @@ const seenUrl = new Set();
 const seenTitle = new Set();
 const seenDigest = new Set();
 const eligible = [];
-const rejected = { no_public_url_or_title: 0, relevance: 0, mixed_without_coffee_signal: 0, duplicate_url_title_or_content: 0 };
+const rejected = { no_public_url_or_title: 0, no_independent_coffee_signal: 0, duplicate_url_title_or_content: 0 };
 
 for (const raw of corpus.articles) {
   const candidate = toPublicArticle(raw);
   if (!candidate) {
     if (!directUrl(raw.resolved_url || raw.url) || !(raw.source_title || raw.title)) rejected.no_public_url_or_title++;
-    else if (!['CORE', 'MIXED'].includes(String(raw.relevance || '').toUpperCase())) rejected.relevance++;
-    else rejected.mixed_without_coffee_signal++;
+    else rejected.no_independent_coffee_signal++;
     continue;
   }
   const key = articleKey(candidate), title = titleKey(candidate.judul), hash = digest(candidate);
@@ -132,11 +147,43 @@ for (const raw of corpus.articles) {
   eligible.push(candidate);
 }
 
+const eligibleByKey = new Map(eligible.map(article => [articleKey(article), article]));
+// Reconcile earlier runs when date enrichment or the independent coffee
+// relevance screen changes a reference's destination or eligibility.
+const beforeFeedReferenceCount = feed.artikel.filter(article => article.source_type === 'cie_curated_reference').length;
+feed.artikel = feed.artikel.filter(article => article.source_type !== 'cie_curated_reference' || eligibleByKey.has(articleKey(article)));
+const staleFeedReferencesRemoved = beforeFeedReferenceCount - feed.artikel.filter(article => article.source_type === 'cie_curated_reference').length;
+
+for (const file of fs.readdirSync(path.join(DATA, 'arsip')).filter(name => /^berita-\d{4}-\d{2}\.json$/.test(name))) {
+  const archivePath = path.join(DATA, 'arsip', file);
+  const archive = read(archivePath, { artikel: [] });
+  if (!Array.isArray(archive.artikel)) continue;
+  const before = archive.artikel.length;
+  archive.artikel = archive.artikel.filter(article => {
+    if (article.source_type !== 'cie_curated_reference') return true;
+    const candidate = eligibleByKey.get(articleKey(article));
+    return !!candidate && !!candidate.tanggal && archiveMonth(candidate) === file.slice(7, 14);
+  });
+  if (archive.artikel.length !== before) {
+    if (archive.artikel.length) write(archivePath, archive);
+    else fs.unlinkSync(archivePath);
+  } else if (!archive.artikel.length) {
+    fs.unlinkSync(archivePath);
+  }
+}
+
 // Store dated sources under their real publication month. Undated material is
 // still retained in a clearly labeled reference archive rather than assigned
 // an invented date.
 const undated = read(UNDATED_ARCHIVE_PATH, { archive_type: 'undated_curated_references', artikel: [] });
 if (!Array.isArray(undated.artikel)) undated.artikel = [];
+const beforeUndatedReferenceCount = undated.artikel.length;
+undated.artikel = undated.artikel.filter(article => {
+  if (article.source_type !== 'cie_curated_reference') return true;
+  const candidate = eligibleByKey.get(articleKey(article));
+  return !!candidate && !candidate.tanggal;
+});
+const undatedReferencesRemoved = beforeUndatedReferenceCount - undated.artikel.length;
 const undatedByKey = new Map(undated.artikel.map((article, index) => [articleKey(article), index]).filter(([key]) => key));
 let addedToFeed = 0, addedToArchives = 0, updatedArchives = 0;
 for (const article of eligible) {
@@ -154,7 +201,7 @@ for (const article of eligible) {
   }
 
   if (article.tanggal) {
-    const month = article.tanggal.slice(0, 7);
+    const month = archiveMonth(article);
     const archivePath = path.join(DATA, 'arsip', `berita-${month}.json`);
     const archive = read(archivePath, { bulan: month, artikel: [] });
     if (!Array.isArray(archive.artikel)) archive.artikel = [];
@@ -195,9 +242,26 @@ feed.reference_ingest = {
   imported_at: new Date().toISOString(),
   source_records: corpus.articles.length,
   accepted_candidates: eligible.length,
+  dated_candidates: eligible.filter(article => article.tanggal).length,
+  undated_candidates: eligible.filter(article => !article.tanggal).length,
+  removed_from_undated_archive: undatedReferencesRemoved,
+  removed_stale_cie_references_from_feed: staleFeedReferencesRemoved,
   added_to_searchable_feed_this_run: addedToFeed,
   rejected
 };
 write(FEED_PATH, feed);
 write(UNDATED_ARCHIVE_PATH, undated);
+const archiveDir = path.join(DATA, 'arsip');
+const months = fs.readdirSync(archiveDir).filter(name => /^berita-\d{4}-\d{2}\.json$/.test(name)).sort().map(file => {
+  const doc = read(path.join(archiveDir, file), { artikel: [] });
+  return { month: file.match(/\d{4}-\d{2}/)[0], file: `arsip/${file}`, articles: Array.isArray(doc.artikel) ? doc.artikel.length : 0 };
+});
+write(path.join(archiveDir, 'index.json'), {
+  version: 1,
+  generated_at: new Date().toISOString(),
+  months,
+  reference_collection: undated.artikel.length
+    ? { label: 'Referensi kopi tanpa tanggal publikasi', label_en: 'Coffee references without a publication date', file: 'arsip/berita-reference-undated.json', articles: undated.artikel.length }
+    : null
+});
 console.log(`Curated coffee references: ${eligible.length} passed relevance and URL checks; ${addedToFeed} added to searchable/clustering feed; ${addedToArchives} added to persistent archives; ${JSON.stringify(rejected)}.`);

@@ -1,0 +1,26 @@
+{
+  "bulan": "2012-05",
+  "artikel": [
+    {
+      "judul": "Mei 2012.indd",
+      "tautan": "https://journal.ugm.ac.id/agritech/article/viewFile/9621/7196",
+      "tanggal": "2012-05",
+      "publication_date_precision": "month",
+      "publication_date_evidence": "AGRITECH, Vol. 32, No. 2, MEI 2012 126 ANALISIS KEBERLANJUTAN KA",
+      "sumber": "journal.ugm.ac.id",
+      "ringkasan": "AGRITECH, Vol. 32, No. 2, MEI 2012 126 ANALISIS KEBERLANJUTAN KAWASAN USAHA PERKEBUNAN KOPI (KUPK) RAKYAT DI DESA SIDOMULYO KABUPATEN JEMBER Sustainability Analysis of Smallholder Coffee Plantation at Sidomulyo Village, Jember District Elida Novita1, I.B.Suryaningrat1, Idah Andriyani1, dan Sukrisno Widyotomo2 1Fakultas Teknologi Pertanian, Universitas Jember",
+      "coffee_relevance_context": "AGRITECH, Vol. 32, No. 2, MEI 2012 126 ANALISIS KEBERLANJUTAN KAWASAN USAHA PERKEBUNAN KOPI (KUPK) RAKYAT DI DESA SIDOMULYO KABUPATEN JEMBER Sustainability Analysis of Smallholder Coffee Plantation at Sidomulyo Village, Jember District Elida Novita1, I.B.Suryaningrat1, I … NALISIS KEBERLANJUTAN KAWASAN USAHA PERKEBUNAN KOPI (KUPK) RAKYAT DI DESA SIDOMULYO KABUPATEN JEMBER Sustainability Analysis of Smallholder Coffee Plantation at Sidomulyo Village, Jember District Elida Novita1, I.B.Suryaningrat1, Idah Andriyani1, dan Sukrisno Widyotomo2 1Fakultas Teknologi Pertanian, Universitas Jember, Jl. … tomo2 1Fakultas Teknologi Pertanian, Universitas Jember, Jl. Kalimantan No. 37 Kampus Tegalboto, Jember, Jawa Timur 68121 2Pusat Penelitian Kopi dan Kakao, Jl. PB. Sudirman 90, Jember 68118 ABSTRAK Desa Sidomulyo, Kecamatan Silo merupakan salah satu sentra produksi kopi rakyat utama di Kabupaten Jember. Perkembangan produk",
+      "link_type": "publisher_article",
+      "source_type": "cie_curated_reference",
+      "source_original_url": "https://journal.ugm.ac.id/agritech/article/viewFile/9621/7196",
+      "source_content_sha256": "ba09204228101187204566078283c4ce9e0301451ed1155c0b0861065be47185",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "passed_kabar_kopi_fulltext_coffee_signal",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    }
+  ]
+}

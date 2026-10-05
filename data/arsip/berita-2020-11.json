@@ -1,0 +1,26 @@
+{
+  "bulan": "2020-11",
+  "artikel": [
+    {
+      "judul": "Toffin Indonesia Merilis Riset \"2020 Brewing in Indonesia\"",
+      "tautan": "https://insight.toffin.id/event-toffin/toffin-indonesia-merilis-riset-2020-brewing-in-indonesia",
+      "tanggal": "2020-11-01T00:00:00.000Z",
+      "publication_date_precision": "day",
+      "publication_date_evidence": "2020-11-12T10:14:38+00:00",
+      "sumber": "insight.toffin.id",
+      "ringkasan": "Bisnis kedai kopi di Indonesia diperkirakan terus meningkat seiring naiknya konsumsi domestik kopi Indonesia. Nilai pasarnya pun cukup menggiurkan, yaitu mencapai Rp4,8 triliun per tahun.Data Tahunan Konsumsi Kopi Indonesia 2019 yang dikeluarkan oleh Global Agricultural Information Network menunjukkan proyeksi konsumsi domestik (Coffee Domestic Consumption) ",
+      "coffee_relevance_context": "Bisnis kedai kopi di Indonesia diperkirakan terus meningkat seiring naiknya konsumsi domestik kopi Indonesia. Nilai pasarnya pun cukup menggiurkan, yaitu mencapai Rp4,8 triliun per tahun.Data Tahun … Bisnis kedai kopi di Indonesia diperkirakan terus meningkat seiring naiknya konsumsi domestik kopi Indonesia. Nilai pasarnya pun cukup menggiurkan, yaitu mencapai Rp4,8 triliun per tahun.Data Tahunan Konsumsi Kopi Indonesia 2019 yang dikeluarkan oleh Global Agricultural Informa … aiknya konsumsi domestik kopi Indonesia. Nilai pasarnya pun cukup menggiurkan, yaitu mencapai Rp4,8 triliun per tahun.Data Tahunan Konsumsi Kopi Indonesia 2019 yang dikeluarkan oleh Global Agricultural Information Network menunjukkan proyeksi konsumsi domestik (Coffee Domestic Consumption) pada 2019/2020 mencapai 294.000 t",
+      "link_type": "publisher_article",
+      "source_type": "cie_curated_reference",
+      "source_original_url": "https://insight.toffin.id/toffin-stories/toffin-indonesia-merilis-riset-2020-brewing-in-indonesia",
+      "source_content_sha256": "296a1af071b05204aeccb59b3ef592109688f7b62e9903148554b4f32d1736b5",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "passed_kabar_kopi_fulltext_coffee_signal",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    }
+  ]
+}

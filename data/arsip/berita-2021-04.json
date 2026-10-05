@@ -1,0 +1,26 @@
+{
+  "bulan": "2021-04",
+  "artikel": [
+    {
+      "judul": "354 Jurnal Warta LPM Vol",
+      "tautan": "https://repository.unpas.ac.id/63897/1/4%20PKM%20Pelaku%20Usaha%20Pengolahan%20Kopi%20Desa%20Warnasari%20Kecamatan%20Pangalengan%20Kabupaten%20Bandung.pdf",
+      "tanggal": "2021-04-21T00:00:00.000Z",
+      "publication_date_precision": "day",
+      "publication_date_evidence": "evised: 9 March 2021 Accepted: 26 March 2021 Published: 21 April 2021 Keywords: Business, Proc",
+      "sumber": "repository.unpas.ac.id",
+      "ringkasan": "354 Jurnal Warta LPM Vol. 24, No. 2, April 2021, hlm. 354-366 p-ISSN: 1410-9344; e-ISSN: 2549-5631 homepage: http://journals.ums.ac.id/index.php/warta PKM Pelaku Usaha Pengolahan Kopi Desa Warnasari Kecamatan Pangalengan Kabupaten Bandung 1Yayan Mulyana, 2Abdul Rosid, 3Erti Dinihayati Jurusan Administrasi Bisnis, Fakultas Ilmu Sosial dan Ilmu Politik, Univer",
+      "coffee_relevance_context": "ril 2021, hlm. 354-366 p-ISSN: 1410-9344; e-ISSN: 2549-5631 homepage: http://journals.ums.ac.id/index.php/warta PKM Pelaku Usaha Pengolahan Kopi Desa Warnasari Kecamatan Pangalengan Kabupaten Bandung 1Yayan Mulyana, 2Abdul Rosid, 3Erti Dinihayati Jurusan Administrasi Bisnis, Fakultas Ilmu Sosial dan Ilmu Politik, Universit … icle Info Submitted: 16 October 2020 Revised: 9 March 2021 Accepted: 26 March 2021 Published: 21 April 2021 Keywords: Business, Processing, Coffee Abstract The activity of this Community Service was carried out in Warnasari Village, in which had potential in the coffee plantation sector based on these observations. Our partn … ess, Processing, Coffee Abstract The activity of this Community Service was carried out in Warnasari Village, in which had potential in the coffee plantation sector based on these observations. Our partners in coffee processing business produce coffee beans (cery) that are going through wet-processed. As for the problems fou",
+      "link_type": "publisher_article",
+      "source_type": "cie_curated_reference",
+      "source_original_url": "https://repository.unpas.ac.id/63897/1/4%20PKM%20Pelaku%20Usaha%20Pengolahan%20Kopi%20Desa%20Warnasari%20Kecamatan%20Pangalengan%20Kabupaten%20Bandung.pdf",
+      "source_content_sha256": "f145d46aebccd4c87eb237a53d4e53c4db8df33f9a01eda59ee5d4195d4bc4cd",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "passed_kabar_kopi_fulltext_coffee_signal",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    }
+  ]
+}

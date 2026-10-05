@@ -1,0 +1,47 @@
+{
+  "bulan": "2017-04",
+  "artikel": [
+    {
+      "judul": "Template Jurnal IJCCS",
+      "tautan": "https://jurnal.polinela.ac.id/JFA/article/download/81/56",
+      "tanggal": "2017-04",
+      "publication_date_precision": "month",
+      "publication_date_evidence": "JoFSA, Vol.1, No.1, April 2017, pp. 21-29 ISSN: 0000-0000 ",
+      "sumber": "jurnal.polinela.ac.id",
+      "ringkasan": "JoFSA, Vol.1, No.1, April 2017, pp. 21-29 ISSN: 0000-0000  21 Received February 9th, 2017; Revised February 25th, 2017; Accepted April 9th, 2017 Dampak Kredit Terhadap Ekonomi Rumah tangga Petani Kopi di Kabupaten Pati (Impact Of Credit To Household Economy Of Coffe Farmersin Pati) Stevana Astra Jaya1), Harianto2), M. Parulian Hutagaol3) 1)Mahasiswa Magiste",
+      "coffee_relevance_context": " 21 Received February 9th, 2017; Revised February 25th, 2017; Accepted April 9th, 2017 Dampak Kredit Terhadap Ekonomi Rumah tangga Petani Kopi di Kabupaten Pati (Impact Of Credit To Household Economy Of Coffe Farmersin Pati) Stevana Astra Jaya1), Harianto2), M. Parulian Hutagaol3) 1)Mahasiswa Magister Mayor IlmuEkonomiPe … rmers’ income. Plantation development is intended to make it more efficient, productive and competitive in order to increase the income o f coffee farmers and their families. The main problem is the poverty of coffee farmers. Coffee plantations owned b y coffee farmers in Pati are still dominated by small -scale enterprises, … cient, productive and competitive in order to increase the income o f coffee farmers and their families. The main problem is the poverty of coffee farmers. Coffee plantations owned b y coffee farmers in Pati are still dominated by small -scale enterprises, technologically simple, and low income. With low capital conditions,",
+      "link_type": "publisher_article",
+      "source_type": "cie_curated_reference",
+      "source_original_url": "https://jurnal.polinela.ac.id/JFA/article/download/81/56",
+      "source_content_sha256": "24cddd13718ca99bf42813bb2a72eb715dc37426ee869e47cd215e0bbc7dc754",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "passed_kabar_kopi_fulltext_coffee_signal",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    },
+    {
+      "judul": "UGM — Lembaran Sejarah, artikel PDF",
+      "tautan": "https://journal.ugm.ac.id/lembaran-sejarah/article/download/33509/20166",
+      "tanggal": "2017-04",
+      "publication_date_precision": "month",
+      "publication_date_evidence": "Volume 13 Number 1 April 2017 ISSN: 1410-4962 Abstract This",
+      "sumber": "journal.ugm.ac.id",
+      "ringkasan": "Volume 13 Number 1 April 2017 ISSN: 1410-4962 Abstract This paper provides an attempt to look at the coffee economy in late colonial Netherlands East Indies, by focusing on the private estates that produced coffee and on the capital-owning class who invested in these estates. Since mid-19 th century there was an increasing accessibility for would-be planters",
+      "coffee_relevance_context": "Volume 13 Number 1 April 2017 ISSN: 1410-4962 Abstract This paper provides an attempt to look at the coffee economy in late colonial Netherlands East Indies, by focusing on the private estates that produced coffee and on the capital-owning class who invested in these estates. Since mid- … rovides an attempt to look at the coffee economy in late colonial Netherlands East Indies, by focusing on the private estates that produced coffee and on the capital-owning class who invested in these estates. Since mid-19 th century there was an increasing accessibility for would-be planters to gain access to land, especial … lanters to gain access to land, especially in Java and Sumatra. Attracted to the increasing, if volatile, the world price of the commodity, coffee-producing estates were established in great numbers across the archipelago, despite the threat of the coffee leaf rust plant- disease. Only the attraction to rubber planting and t",
+      "link_type": "publisher_article",
+      "source_type": "cie_curated_reference",
+      "source_original_url": "https://journal.ugm.ac.id/lembaran-sejarah/article/download/33509/20166",
+      "source_content_sha256": "6b1f4572f7e75789ca6c8eaf751acc4493999f2869cbd0838b850d27239b04ea",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "passed_kabar_kopi_fulltext_coffee_signal",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    }
+  ]
+}

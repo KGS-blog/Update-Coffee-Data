@@ -22,7 +22,12 @@ const articles = (Array.isArray(feed.artikel) ? feed.artikel : [])
   .slice(0, 6);
 const formatDate = article => {
   const date = new Date(dateValue(article));
-  return Number.isNaN(date.getTime()) ? "" : new Intl.DateTimeFormat("id-ID", { day: "numeric", month: "short", year: "numeric", timeZone: "Asia/Jakarta" }).format(date);
+  if (Number.isNaN(date.getTime())) return "";
+  const precision = article.publication_date_precision || "day";
+  const options = precision === "year" ? { year: "numeric" }
+    : precision === "month" ? { month: "long", year: "numeric" }
+    : { day: "numeric", month: "short", year: "numeric" };
+  return new Intl.DateTimeFormat("id-ID", { ...options, timeZone: "Asia/Jakarta" }).format(date);
 };
 const sourceOf = article => article.sumber || article.source_name || "Sumber penerbit";
 const categoryOf = article => article.cluster_name && article.cluster_name !== "Lainnya" ? article.cluster_name : "Berita kopi";

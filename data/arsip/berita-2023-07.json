@@ -4,20 +4,23 @@
     {
       "judul": "Berita Sawit - Miliki Hasil karet, kayu manis, kopi, sawit, Kemendag Dorong Ekspor Jambi Ke Dunia Lewat Kolaborasi - InfoSAWIT",
       "tautan": "https://infosawit.com/2023/07/10/miliki-hasil-karet-kayu-manis-kopi-sawit-kemendag-dorong-ekspor-jambi-ke-dunia-lewat-kolaborasi",
-      "tanggal": "2023-07-09T22:02:00.000Z",
+      "tanggal": "2023-07-01T00:00:00.000Z",
       "sumber": "infosawit.com",
       "ringkasan": "Kemendag Dok. Humas Kemendag/Mendag, Zulkifli Hasan, Hadiri Acara Satu Hari Bersama Jambi, merupakan kegiatan promosi wisata dan perdagangan yang diselenggarakan oleh Pemprov Jambi, berlokasi di Sarinah, Sabtu (8/7/2023) InfoSAWIT, JAKARTA – Pada acara Satu Hari Bersama Jambi, merupakan kegiatan promosi wisata dan perdagangan yang diselenggarakan oleh Pempro",
       "link_type": "publisher_article",
       "source_type": "cie_curated_reference",
       "source_original_url": "https://infosawit.com/2023/07/10/miliki-hasil-karet-kayu-manis-kopi-sawit-kemendag-dorong-ekspor-jambi-ke-dunia-lewat-kolaborasi",
-      "source_content_sha256": "edb2a1a8b33dc429cc12dbb843522e814adb8cfeb913fa32f2986391f2e2a0ed",
+      "source_content_sha256": "29259c546930fca661c61d4991d8d66cb2f81352fa071b6b3b1c547c326b8e0f",
       "extraction_status": "extracted",
       "source_relevance": "MIXED",
-      "relevance_status": "passed_cie_mixed_keyword_rescreen",
+      "relevance_status": "passed_kabar_kopi_fulltext_coffee_signal",
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "cluster_review_version": 0
+      "cluster_review_version": 0,
+      "publication_date_precision": "day",
+      "publication_date_evidence": "2023-07-09T22:02:00+00:00",
+      "coffee_relevance_context": "Menteri Perdagangan, Zulkifli Hasan menyatakan, Jambi punya hasil alam yang unggul, mulai dari hasil perkebunan seperti karet, kayu manis, kopi, sawit, teh, cengkeh dan hasil bumi seperti nikel, emas, batu bara, minyak dan gas. “Jambi ini budayanya luar biasa kaya, apalagi hasil alamnya, 60 persen perkebunan, sawit, karet … ti nikel, emas, batu bara, minyak dan gas. “Jambi ini budayanya luar biasa kaya, apalagi hasil alamnya, 60 persen perkebunan, sawit, karet, kopi, belum lagi teh Kayu Aro, satu-satunya di dunia,” katanya dalam keterangan resmi diterima InfoSAWIT. Sebab itu Mendag menyatakan dukungannya untuk mendorong produk Jambi untuk men"
     }
   ]
 }
