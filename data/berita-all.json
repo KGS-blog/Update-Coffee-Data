@@ -1,6 +1,30 @@
 {
   "artikel": [
     {
+      "judul": "Area Mobil Kopi Pasar Aceh Jadi Tempat Nongkrong Baru di Banda Aceh",
+      "tautan": "https://aceh.tribunnews.com/nanggroe/1047304/area-mobil-kopi-pasar-aceh-jadi-tempat-nongkrong-baru-di-banda-aceh",
+      "tanggal": "2026-10-04 14:33:03",
+      "sumber": "Serambinews.com",
+      "ringkasan": "Banda Aceh seakan tidak pernah kehabisan tempat baru untuk bersantai dan menghabiskan waktu bersama keluarga maupun teman.",
+      "asal": "newsdata",
+      "link_type": "publisher_article",
+      "cluster_id": "kedai-konsumsi-gaya-hidup",
+      "cluster_name": "Kedai, Konsumsi & Gaya Hidup",
+      "cluster_assignment": "keyword"
+    },
+    {
+      "judul": "Terapkan Teknologi Blockchain, Kopi Indonesia Jalin Kemitraan Strategis di Vietnam",
+      "tautan": "https://mediaindonesia.com/nusantara/940507/terapkan-teknologi-blockchain-kopi-indonesia-jalin-kemitraan-strategis-di-vietnam",
+      "tanggal": "2026-10-04 10:44:00",
+      "sumber": "Mediaindonesia",
+      "ringkasan": "PT ALKO Kerinci memperluas jaringan kerja sama internasional dengan menggandeng empat mitra kopi Vietnam, yakni Robo Farm, Elon Farm, Thy Thy Farm, dan Like Farm.",
+      "asal": "newsdata",
+      "link_type": "publisher_article",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned"
+    },
+    {
       "judul": "FCE 2026 Hari Ketiga, Penggiat Kopi NTT Diajak Tingkatkan Kualitas hingga Buka Peluang Ekspor",
       "tautan": "https://kupang.tribunnews.com/provinsi-ntt/982088/fce-2026-hari-ketiga-penggiat-kopi-ntt-diajak-tingkatkan-kualitas-hingga-buka-peluang-ekspor",
       "tanggal": "2026-10-04 07:44:57",
@@ -519,5 +543,5 @@
       "link_type": "publisher_article"
     }
   ],
-  "fetched": "2026-10-04T21:04:11.662Z"
+  "fetched": "2026-10-05T04:52:27.132Z"
 }
