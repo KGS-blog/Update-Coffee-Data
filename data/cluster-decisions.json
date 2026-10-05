@@ -1,9 +1,10 @@
 {
   "version": 1,
   "overrides": [],
-  "accepted_candidate_ids": [
-    "budaya-sastra-kopi"
+  "accepted_candidate_ids": [],
+  "rejected_candidate_ids": [
+    "budaya-sastra-kopi",
+    "kriminal-keamanan-komoditas-kopi"
   ],
-  "rejected_candidate_ids": [],
-  "updated_at": "2026-10-03T06:56:32.494Z"
+  "updated_at": "2026-10-05T07:41:38.230Z"
 }

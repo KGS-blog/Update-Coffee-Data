@@ -1,7 +1,7 @@
 {
   "meta": {
     "source": "Yahoo Finance (Arabica, IDR/USD) + International Coffee Organization (ICO Robustas daily indicator) via GitHub Actions",
-    "lastUpdated": "2026-10-05T07:33:28.856Z",
+    "lastUpdated": "2026-10-05T08:31:54.115Z",
     "nextUpdate": "Auto: GitHub Actions",
     "version": "1.0"
   },
@@ -293,15 +293,15 @@
     "sourceUnit": "US cents/lb",
     "sourceDate": "2026-10-01",
     "sourceUrl": "https://www.ico.org/resources/public-market-information/",
-    "lastUpdated": "2026-10-05T07:33:28.856Z"
+    "lastUpdated": "2026-10-05T08:31:54.115Z"
   },
   "idrUsd": {
     "symbol": "IDR=X",
     "name": "IDR/USD",
     "unit": "IDR/USD",
-    "current": 17905,
-    "change": -15,
-    "changePercent": -0.08,
+    "current": 17898,
+    "change": -7,
+    "changePercent": -0.04,
     "history": [
       {
         "month": "Jan 2021",
@@ -565,7 +565,7 @@
       },
       {
         "month": "Okt 2026",
-        "value": 17905
+        "value": 17898
       }
     ],
     "stale": false
