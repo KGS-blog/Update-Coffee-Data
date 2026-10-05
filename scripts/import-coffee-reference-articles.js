@@ -130,6 +130,25 @@ function deduplicate(rows, feedRows) {
   const currentFeed = readJson(path.join(ROOT, 'data', 'berita.json'), { artikel: [] });
   const mergedFeed = [...(latestFeed.artikel || []), ...(currentFeed.artikel || [])];
   const result = deduplicate(candidates, mergedFeed);
+  const previousCorpus = readJson(OUTPUT, { articles: [] });
+  const previousById = new Map((previousCorpus.articles || []).map(article => [String(article.id), article]));
+  const previousByUrl = new Map((previousCorpus.articles || []).filter(article => article.url).map(article => [identityKey(article.url), article]));
+  const extractionFields = [
+    'extraction_status', 'extracted_at', 'extracted_from_url', 'resolved_url', 'source_content_type',
+    'extraction_method', 'source_title', 'source_description', 'source_authors',
+    'source_published_date', 'content_char_count', 'content_sha256',
+    'content_excerpt', 'exact_content_duplicate_ids', 'source_http_status', 'fetch_error', 'retry_after'
+  ];
+  for (const article of result.articles) {
+    const previous = previousById.get(String(article.id)) || previousByUrl.get(identityKey(article.url));
+    if (!previous) continue;
+    const sameSource = article.url && (article.url === previous.url || article.url === previous.extracted_from_url);
+    if (!sameSource) continue;
+    if (!article.published_date && previous.published_date) article.published_date = previous.published_date;
+    for (const field of extractionFields) {
+      if (previous[field] !== undefined) article[field] = previous[field];
+    }
+  }
   const output = {
     schema_version: 1,
     collection_type: 'coffee_reference_articles',
@@ -137,6 +156,7 @@ function deduplicate(rows, feedRows) {
     source_path: 'exports/coffee_relevant_articles.json',
     source_generated_at: source.generated_at || null,
     fetched_at: new Date().toISOString(),
+    content_fetch: previousCorpus.content_fetch || undefined,
     count: result.articles.length,
     note: 'Curated reference corpus. Items without a publication date are not treated as current news, chronological monthly archive entries, or automatic editorial input.',
     deduplication: {

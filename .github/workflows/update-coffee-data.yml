@@ -29,6 +29,13 @@ jobs:
         env:
           COFFEE_ENGINE_READ_TOKEN: ${{ secrets.COFFEE_ENGINE_READ_TOKEN }}
         run: node scripts/import-coffee-reference-articles.js
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Fetch original coffee reference article URLs
+        run: |
+          python -m pip install --disable-pip-version-check --no-cache-dir lxml pypdf
+          python scripts/fetch-coffee-reference-articles.py
       - name: Load private editor cluster queue
         env:
           MEVO_SYNC_SECRET: ${{ secrets.MEVO_SYNC_SECRET }}
