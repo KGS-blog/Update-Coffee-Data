@@ -173,7 +173,7 @@ const leadNews = latestNews.find(item => {
 }) || latestNews[0];
 if (leadNews) {
   const leadUrl = safeUrl(leadNews.tautan);
-  const lead = `<div class="eyebrow">${esc(topicNames.get(String(leadNews.tautan||'')) || 'Berita kopi terbaru')}</div>${leadUrl ? `<a class="lead-link" href="${esc(leadUrl)}" target="_blank" rel="noopener noreferrer">` : ''}<h1>${esc(leadNews.judul || 'Kabar terbaru tentang kopi')}</h1>${leadUrl ? '</a>' : ''}<p>${esc(leadNews.sumber || 'Sumber berita')}${leadNews.tanggal ? ` · ${esc(new Intl.DateTimeFormat('id-ID',{day:'numeric',month:'short',year:'numeric'}).format(new Date(leadNews.tanggal)))}` : ''}${sourceRouteLabel(leadUrl)}</p>`;
+  const lead = `<div class="eyebrow">Pilihan feed · ${esc(topicNames.get(String(leadNews.tautan||'')) || 'Berita kopi terbaru')}</div>${leadUrl ? `<a class="lead-link" href="${esc(leadUrl)}" target="_blank" rel="noopener noreferrer">` : ''}<h1>${esc(leadNews.judul || 'Kabar terbaru tentang kopi')}</h1>${leadUrl ? '</a>' : ''}<p>${esc(leadNews.sumber || 'Sumber berita')}${leadNews.tanggal ? ` · ${esc(new Intl.DateTimeFormat('id-ID',{day:'numeric',month:'short',year:'numeric'}).format(new Date(leadNews.tanggal)))}` : ''}${sourceRouteLabel(leadUrl)}</p>`;
   portal = portal.replace('<!-- STATIC_LEAD -->', lead);
 }
 const latest = latestNews.slice(1).map(item => {
