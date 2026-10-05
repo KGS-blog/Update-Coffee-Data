@@ -10,9 +10,9 @@
       "link_type": "publisher_article",
       "resolution_status": "resolved",
       "tautan_google_news": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOaFVYMTQ4dlduV2huX3RRM0hWVG5nOVlheXB0UTU1eURxYXFjOF9RYklUdUN5b3hlY2ZTekVDdXByNFFmRzBSVzZtNmRROHp1d3g1ZnVfRXFCdnItUG1DcVR5YnVDaHIybzl3b1JEVU5zVEpYTUxYX0RmaWl0eWYtaUNxNnEyOUdaTUJ3WGtmYXFKemd6Uk5FOEtsdmtueThVNHNLU0xtb1BIeTZYdUE?oc=5",
-      "cluster_id": "lainnya",
-      "cluster_name": "Lainnya",
-      "cluster_assignment": "unassigned",
+      "cluster_id": "event-kompetisi",
+      "cluster_name": "Event & Kompetisi",
+      "cluster_assignment": "ai_existing",
       "extracted_at": "2026-10-05T09:36:48Z",
       "extracted_from_url": "https://www.detikindonesia.co.id/fce-2026-jadi-momentum-umkm-ntt-perluas-pasar-kopi-wastra-dan-produk-olahan/",
       "resolved_url": "https://www.detikindonesia.co.id/fce-2026-jadi-momentum-umkm-ntt-perluas-pasar-kopi-wastra-dan-produk-olahan/",
@@ -36,17 +36,19 @@
       "fetch_error": null,
       "retry_after": null,
       "published_date": "2026-10-05",
-      "cluster_ai_reviewed_at": "2026-10-05T14:48:10.565Z",
-      "cluster_review_version": 5,
+      "cluster_ai_reviewed_at": "2026-10-05T15:58:14.628Z",
+      "cluster_review_version": 6,
       "cluster_review_context_hash": "073a4cf04a7c1094c31942e2796933b80878279915750a2bbccfcc8a19932055",
       "cluster_relevance_review": {
-        "relevance": "uncertain",
-        "title_context_match": "unclear",
+        "relevance": "relevant",
+        "title_context_match": "match",
         "suggested_cluster_id": "event-kompetisi",
-        "reason": "Dasar penilaian AI tidak cocok dengan kutipan yang tersedia; editor perlu memeriksa sumber asli.",
-        "evidence": "",
-        "reviewed_at": "2026-10-05T14:48:10.565Z"
-      }
+        "reason": "Berita event FCE dengan kopi sebagai salah satu fokus komoditas dan adanya kompetisi/masterclass.",
+        "evidence": "\"tiga komoditas unggulan NTT, yakni kopi, wastra, serta makanan dan minuman olahan\"",
+        "reviewed_at": "2026-10-05T15:58:14.628Z"
+      },
+      "cluster_ai_reason": "Berita event FCE dengan kopi sebagai salah satu komoditas utama dan adanya kompetisi/masterclass.",
+      "cluster_ai_evidence": "\"tiga komoditas unggulan NTT, yakni kopi, wastra, serta makanan dan minuman olahan\" ... \"kompetisi\""
     },
     {
       "judul": "M Stand dari Shanghai Hadir di Jakarta, Bawa Konsep Modern Coffee Lifestyle - Koran Jakarta ®",
@@ -121,16 +123,97 @@
       "fetch_error": null,
       "retry_after": null,
       "published_date": "2026-10-05",
-      "cluster_ai_reviewed_at": "2026-10-05T14:48:10.565Z",
-      "cluster_review_version": 5,
+      "cluster_ai_reviewed_at": "2026-10-05T15:58:14.628Z",
+      "cluster_review_version": 6,
       "cluster_review_context_hash": "5657bbcc798e2269f767289a58ea6f68e88d90e0345846416608a712c080fecb",
       "cluster_relevance_review": {
-        "relevance": "uncertain",
-        "title_context_match": "unclear",
+        "relevance": "relevant",
+        "title_context_match": "match",
         "suggested_cluster_id": "",
-        "reason": "Dasar penilaian AI tidak cocok dengan kutipan yang tersedia; editor perlu memeriksa sumber asli.",
-        "evidence": "",
-        "reviewed_at": "2026-10-05T14:48:10.565Z"
+        "reason": "Kisah komunitas/koperasi kopi Seko; relevan, namun tidak cocok jelas dengan klaster yang ada (bukan event kopi, bukan kebijakan teknis).",
+        "evidence": "\"kopi—khususnya kopi Seko ... produk andalan dari dataran tinggi Luwu Utara\"",
+        "reviewed_at": "2026-10-05T15:58:14.628Z"
+      }
+    },
+    {
+      "judul": "Kafe di Vietnam Ciptakan Kopi dengan Pasta Udang dan Taburan Tuna Kering, seperti Apa?",
+      "tautan": "https://www.kompas.com/tren/read/2026/10/05/103000365/kafe-di-vietnam-ciptakan-kopi-dengan-pasta-udang-dan-taburan-tuna-kering",
+      "tanggal": "2026-10-05 03:30:00",
+      "sumber": "Kompas.com",
+      "ringkasan": "ONLY AVAILABLE IN PAID PLANS",
+      "asal": "newsdata",
+      "link_type": "publisher_article",
+      "extracted_at": "2026-10-05T15:58:05Z",
+      "extracted_from_url": "https://www.kompas.com/tren/read/2026/10/05/103000365/kafe-di-vietnam-ciptakan-kopi-dengan-pasta-udang-dan-taburan-tuna-kering",
+      "resolved_url": "https://www.kompas.com/tren/read/2026/10/05/103000365/kafe-di-vietnam-ciptakan-kopi-dengan-pasta-udang-dan-taburan-tuna-kering",
+      "source_content_type": "text/html",
+      "http_status": 200,
+      "extraction_status": "extracted",
+      "extraction_method": "html_body",
+      "source_title": "Kafe di Vietnam Ciptakan Kopi dengan Pasta Udang dan Taburan Tuna Kering, seperti Apa?",
+      "source_description": "Kedai di Vietnam ini ciptakan kopi pakai krim mam ruoc atau pasta udang fermentasi. Laris manis 50 cangkir sehari.",
+      "source_authors": [
+        "Kompas Cyber Media"
+      ],
+      "source_published_date": "2026-10-05",
+      "publication_date_precision": "day",
+      "publication_date_evidence": "2026-10-05T10:30:00+07:00",
+      "date_enrichment_version": 6,
+      "coffee_relevance_context": "Kafe di Vietnam Ciptakan Kopi dengan Pasta Udang dan Taburan Tuna Kering, seperti Apa? Login Gabung KOMPAS.com+ Konten yang disimpan Konten yang disukai Atur Minat Berikan Masukanmu Gabung Kompas.com PLUS News … Kota & Pemukiman yang Berkelanjutan Konsumsi & Produksi yang bertanggungjawab PROGRAM LESTARI Lihat semua Bagikan: Kafe di Vietnam Ciptakan Kopi dengan Pasta Udang dan Taburan Tuna Kering, seperti Apa? Komentar: Baca berita tanpa iklan. Gabung Kompas.com+ Kompas.com Tren Kafe di Vietnam Ciptakan Kopi dengan Pasta Udang dan … Udang dan Taburan Tuna Kering, seperti Apa? Komentar: Baca berita tanpa iklan. Gabung Kompas.com+ Kompas.com Tren Kafe di Vietnam Ciptakan Kopi dengan Pasta Udang dan Taburan Tuna Kering, seperti Apa? Kompas.com, 5 Oktober 2026, 10:30 WIB Add on Google Inten Esti Pratiwi Penulis Lihat Foto Kafe di Vietnam membuat inovasi",
+      "content_char_count": 13545,
+      "content_sha256": "bfe5cbf04b8afcba2027055e274a0da6daa253496595a9f879e8e4953eb52bfa",
+      "content_excerpt": "Kafe di Vietnam Ciptakan Kopi dengan Pasta Udang dan Taburan Tuna Kering, seperti Apa? Login Gabung KOMPAS.com+ Konten yang disimpan Konten yang disukai Atur Minat Berikan Masukanmu Gabung Kompas.com PLUS News Nasional Global Megapolitan Regional Pemilu Hype Konsultasi Hukum Cek Fakta Surat Pembaca Indeks Kilas Daerah Kilas Korporasi Kilas Kementerian Sorot Politik Kilas Badan Negara Kelana Indonesia Kalbe Health Cor",
+      "fetch_error": null,
+      "retry_after": null,
+      "published_date": "2026-10-05",
+      "cluster_id": "kedai-konsumsi-gaya-hidup",
+      "cluster_name": "Kedai, Konsumsi & Gaya Hidup",
+      "cluster_assignment": "rule_context"
+    },
+    {
+      "judul": "Sumarjono: Kopi Boleh Pahit, Nasib Petani Jangan - Majalah HORTUS Archipelago",
+      "tautan": "https://news.majalahhortus.com/sumarjono-kopi-boleh-pahit-nasib-petani-jangan/",
+      "tanggal": "Mon, 05 Oct 2026 02:18:30 GMT",
+      "sumber": "Majalah HORTUS Archipelago",
+      "asal": "google_news",
+      "aggregator": "Google News",
+      "link_type": "publisher_article",
+      "resolution_status": "resolved",
+      "tautan_google_news": "https://news.google.com/rss/articles/CBMihAFBVV95cUxObXlDNzBSaXZ2U19EYjVZSzFseFNjeHpQNTVJRU1MMlh1ZHpGY0ZzRlM2NHlFYzRweU5GUWNTY0FEbnNqZkN1SjVDWEJ6UDB5MEZyZjQwZFdJX056TzV6NEZ5NXRPSDM4ZFRFS2VRak1aNjl5ajJlRWFDbWFmN05BdmRnUGk?oc=5",
+      "extracted_at": "2026-10-05T15:58:05Z",
+      "extracted_from_url": "https://news.majalahhortus.com/sumarjono-kopi-boleh-pahit-nasib-petani-jangan/",
+      "resolved_url": "https://news.majalahhortus.com/sumarjono-kopi-boleh-pahit-nasib-petani-jangan/",
+      "source_content_type": "text/html",
+      "http_status": 200,
+      "extraction_status": "extracted",
+      "extraction_method": "html_article_or_main",
+      "source_title": "Sumarjono: Kopi Boleh Pahit, Nasib Petani Jangan",
+      "source_description": "JAKARTA — Kopi boleh pahit. Tetapi nasib petani yang menanamnya jangan ikut pahit. Kalimat itu mungkin sederhana, tetapi menyimpan persoalan panjang di balik secangkir kopi. Sebab sebelum kopi sampai ke meja, ada petani yang menanam, merawat, menghadapi hujan dan panas, memetik buah merah, lalu menunggu hasil kebunnya menjadi penghasilan bagi keluarga. Setiap 1 Oktober, para …",
+      "source_authors": [],
+      "source_published_date": "2026-10-05",
+      "publication_date_precision": "day",
+      "publication_date_evidence": "2026-10-05T09:18:30+07:00",
+      "date_enrichment_version": 6,
+      "coffee_relevance_context": "Sumarjono Marondos Saragih (DOK. HORTUS) JAKARTA — Kopi boleh pahit. Tetapi nasib petani yang menanamnya jangan ikut pahit. Kalimat itu mungkin sederhana, tetapi menyimpan persoalan panjang di balik secangkir kopi. Sebab sebelum kopi s … Tetapi nasib petani yang menanamnya jangan ikut pahit. Kalimat itu mungkin sederhana, tetapi menyimpan persoalan panjang di balik secangkir kopi. Sebab sebelum kopi sampai ke meja, ada petani yang menanam, merawat, menghadapi hujan dan panas, memetik buah merah, lalu menunggu hasil kebunnya menjadi penghasilan bagi keluarg … yang menanamnya jangan ikut pahit. Kalimat itu mungkin sederhana, tetapi menyimpan persoalan panjang di balik secangkir kopi. Sebab sebelum kopi sampai ke meja, ada petani yang menanam, merawat, menghadapi hujan dan panas, memetik buah merah, lalu menunggu hasil kebunnya menjadi penghasilan bagi keluarga. Setiap 1 Oktober,",
+      "content_char_count": 5458,
+      "content_sha256": "ced5997317450eb77281495f52d91959a76cc798c81a4d0936550593f6d6549f",
+      "content_excerpt": "Sumarjono Marondos Saragih (DOK. HORTUS) JAKARTA — Kopi boleh pahit. Tetapi nasib petani yang menanamnya jangan ikut pahit. Kalimat itu mungkin sederhana, tetapi menyimpan persoalan panjang di balik secangkir kopi. Sebab sebelum kopi sampai ke meja, ada petani yang menanam, merawat, menghadapi hujan dan panas, memetik buah merah, lalu menunggu hasil kebunnya menjadi penghasilan bagi keluarga. Setiap 1 Oktober, para p",
+      "fetch_error": null,
+      "retry_after": null,
+      "published_date": "2026-10-05",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_ai_reviewed_at": "2026-10-05T15:58:14.628Z",
+      "cluster_review_version": 6,
+      "cluster_review_context_hash": "dbdefc31438af690ba1aeaf2a6a98b92339af091ab5d45bddc16dc347bdb7c27",
+      "cluster_relevance_review": {
+        "relevance": "relevant",
+        "title_context_match": "match",
+        "suggested_cluster_id": "",
+        "reason": "Opini/advokasi kesejahteraan petani kopi; relevan tetapi fokus klaster spesifik tidak jelas dari cuplikan.",
+        "evidence": "\"Kopi boleh pahit. Tetapi nasib petani yang menanamnya jangan ikut pahit.\"",
+        "reviewed_at": "2026-10-05T15:58:14.628Z"
       }
     },
     {
@@ -164,20 +247,22 @@
       "fetch_error": null,
       "retry_after": null,
       "published_date": "2026-10-05",
-      "cluster_id": "lainnya",
-      "cluster_name": "Lainnya",
-      "cluster_assignment": "unassigned",
-      "cluster_ai_reviewed_at": "2026-10-05T14:48:10.565Z",
-      "cluster_review_version": 5,
+      "cluster_id": "kedai-konsumsi-gaya-hidup",
+      "cluster_name": "Kedai, Konsumsi & Gaya Hidup",
+      "cluster_assignment": "ai_existing",
+      "cluster_ai_reviewed_at": "2026-10-05T15:58:14.628Z",
+      "cluster_review_version": 6,
       "cluster_review_context_hash": "bd9075fcd2660391cf86dff96f4c31c2825719141f426278f50e1aee074c30bc",
       "cluster_relevance_review": {
-        "relevance": "uncertain",
-        "title_context_match": "unclear",
+        "relevance": "relevant",
+        "title_context_match": "match",
         "suggested_cluster_id": "kedai-konsumsi-gaya-hidup",
-        "reason": "Dasar penilaian AI tidak cocok dengan kutipan yang tersedia; editor perlu memeriksa sumber asli.",
-        "evidence": "",
-        "reviewed_at": "2026-10-05T14:48:10.565Z"
-      }
+        "reason": "Tips konsumsi kopi untuk pembaca umum; ranah gaya hidup/konsumsi.",
+        "evidence": "\"3 Pengganti Krimer Kopi yang Lebih Sehat, Bisa Pakai Santan Kental\"",
+        "reviewed_at": "2026-10-05T15:58:14.628Z"
+      },
+      "cluster_ai_reason": "Tips konsumsi kopi untuk konsumen; sesuai kategori konsumsi & gaya hidup.",
+      "cluster_ai_evidence": "\"3 Pengganti Krimer Kopi yang Lebih Sehat, Bisa Pakai Santan Kental\""
     },
     {
       "judul": "Alasan Pelaku Nekat Habisi Pelajar di Pasuruan dan Buang Jasad di Kebun Kopi, Polisi Ungkap Motifnya",
@@ -210,16 +295,16 @@
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "cluster_ai_reviewed_at": "2026-10-05T14:48:10.565Z",
-      "cluster_review_version": 5,
+      "cluster_ai_reviewed_at": "2026-10-05T15:58:14.628Z",
+      "cluster_review_version": 6,
       "cluster_review_context_hash": "8fabedd4af9c71a3a0de112e445af8c8f3f2b507c1a457be543d8b195b945fe0",
       "cluster_relevance_review": {
-        "relevance": "uncertain",
-        "title_context_match": "unclear",
+        "relevance": "irrelevant",
+        "title_context_match": "match",
         "suggested_cluster_id": "",
-        "reason": "Dasar penilaian AI tidak cocok dengan kutipan yang tersedia; editor perlu memeriksa sumber asli.",
-        "evidence": "",
-        "reviewed_at": "2026-10-05T14:48:10.565Z"
+        "reason": "Kebun kopi hanya lokasi kejadian kriminal; tidak menyentuh isu industri kopi.",
+        "evidence": "\"Buang Jasad di Kebun Kopi\"",
+        "reviewed_at": "2026-10-05T15:58:14.628Z"
       }
     },
     {
@@ -253,20 +338,22 @@
       "fetch_error": null,
       "retry_after": null,
       "published_date": "2026-10-05",
-      "cluster_id": "lainnya",
-      "cluster_name": "Lainnya",
-      "cluster_assignment": "unassigned",
-      "cluster_ai_reviewed_at": "2026-10-05T14:48:10.565Z",
-      "cluster_review_version": 5,
+      "cluster_id": "kedai-konsumsi-gaya-hidup",
+      "cluster_name": "Kedai, Konsumsi & Gaya Hidup",
+      "cluster_assignment": "ai_existing",
+      "cluster_ai_reviewed_at": "2026-10-05T15:58:14.628Z",
+      "cluster_review_version": 6,
       "cluster_review_context_hash": "4298b86779bb830301079a2d2d37263067333b07c498f697a04de261c66388dd",
       "cluster_relevance_review": {
-        "relevance": "uncertain",
-        "title_context_match": "unclear",
+        "relevance": "relevant",
+        "title_context_match": "match",
         "suggested_cluster_id": "kedai-konsumsi-gaya-hidup",
-        "reason": "Dasar penilaian AI tidak cocok dengan kutipan yang tersedia; editor perlu memeriksa sumber asli.",
-        "evidence": "",
-        "reviewed_at": "2026-10-05T14:48:10.565Z"
-      }
+        "reason": "Temuan tentang manfaat minum kopi decaf; terkait perilaku/produk konsumsi.",
+        "evidence": "\"Minum Kopi Decaf Ternyata Bisa Tingkatkan Daya Ingat\"",
+        "reviewed_at": "2026-10-05T15:58:14.628Z"
+      },
+      "cluster_ai_reason": "Bahas manfaat minum kopi decaf bagi konsumen; ranah konsumsi/gaya hidup.",
+      "cluster_ai_evidence": "\"Minum Kopi Decaf Ternyata Bisa Tingkatkan Daya Ingat\""
     },
     {
       "judul": "Grup Kawan Lama Resmi Boyong Merek Kopi asal Shanghai, M Stand ke Indonesia - Bisnis Style",
@@ -297,9 +384,9 @@
       "link_type": "publisher_article",
       "resolution_status": "resolved",
       "tautan_google_news": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPNWdZR3l3eGU4ZGQyOERmVUR4YXVJZV93dkx2b1BDbU9iYmVtc09ZN3JPdnZsbU00TEFNTGFaYXRxbHNOTHJZNEloSlhkMFhfZnFuZF9uOUExbFhDNkFDU1hJeER4ZFlRZmRWaldOOHB3WWJZdlM1MG1CLVExSEdTdXhXcS1pT2ZyZUpuUFNETE5ZQWY0ZWt1OXVMaw?oc=5",
-      "cluster_id": "lainnya",
-      "cluster_name": "Lainnya",
-      "cluster_assignment": "unassigned",
+      "cluster_id": "kebijakan-regulasi",
+      "cluster_name": "Kebijakan & Regulasi",
+      "cluster_assignment": "ai_existing",
       "extracted_at": "2026-10-05T09:36:48Z",
       "extracted_from_url": "https://news.majalahhortus.com/kementan-lihat-potensi-kopi-untuk-hijaukan-kembali-lahan-gundul/",
       "resolved_url": "https://news.majalahhortus.com/kementan-lihat-potensi-kopi-untuk-hijaukan-kembali-lahan-gundul/",
@@ -321,17 +408,19 @@
       "fetch_error": null,
       "retry_after": null,
       "published_date": "2026-10-05",
-      "cluster_ai_reviewed_at": "2026-10-05T14:48:10.565Z",
-      "cluster_review_version": 5,
+      "cluster_ai_reviewed_at": "2026-10-05T15:58:14.628Z",
+      "cluster_review_version": 6,
       "cluster_review_context_hash": "797304a46b5248eda6bb172df79f8f199cf4250455ed7acd12eddad8e6d273ea",
       "cluster_relevance_review": {
-        "relevance": "uncertain",
-        "title_context_match": "unclear",
+        "relevance": "relevant",
+        "title_context_match": "match",
         "suggested_cluster_id": "kebijakan-regulasi",
-        "reason": "Dasar penilaian AI tidak cocok dengan kutipan yang tersedia; editor perlu memeriksa sumber asli.",
-        "evidence": "",
-        "reviewed_at": "2026-10-05T14:48:10.565Z"
-      }
+        "reason": "Arah kebijakan/pandangan Kementan terkait pengembangan kopi untuk konservasi.",
+        "evidence": "\"Kementerian Pertanian (Kementan) melihat pengembangan tanaman kopi ... dapat mendukung upaya konservasi lahan.\"",
+        "reviewed_at": "2026-10-05T15:58:14.628Z"
+      },
+      "cluster_ai_reason": "Pernyataan Kementan tentang pemanfaatan kopi untuk konservasi; kebijakan/arah program pemerintah.",
+      "cluster_ai_evidence": "\"Kementerian Pertanian (Kementan) melihat pengembangan tanaman kopi ... dapat mendukung upaya konservasi lahan.\""
     },
     {
       "judul": "Area Mobil Kopi Pasar Aceh Jadi Tempat Nongkrong Baru di Banda Aceh",
@@ -373,11 +462,11 @@
       "ringkasan": "PT ALKO Kerinci memperluas jaringan kerja sama internasional dengan menggandeng empat mitra kopi Vietnam, yakni Robo Farm, Elon Farm, Thy Thy Farm, dan Like Farm.",
       "asal": "newsdata",
       "link_type": "publisher_article",
-      "cluster_id": "lainnya",
-      "cluster_name": "Lainnya",
-      "cluster_assignment": "unassigned",
-      "cluster_ai_reviewed_at": "2026-10-05T14:48:10.565Z",
-      "cluster_review_version": 5,
+      "cluster_id": "ekspor-daya-saing",
+      "cluster_name": "Ekspor & Daya Saing",
+      "cluster_assignment": "ai_existing",
+      "cluster_ai_reviewed_at": "2026-10-05T15:58:14.628Z",
+      "cluster_review_version": 6,
       "extracted_at": "2026-10-05T09:18:54Z",
       "extracted_from_url": "https://mediaindonesia.com/nusantara/940507/terapkan-teknologi-blockchain-kopi-indonesia-jalin-kemitraan-strategis-di-vietnam",
       "resolved_url": "https://mediaindonesia.com/nusantara/940507/terapkan-teknologi-blockchain-kopi-indonesia-jalin-kemitraan-strategis-di-vietnam",
@@ -403,13 +492,15 @@
       "published_date": "2026-10-04",
       "cluster_review_context_hash": "0f0d8b8aa59277674a211ff0a3c069c7dd67a6be3dbf649a834b1e2e682ab6e6",
       "cluster_relevance_review": {
-        "relevance": "uncertain",
-        "title_context_match": "unclear",
+        "relevance": "relevant",
+        "title_context_match": "match",
         "suggested_cluster_id": "ekspor-daya-saing",
-        "reason": "Dasar penilaian AI tidak cocok dengan kutipan yang tersedia; editor perlu memeriksa sumber asli.",
-        "evidence": "",
-        "reviewed_at": "2026-10-05T14:48:10.565Z"
-      }
+        "reason": "Kemitraan internasional dan teknologi rantai pasok; topik ekspor & daya saing.",
+        "evidence": "\"memperluas jaringan kerja sama internasional ... empat mitra kopi Vietnam\"",
+        "reviewed_at": "2026-10-05T15:58:14.628Z"
+      },
+      "cluster_ai_reason": "Kemitraan internasional dan blockchain untuk rantai pasok kopi; jelas terkait ekspor & daya saing.",
+      "cluster_ai_evidence": "\"memperluas jaringan kerja sama internasional ... menggandeng empat mitra kopi Vietnam\" ... \"rantai pasok kopi global yang transparan, terverifikasi\""
     },
     {
       "judul": "FCE 2026 Hari Ketiga, Penggiat Kopi NTT Diajak Tingkatkan Kualitas hingga Buka Peluang Ekspor",
@@ -453,9 +544,9 @@
       "ringkasan": "Eksperimen minuman di Vietnam ini dibuat dari bahan yang tidak biasa. Kopi dan terasi fermentasi jadi bahan utamanya. Ternyata ini rasanya.",
       "asal": "newsdata",
       "link_type": "publisher_article",
-      "cluster_id": "lainnya",
-      "cluster_name": "Lainnya",
-      "cluster_assignment": "unassigned",
+      "cluster_id": "kedai-konsumsi-gaya-hidup",
+      "cluster_name": "Kedai, Konsumsi & Gaya Hidup",
+      "cluster_assignment": "ai_existing",
       "extracted_at": "2026-10-05T09:36:49Z",
       "extracted_from_url": "https://www.kompas.com/food/read/2026/10/04/140028175/gabungkan-kopi-dan-terasi-minuman-baru-di-vietnam-ini-bikin-penasaran",
       "resolved_url": "https://www.kompas.com/food/read/2026/10/04/140028175/gabungkan-kopi-dan-terasi-minuman-baru-di-vietnam-ini-bikin-penasaran",
@@ -479,17 +570,19 @@
       "fetch_error": null,
       "retry_after": null,
       "published_date": "2026-10-04",
-      "cluster_ai_reviewed_at": "2026-10-05T14:48:10.565Z",
-      "cluster_review_version": 5,
+      "cluster_ai_reviewed_at": "2026-10-05T15:58:14.628Z",
+      "cluster_review_version": 6,
       "cluster_review_context_hash": "5ba7f986106d69e861d5a80f49b282d3b8ba1661ce43cff69283629b076a4d89",
       "cluster_relevance_review": {
-        "relevance": "uncertain",
-        "title_context_match": "unclear",
-        "suggested_cluster_id": "",
-        "reason": "Dasar penilaian AI tidak cocok dengan kutipan yang tersedia; editor perlu memeriksa sumber asli.",
-        "evidence": "",
-        "reviewed_at": "2026-10-05T14:48:10.565Z"
-      }
+        "relevance": "relevant",
+        "title_context_match": "match",
+        "suggested_cluster_id": "kedai-konsumsi-gaya-hidup",
+        "reason": "Fenomena produk minuman kopi baru; konteks konsumsi/gaya hidup.",
+        "evidence": "\"Gabungkan Kopi dan Terasi, Minuman Baru di Vietnam\"",
+        "reviewed_at": "2026-10-05T15:58:14.628Z"
+      },
+      "cluster_ai_reason": "Tren minuman kopi baru; fokus konsumen/produk minuman.",
+      "cluster_ai_evidence": "\"Gabungkan Kopi dan Terasi, Minuman Baru di Vietnam\""
     },
     {
       "judul": "BRK Reborn, Bisakah Sistem Baru Mengubah Nasib Petani Kopi Bondowoso? (Bagian 3–Tamat)",
@@ -499,9 +592,9 @@
       "ringkasan": "BRK Reborn, Bisakah Sistem Baru Mengubah Nasib Petani Kopi Bondowoso? (Bagian 3–Tamat) . 👇 Bondowoso sedang mencoba membangun kembali konsep Bondowoso Republik Kopi melalui pendekatan yang berbeda. -- Ikuti kami di 👉https://bit.ly/392voLE #beritaviral #jawatimur #viral berita #beritaterkini #terpopuler #news #beritajatim #infojatim #newsupdate #FYI #fyp",
       "asal": "newsdata",
       "link_type": "publisher_article",
-      "cluster_id": "lainnya",
-      "cluster_name": "Lainnya",
-      "cluster_assignment": "unassigned",
+      "cluster_id": "kebijakan-regulasi",
+      "cluster_name": "Kebijakan & Regulasi",
+      "cluster_assignment": "ai_existing",
       "extracted_at": "2026-10-05T09:36:49Z",
       "extracted_from_url": "https://beritajatim.com/brk-reborn-bisakah-sistem-baru-mengubah-nasib-petani-kopi-bondowoso-bagian-3-tamat",
       "resolved_url": "https://beritajatim.com/brk-reborn-bisakah-sistem-baru-mengubah-nasib-petani-kopi-bondowoso-bagian-3-tamat",
@@ -525,17 +618,19 @@
       "fetch_error": null,
       "retry_after": null,
       "published_date": "2026-10-04",
-      "cluster_ai_reviewed_at": "2026-10-05T14:48:10.565Z",
-      "cluster_review_version": 5,
+      "cluster_ai_reviewed_at": "2026-10-05T15:58:14.628Z",
+      "cluster_review_version": 6,
       "cluster_review_context_hash": "2666d54d9aab9034251c39ac94820b1c51036a97b50af5c6b8f88750ad79f05b",
       "cluster_relevance_review": {
-        "relevance": "uncertain",
-        "title_context_match": "unclear",
+        "relevance": "relevant",
+        "title_context_match": "match",
         "suggested_cluster_id": "kebijakan-regulasi",
-        "reason": "Dasar penilaian AI tidak cocok dengan kutipan yang tersedia; editor perlu memeriksa sumber asli.",
-        "evidence": "",
-        "reviewed_at": "2026-10-05T14:48:10.565Z"
-      }
+        "reason": "Program pemerintah/mitra institusional dan digitalisasi ekosistem kopi; ranah kebijakan/program.",
+        "evidence": "\"kolaborasi dengan Otoritas Jasa Keuangan (OJK) dan International Labour Organization (ILO)\"",
+        "reviewed_at": "2026-10-05T15:58:14.628Z"
+      },
+      "cluster_ai_reason": "Inisiatif pemerintah daerah, kolaborasi OJK/ILO, dan digitalisasi ekosistem; ranah kebijakan/program.",
+      "cluster_ai_evidence": "\"pemerintah daerah ... kolaborasi dengan Otoritas Jasa Keuangan (OJK) dan International Labour Organization (ILO)\" ... \"digitalisasi ekosistem kopi\""
     },
     {
       "judul": "Dari Cherry ke Green Bean, ke Mana Perginya Nilai Kopi Bondowoso? (Bagian 2)",
@@ -545,9 +640,9 @@
       "ringkasan": "Dari Cherry ke Green Bean, ke Mana Perginya Nilai Kopi Bondowoso? (Bagian 2) . 👇 Satu ton cherry kopi tidak berhenti sebagai satu ton produk akhir. Setelah melalui proses pengolahan, jumlahnya menyusut menjadi sekitar 150 kilogram green bean. -- Ikuti kami di 👉https://bit.ly/392voLE #beritaviral #jawatimur #viral berita #beritaterkini #terpopuler #news #beritajatim #infojatim #newsupdate #FYI #fyp",
       "asal": "newsdata",
       "link_type": "publisher_article",
-      "cluster_id": "lainnya",
-      "cluster_name": "Lainnya",
-      "cluster_assignment": "unassigned",
+      "cluster_id": "edukasi-industri",
+      "cluster_name": "Pendidikan & Industri",
+      "cluster_assignment": "ai_existing",
       "extracted_at": "2026-10-05T09:36:49Z",
       "extracted_from_url": "https://beritajatim.com/dari-cherry-ke-green-bean-kemana-perginya-nilai-kopi-bondowoso-bagian-2",
       "resolved_url": "https://beritajatim.com/dari-cherry-ke-green-bean-kemana-perginya-nilai-kopi-bondowoso-bagian-2",
@@ -571,17 +666,19 @@
       "fetch_error": null,
       "retry_after": null,
       "published_date": "2026-10-04",
-      "cluster_ai_reviewed_at": "2026-10-05T14:48:10.565Z",
-      "cluster_review_version": 5,
+      "cluster_ai_reviewed_at": "2026-10-05T15:58:14.628Z",
+      "cluster_review_version": 6,
       "cluster_review_context_hash": "c9390dd1f45969b169f41e2c6ca7173124fe87b928fe4bb528ce177c6f6a2896",
       "cluster_relevance_review": {
-        "relevance": "uncertain",
-        "title_context_match": "unclear",
-        "suggested_cluster_id": "harga-pasar",
-        "reason": "Dasar penilaian AI tidak cocok dengan kutipan yang tersedia; editor perlu memeriksa sumber asli.",
-        "evidence": "",
-        "reviewed_at": "2026-10-05T14:48:10.565Z"
-      }
+        "relevance": "relevant",
+        "title_context_match": "match",
+        "suggested_cluster_id": "edukasi-industri",
+        "reason": "Penjelasan edukatif mengenai konversi hasil dan nilai tambah pada rantai pengolahan kopi.",
+        "evidence": "\"Satu ton cherry kopi ... menyusut menjadi sekitar 150 kilogram green bean.\"",
+        "reviewed_at": "2026-10-05T15:58:14.628Z"
+      },
+      "cluster_ai_reason": "Penjelasan edukatif rantai nilai dan susut hasil pengolahan kopi; materi pembelajaran industri.",
+      "cluster_ai_evidence": "\"Satu ton cherry kopi ... menyusut menjadi sekitar 150 kilogram green bean.\""
     },
     {
       "judul": "Matcha vs kopi, mana yang lebih sehat? Ini perbandingannya",
@@ -630,8 +727,8 @@
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "cluster_ai_reviewed_at": "2026-10-05T14:48:10.565Z",
-      "cluster_review_version": 5,
+      "cluster_ai_reviewed_at": "2026-10-05T15:58:14.628Z",
+      "cluster_review_version": 6,
       "extracted_at": "2026-10-05T09:18:54Z",
       "extracted_from_url": "https://www.antaranews.com/berita/5770398/benarkah-kopi-bisa-membakar-lemak-ini-fakta-dan-risikonya",
       "resolved_url": "https://www.antaranews.com/berita/5770398/benarkah-kopi-bisa-membakar-lemak-ini-fakta-dan-risikonya",
@@ -658,12 +755,12 @@
       "published_date": "2026-10-04",
       "cluster_review_context_hash": "588a467b252506017373cc06a1ec0fbcb6791be264ecc916f9955e52dc3dde06",
       "cluster_relevance_review": {
-        "relevance": "uncertain",
-        "title_context_match": "unclear",
+        "relevance": "irrelevant",
+        "title_context_match": "match",
         "suggested_cluster_id": "",
-        "reason": "Dasar penilaian AI tidak cocok dengan kutipan yang tersedia; editor perlu memeriksa sumber asli.",
-        "evidence": "",
-        "reviewed_at": "2026-10-05T14:48:10.565Z"
+        "reason": "Topik kesehatan/fitness (lemak, risiko) bukan isu bisnis/industri kopi.",
+        "evidence": "Judul: \"Benarkah kopi bisa membakar lemak? Ini fakta dan risikonya\"; Konteks: \"KIlustrasi secangkir kopi hitam. (ANTARA/Siti Zulaikha) Jakarta (ANTARA) - Kopi te\"",
+        "reviewed_at": "2026-10-05T15:58:14.628Z"
       }
     },
     {
@@ -677,8 +774,8 @@
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "cluster_ai_reviewed_at": "2026-10-05T14:48:10.565Z",
-      "cluster_review_version": 5,
+      "cluster_ai_reviewed_at": "2026-10-05T15:58:14.628Z",
+      "cluster_review_version": 6,
       "extracted_at": "2026-10-05T09:18:54Z",
       "extracted_from_url": "https://flores.tribunnews.com/nagekeo/65894/sebelum-meninggal-wabup-nagekeo-sempat-minum-kopi-usai-antar-semen-perbaiki-jalan",
       "resolved_url": "https://flores.tribunnews.com/nagekeo/65894/sebelum-meninggal-wabup-nagekeo-sempat-minum-kopi-usai-antar-semen-perbaiki-jalan",
@@ -701,12 +798,12 @@
       "retry_after": "2026-10-12T09:18:54Z",
       "cluster_review_context_hash": "fa05830764bc43149a7b9b87a58e51d7527de3cc58b531a13e5acb2706ac2285",
       "cluster_relevance_review": {
-        "relevance": "uncertain",
+        "relevance": "irrelevant",
         "title_context_match": "unclear",
         "suggested_cluster_id": "",
-        "reason": "Dasar penilaian AI tidak cocok dengan kutipan yang tersedia; editor perlu memeriksa sumber asli.",
-        "evidence": "",
-        "reviewed_at": "2026-10-05T14:48:10.565Z"
+        "reason": "Berita duka/kriminal umum; kopi hanya disebut sebagai aktivitas sebelum kejadian.",
+        "evidence": "Konteks: \"Wabup Nagekeo Gonzalo Gratianus Muga Sada meninggal dunia di RSUD Aeramo, Sabtu (3/10/2026) malam.\"",
+        "reviewed_at": "2026-10-05T15:58:14.628Z"
       }
     },
     {
@@ -740,16 +837,16 @@
       "content_excerpt": "",
       "fetch_error": null,
       "retry_after": "2026-10-12T09:36:50Z",
-      "cluster_ai_reviewed_at": "2026-10-05T14:48:10.565Z",
-      "cluster_review_version": 5,
+      "cluster_ai_reviewed_at": "2026-10-05T15:58:14.628Z",
+      "cluster_review_version": 6,
       "cluster_review_context_hash": "4dd977e194cad4ee42131f36d03b80ef608f1a7355f4709fae795dd2694e53e5",
       "cluster_relevance_review": {
-        "relevance": "uncertain",
+        "relevance": "irrelevant",
         "title_context_match": "unclear",
         "suggested_cluster_id": "",
-        "reason": "Dasar penilaian AI tidak cocok dengan kutipan yang tersedia; editor perlu memeriksa sumber asli.",
-        "evidence": "",
-        "reviewed_at": "2026-10-05T14:48:10.565Z"
+        "reason": "Berita kriminal; warung kopi hanya lokasi pemicu, bukan substansi industri kopi.",
+        "evidence": "Konteks: \"bermula dari tantangan balap lari hingga korban tewas.\"",
+        "reviewed_at": "2026-10-05T15:58:14.628Z"
       }
     },
     {
@@ -760,11 +857,11 @@
       "ringkasan": "Republik Kopi yang Menjual Kopinya Terlalu Cepat (Bagian 1) . 👇 Bondowoso memiliki modal besar untuk menyandang identitas sebagai daerah penghasil kopi. Data Dinas Pertanian dan Ketahanan Pangan setempat menunjukkan, luas panen kopi pada 2025 mencapai 20.310,5 hektare -- Ikuti kami di 👉https://bit.ly/392voLE #beritaviral #jawatimur #viral berita #beritaterkini #terpopuler #news #beritajatim #infojatim #newsupdate #FYI #fyp",
       "asal": "newsdata",
       "link_type": "publisher_article",
-      "cluster_id": "lainnya",
-      "cluster_name": "Lainnya",
-      "cluster_assignment": "unassigned",
-      "cluster_ai_reviewed_at": "2026-10-05T14:48:10.565Z",
-      "cluster_review_version": 5,
+      "cluster_id": "produksi-panen",
+      "cluster_name": "Produksi & Panen",
+      "cluster_assignment": "ai_existing",
+      "cluster_ai_reviewed_at": "2026-10-05T15:58:14.628Z",
+      "cluster_review_version": 6,
       "extracted_at": "2026-10-05T09:18:54Z",
       "extracted_from_url": "https://beritajatim.com/republik-kopi-yang-menjual-kopinya-terlalu-cepat-bagian-1",
       "resolved_url": "https://beritajatim.com/republik-kopi-yang-menjual-kopinya-terlalu-cepat-bagian-1",
@@ -790,13 +887,15 @@
       "published_date": "2026-10-04",
       "cluster_review_context_hash": "7a3bd58c23097a52afbcddef6b4390dbfdf3e32adf01f95bb21a491ead003d2a",
       "cluster_relevance_review": {
-        "relevance": "uncertain",
-        "title_context_match": "unclear",
-        "suggested_cluster_id": "harga-pasar",
-        "reason": "Dasar penilaian AI tidak cocok dengan kutipan yang tersedia; editor perlu memeriksa sumber asli.",
-        "evidence": "",
-        "reviewed_at": "2026-10-05T14:48:10.565Z"
-      }
+        "relevance": "relevant",
+        "title_context_match": "match",
+        "suggested_cluster_id": "produksi-panen",
+        "reason": "Memuat data luas panen dan produksi kopi serta pembahasan nilai ekonomi kopi setempat.",
+        "evidence": "\"luas panen kopi pada 2025 mencapai 20.310,5 hektare...\"; \"Produksi green bean mencapai 8.913,84 ton.\"; \"belum otomatis membuat nilai ekonomi kopi\"",
+        "reviewed_at": "2026-10-05T15:58:14.628Z"
+      },
+      "cluster_ai_reason": "Fokus artikel pada data panen/produksi kopi Bondowoso dan dampak ekonominya.",
+      "cluster_ai_evidence": "\"luas panen kopi pada 2025 mencapai 20.310,5 hektare...\"; \"Produksi green bean mencapai 8.913,84 ton.\"; \"Namun, besarnya produksi itu belum otomatis membuat nilai ekonomi kopi\""
     },
     {
       "judul": "10 Destinasi Kopi Terbaik Dunia 2026: Ho Chi Minh City Nomor 2",
@@ -807,10 +906,10 @@
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "cluster_ai_reviewed_at": "2026-10-05T14:48:10.565Z",
+      "cluster_ai_reviewed_at": "2026-10-05T15:58:14.628Z",
       "link_type": "publisher_article",
       "asal": "newsdata",
-      "cluster_review_version": 5,
+      "cluster_review_version": 6,
       "extraction_status": "http_error",
       "extracted_at": "2026-10-05T09:18:55Z",
       "fetch_error": "HTTP 403",
@@ -822,8 +921,8 @@
         "title_context_match": "unclear",
         "suggested_cluster_id": "",
         "reason": "Cuplikan isi terlalu terbatas untuk menyimpulkan relevansi; editor perlu membuka sumber asli.",
-        "evidence": "\"10 Destinasi Kopi Terbaik Dunia 2026: Ho Chi Minh City Nomor 2\"",
-        "reviewed_at": "2026-10-05T14:48:10.565Z"
+        "evidence": "Judul: \"10 Destinasi Kopi Terbaik Dunia 2026: Ho Chi Minh City Nomor 2\"",
+        "reviewed_at": "2026-10-05T15:58:14.628Z"
       }
     },
     {
@@ -837,8 +936,8 @@
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "cluster_ai_reviewed_at": "2026-10-05T14:48:10.565Z",
-      "cluster_review_version": 5,
+      "cluster_ai_reviewed_at": "2026-10-05T15:58:14.628Z",
+      "cluster_review_version": 6,
       "extracted_at": "2026-10-05T09:18:55Z",
       "extracted_from_url": "https://kupang.tribunnews.com/provinsi-ntt/982021/gubernur-bi-destry-damayanti-ungkap-potensi-besar-tenun-ntt-hingga-kopi",
       "resolved_url": "https://kupang.tribunnews.com/provinsi-ntt/982021/gubernur-bi-destry-damayanti-ungkap-potensi-besar-tenun-ntt-hingga-kopi",
@@ -861,12 +960,12 @@
       "retry_after": "2026-10-12T09:18:55Z",
       "cluster_review_context_hash": "d62c0ef66d8b59db55c300b059c4961943ac1fd53a13d767b98ec6965d2f3b62",
       "cluster_relevance_review": {
-        "relevance": "uncertain",
+        "relevance": "irrelevant",
         "title_context_match": "match",
         "suggested_cluster_id": "",
-        "reason": "Cuplikan sangat terbatas; disebut potensi kopi namun tanpa detail kebijakan/pasar/produksi.",
-        "evidence": "\"mengungkapkan besarnya potensi ekonomi yang dimiliki NTT, mulai dari tenun hingga kopi.\"",
-        "reviewed_at": "2026-10-05T14:48:10.565Z"
+        "reason": "Kopi hanya disebut sekilas sebagai bagian dari \"potensi\" umum, tanpa detail industri.",
+        "evidence": "Konteks: \"mengungkapkan besarnya potensi ekonomi yang dimiliki NTT, mulai dari tenun hingga kopi.\"",
+        "reviewed_at": "2026-10-05T15:58:14.628Z"
       }
     },
     {
@@ -901,16 +1000,16 @@
       "fetch_error": null,
       "retry_after": "2026-10-12T09:36:50Z",
       "published_date": "2026-10-03",
-      "cluster_ai_reviewed_at": "2026-10-05T14:48:10.565Z",
-      "cluster_review_version": 5,
+      "cluster_ai_reviewed_at": "2026-10-05T15:58:14.628Z",
+      "cluster_review_version": 6,
       "cluster_review_context_hash": "779598b36a82517d5bce8f1bfdcec40b14db66f5e190b9a58b6d274e4cda7d82",
       "cluster_relevance_review": {
         "relevance": "uncertain",
         "title_context_match": "unclear",
         "suggested_cluster_id": "",
         "reason": "Cuplikan isi terlalu terbatas untuk menyimpulkan relevansi; editor perlu membuka sumber asli.",
-        "evidence": "\"Ketika Kopi dan Seni Bertemu, Menikmati Galeri Jadi Pengalaman yang Berbeda\"",
-        "reviewed_at": "2026-10-05T14:48:10.565Z"
+        "evidence": "Judul: \"Ketika Kopi dan Seni Bertemu, Menikmati Galeri Jadi Pengalaman yang Berbeda\"",
+        "reviewed_at": "2026-10-05T15:58:14.628Z"
       }
     },
     {
@@ -924,8 +1023,8 @@
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "cluster_ai_reviewed_at": "2026-10-05T14:48:10.565Z",
-      "cluster_review_version": 5,
+      "cluster_ai_reviewed_at": "2026-10-05T15:58:14.628Z",
+      "cluster_review_version": 6,
       "extracted_at": "2026-10-05T09:18:55Z",
       "extracted_from_url": "https://mediaindonesia.com/nusantara/940278/mengintip-fasilitas-transaksi-digital-dan-kopi-turki-rest-area-tigabalata",
       "resolved_url": "https://mediaindonesia.com/nusantara/940278/mengintip-fasilitas-transaksi-digital-dan-kopi-turki-rest-area-tigabalata",
@@ -951,12 +1050,12 @@
       "published_date": "2026-10-03",
       "cluster_review_context_hash": "cb18de2ad6c36180449d21db8a7c974001d80996fcd0d9ec8fa8879107cadce9",
       "cluster_relevance_review": {
-        "relevance": "uncertain",
-        "title_context_match": "unclear",
-        "suggested_cluster_id": "",
-        "reason": "Dasar penilaian AI tidak cocok dengan kutipan yang tersedia; editor perlu memeriksa sumber asli.",
-        "evidence": "",
-        "reviewed_at": "2026-10-05T14:48:10.565Z"
+        "relevance": "relevant",
+        "title_context_match": "match",
+        "suggested_cluster_id": "kedai-konsumsi-gaya-hidup",
+        "reason": "Sorotan utama fasilitas rest area termasuk penyajian Kopi Turki; relevan ke konsumsi/kedai meski bukan fokus bisnis mendalam.",
+        "evidence": "\"Peralatan pembuatan Kopi Turki... Rest Area Tigabalata\"; \"PENGENDARA yang melintas... kini memiliki opsi tempat singgah\"",
+        "reviewed_at": "2026-10-05T15:58:14.628Z"
       }
     },
     {
@@ -1337,9 +1436,9 @@
       "sumber": "AEKI",
       "ringkasan": "Cuplikan isi: Cara membersihkan mesin espresso dimulai dengan membuang ampas, membilas portafilter dan group head, membersihkan steam wand, lalu mencuci drip tray serta bagian yang dapat dilepas. Lakukan backflush hanya jika model dan petunjuk pabrikannya mendukung; descaling adalah pekerjaan berbeda untuk kerak mineral. Di bawah ini ada langkah per komponen dan checklist untuk memastikan mesin kembali layak digunakan. Identifikasi model dan petunjuk perawatannya Sebelum menyentuh mesin, cari nama dan nomor model pada labelnya. Buka bagian care and cleaning…",
       "asal": "engine",
-      "cluster_id": "lainnya",
-      "cluster_name": "Lainnya",
-      "cluster_assignment": "unassigned",
+      "cluster_id": "barista-teknik-seduh",
+      "cluster_name": "Barista & Teknik Seduh",
+      "cluster_assignment": "ai_existing",
       "link_type": "publisher_article",
       "extracted_at": "2026-10-05T09:36:50Z",
       "extracted_from_url": "https://www.aeki-aice.org/cara-membersihkan-mesin-espresso/",
@@ -1362,17 +1461,19 @@
       "fetch_error": null,
       "retry_after": "2026-10-12T09:36:50Z",
       "published_date": "2026-09-25",
-      "cluster_ai_reviewed_at": "2026-10-05T14:48:10.565Z",
-      "cluster_review_version": 5,
+      "cluster_ai_reviewed_at": "2026-10-05T15:58:14.628Z",
+      "cluster_review_version": 6,
       "cluster_review_context_hash": "9694df2d610111181fb160d8ef21d78366697fa098258d40d98fd177bf406117",
       "cluster_relevance_review": {
-        "relevance": "uncertain",
-        "title_context_match": "unclear",
+        "relevance": "relevant",
+        "title_context_match": "match",
         "suggested_cluster_id": "barista-teknik-seduh",
-        "reason": "Judul menunjukkan topik barista/teknik, namun cuplikan tidak memuat isi artikel sehingga bukti kurang.",
-        "evidence": "\"Cara Membersihkan Mesin Espresso: Checklist Perawatan Barista\"",
-        "reviewed_at": "2026-10-05T14:48:10.565Z"
-      }
+        "reason": "Materi teknis untuk barista (perawatan mesin espresso).",
+        "evidence": "Judul: \"Cara Membersihkan Mesin Espresso: Checklist Perawatan Barista\"",
+        "reviewed_at": "2026-10-05T15:58:14.628Z"
+      },
+      "cluster_ai_reason": "Panduan perawatan mesin espresso untuk barista adalah topik inti barista/teknik seduh.",
+      "cluster_ai_evidence": "\"Cara Membersihkan Mesin Espresso: Checklist Perawatan Barista\"; \"Barista\""
     },
     {
       "judul": "Menyesap Kopi Mont Blanc, Merangkai Kemitraan Panjang RRI dan Portola Grand Arabia - RRI.co.id",
@@ -1410,16 +1511,16 @@
       "fetch_error": null,
       "retry_after": null,
       "published_date": "2026-09-25",
-      "cluster_ai_reviewed_at": "2026-10-05T14:48:10.565Z",
-      "cluster_review_version": 5,
+      "cluster_ai_reviewed_at": "2026-10-05T15:58:14.628Z",
+      "cluster_review_version": 6,
       "cluster_review_context_hash": "ddf74693a849ee4981e7f34d81a30ee25294feaeccfa48cdbe5fcc786d3c6eb0",
       "cluster_relevance_review": {
-        "relevance": "uncertain",
-        "title_context_match": "unclear",
-        "suggested_cluster_id": "",
-        "reason": "Dasar penilaian AI tidak cocok dengan kutipan yang tersedia; editor perlu memeriksa sumber asli.",
-        "evidence": "",
-        "reviewed_at": "2026-10-05T14:48:10.565Z"
+        "relevance": "relevant",
+        "title_context_match": "match",
+        "suggested_cluster_id": "kedai-konsumsi-gaya-hidup",
+        "reason": "Fokus pada sajian kopi andalan hotel dan pengalaman menikmati kopi dalam konteks kemitraan/brand.",
+        "evidence": "\"Signature Coffee Mont Blanc\"; \"menyuguhkan sajian andalan mereka: Signature Coffee Mont Blanc dan Cold Black Coffee Arabica\"",
+        "reviewed_at": "2026-10-05T15:58:14.628Z"
       }
     },
     {
@@ -1435,8 +1536,8 @@
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "cluster_ai_reviewed_at": "2026-10-05T14:48:10.565Z",
-      "cluster_review_version": 5,
+      "cluster_ai_reviewed_at": "2026-10-05T15:58:14.628Z",
+      "cluster_review_version": 6,
       "extraction_status": "http_error",
       "extracted_at": "2026-10-05T09:36:51Z",
       "fetch_error": "HTTP 403",
@@ -1448,8 +1549,8 @@
         "title_context_match": "unclear",
         "suggested_cluster_id": "",
         "reason": "Cuplikan isi terlalu terbatas untuk menyimpulkan relevansi; editor perlu membuka sumber asli.",
-        "evidence": "\"Waktu Terbaik Minum Kopi, Efeknya Bisa Cegah Sakit Jantung\"",
-        "reviewed_at": "2026-10-05T14:48:10.565Z"
+        "evidence": "Judul: \"Waktu Terbaik Minum Kopi, Efeknya Bisa Cegah Sakit Jantung - CNBC Indonesia\"",
+        "reviewed_at": "2026-10-05T15:58:14.628Z"
       }
     },
     {
@@ -1503,8 +1604,8 @@
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "cluster_ai_reviewed_at": "2026-10-05T14:48:10.565Z",
-      "cluster_review_version": 5,
+      "cluster_ai_reviewed_at": "2026-10-05T15:58:14.628Z",
+      "cluster_review_version": 6,
       "extracted_at": "2026-10-05T09:36:51Z",
       "extracted_from_url": "https://www.bankbsi.co.id/promo/coffee-drive-ev-hybrid-experience-bekasi",
       "resolved_url": "https://www.bankbsi.co.id/promo/coffee-drive-ev-hybrid-experience-bekasi",
@@ -1529,12 +1630,12 @@
       "retry_after": null,
       "cluster_review_context_hash": "2b018888a3f7f81c9fe093ab95559a77385037db9dbf9c3cf3abad83bd67f7f6",
       "cluster_relevance_review": {
-        "relevance": "uncertain",
-        "title_context_match": "unclear",
+        "relevance": "irrelevant",
+        "title_context_match": "match",
         "suggested_cluster_id": "",
-        "reason": "Dasar penilaian AI tidak cocok dengan kutipan yang tersedia; editor perlu memeriksa sumber asli.",
-        "evidence": "",
-        "reviewed_at": "2026-10-05T14:48:10.565Z"
+        "reason": "Acara otomotif bank; kopi hanya pelengkap pengalaman test drive, bukan fokus industri kopi.",
+        "evidence": "\"event ... untuk memberikan pengalaman santai menikmati kopi dengan kesempatan mencoba\"",
+        "reviewed_at": "2026-10-05T15:58:14.628Z"
       }
     },
     {
@@ -1550,8 +1651,8 @@
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "cluster_ai_reviewed_at": "2026-10-05T14:48:10.565Z",
-      "cluster_review_version": 5,
+      "cluster_ai_reviewed_at": "2026-10-05T15:58:14.628Z",
+      "cluster_review_version": 6,
       "extracted_at": "2026-10-05T09:36:51Z",
       "extracted_from_url": "https://mediaindonesia.com/kesehatan/937246/viral-di-jerman-dan-as-benarkah-ampas-kopi-efektif-hilangkan-bau-kloset",
       "resolved_url": "https://mediaindonesia.com/kesehatan/937246/viral-di-jerman-dan-as-benarkah-ampas-kopi-efektif-hilangkan-bau-kloset",
@@ -1580,9 +1681,9 @@
         "relevance": "irrelevant",
         "title_context_match": "match",
         "suggested_cluster_id": "",
-        "reason": "Topik tips kebersihan rumah tangga; tidak terkait proses/market/kebijakan/kedai/barista industri kopi.",
-        "evidence": "\"penggunaan ampas kopi (coffee grounds) sebagai pembersih kloset alami\"",
-        "reviewed_at": "2026-10-05T14:48:10.565Z"
+        "reason": "Tips kebersihan/rumah tangga; bukan isu bisnis/industri kopi.",
+        "evidence": "\"tren media sosial terbaru yang mendorong penggunaan ampas kopi (coffee grounds) sebagai pembersih kloset alami\"",
+        "reviewed_at": "2026-10-05T15:58:14.628Z"
       }
     },
     {
@@ -1618,16 +1719,16 @@
       "content_excerpt": "",
       "fetch_error": null,
       "retry_after": "2026-10-12T09:36:52Z",
-      "cluster_ai_reviewed_at": "2026-10-05T14:48:10.565Z",
-      "cluster_review_version": 5,
+      "cluster_ai_reviewed_at": "2026-10-05T15:58:14.628Z",
+      "cluster_review_version": 6,
       "cluster_review_context_hash": "1a1e2b1ebae519c6869d710191f020be2a2cccc9f5b0a771cb0249462f419b21",
       "cluster_relevance_review": {
         "relevance": "uncertain",
         "title_context_match": "unclear",
         "suggested_cluster_id": "",
         "reason": "Cuplikan isi terlalu terbatas untuk menyimpulkan relevansi; editor perlu membuka sumber asli.",
-        "evidence": "\"Lini Kopi Surabaya: Coffe Homey di Surabaya Selatan\"",
-        "reviewed_at": "2026-10-05T14:48:10.565Z"
+        "evidence": "Judul: \"Lini Kopi Surabaya: Coffe Homey di Surabaya Selatan\"",
+        "reviewed_at": "2026-10-05T15:58:14.628Z"
       }
     },
     {
@@ -1648,16 +1749,16 @@
       "fetch_error": "HTTP 403",
       "retry_after": "2026-10-12T09:36:52Z",
       "date_enrichment_version": 6,
-      "cluster_ai_reviewed_at": "2026-10-05T14:48:10.565Z",
-      "cluster_review_version": 5,
+      "cluster_ai_reviewed_at": "2026-10-05T15:58:14.628Z",
+      "cluster_review_version": 6,
       "cluster_review_context_hash": "24caacbb5d7e431a8d9974425b9ad63f12f406fb0e732a7494973e9207cb6293",
       "cluster_relevance_review": {
         "relevance": "uncertain",
         "title_context_match": "unclear",
         "suggested_cluster_id": "",
         "reason": "Cuplikan isi terlalu terbatas untuk menyimpulkan relevansi; editor perlu membuka sumber asli.",
-        "evidence": "\"Perkuat Communal Branding Gula Aren dan Kopi\"",
-        "reviewed_at": "2026-10-05T14:48:10.565Z"
+        "evidence": "Judul: \"DKUPP Kabupaten Probolinggo Perkuat Communal Branding Gula Aren dan Kopi\"",
+        "reviewed_at": "2026-10-05T15:58:14.628Z"
       }
     },
     {
@@ -1667,9 +1768,9 @@
       "sumber": "AEKI",
       "ringkasan": "Cuplikan isi: Pertanyaan interview barista umumnya digunakan untuk menilai tiga hal: alasan Anda melamar, bukti kemampuan yang relevan, dan cara Anda bersikap dalam pekerjaan pelayanan. Kandidat pemula tidak harus berpura-pura sudah berpengalaman. Jawaban yang jujur, spesifik, dan didukung contoh kecil justru lebih meyakinkan daripada klaim besar yang sulit dibuktikan. Cara menggunakan kerangka jawaban tanpa menghafal Jangan menghafal contoh jawaban kata demi kata. Pewawancara dapat mengubah susunan pertanyaan atau meminta rincian lanjutan. Jika jawaban…",
       "asal": "engine",
-      "cluster_id": "lainnya",
-      "cluster_name": "Lainnya",
-      "cluster_assignment": "unassigned",
+      "cluster_id": "barista-teknik-seduh",
+      "cluster_name": "Barista & Teknik Seduh",
+      "cluster_assignment": "ai_existing",
       "link_type": "publisher_article",
       "extracted_at": "2026-10-05T09:36:53Z",
       "extracted_from_url": "https://www.aeki-aice.org/pertanyaan-interview-barista/",
@@ -1692,17 +1793,19 @@
       "fetch_error": null,
       "retry_after": "2026-10-12T09:36:53Z",
       "published_date": "2026-09-24",
-      "cluster_ai_reviewed_at": "2026-10-05T14:48:10.565Z",
-      "cluster_review_version": 5,
+      "cluster_ai_reviewed_at": "2026-10-05T15:58:14.628Z",
+      "cluster_review_version": 6,
       "cluster_review_context_hash": "7a3e8665723ce5c46691ebf7258668d479211a9b252611324ed928915fa7398d",
       "cluster_relevance_review": {
-        "relevance": "uncertain",
-        "title_context_match": "unclear",
+        "relevance": "relevant",
+        "title_context_match": "match",
         "suggested_cluster_id": "barista-teknik-seduh",
-        "reason": "Judul mengarah ke materi karier barista; namun cuplikan tidak memuat isi sehingga bukti kurang untuk penetapan otomatis.",
-        "evidence": "\"12 Pertanyaan Interview Barista dan Kerangka Jawaban untuk Pemula\"",
-        "reviewed_at": "2026-10-05T14:48:10.565Z"
-      }
+        "reason": "Topik kinerja/rekruitmen barista termasuk klaster Barista & Teknik Seduh.",
+        "evidence": "Judul: \"12 Pertanyaan Interview Barista dan Kerangka Jawaban untuk Pemula\"",
+        "reviewed_at": "2026-10-05T15:58:14.628Z"
+      },
+      "cluster_ai_reason": "Konten khusus profesi barista (wawancara) masuk ke klaster Barista & Teknik Seduh.",
+      "cluster_ai_evidence": "\"12 Pertanyaan Interview Barista dan Kerangka Jawaban untuk Pemula\"; \"Barista\""
     },
     {
       "judul": "Meracik Kopi, Merawat Pengalaman: Kisah Fellow Coffee dan Budaya Kopi - RRI.co.id",
@@ -1820,12 +1923,12 @@
       "sumber": "AEKI",
       "ringkasan": "Cuplikan isi: CV barista pemula sebaiknya dibuat satu halaman dan langsung menunjukkan keterampilan yang relevan, cara keterampilan itu dipelajari, serta bukti praktiknya. Pengalaman kerja di kafe bukan satu-satunya bahan yang dapat dicantumkan; pelatihan, latihan terukur, kegiatan organisasi, dan pekerjaan layanan pelanggan juga bisa bernilai. Yang tidak boleh dilakukan adalah menaikkan level kemampuan hanya agar CV terlihat penuh. Artikel ini menyediakan contoh CV siap sunting sekaligus cara menulis skill barista di CV secara jujur. Contoh CV barista…",
       "asal": "engine",
-      "cluster_id": "lainnya",
-      "cluster_name": "Lainnya",
-      "cluster_assignment": "unassigned",
+      "cluster_id": "barista-teknik-seduh",
+      "cluster_name": "Barista & Teknik Seduh",
+      "cluster_assignment": "ai_existing",
       "link_type": "publisher_article",
-      "cluster_ai_reviewed_at": "2026-10-05T14:48:10.565Z",
-      "cluster_review_version": 5,
+      "cluster_ai_reviewed_at": "2026-10-05T15:58:14.628Z",
+      "cluster_review_version": 6,
       "extracted_at": "2026-10-05T09:19:00Z",
       "extracted_from_url": "https://www.aeki-aice.org/contoh-cv-barista-pemula/",
       "resolved_url": "https://www.aeki-aice.org/contoh-cv-barista-pemula/",
@@ -1849,13 +1952,15 @@
       "published_date": "2026-09-23",
       "cluster_review_context_hash": "9705531ae71814ae5961f2e919136b4547d358731051dec43fd612178bddf989",
       "cluster_relevance_review": {
-        "relevance": "uncertain",
-        "title_context_match": "unclear",
-        "suggested_cluster_id": "",
-        "reason": "Judul terkait karier barista, tetapi cuplikan tidak memuat isi; perlu verifikasi sebelum klasifikasi.",
-        "evidence": "\"Contoh CV Barista Pemula dan Cara Menulis Skill dengan Jujur\"",
-        "reviewed_at": "2026-10-05T14:48:10.565Z"
-      }
+        "relevance": "relevant",
+        "title_context_match": "match",
+        "suggested_cluster_id": "barista-teknik-seduh",
+        "reason": "Topik CV barista relevan dengan profesi barista dalam industri kopi.",
+        "evidence": "Judul: \"Contoh CV Barista Pemula dan Cara Menulis Skill dengan Jujur\"",
+        "reviewed_at": "2026-10-05T15:58:14.628Z"
+      },
+      "cluster_ai_reason": "Panduan CV untuk barista adalah materi inti SDM barista dalam klaster Barista & Teknik Seduh.",
+      "cluster_ai_evidence": "\"Contoh CV Barista Pemula dan Cara Menulis Skill dengan Jujur\"; \"Barista\""
     },
     {
       "judul": "Cara Tamping Kopi untuk Pemula: Posisi, Kerataan, dan Latihan",
@@ -1900,12 +2005,12 @@
       "sumber": "AEKI",
       "ringkasan": "Cuplikan isi: SOP barista untuk opening dan closing perlu menetapkan pekerjaan, penanggung jawab, kriteria selesai, serta tindakan ketika hasil pemeriksaan belum sesuai. Dengan begitu, tim dapat menentukan kapan bar siap menerima pesanan dan kapan area kerja aman ditinggalkan. Checklist juga membantu shift berikutnya memahami masalah yang masih terbuka tanpa mengandalkan ingatan rekan kerja. Berikut contoh yang bisa disesuaikan dengan peralatan, menu, dan pembagian tugas di kedai Anda. Batas penggunaan contoh SOP barista opening dan closing Contoh ini…",
       "asal": "engine",
-      "cluster_id": "lainnya",
-      "cluster_name": "Lainnya",
-      "cluster_assignment": "unassigned",
+      "cluster_id": "barista-teknik-seduh",
+      "cluster_name": "Barista & Teknik Seduh",
+      "cluster_assignment": "ai_existing",
       "link_type": "publisher_article",
-      "cluster_ai_reviewed_at": "2026-10-05T14:48:10.565Z",
-      "cluster_review_version": 5,
+      "cluster_ai_reviewed_at": "2026-10-05T15:58:14.628Z",
+      "cluster_review_version": 6,
       "extracted_at": "2026-10-05T09:19:02Z",
       "extracted_from_url": "https://www.aeki-aice.org/sop-barista-opening-closing/",
       "resolved_url": "https://www.aeki-aice.org/sop-barista-opening-closing/",
@@ -1929,13 +2034,15 @@
       "published_date": "2026-09-21",
       "cluster_review_context_hash": "fd125461006c34a340925fe217fc0208f15cddcce7df54b1cebbbe523c1535dd",
       "cluster_relevance_review": {
-        "relevance": "uncertain",
-        "title_context_match": "unclear",
+        "relevance": "relevant",
+        "title_context_match": "match",
         "suggested_cluster_id": "barista-teknik-seduh",
-        "reason": "Dasar penilaian AI tidak cocok dengan kutipan yang tersedia; editor perlu memeriksa sumber asli.",
-        "evidence": "",
-        "reviewed_at": "2026-10-05T14:48:10.565Z"
-      }
+        "reason": "SOP barista merupakan bagian dari operasional seduh/kedai.",
+        "evidence": "Judul: \"SOP Barista untuk Opening dan Closing: Contoh Checklist Shift\"",
+        "reviewed_at": "2026-10-05T15:58:14.628Z"
+      },
+      "cluster_ai_reason": "SOP operasional barista adalah materi teknis untuk barista/seduh.",
+      "cluster_ai_evidence": "\"SOP Barista untuk Opening dan Closing: Contoh Checklist Shift\"; \"Barista\""
     },
     {
       "judul": "Tanamera Coffee at GJAW",
@@ -1943,9 +2050,9 @@
       "tanggal": "2026-09-19",
       "sumber": "Tanamera",
       "ringkasan": "Cuplikan isi: Brewing Across the Automotive Scene Tanamera Coffee continued to bring Indonesian specialty coffee into the automotive scene through GAIKINDO Jakarta Auto Week (GJAW) at ICE BSD City , one of Indonesia's major year-end automotive exhibitions. Our GJAW journey began in 2024, supporting Mandiri Finance and BYD , bringing coffee hospitality into their brand activations throughout the exhibition. In 2025, our presence grew further as Tanamera Coffee became part of the Changan launch , alongside collaborations with Mercedes-Benz and UPPF . From…",
-      "cluster_id": "lainnya",
-      "cluster_name": "Lainnya",
-      "cluster_assignment": "unassigned",
+      "cluster_id": "event-kompetisi",
+      "cluster_name": "Event & Kompetisi",
+      "cluster_assignment": "ai_existing",
       "link_type": "publisher_article",
       "extracted_at": "2026-10-05T09:36:55Z",
       "extracted_from_url": "https://www.tanameracoffee.co.id/news/rfbgao4rsu",
@@ -1967,17 +2074,19 @@
       "content_excerpt": "Official Website of Tanamera Coffee IndonesiaLoading...#TasteThe Origins#TasteThe OriginsTanamera Coffee at GJAWIit@tanameracoffee.com19 Sep 2026Share this article :Brewing Across the Automotive SceneTanamera Coffee continued to bring Indonesian specialty coffee into the automotive scene through GAIKINDO Jakarta Auto Week (GJAW) at ICE BSD City, one of Indonesia's major year-end automotive exhibitions.Our GJAW journe",
       "fetch_error": null,
       "retry_after": null,
-      "cluster_ai_reviewed_at": "2026-10-05T14:48:10.565Z",
-      "cluster_review_version": 5,
+      "cluster_ai_reviewed_at": "2026-10-05T15:58:14.628Z",
+      "cluster_review_version": 6,
       "cluster_review_context_hash": "64e504950a62a9d87e7df5d42b8ab490b007228b9416c8bbd21126ca551e9a98",
       "cluster_relevance_review": {
-        "relevance": "uncertain",
-        "title_context_match": "unclear",
+        "relevance": "relevant",
+        "title_context_match": "match",
         "suggested_cluster_id": "event-kompetisi",
-        "reason": "Dasar penilaian AI tidak cocok dengan kutipan yang tersedia; editor perlu memeriksa sumber asli.",
-        "evidence": "",
-        "reviewed_at": "2026-10-05T14:48:10.565Z"
-      }
+        "reason": "Partisipasi merek kopi pada event (GJAW) menjadi pokok berita.",
+        "evidence": "\"through GAIKINDO Jakarta Auto Week (GJAW) at ICE BSD City\"",
+        "reviewed_at": "2026-10-05T15:58:14.628Z"
+      },
+      "cluster_ai_reason": "Berita berfokus pada partisipasi Tanamera Coffee di ajang GAIKINDO Jakarta Auto Week (GJAW).",
+      "cluster_ai_evidence": "\"Tanamera Coffee continued to bring Indonesian specialty coffee into the automotive scene through GAIKINDO Jakarta Auto Week (GJAW) at ICE BSD City\""
     },
     {
       "judul": "Cara Menilai Kualitas Kopi untuk Buyer Internasional",
@@ -2019,9 +2128,9 @@
       "tanggal": "2026-09-14",
       "sumber": "Kemendag",
       "ringkasan": "Cuplikan isi: Klaten, 14 September 2026 – Cerita menembus pasar global tidak selalu berasal dari perusahaan besar dengan fasilitas produksi megah. Sebuah usaha pengolahan kayu di Kabupaten Klaten, Jawa Tengah, yaitu Citra Fajar Utama (CFU), membuktikan bahwa keberanian melihat peluang, menjaga kualitas, dan terus belajar dapat membawa produk daerah menembus pasar global. Pemilik CFU, Doddik Sulistiono, membangun usahanya pada 1998 dengan menyewa sebuah tempat penggergajian di kawasan Klaten. Dari situ, usaha pengolahan kayu Doddik makin berkembang. Ia pun…",
-      "cluster_id": "lainnya",
-      "cluster_name": "Lainnya",
-      "cluster_assignment": "unassigned",
+      "cluster_id": "ekspor-daya-saing",
+      "cluster_name": "Ekspor & Daya Saing",
+      "cluster_assignment": "ai_existing",
       "link_type": "publisher_article",
       "extracted_at": "2026-10-05T09:36:56Z",
       "extracted_from_url": "https://www.kemendag.go.id/berita/siaran-pers/kisah-cfu-asal-klaten-menembus-pasar-lokal-dan-global-dari-penggergajian-sederhana-ke-pemasok-perlengkapan-900-gerai-kopi",
@@ -2045,17 +2154,19 @@
       "content_excerpt": "Beranda Berita Siaran Pers By Kementerian Perdagangan RI Jumat, 04 September 2026 Pukul 13:55 WIB 1458 Kisah CFU Asal Klaten Menembus Pasar Lokal dan Global, Dari Penggergajian Sederhana ke Pemasok Perlengkapan 900 Gerai Kopi Klaten, 14 September 2026 – Cerita menembus pasar global tidak selalu berasal dari perusahaan besar dengan fasilitas produksi megah. Sebuah usaha pengolahan kayu di Kabupaten Klaten, Jawa Tengah",
       "fetch_error": null,
       "retry_after": null,
-      "cluster_ai_reviewed_at": "2026-10-05T14:48:10.565Z",
-      "cluster_review_version": 5,
+      "cluster_ai_reviewed_at": "2026-10-05T15:58:14.628Z",
+      "cluster_review_version": 6,
       "cluster_review_context_hash": "447d71d06ea6fef524cbffab43b970a58dbdab90b441185fae7442a4c5214943",
       "cluster_relevance_review": {
-        "relevance": "uncertain",
-        "title_context_match": "unclear",
+        "relevance": "relevant",
+        "title_context_match": "match",
         "suggested_cluster_id": "ekspor-daya-saing",
-        "reason": "Dasar penilaian AI tidak cocok dengan kutipan yang tersedia; editor perlu memeriksa sumber asli.",
-        "evidence": "",
-        "reviewed_at": "2026-10-05T14:48:10.565Z"
-      }
+        "reason": "Kisah menembus pasar global dan memasok perlengkapan untuk gerai kopi merupakan isu ekspor/daya saing.",
+        "evidence": "\"Menembus Pasar Lokal dan Global\"; \"Pemasok Perlengkapan 900 Gerai Kopi\"",
+        "reviewed_at": "2026-10-05T15:58:14.628Z"
+      },
+      "cluster_ai_reason": "Kisah daya saing dan penetrasi pasar global pemasok perlengkapan gerai kopi.",
+      "cluster_ai_evidence": "\"Menembus Pasar Lokal dan Global\"; \"Pemasok Perlengkapan 900 Gerai Kopi\""
     },
     {
       "judul": "Thai Tea Preferences: Who Rules the Market?",
@@ -2067,9 +2178,9 @@
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "cluster_ai_reviewed_at": "2026-10-05T14:48:10.565Z",
+      "cluster_ai_reviewed_at": "2026-10-05T15:58:14.628Z",
       "link_type": "publisher_article",
-      "cluster_review_version": 5,
+      "cluster_review_version": 6,
       "extracted_at": "2026-10-05T09:19:05Z",
       "extracted_from_url": "https://insight.jakpat.net/thai-tea-preferences-who-rules-the-market/",
       "resolved_url": "https://insight.jakpat.net/thai-tea-preferences-who-rules-the-market/",
@@ -2099,8 +2210,8 @@
         "title_context_match": "unclear",
         "suggested_cluster_id": "",
         "reason": "Cuplikan isi terlalu terbatas untuk menyimpulkan relevansi; editor perlu membuka sumber asli.",
-        "evidence": "",
-        "reviewed_at": "2026-10-05T14:48:10.565Z"
+        "evidence": "\"Thai Tea Preferences: Who Rules the Market?\"",
+        "reviewed_at": "2026-10-05T15:58:14.628Z"
       }
     },
     {
@@ -6192,9 +6303,9 @@
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "cluster_ai_reviewed_at": "2026-10-05T14:48:10.565Z",
+      "cluster_ai_reviewed_at": "2026-10-05T15:58:14.628Z",
       "link_type": "publisher_article",
-      "cluster_review_version": 5,
+      "cluster_review_version": 6,
       "extracted_at": "2026-10-05T09:36:57Z",
       "extracted_from_url": "https://insight.jakpat.net/thai-tea-consumption-top-brands/",
       "resolved_url": "https://insight.jakpat.net/thai-tea-consumption-top-brands/",
@@ -6224,8 +6335,8 @@
         "title_context_match": "unclear",
         "suggested_cluster_id": "",
         "reason": "Cuplikan isi terlalu terbatas untuk menyimpulkan relevansi; editor perlu membuka sumber asli.",
-        "evidence": "",
-        "reviewed_at": "2026-10-05T14:48:10.565Z"
+        "evidence": "\"Thai Tea Consumption & Top Brands\"",
+        "reviewed_at": "2026-10-05T15:58:14.628Z"
       }
     },
     {
@@ -6239,8 +6350,8 @@
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
       "link_type": "publisher_article",
-      "cluster_ai_reviewed_at": "2026-10-05T14:48:10.565Z",
-      "cluster_review_version": 5,
+      "cluster_ai_reviewed_at": "2026-10-05T15:58:14.628Z",
+      "cluster_review_version": 6,
       "extracted_at": "2026-10-05T09:36:57Z",
       "extracted_from_url": "https://www.kemendag.go.id/berita/siaran-pers/dorong-akses-pasar-dua-arah-kemendag-perkuat-perdagangan-indonesia-cili",
       "resolved_url": "https://www.kemendag.go.id/berita/siaran-pers/dorong-akses-pasar-dua-arah-kemendag-perkuat-perdagangan-indonesia-cili",
@@ -6265,12 +6376,12 @@
       "retry_after": null,
       "cluster_review_context_hash": "669e777fb515550300c318cef5e6f29152743575c27c2ae5a88149af2ceceec2",
       "cluster_relevance_review": {
-        "relevance": "uncertain",
-        "title_context_match": "unclear",
+        "relevance": "irrelevant",
+        "title_context_match": "match",
         "suggested_cluster_id": "",
-        "reason": "Dasar penilaian AI tidak cocok dengan kutipan yang tersedia; editor perlu memeriksa sumber asli.",
-        "evidence": "",
-        "reviewed_at": "2026-10-05T14:48:10.565Z"
+        "reason": "Rilis tentang penguatan perdagangan Indonesia–Cili; kopi hanya disebut sebagai salah satu produk, bukan fokus pokok.",
+        "evidence": "\"produk unggulan nasional, seperti makanan olahan, kopi, kakao, rempah-rempah\"",
+        "reviewed_at": "2026-10-05T15:58:14.628Z"
       }
     },
     {
@@ -6306,16 +6417,16 @@
       "content_excerpt": "Beranda Berita Siaran Pers By Kementerian Perdagangan RI Jumat, 28 Agustus 2026 Pukul 08:14 WIB 1294 Reaktivasi Perundingan Perdagangan Indonesia-Maroko, Wamendag Roro Dorong Negosiasi Tuntas di 2027 Reaktivasi Perundingan Perdagangan Indonesia-Maroko, Wamendag Roro Dorong Negosiasi Tuntas di 2027Jakarta, 28 Agustus 2026 — Wakil Menteri Perdagangan RI, Dyah Roro Esti Widya Putri mendorong percepatan perundingan Perja",
       "fetch_error": null,
       "retry_after": null,
-      "cluster_ai_reviewed_at": "2026-10-05T14:48:10.565Z",
-      "cluster_review_version": 5,
+      "cluster_ai_reviewed_at": "2026-10-05T15:58:14.628Z",
+      "cluster_review_version": 6,
       "cluster_review_context_hash": "9352a69de05f7e14085ad4204c43d92b69dd67aa62ddc309297865fc41e97d70",
       "cluster_relevance_review": {
         "relevance": "uncertain",
-        "title_context_match": "unclear",
+        "title_context_match": "match",
         "suggested_cluster_id": "",
-        "reason": "Dasar penilaian AI tidak cocok dengan kutipan yang tersedia; editor perlu memeriksa sumber asli.",
-        "evidence": "",
-        "reviewed_at": "2026-10-05T14:48:10.565Z"
+        "reason": "Fokus artikel perundingan dagang; kopi muncul sebagai salah satu ekspor utama ke Maroko tetapi tidak menjadi bahasan mendalam.",
+        "evidence": "\"ekspor utama berupa kopi, ban pneumatik baru, lemak dan minyak hewani dan nabati\"",
+        "reviewed_at": "2026-10-05T15:58:14.628Z"
       }
     },
     {
@@ -6329,8 +6440,8 @@
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
       "link_type": "publisher_article",
-      "cluster_ai_reviewed_at": "2026-10-05T14:48:10.565Z",
-      "cluster_review_version": 5,
+      "cluster_ai_reviewed_at": "2026-10-05T15:58:14.628Z",
+      "cluster_review_version": 6,
       "extracted_at": "2026-10-05T09:36:57Z",
       "extracted_from_url": "https://www.kemendag.go.id/berita/siaran-pers/kemendag-selaraskan-program-pengembangan-ekspor-untuk-pacu-ekspor-jawa-dan-sumatra",
       "resolved_url": "https://www.kemendag.go.id/berita/siaran-pers/kemendag-selaraskan-program-pengembangan-ekspor-untuk-pacu-ekspor-jawa-dan-sumatra",
@@ -6356,11 +6467,11 @@
       "cluster_review_context_hash": "40f2891024652066833fb069797d0a8a0a4c3f0a697f3b561b97c135b7cfcc7c",
       "cluster_relevance_review": {
         "relevance": "uncertain",
-        "title_context_match": "unclear",
+        "title_context_match": "match",
         "suggested_cluster_id": "",
-        "reason": "Dasar penilaian AI tidak cocok dengan kutipan yang tersedia; editor perlu memeriksa sumber asli.",
-        "evidence": "",
-        "reviewed_at": "2026-10-05T14:48:10.565Z"
+        "reason": "Acara pengembangan ekspor lintas komoditas; kopi disebut sebagai contoh pelaku dan kebutuhan pengembangan kapasitas, bukan fokus tunggal.",
+        "evidence": "\"menggerakkan kopi dari Ogan Komering Ulu (OKU) Selatan, Pagar Alam, Lahat, Empat Lawang, hingga Muara Enim di Sumatra Selatan.\"",
+        "reviewed_at": "2026-10-05T15:58:14.628Z"
       }
     },
     {
@@ -6369,12 +6480,12 @@
       "tanggal": "2026-08-22",
       "sumber": "Kemendag",
       "ringkasan": "Cuplikan isi: Bandung, 22 Agustus 2026 – Kementerian Perdagangan bersama Pemerintah Provinsi Jawa Barat melepas ekspor 10 ton biji kopi mentah (green bean) produksi Java Halu Coffee senilai USD 155 ribu atau setara Rp2,64 miliar ke Inggris. Pelepasan ekspor berlangsung di Kabupaten Bandung Barat, Jawa Barat, Selasa (18/8). Direktur Jenderal Pengembangan Ekspor Nasional Kemendag, Fajarini Puntodewi, mengatakan, ekspor kopi Java Halu Coffee semakin membuktikan potensi kopi Indonesia di pasar internasional. Capaian tersebut juga menunjukkan pentingnya…",
-      "cluster_id": "lainnya",
-      "cluster_name": "Lainnya",
-      "cluster_assignment": "unassigned",
+      "cluster_id": "ekspor-daya-saing",
+      "cluster_name": "Ekspor & Daya Saing",
+      "cluster_assignment": "ai_existing",
       "link_type": "publisher_article",
-      "cluster_ai_reviewed_at": "2026-10-05T14:48:10.565Z",
-      "cluster_review_version": 5,
+      "cluster_ai_reviewed_at": "2026-10-05T15:58:14.628Z",
+      "cluster_review_version": 6,
       "extracted_at": "2026-10-05T09:37:03Z",
       "extracted_from_url": "https://www.kemendag.go.id/berita/siaran-pers/kemendag-perkuat-kolaborasi-ekspor-dengan-pemerintah-daerah-lepas-ekspor-kopi-jawa-barat-senilai-rp264-miliar-ke-inggris",
       "resolved_url": "https://www.kemendag.go.id/berita/siaran-pers/kemendag-perkuat-kolaborasi-ekspor-dengan-pemerintah-daerah-lepas-ekspor-kopi-jawa-barat-senilai-rp264-miliar-ke-inggris",
@@ -6399,13 +6510,15 @@
       "retry_after": null,
       "cluster_review_context_hash": "463d9fbf5217a3d57ffe4032a461928875334d8b82367b738c98db38e49467df",
       "cluster_relevance_review": {
-        "relevance": "uncertain",
-        "title_context_match": "unclear",
+        "relevance": "relevant",
+        "title_context_match": "match",
         "suggested_cluster_id": "ekspor-daya-saing",
-        "reason": "Dasar penilaian AI tidak cocok dengan kutipan yang tersedia; editor perlu memeriksa sumber asli.",
-        "evidence": "",
-        "reviewed_at": "2026-10-05T14:48:10.565Z"
-      }
+        "reason": "Berita spesifik tentang ekspor kopi Jabar (10 ton green bean) ke Inggris; pokok isi jelas terkait ekspor kopi.",
+        "evidence": "\"melepas ekspor 10 ton biji kopi mentah (green bean) produksi Java Halu Coffee ... ke Inggris.\"",
+        "reviewed_at": "2026-10-05T15:58:14.628Z"
+      },
+      "cluster_ai_reason": "Fokus utama artikel adalah pelepasan ekspor kopi Jabar (10 ton green bean) ke Inggris, sesuai kategori Ekspor & Daya Saing.",
+      "cluster_ai_evidence": "\"melepas ekspor 10 ton biji kopi mentah (green bean) produksi Java Halu Coffee senilai USD 155 ribu atau setara Rp2,64 miliar ke Inggris.\""
     },
     {
       "judul": "Periode Januari—Juli 2026, Business Matching Kemendag  Fasilitasi 1.021 UMKM dan Catatkan Rp5,95 Triliun",
@@ -6418,8 +6531,8 @@
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
       "link_type": "publisher_article",
-      "cluster_ai_reviewed_at": "2026-10-05T14:48:10.565Z",
-      "cluster_review_version": 5,
+      "cluster_ai_reviewed_at": "2026-10-05T15:58:14.628Z",
+      "cluster_review_version": 6,
       "extracted_at": "2026-10-05T09:37:04Z",
       "extracted_from_url": "https://www.kemendag.go.id/berita/siaran-pers/periode-januari-juli-2026-business-matching-kemendag-fasilitasi-1021-umkm-dan-catatkan-rp595-triliun",
       "resolved_url": "https://www.kemendag.go.id/berita/siaran-pers/periode-januari-juli-2026-business-matching-kemendag-fasilitasi-1021-umkm-dan-catatkan-rp595-triliun",
@@ -6444,12 +6557,12 @@
       "retry_after": null,
       "cluster_review_context_hash": "9cf6e5d8a474a1d13b103c4e0e0473d87d88584899ca0f21fe19c1e1d9334897",
       "cluster_relevance_review": {
-        "relevance": "uncertain",
-        "title_context_match": "unclear",
+        "relevance": "irrelevant",
+        "title_context_match": "match",
         "suggested_cluster_id": "",
-        "reason": "Dasar penilaian AI tidak cocok dengan kutipan yang tersedia; editor perlu memeriksa sumber asli.",
-        "evidence": "",
-        "reviewed_at": "2026-10-05T14:48:10.565Z"
+        "reason": "Laporan business matching multi-komoditas; kopi hanya bagian dari daftar produk, bukan fokus substansial.",
+        "evidence": "\"kopi, furnitur, herbal, arang kelapa, dan briket\"",
+        "reviewed_at": "2026-10-05T15:58:14.628Z"
       }
     },
     {
@@ -6458,9 +6571,9 @@
       "tanggal": "2026-08-12",
       "sumber": "Tanamera",
       "ringkasan": "Cuplikan isi: Tanamera Coffee returned to GIIAS 2026, bringing Indonesian specialty coffee to the booths of Mitsubishi, Polytron, KIA, and UPPF. Our GIIAS journey started in 2021 with Hyundai and FUSO. We returned in 2024 as Mitsubishi's official coffee partner, and by 2025 and 2026, our presence had grown to four brands. At every booth, coffee did more than serve. It welcomed guests and set the tone for good conversation. From automotive exhibitions to hospitality and lifestyle spaces, this growth reflects where Tanamera Coffee is headed next. Taste the…",
-      "cluster_id": "lainnya",
-      "cluster_name": "Lainnya",
-      "cluster_assignment": "unassigned",
+      "cluster_id": "kedai-konsumsi-gaya-hidup",
+      "cluster_name": "Kedai, Konsumsi & Gaya Hidup",
+      "cluster_assignment": "ai_existing",
       "link_type": "publisher_article",
       "extracted_at": "2026-10-05T09:37:10Z",
       "extracted_from_url": "https://www.tanameracoffee.co.id/news/mlubja7ifs",
@@ -6482,17 +6595,19 @@
       "content_excerpt": "Official Website of Tanamera Coffee Indonesia#TasteThe Origins#TasteThe OriginsCoffee in Motion: Tanamera Coffee at GIIAS 2026AAdministrator12 Aug 2026Share this article :Tanamera Coffee returned to GIIAS 2026, bringing Indonesian specialty coffee to the booths of Mitsubishi, Polytron, KIA, and UPPF.Our GIIAS journey started in 2021 with Hyundai and FUSO. We returned in 2024 as Mitsubishi's official coffee partner, a",
       "fetch_error": null,
       "retry_after": null,
-      "cluster_ai_reviewed_at": "2026-10-05T14:48:10.565Z",
-      "cluster_review_version": 5,
+      "cluster_ai_reviewed_at": "2026-10-05T15:58:14.628Z",
+      "cluster_review_version": 6,
       "cluster_review_context_hash": "95d8f160b0752e8e47e3b0a4a69ddf3fd5938038ebec50631c6891eaa3bca86d",
       "cluster_relevance_review": {
-        "relevance": "uncertain",
-        "title_context_match": "unclear",
-        "suggested_cluster_id": "event-kompetisi",
-        "reason": "Dasar penilaian AI tidak cocok dengan kutipan yang tersedia; editor perlu memeriksa sumber asli.",
-        "evidence": "",
-        "reviewed_at": "2026-10-05T14:48:10.565Z"
-      }
+        "relevance": "relevant",
+        "title_context_match": "match",
+        "suggested_cluster_id": "kedai-konsumsi-gaya-hidup",
+        "reason": "Aktivasi Tanamera di GIIAS menyajikan kopi spesialti; relevan dengan konsumsi/brand coffee shop.",
+        "evidence": "\"bringing Indonesian specialty coffee to the booths of Mitsubishi, Polytron, KIA, and UPPF.\"",
+        "reviewed_at": "2026-10-05T15:58:14.628Z"
+      },
+      "cluster_ai_reason": "Aktivasi brand kopi spesialti Tanamera di ajang otomotif GIIAS; relevan dengan konsumsi/brand coffee shop.",
+      "cluster_ai_evidence": "\"Tanamera Coffee returned to GIIAS 2026, bringing Indonesian specialty coffee to the booths of Mitsubishi, Polytron, KIA, and UPPF.\""
     },
     {
       "judul": "Gandeng Ritel Modern untuk Perluas Akses Pasar UMKM, Mendag Busan Resmikan “Pojok Product Placement Pilihan Busan”",
@@ -6504,9 +6619,9 @@
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "cluster_ai_reviewed_at": "2026-10-05T14:48:10.565Z",
+      "cluster_ai_reviewed_at": "2026-10-05T15:58:14.628Z",
       "link_type": "publisher_article",
-      "cluster_review_version": 5,
+      "cluster_review_version": 6,
       "extracted_at": "2026-10-05T09:37:12Z",
       "extracted_from_url": "https://www.kemendag.go.id/berita/siaran-pers/gandeng-ritel-modern-untuk-perluas-akses-pasar-umkm-mendag-busan-resmikan-pojok-product-placement-pilihan-busan",
       "resolved_url": "https://www.kemendag.go.id/berita/siaran-pers/gandeng-ritel-modern-untuk-perluas-akses-pasar-umkm-mendag-busan-resmikan-pojok-product-placement-pilihan-busan",
@@ -6532,11 +6647,11 @@
       "cluster_review_context_hash": "7099de39ce2269531885e7d1575e617dccda52178c026a051b83d6c7c25835c0",
       "cluster_relevance_review": {
         "relevance": "uncertain",
-        "title_context_match": "unclear",
+        "title_context_match": "match",
         "suggested_cluster_id": "",
-        "reason": "Dasar penilaian AI tidak cocok dengan kutipan yang tersedia; editor perlu memeriksa sumber asli.",
-        "evidence": "",
-        "reviewed_at": "2026-10-05T14:48:10.565Z"
+        "reason": "Fokus program PPPB dan akses pasar UMKM; \"Point Coffee\" disebut saat peresmian, namun kopi bukan inti bahasan.",
+        "evidence": "\"meresmikan gerai Point Coffee dan Pojok Product Placement Pilihan Busan (Pojok PPPB)\"",
+        "reviewed_at": "2026-10-05T15:58:14.628Z"
       }
     },
     {
@@ -6550,8 +6665,8 @@
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
       "link_type": "publisher_article",
-      "cluster_ai_reviewed_at": "2026-10-05T14:48:10.565Z",
-      "cluster_review_version": 5,
+      "cluster_ai_reviewed_at": "2026-10-05T15:58:14.628Z",
+      "cluster_review_version": 6,
       "extracted_at": "2026-10-05T09:37:14Z",
       "extracted_from_url": "https://www.kemendag.go.id/berita/siaran-pers/bertemu-dengan-menteri-investasi-dan-perdagangan-luar-negeri-mesir-mendag-busan-dorong-pertemuan-ke-2-jtc-pada-2026",
       "resolved_url": "https://www.kemendag.go.id/berita/siaran-pers/bertemu-dengan-menteri-investasi-dan-perdagangan-luar-negeri-mesir-mendag-busan-dorong-pertemuan-ke-2-jtc-pada-2026",
@@ -6577,12 +6692,12 @@
       "published_date": "2025",
       "cluster_review_context_hash": "72cac836739aee47bde9d7597196ce08b782cb7132849040fce06e2f1e48d280",
       "cluster_relevance_review": {
-        "relevance": "uncertain",
-        "title_context_match": "unclear",
+        "relevance": "irrelevant",
+        "title_context_match": "match",
         "suggested_cluster_id": "",
-        "reason": "Dasar penilaian AI tidak cocok dengan kutipan yang tersedia; editor perlu memeriksa sumber asli.",
-        "evidence": "",
-        "reviewed_at": "2026-10-05T14:48:10.565Z"
+        "reason": "Pertemuan dagang Indonesia–Mesir; kopi hanya disebut sebagai salah satu komoditas ekspor.",
+        "evidence": "\"Produk ekspor utama Indonesia ke Mesir, yakni lemak dan minyak hewan atau nabati; kopi, teh, rempah-rempah\"",
+        "reviewed_at": "2026-10-05T15:58:14.628Z"
       }
     },
     {
@@ -7492,9 +7607,9 @@
       "tanggal": "2026-07-21",
       "sumber": "Tanamera",
       "ringkasan": "Cuplikan isi: Tanamera joined Soundrenaline Sana Sini Jakarta 2026 for two days of sound, energy, and good coffee. Day 1 brought our signature selections and the Cold Brew Crew — easy sips for moving between sets. Day 2 added Tanamera Draft Coffee, poured fresh from the tap, for something even easier to grab between songs. From the opening act to the last encore, every cup found its place in the crowd. Because good coffee doesn't just belong in a café — it belongs wherever people gather. Taste the Origins. Feel the Rhythm.",
-      "cluster_id": "lainnya",
-      "cluster_name": "Lainnya",
-      "cluster_assignment": "unassigned",
+      "cluster_id": "kedai-konsumsi-gaya-hidup",
+      "cluster_name": "Kedai, Konsumsi & Gaya Hidup",
+      "cluster_assignment": "ai_existing",
       "link_type": "publisher_article",
       "extracted_at": "2026-10-05T09:37:44Z",
       "extracted_from_url": "https://www.tanameracoffee.co.id/news/vpo65m97g8",
@@ -7516,17 +7631,19 @@
       "content_excerpt": "Official Website of Tanamera Coffee IndonesiaLoading...#TasteThe Origins#TasteThe OriginsCoffee in Rhythm: Tanamera Coffee at Soundrenaline Sana Sini Jakarta 2026Iit@tanameracoffee.com21 Jul 2026Share this article :Tanamera joined Soundrenaline Sana Sini Jakarta 2026 for two days of sound, energy, and good coffee. Day 1 brought our signature selections and the Cold Brew Crew — easy sips for moving between sets.Day 2 ",
       "fetch_error": null,
       "retry_after": null,
-      "cluster_ai_reviewed_at": "2026-10-05T14:48:10.565Z",
-      "cluster_review_version": 5,
+      "cluster_ai_reviewed_at": "2026-10-05T15:58:14.628Z",
+      "cluster_review_version": 6,
       "cluster_review_context_hash": "e868e011af9a604570beac27df235237cf763e9ea16efd0dd06630d6aaab49f4",
       "cluster_relevance_review": {
-        "relevance": "uncertain",
-        "title_context_match": "unclear",
-        "suggested_cluster_id": "event-kompetisi",
-        "reason": "Dasar penilaian AI tidak cocok dengan kutipan yang tersedia; editor perlu memeriksa sumber asli.",
-        "evidence": "",
-        "reviewed_at": "2026-10-05T14:48:10.565Z"
-      }
+        "relevance": "relevant",
+        "title_context_match": "match",
+        "suggested_cluster_id": "kedai-konsumsi-gaya-hidup",
+        "reason": "Aktivasi brand kopi di festival musik, menonjolkan sajian kopi dan draft coffee.",
+        "evidence": "\"Tanamera joined Soundrenaline Sana Sini Jakarta 2026 for two days of sound, energy, and good coffee.\"",
+        "reviewed_at": "2026-10-05T15:58:14.628Z"
+      },
+      "cluster_ai_reason": "Aktivasi brand kopi di festival musik dengan penekanan pada penyajian produk kopi.",
+      "cluster_ai_evidence": "\"Tanamera joined Soundrenaline Sana Sini Jakarta 2026 for two days of sound, energy, and good coffee.\""
     },
     {
       "judul": "Draft Coffee Poolside — Grand Splash Vol. 5 at Grand Hyatt Jakarta",
@@ -7534,9 +7651,9 @@
       "tanggal": "2026-07-20",
       "sumber": "Tanamera",
       "ringkasan": "Cuplikan isi: Tanamera Coffee joined Grand Splash Vol. 5 at Grand Hyatt Jakarta, bringing Draft Coffee to the pool. From afternoon into evening, guests kept it going with Draft Coffee on hand — smooth, easy to drink, and a different way to enjoy specialty coffee outside the café. For Tanamera, it's never just about coffee. It's a chance to show up somewhere new and meet people who haven't tried us yet. Good music, great energy, and coffee served differently. Taste the Origins. Share the Experience.",
-      "cluster_id": "lainnya",
-      "cluster_name": "Lainnya",
-      "cluster_assignment": "unassigned",
+      "cluster_id": "kedai-konsumsi-gaya-hidup",
+      "cluster_name": "Kedai, Konsumsi & Gaya Hidup",
+      "cluster_assignment": "ai_existing",
       "link_type": "publisher_article",
       "extracted_at": "2026-10-05T09:37:45Z",
       "extracted_from_url": "https://www.tanameracoffee.co.id/news/juodvcsu7s",
@@ -7558,17 +7675,19 @@
       "content_excerpt": "Official Website of Tanamera Coffee IndonesiaLoading...#TasteThe Origins#TasteThe OriginsDraft Coffee Poolside — Grand Splash Vol. 5 at Grand Hyatt JakartaIit@tanameracoffee.com20 Jul 2026Share this article :Tanamera Coffee joined Grand Splash Vol. 5 at Grand Hyatt Jakarta, bringing Draft Coffee to the pool. From afternoon into evening, guests kept it going with Draft Coffee on hand — smooth, easy to drink, and a dif",
       "fetch_error": null,
       "retry_after": null,
-      "cluster_ai_reviewed_at": "2026-10-05T14:48:10.565Z",
-      "cluster_review_version": 5,
+      "cluster_ai_reviewed_at": "2026-10-05T15:58:14.628Z",
+      "cluster_review_version": 6,
       "cluster_review_context_hash": "3f41f8becb8316cc11e4f97b105693501aa2014b280e95d40653744b48ed7e21",
       "cluster_relevance_review": {
-        "relevance": "uncertain",
-        "title_context_match": "unclear",
-        "suggested_cluster_id": "event-kompetisi",
-        "reason": "Dasar penilaian AI tidak cocok dengan kutipan yang tersedia; editor perlu memeriksa sumber asli.",
-        "evidence": "",
-        "reviewed_at": "2026-10-05T14:48:10.565Z"
-      }
+        "relevance": "relevant",
+        "title_context_match": "match",
+        "suggested_cluster_id": "kedai-konsumsi-gaya-hidup",
+        "reason": "Promosi produk Draft Coffee pada acara hotel; bagian dari gaya hidup konsumsi kopi.",
+        "evidence": "\"bringing Draft Coffee to the pool.\"",
+        "reviewed_at": "2026-10-05T15:58:14.628Z"
+      },
+      "cluster_ai_reason": "Promosi/aktivasi produk Draft Coffee pada acara hotel; bagian dari gaya hidup konsumsi kopi.",
+      "cluster_ai_evidence": "\"Tanamera Coffee joined Grand Splash Vol. 5 at Grand Hyatt Jakarta, bringing Draft Coffee to the pool.\""
     },
     {
       "judul": "Pesenggiri Festival",
@@ -8582,9 +8701,9 @@
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "cluster_ai_reviewed_at": "2026-10-05T14:48:10.565Z",
+      "cluster_ai_reviewed_at": "2026-10-05T15:58:14.628Z",
       "link_type": "publisher_article",
-      "cluster_review_version": 5,
+      "cluster_review_version": 6,
       "extracted_at": "2026-10-05T09:37:54Z",
       "extracted_from_url": "https://insight.jakpat.net/indonesia-beverage-consumption/",
       "resolved_url": "https://insight.jakpat.net/indonesia-beverage-consumption/",
@@ -8614,8 +8733,8 @@
         "title_context_match": "unclear",
         "suggested_cluster_id": "",
         "reason": "Cuplikan isi terlalu terbatas untuk menyimpulkan relevansi; editor perlu membuka sumber asli.",
-        "evidence": "",
-        "reviewed_at": "2026-10-05T14:48:10.565Z"
+        "evidence": "\"Indonesia Beverage Consumption\"",
+        "reviewed_at": "2026-10-05T15:58:14.628Z"
       }
     },
     {
@@ -8825,12 +8944,12 @@
       "tanggal": "2026-05-26",
       "sumber": "Tanamera",
       "ringkasan": "Cuplikan isi: Since 2023, Tanamera Coffee has supported partners at the Indonesian Petroleum Association Convention & Exhibition (IPA Convex), bringing Indonesian specialty coffee into one of the country's key energy industry gatherings. Our journey started with Mubadala Energy in 2023, continued through 2024, and grew in 2025 alongside Mubadala Energy, INPEX, and Indo Prima. In 2026, we returned with Mubadala Energy and INPEX, four consecutive years at IPA Convex. The 2026 edition marked IPA Convex's 50th anniversary, bringing thousands of industry…",
-      "cluster_id": "lainnya",
-      "cluster_name": "Lainnya",
-      "cluster_assignment": "unassigned",
+      "cluster_id": "kedai-konsumsi-gaya-hidup",
+      "cluster_name": "Kedai, Konsumsi & Gaya Hidup",
+      "cluster_assignment": "ai_existing",
       "link_type": "publisher_article",
-      "cluster_ai_reviewed_at": "2026-10-05T14:48:10.565Z",
-      "cluster_review_version": 5,
+      "cluster_ai_reviewed_at": "2026-10-05T15:58:14.628Z",
+      "cluster_review_version": 6,
       "extracted_at": "2026-10-05T09:37:56Z",
       "extracted_from_url": "https://www.tanameracoffee.co.id/news/eb2vtceoc6",
       "resolved_url": "https://www.tanameracoffee.co.id/news/eb2vtceoc6",
@@ -8853,13 +8972,15 @@
       "retry_after": null,
       "cluster_review_context_hash": "198d8f51e00a98056175413fa517cb1f306c62b28cd7d396c28b0894474f8f8e",
       "cluster_relevance_review": {
-        "relevance": "uncertain",
-        "title_context_match": "unclear",
-        "suggested_cluster_id": "event-kompetisi",
-        "reason": "Dasar penilaian AI tidak cocok dengan kutipan yang tersedia; editor perlu memeriksa sumber asli.",
-        "evidence": "",
-        "reviewed_at": "2026-10-05T14:48:10.565Z"
-      }
+        "relevance": "relevant",
+        "title_context_match": "match",
+        "suggested_cluster_id": "kedai-konsumsi-gaya-hidup",
+        "reason": "Partisipasi menyajikan kopi di pameran migas; relevan dengan konsumsi/brand coffee shop.",
+        "evidence": "\"Tanamera Coffee has supported partners at the Indonesian Petroleum Association Convention & Exhibit\"",
+        "reviewed_at": "2026-10-05T15:58:14.628Z"
+      },
+      "cluster_ai_reason": "Partisipasi Tanamera menyajikan kopi di pameran industri migas; aktivitas konsumsi/brand kopi.",
+      "cluster_ai_evidence": "\"Tanamera Coffee has supported partners at the Indonesian Petroleum Association Convention & Exhibit\""
     },
     {
       "judul": "Dolar AS Menguat, Wamentan: Ini Peluang Perkuat Ekspor Kopi-Kelapa",
@@ -9112,9 +9233,9 @@
       "tanggal": "2026-02-20",
       "sumber": "Tanamera",
       "ringkasan": "Cuplikan isi: Bringing Indonesian Specialty Coffee Across the Automotive Scene From 5–15 February 2026, Tanamera Coffee returned to the Indonesia International Motor Show (IIMS) at JIExpo Kemayoran, Jakarta . This year, Tanamera Coffee was present across several automotive brand spaces, serving Mitsubishi, MG, VinFast, and UPPF throughout the exhibition. Through each collaboration, Indonesian specialty coffee became part of the hospitality on offer, creating a moment to pause, connect, and enjoy good coffee in the middle of one of Indonesia's largest…",
-      "cluster_id": "lainnya",
-      "cluster_name": "Lainnya",
-      "cluster_assignment": "unassigned",
+      "cluster_id": "kedai-konsumsi-gaya-hidup",
+      "cluster_name": "Kedai, Konsumsi & Gaya Hidup",
+      "cluster_assignment": "ai_existing",
       "link_type": "publisher_article",
       "extracted_at": "2026-10-05T09:37:58Z",
       "extracted_from_url": "https://www.tanameracoffee.co.id/news/e0t6fr3dje",
@@ -9136,17 +9257,19 @@
       "content_excerpt": "Official Website of Tanamera Coffee IndonesiaLoading...#TasteThe Origins#TasteThe OriginsTanamera Coffee at IIMS 2026Iit@tanameracoffee.com20 Feb 2026Share this article :Bringing Indonesian Specialty Coffee Across the Automotive SceneFrom 5–15 February 2026, Tanamera Coffee returned to the Indonesia International Motor Show (IIMS) at JIExpo Kemayoran, Jakarta.This year, Tanamera Coffee was present across several auto",
       "fetch_error": null,
       "retry_after": null,
-      "cluster_ai_reviewed_at": "2026-10-05T14:48:10.565Z",
-      "cluster_review_version": 5,
+      "cluster_ai_reviewed_at": "2026-10-05T15:58:14.628Z",
+      "cluster_review_version": 6,
       "cluster_review_context_hash": "60141d4730a660f85eefc0584aa71ac7ac55077b1a1511ecda1e2ab1aea74711",
       "cluster_relevance_review": {
-        "relevance": "uncertain",
-        "title_context_match": "unclear",
-        "suggested_cluster_id": "event-kompetisi",
-        "reason": "Dasar penilaian AI tidak cocok dengan kutipan yang tersedia; editor perlu memeriksa sumber asli.",
-        "evidence": "",
-        "reviewed_at": "2026-10-05T14:48:10.565Z"
-      }
+        "relevance": "relevant",
+        "title_context_match": "match",
+        "suggested_cluster_id": "kedai-konsumsi-gaya-hidup",
+        "reason": "Aktivasi kopi spesialti di pameran otomotif IIMS; sesuai konsumsi/brand coffee shop.",
+        "evidence": "\"From 5–15 February 2026, Tanamera Coffee returned to the Indonesia International Motor Show (IIMS)\"",
+        "reviewed_at": "2026-10-05T15:58:14.628Z"
+      },
+      "cluster_ai_reason": "Aktivasi kopi spesialti di pameran otomotif IIMS; sesuai tema konsumsi/brand coffee shop.",
+      "cluster_ai_evidence": "\"Tanamera Coffee returned to the Indonesia International Motor Show (IIMS) at JIExpo Kemayoran, Jakarta.\""
     },
     {
       "judul": "Berita Sawit - Diva Tanzil Dipercaya Pacu Transformasi Petani Kopi Lewat Stronger Coffee Initiative di Sumatera - InfoSAWIT",
@@ -9386,12 +9509,12 @@
       "tanggal": "2025-12-14",
       "sumber": "Tanamera",
       "ringkasan": "Cuplikan isi: Bringing Indonesian Coffee Closer Through Education. Tanamera Coffee Indonesia partnered with Politeknik Pariwisata Palembang (Poltekpar Palembang) on a series of coffee workshops , introducing students to the journey behind every cup , from green beans to roasted coffee , coffee fundamentals , and the work behind brewing . Sessions included an introduction to V60 brewing , interactive discussions , Q&A , and coffee-related games, closing with a hands-on brewing session where students prepared and enjoyed their own V60 brews together. Learning…",
-      "cluster_id": "lainnya",
-      "cluster_name": "Lainnya",
-      "cluster_assignment": "unassigned",
+      "cluster_id": "edukasi-industri",
+      "cluster_name": "Pendidikan & Industri",
+      "cluster_assignment": "ai_existing",
       "link_type": "publisher_article",
-      "cluster_ai_reviewed_at": "2026-10-05T14:48:10.565Z",
-      "cluster_review_version": 5,
+      "cluster_ai_reviewed_at": "2026-10-05T15:58:14.628Z",
+      "cluster_review_version": 6,
       "extracted_at": "2026-10-05T09:38:01Z",
       "extracted_from_url": "https://www.tanameracoffee.co.id/news/jote4nvslq",
       "resolved_url": "https://www.tanameracoffee.co.id/news/jote4nvslq",
@@ -9414,13 +9537,15 @@
       "retry_after": null,
       "cluster_review_context_hash": "2fcf31a37224080d70aaf29ef390451eeac8493fe5a72e4a021b132343041ec8",
       "cluster_relevance_review": {
-        "relevance": "uncertain",
-        "title_context_match": "unclear",
+        "relevance": "relevant",
+        "title_context_match": "match",
         "suggested_cluster_id": "edukasi-industri",
-        "reason": "Dasar penilaian AI tidak cocok dengan kutipan yang tersedia; editor perlu memeriksa sumber asli.",
-        "evidence": "",
-        "reviewed_at": "2026-10-05T14:48:10.565Z"
-      }
+        "reason": "Kegiatan edukasi kopi dengan institusi pendidikan; fokus pelatihan/pengetahuan industri.",
+        "evidence": "\"Sharing Coffee Knowledge with the Next Generation\"",
+        "reviewed_at": "2026-10-05T15:58:14.628Z"
+      },
+      "cluster_ai_reason": "Kegiatan berbagi pengetahuan kopi bersama institusi pendidikan; sesuai kategori Pendidikan & Industri.",
+      "cluster_ai_evidence": "\"Tanamera Coffee x Poltekpar Palembang: Sharing Coffee Knowledge with the Next Generation\""
     },
     {
       "judul": "Berita Sawit - Kukar Perkuat Sawit, Kopi, dan Kakao Lewat Kemitraan Pertanian Berkelanjutan - InfoSAWIT",
@@ -9502,16 +9627,16 @@
       "content_excerpt": "SCAI",
       "fetch_error": null,
       "retry_after": "2026-10-12T10:37:47Z",
-      "cluster_ai_reviewed_at": "2026-10-05T14:48:10.565Z",
-      "cluster_review_version": 5,
+      "cluster_ai_reviewed_at": "2026-10-05T15:58:14.628Z",
+      "cluster_review_version": 6,
       "cluster_review_context_hash": "c5f29c4c389adb8bf5ec221fafb40612fecaccdec9bc91b76b54ff9966a75cbd",
       "cluster_relevance_review": {
         "relevance": "uncertain",
         "title_context_match": "unclear",
         "suggested_cluster_id": "riset-tren-konsumen",
         "reason": "Cuplikan isi terlalu terbatas untuk menyimpulkan relevansi; editor perlu membuka sumber asli.",
-        "evidence": "",
-        "reviewed_at": "2026-10-05T14:48:10.565Z"
+        "evidence": "\"Konsumsi Kopi Indonesia Tembus 1 Kilogram Per Kapita\"",
+        "reviewed_at": "2026-10-05T15:58:14.628Z"
       }
     },
     {
@@ -9691,16 +9816,16 @@
       "content_excerpt": "SCAI",
       "fetch_error": null,
       "retry_after": "2026-10-12T10:37:47Z",
-      "cluster_ai_reviewed_at": "2026-10-05T14:48:10.565Z",
-      "cluster_review_version": 5,
+      "cluster_ai_reviewed_at": "2026-10-05T15:58:14.628Z",
+      "cluster_review_version": 6,
       "cluster_review_context_hash": "fb2cd577ee8852c37549176403374c5739c6e3d46bcb946c10761f7b2e4e9e2c",
       "cluster_relevance_review": {
         "relevance": "uncertain",
         "title_context_match": "unclear",
         "suggested_cluster_id": "event-kompetisi",
         "reason": "Cuplikan isi terlalu terbatas untuk menyimpulkan relevansi; editor perlu membuka sumber asli.",
-        "evidence": "",
-        "reviewed_at": "2026-10-05T14:48:10.565Z"
+        "evidence": "\"Joost Rolland Raih Gelar Juara Indonesia Latte Art Championship 2025/2026\"",
+        "reviewed_at": "2026-10-05T15:58:14.628Z"
       }
     },
     {
@@ -17934,10 +18059,10 @@
       "extraction_status": "extracted",
       "source_relevance": "CORE",
       "relevance_status": "passed_kabar_kopi_fulltext_coffee_signal",
-      "cluster_id": "lainnya",
-      "cluster_name": "Lainnya",
-      "cluster_assignment": "unassigned",
-      "cluster_review_version": 5,
+      "cluster_id": "edukasi-industri",
+      "cluster_name": "Pendidikan & Industri",
+      "cluster_assignment": "ai_existing",
+      "cluster_review_version": 6,
       "publication_date_precision": null,
       "publication_date_evidence": null,
       "coffee_relevance_context": "WHAT IS SPECIALTY COFFEE? Specialty coffee is coffee recognized for its distinctive characteristics and higher value in the market. In other words, it’s coffee that people find special. But what makes cof … WHAT IS SPECIALTY COFFEE? Specialty coffee is coffee recognized for its distinctive characteristics and higher value in the market. In other words, it’s coffee that people find special. But what makes coffee special can di … WHAT IS SPECIALTY COFFEE? Specialty coffee is coffee recognized for its distinctive characteristics and higher value in the market. In other words, it’s coffee that people find special. But what makes coffee special can differ betwe",
@@ -17957,16 +18082,18 @@
       "content_excerpt": "WHAT IS SPECIALTY COFFEE? Specialty coffee is coffee recognized for its distinctive characteristics and higher value in the market. In other words, it’s coffee that people find special. But what makes coffee special can differ between people and markets. How does the SCA define specialty coffee? For some, specialty coffee is about the flavor and aroma that makes it memorable. For others, it’s about the story behind t",
       "fetch_error": null,
       "retry_after": null,
-      "cluster_ai_reviewed_at": "2026-10-05T14:48:10.565Z",
+      "cluster_ai_reviewed_at": "2026-10-05T15:58:14.628Z",
       "cluster_review_context_hash": "e9ce75dada312e0e431fdca4f5c8ae7bc2bade9f4ab8df8ce836d9a07ffa36b3",
       "cluster_relevance_review": {
-        "relevance": "uncertain",
-        "title_context_match": "unclear",
+        "relevance": "relevant",
+        "title_context_match": "match",
         "suggested_cluster_id": "edukasi-industri",
-        "reason": "Dasar penilaian AI tidak cocok dengan kutipan yang tersedia; editor perlu memeriksa sumber asli.",
-        "evidence": "",
-        "reviewed_at": "2026-10-05T14:48:10.565Z"
-      }
+        "reason": "Konten definisional/edukatif tentang specialty coffee, relevan untuk industri.",
+        "evidence": "\"Specialty coffee is coffee recognized for its distinctive characteristics and higher value in the market.\"",
+        "reviewed_at": "2026-10-05T15:58:14.628Z"
+      },
+      "cluster_ai_reason": "Artikel edukatif yang menjelaskan definisi specialty coffee dan nilai tambahnya; sesuai kategori edukasi industri.",
+      "cluster_ai_evidence": "\"Specialty coffee is coffee recognized for its distinctive characteristics and higher value in the market.\""
     },
     {
       "judul": "JURNAL KOPI PAPUA",
@@ -17984,7 +18111,7 @@
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "cluster_review_version": 5,
+      "cluster_review_version": 6,
       "publication_date_precision": null,
       "publication_date_evidence": null,
       "coffee_relevance_context": "Well, menjawab pertanyaan kenapa rata – rata kopi di Papua itu mahal. Ya, harga kopi Arabika Papua bisa mencapai Rp 200.000 per kg setara dengan beans dari benua Amerika atau dari Papua New Guinea. Pertama, mari kita bahas tentan … Well, menjawab pertanyaan kenapa rata – rata kopi di Papua itu mahal. Ya, harga kopi Arabika Papua bisa mencapai Rp 200.000 per kg setara dengan beans dari benua Amerika atau dari Papua New Guinea. Pertama, mari kita bahas tentang akses dan fasilitas di foto dibaw … ng ada untuk melayani penerbangan ke wilayah pedalaman Papua. Hingga saat ini AMA menjadi satu – satunya akses menuju ke distrik perkebunan kopi di wilayah pegunungan tengah Papua. Kontribusi untuk kopi di Papua tentu besar. Tetapi mengingat bahwa unit pesawat yang tersedia sangat terbatas, denga jam terbang yang tinggi. A",
@@ -18004,15 +18131,15 @@
       "content_excerpt": "Well, menjawab pertanyaan kenapa rata – rata kopi di Papua itu mahal. Ya, harga kopi Arabika Papua bisa mencapai Rp 200.000 per kg setara dengan beans dari benua Amerika atau dari Papua New Guinea. Pertama, mari kita bahas tentang akses dan fasilitas di foto dibawah ini adalah pesawat perintis sejak tahun 1956. Namanya AMA ( Associated Mission Aviation ). Rio, Abmisibil Mei 2017 Salah satu perusahaan penerbangan mili",
       "fetch_error": null,
       "retry_after": null,
-      "cluster_ai_reviewed_at": "2026-10-05T14:48:10.565Z",
+      "cluster_ai_reviewed_at": "2026-10-05T15:58:14.628Z",
       "cluster_review_context_hash": "92b26730964c560c71c6174f553005a2862001671cf3a153263471ccb3e9d498",
       "cluster_relevance_review": {
-        "relevance": "uncertain",
+        "relevance": "relevant",
         "title_context_match": "unclear",
         "suggested_cluster_id": "harga-pasar",
-        "reason": "Dasar penilaian AI tidak cocok dengan kutipan yang tersedia; editor perlu memeriksa sumber asli.",
-        "evidence": "",
-        "reviewed_at": "2026-10-05T14:48:10.565Z"
+        "reason": "Isi membahas harga kopi Papua dan faktor akses/logistik yang memengaruhi; judul generik tidak menggambarkan fokus.",
+        "evidence": "\"harga kopi Arabika Papua bisa mencapai Rp 200.000 per kg\"",
+        "reviewed_at": "2026-10-05T15:58:14.628Z"
       }
     },
     {
@@ -18028,10 +18155,10 @@
       "extraction_status": "extracted",
       "source_relevance": "CORE",
       "relevance_status": "passed_kabar_kopi_fulltext_coffee_signal",
-      "cluster_id": "lainnya",
-      "cluster_name": "Lainnya",
-      "cluster_assignment": "unassigned",
-      "cluster_review_version": 5,
+      "cluster_id": "ekspor-daya-saing",
+      "cluster_name": "Ekspor & Daya Saing",
+      "cluster_assignment": "ai_existing",
+      "cluster_review_version": 6,
       "publication_date_precision": null,
       "publication_date_evidence": null,
       "coffee_relevance_context": "HAAN/ORGANISASI 2.1 Profil Perusahaan PT. Sari Alami adalah anak perusahaan dari CV Antara Saudara yang merupakan perusahaan eksportir biji kopi hijau, kakao dan rempah -rempah yang didirikan di Bandar Lampung sejak tahun 1987. Sejak itu PT. Sari Alami memiliki eksportir kopi biji hijau ke seluruh dunia. Pelanggan PT. Sari … ir biji kopi hijau, kakao dan rempah -rempah yang didirikan di Bandar Lampung sejak tahun 1987. Sejak itu PT. Sari Alami memiliki eksportir kopi biji hijau ke seluruh dunia. Pelanggan PT. Sari Alami seperti Nestle, Jacobs Douwe Egbert, Marubeni dan masih banyak lagi. PT. Sari Alami pada tahun 2012, telah mengembangkan bran … eperti Nestle, Jacobs Douwe Egbert, Marubeni dan masih banyak lagi. PT. Sari Alami pada tahun 2012, telah mengembangkan brand bernama “El’s Coffee” yang tidak hanya terbatas pada kopi dari Lampung saja namun juga kopi dari seluruh Indonesia seperti Aceh, Mandheling, Jawa, Bali, Toraja, Wamena Papua dan lain sebagainya. El’s",
@@ -18051,16 +18178,18 @@
       "content_excerpt": "7 Pengelolaan Konten Media…, Alexander Bryan Halim, Universitas Multimedia Nusantara BAB II GAMBARAN UMUM/PERUSAHAAN/ORGANISASI 2.1 Profil Perusahaan PT. Sari Alami adalah anak perusahaan dari CV Antara Saudara yang merupakan perusahaan eksportir biji kopi hijau, kakao dan rempah -rempah yang didirikan di Bandar Lampung sejak tahun 1987. Sejak itu PT. Sari Alami memiliki eksportir kopi biji hijau ke seluruh dunia. Pe",
       "fetch_error": null,
       "retry_after": null,
-      "cluster_ai_reviewed_at": "2026-10-05T14:48:10.565Z",
+      "cluster_ai_reviewed_at": "2026-10-05T15:58:14.628Z",
       "cluster_review_context_hash": "75fe0fe197d23aa6a74cd962592a49beab76cc7c47015f2bd13d24c21eee589f",
       "cluster_relevance_review": {
-        "relevance": "uncertain",
-        "title_context_match": "unclear",
+        "relevance": "relevant",
+        "title_context_match": "match",
         "suggested_cluster_id": "ekspor-daya-saing",
-        "reason": "Dasar penilaian AI tidak cocok dengan kutipan yang tersedia; editor perlu memeriksa sumber asli.",
-        "evidence": "",
-        "reviewed_at": "2026-10-05T14:48:10.565Z"
-      }
+        "reason": "Profil eksportir kopi hijau dengan pasar dan klien global; sesuai ekspor & daya saing.",
+        "evidence": "\"eksportir biji kopi hijau\" ... \"Pelanggan ... Nestle, Jacobs Douwe Egbert, Marubeni\"",
+        "reviewed_at": "2026-10-05T15:58:14.628Z"
+      },
+      "cluster_ai_reason": "Membahas profil eksportir kopi hijau dan klien global; relevan dengan ekspor & daya saing.",
+      "cluster_ai_evidence": "\"perusahaan eksportir biji kopi hijau\" ... \"Pelanggan PT. Sari Alami seperti Nestle, Jacobs Douwe Egbert, Marubeni\""
     },
     {
       "judul": "Perilaku Kewirausahaan Petani Kopi Arabika Gayo di Kabupaten Bener Meriah Provinsi Aceh Enterpreneurial Behavior of GayoArabicaCoffee Farmers in…",
@@ -18078,7 +18207,7 @@
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "cluster_review_version": 5,
+      "cluster_review_version": 6,
       "publication_date_precision": null,
       "publication_date_evidence": null,
       "coffee_relevance_context": "Perilaku Kewirausahaan Petani Kopi Arabika Gayo di Kabupaten Bener Meriah Provinsi Aceh Enterpreneurial Behavior of GayoArabicaCoffee Farmers in Bener Meriah Regency Aceh Province Ulya Zainura1, Nunung Kusnadi2, da … emen Institut Pertanian Bogor, Bogor 2) Departemen Agribisnis, Fakultas Ekonomi dan Manajemen Institut Pertanian Bogor, Bogor Abstract Gayo Arabica coffee is one of the commodities trading plantation sub-sector that has opportunities to increase national income and improve the farmers income. The management of these coffee pl … titut Pertanian Bogor, Bogor 2) Departemen Agribisnis, Fakultas Ekonomi dan Manajemen Institut Pertanian Bogor, Bogor Abstract Gayo Arabica coffee is one of the commodities trading plantation sub-sector that has opportunities to increase national income and improve the farmers income. The management of these coffee plantatio",
@@ -18086,15 +18215,15 @@
       "fetch_error": "<urlopen error timed out>",
       "retry_after": "2026-10-12T10:34:36Z",
       "date_enrichment_version": 6,
-      "cluster_ai_reviewed_at": "2026-10-05T14:48:10.565Z",
+      "cluster_ai_reviewed_at": "2026-10-05T15:58:14.628Z",
       "cluster_review_context_hash": "f6f2dad82ef0d12acdb4b23d605bfc7669ec1db21c710e110879a6a20378b1d4",
       "cluster_relevance_review": {
-        "relevance": "uncertain",
-        "title_context_match": "unclear",
+        "relevance": "relevant",
+        "title_context_match": "match",
         "suggested_cluster_id": "edukasi-industri",
-        "reason": "Dasar penilaian AI tidak cocok dengan kutipan yang tersedia; editor perlu memeriksa sumber asli.",
-        "evidence": "",
-        "reviewed_at": "2026-10-05T14:48:10.565Z"
+        "reason": "Studi tentang perilaku kewirausahaan petani kopi; penelitian industri.",
+        "evidence": "\"Enterpreneurial Behavior of GayoArabicaCoffee Farmers\"",
+        "reviewed_at": "2026-10-05T15:58:14.628Z"
       }
     },
     {
@@ -18113,7 +18242,7 @@
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "cluster_review_version": 5,
+      "cluster_review_version": 6,
       "publication_date_precision": null,
       "publication_date_evidence": null,
       "coffee_relevance_context": "NO Milestone Description 1 6 th Century The legend about Kaldi, considered the origin story of the discovery of coffee beans for consumption, began in Ethiopia. 2 15 th Century Coffee ( qahwa ) is the main trade commodity of beverages and products in Arab and its surroundings. 3 Coffee, called qah … ry The legend about Kaldi, considered the origin story of the discovery of coffee beans for consumption, began in Ethiopia. 2 15 th Century Coffee ( qahwa ) is the main trade commodity of beverages and products in Arab and its surroundings. 3 Coffee, called qahwa in Arabic, is a drink and the main trading commodity in the Ar … , began in Ethiopia. 2 15 th Century Coffee ( qahwa ) is the main trade commodity of beverages and products in Arab and its surroundings. 3 Coffee, called qahwa in Arabic, is a drink and the main trading commodity in the Arab world and beyond. 4 1658 The Dutch managed to control Ceylon (Sri Lanka) from the hands of the Portu",
@@ -18133,15 +18262,15 @@
       "content_excerpt": "NO Milestone Description 1 6 th Century The legend about Kaldi, considered the origin story of the discovery of coffee beans for consumption, began in Ethiopia. 2 15 th Century Coffee ( qahwa ) is the main trade commodity of beverages and products in Arab and its surroundings. 3 Coffee, called qahwa in Arabic, is a drink and the main trading commodity in the Arab world and beyond. 4 1658 The Dutch managed to control ",
       "fetch_error": null,
       "retry_after": null,
-      "cluster_ai_reviewed_at": "2026-10-05T14:48:10.565Z",
+      "cluster_ai_reviewed_at": "2026-10-05T15:58:14.628Z",
       "cluster_review_context_hash": "366009e663ba44d9fefaba0038615540a28c4b0bdf48d8d86ee2141bcec8b0d9",
       "cluster_relevance_review": {
-        "relevance": "uncertain",
-        "title_context_match": "unclear",
-        "suggested_cluster_id": "",
-        "reason": "Dasar penilaian AI tidak cocok dengan kutipan yang tersedia; editor perlu memeriksa sumber asli.",
-        "evidence": "",
-        "reviewed_at": "2026-10-05T14:48:10.565Z"
+        "relevance": "relevant",
+        "title_context_match": "match",
+        "suggested_cluster_id": "edukasi-industri",
+        "reason": "Timeline sejarah/asal-usul kopi; bersifat edukatif untuk ekosistem industri.",
+        "evidence": "\"The legend about Kaldi, considered the origin story of the discovery of coffee beans for consumption, began in Ethiopia.\"",
+        "reviewed_at": "2026-10-05T15:58:14.628Z"
       }
     },
     {
@@ -18157,10 +18286,10 @@
       "extraction_status": "extracted",
       "source_relevance": "CORE",
       "relevance_status": "passed_kabar_kopi_fulltext_coffee_signal",
-      "cluster_id": "lainnya",
-      "cluster_name": "Lainnya",
-      "cluster_assignment": "unassigned",
-      "cluster_review_version": 5,
+      "cluster_id": "edukasi-industri",
+      "cluster_name": "Pendidikan & Industri",
+      "cluster_assignment": "ai_existing",
+      "cluster_review_version": 6,
       "publication_date_precision": null,
       "publication_date_evidence": null,
       "coffee_relevance_context": "hp/JIPI EISSN 2443-3462 DOI: 10.18343/jipi.23.2.81 Analisis Pengaruh Variasi Jumlah Lapisan Biji pada Akurasi Prediksi Kandungan Minor Biji Kopi Arabika Hijau Bondowoso dengan NIR Spectroscopy (Analysis of the Effect of Variation of Bean Layers on Prediction Accuracy of Minor Compound in Green Arabica Coffee Beans of Bondo … jau Bondowoso dengan NIR Spectroscopy (Analysis of the Effect of Variation of Bean Layers on Prediction Accuracy of Minor Compound in Green Arabica Coffee Beans of Bondowoso by NIR Spectroscopy) Sri Citra Yuliana Madi1, I Wayan Budiastra1*, Yohanes Aris Purwanto1, Sukrisno Widyotomo2 (Diterima Januari 2018/Disetujui April 201 … owoso dengan NIR Spectroscopy (Analysis of the Effect of Variation of Bean Layers on Prediction Accuracy of Minor Compound in Green Arabica Coffee Beans of Bondowoso by NIR Spectroscopy) Sri Citra Yuliana Madi1, I Wayan Budiastra1*, Yohanes Aris Purwanto1, Sukrisno Widyotomo2 (Diterima Januari 2018/Disetujui April 2018) ABST",
@@ -18168,16 +18297,18 @@
       "fetch_error": "<urlopen error [Errno 111] Connection refused>",
       "retry_after": "2026-10-12T09:47:31Z",
       "date_enrichment_version": 6,
-      "cluster_ai_reviewed_at": "2026-10-05T14:48:10.565Z",
+      "cluster_ai_reviewed_at": "2026-10-05T15:58:14.628Z",
       "cluster_review_context_hash": "40b578539d651a1b0808efe201b572b70d85044c93d17c1fea99eed440bf4f67",
       "cluster_relevance_review": {
-        "relevance": "uncertain",
-        "title_context_match": "unclear",
+        "relevance": "relevant",
+        "title_context_match": "match",
         "suggested_cluster_id": "edukasi-industri",
-        "reason": "Dasar penilaian AI tidak cocok dengan kutipan yang tersedia; editor perlu memeriksa sumber asli.",
-        "evidence": "",
-        "reviewed_at": "2026-10-05T14:48:10.565Z"
-      }
+        "reason": "Riset teknis NIR pada komponen minor biji kopi hijau; kontribusi ilmiah untuk industri.",
+        "evidence": "\"Prediction Accuracy of Minor Compound in Green Arabica Coffee Beans of Bondowoso by NIR Spectroscopy\"",
+        "reviewed_at": "2026-10-05T15:58:14.628Z"
+      },
+      "cluster_ai_reason": "Riset teknis NIR pada biji kopi hijau; materi ilmiah untuk pengembangan industri.",
+      "cluster_ai_evidence": "\"Prediction Accuracy of Minor Compound in Green Arabica Coffee Beans of Bondowoso by NIR Spectroscopy\""
     },
     {
       "judul": "Bisnis Seret, Starbucks Tutup 250 Gerai",
@@ -18220,7 +18351,7 @@
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "cluster_review_version": 5,
+      "cluster_review_version": 6,
       "publication_date_precision": null,
       "publication_date_evidence": null,
       "coffee_relevance_context": "MANAJEMEN RANTAI PASOK DALAM SISTEM PRODUKSI KOPI ARABIKA FLORES BAJAWA TESIS Disusun oleh: RICHARDUS HENDRA TAMBUS 211357MMP MAGISTER MANAJEMEN PERKEBUNAN INSTITUT PERTANIAN STIPER YOGYAKARTA 2024 i vii viii PERNYATAAN ORIGINALI … dratambus29@gmail.com Program Studi : Magister Manejemen Perkebunan Fakultas : - Judul Tesis : MANAJEMEN RANTAI PASOK DALAM SISTEM PRODUKSI KOPI ARABIKA FLORES BAJAWA Dengan ini menyatakan bahwa: 1. Hasil karya yang saya serahkan ini adalah asli dan belum pernah mendapatkan gelar kesarjanaan baik di Institut Pertanian STIP … ................................. 5 II. TINJAUAN PUSTAKA .................................................................... 6 A. Definisi Kopi Secara Umum .................................................................. 6 B. Arabika Flore s Bajawa ........................................................................",
@@ -18242,15 +18373,15 @@
       "content_excerpt": "MANAJEMEN RANTAI PASOK DALAM SISTEM PRODUKSI KOPI ARABIKA FLORES BAJAWA TESIS Disusun oleh: RICHARDUS HENDRA TAMBUS 211357MMP MAGISTER MANAJEMEN PERKEBUNAN INSTITUT PERTANIAN STIPER YOGYAKARTA 2024 i vii viii PERNYATAAN ORIGINALITAS KARYA Saya yang bertandatangan di bawah ini: Nama : Richardus Hendra Tambus NIM : 211357MMP Email : hendratambus29@gmail.com Program Studi : Magister Manejemen Perkebunan Fakultas : - Jud",
       "fetch_error": null,
       "retry_after": null,
-      "cluster_ai_reviewed_at": "2026-10-05T14:48:10.565Z",
+      "cluster_ai_reviewed_at": "2026-10-05T15:58:14.628Z",
       "cluster_review_context_hash": "be72ad9012ab1ad5db7af987b5785b327da6a6b2097761178d2e2ab5ff5114dc",
       "cluster_relevance_review": {
-        "relevance": "uncertain",
-        "title_context_match": "unclear",
+        "relevance": "relevant",
+        "title_context_match": "match",
         "suggested_cluster_id": "edukasi-industri",
-        "reason": "Dasar penilaian AI tidak cocok dengan kutipan yang tersedia; editor perlu memeriksa sumber asli.",
-        "evidence": "",
-        "reviewed_at": "2026-10-05T14:48:10.565Z"
+        "reason": "Tesis supply chain produksi kopi; relevan dengan pengelolaan industri.",
+        "evidence": "\"MANAJEMEN RANTAI PASOK DALAM SISTEM PRODUKSI KOPI ARABIKA FLORES BAJAWA\"",
+        "reviewed_at": "2026-10-05T15:58:14.628Z"
       }
     },
     {
@@ -18269,7 +18400,7 @@
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "cluster_review_version": 5,
+      "cluster_review_version": 6,
       "publication_date_precision": null,
       "publication_date_evidence": null,
       "coffee_relevance_context": "Masyarakat ISSN 2460-8572, EISSN 2461-095X doi: https://doi.org/10.29244/agrokreatif.12.2.418-427 418 Peningkatan Kapasitas Kelompok Petani Kopi di Karawang melalui Produksi Kopi Berkualitas dan Hilirisasi Limbah Kopi menjadi Briket (Strengthening the Capacity of Coffee Farmer Groups in Karawang through Quality Coffee Prod … 461-095X doi: https://doi.org/10.29244/agrokreatif.12.2.418-427 418 Peningkatan Kapasitas Kelompok Petani Kopi di Karawang melalui Produksi Kopi Berkualitas dan Hilirisasi Limbah Kopi menjadi Briket (Strengthening the Capacity of Coffee Farmer Groups in Karawang through Quality Coffee Production and Downstreaming of Coffee … agrokreatif.12.2.418-427 418 Peningkatan Kapasitas Kelompok Petani Kopi di Karawang melalui Produksi Kopi Berkualitas dan Hilirisasi Limbah Kopi menjadi Briket (Strengthening the Capacity of Coffee Farmer Groups in Karawang through Quality Coffee Production and Downstreaming of Coffee Waste into Briquettes) Nurul Amri Koma",
@@ -18277,15 +18408,15 @@
       "fetch_error": "<urlopen error [Errno 111] Connection refused>",
       "retry_after": "2026-10-12T09:47:16Z",
       "date_enrichment_version": 6,
-      "cluster_ai_reviewed_at": "2026-10-05T14:48:10.565Z",
+      "cluster_ai_reviewed_at": "2026-10-05T15:58:14.628Z",
       "cluster_review_context_hash": "047bc0ffc9c8b5dc0429367c17dbcc9276e71fff71c16c31c7359c472cb4cd64",
       "cluster_relevance_review": {
-        "relevance": "uncertain",
-        "title_context_match": "unclear",
+        "relevance": "relevant",
+        "title_context_match": "match",
         "suggested_cluster_id": "edukasi-industri",
-        "reason": "Dasar penilaian AI tidak cocok dengan kutipan yang tersedia; editor perlu memeriksa sumber asli.",
-        "evidence": "",
-        "reviewed_at": "2026-10-05T14:48:10.565Z"
+        "reason": "Penguatan kapasitas kelompok tani dan hilirisasi limbah; kegiatan pelatihan/edukasi industri.",
+        "evidence": "\"Peningkatan Kapasitas Kelompok Petani Kopi di Karawang ... Hilirisasi Limbah Kopi menjadi Briket\"",
+        "reviewed_at": "2026-10-05T15:58:14.628Z"
       }
     },
     {
@@ -18340,10 +18471,10 @@
       "extraction_status": "extracted",
       "source_relevance": "CORE",
       "relevance_status": "passed_kabar_kopi_fulltext_coffee_signal",
-      "cluster_id": "lainnya",
-      "cluster_name": "Lainnya",
-      "cluster_assignment": "unassigned",
-      "cluster_review_version": 5,
+      "cluster_id": "produksi-panen",
+      "cluster_name": "Produksi & Panen",
+      "cluster_assignment": "ai_existing",
+      "cluster_review_version": 6,
       "publication_date_precision": null,
       "publication_date_evidence": null,
       "coffee_relevance_context": "Coffee farming in times ofEl Niño: Impact and advice for coffee farmers - Volcafe COOKIES Home Volcafe ED&F Man Commodities ED&F Man Liquid Products ED&F Man Sugar Offices Careers Contac … Coffee farming in times ofEl Niño: Impact and advice for coffee farmers - Volcafe COOKIES Home Volcafe ED&F Man Commodities ED&F Man Liquid Products ED&F Man Sugar Offices Careers Contact Volcafe on LinkedIn Home News and Impact El Niño impact … D&F Man Commodities ED&F Man Liquid Products ED&F Man Sugar Offices Careers Contact Volcafe on LinkedIn Home News and Impact El Niño impact Coffee farming in times of El Niño Impact and advice for coffee farmers 31 Jul 2023 News Article The onset of a new El Niño event presents challenges for coffee farmers. Record temperatu",
@@ -18365,22 +18496,24 @@
       "content_excerpt": "Coffee farming in times ofEl Niño: Impact and advice for coffee farmers - Volcafe COOKIES Home Volcafe ED&F Man Commodities ED&F Man Liquid Products ED&F Man Sugar Offices Careers Contact Volcafe on LinkedIn Home News and Impact El Niño impact Coffee farming in times of El Niño Impact and advice for coffee farmers 31 Jul 2023 News Article The onset of a new El Niño event presents challenges for coffee farmers. Record",
       "fetch_error": null,
       "retry_after": null,
-      "cluster_ai_reviewed_at": "2026-10-05T14:48:10.565Z",
+      "cluster_ai_reviewed_at": "2026-10-05T15:58:14.628Z",
       "cluster_review_context_hash": "97acb172f6a4b33a59e0a01fe1cd829f75ece5b9bf7e65db63ab3018bf62cae7",
       "cluster_relevance_review": {
-        "relevance": "uncertain",
-        "title_context_match": "unclear",
+        "relevance": "relevant",
+        "title_context_match": "match",
         "suggested_cluster_id": "produksi-panen",
-        "reason": "Dasar penilaian AI tidak cocok dengan kutipan yang tersedia; editor perlu memeriksa sumber asli.",
-        "evidence": "",
-        "reviewed_at": "2026-10-05T14:48:10.565Z"
-      }
+        "reason": "Dampak El Niño dan saran bagi petani kopi; inti pada produksi dan cuaca.",
+        "evidence": "\"The onset of a new El Niño event presents challenges for coffee farmers.\"",
+        "reviewed_at": "2026-10-05T15:58:14.628Z"
+      },
+      "cluster_ai_reason": "Dampak El Niño pada budidaya kopi dan saran untuk petani; topik produksi & cuaca.",
+      "cluster_ai_evidence": "\"The onset of a new El Niño event presents challenges for coffee farmers.\""
     }
   ],
-  "fetched": "2026-10-05T15:07:18.589Z",
+  "fetched": "2026-10-05T15:57:48.095Z",
   "reference_ingest": {
     "source": "KGS-blog/coffee-intelligence-engine/exports/coffee_relevant_articles.json",
-    "imported_at": "2026-10-05T15:07:35.313Z",
+    "imported_at": "2026-10-05T15:58:05.621Z",
     "source_records": 351,
     "accepted_candidates": 338,
     "dated_candidates": 304,
@@ -18395,8 +18528,8 @@
     }
   },
   "content_fetch": {
-    "last_batch_at": "2026-10-05T14:37:24Z",
-    "batch_size": 3,
+    "last_batch_at": "2026-10-05T15:58:05Z",
+    "batch_size": 2,
     "batch_limit": 400,
     "purpose": "Short original-publisher context for relevance and cluster review; full article text is not stored or republished."
   }

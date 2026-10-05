@@ -1,15 +1,15 @@
 {
   "version": 1,
-  "generated_at": "2026-10-05T15:07:36.413Z",
-  "feed_fetched": "2026-10-05T15:07:18.589Z",
+  "generated_at": "2026-10-05T15:58:14.628Z",
+  "feed_fetched": "2026-10-05T15:57:48.095Z",
   "mode": "auto",
   "settings": {
     "version": 1,
     "mode": "auto",
     "lookback_days": 14,
-    "max_topics": 3,
+    "max_topics": 5,
     "selected_cluster_ids": [],
-    "minimum_articles_per_topic": 3,
+    "minimum_articles_per_topic": 5,
     "language": "id"
   },
   "status": "ready",
@@ -18,130 +18,132 @@
       "cluster_id": "kedai-konsumsi-gaya-hidup",
       "cluster_name": "Kedai, Konsumsi & Gaya Hidup",
       "period_days": 14,
-      "generated_at": "2026-10-05T14:37:28.943Z",
+      "generated_at": "2026-10-05T15:58:14.628Z",
       "status": "ai_generated",
-      "fingerprint": "fdeaea81c42ceda998ad81f61ff505d5151e7673ffb96cf4eb37932d5ce0a1ba",
+      "fingerprint": "52f3b47b4ef999127c3e06577f7290a599b9a166449c926b866ce40fec46f466",
       "article": {
-        "title": "Masuknya M Stand, Ramainya Spot Nongkrong, dan Perdebatan Matcha vs Kopi",
-        "summary": "Merek kopi asal Shanghai, M Stand, resmi hadir di Jakarta lewat Grup Kawan Lama, sementara media menyorot spot nongkrong dari Senayan sampai Banda Aceh [1][2][5][3]. Di sisi konsumsi, perbandingan matcha vs kopi disebut tidak sesederhana memilih “yang lebih sehat”, dan teknik dasar seperti tamping kembali dibahas [4][8]. Liputan lain menempatkan kedai sebagai ruang belajar/kerja dan sebagai panggung cerita komunitas [7][6].",
-        "lead": "Koran Jakarta menulis M Stand membawa “konsep modern coffee lifestyle” ke Jakarta, dan Bisnis Style menegaskan brand itu diboyong oleh Grup Kawan Lama [1][2]. DetikFood merilis daftar 5 coffee shop di Senayan, sementara area mobil kopi Pasar Aceh disebut sebagai tempat nongkrong baru di Banda Aceh [5][3].",
+        "title": "Gerak Kedai, Gelas, dan Gaya Hidup Kopi: Dari M Stand di Jakarta sampai “Kopi Terasi” Vietnam",
+        "summary": "Dalam seminggu terakhir, media mencatat masuknya merek kedai baru ke Jakarta, munculnya titik nongkrong berbasis mobil kopi di Banda Aceh, serta daftar kafe populer di Senayan. Di sisi lain, ada eksperimen rasa ekstrem dari Vietnam, bersama sorotan soal pilihan minum yang lebih sehat dan teknik seduh yang rapi.",
+        "lead": "Grup Kawan Lama resmi memboyong M Stand asal Shanghai ke Indonesia, sementara laporan lain menulis M Stand hadir di Jakarta dengan konsep modern coffee lifestyle [5][1]. Di Aceh, kawasan mobil kopi disebut jadi tempat nongkrong baru; di Jakarta, daftar lima kafe di Senayan kembali menegaskan fungsi kedai sebagai ruang kumpul dan kerja [6][9].",
         "sections": [
           {
-            "heading": "Pemain baru dan peta nongkrong",
+            "heading": "Kedai bergerak, ruang nongkrong melebar",
             "paragraphs": [
-              "Kehadiran M Stand dari Shanghai memperlihatkan masuknya pemain internasional ke lanskap kedai Jakarta, setidaknya dalam tataran pengumuman resmi dan positioning gaya hidup modern [1][2]. Di saat bersamaan, daftar 5 coffee shop di Senayan dari detikFood menunjukkan media terus mengkurasi titik kumpul populer di pusat kota [5].",
-              "Di luar Jakarta, SerambiNews menyoroti area mobil kopi Pasar Aceh sebagai tempat nongkrong baru, menambah mozaik lokasi minum kopi yang hidup di daerah [3]. Kumpulan berita ini menggambarkan penyebaran sorotan ke pusat belanja, ruang publik, dan format mobil kopi—tanpa angka kunjungan atau dampak ekonomi yang terukur [5][3]."
+              "Kabar retail mencolok datang dari koridor ritel besar: Grup Kawan Lama mengumumkan membawa merek kopi M Stand dari Shanghai ke Indonesia, dan pemberitaan lain menyebut kehadirannya di Jakarta dengan membawa konsep modern coffee lifestyle [5][1]. Ini menambah pilihan di kota yang kedai kopinya sudah padat, tanpa keterangan lebih jauh soal target ekspansi atau dampaknya.",
+              "Di luar ibu kota, Serambinews menulis Area Mobil Kopi Pasar Aceh menjadi tempat nongkrong baru di Banda Aceh [6]. Sementara itu, detikFood merangkum lima coffee shop di kawasan Senayan yang seru buat nongkrong, indikator sederhana bahwa kantong-kantong tongkrongan tetap dicari pembaca urban [9].",
+              "Detik juga mengulas alasan anak muda betah berlama-lama di coffee shop, dari ngerjain skripsi sampai kerjaan; fungsi kedai sebagai ruang kerja-kumpul tampak menonjol dalam liputan ini, meski tanpa angka kunjungan [11]."
             ]
           },
           {
-            "heading": "Kedai sebagai ruang aktivitas",
+            "heading": "Eksperimen rasa di cangkir",
             "paragraphs": [
-              "Detikcom membahas alasan anak muda berlama-lama di coffee shop, dari mengerjakan skripsi sampai pekerjaan, menguatkan peran kedai sebagai ruang aktivitas selain minum kopi [7]. RRI mengangkat kisah Fellow Coffee dan budaya kopi, menempatkan kedai sebagai ruang cerita dan pengalaman [6]. Dua sorotan ini konsisten dengan fungsi kedai sebagai tempat singgah produktif dan sosial, meski belum menyajikan metrik durasi kunjungan atau sebaran demografis [7][6]."
+              "Dari Vietnam muncul eksperimen ekstrem: kopi dipadukan dengan terasi fermentasi; pemberitaan lain menyebut penggunaan pasta udang dan taburan tuna kering pada minuman tersebut [7][2]. Ini contoh penggabungan rasa lokal yang mencolok, tapi masih berupa sorotan media—bukan bukti arus utama.",
+              "Di RRI, kisah Fellow Coffee menempatkan peracikan sebagai bagian dari pengalaman dan budaya minum, menegaskan bahwa rasa dan cerita berjalan beriringan di skena kopi harian [10]."
             ]
           },
           {
-            "heading": "Pilihan minum dan keterampilan seduh",
+            "heading": "Pilihan sehat dan rapi secara teknik",
             "paragraphs": [
-              "Antara menulis bahwa pertanyaan apakah matcha lebih sehat dari kopi tidak bisa dijawab sederhana “ya/tidak”, mengisyaratkan keputusan minum terkait konteks kebutuhan pribadi [4]. Di ranah teknik, AEKI menekankan kerataan tamping lebih penting daripada mengejar angka tekanan tertentu; gerak singkat yang konsisten membantu hasil yang bisa diulang [8]. Keduanya menempatkan konsumsi pada spektrum: preferensi, respons tubuh, dan keterampilan eksekusi [4][8]."
-            ]
-          },
-          {
-            "heading": "Apa yang bisa (belum) disimpulkan",
-            "paragraphs": [
-              "Sebagian bahan minggu ini berupa pengumuman brand, kurasi tempat, dan kisah komunitas. Itu cukup untuk memetakan minat dan narasi, namun belum memadai untuk menyimpulkan perubahan selera, pertumbuhan pasar, atau sebab-akibat tertentu tanpa data tambahan [1][2][5][3][6]."
+              "Kompas menulis temuan peneliti bahwa minum kopi decaf bisa meningkatkan daya ingat; ini tetap laporan media mengenai studi, bukan pedoman klinis [4]. Antara membandingkan matcha dan kopi dan menyimpulkan pertanyaan “mana yang lebih sehat” tidak sesederhana jawaban ya/tidak, sehingga pilihan minum sebaiknya disesuaikan kebutuhan [8].",
+              "Di ranah praktis, Kompas merekomendasikan tiga pengganti krimer yang dianggap lebih sehat, termasuk santan kental [3]. Untuk espresso yang konsisten, AEKI menekankan kerataan saat tamping lebih penting daripada mengejar angka tekanan tertentu—gerak singkat yang perlu dilatih agar bisa diulang [12]."
             ]
           }
         ],
-        "conclusion": "Arus minggu ini memperlihatkan tiga benang: pemain baru yang menambah warna di Jakarta, ragam lokasi nongkrong yang terus dibicarakan media, serta keputusan minum dan teknik seduh yang makin diperhatikan. Itu memberi konteks tentang bagaimana kedai berfungsi sebagai ruang sosial dan produktif, tapi butuh data lanjutan bila ingin menilai dampak dan arah pasar.",
+        "conclusion": "Benang merahnya: kedai bertambah pilihan dan fungsi, eksperimen rasa muncul di beberapa titik, sementara wacana kesehatan dan teknik menyertai konsumsi sehari-hari. Ini bukan bukti perubahan selera besar-besaran, tetapi gambaran bahwa opsi dan referensi publik makin beragam.",
         "recommendations": [
           {
-            "audience": "Pemilik/penata kedai",
-            "action": "Pertimbangkan area tenang yang mendukung belajar/kerja (pencahayaan baik, akses listrik) tanpa mengganggu tamu lain.",
-            "basis": "Alasan anak muda berlama-lama di coffee shop meliputi skripsi dan pekerjaan [7]."
+            "audience": "Pemilik/penyedia kedai",
+            "action": "Uji berbarengan dua hal: fasilitas kerja-nongkrong (akses nyaman, daya, kursi) dan satu–dua menu eksploratif skala terbatas untuk umpan balik cepat.",
+            "basis": "Ruang nongkrong aktif di Senayan dan Banda Aceh diberitakan; eksperimen rasa ekstrem muncul di Vietnam [9][6][11][7]."
           },
           {
-            "audience": "Barista/peracik di rumah",
-            "action": "Utamakan kerataan tamping dan konsistensi gerak; evaluasi hasil seduh secara berulang.",
-            "basis": "Kerataan lebih penting daripada mengejar angka tekanan; konsistensi meningkatkan repeatability [8]."
+            "audience": "Penikmat kopi",
+            "action": "Jika butuh opsi lebih ringan kafein, pertimbangkan decaf; bandingkan juga dengan matcha sesuai kebutuhan, dan ganti krimer dengan alternatif yang disarankan media kesehatan pangan.",
+            "basis": "Laporan soal decaf dan daya ingat, perbandingan matcha vs kopi, serta tiga pengganti krimer [4][8][3]."
           },
           {
-            "audience": "Konsumen",
-            "action": "Saat memilih matcha atau kopi, sesuaikan dengan kebutuhan pribadi alih-alih mencari “pemenang” tunggal.",
-            "basis": "Perbandingan kesehatan matcha vs kopi tidak punya jawaban sederhana ya/tidak [4]."
+            "audience": "Barista/roaster rumahan",
+            "action": "Standarkan tamping yang rata dan bisa diulang ketimbang mengejar tekanan tertentu.",
+            "basis": "Panduan teknik tamping AEKI menekankan kerataan dan konsistensi [12]."
           }
         ],
         "source_urls": [
           "https://koran-jakarta.com/2026-10-05/m-stand-dari-shanghai-hadir-di-jakarta-bawa-konsep-modern-coffee-lifestyle",
+          "https://www.kompas.com/tren/read/2026/10/05/103000365/kafe-di-vietnam-ciptakan-kopi-dengan-pasta-udang-dan-taburan-tuna-kering",
+          "https://www.kompas.com/food/read/2026/10/05/073100475/3-pengganti-krimer-kopi-yang-lebih-sehat-bisa-pakai-santan-kental",
+          "https://www.kompas.com/tren/read/2026/10/05/060000365/minum-kopi-decaf-ternyata-bisa-tingkatkan-daya-ingat-ini-temuan-peneliti",
           "https://lifestyle.bisnis.com/read/20261005/223/2009613/grup-kawan-lama-resmi-boyong-merek-kopi-asal-shanghai-m-stand-ke-indonesia",
           "https://aceh.tribunnews.com/nanggroe/1047304/area-mobil-kopi-pasar-aceh-jadi-tempat-nongkrong-baru-di-banda-aceh",
+          "https://www.kompas.com/food/read/2026/10/04/140028175/gabungkan-kopi-dan-terasi-minuman-baru-di-vietnam-ini-bikin-penasaran",
           "https://www.antaranews.com/berita/5770402/matcha-vs-kopi-mana-yang-lebih-sehat-ini-perbandingannya",
           "https://food.detik.com/resto-dan-kafe/d-8677618/5-coffee-shop-di-senayan-yang-seru-buat-nongkrong-kopinya-enak",
           "https://rri.co.id/manado/kuliner/2754820/meracik-kopi-merawat-pengalaman-kisah-fellow-coffee-dan-budaya-kopi",
           "https://www.detik.com/sumut/berita/d-8675862/dari-skripsi-hingga-kerjaan-alasan-anak-muda-pilih-berlama-lama-di-coffee-shop",
           "https://www.aeki-aice.org/cara-tamping-kopi/"
         ],
-        "evidence_note": "Bahan utamanya berupa pengumuman, daftar tempat, dan kisah; datanya minim angka sehingga kesimpulan pasar dibatasi."
+        "evidence_note": "Sebagian sumber hanya menyajikan judul atau ringkasan, jadi rincian metodologi dan data lengkap tidak tersedia; temuan ilmiah disampaikan sebagaimana dilaporkan media."
       },
       "article_en": {
-        "title": "M Stand’s Entry, New Hangout Spots, and the Matcha vs Coffee Debate",
-        "summary": "Shanghai-born coffee brand M Stand is entering Jakarta via Kawan Lama Group, while media highlight hangout spots from Senayan to Banda Aceh [1][2][5][3]. On consumption, the matcha-versus-coffee question isn’t a simple “which is healthier,” and basic technique topics like tamping are back in focus [4][8]. Other coverage frames coffee shops as places to study, work, and share community stories [7][6].",
-        "lead": "Koran Jakarta says M Stand brings a “modern coffee lifestyle” concept to Jakarta, and Bisnis Style notes the brand is being introduced by Kawan Lama Group [1][2]. DetikFood published a list of five Senayan coffee shops, while a coffee-truck area at Pasar Aceh is named a new hangout spot in Banda Aceh [5][3].",
+        "title": "Shops, Cups, and Coffee Lifestyle: From M Stand in Jakarta to Vietnam’s Shrimp-Paste Coffee",
+        "summary": "This week’s coverage shows a new international brand entering Jakarta, a mobile coffee area turning into a hangout spot in Banda Aceh, and a list of go-to cafes in Senayan. At the same time, media highlight an extreme flavor experiment from Vietnam, plus healthier drink choices and tidy brewing technique.",
+        "lead": "Kawan Lama Group has officially brought Shanghai-born M Stand to Indonesia, and other reports note its Jakarta presence with a modern coffee lifestyle concept [5][1]. In Aceh, a mobile-coffee area is framed as the city’s new hangout; in Jakarta, a five-cafe list underscores how shops double as social and work spaces [6][9].",
         "sections": [
           {
-            "heading": "New players and the hangout map",
+            "heading": "Shops on the move, hangouts widening",
             "paragraphs": [
-              "M Stand’s arrival signals an international name stepping into Jakarta’s cafe scene—at least at the level of formal announcement and lifestyle positioning [1][2]. In parallel, DetikFood’s list of five Senayan coffee shops shows ongoing media curation of popular central-city gathering points [5].",
-              "Outside Jakarta, SerambiNews highlights the Pasar Aceh coffee-truck area as a new hangout, adding to a lively mix of places to drink coffee in the regions [3]. Taken together, these items map attention across malls, public spaces, and mobile-coffee formats—without visit counts or measurable economic effects attached [5][3]."
+              "The headline retail item: Kawan Lama announced it is bringing Shanghai’s M Stand to Indonesia, and another report points to its Jakarta debut with a modern coffee lifestyle concept [5][1]. It adds to an already busy scene, with no stated expansion targets or quantified impact.",
+              "Beyond the capital, Serambinews calls the Pasar Aceh Mobile Coffee Area a new hangout spot in Banda Aceh [6]. Meanwhile, detikFood curated five coffee shops in Senayan, a simple sign that readers still seek reliable urban hangouts [9].",
+              "Another detik piece explains why many young people stay for hours in coffee shops—from finishing theses to getting work done—highlighting the work-meets-social role of cafes, without visit counts attached [11]."
             ]
           },
           {
-            "heading": "Shops as activity spaces",
+            "heading": "Flavor experiments in the cup",
             "paragraphs": [
-              "Detikcom discusses why young people linger in coffee shops—from thesis work to jobs—reinforcing the role of cafes as spaces for more than just coffee [7]. RRI tells the story of Fellow Coffee and coffee culture, putting cafes in the frame of shared narratives and experiences [6]. Both pieces support the view of shops as productive and social stops, though without metrics on stay duration or demographics [7][6]."
+              "Vietnam delivered the week’s boldest mashup: coffee combined with fermented shrimp paste; another report mentions shrimp paste and even a sprinkle of dried tuna on the drink [7][2]. It’s a striking local-flavor blend, still a media highlight rather than evidence of a mainstream wave.",
+              "From RRI, Fellow Coffee’s story frames brewing as part of experience and culture, suggesting taste and narrative travel together in day-to-day coffee life [10]."
             ]
           },
           {
-            "heading": "Drinks and craft",
+            "heading": "Health choices and neat technique",
             "paragraphs": [
-              "Antara writes that the question of whether matcha is healthier than coffee doesn’t have a simple yes/no answer, pointing to context and personal needs [4]. On technique, AEKI underscores that even tamping matters more than chasing a pressure number; a brief, consistent motion helps repeatable extractions [8]. Together, they place consumption on a spectrum of preference, bodily response, and execution skill [4][8]."
-            ]
-          },
-          {
-            "heading": "What we can (and can’t) conclude",
-            "paragraphs": [
-              "Much of this week’s material is brand announcements, venue lists, and community stories. That helps map interest and narratives but isn’t enough to claim shifts in taste, market growth, or causality without further data [1][2][5][3][6]."
+              "Kompas reports researchers found that drinking decaf can improve memory; this remains media coverage of a study, not clinical guidance [4]. Antara’s matcha-versus-coffee comparison says there’s no simple yes/no on which is “healthier,” so choices are best tailored to needs [8].",
+              "On the practical side, Kompas lists three “healthier” creamer swaps, including thick coconut milk [3]. For more consistent espresso, AEKI emphasizes tamping flatness over chasing a specific pressure number—a brief move that needs practice to repeat reliably [12]."
             ]
           }
         ],
-        "conclusion": "Three threads stand out: a new brand adding color to Jakarta, a variety of hangout locations drawing coverage, and attention to both drink choices and brew technique. This frames cafes as social and productive spaces, yet firmer market judgments will need more data.",
+        "conclusion": "The thread is clear: more options and functions at shops, a few eye-catching experiments, and ongoing health-and-technique talk around daily coffee. It’s not proof of a sweeping taste shift, just a sign that public options and references keep widening.",
         "recommendations": [
           {
-            "audience": "Cafe owners/operators",
-            "action": "Consider a quiet zone that supports study/work (good lighting, power access) without disrupting other guests.",
-            "basis": "Young people stay in coffee shops for thesis and work reasons [7]."
+            "audience": "Cafe operators",
+            "action": "Test two fronts in parallel: work-friendly hangout basics (power, seating, comfort) and one–two small-batch experimental drinks for quick feedback.",
+            "basis": "Active hangout coverage in Senayan and Banda Aceh; an extreme flavor experiment reported in Vietnam [9][6][11][7]."
+          },
+          {
+            "audience": "Coffee drinkers",
+            "action": "If you want lower caffeine, consider decaf; weigh it against matcha based on your needs, and swap creamer for the named alternatives.",
+            "basis": "Report on decaf and memory, the matcha-versus-coffee piece, and three creamer substitutes [4][8][3]."
           },
           {
             "audience": "Baristas/home brewers",
-            "action": "Prioritize even tamping and consistent motion; evaluate extractions for repeatability.",
-            "basis": "Evenness matters more than a target pressure number; consistency improves repeatability [8]."
-          },
-          {
-            "audience": "Consumers",
-            "action": "When choosing matcha or coffee, match the drink to your needs rather than seeking a single “winner.”",
-            "basis": "The matcha vs coffee health comparison doesn’t have a simple yes/no answer [4]."
+            "action": "Standardize flat, repeatable tamping rather than chasing a pressure number.",
+            "basis": "AEKI’s tamping guide prioritizes flatness and consistency [12]."
           }
         ],
         "source_urls": [
           "https://koran-jakarta.com/2026-10-05/m-stand-dari-shanghai-hadir-di-jakarta-bawa-konsep-modern-coffee-lifestyle",
+          "https://www.kompas.com/tren/read/2026/10/05/103000365/kafe-di-vietnam-ciptakan-kopi-dengan-pasta-udang-dan-taburan-tuna-kering",
+          "https://www.kompas.com/food/read/2026/10/05/073100475/3-pengganti-krimer-kopi-yang-lebih-sehat-bisa-pakai-santan-kental",
+          "https://www.kompas.com/tren/read/2026/10/05/060000365/minum-kopi-decaf-ternyata-bisa-tingkatkan-daya-ingat-ini-temuan-peneliti",
           "https://lifestyle.bisnis.com/read/20261005/223/2009613/grup-kawan-lama-resmi-boyong-merek-kopi-asal-shanghai-m-stand-ke-indonesia",
           "https://aceh.tribunnews.com/nanggroe/1047304/area-mobil-kopi-pasar-aceh-jadi-tempat-nongkrong-baru-di-banda-aceh",
+          "https://www.kompas.com/food/read/2026/10/04/140028175/gabungkan-kopi-dan-terasi-minuman-baru-di-vietnam-ini-bikin-penasaran",
           "https://www.antaranews.com/berita/5770402/matcha-vs-kopi-mana-yang-lebih-sehat-ini-perbandingannya",
           "https://food.detik.com/resto-dan-kafe/d-8677618/5-coffee-shop-di-senayan-yang-seru-buat-nongkrong-kopinya-enak",
           "https://rri.co.id/manado/kuliner/2754820/meracik-kopi-merawat-pengalaman-kisah-fellow-coffee-dan-budaya-kopi",
           "https://www.detik.com/sumut/berita/d-8675862/dari-skripsi-hingga-kerjaan-alasan-anak-muda-pilih-berlama-lama-di-coffee-shop",
           "https://www.aeki-aice.org/cara-tamping-kopi/"
         ],
-        "evidence_note": "Sources are announcements, venue lists, and narratives with limited quantitative data, so market conclusions are constrained."
+        "evidence_note": "Some articles provide only headlines or short summaries, so full methodological details are not available; study findings are cited as reported by media."
       },
       "input_sources": [
         {
@@ -153,48 +155,76 @@
         },
         {
           "id": "2",
+          "url": "https://www.kompas.com/tren/read/2026/10/05/103000365/kafe-di-vietnam-ciptakan-kopi-dengan-pasta-udang-dan-taburan-tuna-kering",
+          "title": "Kafe di Vietnam Ciptakan Kopi dengan Pasta Udang dan Taburan Tuna Kering, seperti Apa?",
+          "source": "Kompas.com",
+          "published_at": "2026-10-05 03:30:00"
+        },
+        {
+          "id": "3",
+          "url": "https://www.kompas.com/food/read/2026/10/05/073100475/3-pengganti-krimer-kopi-yang-lebih-sehat-bisa-pakai-santan-kental",
+          "title": "3 Pengganti Krimer Kopi yang Lebih Sehat, Bisa Pakai Santan Kental",
+          "source": "Kompas.com",
+          "published_at": "2026-10-05 00:31:00"
+        },
+        {
+          "id": "4",
+          "url": "https://www.kompas.com/tren/read/2026/10/05/060000365/minum-kopi-decaf-ternyata-bisa-tingkatkan-daya-ingat-ini-temuan-peneliti",
+          "title": "Minum Kopi Decaf Ternyata Bisa Tingkatkan Daya Ingat, Ini Temuan Peneliti",
+          "source": "Kompas.com",
+          "published_at": "2026-10-04 23:00:00"
+        },
+        {
+          "id": "5",
           "url": "https://lifestyle.bisnis.com/read/20261005/223/2009613/grup-kawan-lama-resmi-boyong-merek-kopi-asal-shanghai-m-stand-ke-indonesia",
           "title": "Grup Kawan Lama Resmi Boyong Merek Kopi asal Shanghai, M Stand ke Indonesia - Bisnis Style",
           "source": "Bisnis Style",
           "published_at": "Sun, 04 Oct 2026 19:10:02 GMT"
         },
         {
-          "id": "3",
+          "id": "6",
           "url": "https://aceh.tribunnews.com/nanggroe/1047304/area-mobil-kopi-pasar-aceh-jadi-tempat-nongkrong-baru-di-banda-aceh",
           "title": "Area Mobil Kopi Pasar Aceh Jadi Tempat Nongkrong Baru di Banda Aceh",
           "source": "Serambinews.com",
           "published_at": "2026-10-04 14:33:03"
         },
         {
-          "id": "4",
+          "id": "7",
+          "url": "https://www.kompas.com/food/read/2026/10/04/140028175/gabungkan-kopi-dan-terasi-minuman-baru-di-vietnam-ini-bikin-penasaran",
+          "title": "Gabungkan Kopi dan Terasi, Minuman Baru di Vietnam Ini Bikin Penasaran",
+          "source": "Kompas.com",
+          "published_at": "2026-10-04 07:00:28"
+        },
+        {
+          "id": "8",
           "url": "https://www.antaranews.com/berita/5770402/matcha-vs-kopi-mana-yang-lebih-sehat-ini-perbandingannya",
           "title": "Matcha vs kopi, mana yang lebih sehat? Ini perbandingannya",
           "source": "Antara News",
           "published_at": "2026-10-04 02:50:34"
         },
         {
-          "id": "5",
+          "id": "9",
           "url": "https://food.detik.com/resto-dan-kafe/d-8677618/5-coffee-shop-di-senayan-yang-seru-buat-nongkrong-kopinya-enak",
           "title": "5 Coffee Shop di Senayan yang Seru Buat Nongkrong, Kopinya Enak! - food.detik.com",
           "source": "food.detik.com",
           "published_at": "Fri, 25 Sep 2026 00:00:04 GMT"
         },
         {
-          "id": "6",
+          "id": "10",
           "url": "https://rri.co.id/manado/kuliner/2754820/meracik-kopi-merawat-pengalaman-kisah-fellow-coffee-dan-budaya-kopi",
           "title": "Meracik Kopi, Merawat Pengalaman: Kisah Fellow Coffee dan Budaya Kopi - RRI.co.id",
           "source": "RRI.co.id",
           "published_at": "Wed, 23 Sep 2026 23:01:00 GMT"
         },
         {
-          "id": "7",
+          "id": "11",
           "url": "https://www.detik.com/sumut/berita/d-8675862/dari-skripsi-hingga-kerjaan-alasan-anak-muda-pilih-berlama-lama-di-coffee-shop",
           "title": "Dari Skripsi hingga Kerjaan, Alasan Anak Muda Pilih Berlama-lama di Coffee Shop - detikcom",
           "source": "detikcom",
           "published_at": "Wed, 23 Sep 2026 10:30:21 GMT"
         },
         {
-          "id": "8",
+          "id": "12",
           "url": "https://www.aeki-aice.org/cara-tamping-kopi/",
           "title": "Cara Tamping Kopi untuk Pemula: Posisi, Kerataan, dan Latihan",
           "source": "AEKI",
@@ -206,133 +236,154 @@
       "cluster_id": "event-kompetisi",
       "cluster_name": "Event & Kompetisi",
       "period_days": 14,
-      "generated_at": "2026-10-05T10:38:48.515Z",
+      "generated_at": "2026-10-05T15:58:14.628Z",
       "status": "ai_generated",
-      "fingerprint": "ec59b7283c94d6428d813a49ecf873e8ba5c1d7909df721b04d8b8e2004649cd",
+      "fingerprint": "e8884eab3e44d2e84294876c0d0d215bc545144ea3e5eb1ae04446aef3c87687",
       "article": {
-        "title": "Event kopi pekan ini: varietal Garut ramai di Depok, FCE NTT dorong kualitas–ekspor, Roma rayakan Hari Kopi, Jateng buka pameran arsip",
-        "summary": "Di Depok, Arabika Garut Yellow Bourbon menjadi produk yang paling diburu di stan Warung Biji pada DETOS Coffee & Snack Festival 2026. Dalam waktu berdekatan, hari ketiga FCE 2026 di NTT menekankan peningkatan kualitas serta peluang ekspor, Roma menggelar Coffee Tasting Experience untuk Hari Kopi Internasional, dan Pemerintah Provinsi Jawa Tengah membuka pameran virtual arsip perjalanan kopi di wilayahnya [2][1][3][4].",
-        "lead": "Detail yang muncul di sumber cukup spesifik: sorotan varietal di Depok Town Square, ajakan naik kelas pada hari ketiga FCE 2026 di NTT, stan Republik Dominika pada sesi cicip di Roma, dan pameran virtual bertema arsip era kolonial di Jawa Tengah [2][1][3][4]. Seorang narasumber bernama Pius juga menekankan pentingnya sikap baik selain kemampuan dan pencapaian dalam industri [1].",
+        "title": "Event Kopi 2026: Sorotan dari NTT, Depok, Roma, dan Jawa Tengah",
+        "summary": "Di Depok, Stapo.id melaporkan Arabika Garut Yellow Bourbon paling diburu di Detos Coffee & Snack Festival 2026 [3]. Di NTT, FCE 2026 diposisikan sebagai momentum UMKM memperluas pasar dan pada hari ketiga para penggiat kopi diajak meningkatkan kualitas serta membuka peluang ekspor [1][2]. Di Roma dan Jawa Tengah, perayaan Hari Kopi Internasional dan pameran virtual sejarah kopi menonjolkan sisi promosi dan edukasi [4][5].",
+        "lead": "FCE 2026 disebut jadi momentum UMKM NTT untuk memperluas pasar kopi, wastra, dan produk olahan [1], sementara sesi hari ketiganya menggarisbawahi ajakan peningkatan mutu dan kesiapan ekspor bagi pelaku kopi [2]. Di Roma, peringatan Hari Kopi Internasional diisi sesi Coffee Tasting Experience termasuk stan Republik Dominika [4].",
         "sections": [
           {
-            "heading": "Varietal lokal yang mencuat di festival ritel",
+            "heading": "Panggung promosi di daerah",
             "paragraphs": [
-              "Di ajang DETOS Coffee & Snack Festival 2026 di Depok Town Square, Arabika Garut Yellow Bourbon disebut menjadi produk yang paling diburu di stan Warung Biji oleh penikmat seduhan manual [2]. Fakta ini menggambarkan minat nyata pada varietal bernama dan asal spesifik di lingkungan festival ritel. Namun, ini adalah potret di satu stan dalam satu acara; kita tidak memiliki data pembelian lintas stan atau preferensi keseluruhan pengunjung festival untuk menyimpulkan pola lebih luas [2]. Bagi pelaku acara, sinyalnya sederhana: audiens manual brew merespons jelas pada penawaran yang teridentifikasi jelas varietal dan asalnya."
+              "Festival menjadi etalase rasa yang sangat spesifik. Di Depok, Stapo.id mencatat Arabika Garut Yellow Bourbon sebagai varian yang paling diburu di Detos Coffee & Snack Festival 2026 oleh pengunjung seduhan manual di stan Warung Biji [3]. Di NTT, FCE 2026 dipromosikan sebagai momentum untuk mendorong UMKM memperluas pasar, termasuk kopi, wastra, dan produk olahan [1]. Kedua contoh ini menunjukkan event dipakai untuk mengangkat produk lokal ke depan audiens yang lebih luas, meski sifatnya masih berupa sorotan acara dan klaim penyelenggara atau pelapak [1][3]."
             ]
           },
           {
-            "heading": "Nada kebijakan di NTT: kualitas dan pintu ekspor",
+            "heading": "Ajakan mutu dan peluang ekspor",
             "paragraphs": [
-              "Pada hari ketiga FCE 2026, penggiat kopi NTT diajak meningkatkan kualitas dan membuka peluang ekspor [1]. Pesan ini bersifat ajakan, bukan laporan capaian; tidak ada angka sertifikasi, kontrak, atau volume ekspor yang disebut di sumber [1]. Pius menambahkan penekanan pada aspek sikap baik sebagai landasan selain kemampuan teknis, menandai perhatian pada soft-skill di samping mutu produk [1]. Jika diimplementasikan, fokus seperti ini biasanya menyasar praktik pascapanen, kontrol mutu, dan kesiapan dokumen, tetapi sumber tidak merinci langkahnya, sehingga kita menahan diri dari menilai dampaknya."
+              "Di hari ketiga FCE 2026, penggiat kopi NTT diajak fokus pada peningkatan kualitas dan membaca peluang ekspor [2]. Pesan utamanya: kemampuan teknis dan pencapaian individu perlu dibarengi sikap profesional—sebuah seruan pembinaan, bukan laporan hasil [2]. Ini menegaskan bahwa banyak agenda 2026 lebih menekankan edukasi dan kesiapan, alih-alih bukti transaksi atau kontrak yang sudah terjadi. Artinya, event berfungsi sebagai titik kumpul informasi dan motivasi, sementara hasil komersialnya belum didokumentasikan di pemberitaan tersebut [2]."
             ]
           },
           {
-            "heading": "Jembatan global dan memori lokal",
+            "heading": "Jembatan global dan ingatan budaya",
             "paragraphs": [
-              "Di Roma, peringatan Hari Kopi Internasional diisi dengan Coffee Tasting Experience yang menampilkan, antara lain, stan Republik Dominika [3]. Ini menunjukkan keberadaan ruang temu lintas negara, meski tanpa catatan jumlah peserta atau transaksi [3]. Sementara itu, Pemerintah Provinsi Jawa Tengah merilis pameran virtual bertema arsip era kolonial dan perjalanan kopi di wilayahnya, menempatkan kopi dalam konteks sejarah daerah [4]. Digabungkan, dua aktivitas ini memperlihatkan spektrum acara: dari cicip lintas negara hingga edukasi berbasis arsip—keduanya relevan bagi ekosistem kopi, meski ukuran dampaknya tidak tercantum di bahan sumber."
+              "Di Roma, perayaan Hari Kopi Internasional hadir dalam format coffee tasting dengan partisipasi stan Republik Dominika, memperlihatkan panggung promosi lintas negara [4]. Di Jawa Tengah, pemerintah daerah merilis pameran virtual arsip era kolonial dan perjalanan kopi di provinsi tersebut—jalur edukasi publik yang menghubungkan sejarah dengan pemahaman kopi hari ini [5]. Kombinasi keduanya menandakan kalender 2026 mencakup promosi produk sekaligus literasi kopi, dari lantai festival hingga ruang pamer digital [4][5]."
+            ]
+          },
+          {
+            "heading": "Mengukur dampak: apa yang ada dan tiada",
+            "paragraphs": [
+              "Dari materi yang dirilis, kita melihat agenda dan ajakan, bukan angka penjualan, jumlah pengunjung, atau tindak lanjut bisnis [1][2][3][4][5]. Maka, klaim tren atau perubahan selera tak bisa ditarik hanya dari sorotan acara. Yang bisa dicatat adalah fokus pada promosi varietas tertentu, pembinaan mutu, jangkauan internasional lewat perayaan, dan penguatan konteks sejarah [1][2][3][4][5]."
             ]
           }
         ],
-        "conclusion": "Rangkaian acara awal Oktober 2026 menampilkan tiga benang merah: varietal lokal yang menarik minat di level ritel, dorongan peningkatan kualitas dan ekspor di daerah penghasil, serta jembatan internasional dan pengingat sejarah. Ini memberi konteks tentang bagaimana kopi ditampilkan dan dibicarakan, tanpa memberi bukti kuantitatif yang memungkinkan penilaian hasil.",
+        "conclusion": "Kalender event kopi 2026 memberi ruang promosi, edukasi, dan jejaring dari tingkat lokal hingga internasional. Nilai tambahnya akan tampak jika ajakan peningkatan mutu berlanjut menjadi program nyata dan datanya dipublikasikan, sehingga pelaku bisa menilai langkah mana yang paling efektif.",
         "recommendations": [
           {
-            "audience": "Stan/roaster yang ikut festival ritel",
-            "action": "Sertakan beberapa single origin berlabel varietal dan asal jelas serta kartu informasi singkat untuk audiens seduhan manual.",
-            "basis": "Garut Yellow Bourbon paling diburu di stan Warung Biji pada DETOS 2026, menandakan minat pada varietal bernama di konteks tersebut [2]."
+            "audience": "UMKM dan roaster lokal",
+            "action": "Gunakan festival untuk uji pasar varietas—catat minat pada profil seperti Garut Yellow Bourbon, lalu evaluasi portofolio dan kemasan berdasarkan umpan balik pengunjung.",
+            "basis": "Permintaan tinggi terhadap varietas spesifik dilaporkan di Depok [3]."
           },
           {
-            "audience": "Penyelenggara dan pemangku kepentingan FCE di NTT",
-            "action": "Turunkan ajakan kualitas–ekspor menjadi program pelatihan mutu dan kesiapan standar ekspor yang terjadwal.",
-            "basis": "Hari ketiga FCE 2026 menekankan peningkatan kualitas dan peluang ekspor, namun tanpa rincian langkah [1]."
+            "audience": "Penyelenggara event (mis. FCE, festival daerah)",
+            "action": "Lengkapi agenda promosi dengan klinik mutu dan sesi kesiapan ekspor yang aplikatif (standar, dokumen, kontak), serta rilis data dasar pasca-acara.",
+            "basis": "FCE 2026 menekankan ajakan peningkatan kualitas dan peluang ekspor, namun belum ada data tindak lanjut yang dipublikasikan [2]."
           },
           {
-            "audience": "Pengelola pameran arsip di Jawa Tengah",
-            "action": "Tautkan pameran virtual dengan rujukan ke kebun, museum lokal, atau kedai yang relevan agar fungsi edukasinya mudah diakses publik.",
-            "basis": "Pameran virtual menempatkan kopi dalam konteks sejarah daerah, peluangnya ada pada penghubung ke sumber belajar lapangan [4]."
+            "audience": "Lembaga publik/komunitas kopi",
+            "action": "Hubungkan pameran sejarah kopi dengan kelas singkat untuk pelaku usaha agar narasi asal-usul memperkuat materi promosi produk lokal.",
+            "basis": "Ada pameran virtual sejarah kopi Jawa Tengah yang siap dijadikan materi edukasi terapan [5]."
           }
         ],
         "source_urls": [
+          "https://www.detikindonesia.co.id/fce-2026-jadi-momentum-umkm-ntt-perluas-pasar-kopi-wastra-dan-produk-olahan/",
           "https://kupang.tribunnews.com/provinsi-ntt/982088/fce-2026-hari-ketiga-penggiat-kopi-ntt-diajak-tingkatkan-kualitas-hingga-buka-peluang-ekspor",
           "https://stapo.id/news/garut-yellow-bourbon-jadi-primadona",
           "https://antaranews.com/berita/5767883/potret-perayaan-hari-kopi-internasional-di-roma",
           "https://jatengprov.go.id/publik/membaca-memori-masa-lalu-pameran-virtual-arsip-era-kolonial-dan-perjalanan-kopi-di-jawa-tengah/"
         ],
-        "evidence_note": "Sumber yang ada berupa liputan singkat acara tanpa data kehadiran, transaksi, atau metrik hasil lain."
+        "evidence_note": "Sebagian besar sumber adalah liputan singkat atau pengumuman tanpa data kuantitatif tentang transaksi atau dampak pasca-acara."
       },
       "article_en": {
-        "title": "Coffee events this week: Garut varietal draws crowds in Depok, NTT’s FCE pushes quality–exports, Rome marks International Coffee Day, Central Java opens archive exhibit",
-        "summary": "In Depok, the Arabica Garut Yellow Bourbon was the most sought-after item at Warung Biji’s booth during the DETOS Coffee & Snack Festival 2026. Around the same time, day three of FCE 2026 in NTT highlighted quality improvement and export openings, Rome hosted a Coffee Tasting Experience for International Coffee Day, and Central Java’s provincial government launched a virtual archive exhibition on coffee history [2][1][3][4].",
-        "lead": "The sources point to concrete details: a varietal highlight at Depok Town Square, a call to step up quality and explore exports on day three of FCE 2026 in NTT, a Dominican Republic booth at Rome’s tasting session, and a colonial-era archive themed virtual exhibition in Central Java [2][1][3][4]. A speaker named Pius also stressed the importance of good attitude alongside skills and achievements in the industry [1].",
+        "title": "Coffee Events 2026: Highlights from NTT, Depok, Rome, and Central Java",
+        "summary": "In Depok, Stapo.id reported Arabica Garut Yellow Bourbon as the most sought-after bean at the 2026 Detos Coffee & Snack Festival [3]. In NTT, FCE 2026 was framed as a momentum for MSMEs to expand markets, and its third-day sessions urged coffee actors to improve quality and explore export opportunities [1][2]. Rome’s International Coffee Day celebration and Central Java’s virtual archive exhibition emphasized promotion and education [4][5].",
+        "lead": "FCE 2026 was positioned as a vehicle for NTT MSMEs to widen markets for coffee, textiles, and processed goods [1], while day three focused on calls for quality upgrading and export readiness [2]. In Rome, International Coffee Day featured a Coffee Tasting Experience with the Dominican Republic stand among the participants [4].",
         "sections": [
           {
-            "heading": "Local varietal stands out at a retail festival",
+            "heading": "Local stages for promotion",
             "paragraphs": [
-              "At the 2026 DETOS Coffee & Snack Festival in Depok Town Square, the Arabica Garut Yellow Bourbon was reported as the most sought-after product among manual-brew fans at Warung Biji’s booth [2]. This signals clear interest in clearly labeled varietals and origins within a retail festival setting. Still, it is a snapshot from one booth at one event; we lack cross-booth purchase data or overall visitor preferences to generalize beyond that context [2]. For exhibitors, the takeaway is straightforward: a manual-brew audience responds to transparent varietal and origin information."
+              "Festivals put specific flavor profiles in front of crowds. In Depok, Stapo.id noted Arabica Garut Yellow Bourbon as the most sought-after manual brew option at Warung Biji’s booth during the 2026 Detos Coffee & Snack Festival [3]. In NTT, FCE 2026 was promoted as a momentum for MSMEs to broaden market reach, including coffee, textiles, and processed products [1]. These examples show events being used to spotlight local products to wider audiences—reported as organizer/vendor claims rather than audited outcomes [1][3]."
             ]
           },
           {
-            "heading": "Policy tone in NTT: quality and export doors",
+            "heading": "Quality messages and export talk",
             "paragraphs": [
-              "On day three of FCE 2026, NTT coffee actors were encouraged to raise quality and open up export opportunities [1]. This is a call to action, not an outcomes report; the source does not cite certifications, contracts, or export volumes [1]. Pius further emphasized good attitude as a foundation alongside technical ability, reflecting attention to soft skills as well as product quality [1]. If implemented, such focus typically involves post-harvest practice, quality control, and export-readiness documentation, but the source does not specify steps, so we refrain from inferring impact."
+              "On FCE’s third day, NTT coffee actors were urged to focus on quality improvement and to explore export avenues [2]. The emphasis—skills paired with professional attitude—was a call for capacity building, not a tally of results [2]. It suggests many 2026 agendas prioritize education and preparedness instead of documented sales or contracts. In short, events serve as hubs for information and motivation, while commercial follow-through is not presented in the coverage reviewed [2]."
             ]
           },
           {
-            "heading": "Global bridge and local memory",
+            "heading": "Global bridges and cultural memory",
             "paragraphs": [
-              "In Rome, International Coffee Day was marked with a Coffee Tasting Experience that included, among others, a Dominican Republic booth [3]. It illustrates a cross-country meeting point, though there are no attendance or transaction figures in the report [3]. Meanwhile, the Central Java Provincial Government launched a virtual exhibition on colonial-era archives and the region’s coffee journey, placing coffee within local historical context [4]. Taken together, these activities show a spectrum—from cross-border tastings to archive-based education—both relevant to the coffee ecosystem, even if their scale of impact is not documented in the sources."
+              "In Rome, International Coffee Day came with a coffee tasting format featuring the Dominican Republic stand, illustrating cross-border promotion [4]. In Central Java, the provincial government launched a virtual exhibition on colonial-era archives and the region’s coffee journey—public education that links history to today’s understanding of coffee [5]. Together they show a 2026 calendar that mixes product promotion with coffee literacy, from festival floors to digital galleries [4][5]."
+            ]
+          },
+          {
+            "heading": "Measuring impact: what’s present and what’s missing",
+            "paragraphs": [
+              "Across the materials, we see agendas and encouragement, not sales figures, attendance counts, or documented business follow-ups [1][2][3][4][5]. Drawing conclusions about trends or taste shifts from event spotlights alone would be premature. What can be logged: attention to specific varieties, quality coaching, international showcases, and historical context-building [1][2][3][4][5]."
             ]
           }
         ],
-        "conclusion": "Early October 2026 brought three threads into view: consumer-facing varietal buzz, a regional push for quality and export readiness, and programming that connects coffee to global stages and local history. That frames how coffee is being presented and discussed, without providing quantitative evidence to judge outcomes.",
+        "conclusion": "The 2026 coffee calendar offers venues for promotion, education, and networking from local to international levels. Its added value will be clearer if quality-upgrading calls translate into concrete programs and public data, helping actors assess which steps work best.",
         "recommendations": [
           {
-            "audience": "Festival exhibitors/roasters",
-            "action": "Stock clearly labeled single origins and concise info cards on varietal and origin for manual-brew audiences.",
-            "basis": "Garut Yellow Bourbon was the most sought-after at Warung Biji’s booth at DETOS 2026, indicating interest in named varietals in that setting [2]."
+            "audience": "MSMEs and local roasters",
+            "action": "Use festivals to test varieties—track interest in profiles like Garut Yellow Bourbon, then adjust your lineup and packaging based on visitor feedback.",
+            "basis": "High demand for a specific variety was reported in Depok [3]."
           },
           {
-            "audience": "FCE organizers and stakeholders in NTT",
-            "action": "Translate the quality–export call into scheduled training on product quality and export standards.",
-            "basis": "Day three of FCE 2026 emphasized quality improvement and export opportunities but did not outline steps [1]."
+            "audience": "Event organizers (e.g., FCE, local festivals)",
+            "action": "Pair promotion with hands-on quality clinics and export-readiness sessions (standards, paperwork, contacts), and publish basic post-event data.",
+            "basis": "FCE 2026 emphasized quality and export opportunities, but no follow-up data was published in the coverage reviewed [2]."
           },
           {
-            "audience": "Central Java archive/tourism managers",
-            "action": "Cross-link the virtual exhibition to relevant farms, local museums, or cafes to make the educational pathway easy to access.",
-            "basis": "The exhibition positions coffee in regional history; linking it to field learning can extend its utility [4]."
+            "audience": "Public institutions/coffee communities",
+            "action": "Link coffee history exhibitions to short practical classes for businesses so origin stories can strengthen local product promotion.",
+            "basis": "A virtual exhibition on Central Java’s coffee history is available to be turned into applied learning material [5]."
           }
         ],
         "source_urls": [
+          "https://www.detikindonesia.co.id/fce-2026-jadi-momentum-umkm-ntt-perluas-pasar-kopi-wastra-dan-produk-olahan/",
           "https://kupang.tribunnews.com/provinsi-ntt/982088/fce-2026-hari-ketiga-penggiat-kopi-ntt-diajak-tingkatkan-kualitas-hingga-buka-peluang-ekspor",
           "https://stapo.id/news/garut-yellow-bourbon-jadi-primadona",
           "https://antaranews.com/berita/5767883/potret-perayaan-hari-kopi-internasional-di-roma",
           "https://jatengprov.go.id/publik/membaca-memori-masa-lalu-pameran-virtual-arsip-era-kolonial-dan-perjalanan-kopi-di-jawa-tengah/"
         ],
-        "evidence_note": "The sources are brief event reports without attendance, transaction, or outcome metrics."
+        "evidence_note": "Most sources are brief reports or announcements without quantitative data on transactions or post-event impact."
       },
       "input_sources": [
         {
           "id": "1",
+          "url": "https://www.detikindonesia.co.id/fce-2026-jadi-momentum-umkm-ntt-perluas-pasar-kopi-wastra-dan-produk-olahan/",
+          "title": "FCE 2026 Jadi Momentum UMKM NTT Perluas Pasar Kopi, Wastra, dan Produk Olahan - detikindonesia.co.id",
+          "source": "detikindonesia.co.id",
+          "published_at": "Mon, 05 Oct 2026 08:29:00 GMT"
+        },
+        {
+          "id": "2",
           "url": "https://kupang.tribunnews.com/provinsi-ntt/982088/fce-2026-hari-ketiga-penggiat-kopi-ntt-diajak-tingkatkan-kualitas-hingga-buka-peluang-ekspor",
           "title": "FCE 2026 Hari Ketiga, Penggiat Kopi NTT Diajak Tingkatkan Kualitas hingga Buka Peluang Ekspor",
           "source": "Tribun News",
           "published_at": "2026-10-04 07:44:57"
         },
         {
-          "id": "2",
+          "id": "3",
           "url": "https://stapo.id/news/garut-yellow-bourbon-jadi-primadona",
           "title": "Garut Yellow Bourbon Jadi Primadona Warung Biji di Detos Coffee & Snack Festival 2026 - Stapo.id",
           "source": "stapo.id",
           "published_at": "2026-10-01T00:00:00.000Z"
         },
         {
-          "id": "3",
+          "id": "4",
           "url": "https://antaranews.com/berita/5767883/potret-perayaan-hari-kopi-internasional-di-roma",
           "title": "Potret perayaan Hari Kopi Internasional di Roma",
           "source": "antaranews.com",
           "published_at": "2026-10-01T00:00:00.000Z"
         },
         {
-          "id": "4",
+          "id": "5",
           "url": "https://jatengprov.go.id/publik/membaca-memori-masa-lalu-pameran-virtual-arsip-era-kolonial-dan-perjalanan-kopi-di-jawa-tengah/",
           "title": "Membaca Memori Masa Lalu, Pameran Virtual Arsip Era Kolonial dan Perjalanan Kopi di Jawa Tengah - Pemerintah Provinsi Jawa Tengah",
           "source": "Pemerintah Provinsi Jawa Tengah",
