@@ -1,6 +1,62 @@
 {
   "artikel": [
     {
+      "judul": "M Stand dari Shanghai Hadir di Jakarta, Bawa Konsep Modern Coffee Lifestyle - Koran Jakarta ®",
+      "tautan": "https://koran-jakarta.com/2026-10-05/m-stand-dari-shanghai-hadir-di-jakarta-bawa-konsep-modern-coffee-lifestyle",
+      "tanggal": "Mon, 05 Oct 2026 04:58:00 GMT",
+      "sumber": "Koran Jakarta ®",
+      "asal": "google_news",
+      "aggregator": "Google News",
+      "link_type": "publisher_article",
+      "resolution_status": "resolved",
+      "tautan_google_news": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQZTc5LUVNbWFkMmRlYnRTaERKLWdMcmxMRENOX2ZKbXl3Ympua20xQjlEYlM5WjN6YmRmZ0U0OFVlNnZTcXliYUFDWkFId0E1VmlyRnJFci1qZWhrcWhEU2k2VGdLS1AxY2k0cW82U2pfbDhRNG1xN2x4V0pzWGdROHNDY053Vi1XTTBzSGtxbTdzTm9aX0wxY1lvRXBxaFhPSHgwSXNWWjc0eEpzcEROTtIBtgFBVV95cUxOWmh0eWp1VUdvMEVrQS1ZZFBsSThsN1prTWpHYmhKYVJSNXhod0JBZWtUeXA3VmdxR2VsM0pJS1ZVQi01YjFZbVYweHpGNzdXVWtlMmFOVl9XQTB0NDBIZTJvMjc2VVdoR2p3MDUwUnI4UDhoMGExQ1ZvQU8xRWV5c04teWFMVmxaT2dJc0dMNTNYMnZkblNiMVVzVE1RQW8xd18yU21zZmRvNVFSME92NDhUSVM2dw?oc=5",
+      "cluster_id": "kedai-konsumsi-gaya-hidup",
+      "cluster_name": "Kedai, Konsumsi & Gaya Hidup",
+      "cluster_assignment": "keyword"
+    },
+    {
+      "judul": "Dari “Dunia Hitam” Kopi Seko ke Sorowako, Bahar Makkutana Bawa Semangat Koperasi Luwu Utara ke Harkopnas 79 - PELAKITA.ID",
+      "tautan": "https://pelakita.id/2026/10/05/dari-dunia-hitam-kopi-seko-ke-sorowako-bahar-makkutana-bawa-semangat-koperasi-luwu-utara-ke-harkopnas-79/",
+      "tanggal": "Mon, 05 Oct 2026 03:42:45 GMT",
+      "sumber": "PELAKITA.ID",
+      "asal": "google_news",
+      "aggregator": "Google News",
+      "link_type": "publisher_article",
+      "resolution_status": "resolved",
+      "tautan_google_news": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxPX1QwS1hwUmpNNm1Pck9WWVN2bWlZLTR3OVFzNWQ3Q3BjUzNuUldkcEdEbXFfSHNJTkw0YUphZGY5aUNVd0FfdHBTS3ZxM1pqdkpmSkM1b3NZMU9DUFk1SzdPTE5qV2VNOS1LLXhId3VGamhjNVFCbDdxTVpFSWR2elJBY2hLdHNvSmw5eGtPeHB3Sl9NQTZXbDZuMC1kSFhNMDA3OHpMX3VoUXNKZnlaYnRMdjIxbDRzVXFwRGtJOEZURHgzcmZjUTdVbW1uRkhCUVE?oc=5",
+      "cluster_id": "produksi-panen",
+      "cluster_name": "Produksi & Panen",
+      "cluster_assignment": "keyword"
+    },
+    {
+      "judul": "Grup Kawan Lama Resmi Boyong Merek Kopi asal Shanghai, M Stand ke Indonesia - Bisnis Style",
+      "tautan": "https://lifestyle.bisnis.com/read/20261005/223/2009613/grup-kawan-lama-resmi-boyong-merek-kopi-asal-shanghai-m-stand-ke-indonesia",
+      "tanggal": "Sun, 04 Oct 2026 19:10:02 GMT",
+      "sumber": "Bisnis Style",
+      "asal": "google_news",
+      "aggregator": "Google News",
+      "link_type": "publisher_article",
+      "resolution_status": "resolved",
+      "tautan_google_news": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNTVByRk1LOU96b2J5ZllaYWdHLTN1UzROOTZTc21KYjliR3psZTZWWUNHSTNpWFJQcjROWVQ3am5jdWNHdzdfTW5nRlRZMDhiZDFnbjdkaDdPYVpjUG0taGRWY1IxMVVQRXJOQkZqNzFIbVN2eDYxX1JqUU4zZkk0R3p5eUwxT0pIRF9xM2RQeW9Ec0JuRjJLdnVDQUhQbnVSamlSQUNhaUlXQ1M4eTNiSUgxbnlySHBlTFZEODJyWk1lMWx2bXlTLQ?oc=5",
+      "cluster_id": "brand-global",
+      "cluster_name": "Brand Global",
+      "cluster_assignment": "keyword"
+    },
+    {
+      "judul": "Kementan Lihat Potensi Kopi untuk Hijaukan Kembali Lahan Gundul - Majalah HORTUS Archipelago",
+      "tautan": "https://news.majalahhortus.com/kementan-lihat-potensi-kopi-untuk-hijaukan-kembali-lahan-gundul/",
+      "tanggal": "Sun, 04 Oct 2026 18:24:33 GMT",
+      "sumber": "Majalah HORTUS Archipelago",
+      "asal": "google_news",
+      "aggregator": "Google News",
+      "link_type": "publisher_article",
+      "resolution_status": "resolved",
+      "tautan_google_news": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPNWdZR3l3eGU4ZGQyOERmVUR4YXVJZV93dkx2b1BDbU9iYmVtc09ZN3JPdnZsbU00TEFNTGFaYXRxbHNOTHJZNEloSlhkMFhfZnFuZF9uOUExbFhDNkFDU1hJeER4ZFlRZmRWaldOOHB3WWJZdlM1MG1CLVExSEdTdXhXcS1pT2ZyZUpuUFNETE5ZQWY0ZWt1OXVMaw?oc=5",
+      "cluster_id": "kebijakan-regulasi",
+      "cluster_name": "Kebijakan & Regulasi",
+      "cluster_assignment": "keyword"
+    },
+    {
       "judul": "Area Mobil Kopi Pasar Aceh Jadi Tempat Nongkrong Baru di Banda Aceh",
       "tautan": "https://aceh.tribunnews.com/nanggroe/1047304/area-mobil-kopi-pasar-aceh-jadi-tempat-nongkrong-baru-di-banda-aceh",
       "tanggal": "2026-10-04 14:33:03",
@@ -22,7 +78,9 @@
       "link_type": "publisher_article",
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
-      "cluster_assignment": "unassigned"
+      "cluster_assignment": "unassigned",
+      "cluster_ai_reviewed_at": "2026-10-05T07:33:42.802Z",
+      "cluster_review_version": 2
     },
     {
       "judul": "FCE 2026 Hari Ketiga, Penggiat Kopi NTT Diajak Tingkatkan Kualitas hingga Buka Peluang Ekspor",
@@ -34,7 +92,9 @@
       "link_type": "publisher_article",
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
-      "cluster_assignment": "unassigned"
+      "cluster_assignment": "unassigned",
+      "cluster_ai_reviewed_at": "2026-10-05T07:33:42.802Z",
+      "cluster_review_version": 2
     },
     {
       "judul": "Gabungkan Kopi dan Terasi, Minuman Baru di Vietnam Ini Bikin Penasaran",
@@ -205,6 +265,110 @@
       "link_type": "publisher_article"
     },
     {
+      "judul": "Menyesap Kopi Mont Blanc, Merangkai Kemitraan Panjang RRI dan Portola Grand Arabia - RRI.co.id",
+      "tautan": "https://rri.co.id/banda-aceh/ekonomi/bisnis/2757913/menyesap-kopi-mont-blanc-merangkai-kemitraan-panjang-rri-dan-portola-grand-arabia",
+      "tanggal": "Fri, 25 Sep 2026 00:48:00 GMT",
+      "sumber": "RRI.co.id",
+      "resolution_attempted_at": "2026-10-05T07:33:31.641Z",
+      "resolution_attempts": 1,
+      "tautan_google_news": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQRGZCcXZhelRoNHFlei1vVklEUkJ2dWliQWtIZ0xKYzg3bHB1WXlXNlltRGR3ckFaVmsycDVWNExzOGhWVlVjX0g3Q21XdEdPeDJ5N2NDOFdtdEZNbUNreFJrOHdoR25lclJNZlhfd0xjMDctdWY2aFJlLThtSlNxME9DQTJHMWk4X0wtZjlRTnE4a0YxRTBQZXg2SjFPZ0hkLWVEQUtHZGJUb2VXbGlTcDAzcEc3a1BsVlJsdFU3b2g1NUU3a0ZiNXhpTFZvUQ?oc=5",
+      "link_type": "publisher_article",
+      "resolution_status": "resolved",
+      "cluster_id": "ekspor-daya-saing",
+      "cluster_name": "Ekspor & Daya Saing",
+      "cluster_assignment": "keyword"
+    },
+    {
+      "judul": "Waktu Terbaik Minum Kopi, Efeknya Bisa Cegah Sakit Jantung - CNBC Indonesia",
+      "tautan": "https://www.cnbcindonesia.com/lifestyle/20260924163656-33-770649/waktu-terbaik-minum-kopi-efeknya-bisa-cegah-sakit-jantung",
+      "tanggal": "Fri, 25 Sep 2026 00:35:38 GMT",
+      "sumber": "CNBC Indonesia",
+      "resolution_attempted_at": "2026-10-05T07:33:31.641Z",
+      "resolution_attempts": 1,
+      "tautan_google_news": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNMHRGNFNNbzBVM0tnZFpPbTdOOHRIV1dJMjBwZm5JUHFsQVZ2bV9kZU9vaU53RHJhdmFQTl90ODNCMm93N1B4SHlyTFd4OVM0WHF3eUl2Tzg1XzhTVHVzN2t2LW5POGNWTXVtOXF5RVEtZ1hTWi0xLXBxU0ZoQzNEcFgwYm5JNXN2eU92SUVUdmo1NzlkdnI4aUtuTjBjdTd3Qk5SUTZBckV3NndkUGZ3c193emszdnJVU05PanBRNNIBxAFBVV95cUxONkpDbUowejdyVEdnTm83alcxSzBuNjNGMXFBUlVFUXlrWk5jMWZGMjVlM0szSkNDNExENXdSbWVoUTR1N1ZLWWE3Qk9wLTJnV2NmQjVReWdCb1VKUlVYMFMyMXBkSjFMRVQ1bmJFdlBoaW5MVVVJTGd3R0ZxR1RtbFR1dkdmX1VpeEFZR0x6a1U3cUZNLVVnRXo5TTVPNTJkZHQ0cW1maHI0WDZYVWxPTkFzOWFMdFhYbVZUYTNtRlBJSURT?oc=5",
+      "link_type": "publisher_article",
+      "resolution_status": "resolved",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_ai_reviewed_at": "2026-10-05T07:33:42.802Z",
+      "cluster_review_version": 2
+    },
+    {
+      "judul": "5 Coffee Shop di Senayan yang Seru Buat Nongkrong, Kopinya Enak! - food.detik.com",
+      "tautan": "https://food.detik.com/resto-dan-kafe/d-8677618/5-coffee-shop-di-senayan-yang-seru-buat-nongkrong-kopinya-enak",
+      "tanggal": "Fri, 25 Sep 2026 00:00:04 GMT",
+      "sumber": "food.detik.com",
+      "resolution_attempted_at": "2026-10-05T07:33:31.641Z",
+      "resolution_attempts": 1,
+      "tautan_google_news": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOZjJOU2gxcmFnSW5ZYVRSOGNmYkM0QkllaEZSVkhlOG9KTEUtLXYtQUNpV2FCbjR6am9US3J0aGdmV1kwb3RiZkxVSGZnSmxfa04xaVprT3BXMVdndjBTWnFmRVVoVTdXVlFDdHBiUUNDVWJQeVRlZHkxVk1Gc2lPSUpxdUJsUmRrS0Fma2xPWl9NQ1Bodk13N1NWNjVfT1ZMUDhnVTN2TktfQWl2T1JZ0gG0AUFVX3lxTE1lbkc5S3BOR1JJLUxmaDM5NnlXZ0lYeGZYWnB6RXk1aGl0WVVqMU9KM2JBeWxSbGtxY04zVkZjSEN6QTk3OGxhbmlHWVhiSWxoZmhWV2RkeFRzb2Z5N3lvN0FBaGJLZzZkTDR3SkNUcy1ndi1xUHp4VUsxaHh3M3M3SElqQVVoMHByUmdHVU51cXQtd0dYWW1PTU9ybWt0aGdXWGV3eEpTcHlLOEhtTUh0TDYtOA?oc=5",
+      "link_type": "publisher_article",
+      "resolution_status": "resolved",
+      "cluster_id": "kedai-konsumsi-gaya-hidup",
+      "cluster_name": "Kedai, Konsumsi & Gaya Hidup",
+      "cluster_assignment": "rule_context"
+    },
+    {
+      "judul": "COFFEE & DRIVE: EV & HYBRID EXPERIENCE BEKASI - Bank Syariah Indonesia",
+      "tautan": "https://www.bankbsi.co.id/promo/coffee-drive-ev-hybrid-experience-bekasi",
+      "tanggal": "Thu, 24 Sep 2026 23:12:51 GMT",
+      "sumber": "Bank Syariah Indonesia",
+      "resolution_attempted_at": "2026-10-05T07:33:31.641Z",
+      "resolution_attempts": 1,
+      "tautan_google_news": "https://news.google.com/rss/articles/CBMifEFVX3lxTE5la3Fka0Eza0N6VzcwenI3Vm5uRmU2ZEVQT3pvV2pPdGd5QThpZFRhZTBTd1JUd2xQRXlYbldDakp2ZnR6dGRQdEs3bnl6QlhaVHBoVWVIM0l5ajlURXJ2aGJ5bmxfMHhhRkpEc3JqdmozRDB5R1VvbU00Qno?oc=5",
+      "link_type": "publisher_article",
+      "resolution_status": "resolved",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_ai_reviewed_at": "2026-10-05T07:33:42.802Z",
+      "cluster_review_version": 2
+    },
+    {
+      "judul": "Viral di Jerman dan AS, Benarkah Ampas Kopi Efektif Hilangkan Bau Kloset? - Media Indonesia",
+      "tautan": "https://mediaindonesia.com/kesehatan/937246/viral-di-jerman-dan-as-benarkah-ampas-kopi-efektif-hilangkan-bau-kloset",
+      "tanggal": "Thu, 24 Sep 2026 12:13:47 GMT",
+      "sumber": "Media Indonesia",
+      "resolution_attempted_at": "2026-10-05T07:33:31.641Z",
+      "resolution_attempts": 1,
+      "tautan_google_news": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPLWI1U3pPcTdQc3p2R09lVC14d0FhYzV6WExwUzBFNEdEZklTVU1NWnR3OHNZdy1GMVBUNlVpSlpNNXJCRElKN2xrclZJRTVKTW50X2NJYU05SlJvQXNnb1p1eEJlT0lrenpvMEp3Y2lwWVFhdmctbk00ek8zVnVXODk5RHUyV0lxcE5Sb0k2SHMwYjV6bFFKMmF3a05vZjE3R1dhTGFWOG40UDNkM1p0M3MwYXZQdw?oc=5",
+      "link_type": "publisher_article",
+      "resolution_status": "resolved",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_ai_reviewed_at": "2026-10-05T07:33:42.802Z",
+      "cluster_review_version": 2
+    },
+    {
+      "judul": "Lini Kopi Surabaya: Coffe Homey di Surabaya Selatan - Kompasiana.com",
+      "tautan": "https://www.kompasiana.com/lini17077/6ab4ef8a34777c746c6bded2/lini-kopi-surabaya-coffe-homey-di-surabaya-selatan",
+      "tanggal": "Thu, 24 Sep 2026 10:14:47 GMT",
+      "sumber": "Kompasiana.com",
+      "resolution_attempted_at": "2026-10-05T07:33:31.641Z",
+      "resolution_attempts": 1,
+      "tautan_google_news": "https://news.google.com/rss/articles/CBMisgFBVV95cUxPdFlfcTZKTFF1bUFEX0dvQlR6ZDJ0S3lVVUhwR3liNmhlLXBEVzBXNWZweFdIWHBqeGlaSTJaWUlBbjBjMjllS0ppWlNlTzBteC1DUmdQeXBBclJJYVpaamNoWE1ibER5S3hCZ1AxSlZCRnVTcFZrSTVvYXJ0enNjOXdRWmpValhlWGlTME8tQTBaVWI2RU9wSWtGeEk5RlhyVTNDUENZWTIyTTVlMV9sN2t3?oc=5",
+      "link_type": "publisher_article",
+      "resolution_status": "resolved",
+      "cluster_id": "kedai-konsumsi-gaya-hidup",
+      "cluster_name": "Kedai, Konsumsi & Gaya Hidup",
+      "cluster_assignment": "keyword"
+    },
+    {
+      "judul": "DKUPP Kabupaten Probolinggo Perkuat Communal Branding Gula Aren dan Kopi - Pemerintah Kabupaten Probolinggo",
+      "tautan": "https://probolinggokab.go.id/dkupp-kabupaten-probolinggo-perkuat-communal-branding-gula-aren-dan-kopi/",
+      "tanggal": "Thu, 24 Sep 2026 05:22:00 GMT",
+      "sumber": "Pemerintah Kabupaten Probolinggo",
+      "resolution_attempted_at": "2026-10-05T07:33:31.641Z",
+      "resolution_attempts": 1,
+      "tautan_google_news": "https://news.google.com/rss/articles/CBMipAFBVV95cUxOb09ueEVtRjUzc2EzNWlHd2l2Q201c0pfS1JfTUtlcWgtYXdCMllMSVRTVUZteGlVX1E5SkJBeS1qdGJVSWFsdEVIZER3Q2p1QU85OGQ2bTVPT0pObEs5MWk0MXFzTy1Fc3l0ZGJPZUFpWEU0VGFhVnY2QmRUUHJDVU1BelZkU3BYVTVaRVhCbXFtMDBDcVJ1YVZyQlVvcVlfV1JNQg?oc=5",
+      "link_type": "publisher_article",
+      "resolution_status": "resolved",
+      "cluster_id": "ekspor-daya-saing",
+      "cluster_name": "Ekspor & Daya Saing",
+      "cluster_assignment": "keyword"
+    },
+    {
       "judul": "12 Pertanyaan Interview Barista dan Kerangka Jawaban untuk Pemula",
       "tautan": "https://www.aeki-aice.org/pertanyaan-interview-barista/",
       "tanggal": "2026-09-24T11:14:56+07:00",
@@ -217,6 +381,48 @@
       "link_type": "publisher_article"
     },
     {
+      "judul": "Meracik Kopi, Merawat Pengalaman: Kisah Fellow Coffee dan Budaya Kopi - RRI.co.id",
+      "tautan": "https://rri.co.id/manado/kuliner/2754820/meracik-kopi-merawat-pengalaman-kisah-fellow-coffee-dan-budaya-kopi",
+      "tanggal": "Wed, 23 Sep 2026 23:01:00 GMT",
+      "sumber": "RRI.co.id",
+      "resolution_attempted_at": "2026-10-05T07:33:31.641Z",
+      "resolution_attempts": 1,
+      "tautan_google_news": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQaG50Q2hQNU53ckpvYVoySFcxd21JakpUVk1ZMmxEM05meEEwVFZQSWtSUDBzU1RIVjJDdkJRYy1FUkdEelNyblhLeThJcFBGeVhZWGwydV9WTlEwUHVRbV9oR18yeUhTeS1Ra3EzUVRQWEFOVzdHNHl6N19vSHBnRVNEV3dsUWxUY1VicEVaVExOQTFuV1hic2V1YUJkckdrMG1Cdl9OSGtSb1VR?oc=5",
+      "link_type": "publisher_article",
+      "resolution_status": "resolved",
+      "cluster_id": "kedai-konsumsi-gaya-hidup",
+      "cluster_name": "Kedai, Konsumsi & Gaya Hidup",
+      "cluster_assignment": "keyword"
+    },
+    {
+      "judul": "Dari Skripsi hingga Kerjaan, Alasan Anak Muda Pilih Berlama-lama di Coffee Shop - detikcom",
+      "tautan": "https://www.detik.com/sumut/berita/d-8675862/dari-skripsi-hingga-kerjaan-alasan-anak-muda-pilih-berlama-lama-di-coffee-shop",
+      "tanggal": "Wed, 23 Sep 2026 10:30:21 GMT",
+      "sumber": "detikcom",
+      "resolution_attempted_at": "2026-10-05T07:33:31.641Z",
+      "resolution_attempts": 1,
+      "tautan_google_news": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQbFNsTHIxa05yQTUtdEluaFVJaVU4MzJJcTdKZ1plXzZBXzRTNURqV3c1dk1kWk5zWEFTLWwycXJlNzY1dG92S28tOURleDFMeE9ZLTdmNXdnc3VEMmlUOVptRHhUUEVNWjN1QmZNWFpJaEFHbE8xbzE5Zy1GMHZQUENnaUt5aW5UdGRRWHFkYU9YVEVUNEs1UVFUaVdwdGRUY0YyTWhkbjFsczFvbnFTTGdNczdtYVlPZDVKcGh3QWXSAcYBQVVfeXFMTVo2czlPS1RKRlRXa2lSOFlkV085aGRzVG5SOVF4YkFGd2FjempaY19rdXRnZUtKSDNyS3NKU3hlQ3RwUkV4enNMejZvZmFFX1V0MmJxaUNiemR4YVI3Ry1ieWoyMV83ODR1TjhiRkRFdkt4UE9wcjBVbFhaQnlYOTdmY2d6TVFSbzBvdm80ZnNjZWZuNFBkUGM2M1JaOFZ3WTdXQURKTU9NcGswZWozXzBQSi1CUDRXc3M3bkRweVNZTmVRNkhR?oc=5",
+      "link_type": "publisher_article",
+      "resolution_status": "resolved",
+      "cluster_id": "kedai-konsumsi-gaya-hidup",
+      "cluster_name": "Kedai, Konsumsi & Gaya Hidup",
+      "cluster_assignment": "rule_context"
+    },
+    {
+      "judul": "Membaca Memori Masa Lalu, Pameran Virtual Arsip Era Kolonial dan Perjalanan Kopi di Jawa Tengah - Pemerintah Provinsi Jawa Tengah",
+      "tautan": "https://jatengprov.go.id/publik/membaca-memori-masa-lalu-pameran-virtual-arsip-era-kolonial-dan-perjalanan-kopi-di-jawa-tengah/",
+      "tanggal": "Wed, 23 Sep 2026 09:38:29 GMT",
+      "sumber": "Pemerintah Provinsi Jawa Tengah",
+      "resolution_attempted_at": "2026-10-05T07:33:31.641Z",
+      "resolution_attempts": 1,
+      "tautan_google_news": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQNzlUQ1dxamlpc04tbHNaZE9XNE9fSFloRUllYXVINTROTXBubWZmQUw4NGNRM0hlWE1lcFh2dUNkRy1lMVlSNDdWdGl1TTB2WWwweS1VUjZMUm5jdTRWTDcxY0lvZjdOR2JZUFM5VzI5OFUzZnFuSWsyWlk2V0JVTmVhcWwtWGpyY2k2YWxDYUVjYWs0TzMyVVJYcm1HZUw0WmhFVDdZV2F4UkZ4R2VYTTNReHhuaDMxWWNtVWk0RHNRdHZSOHc?oc=5",
+      "link_type": "publisher_article",
+      "resolution_status": "resolved",
+      "cluster_id": "event-kompetisi",
+      "cluster_name": "Event & Kompetisi",
+      "cluster_assignment": "rule_evidence"
+    },
+    {
       "judul": "Contoh CV Barista Pemula dan Cara Menulis Skill dengan Jujur",
       "tautan": "https://www.aeki-aice.org/contoh-cv-barista-pemula/",
       "tanggal": "2026-09-23T15:41:09+07:00",
@@ -226,7 +432,9 @@
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "link_type": "publisher_article"
+      "link_type": "publisher_article",
+      "cluster_ai_reviewed_at": "2026-10-05T07:33:42.802Z",
+      "cluster_review_version": 2
     },
     {
       "judul": "Cara Tamping Kopi untuk Pemula: Posisi, Kerataan, dan Latihan",
@@ -234,10 +442,14 @@
       "tanggal": "2026-09-22T16:12:58+07:00",
       "sumber": "AEKI",
       "ringkasan": "Cuplikan isi: Cara tamping kopi yang baik dimulai dengan meratakan bubuk di basket, menempatkan tamper sejajar, lalu menekan sekali secara stabil dengan pergelangan tetap netral. Kerataan lebih penting daripada mengejar angka tekanan tertentu karena permukaan yang miring dapat menciptakan bagian puck dengan kepadatan berbeda. Gerakannya singkat, tetapi perlu dilatih agar hasilnya dapat diulang. Panduan ini membahas fungsi tamping, posisi kerja, cara memeriksa hasil, dan latihan sederhana untuk pemula. Apa yang dikerjakan tamping dalam persiapan espresso…",
-      "cluster_id": "lainnya",
-      "cluster_name": "Lainnya",
-      "cluster_assignment": "unassigned",
-      "link_type": "publisher_article"
+      "cluster_id": "barista-teknik-seduh",
+      "cluster_name": "Barista & Teknik Seduh",
+      "cluster_assignment": "ai_existing",
+      "link_type": "publisher_article",
+      "cluster_ai_reviewed_at": "2026-10-05T07:33:42.802Z",
+      "cluster_review_version": 2,
+      "cluster_ai_reason": "Konten teknis tentang langkah-langkah tamping dan praktik seduh espresso untuk barista.",
+      "cluster_ai_evidence": "Cara tamping kopi yang baik dimulai dengan meratakan bubuk di basket"
     },
     {
       "judul": "SOP Barista untuk Opening dan Closing: Contoh Checklist Shift",
@@ -249,7 +461,9 @@
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "link_type": "publisher_article"
+      "link_type": "publisher_article",
+      "cluster_ai_reviewed_at": "2026-10-05T07:33:42.802Z",
+      "cluster_review_version": 2
     },
     {
       "judul": "Tanamera Coffee at GJAW",
@@ -271,7 +485,9 @@
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "link_type": "publisher_article"
+      "link_type": "publisher_article",
+      "cluster_ai_reviewed_at": "2026-10-05T07:33:42.802Z",
+      "cluster_review_version": 2
     },
     {
       "judul": "Kisah CFU Asal Klaten Menembus Pasar Lokal dan Global, Dari Penggergajian Sederhana ke Pemasok Perlengkapan 900 Gerai Kopi",
@@ -294,8 +510,9 @@
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "cluster_ai_reviewed_at": "2026-10-04T12:01:56.767Z",
-      "link_type": "publisher_article"
+      "cluster_ai_reviewed_at": "2026-10-05T07:33:42.802Z",
+      "link_type": "publisher_article",
+      "cluster_review_version": 2
     },
     {
       "judul": "Thai Tea Consumption & Top Brands",
@@ -307,8 +524,9 @@
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "cluster_ai_reviewed_at": "2026-10-04T12:01:56.767Z",
-      "link_type": "publisher_article"
+      "cluster_ai_reviewed_at": "2026-10-05T07:33:42.802Z",
+      "link_type": "publisher_article",
+      "cluster_review_version": 2
     },
     {
       "judul": "Dorong Akses Pasar Dua Arah, Kemendag Perkuat Perdagangan Indonesia–Cili",
@@ -320,7 +538,9 @@
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "link_type": "publisher_article"
+      "link_type": "publisher_article",
+      "cluster_ai_reviewed_at": "2026-10-05T07:33:42.802Z",
+      "cluster_review_version": 2
     },
     {
       "judul": "Reaktivasi Perundingan Perdagangan Indonesia-Maroko, Wamendag Roro Dorong Negosiasi Tuntas di 2027",
@@ -344,7 +564,9 @@
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "link_type": "publisher_article"
+      "link_type": "publisher_article",
+      "cluster_ai_reviewed_at": "2026-10-05T07:33:42.802Z",
+      "cluster_review_version": 2
     },
     {
       "judul": "Kemendag Perkuat Kolaborasi Ekspor dengan Pemerintah Daerah, Lepas Ekspor Kopi Jawa Barat Senilai Rp2,64 Miliar ke Inggris",
@@ -355,7 +577,9 @@
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "link_type": "publisher_article"
+      "link_type": "publisher_article",
+      "cluster_ai_reviewed_at": "2026-10-05T07:33:42.802Z",
+      "cluster_review_version": 2
     },
     {
       "judul": "Periode Januari—Juli 2026, Business Matching Kemendag  Fasilitasi 1.021 UMKM dan Catatkan Rp5,95 Triliun",
@@ -367,7 +591,9 @@
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "link_type": "publisher_article"
+      "link_type": "publisher_article",
+      "cluster_ai_reviewed_at": "2026-10-05T07:33:42.802Z",
+      "cluster_review_version": 2
     },
     {
       "judul": "Coffee in Motion: Tanamera Coffee at GIIAS 2026",
@@ -390,8 +616,9 @@
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "cluster_ai_reviewed_at": "2026-10-04T12:01:56.767Z",
-      "link_type": "publisher_article"
+      "cluster_ai_reviewed_at": "2026-10-05T07:33:42.802Z",
+      "link_type": "publisher_article",
+      "cluster_review_version": 2
     },
     {
       "judul": "Bertemu dengan Menteri Investasi dan Perdagangan Luar Negeri Mesir, Mendag Busan Dorong Pertemuan ke-2 JTC pada 2026",
@@ -403,7 +630,9 @@
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "link_type": "publisher_article"
+      "link_type": "publisher_article",
+      "cluster_ai_reviewed_at": "2026-10-05T07:33:42.802Z",
+      "cluster_review_version": 2
     },
     {
       "judul": "Coffee in Rhythm: Tanamera Coffee at Soundrenaline Sana Sini Jakarta 2026",
@@ -445,11 +674,14 @@
       "tanggal": "2026-07-07T06:25:05+00:00",
       "sumber": "Jakpat",
       "ringkasan": "Cuplikan isi: Coffee and Tea Continue to Dominate, While Matcha Strengthens Its Premium Position Indonesia’s beverage industry continues to evolve as consumers embrace an increasingly diverse range of drink options. Beverages are no longer simply consumed to quench thirst, they have become part of daily routines, social activities, and moments to relax or recharge. To better understand these changing habits, Jakpat surveyed 1,238 respondents across Indonesia about their consumption of various beverages. Coffee and Tea Remain the Top Choices Across…",
-      "cluster_id": "lainnya",
-      "cluster_name": "Lainnya",
-      "cluster_assignment": "unassigned",
-      "cluster_ai_reviewed_at": "2026-10-04T12:01:56.767Z",
-      "link_type": "publisher_article"
+      "cluster_id": "riset-tren-konsumen",
+      "cluster_name": "Riset & Tren Konsumen",
+      "cluster_assignment": "ai_existing",
+      "cluster_ai_reviewed_at": "2026-10-05T07:33:42.802Z",
+      "link_type": "publisher_article",
+      "cluster_review_version": 2,
+      "cluster_ai_reason": "Laporan survei perilaku konsumsi minuman (termasuk kopi) dengan bukti jumlah responden memenuhi kriteria riset & tren konsumen.",
+      "cluster_ai_evidence": "Jakpat surveyed 1,238 respondents across Indonesia"
     },
     {
       "judul": "Indonesia Beverage Consumption",
@@ -461,8 +693,9 @@
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "cluster_ai_reviewed_at": "2026-10-04T12:01:56.767Z",
-      "link_type": "publisher_article"
+      "cluster_ai_reviewed_at": "2026-10-05T07:33:42.802Z",
+      "link_type": "publisher_article",
+      "cluster_review_version": 2
     },
     {
       "judul": "GoTo Coffee Festival",
@@ -495,7 +728,9 @@
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "link_type": "publisher_article"
+      "link_type": "publisher_article",
+      "cluster_ai_reviewed_at": "2026-10-05T07:33:42.802Z",
+      "cluster_review_version": 2
     },
     {
       "judul": "Tanamera Coffee at IIMS 2026",
@@ -517,7 +752,9 @@
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "link_type": "publisher_article"
+      "link_type": "publisher_article",
+      "cluster_ai_reviewed_at": "2026-10-05T07:33:42.802Z",
+      "cluster_review_version": 2
     },
     {
       "judul": "Konsumsi Kopi Indonesia Tembus 1 Kilogram Per Kapita, Catat Sejarah Baru",
@@ -543,5 +780,5 @@
       "link_type": "publisher_article"
     }
   ],
-  "fetched": "2026-10-05T04:52:27.132Z"
+  "fetched": "2026-10-05T07:33:28.856Z"
 }

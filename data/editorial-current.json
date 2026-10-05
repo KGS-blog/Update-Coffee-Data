@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated_at": "2026-10-05T04:52:32.614Z",
-  "feed_fetched": "2026-10-05T04:52:27.132Z",
+  "generated_at": "2026-10-05T07:33:42.802Z",
+  "feed_fetched": "2026-10-05T07:33:28.856Z",
   "mode": "auto",
   "settings": {
     "version": 1,
@@ -18,207 +18,442 @@
       "cluster_id": "kedai-konsumsi-gaya-hidup",
       "cluster_name": "Kedai, Konsumsi & Gaya Hidup",
       "period_days": 14,
-      "generated_at": "2026-10-04T15:48:41.634Z",
+      "generated_at": "2026-10-05T07:33:42.802Z",
       "status": "ai_generated",
-      "fingerprint": "79035dfe4c5e1cc69bc80a61ad594b2ef8d5136d1fff7fcc3b741f077078f06c",
+      "fingerprint": "a2de864fbc543575fa5d6fa0e368b64327a4761340afb87f4dc2650a417bbc1e",
       "article": {
-        "title": "Tiga Pembukaan Pekan Ini, Format Kedai Makin Beragam",
-        "summary": "Pekan ini, setidaknya tiga kedai kopi baru diberitakan dibuka di Jambi, BSD City, dan Lampung [1][2][3]. Di saat bersamaan, media lokal menyorot pilihan “low budget” untuk nugas di Mataram [7], sementara kafe tetap jadi ruang publik yang diawasi—ada rencana sidak ASN di Kukar dan satu perkara pidana yang bermula di warung kopi [6][8].",
-        "lead": "Benang Kopi resmi hadir di ibis Styles Serpong BSD City [2]. Di Jambi, Jati Coffee menyatakan ingin mengangkat potensi kopi lokal [1], sementara Elha Coffee & Resto di Lampung disebut sebagai komitmen Lembah Hijau mendukung pariwisata [3]. Di luar itu, ada format alternatif: Kedeboox memadukan kopi dan buku di Medan [4], serta kolaborasi kopi–seni di Art Jakarta 2026 [5].",
+        "title": "Kedai, Nongkrong, dan Gaya Hidup Kopi: dari M Stand di Jakarta hingga ruang mobil kopi di Aceh",
+        "summary": "Pekan ini, merek kopi asal Shanghai, M Stand, resmi hadir di Jakarta [1]; area Mobil Kopi Pasar Aceh disebut jadi tempat nongkrong baru di Banda Aceh [2]; sementara Polsek Cileungsi menetapkan 10 tersangka dalam kasus pengeroyokan yang bermula di warung kopi [3]. Di sisi lain, Art Jakarta 2026 menampilkan kolaborasi kopi dan seni [4], dan sejumlah liputan memotret coffee shop sebagai tempat kerja dan belajar anak muda [8].",
+        "lead": "Daftar rekomendasi coffee shop di Senayan menggarisbawahi banyaknya opsi hangout di pusat kota [5], sementara tulisan komunitas dan radio menonjolkan sisi keakraban dan cerita di kedai lokal [6][7]. Gambaran ini tidak otomatis berarti pasar tumbuh, tetapi menunjukkan ragam fungsi ruang kopi di beberapa kota.",
         "sections": [
           {
-            "heading": "Pembukaan lintas kota",
+            "heading": "Merek baru, peta kota lama",
             "paragraphs": [
-              "Tiga kabar pembukaan datang berurutan: Jati Coffee di Kota Jambi, Benang Kopi di ibis Styles Serpong BSD City, dan Elha Coffee & Resto di Lampung [1][2][3]. Ini menunjukkan aliran venue baru yang tersebar lintas daerah, meski pemberitaan masih berupa peresmian dan pengenalan, bukan data kinerja.",
-              "Masing‑masing membawa sudut tawaran yang berbeda. Benang Kopi berlokasi di dalam hotel ibis Styles, menambah opsi F&B bagi tamu dan warga sekitar BSD [2]. Jati Coffee di Jambi dibingkai untuk mengangkat potensi kopi lokal—sebuah positioning yang lazim di kota produsen [1]. Sementara Elha Coffee & Resto diposisikan pihak Lembah Hijau sebagai bentuk dukungan pada pariwisata Lampung [3]."
+              "Masuknya M Stand dari Shanghai ke Jakarta menegaskan arus konsep “modern coffee lifestyle” yang dibawa pemain lintas kota [1]. Ini menambah satu titik baru di peta kedai Jakarta yang sudah dipenuhi rekomendasi kawasan seperti Senayan, di mana media gaya hidup merangkum beberapa pilihan untuk nongkrong dan ngopi [5]. Dari dua bahan itu kita hanya bisa menyimpulkan hadirnya opsi baru dan kurasi tempat; dampaknya ke pasar belum terlihat di angka yang tersedia [1][5]."
             ]
           },
           {
-            "heading": "Format dan kolaborasi: hotel, buku, seni",
+            "heading": "Tempat nongkrong yang fungsional",
             "paragraphs": [
-              "Ragam format semakin kelihatan. Model kafe di dalam hotel seperti Benang Kopi memanfaatkan arus tamu dan fasilitas properti [2]. Di Medan, Kedeboox menawarkan pengalaman berbeda dengan menggabungkan kopi dan buku, menandai minat pada ruang baca sebagai nilai tambah [4]. Di ranah acara, Art Jakarta 2026 menampilkan kolaborasi kopi dan seni, memberi cara baru menikmati pameran sambil mengeksplorasi budaya kopi [5].",
-              "Semua contoh di atas masih berupa liputan pengenalan dan program acara. Belum ada angka pengunjung atau penjualan yang diterbitkan, sehingga dampaknya pada konsumsi harian belum dapat disimpulkan dari bahan ini."
+              "Di Banda Aceh, area Mobil Kopi Pasar Aceh disebut menjadi spot nongkrong baru, menandai penggunaan ruang publik untuk kumpul dan bersantai [2]. Liputan lain mencatat alasan anak muda berlama-lama di coffee shop, dari ngerjain skripsi sampai kerjaan, yang menegaskan fungsi kedai sebagai ruang kerja kasual [8]. Ada pula tulisan komunitas tentang sebuah kedai ‘homey’ di Surabaya Selatan, yang menyorot suasana dan kedekatan sebagai daya tarik [6]. Bersama-sama, bahan ini menunjukkan variasi motif kunjungan tanpa memberi ukuran kuantitatifnya [2][6][8]."
             ]
           },
           {
-            "heading": "Ruang publik, aturan, dan akses harga",
+            "heading": "Kopi bertemu seni",
             "paragraphs": [
-              "Status kafe sebagai ruang publik juga tampak dari dua pemberitaan berbeda. BKPSDM Kutai Kartanegara menyatakan akan melakukan sidak ke kafe dan warung kopi untuk mencari ASN yang nongkrong saat jam kerja—sebuah rencana penertiban, bukan data pelanggaran yang terukur [6]. Terpisah, Polsek Cileungsi menetapkan 10 tersangka dalam kasus pengeroyokan yang bermula dari tantangan balap lari di warung kopi; ini perkara pidana spesifik dan tidak mewakili pola umum perilaku di kafe [8].",
-              "Di sisi akses, media lokal merekomendasikan lima coffee shop “low budget” di Mataram untuk nugas dan nongkrong, mengindikasikan ketersediaan opsi terjangkau di kota tersebut [7]. Lagi‑lagi, ini daftar rekomendasi media, bukan survei harga komprehensif."
+              "Art Jakarta 2026 menampilkan kolaborasi kreatif yang menggabungkan pengalaman menikmati galeri dengan eksplorasi budaya kopi [4]. Di Manado, sebuah liputan radio menekankan kisah kedai dan perawatan pengalaman sebagai bagian dari budaya kopi setempat [7]. Keduanya menunjukkan bagaimana kopi dipakai sebagai medium pendukung pengalaman budaya, namun sifatnya kuratorial dan naratif; tidak ada klaim angka pengunjung atau dampak ekonomi yang bisa ditarik dari bahan ini [4][7]."
+            ]
+          },
+          {
+            "heading": "Catatan keamanan ruang kopi",
+            "paragraphs": [
+              "Berita dari Cileungsi mengingatkan bahwa ruang kopi tetap memerlukan tata kelola dasar: polisi menetapkan 10 tersangka pengeroyokan yang bermula dari tantangan balap lari di warung kopi, dengan satu korban meninggal [3]. Peristiwa ini adalah kasus spesifik dan tidak mewakili seluruh skena, tetapi cukup menjadi pengingat soal pentingnya aturan sederhana dan respons cepat ketika terjadi gesekan [3]."
             ]
           }
         ],
-        "conclusion": "Kumpulan berita pekan ini memperlihatkan dua hal yang berjalan bersamaan: pembukaan kedai lintas kota dengan format yang kian bervariasi, dan pengakuan atas kafe sebagai ruang publik yang perlu tata kelola. Bahan yang tersedia masih dominan berupa pengumuman dan liputan acara, sehingga makna konsumsi baru sebatas opsi yang bertambah, belum terbukti menggeser perilaku minum kopi sehari‑hari.",
+        "conclusion": "Rangkaian berita menunjukkan kedai kopi berperan sebagai ruang serbaguna: tempat masuknya brand baru, wadah kumpul, titik kerja santai, hingga medium pengalaman seni. Bahan yang ada bersifat kuratorial dan insidental, jadi bacaan terbaiknya adalah peta aktivitas, bukan ukuran pasar.",
         "recommendations": [
           {
-            "audience": "Pemilik/pengelola kedai dan brand lokal",
-            "action": "Perjelas positioning ruang (mis. sudut baca, kemitraan galeri, atau layanan hotel) dan jam layanan, lalu komunikasikan di kanal kedai.",
-            "basis": "Ragam format yang diulas—kafe di hotel (Benang Kopi), kedai bernuansa buku (Kedeboox), dan kolaborasi pameran seni—menunjukkan nilai tambah konteks ruang [2][4][5]."
+            "audience": "Pengelola kedai dan area nongkrong",
+            "action": "Susun aturan rumah sederhana dan SOP eskalasi saat terjadi konflik kecil (mis. intervensi staf, kontak keamanan setempat).",
+            "basis": "Kasus Cileungsi menunjukkan risiko gesekan di ruang kopi yang ramai [3]."
           },
           {
-            "audience": "Pengelola area perkantoran/pemerintah daerah",
-            "action": "Sosialisasikan aturan jam kerja di sekitar klaster kafe agar tidak bergantung pada sidak dadakan yang rawan miskomunikasi.",
-            "basis": "BKPSDM Kukar menyatakan akan menyidak kafe untuk mencari ASN nongkrong saat jam kerja [6]."
+            "audience": "Penyelenggara acara budaya/venue",
+            "action": "Pertimbangkan layanan kopi terkurasi sebagai penunjang pengalaman pengunjung, selaras dengan konteks acara.",
+            "basis": "Kolaborasi kopi–seni di Art Jakarta 2026 diposisikan sebagai cara menikmati galeri dengan eksplorasi budaya kopi [4]."
           },
           {
-            "audience": "Penyelenggara acara/galeri",
-            "action": "Jika menghadirkan mitra kopi, rancang antrian, area tumpah, dan pengelolaan sampah sejak awal.",
-            "basis": "Kolaborasi kopi–seni di Art Jakarta 2026 menunjukkan potensi traffic tambahan di venue [5]."
+            "audience": "Brand yang masuk pasar baru",
+            "action": "Uji coba lokasi dan amati pola kunjungan lokal sebelum ekspansi lebih jauh.",
+            "basis": "Masuknya M Stand ke Jakarta dan munculnya spot nongkrong publik serta motif kerja/belajar menunjukkan kebiasaan yang beragam antar-kota, tanpa data dampak yang seragam [1][2][8]."
           }
         ],
         "source_urls": [
-          "https://news.google.com/rss/articles/CBMirgFBVV95cUxNeG4xcENHQVViWFJHVjZ2S2lDVXBJUHl1THl6bUxhYXlFM1hlUDJYRHB1cC02SG9KejN6Q0lxYzg5U0RsY2V5dmRua3BaNTVyMmxhTDQ2NlB5Q1RybEVrcU9xVTI5TnI3SjZiN0NtNmJJc0E2OWwxZ25ZMENtMW9TQUhyOTQwSm1BRFozQTFvVEFSbnZrT1FRVGt3OVFLWVNwczQteXItaXdLV1hucWc?oc=5",
-          "https://news.google.com/rss/articles/CBMingFBVV95cUxQSUs2MWx4VXJKTjRDR3hVSEtKY0l3RXFYcWNPZWZneGtEcmoxRVJDRjZxY3FOb19pdEU4VFdScEtBM3pNMUgyOG5UWUF3WmRMaS1PeHBSTEd5eUJ0ZXFLZkFyQTVYVHdGM2xkRVBoZEtHdFFOQkFFZUpOUTBxQndJbGs2OUFPMVdZcWhBUHpId0xEdzNUeFhKejlnZnk2Zw?oc=5",
-          "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNcjhSb2dGUlJrVnhFNGpteUhLd3RMYVZoOW1TbTFINkpjU2t0X1VoemVvOWJxMG84ajU1Y3NzZGc3YXNiX1o4aUEtSk9VWDlWMnhGN2oyMm5taEpwMGlzZ2VpaU1YY0ppTDE4RkdRS1kweGV3VGpCQm9yUmF4XzJOemVDcy14LTNqeW15dHdHWmdDLWotT0lYd29SbEJPV3dYS2NoMnhqUG4wYWVrTDN1MlRUV2RsaW9rQ0xtSE42WGlzdjhqalh1c9IBzgFBVV95cUxPVEFTZENwaW9fUldzdjJWR3F6ZmVBVVVDUzduUGRoUEMxc2JpSDJfMG5SUkVseHhZLXdEbk1oMTl5T0VPTHc3NlFJaVJwZmdCWHE4bjVvN1VndXZjQlR2WkJKUDVUQkNMcW1abGxNa1c1LWNhX1pKY2Y0UkJqTG5ndUtSYjJUR0MxUGtQZVI3UjZxOTZvQ1Q0RkpTV1p5UlFtcHVJZHdZZk9Kd1dIelI3NWI3TmdpSVhrcks1c0xSNXY0WWw5NEdkUEc3V21CQQ?oc=5",
-          "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPZS1MSGhBc3M4cG9KVjdicnVmVE5DR25uVWQ5SkZEWTUxZ3hHdWg3bUhLMTRYMmhoN05WWEVVeWpyMm4ydGlDQWVfaFgzd2NtU3o4d2RENDhIa0RHTGRBdFc3amtFYzZVUzdkMW1OeEplVkhxNGtXWlRjM0xGMGt2MDlTR0d2Z0RSWG9tYndkSk5CVUhjVjFnN0F1NGhSdGQ2SFRxbGJubm9OS3dCYU50R1ExS1k0enowMUZGMXNMWmk?oc=5",
+          "https://koran-jakarta.com/2026-10-05/m-stand-dari-shanghai-hadir-di-jakarta-bawa-konsep-modern-coffee-lifestyle",
+          "https://aceh.tribunnews.com/nanggroe/1047304/area-mobil-kopi-pasar-aceh-jadi-tempat-nongkrong-baru-di-banda-aceh",
+          "https://wow.tribunnews.com/news/405874/motif-pengeroyokan-di-metland-cileungsi-terungkap-berawal-dari-tantang-balap-lari-di-warung-kopi",
           "https://www.suara.com/lifestyle/2026/10/03/203948/ketika-kopi-dan-seni-bertemu-menikmati-galeri-jadi-pengalaman-yang-berbeda",
-          "https://news.google.com/rss/articles/CBMixgFBVV95cUxQbHB4QmZZVzFCQTR6UGxMaENfN3Y4VEJ0ZWRkV1FEWl9kWThyU24tVkswZEhTUmZJbFBEWElHMDlCTHlDQ3RBMllRYU1sc1pRaERSSkZ4ZXpHbTJwSFEtczd4NG04d2VNVWh3VnZlYkFRakI0TDRTU2p0d1VFaGhRT2RwWXdNZ2dCNmliel96NWI2elBZT0JreU8tTXQ2RFRDRG92N2o5bFVYYzdPeUp0TVI4NmxXREN3UHRHNXpPMkt5czdXbnc?oc=5",
-          "https://news.google.com/rss/articles/CBMivAFBVV95cUxPX25oWHd4UWpwNWlUXzFSUjQ5ZFRjbTJnX3JncTdiYWZJa1VscGs2RUdsemJWNjlJV0I2aDhQTGt0T011d2lfaEFWWjF6Q18tOUlBZFR0cEpMdHJDbDA1Q01UUFFRT1FLNERWWlZpN3o4Z2tSY1ZBZUlqT3UzTk9ZZ3ZqMUo3UXZXbU9VX3Y0UFpBSVUtaE5VbjlJaDJ5Q3R3cG40RFJPWmR6VkpLdXc0MWV4c2NsZlRBQjdBeQ?oc=5",
-          "https://wow.tribunnews.com/news/405874/motif-pengeroyokan-di-metland-cileungsi-terungkap-berawal-dari-tantang-balap-lari-di-warung-kopi"
+          "https://food.detik.com/resto-dan-kafe/d-8677618/5-coffee-shop-di-senayan-yang-seru-buat-nongkrong-kopinya-enak",
+          "https://www.kompasiana.com/lini17077/6ab4ef8a34777c746c6bded2/lini-kopi-surabaya-coffe-homey-di-surabaya-selatan",
+          "https://rri.co.id/manado/kuliner/2754820/meracik-kopi-merawat-pengalaman-kisah-fellow-coffee-dan-budaya-kopi",
+          "https://www.detik.com/sumut/berita/d-8675862/dari-skripsi-hingga-kerjaan-alasan-anak-muda-pilih-berlama-lama-di-coffee-shop"
         ],
-        "evidence_note": "Mayoritas sumber berupa pengumuman pembukaan dan liputan acara tanpa data penjualan atau kunjungan, sehingga analisis dampak pasar bersifat terbatas."
+        "evidence_note": "Sumber berupa judul dan ringkasan singkat; tidak semua memuat data kuantitatif, sehingga analisis dibatasi pada deskripsi pola yang tampak."
       },
       "article_en": {
-        "title": "Three openings this week, cafe formats keep diversifying",
-        "summary": "This week brought at least three reported openings in Jambi, BSD City, and Lampung [1][2][3]. At the same time, local media highlighted budget options for studying in Mataram [7], while cafes remained under public‑space scrutiny—there’s a planned inspection of civil servants in Kukar and a separate criminal case that began at a coffee stall [6][8].",
-        "lead": "Benang Kopi officially opened inside ibis Styles Serpong BSD City [2]. In Jambi, Jati Coffee framed its launch as a way to spotlight local coffee [1], while Elha Coffee & Resto in Lampung was presented as part of Lembah Hijau’s tourism support [3]. Beyond launches, alternative formats showed up too: Kedeboox in Medan blends coffee and books [4], and Art Jakarta 2026 featured a coffee–art collaboration [5].",
+        "title": "Coffee shops, hangouts, and lifestyle: from Shanghai’s M Stand in Jakarta to a mobile coffee area in Aceh",
+        "summary": "This week, Shanghai’s M Stand opened in Jakarta [1]; a Mobile Coffee area at Pasar Aceh was highlighted as a new hangout spot in Banda Aceh [2]; and police named 10 suspects in a fatal assault that began at a coffee stall in Cileungsi [3]. Meanwhile, Art Jakarta 2026 showcased a coffee-and-art collaboration [4], and coverage described coffee shops as work-and-study spaces for young people [8].",
+        "lead": "Curated lists of Senayan cafes signal plenty of central-city choices [5], while community and radio pieces emphasize warmth and storytelling at local shops [6][7]. These items don’t prove market growth; they map how coffee spaces are being used across cities.",
         "sections": [
           {
-            "heading": "Openings across cities",
+            "heading": "New brand, familiar map",
             "paragraphs": [
-              "Three back‑to‑back announcements: Jati Coffee in Jambi, Benang Kopi at ibis Styles Serpong BSD City, and Elha Coffee & Resto in Lampung [1][2][3]. These are inauguration stories and introductions rather than performance data.",
-              "Each venue positions itself differently. Benang Kopi sits inside a hotel, adding an F&B option for guests and nearby residents in BSD [2]. Jati Coffee in Jambi emphasizes local beans as its stated positioning [1]. Elha Coffee & Resto is presented by Lembah Hijau as a contribution to Lampung tourism [3]."
+              "M Stand’s Jakarta debut brings a cross-city “modern coffee lifestyle” concept to town [1]. It lands in a landscape already packed with curated options, as seen in lifestyle media’s picks around Senayan [5]. From these two items we can only confirm a new option and ongoing curation; there’s no available data here to read market impact or scale [1][5]."
             ]
           },
           {
-            "heading": "Formats and tie‑ins: hotel, books, art",
+            "heading": "Functional hangouts",
             "paragraphs": [
-              "Format variety stands out. A hotel‑based cafe like Benang Kopi leverages property footfall and amenities [2]. In Medan, Kedeboox mixes coffee and books, pointing to reading corners as an add‑on experience [4]. On the events side, Art Jakarta 2026 hosted a coffee–art collaboration that let visitors enjoy exhibitions while exploring coffee culture [5].",
-              "All of the above are introductions and event programs. With no published visitor or sales figures, it’s not possible to infer shifts in day‑to‑day coffee consumption from these reports alone."
+              "In Banda Aceh, the Mobile Coffee area at Pasar Aceh is framed as a new place to gather and relax, pointing to public-space uses for coffee hangouts [2]. Another report outlines why young people stay long at coffee shops—from finishing theses to work tasks—underlining cafes’ casual-work function [8]. A community post about a ‘homey’ shop in South Surabaya highlights atmosphere and closeness as draws [6]. Together these items show varied visit motives without quantitative measures attached [2][6][8]."
             ]
           },
           {
-            "heading": "Public space, rules, and price accessibility",
+            "heading": "When coffee meets culture",
             "paragraphs": [
-              "Two separate items underline cafes as public spaces. BKPSDM Kutai Kartanegara said it plans to inspect cafes and coffee stalls to find civil servants lingering during office hours—a stated enforcement plan, not measured violation data [6]. Separately, police named 10 suspects in an assault case that started from a running challenge at a coffee stall; this is a specific criminal case and not evidence of a broader cafe pattern [8].",
-              "On access and price, a local outlet recommended five “low‑budget” cafes in Mataram for studying and hanging out, signalling affordable options in that city [7]. This is a media listicle, not a comprehensive price survey."
+              "Art Jakarta 2026 presented a creative collaboration that pairs gallery-going with explorations of coffee culture [4]. In Manado, a radio feature spotlights shop stories and care for experience as part of local coffee culture [7]. Both pieces show coffee used to support cultural experiences, but they are curatorial and narrative; there are no visitor or economic figures to infer impact [4][7]."
+            ]
+          },
+          {
+            "heading": "A safety reminder",
+            "paragraphs": [
+              "The Cileungsi case is a sober note: police named 10 suspects after a running-challenge spat at a coffee stall escalated into a fatal assault [3]. It’s a specific incident, not a proxy for the whole scene, yet it underlines the value of basic house rules and fast responses when tensions arise [3]."
             ]
           }
         ],
-        "conclusion": "Taken together, the week’s coverage shows parallel threads: new venues opening across cities with more varied formats, and cafes acknowledged as public spaces that require some governance. With sources skewed to launches and events, the practical takeaway is more options on offer rather than proven changes in consumption behavior.",
+        "conclusion": "Taken together, these items portray cafes as multipurpose spaces: arrivals of new brands, gathering spots, casual work hubs, and cultural add-ons. The material is curatorial and episodic, so it works best as a map of activity, not a market gauge.",
         "recommendations": [
           {
-            "audience": "Cafe owners and local brands",
-            "action": "Make your room positioning explicit (reading corner, gallery tie‑ins, or hotel service) and communicate service hours clearly across your channels.",
-            "basis": "Examples span hotel‑based (Benang Kopi), bookish hangouts (Kedeboox), and exhibition collaborations—signals of room‑context value [2][4][5]."
+            "audience": "Shop operators and hangout-area managers",
+            "action": "Set simple house rules and escalation SOPs for minor conflicts (e.g., staff intervention, local security contacts).",
+            "basis": "The Cileungsi incident exposes risks in busy coffee settings [3]."
           },
           {
-            "audience": "Office‑area managers/local governments",
-            "action": "Prioritize clear office‑hour guidelines around cafe clusters instead of ad‑hoc inspections that risk miscommunication.",
-            "basis": "BKPSDM Kukar announced plans to inspect cafes for civil servants during work hours [6]."
+            "audience": "Event organizers/venues",
+            "action": "Consider curated coffee service as a visitor amenity aligned with the event’s context.",
+            "basis": "Art Jakarta 2026 positioned coffee–art collaboration as part of the gallery experience [4]."
           },
           {
-            "audience": "Event and gallery organizers",
-            "action": "If you host coffee partners, pre‑plan queueing, spillover zones, and waste handling.",
-            "basis": "Art Jakarta 2026’s coffee–art collaboration suggests added venue traffic to manage [5]."
+            "audience": "Brands entering new cities",
+            "action": "Pilot locations and observe local visit patterns before expanding further.",
+            "basis": "M Stand’s Jakarta entry and the emergence of public hangout spots plus work/study motives point to varied habits across cities without uniform impact data [1][2][8]."
           }
         ],
         "source_urls": [
-          "https://news.google.com/rss/articles/CBMirgFBVV95cUxNeG4xcENHQVViWFJHVjZ2S2lDVXBJUHl1THl6bUxhYXlFM1hlUDJYRHB1cC02SG9KejN6Q0lxYzg5U0RsY2V5dmRua3BaNTVyMmxhTDQ2NlB5Q1RybEVrcU9xVTI5TnI3SjZiN0NtNmJJc0E2OWwxZ25ZMENtMW9TQUhyOTQwSm1BRFozQTFvVEFSbnZrT1FRVGt3OVFLWVNwczQteXItaXdLV1hucWc?oc=5",
-          "https://news.google.com/rss/articles/CBMingFBVV95cUxQSUs2MWx4VXJKTjRDR3hVSEtKY0l3RXFYcWNPZWZneGtEcmoxRVJDRjZxY3FOb19pdEU4VFdScEtBM3pNMUgyOG5UWUF3WmRMaS1PeHBSTEd5eUJ0ZXFLZkFyQTVYVHdGM2xkRVBoZEtHdFFOQkFFZUpOUTBxQndJbGs2OUFPMVdZcWhBUHpId0xEdzNUeFhKejlnZnk2Zw?oc=5",
-          "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNcjhSb2dGUlJrVnhFNGpteUhLd3RMYVZoOW1TbTFINkpjU2t0X1VoemVvOWJxMG84ajU1Y3NzZGc3YXNiX1o4aUEtSk9VWDlWMnhGN2oyMm5taEpwMGlzZ2VpaU1YY0ppTDE4RkdRS1kweGV3VGpCQm9yUmF4XzJOemVDcy14LTNqeW15dHdHWmdDLWotT0lYd29SbEJPV3dYS2NoMnhqUG4wYWVrTDN1MlRUV2RsaW9rQ0xtSE42WGlzdjhqalh1c9IBzgFBVV95cUxPVEFTZENwaW9fUldzdjJWR3F6ZmVBVVVDUzduUGRoUEMxc2JpSDJfMG5SUkVseHhZLXdEbk1oMTl5T0VPTHc3NlFJaVJwZmdCWHE4bjVvN1VndXZjQlR2WkJKUDVUQkNMcW1abGxNa1c1LWNhX1pKY2Y0UkJqTG5ndUtSYjJUR0MxUGtQZVI3UjZxOTZvQ1Q0RkpTV1p5UlFtcHVJZHdZZk9Kd1dIelI3NWI3TmdpSVhrcks1c0xSNXY0WWw5NEdkUEc3V21CQQ?oc=5",
-          "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPZS1MSGhBc3M4cG9KVjdicnVmVE5DR25uVWQ5SkZEWTUxZ3hHdWg3bUhLMTRYMmhoN05WWEVVeWpyMm4ydGlDQWVfaFgzd2NtU3o4d2RENDhIa0RHTGRBdFc3amtFYzZVUzdkMW1OeEplVkhxNGtXWlRjM0xGMGt2MDlTR0d2Z0RSWG9tYndkSk5CVUhjVjFnN0F1NGhSdGQ2SFRxbGJubm9OS3dCYU50R1ExS1k0enowMUZGMXNMWmk?oc=5",
+          "https://koran-jakarta.com/2026-10-05/m-stand-dari-shanghai-hadir-di-jakarta-bawa-konsep-modern-coffee-lifestyle",
+          "https://aceh.tribunnews.com/nanggroe/1047304/area-mobil-kopi-pasar-aceh-jadi-tempat-nongkrong-baru-di-banda-aceh",
+          "https://wow.tribunnews.com/news/405874/motif-pengeroyokan-di-metland-cileungsi-terungkap-berawal-dari-tantang-balap-lari-di-warung-kopi",
           "https://www.suara.com/lifestyle/2026/10/03/203948/ketika-kopi-dan-seni-bertemu-menikmati-galeri-jadi-pengalaman-yang-berbeda",
-          "https://news.google.com/rss/articles/CBMixgFBVV95cUxQbHB4QmZZVzFCQTR6UGxMaENfN3Y4VEJ0ZWRkV1FEWl9kWThyU24tVkswZEhTUmZJbFBEWElHMDlCTHlDQ3RBMllRYU1sc1pRaERSSkZ4ZXpHbTJwSFEtczd4NG04d2VNVWh3VnZlYkFRakI0TDRTU2p0d1VFaGhRT2RwWXdNZ2dCNmliel96NWI2elBZT0JreU8tTXQ2RFRDRG92N2o5bFVYYzdPeUp0TVI4NmxXREN3UHRHNXpPMkt5czdXbnc?oc=5",
-          "https://news.google.com/rss/articles/CBMivAFBVV95cUxPX25oWHd4UWpwNWlUXzFSUjQ5ZFRjbTJnX3JncTdiYWZJa1VscGs2RUdsemJWNjlJV0I2aDhQTGt0T011d2lfaEFWWjF6Q18tOUlBZFR0cEpMdHJDbDA1Q01UUFFRT1FLNERWWlZpN3o4Z2tSY1ZBZUlqT3UzTk9ZZ3ZqMUo3UXZXbU9VX3Y0UFpBSVUtaE5VbjlJaDJ5Q3R3cG40RFJPWmR6VkpLdXc0MWV4c2NsZlRBQjdBeQ?oc=5",
-          "https://wow.tribunnews.com/news/405874/motif-pengeroyokan-di-metland-cileungsi-terungkap-berawal-dari-tantang-balap-lari-di-warung-kopi"
+          "https://food.detik.com/resto-dan-kafe/d-8677618/5-coffee-shop-di-senayan-yang-seru-buat-nongkrong-kopinya-enak",
+          "https://www.kompasiana.com/lini17077/6ab4ef8a34777c746c6bded2/lini-kopi-surabaya-coffe-homey-di-surabaya-selatan",
+          "https://rri.co.id/manado/kuliner/2754820/meracik-kopi-merawat-pengalaman-kisah-fellow-coffee-dan-budaya-kopi",
+          "https://www.detik.com/sumut/berita/d-8675862/dari-skripsi-hingga-kerjaan-alasan-anak-muda-pilih-berlama-lama-di-coffee-shop"
         ],
-        "evidence_note": "Most sources are opening announcements and event coverage without sales or traffic data, so market‑impact analysis is necessarily limited."
+        "evidence_note": "Items are headlines and brief summaries; limited quantitative data means the analysis stays descriptive of visible patterns."
       },
       "input_sources": [
         {
           "id": "1",
-          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxONUlIVDd4STkyalMzdnVaYzNJLUZNTWpnNUNzWDlkT0ZaWk1KQlRORkd3Szg5eEt5cVdIUlBGODgzNkR1OVRaOHpGc0o2bUF0bGExd0Vsa1N5ZndSUDBiYzgyZGo4UW96NFBkWUZpYkRrQ0dBQTFNMEhrdTVGNEtVekJwVzktYlQ5dWRrV3BiSVRoVkthNFA2NDhLVDNTeGhRaUdjTWg0NllNdUVI?oc=5",
-          "title": "Jati Coffee Resmi Dibuka, PKS Jambi Siap Dorong UMKM Naik Kelas - beritajambi.co",
-          "source": "beritajambi.co",
-          "published_at": "Sun, 04 Oct 2026 09:03:02 GMT"
+          "url": "https://koran-jakarta.com/2026-10-05/m-stand-dari-shanghai-hadir-di-jakarta-bawa-konsep-modern-coffee-lifestyle",
+          "title": "M Stand dari Shanghai Hadir di Jakarta, Bawa Konsep Modern Coffee Lifestyle - Koran Jakarta ®",
+          "source": "Koran Jakarta ®",
+          "published_at": "Mon, 05 Oct 2026 04:58:00 GMT"
         },
         {
           "id": "2",
-          "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNcjhSb2dGUlJrVnhFNGpteUhLd3RMYVZoOW1TbTFINkpjU2t0X1VoemVvOWJxMG84ajU1Y3NzZGc3YXNiX1o4aUEtSk9VWDlWMnhGN2oyMm5taEpwMGlzZ2VpaU1YY0ppTDE4RkdRS1kweGV3VGpCQm9yUmF4XzJOemVDcy14LTNqeW15dHdHWmdDLWotT0lYd29SbEJPV3dYS2NoMnhqUG4wYWVrTDN1MlRUV2RsaW9rQ0xtSE42WGlzdjhqalh1c9IBzgFBVV95cUxPVEFTZENwaW9fUldzdjJWR3F6ZmVBVVVDUzduUGRoUEMxc2JpSDJfMG5SUkVseHhZLXdEbk1oMTl5T0VPTHc3NlFJaVJwZmdCWHE4bjVvN1VndXZjQlR2WkJKUDVUQkNMcW1abGxNa1c1LWNhX1pKY2Y0UkJqTG5ndUtSYjJUR0MxUGtQZVI3UjZxOTZvQ1Q0RkpTV1p5UlFtcHVJZHdZZk9Kd1dIelI3NWI3TmdpSVhrcks1c0xSNXY0WWw5NEdkUEc3V21CQQ?oc=5",
-          "title": "Grand Opening Elha Coffee and Resto Lampung, Wujud Komitmen Lembah Hijau Dukung Pariwisata - VIVA Lampung",
-          "source": "VIVA Lampung",
-          "published_at": "Sun, 04 Oct 2026 08:42:00 GMT"
+          "url": "https://aceh.tribunnews.com/nanggroe/1047304/area-mobil-kopi-pasar-aceh-jadi-tempat-nongkrong-baru-di-banda-aceh",
+          "title": "Area Mobil Kopi Pasar Aceh Jadi Tempat Nongkrong Baru di Banda Aceh",
+          "source": "Serambinews.com",
+          "published_at": "2026-10-04 14:33:03"
         },
         {
           "id": "3",
-          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPZS1MSGhBc3M4cG9KVjdicnVmVE5DR25uVWQ5SkZEWTUxZ3hHdWg3bUhLMTRYMmhoN05WWEVVeWpyMm4ydGlDQWVfaFgzd2NtU3o4d2RENDhIa0RHTGRBdFc3amtFYzZVUzdkMW1OeEplVkhxNGtXWlRjM0xGMGt2MDlTR0d2Z0RSWG9tYndkSk5CVUhjVjFnN0F1NGhSdGQ2SFRxbGJubm9OS3dCYU50R1ExS1k0enowMUZGMXNMWmk?oc=5",
-          "title": "Kedeboox, Tempat Nongkrong Hits di Medan yang Memadukan Kopi dan Buku - Bisnis Style",
-          "source": "Bisnis Style",
-          "published_at": "Sun, 04 Oct 2026 02:35:14 GMT"
-        },
-        {
-          "id": "4",
           "url": "https://wow.tribunnews.com/news/405874/motif-pengeroyokan-di-metland-cileungsi-terungkap-berawal-dari-tantang-balap-lari-di-warung-kopi",
           "title": "Motif Pengeroyokan di Metland Cileungsi Terungkap, Berawal dari Tantang Balap Lari di Warung Kopi",
           "source": "Tribun News",
           "published_at": "2026-10-04 02:01:05"
         },
         {
-          "id": "5",
-          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPSFMtZUY5b0NjdFczaEFpUjNfSzJheUFiSEloRWdwZ0ZZMTJUaFFyVllsMEltS3p3RlNTM0N5VW9OTHUwTTZ0VXhSX3VZcENmUnJDb2N0c094ZTNIV0JEVGg5dmJsd1BGQkh3Nk5DNXZfc1NnR3RvNzlUaXk2eEJHZnN3ZzdRUzJNaVUtVjdGcUVPd05nSHRLX20xNWgwS2pKUm83Q2ZjT19uS3g1Vzhfa28tajg3cG13M08zU3B3?oc=5",
-          "title": "Benang Kopi Hadir di ibis Styles Serpong BSD City, Jadi Spot Ngopi Baru untuk Warga BSD - tangselpos.id",
-          "source": "tangselpos.id",
-          "published_at": "Sun, 04 Oct 2026 01:18:00 GMT"
-        },
-        {
-          "id": "6",
-          "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxQbHB4QmZZVzFCQTR6UGxMaENfN3Y4VEJ0ZWRkV1FEWl9kWThyU24tVkswZEhTUmZJbFBEWElHMDlCTHlDQ3RBMllRYU1sc1pRaERSSkZ4ZXpHbTJwSFEtczd4NG04d2VNVWh3VnZlYkFRakI0TDRTU2p0d1VFaGhRT2RwWXdNZ2dCNmliel96NWI2elBZT0JreU8tTXQ2RFRDRG92N2o5bFVYYzdPeUp0TVI4NmxXREN3UHRHNXpPMkt5czdXbnc?oc=5",
-          "title": "Kafe dan Warung Kopi Bakal Disidak, BKPSDM Kukar Cari ASN yang Nongkrong Saat Jam Kerja - Poskota Kaltim",
-          "source": "Poskota Kaltim",
-          "published_at": "Sat, 03 Oct 2026 18:21:52 GMT"
-        },
-        {
-          "id": "7",
+          "id": "4",
           "url": "https://www.suara.com/lifestyle/2026/10/03/203948/ketika-kopi-dan-seni-bertemu-menikmati-galeri-jadi-pengalaman-yang-berbeda",
           "title": "Ketika Kopi dan Seni Bertemu, Menikmati Galeri Jadi Pengalaman yang Berbeda",
           "source": "Suara",
           "published_at": "2026-10-03 13:39:48"
         },
         {
+          "id": "5",
+          "url": "https://food.detik.com/resto-dan-kafe/d-8677618/5-coffee-shop-di-senayan-yang-seru-buat-nongkrong-kopinya-enak",
+          "title": "5 Coffee Shop di Senayan yang Seru Buat Nongkrong, Kopinya Enak! - food.detik.com",
+          "source": "food.detik.com",
+          "published_at": "Fri, 25 Sep 2026 00:00:04 GMT"
+        },
+        {
+          "id": "6",
+          "url": "https://www.kompasiana.com/lini17077/6ab4ef8a34777c746c6bded2/lini-kopi-surabaya-coffe-homey-di-surabaya-selatan",
+          "title": "Lini Kopi Surabaya: Coffe Homey di Surabaya Selatan - Kompasiana.com",
+          "source": "Kompasiana.com",
+          "published_at": "Thu, 24 Sep 2026 10:14:47 GMT"
+        },
+        {
+          "id": "7",
+          "url": "https://rri.co.id/manado/kuliner/2754820/meracik-kopi-merawat-pengalaman-kisah-fellow-coffee-dan-budaya-kopi",
+          "title": "Meracik Kopi, Merawat Pengalaman: Kisah Fellow Coffee dan Budaya Kopi - RRI.co.id",
+          "source": "RRI.co.id",
+          "published_at": "Wed, 23 Sep 2026 23:01:00 GMT"
+        },
+        {
           "id": "8",
-          "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPX25oWHd4UWpwNWlUXzFSUjQ5ZFRjbTJnX3JncTdiYWZJa1VscGs2RUdsemJWNjlJV0I2aDhQTGt0T011d2lfaEFWWjF6Q18tOUlBZFR0cEpMdHJDbDA1Q01UUFFRT1FLNERWWlZpN3o4Z2tSY1ZBZUlqT3UzTk9ZZ3ZqMUo3UXZXbU9VX3Y0UFpBSVUtaE5VbjlJaDJ5Q3R3cG40RFJPWmR6VkpLdXc0MWV4c2NsZlRBQjdBeQ?oc=5",
-          "title": "Lima Rekomendasi Coffee Shop di Mataram untuk Nugas dan Nongkrong, “Low Budget” dan Nyaman - SUARANTB.com",
-          "source": "SUARANTB.com",
-          "published_at": "Sat, 03 Oct 2026 13:25:11 GMT"
+          "url": "https://www.detik.com/sumut/berita/d-8675862/dari-skripsi-hingga-kerjaan-alasan-anak-muda-pilih-berlama-lama-di-coffee-shop",
+          "title": "Dari Skripsi hingga Kerjaan, Alasan Anak Muda Pilih Berlama-lama di Coffee Shop - detikcom",
+          "source": "detikcom",
+          "published_at": "Wed, 23 Sep 2026 10:30:21 GMT"
+        }
+      ]
+    },
+    {
+      "cluster_id": "barista-teknik-seduh",
+      "cluster_name": "Barista & Teknik Seduh",
+      "period_days": 14,
+      "generated_at": "2026-10-05T07:33:42.802Z",
+      "status": "ai_generated",
+      "fingerprint": "28d280622b82b0ac1b770806afd747bdc4ec2d24a175f4a8036a02ee32b4e0a6",
+      "article": {
+        "title": "Barista & Teknik Seduh: dari Tamping sampai Perawatan Mesin",
+        "summary": "Perdebatan apakah matcha lebih sehat daripada kopi tidak punya jawaban sederhana ya/tidak [1]. Di bar, hasil cangkir lebih banyak ditentukan oleh teknik dasar yang bisa diulang dan perawatan mesin yang benar, bukan trik rahasia [2][4]. Di sisi SDM, rekrutmen pemula fokus pada motivasi, bukti kemampuan, dan sikap layanan yang terlihat saat wawancara [3].",
+        "lead": "Panduan AEKI memecah perawatan mesin espresso per komponen—buang ampas, bilas portafilter dan group head, bersihkan steam wand, cuci drip tray—dengan catatan: backflush hanya bila didukung model, sementara descaling adalah pekerjaan berbeda [2]. Untuk persiapan espresso, AEKI menekankan meratakan bubuk, tamper sejajar, tekan sekali stabil dengan pergelangan netral; kerataan lebih penting daripada mengejar angka tekanan [4].",
+        "sections": [
+          {
+            "heading": "Teknik yang Bisa Diulang",
+            "paragraphs": [
+              "Di luar perbandingan matcha vs kopi yang tidak sesederhana ya/tidak [1], pekerjaan barista sehari-hari bergantung pada gerakan kecil yang konsisten. Tamping yang baik dimulai dari distribusi merata di basket, menaruh tamper sejajar, lalu satu tekanan stabil dengan pergelangan netral. Fokus utamanya adalah permukaan yang rata; mengejar angka tekanan tertentu kalah penting dibanding mencegah permukaan miring yang bisa membuat sebagian puck lebih padat dari bagian lain [4]. Gerakannya singkat, jadi latihan berulang dan pemeriksaan hasil menjadi kunci agar prosedur ini bisa diulang di jam sibuk [4]."
+            ]
+          },
+          {
+            "heading": "Perawatan Mesin yang Jelas",
+            "paragraphs": [
+              "Kebersihan mesin menentukan apakah peralatan siap dipakai lagi. Checklist AEKI menempatkan urutan sederhana: buang ampas, bilas portafilter dan group head, bersihkan steam wand, cuci drip tray dan bagian yang bisa dilepas [2]. Mereka juga membedakan dua pekerjaan: backflush hanya dilakukan jika model dan petunjuk pabrik mendukung, sedangkan descaling adalah urusan kerak mineral yang terpisah [2]. Langkah awal yang diwajibkan adalah mengidentifikasi model dan membaca bagian care and cleaning pada manual sebelum menyentuh mesin [2]."
+            ]
+          },
+          {
+            "heading": "Merekrut dan Melatih Orangnya",
+            "paragraphs": [
+              "Materi wawancara barista untuk pemula menyebut tiga hal yang biasanya dinilai: alasan melamar, bukti kemampuan yang relevan, dan cara bersikap dalam pekerjaan layanan [3]. Kandidat tidak perlu berpura-pura berpengalaman; jawaban jujur dan spesifik dengan contoh kecil justru lebih meyakinkan daripada klaim besar [3]. Kerangka ini membantu pelatih menyusun latihan yang menajamkan kebiasaan dasar—bukan hafalan—karena pewawancara bisa mengubah susunan pertanyaan atau meminta rincian lanjutan [3]."
+            ]
+          }
+        ],
+        "conclusion": "Polanya jelas: teknik dasar yang bisa diulang, mesin yang terawat sesuai manual, dan standar rekrutmen yang menilai bukti nyata. Itu cukup untuk membangun bar yang rapi tanpa harus bergantung pada mitos alat atau klaim kesehatan yang tak tegas.",
+        "recommendations": [
+          {
+            "audience": "Pemilik kafe/manajer bar",
+            "action": "Tulis SOP pembersihan per model; pisahkan langkah harian (bilas, bersihkan steam wand, drip tray) dari backflush, dan perlakukan descaling sebagai pekerjaan terpisah; mulai dari identifikasi model dan manual.",
+            "basis": "Panduan checklist dan peringatan kompatibilitas backflush serta pembedaan descaling [2]."
+          },
+          {
+            "audience": "Barista pemula",
+            "action": "Latih distribusi merata, tamper sejajar, satu tekanan stabil dengan pergelangan netral; periksa kerataan permukaan puck setelah tamping.",
+            "basis": "Penekanan kerataan lebih penting daripada mengejar angka tekanan dan perlunya latihan berulang [4]."
+          },
+          {
+            "audience": "Pewawancara & kandidat barista",
+            "action": "Gunakan tiga kriteria (motivasi, bukti kemampuan, sikap layanan); siapkan contoh kecil yang spesifik; hindari hafalan jawaban.",
+            "basis": "Kerangka evaluasi dan anjuran jawaban jujur-spesifik untuk pemula [3]."
+          }
+        ],
+        "source_urls": [
+          "https://www.antaranews.com/berita/5770402/matcha-vs-kopi-mana-yang-lebih-sehat-ini-perbandingannya",
+          "https://www.aeki-aice.org/cara-membersihkan-mesin-espresso/",
+          "https://www.aeki-aice.org/pertanyaan-interview-barista/",
+          "https://www.aeki-aice.org/cara-tamping-kopi/"
+        ],
+        "evidence_note": "Sebagian butir bersumber dari cuplikan resmi; detail penuh dan konteks teknis ada di artikel lengkap masing-masing."
+      },
+      "article_en": {
+        "title": "Baristas and Brew Technique: from Tamping to Machine Care",
+        "summary": "Whether matcha is “healthier” than coffee doesn’t have a simple yes/no answer [1]. On bar, cup outcomes hinge more on repeatable fundamentals and proper machine care than on any secret trick [2][4]. For entry-level hiring, interview guides emphasize motivation, evidence of relevant skills, and service demeanor you can actually observe [3].",
+        "lead": "AEKI breaks espresso-machine upkeep into component-by-component steps—purge spent grounds, rinse the portafilter and group head, clean the steam wand, wash the drip tray and removable parts—with two caveats: only backflush if the model and manual say so, and treat descaling as a separate job [2]. On prep, AEKI stresses leveling grounds, keeping the tamper parallel, and a single stable press with a neutral wrist; flatness matters more than chasing a pressure number [4].",
+        "sections": [
+          {
+            "heading": "Repeatable technique",
+            "paragraphs": [
+              "Setting aside the matcha-versus-coffee debate that lacks a neat yes/no [1], a barista’s day is built on small, consistent motions. Good tamping starts with even distribution in the basket, a parallel tamper, and one stable press with a neutral wrist. The priority is a flat surface; chasing a specific pressure matters less than avoiding a tilted surface that can leave parts of the puck denser than others [4]. The move is quick, so repetition and checking the result are what make it reliable during rushes [4]."
+            ]
+          },
+          {
+            "heading": "Clear machine care",
+            "paragraphs": [
+              "Machine cleanliness decides whether the gear is ready for service again. AEKI’s checklist lays out a simple order: dump grounds, rinse the portafilter and group head, clean the steam wand, wash the drip tray and any removable parts [2]. It also separates two tasks: backflush only if the model and manual support it, while descaling addresses mineral buildup and is a different job [2]. The first step before touching the machine is identifying the model and reading the care-and-cleaning section of the manual [2]."
+            ]
+          },
+          {
+            "heading": "Hiring and training the people",
+            "paragraphs": [
+              "Entry-level barista interviews typically assess three things: why you applied, evidence of relevant ability, and how you behave in a service role [3]. Beginners don’t need to pretend experience; honest, specific answers with small examples are more convincing than big claims [3]. This framing helps trainers build habits—not scripts—because interviewers can change question order or probe for detail [3]."
+            ]
+          }
+        ],
+        "conclusion": "The throughline is simple: repeatable basics, manual-driven maintenance, and an interview lens that looks for real evidence. That’s enough to run a tidy bar without leaning on gear myths or fuzzy health claims.",
+        "recommendations": [
+          {
+            "audience": "Cafe owners/bar managers",
+            "action": "Write model-specific cleaning SOPs; separate daily rinsing/steam-wand/drip-tray tasks from backflushing, and treat descaling as a distinct job; start by identifying the model and consulting the manual.",
+            "basis": "Checklist guidance, backflush-compatibility caution, and descaling separation [2]."
+          },
+          {
+            "audience": "New baristas",
+            "action": "Practice even distribution, a parallel tamper, and one stable press with a neutral wrist; check the puck’s surface flatness after tamping.",
+            "basis": "Emphasis on flatness over chasing a pressure number and on repeatable practice [4]."
+          },
+          {
+            "audience": "Interviewers & candidates",
+            "action": "Use three criteria (motivation, evidence of skill, service demeanor); prepare small, specific examples; avoid memorized scripts.",
+            "basis": "Interview framework and advice for honest, specific answers for beginners [3]."
+          }
+        ],
+        "source_urls": [
+          "https://www.antaranews.com/berita/5770402/matcha-vs-kopi-mana-yang-lebih-sehat-ini-perbandingannya",
+          "https://www.aeki-aice.org/cara-membersihkan-mesin-espresso/",
+          "https://www.aeki-aice.org/pertanyaan-interview-barista/",
+          "https://www.aeki-aice.org/cara-tamping-kopi/"
+        ],
+        "evidence_note": "Some points are drawn from official excerpts; full details and technical context are in the source articles."
+      },
+      "input_sources": [
+        {
+          "id": "1",
+          "url": "https://www.antaranews.com/berita/5770402/matcha-vs-kopi-mana-yang-lebih-sehat-ini-perbandingannya",
+          "title": "Matcha vs kopi, mana yang lebih sehat? Ini perbandingannya",
+          "source": "Antara News",
+          "published_at": "2026-10-04 02:50:34"
         },
         {
-          "id": "9",
-          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPUDE5VDNZM2EyVnF4ZEcwdTI4RjdaWTAxdHk1aGZuMG9TVjZWLUZObGpiRHlucFM5ei0tQ3BNcHJURVBqSUN3UHpURktYX2FjNHNWZGRoNUlZUEdaeVF2U1doUlFkNFJTckx0Q2lCdi1uLWxOa1ZtSEswSjdJUGxpRHJUNHR1cGlEQkJmSnllaE9YNFBFakEwWXVRdmNIaFlfV2E2Zg?oc=5",
-          "title": "Benang Kopi Hadir dengan Konsep Coffee Shop di ibis Styles Serpong BSD City - Lensa Banten",
-          "source": "Lensa Banten",
-          "published_at": "Sat, 03 Oct 2026 11:23:20 GMT"
+          "id": "2",
+          "url": "https://www.aeki-aice.org/cara-membersihkan-mesin-espresso/",
+          "title": "Cara Membersihkan Mesin Espresso: Checklist Perawatan Barista",
+          "source": "AEKI",
+          "published_at": "2026-09-25T08:43:16+07:00"
         },
         {
-          "id": "10",
-          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNWEdMVWVPb1JJdm0xY1NNcmY5VlVoWVdDSEVObG8yTkFjanhDMGpzekpCXzJxdmJUWWc5R1dJTFllYldYN0VDbFBITVdsV0VLU3pqbDBWOE54a1lGVnFheWo2bG45QTVXQkJ5bWdpb0stSmRHZEJ2QWdvVUlzNHNfMFZ4V2JfMVJqSTIyTEExenV2bExTd2NVNjZnNXk?oc=5",
-          "title": "Benang Kopi – Coffee Shop Tempat Ngopi Baru di Kawasan BSD City - PalapaNews",
-          "source": "PalapaNews",
-          "published_at": "Sat, 03 Oct 2026 09:42:24 GMT"
+          "id": "3",
+          "url": "https://www.aeki-aice.org/pertanyaan-interview-barista/",
+          "title": "12 Pertanyaan Interview Barista dan Kerangka Jawaban untuk Pemula",
+          "source": "AEKI",
+          "published_at": "2026-09-24T11:14:56+07:00"
         },
         {
-          "id": "11",
-          "url": "https://news.google.com/rss/articles/CBMingFBVV95cUxQSUs2MWx4VXJKTjRDR3hVSEtKY0l3RXFYcWNPZWZneGtEcmoxRVJDRjZxY3FOb19pdEU4VFdScEtBM3pNMUgyOG5UWUF3WmRMaS1PeHBSTEd5eUJ0ZXFLZkFyQTVYVHdGM2xkRVBoZEtHdFFOQkFFZUpOUTBxQndJbGs2OUFPMVdZcWhBUHpId0xEdzNUeFhKejlnZnk2Zw?oc=5",
-          "title": "Benang Kopi Resmi Hadir di ibis Styles Serpong BSD City - Media Indonesia",
-          "source": "Media Indonesia",
-          "published_at": "Sat, 03 Oct 2026 09:07:38 GMT"
+          "id": "4",
+          "url": "https://www.aeki-aice.org/cara-tamping-kopi/",
+          "title": "Cara Tamping Kopi untuk Pemula: Posisi, Kerataan, dan Latihan",
+          "source": "AEKI",
+          "published_at": "2026-09-22T16:12:58+07:00"
+        }
+      ]
+    },
+    {
+      "cluster_id": "ekspor-daya-saing",
+      "cluster_name": "Ekspor & Daya Saing",
+      "period_days": 14,
+      "generated_at": "2026-10-05T07:33:42.802Z",
+      "status": "ai_generated",
+      "fingerprint": "2f430053fed091b6db4e5c0d66346c9569fae01553f61d12d2980776ec3968f0",
+      "article": {
+        "title": "Ekspor & Daya Saing Kopi: Eksperimen Rasa, Branding Komunal, dan Kemitraan—Minim Angka",
+        "summary": "Dalam rentang akhir September hingga awal Oktober 2026, tiga kabar kopi muncul: eksperimen minuman kopi dengan terasi fermentasi di Vietnam, penguatan branding komunal untuk gula aren dan kopi oleh Pemkab Probolinggo, dan kemitraan panjang RRI dengan Portola Grand Arabia [1][3][2]. Ketiganya berbicara soal citra dan diferensiasi, tetapi hampir tanpa data ekspor atau kinerja pasar, sehingga dampaknya pada daya saing belum bisa ditakar.",
+        "lead": "Semua peristiwa terjadi berdekatan (24–25 September dan 4 Oktober 2026), namun tak ada satu pun yang menyertakan angka ekspor, pangsa pasar, atau negara tujuan; ini lebih berupa sinyal arah dan inisiatif awal ketimbang bukti keunggulan dagang [1][2][3].",
+        "sections": [
+          {
+            "heading": "Diferensiasi Produk: Eksperimen Vietnam",
+            "paragraphs": [
+              "Kompas.com menyoroti minuman baru di Vietnam yang mencampur kopi dengan terasi fermentasi—perpaduan rasa yang tidak lazim untuk menarik perhatian konsumen [1]. Dari sisi daya saing, langkah seperti ini menunjukkan upaya mencari diferensiasi produk. Namun tanpa data penerimaan pasar atau penjualan, kita belum bisa menilai apakah eksperimen tersebut akan bertahan dan berkontribusi pada nilai tambah ekspor [1]."
+            ]
+          },
+          {
+            "heading": "Branding Komunal: Langkah Probolinggo",
+            "paragraphs": [
+              "Pemerintah Kabupaten Probolinggo menyatakan memperkuat communal branding untuk gula aren dan kopi [3]. Secara teori, branding komunal dapat membantu konsumen mengenali asal-usul dan konsistensi mutu, memudahkan promosi ke buyer. Tetapi rilis itu tidak mencantumkan target pasar, spesifikasi kualitas, atau rencana akses ke pembeli luar negeri, sehingga manfaat ekspor belum dapat diverifikasi [3]."
+            ]
+          },
+          {
+            "heading": "Kemitraan Media–Swasta: Eksposur Bukan Bukti",
+            "paragraphs": [
+              "RRI melaporkan adanya kemitraan panjang antara RRI dan Portola Grand Arabia dalam sebuah agenda bertema “Kopi Mont Blanc” [2]. Kolaborasi seperti ini bisa memperluas eksposur merek dan jejaring. Tetap saja, tanpa informasi tentang kontrak pembelian, pasar sasaran, atau nilai transaksi, kemitraan itu belum menunjukkan bukti langsung terhadap kinerja ekspor atau posisi tawar di pasar global [2]."
+            ]
+          }
+        ],
+        "conclusion": "Tiga potongan informasi ini memperlihatkan energi di sisi citra—eksperimen rasa, penguatan identitas daerah, dan jejaring. Untuk menyimpulkan efek pada ekspor dan daya saing, kita masih menunggu data pasar, standar mutu, serta jalur komersial yang jelas.",
+        "recommendations": [
+          {
+            "audience": "Pemerintah daerah/komunitas produsen",
+            "action": "Saat mengumumkan program branding komunal, sertakan spesifikasi mutu, bukti sertifikasi, dan pasar sasaran agar buyer bisa menilai kesesuaian.",
+            "basis": "Pengumuman penguatan communal branding belum memuat detail mutu maupun target pasar [3]."
+          },
+          {
+            "audience": "Penyelenggara kemitraan/aktivasi media",
+            "action": "Jika tujuan akhirnya komersial, tambahkan tujuan pasar atau indikator dasar (misalnya jangkauan audiens atau kanal distribusi yang dituju) saat publikasi.",
+            "basis": "Liputan kemitraan RRI–Portola Grand Arabia tidak memuat indikator pasar atau ekspor [2]."
+          }
+        ],
+        "source_urls": [
+          "https://www.kompas.com/food/read/2026/10/04/140028175/gabungkan-kopi-dan-terasi-minuman-baru-di-vietnam-ini-bikin-penasaran",
+          "https://rri.co.id/banda-aceh/ekonomi/bisnis/2757913/menyesap-kopi-mont-blanc-merangkai-kemitraan-panjang-rri-dan-portola-grand-arabia",
+          "https://probolinggokab.go.id/dkupp-kabupaten-probolinggo-perkuat-communal-branding-gula-aren-dan-kopi/"
+        ],
+        "evidence_note": "Sumber yang ada berupa liputan gaya hidup dan rilis pengumuman tanpa data ekspor/penjualan, sehingga penilaian dampak masih terbatas."
+      },
+      "article_en": {
+        "title": "Coffee Exports and Competitiveness: Flavor Experiments, Communal Branding, and Partnerships—with Few Numbers",
+        "summary": "From late September to early October 2026, three coffee-related items surfaced: a Vietnamese drink that mixes coffee with fermented shrimp paste, a Probolinggo government push to strengthen communal branding for palm sugar and coffee, and a long-term RRI–Portola Grand Arabia partnership [1][3][2]. All three focus on image and differentiation, but offer almost no export or market performance data, so their impact on competitiveness can’t be gauged yet.",
+        "lead": "These appeared within days of each other (24–25 September and 4 October 2026), and none included export volumes, market shares, or target destinations; they read more like directional signals than proof of trade advantage [1][2][3].",
+        "sections": [
+          {
+            "heading": "Product Differentiation: Vietnam’s Experiment",
+            "paragraphs": [
+              "Kompas.com highlights a new Vietnamese drink that blends coffee with fermented shrimp paste—an unusual combination clearly meant to stand out [1]. From a competitiveness angle, it’s a move toward sharper product differentiation. Yet without adoption or sales data, we can’t tell whether this kind of experiment will stick or translate into exportable value [1]."
+            ]
+          },
+          {
+            "heading": "Communal Branding: Probolinggo’s Move",
+            "paragraphs": [
+              "The Probolinggo local government says it is strengthening communal branding for palm sugar and coffee [3]. In principle, such branding can help buyers recognize origin and consistency, which may ease promotion. But the announcement does not outline target markets, quality specs, or pathways to overseas buyers, so any export benefit remains unverified [3]."
+            ]
+          },
+          {
+            "heading": "Media–Private Partnerships: Exposure Isn’t Evidence",
+            "paragraphs": [
+              "RRI reported a long-term partnership between RRI and Portola Grand Arabia framed around a “Kopi Mont Blanc” agenda [2]. Collaborations like this can expand exposure and networks. Still, without information on purchase contracts, target markets, or deal values, there is no direct evidence of export performance or stronger global positioning [2]."
+            ]
+          }
+        ],
+        "conclusion": "Taken together, these items show energy on the image side—flavor experimentation, regional identity work, and networking. To assess effects on exports and competitiveness, we still need market data, quality standards, and clearer commercial channels.",
+        "recommendations": [
+          {
+            "audience": "Local governments/producer groups",
+            "action": "When announcing communal branding, add quality specifications, certification evidence, and intended markets so buyers can assess fit.",
+            "basis": "The communal branding announcement lacks quality detail and market targets [3]."
+          },
+          {
+            "audience": "Organizers of partnerships/media activations",
+            "action": "If the goal is commercial, include intended markets or basic indicators (e.g., audience reach or target distribution channels) in public updates.",
+            "basis": "Coverage of the RRI–Portola Grand Arabia partnership does not include market or export indicators [2]."
+          }
+        ],
+        "source_urls": [
+          "https://www.kompas.com/food/read/2026/10/04/140028175/gabungkan-kopi-dan-terasi-minuman-baru-di-vietnam-ini-bikin-penasaran",
+          "https://rri.co.id/banda-aceh/ekonomi/bisnis/2757913/menyesap-kopi-mont-blanc-merangkai-kemitraan-panjang-rri-dan-portola-grand-arabia",
+          "https://probolinggokab.go.id/dkupp-kabupaten-probolinggo-perkuat-communal-branding-gula-aren-dan-kopi/"
+        ],
+        "evidence_note": "Sources are lifestyle coverage and announcement-style releases without export/sales data, so impact assessment is limited."
+      },
+      "input_sources": [
+        {
+          "id": "1",
+          "url": "https://www.kompas.com/food/read/2026/10/04/140028175/gabungkan-kopi-dan-terasi-minuman-baru-di-vietnam-ini-bikin-penasaran",
+          "title": "Gabungkan Kopi dan Terasi, Minuman Baru di Vietnam Ini Bikin Penasaran",
+          "source": "Kompas.com",
+          "published_at": "2026-10-04 07:00:28"
         },
         {
-          "id": "12",
-          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxNeG4xcENHQVViWFJHVjZ2S2lDVXBJUHl1THl6bUxhYXlFM1hlUDJYRHB1cC02SG9KejN6Q0lxYzg5U0RsY2V5dmRua3BaNTVyMmxhTDQ2NlB5Q1RybEVrcU9xVTI5TnI3SjZiN0NtNmJJc0E2OWwxZ25ZMENtMW9TQUhyOTQwSm1BRFozQTFvVEFSbnZrT1FRVGt3OVFLWVNwczQteXItaXdLV1hucWc?oc=5",
-          "title": "Jati Coffee Resmi Dibuka di Kota Jambi, Angkat Potensi Kopi Lokal - jambiprima.com",
-          "source": "jambiprima.com",
-          "published_at": "Sat, 03 Oct 2026 08:03:32 GMT"
+          "id": "2",
+          "url": "https://rri.co.id/banda-aceh/ekonomi/bisnis/2757913/menyesap-kopi-mont-blanc-merangkai-kemitraan-panjang-rri-dan-portola-grand-arabia",
+          "title": "Menyesap Kopi Mont Blanc, Merangkai Kemitraan Panjang RRI dan Portola Grand Arabia - RRI.co.id",
+          "source": "RRI.co.id",
+          "published_at": "Fri, 25 Sep 2026 00:48:00 GMT"
+        },
+        {
+          "id": "3",
+          "url": "https://probolinggokab.go.id/dkupp-kabupaten-probolinggo-perkuat-communal-branding-gula-aren-dan-kopi/",
+          "title": "DKUPP Kabupaten Probolinggo Perkuat Communal Branding Gula Aren dan Kopi - Pemerintah Kabupaten Probolinggo",
+          "source": "Pemerintah Kabupaten Probolinggo",
+          "published_at": "Thu, 24 Sep 2026 05:22:00 GMT"
         }
       ]
     }
