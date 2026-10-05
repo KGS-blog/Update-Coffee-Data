@@ -10,7 +10,7 @@ async function previews(language) {
     const response = await fetch(`https://blog-api.qcoid.com/api/member/mevo-report-previews?language=${language}`, { signal: AbortSignal.timeout(8000), cache: "no-store" });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const data = await response.json();
-    return Array.isArray(data.reports) ? data.reports.slice(0, 3) : [];
+    return Array.isArray(data.reports) ? data.reports : [];
   } catch (error) {
     console.warn(`MEVO ${language.toUpperCase()} previews unavailable during static render: ${error.message}`);
     return [];
@@ -28,12 +28,23 @@ function render(reports, language, compact = false) {
 
 async function main() {
   const [id, en] = await Promise.all([previews("id"), previews("en")]);
+  const searchBySlug = new Map();
+  for (const [language, reports] of [["id", id], ["en", en]]) for (const report of reports) {
+    const baseSlug = String(report.slug || "").replace(/-(?:id|en)$/i, "");
+    if (!baseSlug) continue;
+    const row = searchBySlug.get(baseSlug) || { slug: baseSlug };
+    row[`title_${language}`] = String(report.title || "").slice(0, 240);
+    row[`teaser_${language}`] = String(report.teaser || "").slice(0, 700);
+    searchBySlug.set(baseSlug, row);
+  }
+  const searchIndex = JSON.stringify([...searchBySlug.values()]).replace(/</g, "\\u003c");
   const files = ["index.html", "kabar-kopi.html"];
   for (const filename of files) {
     const target = path.join(root, filename);
     let html = fs.readFileSync(target, "utf8");
-    html = html.replace("<!-- STATIC_PUBLIC_MEVO_PREVIEW_ID -->", render(id, "id"));
-    html = html.replace("<!-- STATIC_PUBLIC_MEVO_PREVIEW_EN -->", render(en, "en"));
+    html = html.replace("<!-- STATIC_PUBLIC_MEVO_PREVIEW_ID -->", render(id.slice(0, 3), "id"));
+    html = html.replace("<!-- STATIC_PUBLIC_MEVO_PREVIEW_EN -->", render(en.slice(0, 3), "en"));
+    html = html.replace("<!-- STATIC_MEVO_SEARCH_INDEX -->", searchIndex);
     fs.writeFileSync(target, html);
   }
   const englishPath = path.join(root, "en/index.html");
