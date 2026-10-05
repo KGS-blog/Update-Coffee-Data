@@ -1,0 +1,30 @@
+name: Check Kabar Kopi entrypoint parity
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'index.html'
+      - 'kabar-kopi.html'
+      - 'scripts/templates/kabar-kopi.html'
+      - 'scripts/generate-editorial-pages.js'
+      - 'scripts/render-static-news.js'
+      - 'scripts/check-kabar-entrypoints.js'
+      - '.github/workflows/check-kabar-entrypoints.yml'
+  pull_request:
+    paths:
+      - 'index.html'
+      - 'kabar-kopi.html'
+      - 'scripts/templates/kabar-kopi.html'
+      - 'scripts/generate-editorial-pages.js'
+      - 'scripts/render-static-news.js'
+      - 'scripts/check-kabar-entrypoints.js'
+      - '.github/workflows/check-kabar-entrypoints.yml'
+
+jobs:
+  parity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check generated Kabar Kopi entrypoints
+        run: node scripts/check-kabar-entrypoints.js

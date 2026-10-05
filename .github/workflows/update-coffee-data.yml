@@ -63,10 +63,12 @@ jobs:
         run: node scripts/process-portal-data.js
       - name: Publish crawlable editorial pages and sitemap
         run: node scripts/generate-editorial-pages.js
-      - name: Render direct-source headlines into crawlable HTML
+      - name: Render direct-source headlines into both crawlable entrypoints
         run: node scripts/render-static-news.js
       - name: Generate crawlable coffee data and calculator pages
         run: node scripts/generate-discovery-pages.js
+      - name: Verify Kabar Kopi entrypoint parity
+        run: node scripts/check-kabar-entrypoints.js
       - name: Save private editor cluster queue
         env:
           MEVO_SYNC_SECRET: ${{ secrets.MEVO_SYNC_SECRET }}

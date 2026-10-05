@@ -71,6 +71,8 @@ For production reliability, consider upgrading to Barchart OnDemand or Alpha Van
 🔄 Data Update History
 View all updates in commit history.
 🌐 HTML Report
+The public coffee news portal is available at both `/` (`index.html`) and `/kabar-kopi.html`. `scripts/templates/kabar-kopi.html` is the single UI source used by `scripts/generate-editorial-pages.js` to build both pages. Edit shared features in that template, not in just one generated page. `scripts/render-static-news.js` writes the same crawlable headline snapshot to both entrypoints, and `scripts/check-kabar-entrypoints.js` stops the data workflow and flags push/pull-request changes if they differ.
+
 The public coffee news portal is kabar-kopi.html. Keep laporan-usda.html as a compatibility redirect for older links.
 It fetches live data from:
 plain
