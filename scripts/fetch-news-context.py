@@ -7,6 +7,7 @@ stored for the clustering review. No article is republished in full.
 """
 
 import concurrent.futures
+from email.utils import parsedate_to_datetime
 import importlib.util
 import json
 import os
@@ -44,10 +45,17 @@ def main():
         if FETCHER.should_fetch(fetch_state, now):
             queue.append((article, fetch_state))
     def published_rank(item):
+        raw_date = str(item[0].get("tanggal") or "").strip()
         try:
-            return datetime.fromisoformat(str(item[0].get("tanggal") or "").replace("Z", "+00:00")).timestamp()
+            parsed = datetime.fromisoformat(raw_date.replace("Z", "+00:00"))
         except ValueError:
-            return 0
+            try:
+                parsed = parsedate_to_datetime(raw_date)
+            except (TypeError, ValueError, OverflowError):
+                return 0
+        if parsed.tzinfo is None:
+            parsed = parsed.replace(tzinfo=FETCHER.timezone.utc)
+        return parsed.timestamp()
     queue.sort(key=lambda item: (item[0].get("cluster_assignment") != "unassigned", -published_rank(item), item[0].get("judul", "")))
     queue = queue[:LIMIT]
     if not queue:

@@ -87,6 +87,10 @@ function getHighConfidenceCluster(article, taxonomy) {
   if (coffeeBusiness && !eventContext && (venue || (opening && namedVenueOpening))) {
     return taxonomy.find(c => c.slug === "kedai-konsumsi-gaya-hidup") || null;
   }
+  const foreignBrandEntry = /\b(shanghai|china|chinese|tiongkok|japanese|jepang|korea|korean|singapore|singapura|global|internasional|international)\b/.test(material)
+    && /\b(hadir|masuk|boyong|buka|dibuka|ekspansi|launch|enter|opened|opening)\b/.test(material)
+    && /\b(merek|brand|coffee\s+lifestyle|coffee\s+chain|coffee\s+company|merek\s+kopi|brand\s+kopi)\b/.test(material);
+  if (coffeeBusiness && foreignBrandEntry) return taxonomy.find(c => c.slug === "brand-global") || null;
   return null;
 }
 
