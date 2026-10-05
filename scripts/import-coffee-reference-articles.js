@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
-const SOURCE_URL = 'https://raw.githubusercontent.com/KGS-blog/coffee-intelligence-engine/main/exports/coffee_relevant_articles.json';
+const SOURCE_URL = 'https://api.github.com/repos/KGS-blog/coffee-intelligence-engine/contents/exports/coffee_relevant_articles.json?ref=main';
 const OUTPUT = path.join(ROOT, 'data', 'coffee-reference-articles.json');
 const UA = { 'User-Agent': 'KabarKopiDataPipeline/1.0' };
 
@@ -54,7 +54,9 @@ async function getSource() {
   if (process.env.COFFEE_REFERENCE_SOURCE_FILE) {
     return readJson(process.env.COFFEE_REFERENCE_SOURCE_FILE, null);
   }
-  const response = await fetch(SOURCE_URL, { headers: UA, signal: AbortSignal.timeout(20000) });
+  const headers = { ...UA, Accept: 'application/vnd.github.raw+json' };
+  if (process.env.COFFEE_ENGINE_READ_TOKEN) headers.Authorization = `Bearer ${process.env.COFFEE_ENGINE_READ_TOKEN}`;
+  const response = await fetch(SOURCE_URL, { headers, signal: AbortSignal.timeout(20000) });
   if (!response.ok) throw new Error(`Sumber artikel membalas HTTP ${response.status}`);
   return response.json();
 }
