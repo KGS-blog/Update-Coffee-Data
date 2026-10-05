@@ -42,7 +42,7 @@ jobs:
         run: node scripts/merge-coffee-reference-articles.js
       - name: Fetch original article context for clustering
         env:
-          COFFEE_NEWS_CONTEXT_FETCH_LIMIT: '100'
+          COFFEE_NEWS_CONTEXT_FETCH_LIMIT: '400'
         run: python scripts/fetch-news-context.py
       - name: Load private editor cluster queue
         env:
@@ -67,6 +67,8 @@ jobs:
         run: node scripts/render-static-news.js
       - name: Generate crawlable coffee data and calculator pages
         run: node scripts/generate-discovery-pages.js
+      - name: Render public MEVO report previews into static HTML
+        run: node scripts/render-static-mevo-previews.js
       - name: Verify Kabar Kopi entrypoint parity
         run: node scripts/check-kabar-entrypoints.js
       - name: Save private editor cluster queue

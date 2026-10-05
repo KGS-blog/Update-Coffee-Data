@@ -138,7 +138,9 @@ function effectiveTaxonomy() {
   const accepted = new Set(decisions.accepted_candidate_ids || []);
   const fromQueue = (generated.candidates || []).filter(c => accepted.has(c.id)).map(c => ({
     slug: c.id, nama: c.name, nama_en: c.name_en || c.name, analisis_id: c.id,
-    human_review_only: !!c.human_review_only,
+    // Newly proposed clusters remain article-by-article editor-only even
+    // after the definition itself is approved by an administrator.
+    human_review_only: true,
     // Never turn generic label words (especially "kopi" or "&") into
     // matching keywords. Candidate assignments remain AI/editor reviewed.
     kunci: c.human_review_only ? [] : [...new Set(c.suggested_keywords || [])]
@@ -279,7 +281,7 @@ function mergeCandidates(previous, proposals, unassigned, allArticles) {
     if (!id) continue;
     const old = existing.get(id);
     const status = rejected.has(id) ? "rejected" : accepted.has(id) ? "accepted" : old && old.status !== "pending" ? old.status : "pending";
-    existing.set(id, { id, name: p.name, name_en: p.name_en || p.name, description: p.description, description_en: p.description_en || p.description, suggested_keywords: [...new Set((p.keywords || []).map(k => String(k).trim()).filter(Boolean))].slice(0, 20), supporting_urls: urls, rationale: p.reason, status, first_suggested_at: old?.first_suggested_at || now, last_updated_at: now });
+    existing.set(id, { id, name: p.name, name_en: p.name_en || p.name, description: p.description, description_en: p.description_en || p.description, suggested_keywords: [...new Set((p.keywords || []).map(k => String(k).trim()).filter(Boolean))].slice(0, 20), supporting_urls: urls, rationale: p.reason, human_review_only: true, status, first_suggested_at: old?.first_suggested_at || now, last_updated_at: now });
   }
   const regionSignals = /\b(gayo|toraja|flores|kintamani|mandailing|bajawa|wamena|temanggung|bondowoso|kerinci|sindoro|ijen|priangan|kopi daerah|coffee origin|single origin|asal-?usul kopi|origin kopi|kopi nusantara|kopi lokal daerah|terroir kopi)\b/i;
   const communitySignals = /\b(komunitas|community|koperasi|cooperative|kelompok tani|farmer group|asosiasi|association|perkumpulan|komunitas barista|coffee community|pecinta kopi|petani kopi)\b/i;
@@ -366,16 +368,31 @@ async function main() {
       && (Number(a.cluster_review_version || 0) < CLUSTER_REVIEW_VERSION || a.cluster_review_context_hash !== clusterContextHash(a)))
     .sort((a, b) => Number(b.source_type === "cie_curated_reference") - Number(a.source_type === "cie_curated_reference") || dateOf(b) - dateOf(a))
     .slice(0, 80);
-  let aiResult = { assignments: [], candidates: [] };
-  let aiReviewSucceeded = false;
+  let aiResult = { assignments: [], reviews: [], candidates: [] };
+  const reviewedKeys = new Set();
   if (reviewed.length && process.env.OPENAI_API_KEY) {
-    const compact = reviewed.map(a => ({ url: articleKey(a), title: titleOf(a), article_context: String(a.coffee_relevance_context || a.content_excerpt || a.ringkasan || a.deskripsi || a.description || "").replace(/<[^>]*>/g, " ").slice(0, 1800), context_status: a.extraction_status || (a.ringkasan || a.deskripsi || a.description ? "feed_excerpt_only" : "context_unavailable"), source: a.sumber || "", published_at: a.tanggal || "" }));
+    // Keep structured responses small enough that every article gets a usable
+    // context/relevance decision. One oversized response used to fail as a
+    // whole and leave hundreds of stories in “Lainnya” without review.
+    const reviewBatchSize = 20;
     const instructions = "Untuk SETIAP artikel, bandingkan judul dengan isi/cuplikannya. Tentukan apakah fokus isi benar-benar mendukung judul (match/mismatch/unclear), apakah artikel secara substansial relevan dengan industri kopi (relevant/irrelevant/uncertain), dan jelaskan alasan dengan bukti pendek yang dikutip persis. Penyebutan kopi sebagai latar, tempat kejadian, atau satu detail sampingan bukan relevansi substantif—contohnya berita kriminal yang hanya bermula di warung kopi atau berita tokoh yang hanya menyebut minum kopi. Status irrelevant adalah SARAN saja: jangan menghapus atau mengecualikan artikel otomatis; biarkan editor manusia menetapkan keputusan akhir. Setelah pengecekan relevansi, cocokkan fokus isi (bukan judul saja) dengan definisi klaster. Kemiripan satu kata tidak cukup. Jika judul dan konteks tidak selaras, konteks tidak cukup, atau klaster tidak cocok jelas, jangan keluarkan assignment: biarkan di Lainnya untuk editor. Assignment confidence >=0.85 boleh masuk otomatis hanya ke klaster standar; klaster human_review_only wajib ditetapkan editor satu per satu. Sertakan kutipan bukti persis dari judul/konteks dan jangan membuat bukti. Riset & Tren Konsumen memerlukan bukti tentang konsumen; Event & Kompetisi harus menjadi pokok berita. Klaster Budaya & Asal-Usul hanya jika asal/daerah/budaya kopi menjadi pokok isi; Komunitas Kopi hanya jika komunitas/kelompok menjadi pokok isi. Jika ada tema baru yang koheren, ajukan kandidat, jangan klasifikasikan otomatis. Gunakan URL persis dari input. Kategori: " + JSON.stringify(taxonomy.map(c => ({ id: c.slug, name: c.nama, human_review_only: !!c.human_review_only, description: c.kunci.slice(0, 12).join(", ")})));
-    try { aiResult = await askAI("coffee_cluster_review", clusterSuggestionSchema, instructions, compact); aiReviewSucceeded = true; }
-    catch (e) { console.log("AI cluster review skipped: " + e.message); }
+    for (let offset = 0; offset < reviewed.length; offset += reviewBatchSize) {
+      const batch = reviewed.slice(offset, offset + reviewBatchSize);
+      const compact = batch.map(a => ({ url: articleKey(a), title: titleOf(a), article_context: String(a.coffee_relevance_context || a.content_excerpt || a.ringkasan || a.deskripsi || a.description || "").replace(/<[^>]*>/g, " ").slice(0, 1800), context_status: a.extraction_status || (a.ringkasan || a.deskripsi || a.description ? "feed_excerpt_only" : "context_unavailable"), source: a.sumber || "", published_at: a.tanggal || "" }));
+      try {
+        const result = await askAI("coffee_cluster_review", clusterSuggestionSchema, instructions, compact);
+        aiResult.assignments.push(...(result.assignments || []));
+        aiResult.reviews.push(...(result.reviews || []));
+        aiResult.candidates.push(...(result.candidates || []));
+        const reviewedUrls = new Set((result.reviews || []).map(review => String(review.url || "")));
+        batch.forEach(article => { if (reviewedUrls.has(articleKey(article))) reviewedKeys.add(articleKey(article)); });
+        console.log(`context review batch ${Math.floor(offset / reviewBatchSize) + 1}: ${batch.length} articles reviewed`);
+      } catch (e) {
+        console.log(`AI cluster review batch ${Math.floor(offset / reviewBatchSize) + 1} skipped: ` + e.message);
+      }
+    }
     const decisions = new Map((aiResult.assignments || []).map(x => [x.url, x]));
     const reviews = new Map((aiResult.reviews || []).map(x => [x.url, x]));
-    const reviewedKeys = new Set(aiReviewSucceeded ? reviewed.map(articleKey) : []);
     for (const a of articles) {
       if (reviewedKeys.has(articleKey(a))) { a.cluster_ai_reviewed_at = now; a.cluster_review_version = CLUSTER_REVIEW_VERSION; a.cluster_review_context_hash = clusterContextHash(a); }
       const d = decisions.get(articleKey(a));
