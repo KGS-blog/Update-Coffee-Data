@@ -42,7 +42,7 @@ jobs:
         run: node scripts/merge-coffee-reference-articles.js
       - name: Fetch original article context for clustering
         env:
-          COFFEE_NEWS_CONTEXT_FETCH_LIMIT: '400'
+          COFFEE_NEWS_CONTEXT_FETCH_LIMIT: '100'
         run: python scripts/fetch-news-context.py
       - name: Load private editor cluster queue
         env:
