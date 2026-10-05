@@ -40,6 +40,10 @@ jobs:
           python scripts/fetch-coffee-reference-articles.py
       - name: Merge curated references into searchable feed and clustering input
         run: node scripts/merge-coffee-reference-articles.js
+      - name: Fetch original article context for clustering
+        env:
+          COFFEE_NEWS_CONTEXT_FETCH_LIMIT: '400'
+        run: python scripts/fetch-news-context.py
       - name: Load private editor cluster queue
         env:
           MEVO_SYNC_SECRET: ${{ secrets.MEVO_SYNC_SECRET }}

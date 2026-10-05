@@ -25,6 +25,10 @@ const linkTypeOf = value => {
   } catch (_) { return "unknown"; }
 };
 const isAggregatorArticle = article => article?.link_type === "aggregator_redirect" || linkTypeOf(articleKey(article)) === "aggregator_redirect";
+const clusterContextHash = article => crypto.createHash("sha256").update(JSON.stringify([
+  titleOf(article), article.coffee_relevance_context || "", article.content_excerpt || "",
+  article.ringkasan || article.deskripsi || article.description || ""
+])).digest("hex");
 
 async function syncEditorClusterDecisions() {
   try {
@@ -67,55 +71,19 @@ function buildArchiveIndex() {
   });
 }
 
-function getKeywordCluster(article, taxonomy = BERITA_KLASTER) {
-  const title = titleOf(article).toLowerCase();
-  // "Coffee morning" is often a government/office meeting with only a coffee
-  // name in its title; it is not a coffee-industry event by itself.
-  if (/\bcoffee morning\b/.test(title) && !/\b(kopi|coffee shop|coffeehouse|kedai kopi|barista|roastery|roastery|green bean|biji kopi|perkebunan kopi|petani kopi|industri kopi)\b/.test(title)) return null;
-  // Generic words occur across the taxonomy and are not enough to classify a
-  // headline. Rank matches by specificity and require a clear winning margin.
-  const broad = new Set([
-    "kopi", "coffee", "brand", "merek", "global", "internasional", "international", "ekspor", "export", "impor", "import",
-    "harga", "price", "pasar", "market", "produksi", "production", "industri", "industry", "pemerintah", "government",
-    "petani", "farmer", "kebun", "farm", "panen", "harvest", "acara", "event", "promosi", "promotion", "training",
-    "pelatihan", "workshop", "seminar", "pertumbuhan", "growth", "berita", "news", "data", "sustainability", "keberlanjutan"
-  ]);
-  const topicPhrases = {
-    "harga-pasar": ["harga kopi", "harga arabika", "harga robusta", "pasokan kopi", "permintaan kopi", "harga c-market"],
-    "produksi-panen": ["petani kopi", "panen kopi", "produksi kopi", "budidaya kopi", "kebun kopi", "peremajaan kopi", "pascapanen kopi", "pasca panen kopi", "hasil panen kopi"],
-    "ekspor-daya-saing": ["ekspor kopi", "ekspor green bean", "daya saing kopi", "pasar ekspor kopi", "buyer kopi"],
-    "kedai-konsumsi-gaya-hidup": ["kedai kopi", "gerai kopi", "tempat ngopi", "menu kopi", "coffee shop", "coffeehouse"],
-    "barista-teknik-seduh": ["teknik seduh kopi", "menyeduh kopi", "mesin espresso", "latte art", "manual brew", "resep kopi"],
-    "kebijakan-regulasi": ["regulasi kopi", "sertifikasi kopi", "izin ekspor kopi", "eudr kopi", "kebijakan kopi"],
-    "pendidikan-industri": ["pelatihan kopi", "sekolah kopi", "akademi kopi", "kursus barista", "pelatihan barista"],
-    "brand-global": ["merek kopi", "brand kopi", "fore coffee", "starbucks", "kopi kenangan", "tanamera coffee", "luckin coffee"]
-  };
-  const scores = taxonomy.filter(c => !["event-kompetisi", "riset-tren-konsumen"].includes(c.slug)).map(cluster => {
-    let score = 0;
-    if ((topicPhrases[cluster.slug] || []).some(phrase => title.includes(phrase))) score = 5;
-    for (const raw of cluster.kunci) {
-      const term = String(raw || "").trim().toLowerCase();
-      if (term.length < 4 || broad.has(term) || !title.includes(term)) continue;
-      const words = term.split(/\s+/).length;
-      score = Math.max(score, words >= 3 || term.length >= 22 ? 5 : words === 2 || term.length >= 12 ? 4 : 3);
-    }
-    return { cluster, score };
-  }).filter(x => x.score > 0).sort((a, b) => b.score - a.score);
-  if (!scores.length || scores[0].score < 3) return null;
-  if (scores[1] && scores[0].score - scores[1].score < 2) return null;
-  return scores[0].cluster;
-}
-
 // Strong, contextual signals take precedence over broad legacy assignments.
 // For example, "coffee + resmi dibuka/hadir" describes a venue launch, not
 // literary or cultural commentary merely because its title also mentions kopi.
 function getHighConfidenceCluster(article, taxonomy) {
   const title = titleOf(article).toLowerCase();
+  const context = [article.ringkasan, article.deskripsi, article.description, article.content_excerpt, article.coffee_relevance_context].filter(Boolean).join(" ").replace(/<[^>]*>/g, " ").toLowerCase();
+  if (context.trim().length < 60) return null;
+  const material = `${title} ${context}`;
   const opening = /\b(resmi\s+dibuka|resmi\s+hadir|dibuka|hadir|soft\s+opening|grand\s+opening|buka\s+cabang|spot\s+ngopi\s+baru|tempat\s+nongkrong\s+baru)\b/.test(title);
-  const coffeeBusiness = /\b(kopi|coffee)\b/.test(title);
-  const venue = /\b(kedai|kafe|cafe|café|gerai|outlet|coffee\s*shop|coffee\s*bar|resto|restoran|spot\s+ngopi|tempat\s+nongkrong)\b/.test(title);
+  const coffeeBusiness = /\b(kopi|coffee)\b/.test(material);
+  const venue = /\b(kedai|kafe|cafe|café|gerai|outlet|coffee\s*shop|coffee\s*bar|resto|restoran|spot\s+ngopi|tempat\s+nongkrong)\b/.test(material);
   const eventContext = /\b(pasar|festival|kompetisi|lomba|pameran|munas|hari\s+kopi|coffee\s+day|party|konferensi|seminar|gjaw|soundrenaline)\b/.test(title);
-  const namedVenueOpening = /\b(kopi|coffee)\b.*\b(resmi\s+dibuka|resmi\s+hadir|dibuka|hadir)\b/.test(title);
+  const namedVenueOpening = /\b(kopi|coffee)\b.*\b(resmi\s+dibuka|resmi\s+hadir|dibuka|hadir)\b/.test(material);
   if (coffeeBusiness && !eventContext && (venue || (opening && namedVenueOpening))) {
     return taxonomy.find(c => c.slug === "kedai-konsumsi-gaya-hidup") || null;
   }
@@ -124,7 +92,9 @@ function getHighConfidenceCluster(article, taxonomy) {
 
 function getConsumerEventCluster(article, taxonomy) {
   const title = titleOf(article).toLowerCase();
-  const body = `${title} ${String(article.ringkasan || article.deskripsi || article.description || "")}`
+  const context = String(article.coffee_relevance_context || article.content_excerpt || article.ringkasan || article.deskripsi || article.description || "").replace(/<[^>]*>/g, " ").replace(/&nbsp;/gi, " ").toLowerCase();
+  if (context.trim().length < 60) return null;
+  const body = `${title} ${context}`
     .replace(/<[^>]*>/g, " ").replace(/&nbsp;/gi, " ").toLowerCase();
   const coffee = /\b(kopi|coffee|barista|latte\s+art)\b/.test(body);
   if (!coffee) return null;
@@ -184,6 +154,7 @@ function applyEditorialDecisions(articles, taxonomy) {
   const legacy = read("klaster-final.json", []);
   if (Array.isArray(legacy)) legacy.forEach(x => overrideMap.set(String(x.tautan || ""), String(x.cluster_id || x.klaster || "")));
   const byId = new Map(taxonomy.map(c => [c.slug, c]));
+  byId.set("lainnya", { slug: "lainnya", nama: "Lainnya", nama_en: "Other", kunci: [] });
   const byName = new Map(taxonomy.map(c => [c.nama.toLowerCase(), c]));
   const unknown = [];
   const updated = articles.map(a => {
@@ -196,20 +167,18 @@ function applyEditorialDecisions(articles, taxonomy) {
     const explicitlyUnassigned = !selected && a.cluster_assignment === "unassigned";
     const needsConsumerEventReview = !selected && !contextual && !consumerEvent && a.cluster_assignment !== "ai_existing"
       && previous && ["event-kompetisi", "riset-tren-konsumen"].includes(previous.slug);
-    const keyword = getKeywordCluster(a, taxonomy);
     const holdForReview = explicitlyUnassigned || needsConsumerEventReview;
-    // Re-evaluate legacy keyword assignments using the specificity-ranked
-    // classifier. Preserve human/AI decisions, but never preserve a weak
-    // keyword guess as if it were an editorial decision.
-    const previousIsLegacyKeyword = a.cluster_assignment === "keyword";
-    const fixed = selected || contextual || consumerEvent || (holdForReview ? null : (previousIsLegacyKeyword ? null : previous)) || (holdForReview ? null : keyword) || null;
+    // Keyword matches are retrieval hints, never enough to assign a news item.
+    // Old keyword/AI guesses return to contextual review; human decisions win.
+    const previousIsLegacyKeyword = a.cluster_assignment === "keyword"
+      || (a.cluster_assignment === "ai_existing" && (Number(a.cluster_review_version || 0) < 4 || a.cluster_review_context_hash !== clusterContextHash(a)));
+    const fixed = selected || contextual || consumerEvent || (holdForReview ? null : (previousIsLegacyKeyword ? null : previous)) || null;
     const next = { ...a, link_type: linkTypeOf(articleKey(a)), cluster_id: fixed ? fixed.slug : "lainnya", cluster_name: fixed ? fixed.nama : "Lainnya" };
     if (selected) next.cluster_assignment = "editor";
     else if (contextual) next.cluster_assignment = "rule_context";
     else if (consumerEvent) next.cluster_assignment = "rule_evidence";
     else if (needsConsumerEventReview) { next.cluster_assignment = "unassigned"; delete next.cluster_ai_reviewed_at; }
     else if (explicitlyUnassigned) next.cluster_assignment = "unassigned";
-    else if (keyword) next.cluster_assignment = "keyword";
     else if (fixed) next.cluster_assignment = a.cluster_assignment || "preserved";
     else next.cluster_assignment = "unassigned";
     if (!fixed) unknown.push(next);
@@ -261,12 +230,28 @@ async function askAI(schemaName, schema, instructions, payload) {
   return JSON.parse(text);
 }
 
-function mergeCandidates(previous, proposals, unassigned) {
+function mergeCandidates(previous, proposals, unassigned, allArticles) {
   const existing = new Map((previous.candidates || []).map(c => [c.id, c]));
   const decisions = read("cluster-decisions.json", {});
   const accepted = new Set(decisions.accepted_candidate_ids || []);
   const rejected = new Set(decisions.rejected_candidate_ids || []);
-  const allowedUrls = new Set(unassigned.map(articleKey));
+  const editorAssignments = new Map((decisions.overrides || []).map(item => [String(item.url || item.tautan || ""), String(item.cluster_id || item.klaster || "")]));
+  const pendingByUrl = new Map((previous.unassigned_articles || []).map(article => [String(article.url), article]));
+  const currentAssignments = new Map((allArticles || unassigned || []).map(article => [articleKey(article), article.cluster_assignment]));
+  for (const [url, assignment] of currentAssignments) if (assignment && assignment !== "unassigned") pendingByUrl.delete(url);
+  for (const a of unassigned || []) {
+    const url = articleKey(a);
+    if (!url || editorAssignments.has(url) || a.cluster_assignment !== "unassigned") continue;
+    pendingByUrl.set(url, {
+      id: crypto.createHash("sha256").update(url).digest("hex").slice(0, 24), url,
+      title: titleOf(a), source: String(a.sumber || a.source_name || ""), published_at: String(a.tanggal || a.pubDate || ""),
+      excerpt: String(a.coffee_relevance_context || a.content_excerpt || a.ringkasan || a.deskripsi || a.description || "").replace(/<[^>]*>/g, " ").slice(0, 1100),
+      context_status: a.extraction_status || (a.ringkasan || a.deskripsi || a.description ? "feed_excerpt" : "context_unavailable"),
+      status: "pending"
+    });
+  }
+  const unassignedArticles = [...pendingByUrl.values()].filter(a => !editorAssignments.has(a.url)).slice(-500);
+  const allowedUrls = new Set((unassigned || []).map(articleKey));
   for (const [id, candidate] of existing) {
     candidate.status = rejected.has(id) ? "rejected" : accepted.has(id) ? "accepted" : (candidate.status === "accepted" || candidate.status === "rejected") ? "pending" : candidate.status;
   }
@@ -279,7 +264,7 @@ function mergeCandidates(previous, proposals, unassigned) {
     const status = rejected.has(id) ? "rejected" : accepted.has(id) ? "accepted" : old && old.status !== "pending" ? old.status : "pending";
     existing.set(id, { id, name: p.name, name_en: p.name_en || p.name, description: p.description, description_en: p.description_en || p.description, suggested_keywords: [...new Set((p.keywords || []).map(k => String(k).trim()).filter(Boolean))].slice(0, 20), supporting_urls: urls, rationale: p.reason, status, first_suggested_at: old?.first_suggested_at || now, last_updated_at: now });
   }
-  return { version: 1, generated_at: now, minimum_support: 3, review_status: process.env.OPENAI_API_KEY ? "ai_review_enabled" : "needs_api_key", candidates: [...existing.values()].slice(0, 30) };
+  return { version: 2, generated_at: now, minimum_support: 3, review_status: process.env.OPENAI_API_KEY ? "ai_review_enabled" : "needs_api_key", unassigned_articles: unassignedArticles, candidates: [...existing.values()].slice(0, 30) };
 }
 
 function fingerprint(topicId, sources, settings) {
@@ -344,33 +329,35 @@ async function main() {
   buildArchiveIndex();
   source.fetched = source.fetched || now;
 
-  const CLUSTER_REVIEW_VERSION = 3;
-  const reviewed = articles.filter(a => !isAggregatorArticle(a) && a.cluster_assignment === "unassigned" && Number(a.cluster_review_version || 0) < CLUSTER_REVIEW_VERSION)
+  const CLUSTER_REVIEW_VERSION = 4;
+  const reviewed = articles.filter(a => !isAggregatorArticle(a) && a.cluster_assignment === "unassigned"
+      && (Number(a.cluster_review_version || 0) < CLUSTER_REVIEW_VERSION || a.cluster_review_context_hash !== clusterContextHash(a)))
     .sort((a, b) => Number(b.source_type === "cie_curated_reference") - Number(a.source_type === "cie_curated_reference") || dateOf(b) - dateOf(a))
     .slice(0, 80);
   let aiResult = { assignments: [], candidates: [] };
   let aiReviewSucceeded = false;
   if (reviewed.length && process.env.OPENAI_API_KEY) {
-    const compact = reviewed.map(a => ({ url: articleKey(a), title: titleOf(a), excerpt: String(a.ringkasan || a.deskripsi || a.description || "").slice(0, 500), source: a.sumber || "", published_at: a.tanggal || "" }));
-    const instructions = "Klasifikasikan berita kopi yang belum memiliki kategori dengan menilai fokus utama judul dan cuplikan, bukan mencocokkan satu kata. Gunakan tepat satu kategori hanya bila bukti cukup; jika ragu, jangan keluarkan assignment. Sertakan evidence berupa kutipan pendek yang persis ada pada judul atau cuplikan untuk setiap assignment; sistem akan menolak assignment bila kutipan tidak ditemukan di teks sumber. Beri confidence 0–1 yang konservatif; nilai >=0.85 hanya penyaring tambahan, bukan ukuran akurasi yang telah dikalibrasi. RUBRIK PENTING: Riset & Tren Konsumen hanya untuk berita yang melaporkan bukti tentang konsumen (survei, studi, riset, statistik konsumsi, preferensi, perilaku, kebiasaan atau kesehatan konsumsi kopi). Kata 'tren', 'budaya', 'data', 'internasional', atau penyebutan Hari Kopi saja tidak cukup. Event & Kompetisi hanya bila acara/kompetisi/pameran/festival/workshop/seminar merupakan pokok berita—misalnya agenda, penyelenggaraan, peserta, hasil, atau pemenang. Penyebutan acara sebagai latar dalam berita riset tidak cukup. Berita daftar destinasi, promosi, profil merek, edukasi umum, atau artikel kesehatan tanpa bukti riset tidak otomatis masuk salah satu dari dua kategori itu. Jangan membuat klaim dari judul saja jika cuplikan tidak mendukungnya. Jika ada sedikitnya tiga artikel berbeda dengan tema koheren yang tidak tercakup kategori lama, ajukan satu kandidat klaster baru dengan minimal tiga URL pendukung. Untuk kandidat baru, berikan nama dan deskripsi singkat dalam bahasa Indonesia serta padanan Inggris yang natural. Jangan membuat kategori untuk satu berita. Gunakan URL persis dari input saja. Kategori tersedia: " + JSON.stringify(taxonomy.map(c => ({ id: c.slug, name: c.nama, description: c.slug === "riset-tren-konsumen" ? "Bukti riset atau data tentang preferensi, perilaku, kebiasaan, kesehatan, dan pola konsumsi kopi." : c.slug === "event-kompetisi" ? "Acara kopi sebagai subjek berita: agenda, festival, pameran, kompetisi, workshop, seminar, peserta, atau hasil." : c.kunci.slice(0, 12).join(", ") })));
+    const compact = reviewed.map(a => ({ url: articleKey(a), title: titleOf(a), article_context: String(a.coffee_relevance_context || a.content_excerpt || a.ringkasan || a.deskripsi || a.description || "").replace(/<[^>]*>/g, " ").slice(0, 1800), context_status: a.extraction_status || "feed_excerpt_only", source: a.sumber || "", published_at: a.tanggal || "" }));
+    const instructions = "Baca konteks isi artikel yang diberikan, bukan sekadar judul. Cocokkan fokus utama artikel dengan definisi dan contoh yang sesuai pada klaster yang sudah ada. Prioritaskan bukti tentang subjek, peristiwa, dan hubungan antartopik dalam konteks; kemiripan satu kata bukan alasan menggabungkan. Jika hanya judul/cuplikannya yang tersedia, tingkatkan kehati-hatian. Jika konteks tidak cukup atau topik tidak cocok jelas, jangan keluarkan assignment: artikel tetap di Lainnya untuk ditinjau editor manusia. Assignment dengan confidence >=0.85 boleh masuk otomatis ke klaster yang sudah ada, tetapi ini bukan akurasi terkalibrasi. Sertakan evidence berupa kutipan pendek yang persis muncul dalam judul atau konteks; sistem menolak bukti yang tidak ditemukan. Riset & Tren Konsumen hanya untuk bukti tentang konsumen (survei, studi, statistik konsumsi, preferensi, perilaku, kebiasaan atau kesehatan konsumsi kopi); kata tren, budaya, atau data saja tidak cukup. Event & Kompetisi hanya bila acara/kompetisi/pameran/festival/workshop/seminar adalah pokok berita, bukan latar. Promosi pembukaan kedai bukan Budaya & Sastra. Jika sedikitnya tiga artikel yang ditinjau menunjukkan tema koheren yang belum tercakup, ajukan kandidat klaster baru, namun jangan mengklasifikasikan artikel ke kandidat baru otomatis. Gunakan URL persis dari input. Kategori tersedia: " + JSON.stringify(taxonomy.map(c => ({ id: c.slug, name: c.nama, description: c.slug === "riset-tren-konsumen" ? "Bukti riset atau data tentang preferensi, perilaku, kebiasaan, kesehatan, dan pola konsumsi kopi." : c.slug === "event-kompetisi" ? "Acara kopi sebagai subjek berita: agenda, festival, pameran, kompetisi, workshop, seminar, peserta, atau hasil." : c.kunci.slice(0, 12).join(", ")})));
     try { aiResult = await askAI("coffee_cluster_review", clusterSuggestionSchema, instructions, compact); aiReviewSucceeded = true; }
     catch (e) { console.log("AI cluster review skipped: " + e.message); }
     const decisions = new Map((aiResult.assignments || []).map(x => [x.url, x]));
     const reviewedKeys = new Set(aiReviewSucceeded ? reviewed.map(articleKey) : []);
     for (const a of articles) {
-      if (reviewedKeys.has(articleKey(a))) { a.cluster_ai_reviewed_at = now; a.cluster_review_version = CLUSTER_REVIEW_VERSION; }
+      if (reviewedKeys.has(articleKey(a))) { a.cluster_ai_reviewed_at = now; a.cluster_review_version = CLUSTER_REVIEW_VERSION; a.cluster_review_context_hash = clusterContextHash(a); }
       const d = decisions.get(articleKey(a));
       if (!d) continue;
-      const material = `${titleOf(a)} ${String(a.ringkasan || a.deskripsi || a.description || "")}`.replace(/<[^>]*>/g, " ").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim();
+      const material = `${titleOf(a)} ${String(a.coffee_relevance_context || a.content_excerpt || a.ringkasan || a.deskripsi || a.description || "")}`.replace(/<[^>]*>/g, " ").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim();
       const evidence = String(d.evidence || "").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim();
       const target = taxonomy.find(c => c.slug === d.cluster_id && d.confidence >= 0.85);
-      if (target && evidence.length >= 12 && material.includes(evidence)) { a.cluster_id = target.slug; a.cluster_name = target.nama; a.cluster_assignment = "ai_existing"; a.cluster_ai_reason = d.reason; a.cluster_ai_evidence = d.evidence; }
+      const usableContext = String(a.coffee_relevance_context || a.content_excerpt || a.ringkasan || a.deskripsi || a.description || "").replace(/<[^>]*>/g, " ").trim();
+      if (target && usableContext.length >= 80 && evidence.length >= 12 && material.includes(evidence)) { a.cluster_id = target.slug; a.cluster_name = target.nama; a.cluster_assignment = "ai_existing"; a.cluster_ai_reason = d.reason; a.cluster_ai_evidence = d.evidence; }
     }
   }
   write("berita-all.json", source);
   const oldCandidates = read("cluster-candidates.json", { candidates: [] });
-  const trulyUnassigned = unknown.filter(a => !isAggregatorArticle(a) && a.cluster_assignment === "unassigned");
-  write("cluster-candidates.json", mergeCandidates(oldCandidates, aiResult.candidates, trulyUnassigned));
+  const trulyUnassigned = articles.filter(a => !isAggregatorArticle(a) && a.cluster_assignment === "unassigned");
+  write("cluster-candidates.json", mergeCandidates(oldCandidates, aiResult.candidates, trulyUnassigned, articles));
   const updated = read("berita-all.json", { artikel: [] }).artikel;
   await generateEditorial(updated.filter(a => !isAggregatorArticle(a)), taxonomy);
   console.log("portal data processed:", updated.length, "articles;", reviewed.length, "unmatched reviewed;", unknown.length, "unmatched total");
