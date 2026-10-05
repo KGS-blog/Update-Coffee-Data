@@ -117,12 +117,12 @@ async function resolveArchivedGoogleNews(batchLimit, attemptedAt) {
     (archive.artikel || []).forEach((article, index) => {
       const url = String(article.tautan || article.link || "");
       const attempted = Date.parse(article.resolution_attempted_at || "") || 0;
-      if (isGoogleNewsRedirect(url) && article.resolution_status !== "resolved" && attemptedAt - attempted >= 24 * 60 * 60 * 1000) {
+      if (isGoogleNewsRedirect(url) && article.resolution_status !== "resolved" && (Number(article.resolution_attempts) || 0) < 3 && attemptedAt - attempted >= 24 * 60 * 60 * 1000) {
         candidates.push({ filePath, archive, article, index, url });
       }
     });
   }
-  candidates.sort((a, b) => (Date.parse(a.article.tanggal) || 0) - (Date.parse(b.article.tanggal) || 0));
+  candidates.sort((a, b) => (Number(a.article.resolution_attempts) || 0) - (Number(b.article.resolution_attempts) || 0) || (Date.parse(a.article.tanggal) || 0) - (Date.parse(b.article.tanggal) || 0));
   const changed = new Set();
   for (const candidate of candidates.slice(0, batchLimit)) {
     const publisherUrl = await resolveGoogleNewsPublisher(candidate.url);
