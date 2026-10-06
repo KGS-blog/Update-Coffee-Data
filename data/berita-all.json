@@ -215,6 +215,52 @@
       }
     },
     {
+      "judul": "Kawan Lama Group Ekspansi Ritel Kuliner, Memboyong Kopi M Stand ke Indonesia - SWA.co.id",
+      "tautan": "https://swa.co.id/read/478087/kawan-lama-group-ekspansi-ritel-kuliner-memboyong-kopi-m-stand-ke-indonesia",
+      "tanggal": "Tue, 06 Oct 2026 07:09:00 GMT",
+      "sumber": "SWA.co.id",
+      "asal": "google_news",
+      "aggregator": "Google News",
+      "link_type": "publisher_article",
+      "resolution_status": "resolved",
+      "tautan_google_news": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPeUNsWHFmaTdjVnhrMW9ESGlmaUoxMnhGZmRhWTJGMEJxUFRFb2xZLWw0NlpmQmlucjVxb183aFNpVjlaM09YTlY0MkJoTmpoVi1YZnRqYlZRakhBaEtjVnhXN24yd0l0Qi1YSUpIMWNFaXhYckI5LTliU3M5MXRXb2R6ajlVcTktdm5vUVkxNFNwS252WU1BVy1HLWx6MWRTSkxKLWpfbjk?oc=5",
+      "extracted_at": "2026-10-06T13:31:41Z",
+      "extracted_from_url": "https://swa.co.id/read/478087/kawan-lama-group-ekspansi-ritel-kuliner-memboyong-kopi-m-stand-ke-indonesia",
+      "resolved_url": "https://swa.co.id/read/478087/kawan-lama-group-ekspansi-ritel-kuliner-memboyong-kopi-m-stand-ke-indonesia",
+      "source_content_type": "text/html",
+      "http_status": 200,
+      "extraction_status": "extracted",
+      "extraction_method": "html_article_or_main",
+      "source_title": "Kawan Lama Group Ekspansi Ritel Kuliner, Memboyong Kopi M Stand ke Indonesia - SWA.co.id",
+      "source_description": "Kawan Lama Group perluas portofolio bisnis F&B melalui kehadiran M Stand. Mengusung konsep More Than Coffee, M Stand membidik konsumen urban lewat perpaduan kopi, desain ruang, dan gaya hidup.",
+      "source_authors": [],
+      "source_published_date": "2026-10-06",
+      "publication_date_precision": "day",
+      "publication_date_evidence": "06 Oktober 2026, 14:56 WIB",
+      "date_enrichment_version": 6,
+      "coffee_relevance_context": "",
+      "content_char_count": 298,
+      "content_sha256": null,
+      "content_excerpt": "Dilarang keras mengambil konten (tulisan, foto, infografis, video, dan sebagainya) yang dimuat di situs web ini, melakukan crawling atau pengindeksan otomatis untuk platform AI (artificial intelligence) dan platform digital lainnya, tanpa izin tertulis dari direksi yang berwenang di situs web ini.",
+      "fetch_error": null,
+      "retry_after": null,
+      "published_date": "2026-10-06",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_ai_reviewed_at": "2026-10-06T13:31:44.516Z",
+      "cluster_review_version": 7,
+      "cluster_review_context_hash": "1b6d51e9bd6aa4e9d9e17bb6b7906ad8aa67c7da0725fc3cbc2107a40c66968e",
+      "cluster_relevance_review": {
+        "relevance": "uncertain",
+        "title_context_match": "mismatch",
+        "suggested_cluster_id": "",
+        "reason": "Judul menunjukkan ekspansi merek kopi (potensi Brand Global), namun konteks isi yang tersedia hanyalah peringatan legal tanpa informasi tentang kopi atau ekspansi sehingga relevansi industri kopi tidak dapat diverifikasi.",
+        "evidence": "Judul: \"Kawan Lama Group Ekspansi Ritel Kuliner, Memboyong Kopi M Stand ke Indonesia\" | Isi tersedia: \"Dilarang keras mengambil konten (tulisan, foto, infografis, video, dan sebagainya) yang dimuat di situs web ini, melakukan crawling atau pengindeksan otomatis...\"",
+        "reviewed_at": "2026-10-06T13:31:44.516Z"
+      }
+    },
+    {
       "judul": "M Stand Resmi Buka Gerai Pertama di PIK, Tawarkan Tren Kopi Shanghai - cantika.com",
       "tautan": "https://www.cantika.com/read/2121013/m-stand-resmi-buka-gerai-pertama-di-pik-tawarkan-tren-kopi-shanghai",
       "tanggal": "Tue, 06 Oct 2026 05:30:00 GMT",
@@ -19346,10 +19392,10 @@
       "cluster_ai_evidence": "\"The onset of a new El Niño event presents challenges for coffee farmers.\""
     }
   ],
-  "fetched": "2026-10-06T13:03:22.841Z",
+  "fetched": "2026-10-06T13:31:18.250Z",
   "reference_ingest": {
     "source": "KGS-blog/coffee-intelligence-engine/exports/coffee_relevant_articles.json",
-    "imported_at": "2026-10-06T13:03:44.415Z",
+    "imported_at": "2026-10-06T13:31:41.562Z",
     "source_records": 351,
     "accepted_candidates": 338,
     "dated_candidates": 304,
@@ -19364,8 +19410,8 @@
     }
   },
   "content_fetch": {
-    "last_batch_at": "2026-10-06T13:03:44Z",
-    "batch_size": 4,
+    "last_batch_at": "2026-10-06T13:31:41Z",
+    "batch_size": 1,
     "batch_limit": 400,
     "purpose": "Short original-publisher context for relevance and cluster review; full article text is not stored or republished."
   }
