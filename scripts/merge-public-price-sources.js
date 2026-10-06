@@ -109,7 +109,7 @@ function canonicalRow(item, sourceDate = dateISO, basis = 'Tanggal diamati Kabar
     ? `field|${String(item.source).toLowerCase().replace(/\s+/g, ' ')}|${String(item.source_detail).toLowerCase().replace(/\s+/g, ' ')}`
     : sourceUrl;
   const priceLevel = ['customer', 'reseller', 'retail', 'wholesale', 'farmgate', 'unspecified'].includes(item.price_level) ? item.price_level : 'unspecified';
-  const productKey = `${sourceIdentity}|${String(item.product).toLowerCase().replace(/\s+/g, ' ')}|${priceLevel}|${currency}|${rowPeriod}`;
+  const productKey = `${sourceIdentity}|${String(item.product).toLowerCase().replace(/\s+/g, ' ')}|${String(item.process || '').toLowerCase().replace(/\s+/g, ' ')}|${String(item.origin || '').toLowerCase().replace(/\s+/g, ' ')}|${priceLevel}|${currency}|${amountKg}|${rowPeriod}`;
   const id = sha(productKey);
   return { 
     observation_id: id, type: item.type, form: item.form, process: item.process || 'Tidak disebut', price_level: priceLevel, period: rowPeriod,
@@ -122,7 +122,10 @@ function canonicalRow(item, sourceDate = dateISO, basis = 'Tanggal diamati Kabar
     ...(item.origin ? { origin: item.origin } : {})
   };
 }
-async function fetchApprovedManualRows() {
+// Re-read approved and already-imported OCR rows on each run. This lets a
+// canonical identity change (such as preserving 1 kg alongside smaller packs)
+// rebuild historical uploads without requiring users to upload them again.
+async function fetchManualPriceRows() {
   const secret = process.env.MEVO_SYNC_SECRET;
   if (!secret) return { records: [], ids: [] };
   try {
@@ -148,8 +151,8 @@ async function main() {
       records.push(...found);
     } catch (error) { console.warn(`${source.name}: source skipped for this run (${error.message}).`); }
   }
-  const approved = await fetchApprovedManualRows();
-  records.push(...approved.records);
+  const manualImports = await fetchManualPriceRows();
+  records.push(...manualImports.records);
   const supplementById = new Map(supplement.listings.map(row => [row.observation_id, row]));
   let added = 0;
   for (const item of records) {
@@ -188,8 +191,8 @@ async function main() {
   dataset.public_price_sources_checked_at = now.toISOString();
   fs.writeFileSync(DATA_PATH, `${JSON.stringify(dataset, null, 2)}\n`);
   console.log(`Merged ${added} new deduplicated public/admin listings; ${dataset.listings.length} total. Currencies: ${[...currencies].join(', ')}.`);
-  if (approved.ids.length && process.env.MEVO_SYNC_SECRET) {
-    const response = await fetch('https://blog-api.qcoid.com/api/internal/price-list-imports', { method: 'POST', headers: { Authorization: `Bearer ${process.env.MEVO_SYNC_SECRET}`, 'Content-Type': 'application/json' }, body: JSON.stringify({ ids: approved.ids }) });
+  if (manualImports.ids.length && process.env.MEVO_SYNC_SECRET) {
+    const response = await fetch('https://blog-api.qcoid.com/api/internal/price-list-imports', { method: 'POST', headers: { Authorization: `Bearer ${process.env.MEVO_SYNC_SECRET}`, 'Content-Type': 'application/json' }, body: JSON.stringify({ ids: manualImports.ids }) });
     if (!response.ok) console.warn(`Could not mark approved price imports as consumed (${response.status}).`);
   }
 }

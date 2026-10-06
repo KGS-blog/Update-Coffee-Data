@@ -42,7 +42,7 @@ jobs:
         run: node scripts/fetch.js
       - name: Save MEVO coffee price listings in Kabar Kopi
         run: node scripts/import-mevo-price-data.js
-      - name: Fetch public price catalogues and approved admin OCR listings
+      - name: Fetch public price catalogues and approved or previously imported admin OCR listings
         env:
           MEVO_SYNC_SECRET: ${{ secrets.MEVO_SYNC_SECRET }}
         run: node scripts/merge-public-price-sources.js

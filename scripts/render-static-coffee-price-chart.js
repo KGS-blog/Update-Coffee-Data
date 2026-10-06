@@ -3,8 +3,6 @@ const fs = require('node:fs');
 const path = require('node:path');
 
 const ROOT = path.resolve(__dirname, '..');
-const MEAN_BAND = 0.25;
-const MEAN_BAND_LABEL = `${Math.round(MEAN_BAND * 100)}%`;
 const datasetPath = path.join(ROOT, 'data', 'mevo_prices.json');
 if (!fs.existsSync(datasetPath)) throw new Error('Run scripts/import-mevo-price-data.js before rendering the coffee-price chart.');
 const dataset = JSON.parse(fs.readFileSync(datasetPath, 'utf8'));
@@ -46,7 +44,15 @@ const normalizeProduct = value => String(value || '').normalize('NFKC').toLocale
 const sourceIdentity = row => row.source_type === 'field'
   ? `field:${normalizeProduct(row.source)}:${normalizeProduct(row.source_detail)}`
   : `url:${row.source_url}`;
-const identity = row => [sourceIdentity(row), normalizeProduct(row.product), row.type, row.formClass, row.currency, row.period, row.date, Number(row.price_per_kg)].join('|');
+const packageGrams = row => {
+  const amount = Number(row.package_size?.amount ?? row.amount);
+  const unit = String(row.package_size?.unit ?? row.unit ?? 'g').toLowerCase();
+  if (!(amount > 0)) return null;
+  if (['kg', 'kilogram', 'kilograms'].includes(unit)) return amount * 1000;
+  if (['g', 'gram', 'gr', 'grams'].includes(unit)) return amount;
+  return null;
+};
+const identity = row => [sourceIdentity(row), normalizeProduct(row.product), row.type, row.formClass, row.currency, row.period, row.date, row.price_level || '', packageGrams(row) || '', Number(row.price_per_kg)].join('|');
 const seen = new Map();
 const uniqueIdr = [];
 const duplicateRows = [];
@@ -66,46 +72,77 @@ const median = values => {
   const middle = Math.floor(sorted.length / 2);
   return sorted.length ? (sorted.length % 2 ? sorted[middle] : (sorted[middle - 1] + sorted[middle]) / 2) : null;
 };
-// Keep listings within ±25% of the arithmetic mean for each period, type,
-// and bean form. Process and market tier stay pooled as requested. If a group
-// has observations but none falls in-band, retain the observation nearest the
-// mean so screening can never turn an existing period into zero data.
-const meanGroups = new Map();
-for (const row of chartableIdr) {
-  const key = [row.type, row.formClass, row.currency, row.period].join('|');
-  const group = meanGroups.get(key) || { rows: [], total: 0 };
-  group.rows.push(row);
-  group.total += Number(row.price_per_kg);
-  meanGroups.set(key, group);
+// Wine-process offers are excluded from the comparable series, but retained in source data.
+const isWineProcess = row => /\bwine\b/i.test(String(row.process || '')) ||
+  /\bwine(?:\s+(?:process|processed|ferment(?:ed|ation)?))?\s*$/i.test(String(row.product || ''));
+const wineExcludedRows = chartableIdr.filter(isWineProcess);
+const nonWineRows = chartableIdr.filter(row => !isWineProcess(row));
+
+// Prefer exact 1 kg / 1000 g pack sizes within a source/product/period/price-tier
+// listing. If absent, retain only the available size nearest 1 kg; its price/kg
+// conversion is then used as the explicit fallback.
+const sizeGroups = new Map();
+for (const row of nonWineRows) {
+  const key = [sourceIdentity(row), normalizeProduct(row.product), row.type, row.formClass, row.process, row.price_level || '', row.currency, row.period, row.date].join('|');
+  const group = sizeGroups.get(key) || [];
+  group.push(row); sizeGroups.set(key, group);
 }
-const outlierRows = [];
-const includedIds = new Set();
-const meanGroupSummaries = [];
-for (const group of meanGroups.values()) {
-  const mean = group.total / group.rows.length;
-  const lower = mean * (1 - MEAN_BAND);
-  const upper = mean * (1 + MEAN_BAND);
-  const inBand = group.rows.filter(row => {
-    const price = Number(row.price_per_kg);
-    return price >= lower && price <= upper;
-  });
-  const fallback = inBand.length ? [] : [group.rows.reduce((closest, row) =>
-    Math.abs(Number(row.price_per_kg) - mean) < Math.abs(Number(closest.price_per_kg) - mean) ? row : closest
-  )];
-  const includedRows = [...inBand, ...fallback];
-  const includedGroupIds = new Set(includedRows.map(row => row.observation_id));
-  for (const row of group.rows) {
-    const price = Number(row.price_per_kg);
-    if (includedGroupIds.has(row.observation_id)) {
-      includedIds.add(row.observation_id);
-    } else {
-      outlierRows.push({ ...row, group_mean: Math.round(mean), lower_limit: Math.round(lower), upper_limit: Math.round(upper), screening_method: `Outside ±${MEAN_BAND_LABEL} of arithmetic mean for same type/form/period` });
-    }
+const packageSizeExcludedRows = [];
+const sizeSelectedRows = [];
+const packageSelectionCounts = { exact_1kg_groups: 0, fallback_size_groups: 0, unknown_size_groups: 0 };
+for (const rows of sizeGroups.values()) {
+  const knownSizes = rows.map(packageGrams).filter(Number.isFinite);
+  if (!knownSizes.length) { packageSelectionCounts.unknown_size_groups++; sizeSelectedRows.push(...rows); continue; }
+  const exactKg = rows.filter(row => packageGrams(row) === 1000);
+  const selectedSize = exactKg.length ? 1000 : [...new Set(knownSizes)].sort((a,b) => Math.abs(a - 1000) - Math.abs(b - 1000) || b - a)[0];
+  if (exactKg.length) packageSelectionCounts.exact_1kg_groups++; else packageSelectionCounts.fallback_size_groups++;
+  for (const row of rows) {
+    const size = packageGrams(row);
+    if (size === selectedSize) sizeSelectedRows.push(row);
+    else packageSizeExcludedRows.push({ ...row, selected_package_grams: selectedSize, screening_method: size === null ? 'Excluded: package size is unknown while another size is available' : exactKg.length ? 'Excluded: an exact 1 kg listing exists for this source/product/period/tier' : 'Excluded: another available pack size is closer to 1 kg' });
   }
-  const first = group.rows[0];
-  meanGroupSummaries.push({ type: first.type, formClass: first.formClass, period: first.period, mean: Math.round(mean), lower: Math.round(lower), upper: Math.round(upper), total: group.rows.length, included: includedRows.length, excluded: group.rows.length - includedRows.length, fallback_to_nearest_mean: fallback.length > 0 });
 }
-const idr = chartableIdr.filter(row => includedIds.has(row.observation_id));
+
+// Compare period medians after Wine and pack-size handling. Only when the
+// median changes by more than 30% versus the preceding observed period do we
+// screen unusually high observations, defined as >30% above that period mean.
+const trendGroups = new Map();
+for (const row of sizeSelectedRows) {
+  const key = [row.type, row.formClass, row.currency].join('|');
+  const periods = trendGroups.get(key) || new Map();
+  const values = periods.get(row.period) || [];
+  values.push(row); periods.set(row.period, values); trendGroups.set(key, periods);
+}
+const significantMoves = new Map();
+for (const [key, periods] of trendGroups) {
+  const ordered = [...periods.entries()].sort((a,b) => quarterIndex(a[0]) - quarterIndex(b[0]));
+  for (let i = 1; i < ordered.length; i++) {
+    const [previousPeriod, previousRows] = ordered[i - 1];
+    const [period, rows] = ordered[i];
+    const previousMedian = median(previousRows.map(row => Number(row.price_per_kg)));
+    const currentMedian = median(rows.map(row => Number(row.price_per_kg)));
+    const change = previousMedian > 0 ? currentMedian / previousMedian - 1 : 0;
+    if (Math.abs(change) > 0.30) significantMoves.set(`${key}|${period}`, { previous_period: previousPeriod, previous_median: previousMedian, current_median: currentMedian, change_percent: change * 100 });
+  }
+}
+const trendOutlierRows = [];
+const screenedPeriodSummaries = [];
+const chartIncludedRows = new Set();
+for (const [key, periods] of trendGroups) {
+  for (const [period, rows] of periods) {
+    const move = significantMoves.get(`${key}|${period}`);
+    const mean = rows.reduce((sum,row) => sum + Number(row.price_per_kg), 0) / rows.length;
+    const upper = mean * 1.3;
+    let included = 0;
+    for (const row of rows) {
+      if (move && Number(row.price_per_kg) > upper) trendOutlierRows.push({ ...row, group_mean: Math.round(mean), upper_limit: Math.round(upper), period_change_percent: Number(move.change_percent.toFixed(1)), previous_period: move.previous_period, screening_method: 'Excluded high-price outlier: period median changed by over 30%; price is more than 30% above current-period mean' });
+      else { chartIncludedRows.add(row); included++; }
+    }
+    const first = rows[0];
+    screenedPeriodSummaries.push({ type:first.type, formClass:first.formClass, period, mean:Math.round(mean), previous_period:move?.previous_period || null, period_change_percent:move ? Number(move.change_percent.toFixed(1)) : null, total:rows.length, included, excluded:rows.length-included, upper_limit:move ? Math.round(upper) : null });
+  }
+}
+const idr = sizeSelectedRows.filter(row => chartIncludedRows.has(row));
 const formRows = {
   green: idr.filter(row => row.formClass === 'green'),
   roasted: idr.filter(row => row.formClass === 'roasted'),
@@ -117,7 +154,7 @@ const displayPeriod = period => {
 };
 const chart = (rows, form, type) => {
   const records = rows.filter(row => row.type === type);
-  const allRecords = chartableIdr.filter(row => row.type === type && row.formClass === form);
+  const allRecords = sizeSelectedRows.filter(row => row.type === type && row.formClass === form);
   const periods = [...new Set(allRecords.map(row => row.period))].sort((a, b) => quarterIndex(a) - quarterIndex(b));
   const points = periods.map(period => {
     const observations = records.filter(row => row.period === period);
@@ -144,10 +181,10 @@ const chart = (rows, form, type) => {
   }).filter(Boolean).join(' ');
   const line = pathD.includes('L') ? `<path class="${cls}" d="${pathD}"/>` : '';
   const dots = points.map(point => Number.isFinite(point.median)
-    ? `<circle class="point ${cls}-point" cx="${x(point.period)}" cy="${y(point.median)}" r="6"><title>${esc(type)} · ${esc(displayPeriod(point.period))} · ${formatIdr(point.median)} · ${point.count} price observations within range</title></circle>`
-    : `<text class="no-data" x="${x(point.period)}" y="${top + plotHeight / 2}" text-anchor="middle"><title>No source listings available for this period</title>—</text>`).join('');
+    ? `<circle class="point ${cls}-point" cx="${x(point.period)}" cy="${y(point.median)}" r="6"><title>${esc(type)} · ${esc(displayPeriod(point.period))} · ${formatIdr(point.median)} · ${point.count} eligible price observations</title></circle>`
+    : `<text class="no-data" x="${x(point.period)}" y="${top + plotHeight / 2}" text-anchor="middle"><title>No eligible observations for this period</title>—</text>`).join('');
   const periodLabels = periods.map(period => `<text x="${x(period)}" y="${height-16}" text-anchor="middle">${esc(displayPeriod(period))}</text>`).join('');
-  const table = `<div class="price-table-scroll"><table class="price-period-table"><thead><tr><th><span class="id-copy">Periode</span><span class="en-copy">Period</span></th><th><span class="id-copy">Median harga/kg</span><span class="en-copy">Median price/kg</span></th><th><span class="id-copy">Jumlah observasi harga</span><span class="en-copy">Price observations</span></th></tr></thead><tbody>${points.map(point => `<tr><th scope="row">${esc(displayPeriod(point.period))}</th><td>${Number.isFinite(point.median) ? formatIdr(point.median) : '<span class="id-copy">Tidak ada listing dalam rentang</span><span class="en-copy">No listings in range</span>'}</td><td class="count">${point.count.toLocaleString('id-ID')}</td></tr>`).join('')}</tbody></table></div>`;
+  const table = `<div class="price-table-scroll"><table class="price-period-table"><thead><tr><th><span class="id-copy">Periode</span><span class="en-copy">Period</span></th><th><span class="id-copy">Median harga/kg</span><span class="en-copy">Median price/kg</span></th><th><span class="id-copy">Jumlah observasi harga</span><span class="en-copy">Price observations</span></th></tr></thead><tbody>${points.map(point => `<tr><th scope="row">${esc(displayPeriod(point.period))}</th><td>${Number.isFinite(point.median) ? formatIdr(point.median) : '<span class="id-copy">Tidak ada observasi harga yang memenuhi cakupan</span><span class="en-copy">No eligible price observations</span>'}</td><td class="count">${point.count.toLocaleString('id-ID')}</td></tr>`).join('')}</tbody></table></div>`;
   const formName = form === 'green' ? ['Green bean', 'Green beans'] : ['Roasted bean', 'Roasted beans'];
   const speciesName = type === 'Arabika' ? ['Arabika', 'Arabica'] : ['Robusta', 'Robusta'];
   const id = `${type.toLowerCase()}-${form}-chart`;
@@ -185,7 +222,7 @@ for (const current of periodGroups.values()) {
   if (byChannel.size > 1) marketLevelWarnings.push({ type: current.type, form: current.form, period: current.period, channels: Object.fromEntries(byChannel) });
 }
 const labelForm = form => form === 'green' ? 'Biji hijau (green bean)' : 'Biji sangrai (roasted bean)';
-const flagged = meanGroupSummaries.filter(group => group.excluded > 0).map(group => `<li><strong>${esc(group.type)} · ${esc(labelForm(group.formClass))} · ${esc(displayPeriod(group.period))}</strong>: <span class="id-copy">rata-rata ${formatIdr(group.mean)}/kg; rentang ${formatIdr(group.lower)}–${formatIdr(group.upper)}/kg; ${group.included} dari ${group.total} listing masuk, ${group.excluded} dikeluarkan.</span><span class="en-copy">mean ${formatIdr(group.mean)}/kg; range ${formatIdr(group.lower)}–${formatIdr(group.upper)}/kg; ${group.included} of ${group.total} listings included, ${group.excluded} excluded.</span></li>`).join('');
+const removedTrendGroups = screenedPeriodSummaries.filter(group => group.excluded > 0).map(group => `<li><strong>${esc(group.type)} · ${esc(labelForm(group.formClass))} · ${esc(displayPeriod(group.period))}</strong>: <span class="id-copy">median berubah ${group.period_change_percent}% dibanding ${esc(displayPeriod(group.previous_period))}; rata-rata ${formatIdr(group.mean)}/kg; batas pencilan tinggi ${formatIdr(group.upper_limit)}/kg; ${group.excluded} dari ${group.total} observasi dikeluarkan.</span><span class="en-copy">median changed ${group.period_change_percent}% vs ${esc(displayPeriod(group.previous_period))}; mean ${formatIdr(group.mean)}/kg; high-outlier limit ${formatIdr(group.upper_limit)}/kg; ${group.excluded} of ${group.total} observations excluded.</span></li>`).join('');
 const duplicateNote = duplicateRows.length ? `${duplicateRows.length} baris duplikat terdeteksi dari perbedaan tanda baca/nama produk dan tidak dihitung dua kali.` : 'Tidak ada duplikat nama-produk yang terdeteksi.';
 const warningItems = comparisonWarnings.map(item => `<li><span class="id-copy">${esc(item.type)} · ${esc(labelForm(item.form))} · ${esc(displayPeriod(item.period))} dibanding ${esc(displayPeriod(item.previous_period))}: ${item.current_count} observasi vs ${item.previous_count}; ${esc(item.reason)}</span><span class="en-copy">${esc(item.type)} · ${item.form === 'green' ? 'Green beans' : 'Roasted beans'} · ${esc(displayPeriod(item.period))} vs ${esc(displayPeriod(item.previous_period))}: ${item.current_count} observations vs ${item.previous_count}; ${item.previous_count < 5 ? 'The prior period has fewer than 5 observations.' : 'The source mix changed substantially; few sources overlap.'}</span></li>`).join('');
 const levelItems = marketLevelWarnings.map(item => {
@@ -196,9 +233,10 @@ const levelItems = marketLevelWarnings.map(item => {
   const enSummary = Object.entries(counts).map(([key, count]) => `${count} ${enLabels[key]}`).join(', ');
   return `<li><span class="id-copy">${esc(item.type)} · ${esc(labelForm(item.form))} · ${esc(displayPeriod(item.period))}: ${idSummary}. Tingkat harga yang berbeda ditampilkan bersama dalam acuan ini; jangan dibaca sebagai satu harga pada tingkat pasar yang sama.</span><span class="en-copy">${esc(item.type)} · ${item.form === 'green' ? 'Green beans' : 'Roasted beans'} · ${esc(displayPeriod(item.period))}: ${enSummary}. Different price tiers are included in this reference; do not read them as one market-level price.</span></li>`;
 }).join('');
-const screenHtml = `<details class="price-screening"><summary><span class="id-copy">Pemeriksaan kualitas data</span><span class="en-copy">Data quality screening</span></summary><p><span class="id-copy">${duplicateNote} ${currencyMismatchRows.length.toLocaleString('id-ID')} listing unik dari Indonesia Specialty Coffee tidak dihitung dalam grafik rupiah: sumber aslinya menyatakan semua harga dalam USD, sedangkan data impor menandainya IDR tanpa nilai dan tanggal kurs yang dapat diverifikasi. Untuk setiap periode, jenis, dan bentuk biji, grafik hanya memuat listing dalam rentang 75%–125% dari rata-rata aritmetika grup; metode proses digabung. Jika tidak ada listing yang lolos, satu listing terdekat ke rata-rata tetap ditampilkan. Listing lain di luar rentang diringkas per grup di bawah; data mentah tetap tersimpan. Grup dengan satu observasi tidak menyediakan pembanding variasi.</span><span class="en-copy">${duplicateRows.length} duplicate rows caused by punctuation/product-name variants were detected and are not double-counted. ${currencyMismatchRows.length} unique Indonesia Specialty Coffee listings are excluded from IDR charts: the source states all prices are in USD, while the imported records label them IDR without a verifiable exchange rate and date. For each period, coffee type, and bean form, charts include listings within 75%–125% of the group arithmetic mean; processing methods are pooled. If no listing passes, the one nearest the mean remains visible. Other listings outside the band are summarized by group below; raw data remains stored. A group with one observation cannot show price variation.</span></p>${flagged ? `<ul>${flagged}</ul>` : `<p><span class="id-copy">Semua listing yang diperiksa berada dalam rentang rata-rata ±25%.</span><span class="en-copy">All screened listings fall within the mean ±25% band.</span></p>`}${warningItems ? `<h4><span class="id-copy">Catatan perbandingan periode</span><span class="en-copy">Period comparison notes</span></h4><ul>${warningItems}</ul>` : ''}${levelItems ? `<h4><span class="id-copy">Campuran tingkat harga</span><span class="en-copy">Mixed price stages</span></h4><ul>${levelItems}</ul>` : ''}</details>`;
-const chartHtml = `<div class="price-form-grid">${chart(formRows.green, 'green', 'Arabika')}${chart(formRows.roasted, 'roasted', 'Arabika')}${chart(formRows.green, 'green', 'Robusta')}${chart(formRows.roasted, 'roasted', 'Robusta')}</div><p class="price-form-coverage"><span class="id-copy"><strong>Cakupan: ${rawIdr.length.toLocaleString('id-ID')} observasi berlabel IDR diperiksa.</strong> ${currencyMismatchRows.length.toLocaleString('id-ID')} listing unik dikeluarkan karena mata uang sumber berbeda, ${duplicateRows.length.toLocaleString('id-ID')} duplikat tidak dihitung dua kali, dan ${outlierRows.length.toLocaleString('id-ID')} listing di luar rentang rata-rata ±25% dipisahkan. Grafik memakai ${idr.length.toLocaleString('id-ID')} observasi unik. Biji hijau: ${formRows.green.length.toLocaleString('id-ID')}; biji sangrai: ${formRows.roasted.length.toLocaleString('id-ID')}; kopi bubuk atau bentuk tak jelas tidak masuk grafik. ${usdCount.toLocaleString('id-ID')} listing berlabel USD tetap terpisah. Proses digabung. Jumlah adalah listing, bukan transaksi.</span><span class="en-copy"><strong>Scope: ${rawIdr.length.toLocaleString('en-US')} observations labeled IDR were screened.</strong> ${currencyMismatchRows.length.toLocaleString('en-US')} unique listings were excluded due to source-currency mismatch, ${duplicateRows.length.toLocaleString('en-US')} duplicates were not double-counted, and ${outlierRows.length.toLocaleString('en-US')} listings outside the mean ±25% band were excluded. Charts use ${idr.length.toLocaleString('en-US')} unique observations. Green beans: ${formRows.green.length.toLocaleString('en-US')}; roasted beans: ${formRows.roasted.length.toLocaleString('en-US')}; ground or unclear forms are excluded. ${usdCount.toLocaleString('en-US')} USD-labeled listings remain separate. Processing methods are combined. Counts are listings, not transactions.</span></p>`;
-const screening = { generated_at: new Date().toISOString(), method: { duplicate_key: 'source identity (URL or explicit field-source identity) + normalized product + type + form + currency + period + date + price_per_kg', source_currency_rule: 'Rows from specialtycoffee.id that were labeled IDR are excluded from IDR charts because the primary source states all its prices are USD; original source-currency prices are not reconstructed without verified FX metadata', outlier_rule: 'Inclusive ±25% band around the arithmetic mean within each type/form/currency/period group; process and market tier are pooled; when no row passes, retain the row nearest the mean', chart_policy: 'source-currency mismatches, duplicates, and listings outside the group mean ±25% band are excluded from IDR chart medians, except one nearest-mean row is retained when a group would otherwise be empty; raw source rows remain in mevo_prices.json' }, summary: { raw_idr_observations: rawIdr.length, unique_idr_observations: uniqueIdr.length, duplicate_rows: duplicateRows.length, source_currency_mismatch_rows: currencyMismatchRows.length, range_excluded_observations: outlierRows.length, outlier_candidates: outlierRows.length, chart_eligible_unique_idr_observations: idr.length, groups_retained_nearest_mean_fallback: meanGroupSummaries.filter(group => group.fallback_to_nearest_mean).length, group_summaries: meanGroupSummaries }, duplicates: duplicateRows.map(row => ({ observation_id: row.observation_id, duplicate_of: row.duplicate_of, type: row.type, form: row.form, period: row.period, date: row.date, price_per_kg: row.price_per_kg, product: row.product, source: row.source, source_type: row.source_type || 'url', source_detail: row.source_detail || null, source_url: row.source_url || null, status: 'duplicate_excluded_from_chart' })), currency_mismatches: currencyMismatchRows.map(row => ({ observation_id: row.observation_id, type: row.type, form: row.form, period: row.period, date: row.date, imported_currency: row.currency, imported_price_per_kg: row.price_per_kg, source_currency: 'USD', product: row.product, source: row.source, source_type: row.source_type || 'url', source_detail: row.source_detail || null, source_url: row.source_url || null, status: 'excluded_from_idr_chart_currency_not_verified' })), outliers: outlierRows.map(row => ({ observation_id: row.observation_id, type: row.type, form: row.form, period: row.period, date: row.date, price_per_kg: row.price_per_kg, group_mean: row.group_mean, lower_limit: row.lower_limit, upper_limit: row.upper_limit, screening_method: row.screening_method, product: row.product, source: row.source, source_type: row.source_type || 'url', source_detail: row.source_detail || null, source_url: row.source_url || null, status: 'excluded_from_chart_outside_group_mean_25_percent' })), comparison_warnings: comparisonWarnings, market_level_warnings: marketLevelWarnings };
+const outlierRows = [...wineExcludedRows, ...packageSizeExcludedRows, ...trendOutlierRows];
+const screenHtml = `<details class="price-screening"><summary><span class="id-copy">Pemeriksaan kualitas data</span><span class="en-copy">Data quality screening</span></summary><p><span class="id-copy">${duplicateNote} ${currencyMismatchRows.length.toLocaleString('id-ID')} listing unik dari Indonesia Specialty Coffee tidak dihitung dalam grafik rupiah karena sumber menyatakan harganya dalam USD. Proses Wine dikeluarkan. Jika satu produk memiliki beberapa ukuran, grafik memilih kemasan tepat 1 kg/1.000 g; jika tidak tersedia, dipilih ukuran yang paling dekat ke 1 kg dan dinormalisasi ke harga/kg. Tidak ada ambang harga tetap. Pencilan harga tinggi hanya disaring ketika median berubah lebih dari 30% terhadap periode sebelumnya; saat itu harga yang lebih dari 30% di atas rata-rata periode dikeluarkan. Data sumber tetap tersimpan.</span><span class="en-copy">${duplicateRows.length} duplicate rows were detected and are not double-counted. ${currencyMismatchRows.length} unique Indonesia Specialty Coffee listings are excluded from IDR charts because the source quotes USD. Wine processing is excluded. When a product has multiple pack sizes, the chart selects exactly 1 kg/1,000 g; if unavailable, it selects the size nearest 1 kg and normalizes to price/kg. There is no fixed price band. High-price outliers are screened only when the median changes by more than 30% from the prior period; prices more than 30% above that period's mean are then excluded. Source records remain stored.</span></p><p><span class="id-copy">Cakupan terpisah: ${wineExcludedRows.length} listing proses Wine dan ${packageSizeExcludedRows.length} listing ukuran kemasan tidak terpilih dikeluarkan dari grafik.</span><span class="en-copy">Separate scope: ${wineExcludedRows.length} Wine-process listings and ${packageSizeExcludedRows.length} non-selected pack-size listings are excluded from charts.</span></p>${removedTrendGroups ? `<h4><span class="id-copy">Penyaringan saat perubahan periode &gt;30%</span><span class="en-copy">Screening after a &gt;30% period change</span></h4><ul>${removedTrendGroups}</ul>` : `<p><span class="id-copy">Tidak ada pencilan harga tinggi yang dikeluarkan berdasarkan aturan perubahan antarperiode.</span><span class="en-copy">No high-price outliers were excluded under the cross-period change rule.</span></p>`}${warningItems ? `<h4><span class="id-copy">Catatan perbandingan periode</span><span class="en-copy">Period comparison notes</span></h4><ul>${warningItems}</ul>` : ''}${levelItems ? `<h4><span class="id-copy">Campuran tingkat harga</span><span class="en-copy">Mixed price stages</span></h4><ul>${levelItems}</ul>` : ''}</details>`;
+const chartHtml = `<div class="price-form-grid">${chart(formRows.green, 'green', 'Arabika')}${chart(formRows.roasted, 'roasted', 'Arabika')}${chart(formRows.green, 'green', 'Robusta')}${chart(formRows.roasted, 'roasted', 'Robusta')}</div><p class="price-form-coverage"><span class="id-copy"><strong>Cakupan: ${rawIdr.length.toLocaleString('id-ID')} observasi berlabel IDR diperiksa.</strong> ${currencyMismatchRows.length.toLocaleString('id-ID')} listing dikeluarkan karena mata uang sumber berbeda, ${duplicateRows.length.toLocaleString('id-ID')} duplikat tidak dihitung dua kali, ${wineExcludedRows.length.toLocaleString('id-ID')} proses Wine dikeluarkan, ${packageSizeExcludedRows.length.toLocaleString('id-ID')} ukuran kemasan nonpilihan dikeluarkan, dan ${trendOutlierRows.length.toLocaleString('id-ID')} pencilan harga tinggi disaring saat perubahan median antarperiode melebihi 30%. Grafik memakai ${idr.length.toLocaleString('id-ID')} observasi unik. Biji hijau: ${formRows.green.length.toLocaleString('id-ID')}; biji sangrai: ${formRows.roasted.length.toLocaleString('id-ID')}; kopi bubuk atau bentuk tak jelas tidak masuk grafik. ${usdCount.toLocaleString('id-ID')} listing berlabel USD tetap terpisah. Jumlah adalah listing, bukan transaksi.</span><span class="en-copy"><strong>Scope: ${rawIdr.length.toLocaleString('en-US')} IDR-labeled observations screened.</strong> ${currencyMismatchRows.length.toLocaleString('en-US')} source-currency mismatches excluded, ${duplicateRows.length.toLocaleString('en-US')} duplicates not double-counted, ${wineExcludedRows.length.toLocaleString('en-US')} Wine-process listings excluded, ${packageSizeExcludedRows.length.toLocaleString('en-US')} non-selected pack sizes excluded, and ${trendOutlierRows.length.toLocaleString('en-US')} high-price outliers screened when the period median moved by more than 30%. Charts use ${idr.length.toLocaleString('en-US')} unique observations. Green beans: ${formRows.green.length.toLocaleString('en-US')}; roasted beans: ${formRows.roasted.length.toLocaleString('en-US')}; ground or unclear forms are excluded. ${usdCount.toLocaleString('en-US')} USD-labeled listings remain separate. Counts are listings, not transactions.</span></p>`;
+const screening = { generated_at: new Date().toISOString(), method: { duplicate_key: 'source identity + product + type + form + process + price level + currency + period + date + package grams + price_per_kg', source_currency_rule: 'Rows from specialtycoffee.id labeled IDR are excluded because the source states the prices are USD and no verified FX record exists', wine_rule: 'Rows whose process is Wine are excluded from chart calculations; source rows remain stored', package_size_rule: 'Prefer exact 1000 g package per source/product/type/form/process/price level/currency/period/date; if absent, select the available pack size nearest to 1000 g and normalize price to per kg; unknown sizes are retained only where no known size exists', outlier_rule: 'No fixed price band. Compare period medians within type/form/currency. If absolute change versus the previous observed period is greater than 30%, exclude current-period observations priced more than 30% above that period arithmetic mean', chart_policy: 'Source-currency mismatches, duplicates, Wine process, non-selected package sizes, and conditionally detected high-price outliers are excluded; canonical raw price listings remain stored' }, summary: { raw_idr_observations: rawIdr.length, unique_idr_observations: uniqueIdr.length, duplicate_rows: duplicateRows.length, source_currency_mismatch_rows: currencyMismatchRows.length, wine_process_excluded_rows: wineExcludedRows.length, package_size_excluded_rows: packageSizeExcludedRows.length, package_selection_groups: packageSelectionCounts, significant_period_moves: significantMoves.size, high_price_outliers_excluded: trendOutlierRows.length, chart_eligible_unique_idr_observations: idr.length }, duplicates: duplicateRows.map(row => ({ observation_id: row.observation_id, duplicate_of: row.duplicate_of, type: row.type, form: row.form, period: row.period, date: row.date, package_size: row.package_size || null, price_per_kg: row.price_per_kg, product: row.product, source: row.source, source_type: row.source_type || 'url', source_detail: row.source_detail || null, source_url: row.source_url || null, status: 'duplicate_excluded_from_chart' })), currency_mismatches: currencyMismatchRows.map(row => ({ observation_id: row.observation_id, type: row.type, form: row.form, period: row.period, date: row.date, imported_currency: row.currency, imported_price_per_kg: row.price_per_kg, source_currency: 'USD', product: row.product, source: row.source, source_type: row.source_type || 'url', source_detail: row.source_detail || null, source_url: row.source_url || null, status: 'excluded_from_idr_chart_currency_not_verified' })), excluded_wine: wineExcludedRows.map(row => ({ observation_id: row.observation_id, type: row.type, form: row.form, process: row.process, period: row.period, product: row.product, price_per_kg: row.price_per_kg, source: row.source, status: 'excluded_wine_process' })), excluded_package_sizes: packageSizeExcludedRows.map(row => ({ observation_id: row.observation_id, type: row.type, form: row.form, process: row.process, period: row.period, product: row.product, package_size: row.package_size || null, selected_package_grams: row.selected_package_grams, price_per_kg: row.price_per_kg, source: row.source, screening_method: row.screening_method, status: 'excluded_non_selected_pack_size' })), outliers: trendOutlierRows.map(row => ({ observation_id: row.observation_id, type: row.type, form: row.form, process: row.process, period: row.period, previous_period: row.previous_period, period_change_percent: row.period_change_percent, price_per_kg: row.price_per_kg, group_mean: row.group_mean, upper_limit: row.upper_limit, product: row.product, source: row.source, source_type: row.source_type || 'url', source_detail: row.source_detail || null, source_url: row.source_url || null, screening_method: row.screening_method, status: 'excluded_high_outlier_after_period_change_over_30_percent' })), period_summaries: screenedPeriodSummaries, comparison_warnings: comparisonWarnings, market_level_warnings: marketLevelWarnings };
 fs.writeFileSync(path.join(ROOT, 'data', 'mevo_prices_screening.json'), `${JSON.stringify(screening, null, 2)}\n`);
 const secureSource = value => { try { const url = new URL(String(value || '')); return url.protocol === 'https:' ? url.href : ''; } catch (_) { return ''; } };
 // Keep every public source represented by the canonical JSON, including sources
