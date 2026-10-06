@@ -6,11 +6,11 @@
   "period_note": "Kuartal berasal dari tanggal terbit sumber bila tersedia; selain itu dari tanggal listing diamati MEVO. Ini bukan tanggal transaksi.",
   "normalization_note": "Harga kemasan dinormalisasi ke 1 kg. Nilai IDR bulat 100–999 dibaca sebagai ribuan (contoh 150 menjadi Rp150.000) sesuai konvensi sumber MEVO.",
   "totals": {
-    "listings": 2830,
-    "groups": 69,
+    "listings": 2837,
+    "groups": 71,
     "types": {
-      "Arabika": 2160,
-      "Robusta": 668
+      "Arabika": 2165,
+      "Robusta": 670
     }
   },
   "summary": [
@@ -1005,6 +1005,34 @@
       "median_price_per_kg": 175000,
       "minimum_price_per_kg": 170000,
       "maximum_price_per_kg": 180000,
+      "source_urls": []
+    },
+    {
+      "type": "Arabika",
+      "form": "Biji kopi mentah",
+      "process": "Tidak disebut",
+      "price_level": "wholesale",
+      "period": "Q4 2026",
+      "currency": "IDR",
+      "listing_count": 5,
+      "source_count": 1,
+      "median_price_per_kg": 145000,
+      "minimum_price_per_kg": 130000,
+      "maximum_price_per_kg": 165000,
+      "source_urls": []
+    },
+    {
+      "type": "Robusta",
+      "form": "Biji kopi mentah",
+      "process": "Tidak disebut",
+      "price_level": "wholesale",
+      "period": "Q4 2026",
+      "currency": "IDR",
+      "listing_count": 2,
+      "source_count": 1,
+      "median_price_per_kg": 71000,
+      "minimum_price_per_kg": 62000,
+      "maximum_price_per_kg": 80000,
       "source_urls": []
     },
     {
@@ -65602,6 +65630,59 @@
       "origin": "Flores"
     },
     {
+      "observation_id": "71a85aaeeeccc217d20f884e130bb6e4ca91c333b0384cb5cb2dc9682e04a073",
+      "type": "Arabika",
+      "form": "Biji kopi mentah",
+      "process": "Tidak disebut",
+      "price_level": "wholesale",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "date_basis": "Tanggal unggah catatan lapangan",
+      "currency": "IDR",
+      "original_price": 150000,
+      "price_per_package": 150000,
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 150000,
+      "scale_100_to_999_applied": false,
+      "product": "Flores G1 FW",
+      "source": "Biji Kopi Boanerges",
+      "source_type": "field",
+      "source_detail": "Update Pricelist Biji Kopi Boanerges Ί 24 September 2026",
+      "source_url": null,
+      "product_url": null,
+      "quality_status": null,
+      "origin": "Flores"
+    },
+    {
+      "observation_id": "35a7e8f14502c41b0aafb01c0468e8e4d208151e040affae551281b4cc0d2da1",
+      "type": "Arabika",
+      "form": "Biji kopi mentah",
+      "process": "Tidak disebut",
+      "price_level": "wholesale",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "date_basis": "Tanggal unggah catatan lapangan",
+      "currency": "IDR",
+      "original_price": 145000,
+      "price_per_package": 145000,
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 145000,
+      "scale_100_to_999_applied": false,
+      "product": "Flores G2 FW",
+      "source": "Biji Kopi Boanerges",
+      "source_type": "field",
+      "source_detail": "Update Pricelist Biji Kopi Boanerges Ί 24 September 2026",
+      "source_url": null,
+      "product_url": null,
+      "quality_status": null
+    },
+    {
       "observation_id": "bf86bf2a80dfaa56c37bcd0744c601b90a620a6c95c8402f3d23f18d71c32ec7",
       "type": "Robusta",
       "form": "Biji kopi mentah",
@@ -65677,6 +65758,84 @@
       "source": "Kral Coffee",
       "source_type": "field",
       "source_detail": "Kral Coffee Greenbean Availability Flyer",
+      "source_url": null,
+      "product_url": null,
+      "quality_status": null
+    },
+    {
+      "observation_id": "fd86627bcbc71f677220f506029e48b1b50d25d79eb70c4300a698244828e5f1",
+      "type": "Arabika",
+      "form": "Biji kopi mentah",
+      "process": "Tidak disebut",
+      "price_level": "wholesale",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "date_basis": "Tanggal unggah catatan lapangan",
+      "currency": "IDR",
+      "original_price": 165000,
+      "price_per_package": 165000,
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 165000,
+      "scale_100_to_999_applied": false,
+      "product": "Gayo G1 SW",
+      "source": "Biji Kopi Boanerges",
+      "source_type": "field",
+      "source_detail": "Update Pricelist Biji Kopi Boanerges Ί 24 September 2026",
+      "source_url": null,
+      "product_url": null,
+      "quality_status": null
+    },
+    {
+      "observation_id": "c0a0c04df4760b41b2464e22f2315cb875eeac71aa04e5d362547901589d3ccd",
+      "type": "Arabika",
+      "form": "Biji kopi mentah",
+      "process": "Tidak disebut",
+      "price_level": "wholesale",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "date_basis": "Tanggal unggah catatan lapangan",
+      "currency": "IDR",
+      "original_price": 130000,
+      "price_per_package": 130000,
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 130000,
+      "scale_100_to_999_applied": false,
+      "product": "Gayo G2 SW",
+      "source": "Biji Kopi Boanerges",
+      "source_type": "field",
+      "source_detail": "Update Pricelist Biji Kopi Boanerges Ί 24 September 2026",
+      "source_url": null,
+      "product_url": null,
+      "quality_status": null
+    },
+    {
+      "observation_id": "c42908b662979f20481e1cd57ca0bd273e66ffa83e5911c533443792aa6b2843",
+      "type": "Robusta",
+      "form": "Biji kopi mentah",
+      "process": "Tidak disebut",
+      "price_level": "wholesale",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "date_basis": "Tanggal unggah catatan lapangan",
+      "currency": "IDR",
+      "original_price": 62000,
+      "price_per_package": 62000,
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 62000,
+      "scale_100_to_999_applied": false,
+      "product": "Grade 3",
+      "source": "Biji Kopi Boanerges",
+      "source_type": "field",
+      "source_detail": "Update Pricelist Biji Kopi Boanerges Ί 24 September 2026",
       "source_url": null,
       "product_url": null,
       "quality_status": null
@@ -66713,6 +66872,58 @@
       "origin": "Temanggung"
     },
     {
+      "observation_id": "5e6b622e1c3bd2ad4b91ee97190a9fb0c653dba7f9890abf9c4a8c4251911350",
+      "type": "Robusta",
+      "form": "Biji kopi mentah",
+      "process": "Tidak disebut",
+      "price_level": "wholesale",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "date_basis": "Tanggal unggah catatan lapangan",
+      "currency": "IDR",
+      "original_price": 80000,
+      "price_per_package": 80000,
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 80000,
+      "scale_100_to_999_applied": false,
+      "product": "Temanggung - Grade 1",
+      "source": "Biji Kopi Boanerges",
+      "source_type": "field",
+      "source_detail": "Update Pricelist Biji Kopi Boanerges Ί 24 September 2026",
+      "source_url": null,
+      "product_url": null,
+      "quality_status": null
+    },
+    {
+      "observation_id": "c5e2fd5b3912a0e682d0be61f64da8ad4b7dda4d7f73db7ad421c277d0d5805f",
+      "type": "Arabika",
+      "form": "Biji kopi mentah",
+      "process": "Tidak disebut",
+      "price_level": "wholesale",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "date_basis": "Tanggal unggah catatan lapangan",
+      "currency": "IDR",
+      "original_price": 140000,
+      "price_per_package": 140000,
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 140000,
+      "scale_100_to_999_applied": false,
+      "product": "Tengger Natural",
+      "source": "Biji Kopi Boanerges",
+      "source_type": "field",
+      "source_detail": "Update Pricelist Biji Kopi Boanerges Ί 24 September 2026",
+      "source_url": null,
+      "product_url": null,
+      "quality_status": null
+    },
+    {
       "observation_id": "1d90eec1840c1e1e9127dd549bafe46f37d7a1cce7b2e0f959d1dd94ad1e5c55",
       "type": "Arabika",
       "form": "Biji kopi mentah",
@@ -66820,5 +67031,5 @@
       "quality_status": null
     }
   ],
-  "public_price_sources_checked_at": "2026-10-06T13:48:09.894Z"
+  "public_price_sources_checked_at": "2026-10-06T13:57:16.639Z"
 }
