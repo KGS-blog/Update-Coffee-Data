@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-06T10:23:48.374Z",
+  "generated_at": "2026-10-06T10:24:29.149Z",
   "method": {
     "duplicate_key": "source identity (URL or explicit field-source identity) + normalized product + type + form + currency + period + date + price_per_kg",
     "source_currency_rule": "Rows from specialtycoffee.id that were labeled IDR are excluded from IDR charts because the primary source states all its prices are USD; original source-currency prices are not reconstructed without verified FX metadata",

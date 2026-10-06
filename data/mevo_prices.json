@@ -55267,6 +55267,7 @@
       "scale_100_to_999_applied": false,
       "product": "Abyssinia 85+",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/products/indonesia-arabica-coffee-beans/abyssinia-coffee/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -55290,6 +55291,7 @@
       "scale_100_to_999_applied": false,
       "product": "Aceh Gayo Kelas 1",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/products/arabica-coffee-beans/aceh-gayo/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -55313,6 +55315,7 @@
       "scale_100_to_999_applied": false,
       "product": "Aceh Gayo Kelas 2",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/products/arabica-coffee-beans/aceh-gayo/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -55336,6 +55339,7 @@
       "scale_100_to_999_applied": false,
       "product": "Bahasa Indonesia: Kelas 2 Bahasa Lampung",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/products/robusta-coffee-beans/robusta-lampung/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -55359,6 +55363,7 @@
       "scale_100_to_999_applied": false,
       "product": "Bahasa Indonesia: Kelas 3 Bahasa Lampung",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/products/robusta-coffee-beans/robusta-lampung/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -55382,6 +55387,7 @@
       "scale_100_to_999_applied": false,
       "product": "Bahasa Indonesia: Kelas 4 Bahasa Lampung",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/products/robusta-coffee-beans/robusta-lampung/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -55405,6 +55411,7 @@
       "scale_100_to_999_applied": false,
       "product": "Bali",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/products/indonesia-arabica-coffee-beans/bali-wine-green-beans-coffee/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -55428,6 +55435,7 @@
       "scale_100_to_999_applied": false,
       "product": "Bali Alami",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/products/arabica-coffee-beans/bali-natural/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -55451,6 +55459,7 @@
       "scale_100_to_999_applied": false,
       "product": "Bali Kintamani 85+",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/products/arabica-coffee-beans/bali-kintamani-grade-1/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -55474,6 +55483,7 @@
       "scale_100_to_999_applied": false,
       "product": "Bali Kintamani Kelas 1",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/products/arabica-coffee-beans/bali-kintamani-grade-1/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -55497,6 +55507,7 @@
       "scale_100_to_999_applied": false,
       "product": "Bali Kintamni ELB 350 SM",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/products/robusta-coffee-beans/bali-kintamani-robusta-elb-350bc/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -55520,6 +55531,7 @@
       "scale_100_to_999_applied": false,
       "product": "Buah Gayo Long Berry",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/products/indonesia-specialty-coffee-beans/gayo-long-berry/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -55543,6 +55555,7 @@
       "scale_100_to_999_applied": false,
       "product": "Buah Peaberry Sumatera",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/products/specialty-coffee-beans/sumatra-super-peaberry/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -55566,6 +55579,7 @@
       "scale_100_to_999_applied": false,
       "product": "Cangkir Apek",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/products/arabica-coffee-beans/musty-cup/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -55589,6 +55603,7 @@
       "scale_100_to_999_applied": false,
       "product": "Dino Hijau ELB",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/products/specialty-coffee-beans/elb-green-dino/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -55612,6 +55627,7 @@
       "scale_100_to_999_applied": false,
       "product": "ELB 350 SM - G2 di Lampung",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/products/robusta-coffee-beans/robusta-lampung/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -55635,6 +55651,7 @@
       "scale_100_to_999_applied": false,
       "product": "ELB 450 SM - G2 di Lampung",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/products/robusta-coffee-beans/robusta-lampung/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -55658,6 +55675,7 @@
       "scale_100_to_999_applied": false,
       "product": "Flores Kelas 1",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/products/arabica-coffee-beans/flores-coffee/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -55681,6 +55699,7 @@
       "scale_100_to_999_applied": false,
       "product": "Gayo Anaerob Honey 85+",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/pricelist/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -55704,6 +55723,7 @@
       "scale_100_to_999_applied": false,
       "product": "Gayo Full-Washed 85+",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/pricelist/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -55727,6 +55747,7 @@
       "scale_100_to_999_applied": false,
       "product": "Gayo Honey 85+",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/products/indonesia-arabica-coffee-beans/gayo-honey/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -55750,6 +55771,7 @@
       "scale_100_to_999_applied": false,
       "product": "Gayo Natural 85+",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/products/indonesia-arabica-coffee-beans/gayo-natural/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -55773,6 +55795,7 @@
       "scale_100_to_999_applied": false,
       "product": "Gayo Natural Classic 90+",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/products/indonesia-arabica-coffee-beans/gayo-natural/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -55796,6 +55819,7 @@
       "scale_100_to_999_applied": false,
       "product": "Gayo Semi-Washed 85+",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/pricelist/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -58763,6 +58787,7 @@
       "scale_100_to_999_applied": false,
       "product": "Java Preanger Kelas 1",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/products/arabica-coffee-beans/java-preanger-grade-1/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -58786,6 +58811,7 @@
       "scale_100_to_999_applied": false,
       "product": "Java Washed Grade 1",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/pricelist/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -58809,6 +58835,7 @@
       "scale_100_to_999_applied": false,
       "product": "Jawa Ijen Kelas 1",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/products/arabica-coffee-beans/java-ijen-coffee/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -58832,6 +58859,7 @@
       "scale_100_to_999_applied": false,
       "product": "Jumbo Eigteen Plus",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/products/specialty-coffee-beans/jumbo-eighteen-plus/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -58855,6 +58883,7 @@
       "scale_100_to_999_applied": false,
       "product": "Kalosi Kelas 1",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/products/arabica-coffee-beans/sulawesi-kalosi/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -58878,6 +58907,7 @@
       "scale_100_to_999_applied": false,
       "product": "Kalosi Kelas 2",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/products/arabica-coffee-beans/sulawesi-kalosi/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -58901,6 +58931,7 @@
       "scale_100_to_999_applied": false,
       "product": "Kopi Usia",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/products/arabica-coffee-beans/age-coffee/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -58924,6 +58955,7 @@
       "scale_100_to_999_applied": false,
       "product": "Lasuna Spesial",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/products/specialty-coffee-beans/lasuna-special/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -58947,6 +58979,7 @@
       "scale_100_to_999_applied": false,
       "product": "Lintong Kelas 1",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/products/arabica-coffee-beans/sumatra-lintong/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -58970,6 +59003,7 @@
       "scale_100_to_999_applied": false,
       "product": "Luwak (Kopi Arabika Luwak Liar)",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/products/specialty-coffee-beans/luwak-wild-civet-arabica-coffee/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -58993,6 +59027,7 @@
       "scale_100_to_999_applied": false,
       "product": "Macerasi Karbonik Gayo 90+",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/pricelist/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -59016,6 +59051,7 @@
       "scale_100_to_999_applied": false,
       "product": "Mandheling FTO Kelas 1",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/pricelist/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -59039,6 +59075,7 @@
       "scale_100_to_999_applied": false,
       "product": "Mandheling Kelas 1",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/products/arabica-coffee-beans/sumatra-mandheling/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -59062,6 +59099,7 @@
       "scale_100_to_999_applied": false,
       "product": "Mandheling Kelas 2",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/products/arabica-coffee-beans/sumatra-mandheling/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -59085,6 +59123,7 @@
       "scale_100_to_999_applied": false,
       "product": "Mandheling Kelas 3",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/products/arabica-coffee-beans/sumatra-mandheling/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -59108,6 +59147,7 @@
       "scale_100_to_999_applied": false,
       "product": "Mandheling Kelas 3 Khusus",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/products/arabica-coffee-beans/sumatra-mandheling/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -59131,6 +59171,7 @@
       "scale_100_to_999_applied": false,
       "product": "Mandheling Kelas 4",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/products/arabica-coffee-beans/sumatra-mandheling/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -59154,6 +59195,7 @@
       "scale_100_to_999_applied": false,
       "product": "Mandheling Kelas 5",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/products/arabica-coffee-beans/sumatra-mandheling/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -59177,6 +59219,7 @@
       "scale_100_to_999_applied": false,
       "product": "Mandheling Kelas 6",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/products/arabica-coffee-beans/sumatra-mandheling/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -59200,6 +59243,7 @@
       "scale_100_to_999_applied": false,
       "product": "Mandheling Kelas Atas",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/products/arabica-coffee-beans/sumatra-mandheling/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -59223,6 +59267,7 @@
       "scale_100_to_999_applied": false,
       "product": "Mandheling Kelas Rendah/Pixel",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/products/arabica-coffee-beans/sumatra-mandheling/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -59246,6 +59291,7 @@
       "scale_100_to_999_applied": false,
       "product": "Mandheling Organik Kelas 1",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/pricelist/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -59269,6 +59315,7 @@
       "scale_100_to_999_applied": false,
       "product": "Sidikalang Kelas 2",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/products/robusta-coffee-beans/robusta-sidikalang/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -59292,6 +59339,7 @@
       "scale_100_to_999_applied": false,
       "product": "Sidikalang Kelas 3",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/products/robusta-coffee-beans/robusta-sidikalang/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -59315,6 +59363,7 @@
       "scale_100_to_999_applied": false,
       "product": "Sidikalang Kelas 4",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/products/robusta-coffee-beans/robusta-sidikalang/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -59338,6 +59387,7 @@
       "scale_100_to_999_applied": false,
       "product": "Sumatra ELB 350 BC Kelas 1",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/products/robusta-coffee-beans/sumatra-robusta/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -59361,6 +59411,7 @@
       "scale_100_to_999_applied": false,
       "product": "Sumatra ELB 350 BC Kelas 2",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/products/robusta-coffee-beans/sumatra-robusta/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -59384,6 +59435,7 @@
       "scale_100_to_999_applied": false,
       "product": "Sumatra ELB 400 BC Kelas 3",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/products/robusta-coffee-beans/sumatra-robusta/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -59407,6 +59459,7 @@
       "scale_100_to_999_applied": false,
       "product": "Sumatra ELB 450 BC Kelas 3",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/products/robusta-coffee-beans/sumatra-robusta/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -59430,6 +59483,7 @@
       "scale_100_to_999_applied": false,
       "product": "Sumatra Grade 3/Ek1 45 Cacat",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/products/robusta-coffee-beans/sumatra-robusta/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -59453,6 +59507,7 @@
       "scale_100_to_999_applied": false,
       "product": "Sumatra Grade 4a/Ek1 60 Cacat",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/products/robusta-coffee-beans/sumatra-robusta/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -59476,6 +59531,7 @@
       "scale_100_to_999_applied": false,
       "product": "Sumatra Grade 4b/Ek1 80 Cacat",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/products/robusta-coffee-beans/sumatra-robusta/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -59499,6 +59555,7 @@
       "scale_100_to_999_applied": false,
       "product": "Sumatra Organik Kelas 2",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/products/arabica-coffee-beans/sumatra-arabica-organic-grade-2/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -59522,6 +59579,7 @@
       "scale_100_to_999_applied": false,
       "product": "Sumatra Super Peaberry 85+",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/products/specialty-coffee-beans/sumatra-super-peaberry/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -59545,6 +59603,7 @@
       "scale_100_to_999_applied": false,
       "product": "Tanaman Masa Lalu",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/products/arabica-coffee-beans/past-crop/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -59568,6 +59627,7 @@
       "scale_100_to_999_applied": false,
       "product": "Termal Gayo 90+",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/pricelist/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -59591,6 +59651,7 @@
       "scale_100_to_999_applied": false,
       "product": "Toraja Kelas 1",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/products/arabica-coffee-beans/sulawesi-toraja/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -59614,6 +59675,7 @@
       "scale_100_to_999_applied": false,
       "product": "Toraja Kelas 2",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "product_url": "https://specialtycoffee.id/id/products/arabica-coffee-beans/sulawesi-toraja/",
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
@@ -62539,6 +62601,7 @@
       "scale_100_to_999_applied": false,
       "product": "Arabika Bali Kintamani",
       "source": "Willkin Green Coffee",
+      "source_type": "url",
       "source_url": "https://willkingreencoffee.com/katalog-lokal/",
       "product_url": "https://willkingreencoffee.com/katalog-lokal/",
       "quality_status": "Rentang harga katalog · titik tengah dipakai untuk ringkasan · tanggal diamati Kabar Kopi",
@@ -62567,6 +62630,7 @@
       "scale_100_to_999_applied": false,
       "product": "Arabika Bali Kintamani",
       "source": "Willkin Green Coffee",
+      "source_type": "url",
       "source_url": "https://willkingreencoffee.com/katalog-lokal/",
       "product_url": "https://willkingreencoffee.com/katalog-lokal/",
       "quality_status": "Published USD range · midpoint used for summaries · observed by Kabar Kopi",
@@ -62595,6 +62659,7 @@
       "scale_100_to_999_applied": false,
       "product": "Arabika Flores Bajawa",
       "source": "Willkin Green Coffee",
+      "source_type": "url",
       "source_url": "https://willkingreencoffee.com/katalog-lokal/",
       "product_url": "https://willkingreencoffee.com/katalog-lokal/",
       "quality_status": "Rentang harga katalog · titik tengah dipakai untuk ringkasan · tanggal diamati Kabar Kopi",
@@ -62623,6 +62688,7 @@
       "scale_100_to_999_applied": false,
       "product": "Arabika Flores Bajawa",
       "source": "Willkin Green Coffee",
+      "source_type": "url",
       "source_url": "https://willkingreencoffee.com/katalog-lokal/",
       "product_url": "https://willkingreencoffee.com/katalog-lokal/",
       "quality_status": "Published USD range · midpoint used for summaries · observed by Kabar Kopi",
@@ -62651,6 +62717,7 @@
       "scale_100_to_999_applied": false,
       "product": "Arabika Gayo Honey",
       "source": "Willkin Green Coffee",
+      "source_type": "url",
       "source_url": "https://willkingreencoffee.com/katalog-lokal/",
       "product_url": "https://willkingreencoffee.com/katalog-lokal/",
       "quality_status": "Rentang harga katalog · titik tengah dipakai untuk ringkasan · tanggal diamati Kabar Kopi",
@@ -62679,6 +62746,7 @@
       "scale_100_to_999_applied": false,
       "product": "Arabika Gayo Honey",
       "source": "Willkin Green Coffee",
+      "source_type": "url",
       "source_url": "https://willkingreencoffee.com/katalog-lokal/",
       "product_url": "https://willkingreencoffee.com/katalog-lokal/",
       "quality_status": "Published USD range · midpoint used for summaries · observed by Kabar Kopi",
@@ -62707,6 +62775,7 @@
       "scale_100_to_999_applied": false,
       "product": "Arabika Gayo Natural",
       "source": "Willkin Green Coffee",
+      "source_type": "url",
       "source_url": "https://willkingreencoffee.com/katalog-lokal/",
       "product_url": "https://willkingreencoffee.com/katalog-lokal/",
       "quality_status": "Rentang harga katalog · titik tengah dipakai untuk ringkasan · tanggal diamati Kabar Kopi",
@@ -62735,6 +62804,7 @@
       "scale_100_to_999_applied": false,
       "product": "Arabika Gayo Natural",
       "source": "Willkin Green Coffee",
+      "source_type": "url",
       "source_url": "https://willkingreencoffee.com/katalog-lokal/",
       "product_url": "https://willkingreencoffee.com/katalog-lokal/",
       "quality_status": "Published USD range · midpoint used for summaries · observed by Kabar Kopi",
@@ -62763,6 +62833,7 @@
       "scale_100_to_999_applied": false,
       "product": "Arabika Gayo Organic",
       "source": "Willkin Green Coffee",
+      "source_type": "url",
       "source_url": "https://willkingreencoffee.com/katalog-lokal/",
       "product_url": "https://willkingreencoffee.com/katalog-lokal/",
       "quality_status": "Rentang harga katalog · titik tengah dipakai untuk ringkasan · tanggal diamati Kabar Kopi",
@@ -62791,6 +62862,7 @@
       "scale_100_to_999_applied": false,
       "product": "Arabika Gayo Organic",
       "source": "Willkin Green Coffee",
+      "source_type": "url",
       "source_url": "https://willkingreencoffee.com/katalog-lokal/",
       "product_url": "https://willkingreencoffee.com/katalog-lokal/",
       "quality_status": "Published USD range · midpoint used for summaries · observed by Kabar Kopi",
@@ -62819,6 +62891,7 @@
       "scale_100_to_999_applied": false,
       "product": "Arabika Gayo Washed",
       "source": "Willkin Green Coffee",
+      "source_type": "url",
       "source_url": "https://willkingreencoffee.com/katalog-lokal/",
       "product_url": "https://willkingreencoffee.com/katalog-lokal/",
       "quality_status": "Rentang harga katalog · titik tengah dipakai untuk ringkasan · tanggal diamati Kabar Kopi",
@@ -62847,6 +62920,7 @@
       "scale_100_to_999_applied": false,
       "product": "Arabika Gayo Washed",
       "source": "Willkin Green Coffee",
+      "source_type": "url",
       "source_url": "https://willkingreencoffee.com/katalog-lokal/",
       "product_url": "https://willkingreencoffee.com/katalog-lokal/",
       "quality_status": "Published USD range · midpoint used for summaries · observed by Kabar Kopi",
@@ -62875,6 +62949,7 @@
       "scale_100_to_999_applied": false,
       "product": "Arabika Toraja",
       "source": "Willkin Green Coffee",
+      "source_type": "url",
       "source_url": "https://willkingreencoffee.com/katalog-lokal/",
       "product_url": "https://willkingreencoffee.com/katalog-lokal/",
       "quality_status": "Rentang harga katalog · titik tengah dipakai untuk ringkasan · tanggal diamati Kabar Kopi",
@@ -62903,6 +62978,7 @@
       "scale_100_to_999_applied": false,
       "product": "Arabika Toraja",
       "source": "Willkin Green Coffee",
+      "source_type": "url",
       "source_url": "https://willkingreencoffee.com/katalog-lokal/",
       "product_url": "https://willkingreencoffee.com/katalog-lokal/",
       "quality_status": "Published USD range · midpoint used for summaries · observed by Kabar Kopi",
@@ -62927,6 +63003,7 @@
       "scale_100_to_999_applied": false,
       "product": "Bali Kintamani Washed Citrus",
       "source": "ASKI B2B Marketplace",
+      "source_type": "url",
       "source_url": "https://www.aski.coffee/marketplace",
       "product_url": "https://www.aski.coffee/marketplace",
       "quality_status": "Estimasi harga marketplace · tanggal diamati Kabar Kopi",
@@ -62951,6 +63028,7 @@
       "scale_100_to_999_applied": false,
       "product": "Flores Bajawa Natural Fine Robusta",
       "source": "ASKI B2B Marketplace",
+      "source_type": "url",
       "source_url": "https://www.aski.coffee/marketplace",
       "product_url": "https://www.aski.coffee/marketplace",
       "quality_status": "Estimasi harga marketplace · tanggal diamati Kabar Kopi",
@@ -62979,6 +63057,7 @@
       "scale_100_to_999_applied": false,
       "product": "Java Arabika Ijen",
       "source": "Willkin Green Coffee",
+      "source_type": "url",
       "source_url": "https://willkingreencoffee.com/katalog-lokal/",
       "product_url": "https://willkingreencoffee.com/katalog-lokal/",
       "quality_status": "Rentang harga katalog · titik tengah dipakai untuk ringkasan · tanggal diamati Kabar Kopi",
@@ -63007,6 +63086,7 @@
       "scale_100_to_999_applied": false,
       "product": "Java Arabika Ijen",
       "source": "Willkin Green Coffee",
+      "source_type": "url",
       "source_url": "https://willkingreencoffee.com/katalog-lokal/",
       "product_url": "https://willkingreencoffee.com/katalog-lokal/",
       "quality_status": "Published USD range · midpoint used for summaries · observed by Kabar Kopi",
@@ -63031,6 +63111,7 @@
       "scale_100_to_999_applied": false,
       "product": "Jawa Preanger Organic Honey",
       "source": "ASKI B2B Marketplace",
+      "source_type": "url",
       "source_url": "https://www.aski.coffee/marketplace",
       "product_url": "https://www.aski.coffee/marketplace",
       "quality_status": "Estimasi harga marketplace · tanggal diamati Kabar Kopi",
@@ -63059,6 +63140,7 @@
       "scale_100_to_999_applied": false,
       "product": "Mandheling Arabika",
       "source": "Willkin Green Coffee",
+      "source_type": "url",
       "source_url": "https://willkingreencoffee.com/katalog-lokal/",
       "product_url": "https://willkingreencoffee.com/katalog-lokal/",
       "quality_status": "Rentang harga katalog · titik tengah dipakai untuk ringkasan · tanggal diamati Kabar Kopi",
@@ -63087,6 +63169,7 @@
       "scale_100_to_999_applied": false,
       "product": "Mandheling Arabika",
       "source": "Willkin Green Coffee",
+      "source_type": "url",
       "source_url": "https://willkingreencoffee.com/katalog-lokal/",
       "product_url": "https://willkingreencoffee.com/katalog-lokal/",
       "quality_status": "Published USD range · midpoint used for summaries · observed by Kabar Kopi",
@@ -63115,6 +63198,7 @@
       "scale_100_to_999_applied": false,
       "product": "Robusta Lampung EK1",
       "source": "Willkin Green Coffee",
+      "source_type": "url",
       "source_url": "https://willkingreencoffee.com/katalog-lokal/",
       "product_url": "https://willkingreencoffee.com/katalog-lokal/",
       "quality_status": "Rentang harga katalog · titik tengah dipakai untuk ringkasan · tanggal diamati Kabar Kopi",
@@ -63143,6 +63227,7 @@
       "scale_100_to_999_applied": false,
       "product": "Robusta Lampung EK1",
       "source": "Willkin Green Coffee",
+      "source_type": "url",
       "source_url": "https://willkingreencoffee.com/katalog-lokal/",
       "product_url": "https://willkingreencoffee.com/katalog-lokal/",
       "quality_status": "Published USD range · midpoint used for summaries · observed by Kabar Kopi",
@@ -63171,6 +63256,7 @@
       "scale_100_to_999_applied": false,
       "product": "Robusta Temanggung",
       "source": "Willkin Green Coffee",
+      "source_type": "url",
       "source_url": "https://willkingreencoffee.com/katalog-lokal/",
       "product_url": "https://willkingreencoffee.com/katalog-lokal/",
       "quality_status": "Rentang harga katalog · titik tengah dipakai untuk ringkasan · tanggal diamati Kabar Kopi",
@@ -63199,11 +63285,12 @@
       "scale_100_to_999_applied": false,
       "product": "Robusta Temanggung",
       "source": "Willkin Green Coffee",
+      "source_type": "url",
       "source_url": "https://willkingreencoffee.com/katalog-lokal/",
       "product_url": "https://willkingreencoffee.com/katalog-lokal/",
       "quality_status": "Published USD range · midpoint used for summaries · observed by Kabar Kopi",
       "origin": "Temanggung, Jateng"
     }
   ],
-  "public_price_sources_checked_at": "2026-10-06T09:46:30.453Z"
+  "public_price_sources_checked_at": "2026-10-06T10:24:14.287Z"
 }
