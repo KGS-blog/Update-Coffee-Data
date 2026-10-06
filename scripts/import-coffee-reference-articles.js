@@ -124,15 +124,25 @@ function deduplicate(rows, feedRows) {
 }
 
 (async () => {
+  const previousCorpus = readJson(OUTPUT, { articles: [] });
   let source, growthSource;
-  try {
-    [source, growthSource] = await Promise.all([getSource(), getGrowthSource()]);
-  } catch (error) {
-    if (fs.existsSync(OUTPUT)) {
-      console.warn(`Coffee reference import skipped; retaining existing archive: ${error.message}`);
-      return;
-    }
-    throw error;
+  const sourceResults = await Promise.allSettled([getSource(), getGrowthSource()]);
+  const [engineResult, growthResult] = sourceResults;
+  if (engineResult.status === 'fulfilled') source = engineResult.value;
+  else {
+    source = {
+      articles: (previousCorpus.articles || []).filter(article => article.source_collection !== 'artikel_pertumbuhan'),
+      generated_at: previousCorpus.source_generated_at || null
+    };
+    if (!source.articles.length) throw engineResult.reason;
+    console.warn(`Coffee Intelligence Engine source unavailable; using its previously imported records: ${engineResult.reason.message}`);
+  }
+  if (growthResult.status === 'fulfilled') growthSource = growthResult.value;
+  else {
+    const savedGrowth = (previousCorpus.articles || []).filter(article => article.source_collection === 'artikel_pertumbuhan');
+    if (!savedGrowth.length) throw growthResult.reason;
+    growthSource = { articles: savedGrowth, generated_at: previousCorpus.mevo_growth_source?.generated_at || null };
+    console.warn(`MEVO growth source unavailable; retaining its previously imported records: ${growthResult.reason.message}`);
   }
 
   if (!source || !Array.isArray(source.articles)) throw new Error('Format sumber Coffee Intelligence Engine tidak valid: articles harus berupa array.');
@@ -151,7 +161,6 @@ function deduplicate(rows, feedRows) {
   const currentFeed = readJson(path.join(ROOT, 'data', 'berita.json'), { artikel: [] });
   const mergedFeed = [...(latestFeed.artikel || []), ...(currentFeed.artikel || [])];
   const result = deduplicate(candidates, mergedFeed);
-  const previousCorpus = readJson(OUTPUT, { articles: [] });
   const previousById = new Map((previousCorpus.articles || []).map(article => [String(article.id), article]));
   const previousByUrl = new Map((previousCorpus.articles || []).filter(article => article.url).map(article => [identityKey(article.url), article]));
   const extractionFields = [
