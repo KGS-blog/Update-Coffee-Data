@@ -1,7 +1,376 @@
 {
   "version": 1,
-  "generated_at": "2026-10-05T16:47:08.176Z",
+  "generated_at": "2026-10-06T04:52:56.062Z",
   "articles": [
+    {
+      "cluster_id": "kedai-konsumsi-gaya-hidup",
+      "cluster_name": "Kedai, Konsumsi & Gaya Hidup",
+      "period_days": 30,
+      "generated_at": "2026-10-06T04:52:56.062Z",
+      "status": "ai_generated",
+      "fingerprint": "fdbd9fd13800d914cf548bf279fa79966b78537ec46c9deaa5d76c798b8b56a1",
+      "article": {
+        "title": "Kedai, Konsumsi & Gaya Hidup Kopi: Mobilitas, Merek Baru, dan Eksperimen Rasa",
+        "summary": "Tiga pendiri Jago Coffee menjadi Endeavor Entrepreneur Indonesia ke-117–119 sambil menyoroti model gerobak listrik untuk memperluas akses kopi [1]. Di saat yang sama, M Stand dari Shanghai resmi hadir di Jakarta melalui F&B ID dan diboyong oleh Grup Kawan Lama [2][3], sementara titik ngopi muncul dari area mobil kopi di Banda Aceh hingga rest area yang menawarkan kopi Turki dan transaksi digital [4][5]. Liputan lain menambah spektrum: eksperimen kopi-terasi di Vietnam, pilihan pengganti krimer, dan perbandingan matcha vs kopi yang tidak hitam-putih [6][8][7].",
+        "lead": "Masuknya M Stand menegaskan Jakarta sebagai panggung merek kopi bergaya, dengan janji spesialti, inovasi rasa, dan desain ruang [2], sementara berita tentang rest area di Simalungun menyebut penyajian kopi Turki dengan biji Fine Robusta Temanggung serta fasilitas pembayaran digital [5]. Banda Aceh juga menempatkan mobil kopi sebagai titik kumpul baru, menandai format layanan yang luwes [4].",
+        "sections": [
+          {
+            "heading": "Format bergerak dan titik konsumsi baru",
+            "paragraphs": [
+              "Pengakuan Endeavor untuk Jago Coffee datang bersama sorotan pada model gerobak listrik sebagai cara memperluas akses kopi sehari-hari [1]. Di luar kota besar, Banda Aceh menata area mobil kopi sebagai tempat nongkrong baru, memberi contoh bagaimana kendaraan bisa menjadi etalase dan titik temu sekaligus [4]. Di jalur perjalanan, Rest Area Tigabalata menampilkan layanan kopi Turki, memanfaatkan biji Fine Robusta Temanggung, dan mendukung transaksi digital—kombinasi yang menunjukkan fleksibilitas format dan pembayaran [5]. Polanya konsisten: kopi hadir mendekat ke arus mobilitas orang, bukan menunggu orang datang ke bar tetap."
+            ]
+          },
+          {
+            "heading": "Merek global dan ruang bergaya",
+            "paragraphs": [
+              "M Stand dari Shanghai resmi hadir di Jakarta melalui F&B ID, menawarkan gaya modern dengan fokus spesialti, inovasi rasa, dan desain ruang [2]. Liputan lain menegaskan bahwa merek ini diboyong oleh Grup Kawan Lama [3]. Dalam lanskap yang sudah ramai, kurasi lokasi nongkrong seperti daftar lima kedai di kawasan Senayan memperlihatkan betapa pentingnya pengalaman ruang bagi penikmat kopi perkotaan, meski ini lebih berupa panduan gaya hidup ketimbang indikator pasar [9]. Kabar-kabar ini menambah pilihan, tetapi masih berupa kehadiran dan positioning, bukan bukti dampak komersial."
+            ]
+          },
+          {
+            "heading": "Eksperimen rasa dan opsi “lebih sehat”",
+            "paragraphs": [
+              "Di ranah rasa, media mencatat minuman kopi yang dipadukan dengan terasi fermentasi di Vietnam—eksperimen yang mencuri perhatian tanpa jaminan bakal menjadi arus utama [6]. Untuk pilihan harian, artikel kuliner menyodorkan tiga pengganti krimer, termasuk santan kental, sebagai opsi yang dinilai lebih sehat [8]. Sementara itu, perbandingan matcha vs kopi disebut tidak bisa dijawab sederhana; konteks dan kebutuhan konsumen menentukan [7]. Garis besarnya: variasi bertambah, tetapi belum ada sinyal selera baru yang dominan."
+            ]
+          }
+        ],
+        "conclusion": "Minggu ini menunjukkan kopi kian dekat ke pergerakan orang (gerobak, mobil, rest area), sementara Jakarta kembali menjadi pintu masuk merek global, dan percakapan rasa serta kesehatan tetap cair. Semuanya memperluas pilihan—namun sebagian besar masih fase pengenalan dan kurasi, belum menjadi bukti perubahan pasar.",
+        "recommendations": [
+          {
+            "audience": "Operator kedai kecil/menengah",
+            "action": "Uji format bergerak (gerobak listrik, mobil kopi) di lokasi berizin dan berlalu lintas pejalan, lalu ukur respons sederhana (traffic, repeat).",
+            "basis": "Contoh gerobak listrik Jago Coffee, area mobil kopi Banda Aceh, dan layanan rest area menunjukkan daya jangkau format non-statis [1][4][5]."
+          },
+          {
+            "audience": "Pendatang merek/konsep baru",
+            "action": "Mulai dengan menu inti yang rapi dan uji adaptasi lokal terbatas sebelum merilis kreasi ekstrem.",
+            "basis": "Masuknya M Stand menekankan positioning gaya, sementara eksperimen kopi-terasi di Vietnam menunjukkan atensi publik belum tentu adopsi luas [2][6]."
+          },
+          {
+            "audience": "Kafe yang menonjolkan pilihan sehat",
+            "action": "Sediakan dan jelaskan opsi pengganti krimer (mis. santan kental) secara transparan tanpa klaim kesehatan berlebihan.",
+            "basis": "Rujukan pengganti krimer serta ulasan bahwa matcha vs kopi tidak sesederhana ‘lebih sehat’ mendukung pendekatan informatif, bukan promosi keras [8][7]."
+          }
+        ],
+        "source_urls": [
+          "https://ekbis.sindonews.com/read/1757299/34/lolos-panel-global-endeavor-jago-coffee-perluas-akses-kopi-lewat-model-gerobak-listrik-1791220207",
+          "https://koran-jakarta.com/2026-10-05/m-stand-dari-shanghai-hadir-di-jakarta-bawa-konsep-modern-coffee-lifestyle",
+          "https://lifestyle.bisnis.com/read/20261005/223/2009613/grup-kawan-lama-resmi-boyong-merek-kopi-asal-shanghai-m-stand-ke-indonesia",
+          "https://aceh.tribunnews.com/nanggroe/1047304/area-mobil-kopi-pasar-aceh-jadi-tempat-nongkrong-baru-di-banda-aceh",
+          "https://mediaindonesia.com/nusantara/940278/mengintip-fasilitas-transaksi-digital-dan-kopi-turki-rest-area-tigabalata",
+          "https://www.kompas.com/food/read/2026/10/04/140028175/gabungkan-kopi-dan-terasi-minuman-baru-di-vietnam-ini-bikin-penasaran",
+          "https://www.antaranews.com/berita/5770402/matcha-vs-kopi-mana-yang-lebih-sehat-ini-perbandingannya",
+          "https://www.kompas.com/food/read/2026/10/05/073100475/3-pengganti-krimer-kopi-yang-lebih-sehat-bisa-pakai-santan-kental",
+          "https://food.detik.com/resto-dan-kafe/d-8677618/5-coffee-shop-di-senayan-yang-seru-buat-nongkrong-kopinya-enak"
+        ],
+        "evidence_note": "Sebagian sumber berupa pengumuman dan liputan gaya hidup singkat, jadi informasinya deskriptif tanpa metrik kinerja pasar."
+      },
+      "article_en": {
+        "title": "Coffee Shops, Consumption & Lifestyle: Mobility, New Brands, and Flavor Experiments",
+        "summary": "Three Jago Coffee founders were named Endeavor Entrepreneur Indonesia numbers 117–119, highlighting an electric cart model to widen coffee access [1]. At the same time, Shanghai’s M Stand officially opened in Jakarta via F&B ID and was brought in by Kawan Lama Group [2][3], while drinking spots ranged from a coffee-car hangout in Banda Aceh to a rest area offering Turkish coffee and digital payments [4][5]. Other coverage broadened the picture: a coffee-with-fermented-shrimp-paste experiment in Vietnam, creamer substitutes, and a nuanced take on matcha vs coffee [6][8][7].",
+        "lead": "M Stand’s arrival reinforces Jakarta as a stage for design-forward coffee, promising specialty profiles, flavor tweaks, and curated spaces [2], while a Simalungun rest area features Turkish coffee brewed with Fine Robusta Temanggung and supports digital transactions [5]. Banda Aceh’s new coffee-car zone adds another example of flexible service formats [4].",
+        "sections": [
+          {
+            "heading": "Mobile formats and new consumption nodes",
+            "paragraphs": [
+              "Endeavor’s recognition of Jago Coffee comes alongside a focus on electric coffee carts as a way to bring daily coffee closer to consumers [1]. Beyond big cities, Banda Aceh organized a coffee-car area as a new hangout, showing how vehicles can serve as both counter and meeting point [4]. On the road, the Tigabalata Rest Area offers Turkish coffee, uses Fine Robusta Temanggung beans, and enables digital payments—a mix that underlines flexibility in both service and settlement [5]. The throughline: coffee moving to where people are, not only waiting behind a fixed bar."
+            ]
+          },
+          {
+            "heading": "Global brands and designed spaces",
+            "paragraphs": [
+              "Shanghai’s M Stand is now in Jakarta via F&B ID, with a modern lifestyle pitch around specialty coffee, flavor innovation, and space design [2]. Separate coverage notes the brand was brought in by Kawan Lama Group [3]. In a crowded landscape, curated lists like five Senayan shops underscore the importance of the on-site experience for urban drinkers, though these reads are lifestyle guides rather than market indicators [9]. These headlines add choice and positioning, not proof of commercial impact."
+            ]
+          },
+          {
+            "heading": "Flavor experiments and ‘healthier’ options",
+            "paragraphs": [
+              "On the flavor front, reporters flagged a Vietnamese drink that combines coffee with fermented shrimp paste—an attention-grabber, not necessarily a mainstream turn [6]. For everyday choices, a food piece suggested three creamer substitutes, including thick coconut milk, as potentially healthier options [8]. Meanwhile, the matcha vs coffee debate isn’t a simple yes/no; it depends on context and consumer needs [7]. The gist: more variety on offer, without evidence of a dominant shift in taste."
+            ]
+          }
+        ],
+        "conclusion": "This week points to coffee meeting people in motion (carts, cars, rest areas), Jakarta welcoming another global brand, and ongoing conversations about flavor and health. The net effect is more options—yet mostly at the introduction and curation stage, not evidence of market change.",
+        "recommendations": [
+          {
+            "audience": "Small/mid-size operators",
+            "action": "Pilot mobile formats (electric carts, coffee cars) in permitted, high-footfall spots and track simple signals like traffic and repeats.",
+            "basis": "Electric-cart focus, a coffee-car zone, and rest-area service show the reach of non-static formats [1][4][5]."
+          },
+          {
+            "audience": "New brand/concept entrants",
+            "action": "Lead with a tight core menu and run limited local adaptations before rolling out extreme creations.",
+            "basis": "M Stand’s positioning is style-led, while the coffee–shrimp paste story shows attention doesn’t equal broad adoption [2][6]."
+          },
+          {
+            "audience": "Cafes emphasizing health-minded choices",
+            "action": "Offer and clearly label creamer alternatives (e.g., thick coconut milk) without overstated health claims.",
+            "basis": "Cremer-substitute coverage and the nuanced matcha vs coffee comparison support an informative—not hypey—approach [8][7]."
+          }
+        ],
+        "source_urls": [
+          "https://ekbis.sindonews.com/read/1757299/34/lolos-panel-global-endeavor-jago-coffee-perluas-akses-kopi-lewat-model-gerobak-listrik-1791220207",
+          "https://koran-jakarta.com/2026-10-05/m-stand-dari-shanghai-hadir-di-jakarta-bawa-konsep-modern-coffee-lifestyle",
+          "https://lifestyle.bisnis.com/read/20261005/223/2009613/grup-kawan-lama-resmi-boyong-merek-kopi-asal-shanghai-m-stand-ke-indonesia",
+          "https://aceh.tribunnews.com/nanggroe/1047304/area-mobil-kopi-pasar-aceh-jadi-tempat-nongkrong-baru-di-banda-aceh",
+          "https://mediaindonesia.com/nusantara/940278/mengintip-fasilitas-transaksi-digital-dan-kopi-turki-rest-area-tigabalata",
+          "https://www.kompas.com/food/read/2026/10/04/140028175/gabungkan-kopi-dan-terasi-minuman-baru-di-vietnam-ini-bikin-penasaran",
+          "https://www.antaranews.com/berita/5770402/matcha-vs-kopi-mana-yang-lebih-sehat-ini-perbandingannya",
+          "https://www.kompas.com/food/read/2026/10/05/073100475/3-pengganti-krimer-kopi-yang-lebih-sehat-bisa-pakai-santan-kental",
+          "https://food.detik.com/resto-dan-kafe/d-8677618/5-coffee-shop-di-senayan-yang-seru-buat-nongkrong-kopinya-enak"
+        ],
+        "evidence_note": "Several sources are announcements and brief lifestyle pieces, so they describe presence and options rather than market performance metrics."
+      },
+      "input_sources": [
+        {
+          "id": "1",
+          "url": "https://ekbis.sindonews.com/read/1757299/34/lolos-panel-global-endeavor-jago-coffee-perluas-akses-kopi-lewat-model-gerobak-listrik-1791220207",
+          "title": "Lolos Panel Global Endeavor, Jago Coffee Perluas Akses Kopi lewat Model Gerobak Listrik",
+          "source": "Sindonews",
+          "published_at": "2026-10-05 12:58:07"
+        },
+        {
+          "id": "2",
+          "url": "https://koran-jakarta.com/2026-10-05/m-stand-dari-shanghai-hadir-di-jakarta-bawa-konsep-modern-coffee-lifestyle",
+          "title": "M Stand dari Shanghai Hadir di Jakarta, Bawa Konsep Modern Coffee Lifestyle - Koran Jakarta ®",
+          "source": "Koran Jakarta ®",
+          "published_at": "Mon, 05 Oct 2026 04:58:00 GMT"
+        },
+        {
+          "id": "3",
+          "url": "https://www.kompas.com/tren/read/2026/10/05/103000365/kafe-di-vietnam-ciptakan-kopi-dengan-pasta-udang-dan-taburan-tuna-kering",
+          "title": "Kafe di Vietnam Ciptakan Kopi dengan Pasta Udang dan Taburan Tuna Kering, seperti Apa?",
+          "source": "Kompas.com",
+          "published_at": "2026-10-05 03:30:00"
+        },
+        {
+          "id": "4",
+          "url": "https://www.kompas.com/food/read/2026/10/05/073100475/3-pengganti-krimer-kopi-yang-lebih-sehat-bisa-pakai-santan-kental",
+          "title": "3 Pengganti Krimer Kopi yang Lebih Sehat, Bisa Pakai Santan Kental",
+          "source": "Kompas.com",
+          "published_at": "2026-10-05 00:31:00"
+        },
+        {
+          "id": "5",
+          "url": "https://www.kompas.com/tren/read/2026/10/05/060000365/minum-kopi-decaf-ternyata-bisa-tingkatkan-daya-ingat-ini-temuan-peneliti",
+          "title": "Minum Kopi Decaf Ternyata Bisa Tingkatkan Daya Ingat, Ini Temuan Peneliti",
+          "source": "Kompas.com",
+          "published_at": "2026-10-04 23:00:00"
+        },
+        {
+          "id": "6",
+          "url": "https://lifestyle.bisnis.com/read/20261005/223/2009613/grup-kawan-lama-resmi-boyong-merek-kopi-asal-shanghai-m-stand-ke-indonesia",
+          "title": "Grup Kawan Lama Resmi Boyong Merek Kopi asal Shanghai, M Stand ke Indonesia - Bisnis Style",
+          "source": "Bisnis Style",
+          "published_at": "Sun, 04 Oct 2026 19:10:02 GMT"
+        },
+        {
+          "id": "7",
+          "url": "https://aceh.tribunnews.com/nanggroe/1047304/area-mobil-kopi-pasar-aceh-jadi-tempat-nongkrong-baru-di-banda-aceh",
+          "title": "Area Mobil Kopi Pasar Aceh Jadi Tempat Nongkrong Baru di Banda Aceh",
+          "source": "Serambinews.com",
+          "published_at": "2026-10-04 14:33:03"
+        },
+        {
+          "id": "8",
+          "url": "https://www.kompas.com/food/read/2026/10/04/140028175/gabungkan-kopi-dan-terasi-minuman-baru-di-vietnam-ini-bikin-penasaran",
+          "title": "Gabungkan Kopi dan Terasi, Minuman Baru di Vietnam Ini Bikin Penasaran",
+          "source": "Kompas.com",
+          "published_at": "2026-10-04 07:00:28"
+        },
+        {
+          "id": "9",
+          "url": "https://www.antaranews.com/berita/5770402/matcha-vs-kopi-mana-yang-lebih-sehat-ini-perbandingannya",
+          "title": "Matcha vs kopi, mana yang lebih sehat? Ini perbandingannya",
+          "source": "Antara News",
+          "published_at": "2026-10-04 02:50:34"
+        },
+        {
+          "id": "10",
+          "url": "https://mediaindonesia.com/nusantara/940278/mengintip-fasilitas-transaksi-digital-dan-kopi-turki-rest-area-tigabalata",
+          "title": "Mengintip Fasilitas Transaksi Digital dan Kopi Turki Rest Area Tigabalata",
+          "source": "Mediaindonesia",
+          "published_at": "2026-10-03 13:28:00"
+        },
+        {
+          "id": "11",
+          "url": "https://rri.co.id/banda-aceh/ekonomi/bisnis/2757913/menyesap-kopi-mont-blanc-merangkai-kemitraan-panjang-rri-dan-portola-grand-arabia",
+          "title": "Menyesap Kopi Mont Blanc, Merangkai Kemitraan Panjang RRI dan Portola Grand Arabia - RRI.co.id",
+          "source": "RRI.co.id",
+          "published_at": "Fri, 25 Sep 2026 00:48:00 GMT"
+        },
+        {
+          "id": "12",
+          "url": "https://food.detik.com/resto-dan-kafe/d-8677618/5-coffee-shop-di-senayan-yang-seru-buat-nongkrong-kopinya-enak",
+          "title": "5 Coffee Shop di Senayan yang Seru Buat Nongkrong, Kopinya Enak! - food.detik.com",
+          "source": "food.detik.com",
+          "published_at": "Fri, 25 Sep 2026 00:00:04 GMT"
+        }
+      ]
+    },
+    {
+      "cluster_id": "event-kompetisi",
+      "cluster_name": "Event & Kompetisi",
+      "period_days": 30,
+      "generated_at": "2026-10-06T04:52:56.062Z",
+      "status": "ai_generated",
+      "fingerprint": "a4d5d80e06c9cbe8d839c5d2783d6a0a3112bedbd201f6916cc942c2bc5d0d73",
+      "article": {
+        "title": "Event Kopi, Awal Oktober 2026: Festival Lokal, Dorongan Ekspor, dan Aktivasi Lintas Industri",
+        "summary": "Sekitar 150 pelajar SMK di Tangerang mengikuti seminar bertema kopi “Secangkir Kopi Sejuta Mimpi” yang dikemas sebagai edukasi keselamatan berkendara [1]. Di saat yang sama, festival, pameran pemerintah daerah, hingga perayaan Hari Kopi Internasional di Roma menunjukkan panggung kopi hadir lintas format dan lokasi [2][3][5]. Polanya: sorotan asal biji di festival, ajakan peningkatan mutu dan ekspor di daerah, serta kolaborasi merek di luar skena kopi [4][6][7].",
+        "lead": "Di Depok, media lokal melaporkan Arabika Garut Yellow Bourbon menjadi produk paling diburu di stan Warung Biji pada Detos Coffee & Snack Festival 2026 [4], sementara FCE 2026 di NTT menekankan peningkatan kualitas dan pembukaan peluang ekspor bagi pelaku kopi setempat [2][3]. Di Roma, perayaan Hari Kopi Internasional menghadirkan sesi Coffee Tasting dengan stan Republik Dominika [5], dan Jawa Tengah menggelar pameran virtual arsip perjalanan kopi di wilayahnya [6].",
+        "sections": [
+          {
+            "heading": "Festival dan sorotan asal",
+            "paragraphs": [
+              "Di Detos Coffee & Snack Festival 2026, Stapo.id menulis bahwa Arabika Garut Yellow Bourbon menjadi primadona di stan Warung Biji, khususnya di ranah seduhan manual [4]. Ini menunjukkan bagaimana festival lokal kerap menjadi etalase asal-usul biji yang spesifik. Di luar negeri, perayaan Hari Kopi Internasional 2026 di Roma menampilkan Coffee Tasting Experience dengan kehadiran stan Republik Dominika, menegaskan peran ajang icip-icip sebagai panggung promosi origin [5]."
+            ]
+          },
+          {
+            "heading": "Program daerah dan arah ekspor",
+            "paragraphs": [
+              "Di Nusa Tenggara Timur, FCE 2026 disebut sebagai momentum UMKM memperluas pasar kopi dan produk olahan [2]. Pada hari ketiga, penggiat kopi diajak meningkatkan kualitas dan membuka peluang ekspor—sebuah dorongan normatif yang menempatkan mutu sebagai pintu ke pasar luar [3]. Di Jawa Tengah, pemerintah provinsi mengumumkan pameran virtual arsip era kolonial dan perjalanan kopi di wilayahnya, menambah konteks sejarah di balik komoditas ini [6]. Meski sifatnya lebih informatif dan seremonial, rangkaian acara ini memperlihatkan peran institusi dalam edukasi dan visi pasar, tanpa data dampak yang bisa diukur saat ini [2][3][6]."
+            ]
+          },
+          {
+            "heading": "Lintas industri dan komunitas muda",
+            "paragraphs": [
+              "Tanamera melaporkan keikutsertaannya di GAIKINDO Jakarta Auto Week (GJAW) di ICE BSD City, dengan jejak aktivasi sejak 2024 mendukung Mandiri Finance dan BYD, lalu pada 2025 terlibat di peluncuran Changan serta kolaborasi dengan Mercedes-Benz dan UPPF [7]. Ini contoh klaim brand tentang kopi hadir di pameran otomotif—kolaborasi lintas industri yang bersifat eksposur merek, bukan kompetisi [7]. Sementara itu, WMS menggelar seminar keselamatan berkendara bertema kopi untuk sekitar 150 pelajar SMK se-Tangerang, menunjukkan tema kopi dipakai sebagai pengait edukasi komunitas muda [1]."
+            ]
+          }
+        ],
+        "conclusion": "Awal Oktober 2026 memperlihatkan ekosistem event kopi yang tersebar: festival yang mengangkat asal, dorongan mutu dan ekspor dari program daerah, aktivasi di panggung non-kopi, serta agenda edukasi berbasis komunitas. Sebagian besar masih berupa showcase dan ajakan, bukan ajang yang menghasilkan indikator kinerja langsung.",
+        "recommendations": [
+          {
+            "audience": "Roastery dan pelaku UMKM kopi daerah",
+            "action": "Prioritaskan kontrol mutu lot inti dan siapkan dokumentasi kualitas (cupping note, traceability) sebagai langkah awal menjajaki peluang ekspor yang diserukan di FCE 2026.",
+            "basis": "Ajakan peningkatan kualitas dan pembukaan peluang ekspor di FCE 2026 [3]."
+          },
+          {
+            "audience": "Penyelenggara booth/brand kopi",
+            "action": "Uji kanal eksposur lintas industri (mis. pameran otomotif) dengan paket sederhana berfokus 1–2 menu signature untuk mengukur respons audiens non-komunitas kopi.",
+            "basis": "Klaim aktivasi Tanamera di GJAW 2024–2025 sebagai contoh kehadiran kopi di event otomotif [7]."
+          },
+          {
+            "audience": "Kurator festival lokal",
+            "action": "Angkat 1–2 origin spesifik sebagai sorotan program (tasting terarah atau sesi edukasi singkat) agar pengunjung pulang dengan memori rasa yang jelas.",
+            "basis": "Peliputan bahwa Garut Yellow Bourbon menjadi primadona di stan Warung Biji pada festival Depok [4]."
+          }
+        ],
+        "source_urls": [
+          "https://www.motorplus-online.com/read/254418590/wms-gelar-seminar-safety-riding-secangkir-kopi-sejuta-mimpi-diramaikan-ratusan-pelajar-gen-z",
+          "https://www.detikindonesia.co.id/fce-2026-jadi-momentum-umkm-ntt-perluas-pasar-kopi-wastra-dan-produk-olahan/",
+          "https://kupang.tribunnews.com/provinsi-ntt/982088/fce-2026-hari-ketiga-penggiat-kopi-ntt-diajak-tingkatkan-kualitas-hingga-buka-peluang-ekspor",
+          "https://stapo.id/news/garut-yellow-bourbon-jadi-primadona",
+          "https://antaranews.com/berita/5767883/potret-perayaan-hari-kopi-internasional-di-roma",
+          "https://jatengprov.go.id/publik/membaca-memori-masa-lalu-pameran-virtual-arsip-era-kolonial-dan-perjalanan-kopi-di-jawa-tengah/",
+          "https://www.tanameracoffee.co.id/news/rfbgao4rsu"
+        ],
+        "evidence_note": "Sebagian besar sumber adalah pengumuman/peliputan singkat tanpa data outcome (penjualan, jumlah pengunjung), dan beberapa informasi berasal dari klaim perusahaan, sehingga dampak tidak bisa disimpulkan."
+      },
+      "article_en": {
+        "title": "Coffee Events, Early October 2026: Local Festivals, Export Push, and Cross‑Industry Activations",
+        "summary": "About 150 vocational students in Tangerang attended a coffee‑themed “Secangkir Kopi Sejuta Mimpi” safety‑riding seminar [1]. At the same time, festivals, regional government showcases, and an International Coffee Day tasting in Rome show coffee appearing across formats and locations [2][3][5]. Clear patterns: origin‑driven highlights at festivals, quality/export messaging in the regions, and brand collaborations beyond coffee’s usual stage [4][6][7].",
+        "lead": "In Depok, a local outlet reported Arabica Garut Yellow Bourbon as the most sought‑after offering at Warung Biji’s booth during the 2026 Detos Coffee & Snack Festival [4], while FCE 2026 in East Nusa Tenggara emphasized quality upgrades and opening export avenues for local players [2][3]. In Rome, International Coffee Day featured a Coffee Tasting Experience with a Dominican Republic stand [5], and Central Java launched a virtual archive exhibition on the region’s coffee history [6].",
+        "sections": [
+          {
+            "heading": "Festivals and origin spotlights",
+            "paragraphs": [
+              "At the 2026 Detos Coffee & Snack Festival, Stapo.id reported Arabica Garut Yellow Bourbon as a crowd favorite at Warung Biji’s booth, especially for manual brews [4]. This underscores how local festivals often spotlight specific origins. Abroad, the 2026 International Coffee Day in Rome hosted a Coffee Tasting Experience with a Dominican Republic stand, reinforcing tastings as an origin showcase [5]."
+            ]
+          },
+          {
+            "heading": "Regional programs and the export drumbeat",
+            "paragraphs": [
+              "In East Nusa Tenggara, FCE 2026 was framed as a momentum for MSMEs to widen markets for coffee and processed products [2]. On day three, participants were urged to focus on quality and explore export opportunities—a normative push that positions quality as a gateway to overseas markets [3]. In Central Java, the provincial government announced a virtual archive exhibition on the colonial era and the region’s coffee journey, adding historical context to today’s commodity [6]. These are largely informational and ceremonial steps, without measurable outcomes yet [2][3][6]."
+            ]
+          },
+          {
+            "heading": "Cross‑industry and youth engagement",
+            "paragraphs": [
+              "Tanamera reported its presence at GAIKINDO Jakarta Auto Week (GJAW) at ICE BSD City, tracing activations back to 2024 supporting Mandiri Finance and BYD, then joining Changan’s 2025 launch and collaborating with Mercedes‑Benz and UPPF [7]. This is a brand claim illustrating coffee’s presence at auto shows—cross‑industry exposure rather than competition [7]. Meanwhile, WMS ran a coffee‑themed safety‑riding seminar for around 150 vocational students in Tangerang, showing coffee used as a hook for youth‑focused education [1]."
+            ]
+          }
+        ],
+        "conclusion": "Early October 2026 shows a dispersed coffee‑event ecosystem: festivals elevating origins, regional programs pushing quality and export, non‑coffee stages for brand exposure, and community‑based education. Most items are showcases and calls to action, not events with immediate performance metrics.",
+        "recommendations": [
+          {
+            "audience": "Roasteries and regional MSMEs",
+            "action": "Prioritize QC on core lots and prepare quality documentation (cupping notes, traceability) as a first step toward export conversations echoed at FCE 2026.",
+            "basis": "Calls to improve quality and open export avenues at FCE 2026 [3]."
+          },
+          {
+            "audience": "Booth operators/coffee brands",
+            "action": "Test cross‑industry exposure (e.g., auto shows) with a lean menu of 1–2 signature drinks to gauge responses from non‑coffee audiences.",
+            "basis": "Tanamera’s reported activations at GJAW 2024–2025 as examples of coffee at automotive events [7]."
+          },
+          {
+            "audience": "Local festival curators",
+            "action": "Feature 1–2 specific origins as program highlights (guided tastings or short briefings) so visitors leave with a clear flavor memory.",
+            "basis": "Coverage that Garut Yellow Bourbon was a favorite at a Depok festival booth [4]."
+          }
+        ],
+        "source_urls": [
+          "https://www.motorplus-online.com/read/254418590/wms-gelar-seminar-safety-riding-secangkir-kopi-sejuta-mimpi-diramaikan-ratusan-pelajar-gen-z",
+          "https://www.detikindonesia.co.id/fce-2026-jadi-momentum-umkm-ntt-perluas-pasar-kopi-wastra-dan-produk-olahan/",
+          "https://kupang.tribunnews.com/provinsi-ntt/982088/fce-2026-hari-ketiga-penggiat-kopi-ntt-diajak-tingkatkan-kualitas-hingga-buka-peluang-ekspor",
+          "https://stapo.id/news/garut-yellow-bourbon-jadi-primadona",
+          "https://antaranews.com/berita/5767883/potret-perayaan-hari-kopi-internasional-di-roma",
+          "https://jatengprov.go.id/publik/membaca-memori-masa-lalu-pameran-virtual-arsip-era-kolonial-dan-perjalanan-kopi-di-jawa-tengah/",
+          "https://www.tanameracoffee.co.id/news/rfbgao4rsu"
+        ],
+        "evidence_note": "Most sources are brief announcements/photo posts without outcome data, and some details come from company claims, so impact cannot be inferred."
+      },
+      "input_sources": [
+        {
+          "id": "1",
+          "url": "https://www.motorplus-online.com/read/254418590/wms-gelar-seminar-safety-riding-secangkir-kopi-sejuta-mimpi-diramaikan-ratusan-pelajar-gen-z",
+          "title": "WMS Gelar Seminar Safety Riding ‘Secangkir Kopi Sejuta Mimpi’, Diramaikan Ratusan Pelajar Gen Z",
+          "source": "Motorplus-online",
+          "published_at": "2026-10-05 09:16:35"
+        },
+        {
+          "id": "2",
+          "url": "https://www.detikindonesia.co.id/fce-2026-jadi-momentum-umkm-ntt-perluas-pasar-kopi-wastra-dan-produk-olahan/",
+          "title": "FCE 2026 Jadi Momentum UMKM NTT Perluas Pasar Kopi, Wastra, dan Produk Olahan - detikindonesia.co.id",
+          "source": "detikindonesia.co.id",
+          "published_at": "Mon, 05 Oct 2026 08:29:00 GMT"
+        },
+        {
+          "id": "3",
+          "url": "https://kupang.tribunnews.com/provinsi-ntt/982088/fce-2026-hari-ketiga-penggiat-kopi-ntt-diajak-tingkatkan-kualitas-hingga-buka-peluang-ekspor",
+          "title": "FCE 2026 Hari Ketiga, Penggiat Kopi NTT Diajak Tingkatkan Kualitas hingga Buka Peluang Ekspor",
+          "source": "Tribun News",
+          "published_at": "2026-10-04 07:44:57"
+        },
+        {
+          "id": "4",
+          "url": "https://stapo.id/news/garut-yellow-bourbon-jadi-primadona",
+          "title": "Garut Yellow Bourbon Jadi Primadona Warung Biji di Detos Coffee & Snack Festival 2026 - Stapo.id",
+          "source": "stapo.id",
+          "published_at": "2026-10-01T00:00:00.000Z"
+        },
+        {
+          "id": "5",
+          "url": "https://antaranews.com/berita/5767883/potret-perayaan-hari-kopi-internasional-di-roma",
+          "title": "Potret perayaan Hari Kopi Internasional di Roma",
+          "source": "antaranews.com",
+          "published_at": "2026-10-01T00:00:00.000Z"
+        },
+        {
+          "id": "6",
+          "url": "https://jatengprov.go.id/publik/membaca-memori-masa-lalu-pameran-virtual-arsip-era-kolonial-dan-perjalanan-kopi-di-jawa-tengah/",
+          "title": "Membaca Memori Masa Lalu, Pameran Virtual Arsip Era Kolonial dan Perjalanan Kopi di Jawa Tengah - Pemerintah Provinsi Jawa Tengah",
+          "source": "Pemerintah Provinsi Jawa Tengah",
+          "published_at": "Wed, 23 Sep 2026 09:38:29 GMT"
+        },
+        {
+          "id": "7",
+          "url": "https://www.tanameracoffee.co.id/news/rfbgao4rsu",
+          "title": "Tanamera Coffee at GJAW",
+          "source": "Tanamera",
+          "published_at": "2026-09-19"
+        }
+      ]
+    },
     {
       "cluster_id": "kedai-konsumsi-gaya-hidup",
       "cluster_name": "Kedai, Konsumsi & Gaya Hidup",
