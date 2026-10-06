@@ -1,6 +1,36 @@
 {
   "artikel": [
     {
+      "judul": "Mengintip Peluang Usaha Toko Biji Kopi Nusantara - investor.id",
+      "tautan": "https://investor.id/money-lab/456913/mengintip-peluang-usaha-toko-biji-kopi-nusantara",
+      "tanggal": "Tue, 06 Oct 2026 13:16:38 GMT",
+      "sumber": "investor.id",
+      "asal": "google_news",
+      "aggregator": "Google News",
+      "link_type": "publisher_article",
+      "resolution_status": "resolved",
+      "tautan_google_news": "https://news.google.com/rss/articles/CBMijgFBVV95cUxPamxhT3JSQU5xdlhzbVBHMi1QWjZqbnc3QzBDc0xRVkZnUEF1aWx1ajE2RW1tYzhRSHRMZWg4NGRJdWd1RU1DaWlZVTNaNU1GVWNsY1cxN2lBMW1VWFFocjRsbXQ0RTh2VGJGRUZqRm5aRUF0WkJvT2piVlNVRWJza0xVaDVwUkRvbzlhUTBB?oc=5",
+      "extraction_status": "http_error",
+      "extracted_at": "2026-10-06T13:48:19Z",
+      "fetch_error": "HTTP 403",
+      "retry_after": "2026-10-13T13:48:19Z",
+      "date_enrichment_version": 6,
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_ai_reviewed_at": "2026-10-06T13:48:21.362Z",
+      "cluster_review_version": 7,
+      "cluster_review_context_hash": "c4c84fc975aef5a41c06039d96cee6a20fd4c0d90d02c9f05c3c080ddd63dca1",
+      "cluster_relevance_review": {
+        "relevance": "uncertain",
+        "title_context_match": "unclear",
+        "suggested_cluster_id": "",
+        "reason": "Cuplikan isi terlalu terbatas untuk menyimpulkan relevansi; editor perlu membuka sumber asli.",
+        "evidence": "\"Mengintip Peluang Usaha Toko Biji Kopi Nusantara\"",
+        "reviewed_at": "2026-10-06T13:48:21.362Z"
+      }
+    },
+    {
       "judul": "Rayakan Hari Kopi Sedunia, TOP Coffee Berikan Rasa #SerasaDiCafe ke 4 Kota dan Bagikan Lebih dari 10.000 Kopi Gratis - MetroTVNews.com",
       "tautan": "https://www.metrotvnews.com/read/kELCyjVJ-rayakan-hari-kopi-sedunia-top-coffee-berikan-rasa-serasadicafe-ke-4-kota-dan-bagikan-lebih-dari-10-000-kopi-gratis",
       "tanggal": "Tue, 06 Oct 2026 12:29:43 GMT",
@@ -19392,10 +19422,10 @@
       "cluster_ai_evidence": "\"The onset of a new El Niño event presents challenges for coffee farmers.\""
     }
   ],
-  "fetched": "2026-10-06T13:31:18.250Z",
+  "fetched": "2026-10-06T13:47:57.691Z",
   "reference_ingest": {
     "source": "KGS-blog/coffee-intelligence-engine/exports/coffee_relevant_articles.json",
-    "imported_at": "2026-10-06T13:31:41.562Z",
+    "imported_at": "2026-10-06T13:48:19.788Z",
     "source_records": 351,
     "accepted_candidates": 338,
     "dated_candidates": 304,
@@ -19410,7 +19440,7 @@
     }
   },
   "content_fetch": {
-    "last_batch_at": "2026-10-06T13:31:41Z",
+    "last_batch_at": "2026-10-06T13:48:19Z",
     "batch_size": 1,
     "batch_limit": 400,
     "purpose": "Short original-publisher context for relevance and cluster review; full article text is not stored or republished."
