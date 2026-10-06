@@ -13,8 +13,10 @@ on:
       - 'scripts/render-static-mevo-previews.js'
       - 'scripts/render-static-news.js'
       - 'scripts/generate-discovery-pages.js'
+      - 'scripts/generate-editorial-pages.js'
       - 'scripts/generate-weekly-brief.js'
       - 'scripts/import-mevo-price-data.js'
+      - 'scripts/import-ico-trade-data.js'
       - 'scripts/import-coffee-reference-articles.js'
       - 'scripts/merge-coffee-reference-articles.js'
       - 'scripts/fetch-coffee-reference-articles.py'
@@ -43,6 +45,8 @@ jobs:
           NEWSDATA_KEY: ${{ secrets.NEWSDATA_KEY }}
           USDA_API_KEY: ${{ secrets.USDA_API_KEY }}
         run: node scripts/fetch.js
+      - name: Import annual Indonesian coffee exports from ICO
+        run: node scripts/import-ico-trade-data.js
       - name: Save MEVO coffee price listings in Kabar Kopi
         run: node scripts/import-mevo-price-data.js
       - name: Fetch public price catalogues and approved or previously imported admin OCR listings

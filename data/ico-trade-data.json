@@ -1,0 +1,94 @@
+{
+  "status": "success",
+  "source": "International Coffee Organization (ICO), Coffee Trade Globe",
+  "source_url": "https://data.ico.org/globe/#m=flows&f=export&y=2025&c=ID",
+  "api_endpoint": "https://data.ico.org/globe/api/v1/globe/bundle?year=2025",
+  "fetched_at": "2026-10-06T20:05:23.761Z",
+  "api_generated_at": "2026-10-01T00:00:53.421Z",
+  "trade_window_through": "2026-08",
+  "year": 2025,
+  "geography": "Indonesia",
+  "units": {
+    "volume": "60-kg bags",
+    "volume_tonnes_conversion": "one 60-kg bag = 0.06 metric tonnes",
+    "value": "USD customs value"
+  },
+  "exports": {
+    "bags_60kg": 11043071,
+    "tonnes": 662584.26,
+    "value_usd": 3084771085
+  },
+  "top_destinations": [
+    {
+      "iso2": "PH",
+      "name": "Philippines",
+      "name_id": "Filipina",
+      "bags_60kg": 1132834,
+      "tonnes": 67970.04
+    },
+    {
+      "iso2": "US",
+      "name": "United States of America",
+      "name_id": "Amerika Serikat",
+      "bags_60kg": 626621,
+      "tonnes": 37597.26
+    },
+    {
+      "iso2": "BE",
+      "name": "Belgium",
+      "name_id": "Belgia",
+      "bags_60kg": 602537,
+      "tonnes": 36152.22
+    },
+    {
+      "iso2": "EG",
+      "name": "Egypt",
+      "name_id": "Mesir",
+      "bags_60kg": 334717,
+      "tonnes": 20083.02
+    },
+    {
+      "iso2": "MY",
+      "name": "Malaysia",
+      "name_id": "Malaysia",
+      "bags_60kg": 274278,
+      "tonnes": 16456.68
+    },
+    {
+      "iso2": "DZ",
+      "name": "Algeria",
+      "name_id": "Aljazair",
+      "bags_60kg": 243295,
+      "tonnes": 14597.699999999999
+    },
+    {
+      "iso2": "DE",
+      "name": "Germany",
+      "name_id": "Jerman",
+      "bags_60kg": 206690,
+      "tonnes": 12401.4
+    },
+    {
+      "iso2": "GB",
+      "name": "United Kingdom",
+      "name_id": "Britania Raya",
+      "bags_60kg": 196442,
+      "tonnes": 11786.52
+    },
+    {
+      "iso2": "RU",
+      "name": "Russian Federation",
+      "name_id": "Rusia",
+      "bags_60kg": 179314,
+      "tonnes": 10758.84
+    },
+    {
+      "iso2": "IN",
+      "name": "India",
+      "name_id": "India",
+      "bags_60kg": 172636,
+      "tonnes": 10358.16
+    }
+  ],
+  "notes": "Annual calendar-year trade totals and destination partner rankings as provided by ICO. Destination rankings are based on export volume. Kept separate from BPS figures because source coverage, classification, and compilation methods may differ."
+}
