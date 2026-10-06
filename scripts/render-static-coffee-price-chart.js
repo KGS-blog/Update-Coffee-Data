@@ -41,9 +41,19 @@ const median = values => {
   return sorted.length ? (sorted.length % 2 ? sorted[middle] : (sorted[middle - 1] + sorted[middle]) / 2) : null;
 };
 const formatIdr = value => `Rp${new Intl.NumberFormat('id-ID', { maximumFractionDigits: 0 }).format(value)}`;
-const chart = (rows, prefix) => {
+const displayPeriod = period => {
+  const match = /^(Q[1-4])\s+(\d{4})$/.exec(period);
+  return match ? `${match[2]} · ${match[1]}` : period;
+};
+const processLabel = (value, language) => {
+  if (value === 'Tidak disebut' || !value) return language === 'id' ? 'Proses tidak disebut' : 'Process not specified';
+  if (value === 'Fermentasi khusus') return language === 'id' ? value : 'Special fermentation';
+  return value;
+};
+const processChart = (rows, process, form, index) => {
+  const rowsForProcess = rows.filter(row => (row.process || 'Tidak disebut') === process);
   const points = Object.fromEntries(types.map(type => [type, periods.map(period => {
-    const observations = rows.filter(row => row.type === type && row.period === period);
+    const observations = rowsForProcess.filter(row => row.type === type && row.period === period);
     return { period, median: median(observations.map(row => Number(row.price_per_kg))), count: observations.length };
   })]));
   const allPrices = Object.values(points).flat().map(point => point.median).filter(Number.isFinite);
@@ -62,12 +72,18 @@ const chart = (rows, prefix) => {
     const cls = type === 'Arabika' ? 'arabica' : 'robusta';
     const pathD = present.map((point, i) => `${i ? 'L' : 'M'} ${x(point.period)} ${y(point.median)}`).join(' ');
     const path = present.length > 1 ? `<path class="${cls}" d="${pathD}"/>` : '';
-    const dots = present.map(point => `<circle class="point ${cls}-point" cx="${x(point.period)}" cy="${y(point.median)}" r="5"><title>${esc(type)} · ${esc(point.period)} · ${formatIdr(point.median)} · ${point.count} listings</title></circle>`).join('');
+    const dots = present.map(point => `<circle class="point ${cls}-point" cx="${x(point.period)}" cy="${y(point.median)}" r="5"><title>${esc(type)} · ${esc(displayPeriod(point.period))} · ${formatIdr(point.median)} · ${point.count} listings</title></circle>`).join('');
     return `${path}${dots}`;
   }).join('');
-  const periodLabels = periods.map(period => `<text x="${x(period)}" y="${height-14}" text-anchor="middle">${esc(period)}</text>`).join('');
-  const table = `<div class="price-table-scroll"><table class="price-period-table"><thead><tr><th><span class="id-copy">Periode</span><span class="en-copy">Period</span></th><th><span class="id-copy">Arabika · median/kg</span><span class="en-copy">Arabica · median/kg</span></th><th><span class="id-copy">Jumlah listing</span><span class="en-copy">Listings recorded</span></th><th>Robusta · median/kg</th><th><span class="id-copy">Jumlah listing</span><span class="en-copy">Listings recorded</span></th></tr></thead><tbody>${periods.map(period => { const a = points.Arabika.find(p => p.period === period), r = points.Robusta.find(p => p.period === period); return `<tr><th scope="row">${esc(period)}</th><td>${a.median === null ? '—' : formatIdr(a.median)}</td><td class="count">${a.count.toLocaleString('id-ID')}</td><td>${r.median === null ? '—' : formatIdr(r.median)}</td><td class="count">${r.count.toLocaleString('id-ID')}</td></tr>`; }).join('')}</tbody></table></div>`;
-  return `<section class="price-form-panel" aria-labelledby="${prefix}-heading"><h3 id="${prefix}-heading"><span class="id-copy">${prefix === 'green' ? 'Biji hijau (green bean)' : 'Biji sangrai (roasted beans)'}</span><span class="en-copy">${prefix === 'green' ? 'Green beans' : 'Roasted beans'}</span></h3><div class="price-legend"><span><i class="arabica-key"></i><span class="id-copy">Arabika</span><span class="en-copy">Arabica</span></span><span><i class="robusta-key"></i>Robusta</span></div><div class="price-chart-wrap"><svg class="price-chart" viewBox="0 0 ${width} ${height}" role="img" aria-labelledby="${prefix}-chart-title ${prefix}-chart-desc"><title id="${prefix}-chart-title">${prefix === 'green' ? 'Green bean' : 'Roasted coffee'} median listing price per kg by quarter</title><desc id="${prefix}-chart-desc">IDR median prices per kilogram, with Arabica and Robusta shown separately. Only product listings explicitly identifying this form are included.</desc>${horizontalGrid}${lines}${periodLabels}</svg></div>${table}<p class="price-count-note"><span class="id-copy">Hanya listing yang nama produknya menyebut bentuk ini yang dihitung.</span><span class="en-copy">Only listings whose product name identifies this form are included.</span></p></section>`;
+  const periodLabels = periods.map(period => `<text x="${x(period)}" y="${height-14}" text-anchor="middle">${esc(displayPeriod(period))}</text>`).join('');
+  const table = `<div class="price-table-scroll"><table class="price-period-table"><thead><tr><th><span class="id-copy">Periode</span><span class="en-copy">Period</span></th><th><span class="id-copy">Arabika · median/kg</span><span class="en-copy">Arabica · median/kg</span></th><th><span class="id-copy">Jumlah listing</span><span class="en-copy">Listings recorded</span></th><th>Robusta · median/kg</th><th><span class="id-copy">Jumlah listing</span><span class="en-copy">Listings recorded</span></th></tr></thead><tbody>${periods.map(period => { const a = points.Arabika.find(p => p.period === period), r = points.Robusta.find(p => p.period === period); return `<tr><th scope="row">${esc(displayPeriod(period))}</th><td>${a.median === null ? '—' : formatIdr(a.median)}</td><td class="count">${a.count.toLocaleString('id-ID')}</td><td>${r.median === null ? '—' : formatIdr(r.median)}</td><td class="count">${r.count.toLocaleString('id-ID')}</td></tr>`; }).join('')}</tbody></table></div>`;
+  const id = `${form}-process-${index}`;
+  return `<details class="price-process-panel" ${index === 0 ? 'open' : ''}><summary><span class="id-copy">${esc(processLabel(process, 'id'))}</span><span class="en-copy">${esc(processLabel(process, 'en'))}</span><span class="price-process-count">${rowsForProcess.length.toLocaleString('id-ID')} listing</span></summary><div class="price-legend"><span><i class="arabica-key"></i><span class="id-copy">Arabika</span><span class="en-copy">Arabica</span></span><span><i class="robusta-key"></i>Robusta</span></div><div class="price-chart-wrap"><svg class="price-chart" viewBox="0 0 ${width} ${height}" role="img" aria-labelledby="${id}-title ${id}-desc"><title id="${id}-title">${esc(processLabel(process, 'en'))}: ${form === 'green' ? 'green bean' : 'roasted bean'} median price by year and quarter</title><desc id="${id}-desc">IDR median listings per kilogram for Arabica and Robusta; product form and processing method are kept separate.</desc>${horizontalGrid}${lines}${periodLabels}</svg></div>${table}</details>`;
+};
+const chart = (rows, form) => {
+  const processes = [...new Set(rows.map(row => row.process || 'Tidak disebut'))].sort((a, b) => a.localeCompare(b));
+  const processGroups = processes.map((process, index) => processChart(rows, process, form, index)).join('');
+  return `<section class="price-form-panel" aria-labelledby="${form}-heading"><h3 id="${form}-heading"><span class="id-copy">${form === 'green' ? 'Biji hijau (green bean)' : 'Biji sangrai (roasted beans)'}</span><span class="en-copy">${form === 'green' ? 'Green beans' : 'Roasted beans'}</span></h3>${processGroups}<p class="price-count-note"><span class="id-copy">Setiap metode proses dan kategori “tidak disebut” dihitung terpisah; grafik tidak menggabungkan proses berbeda.</span><span class="en-copy">Each processing method and the “not specified” category is calculated separately; charts do not combine different processes.</span></p></section>`;
 };
 const chartHtml = `<div class="price-form-grid">${chart(formRows.green, 'green')}${chart(formRows.roasted, 'roasted')}</div><p class="price-form-coverage"><span class="id-copy"><strong>Cakupan bentuk:</strong> ${formRows.green.length.toLocaleString('id-ID')} listing biji hijau · ${formRows.roasted.length.toLocaleString('id-ID')} listing biji sangrai · ${(idr.length - formRows.green.length - formRows.roasted.length).toLocaleString('id-ID')} listing tidak masuk perbandingan bentuk karena tidak jelas atau berupa kopi bubuk.</span><span class="en-copy"><strong>Form coverage:</strong> ${formRows.green.length.toLocaleString('en-US')} green-bean listings · ${formRows.roasted.length.toLocaleString('en-US')} roasted-bean listings · ${(idr.length - formRows.green.length - formRows.roasted.length).toLocaleString('en-US')} listings are outside the form comparison because the form is unclear or the product is ground coffee.</span></p>`;
 const secureSource = value => { try { const url = new URL(String(value || '')); return url.protocol === 'https:' ? url.href : ''; } catch (_) { return ''; } };
