@@ -1,6 +1,41 @@
 {
   "artikel": [
     {
+      "judul": "M Stand Resmi Buka Gerai Pertama di PIK, Tawarkan Tren Kopi Shanghai - cantika.com",
+      "tautan": "https://www.cantika.com/read/2121013/m-stand-resmi-buka-gerai-pertama-di-pik-tawarkan-tren-kopi-shanghai",
+      "tanggal": "Tue, 06 Oct 2026 05:30:00 GMT",
+      "sumber": "cantika.com",
+      "asal": "google_news",
+      "aggregator": "Google News",
+      "link_type": "publisher_article",
+      "resolution_status": "resolved",
+      "tautan_google_news": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPbDRUbjJBMUVMQUc5TmJ5aU5jcGVvbEEzN3kwQzJuN1ljTWFnMXVGUk4zOGVJV0UyUnlZdlItWmxCSE9GRnpKXzRwaEJwaGgtMmRVQ0dLSGFBSnFjWkZXdXZITGJuemJRVW9PdkVnUUZkelNnbE1rOVl4b1pmNkwzb2s0NmxCRUh3ZjllNW1NRDBEOUdDMHpsMGlOU0tkMGUxckRoMFBEYw?oc=5",
+      "extracted_at": "2026-10-06T05:44:11Z",
+      "extracted_from_url": "https://www.cantika.com/read/2121013/m-stand-resmi-buka-gerai-pertama-di-pik-tawarkan-tren-kopi-shanghai",
+      "resolved_url": "https://www.cantika.com/read/2121013/m-stand-resmi-buka-gerai-pertama-di-pik-tawarkan-tren-kopi-shanghai",
+      "source_content_type": "text/html",
+      "http_status": 200,
+      "extraction_status": "extracted",
+      "extraction_method": "html_article_or_main",
+      "source_title": "M Stand Resmi Buka Gerai Pertama di PIK, Tawarkan Tren Kopi Shanghai",
+      "source_description": "M Stand resmi buka gerai pertama di Jakarta! Berikut rekomendasi menu kopi unik ala Shanghai seperti Butter Basque Latte hingga keunikan tempatnya.",
+      "source_authors": [],
+      "source_published_date": "2026-10-06",
+      "publication_date_precision": "day",
+      "publication_date_evidence": "2026-10-06T12:30:00+07:00",
+      "date_enrichment_version": 6,
+      "coffee_relevance_context": "Advertisement Advertisement Advertisement Beranda lifestyle M Stand Resmi Buka Gerai Pertama di PIK, Tawarkan Tren Kopi Shanghai Selasa, 6 Oktober 2026 12:30 WIB Cantika.com Reporter Bagikan PT Foods Beverages Indonesia (F&B ID), perusahaan multi-brand Food & Beverage di Indonesia bagian dari Kawan … Beverages Indonesia (F&B ID), perusahaan multi-brand Food & Beverage di Indonesia bagian dari Kawan Lama Group, resmi menghadirkan M Stand, coffee brand asal Shanghai, ke Indonesia pada Oktober 2026. Foto: Dok. F&B ID Advertisement CANTIKA.COM, Jakarta - Ada kabar gembira bagi para pecinta kopi dan hangout spot estetik. PT F … d asal Shanghai, ke Indonesia pada Oktober 2026. Foto: Dok. F&B ID Advertisement CANTIKA.COM, Jakarta - Ada kabar gembira bagi para pecinta kopi dan hangout spot estetik. PT Foods Beverages Indonesia (F&B ID), bagian dari Kawan Lama Group, memboyong M Stand, merek kopi asal Shanghai, ke Indonesia. Gerai pertamanya dibuka d",
+      "content_char_count": 4509,
+      "content_sha256": "4d1c205d0d6b01b6eb1924573fc08a5739b29971041e26648b97b81ce802ba1f",
+      "content_excerpt": "Advertisement Advertisement Advertisement Beranda lifestyle M Stand Resmi Buka Gerai Pertama di PIK, Tawarkan Tren Kopi Shanghai Selasa, 6 Oktober 2026 12:30 WIB Cantika.com Reporter Bagikan PT Foods Beverages Indonesia (F&B ID), perusahaan multi-brand Food & Beverage di Indonesia bagian dari Kawan Lama Group, resmi menghadirkan M Stand, coffee brand asal Shanghai, ke Indonesia pada Oktober 2026. Foto: Dok. F&B ID Ad",
+      "fetch_error": null,
+      "retry_after": null,
+      "published_date": "2026-10-06",
+      "cluster_id": "kedai-konsumsi-gaya-hidup",
+      "cluster_name": "Kedai, Konsumsi & Gaya Hidup",
+      "cluster_assignment": "rule_context"
+    },
+    {
       "judul": "Perkuat Branding Jember Surga Kopi, Gus Fawait Tinjau Kebun Sumberwadung Lewat Aksi Gowes dan Baksos - Nusantara News",
       "tautan": "https://nusantaranews.co/perkuat-branding-jember-surga-kopi-gus-fawait-tinjau-kebun-sumberwadung-lewat-aksi-gowes-dan-baksos",
       "tanggal": "Mon, 05 Oct 2026 22:28:00 GMT",
@@ -18960,10 +18995,10 @@
       "cluster_ai_evidence": "\"The onset of a new El Niño event presents challenges for coffee farmers.\""
     }
   ],
-  "fetched": "2026-10-06T05:39:58.136Z",
+  "fetched": "2026-10-06T05:43:56.620Z",
   "reference_ingest": {
     "source": "KGS-blog/coffee-intelligence-engine/exports/coffee_relevant_articles.json",
-    "imported_at": "2026-10-06T05:40:13.174Z",
+    "imported_at": "2026-10-06T05:44:11.143Z",
     "source_records": 351,
     "accepted_candidates": 338,
     "dated_candidates": 304,
@@ -18978,7 +19013,7 @@
     }
   },
   "content_fetch": {
-    "last_batch_at": "2026-10-06T05:30:54Z",
+    "last_batch_at": "2026-10-06T05:44:11Z",
     "batch_size": 1,
     "batch_limit": 400,
     "purpose": "Short original-publisher context for relevance and cluster review; full article text is not stored or republished."

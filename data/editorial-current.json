@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated_at": "2026-10-06T05:40:14.308Z",
-  "feed_fetched": "2026-10-06T05:39:58.136Z",
+  "generated_at": "2026-10-06T05:44:12.971Z",
+  "feed_fetched": "2026-10-06T05:43:56.620Z",
   "mode": "auto",
   "settings": {
     "version": 1,
@@ -18,203 +18,219 @@
       "cluster_id": "kedai-konsumsi-gaya-hidup",
       "cluster_name": "Kedai, Konsumsi & Gaya Hidup",
       "period_days": 30,
-      "generated_at": "2026-10-06T04:52:56.062Z",
+      "generated_at": "2026-10-06T05:44:12.971Z",
       "status": "ai_generated",
-      "fingerprint": "fdbd9fd13800d914cf548bf279fa79966b78537ec46c9deaa5d76c798b8b56a1",
+      "fingerprint": "55219d629040ba84743711e2763155b33f1715148e692670fe2065068ee9918c",
       "article": {
-        "title": "Kedai, Konsumsi & Gaya Hidup Kopi: Mobilitas, Merek Baru, dan Eksperimen Rasa",
-        "summary": "Tiga pendiri Jago Coffee menjadi Endeavor Entrepreneur Indonesia ke-117–119 sambil menyoroti model gerobak listrik untuk memperluas akses kopi [1]. Di saat yang sama, M Stand dari Shanghai resmi hadir di Jakarta melalui F&B ID dan diboyong oleh Grup Kawan Lama [2][3], sementara titik ngopi muncul dari area mobil kopi di Banda Aceh hingga rest area yang menawarkan kopi Turki dan transaksi digital [4][5]. Liputan lain menambah spektrum: eksperimen kopi-terasi di Vietnam, pilihan pengganti krimer, dan perbandingan matcha vs kopi yang tidak hitam-putih [6][8][7].",
-        "lead": "Masuknya M Stand menegaskan Jakarta sebagai panggung merek kopi bergaya, dengan janji spesialti, inovasi rasa, dan desain ruang [2], sementara berita tentang rest area di Simalungun menyebut penyajian kopi Turki dengan biji Fine Robusta Temanggung serta fasilitas pembayaran digital [5]. Banda Aceh juga menempatkan mobil kopi sebagai titik kumpul baru, menandai format layanan yang luwes [4].",
+        "title": "Gerai Baru, Gerobak Listrik, dan Pilihan Ngopi: Kedai, Konsumsi & Gaya Hidup Pekan Ini",
+        "summary": "M Stand dari Shanghai resmi membuka gerai pertama di PIK, Jakarta, sementara Jago Coffee menonjol dengan model gerobak listrik dan pengakuan dari Endeavor. Liputan lain memotret pilihan konsumsi yang kian beragam—dari pengganti krimer dan perbandingan matcha vs kopi, hingga minuman eksperimental berbasis kopi dan terasi di Vietnam. Ruang ngopi juga melebar ke area publik seperti rest area dan zona mobil kopi daerah.",
+        "lead": "M Stand diboyong ke Indonesia oleh Grup Kawan Lama melalui F&B ID dan disebut membawa konsep gaya ngopi modern menurut pemberitaan setempat [1][2][3]. Tiga pendiri Jago Coffee tercatat sebagai Endeavor Entrepreneur setelah lolos panel internasional, dengan model akses kopi lewat gerobak listrik ikut disorot [4]. Di luar kafe, sebuah rest area menampilkan kopi Turki dan penggunaan Fine Robusta Temanggung, lengkap dengan transaksi digital [6].",
         "sections": [
           {
-            "heading": "Format bergerak dan titik konsumsi baru",
+            "heading": "Gerai baru: merek luar masuk Jakarta",
             "paragraphs": [
-              "Pengakuan Endeavor untuk Jago Coffee datang bersama sorotan pada model gerobak listrik sebagai cara memperluas akses kopi sehari-hari [1]. Di luar kota besar, Banda Aceh menata area mobil kopi sebagai tempat nongkrong baru, memberi contoh bagaimana kendaraan bisa menjadi etalase dan titik temu sekaligus [4]. Di jalur perjalanan, Rest Area Tigabalata menampilkan layanan kopi Turki, memanfaatkan biji Fine Robusta Temanggung, dan mendukung transaksi digital—kombinasi yang menunjukkan fleksibilitas format dan pembayaran [5]. Polanya konsisten: kopi hadir mendekat ke arus mobilitas orang, bukan menunggu orang datang ke bar tetap."
+              "Media melaporkan M Stand dari Shanghai resmi hadir di Jakarta dengan gerai perdana di Pantai Indah Kapuk (PIK) [1]. Brand ini dibawa ke Indonesia oleh Grup Kawan Lama melalui F&B ID dan dikabarkan mengusung konsep gaya ngopi modern dengan sentuhan spesialti dan desain ruang, sebagaimana disebut di beberapa pemberitaan [2][3]. Informasi yang tersedia bersifat pengumuman; belum ada data kinerja atau respons pasar yang dipublikasikan dalam sumber-sumber tersebut."
             ]
           },
           {
-            "heading": "Merek global dan ruang bergaya",
+            "heading": "Format bergerak dan ruang ngopi alternatif",
             "paragraphs": [
-              "M Stand dari Shanghai resmi hadir di Jakarta melalui F&B ID, menawarkan gaya modern dengan fokus spesialti, inovasi rasa, dan desain ruang [2]. Liputan lain menegaskan bahwa merek ini diboyong oleh Grup Kawan Lama [3]. Dalam lanskap yang sudah ramai, kurasi lokasi nongkrong seperti daftar lima kedai di kawasan Senayan memperlihatkan betapa pentingnya pengalaman ruang bagi penikmat kopi perkotaan, meski ini lebih berupa panduan gaya hidup ketimbang indikator pasar [9]. Kabar-kabar ini menambah pilihan, tetapi masih berupa kehadiran dan positioning, bukan bukti dampak komersial."
+              "Jago Coffee menonjol lewat kombinasi pengakuan dari Endeavor dan model distribusi berbasis gerobak listrik untuk memperluas akses kopi, menurut laporan media [4]. Di Banda Aceh, area mobil kopi di Pasar Aceh disebut menjadi tempat nongkrong baru, menunjukkan bagaimana titik kumpul bisa terbentuk di luar kafe permanen [5]. Sementara itu, sebuah rest area di Tigabalata menonjolkan kemudahan bayar digital dan penyajian kopi Turki dengan biji Fine Robusta Temanggung, menandakan variasi pengalaman ngopi di jalur perjalanan [6]."
             ]
           },
           {
-            "heading": "Eksperimen rasa dan opsi “lebih sehat”",
+            "heading": "Kesehatan sebagai lensa pilihan menu",
             "paragraphs": [
-              "Di ranah rasa, media mencatat minuman kopi yang dipadukan dengan terasi fermentasi di Vietnam—eksperimen yang mencuri perhatian tanpa jaminan bakal menjadi arus utama [6]. Untuk pilihan harian, artikel kuliner menyodorkan tiga pengganti krimer, termasuk santan kental, sebagai opsi yang dinilai lebih sehat [8]. Sementara itu, perbandingan matcha vs kopi disebut tidak bisa dijawab sederhana; konteks dan kebutuhan konsumen menentukan [7]. Garis besarnya: variasi bertambah, tetapi belum ada sinyal selera baru yang dominan."
+              "Pembahasan seputar konsumsi \"lebih sehat\" juga muncul. Kompas.com memuat tiga pengganti krimer, termasuk santan kental, sebagai opsi bagi penikmat kopi [7]. Antara News membahas perbandingan matcha vs kopi dan menekankan bahwa jawabannya tidak sesederhana ya/tidak [8]. Ada pula laporan tentang temuan peneliti terkait potensi kopi decaf meningkatkan daya ingat; detail metodologinya tidak dibuka dalam pemberitaan yang kami lihat [9]."
+            ]
+          },
+          {
+            "heading": "Eksperimen rasa di kawasan",
+            "paragraphs": [
+              "Dari Vietnam, media menyorot eksperimen minuman yang menggabungkan kopi dan terasi fermentasi [10]. Ada juga varian dengan pasta udang dan taburan tuna kering di sebuah kafe setempat, sebagaimana diberitakan [11]. Ini dicatat sebagai contoh kreasi rasa; sumber tidak menyajikan data penerimaan konsumen yang luas."
             ]
           }
         ],
-        "conclusion": "Minggu ini menunjukkan kopi kian dekat ke pergerakan orang (gerobak, mobil, rest area), sementara Jakarta kembali menjadi pintu masuk merek global, dan percakapan rasa serta kesehatan tetap cair. Semuanya memperluas pilihan—namun sebagian besar masih fase pengenalan dan kurasi, belum menjadi bukti perubahan pasar.",
+        "conclusion": "Rangkaian pemberitaan pekan ini menggambarkan lanskap ngopi yang makin berwarna: ada pemain baru di kota besar, model bergerak yang menambah titik akses, serta pilihan menu yang dipilah lewat kacamata kesehatan dan keberanian bereksperimen. Sebagian informasi masih berupa pengumuman tanpa angka, jadi maknanya lebih sebagai penanda arah ketimbang bukti perubahan selera pasar.",
         "recommendations": [
           {
-            "audience": "Operator kedai kecil/menengah",
-            "action": "Uji format bergerak (gerobak listrik, mobil kopi) di lokasi berizin dan berlalu lintas pejalan, lalu ukur respons sederhana (traffic, repeat).",
-            "basis": "Contoh gerobak listrik Jago Coffee, area mobil kopi Banda Aceh, dan layanan rest area menunjukkan daya jangkau format non-statis [1][4][5]."
+            "audience": "Pengelola ruang publik/rest area",
+            "action": "Standarkan opsi bayar digital dan tawarkan minuman khas yang jelas identitasnya (misalnya metode seduh tertentu) sambil menonjolkan asal biji lokal.",
+            "basis": "Contoh di Rest Area Tigabalata yang menggabungkan transaksi digital, kopi Turki, dan Fine Robusta Temanggung [6]."
           },
           {
-            "audience": "Pendatang merek/konsep baru",
-            "action": "Mulai dengan menu inti yang rapi dan uji adaptasi lokal terbatas sebelum merilis kreasi ekstrem.",
-            "basis": "Masuknya M Stand menekankan positioning gaya, sementara eksperimen kopi-terasi di Vietnam menunjukkan atensi publik belum tentu adopsi luas [2][6]."
+            "audience": "Pelaku kedai dan usaha mikro bergerak",
+            "action": "Uji kanal penjualan mobile atau klaster titik kumpul kecil untuk jam ramai setempat sebelum ekspansi permanen.",
+            "basis": "Model gerobak listrik Jago Coffee dan munculnya area mobil kopi sebagai titik nongkrong di Banda Aceh [4][5]."
           },
           {
-            "audience": "Kafe yang menonjolkan pilihan sehat",
-            "action": "Sediakan dan jelaskan opsi pengganti krimer (mis. santan kental) secara transparan tanpa klaim kesehatan berlebihan.",
-            "basis": "Rujukan pengganti krimer serta ulasan bahwa matcha vs kopi tidak sesederhana ‘lebih sehat’ mendukung pendekatan informatif, bukan promosi keras [8][7]."
+            "audience": "Peracik menu/barista",
+            "action": "Sediakan opsi pengganti krimer dan varian decaf; lakukan uji coba kecil untuk rasa-rasa ekstrem sebelum menetapkan menu tetap.",
+            "basis": "Liputan tentang alternatif krimer, minat pada decaf, dan eksperimen rasa di Vietnam [7][9][10][11]."
           }
         ],
         "source_urls": [
-          "https://ekbis.sindonews.com/read/1757299/34/lolos-panel-global-endeavor-jago-coffee-perluas-akses-kopi-lewat-model-gerobak-listrik-1791220207",
-          "https://koran-jakarta.com/2026-10-05/m-stand-dari-shanghai-hadir-di-jakarta-bawa-konsep-modern-coffee-lifestyle",
+          "https://www.cantika.com/read/2121013/m-stand-resmi-buka-gerai-pertama-di-pik-tawarkan-tren-kopi-shanghai",
           "https://lifestyle.bisnis.com/read/20261005/223/2009613/grup-kawan-lama-resmi-boyong-merek-kopi-asal-shanghai-m-stand-ke-indonesia",
+          "https://koran-jakarta.com/2026-10-05/m-stand-dari-shanghai-hadir-di-jakarta-bawa-konsep-modern-coffee-lifestyle",
+          "https://ekbis.sindonews.com/read/1757299/34/lolos-panel-global-endeavor-jago-coffee-perluas-akses-kopi-lewat-model-gerobak-listrik-1791220207",
           "https://aceh.tribunnews.com/nanggroe/1047304/area-mobil-kopi-pasar-aceh-jadi-tempat-nongkrong-baru-di-banda-aceh",
           "https://mediaindonesia.com/nusantara/940278/mengintip-fasilitas-transaksi-digital-dan-kopi-turki-rest-area-tigabalata",
-          "https://www.kompas.com/food/read/2026/10/04/140028175/gabungkan-kopi-dan-terasi-minuman-baru-di-vietnam-ini-bikin-penasaran",
-          "https://www.antaranews.com/berita/5770402/matcha-vs-kopi-mana-yang-lebih-sehat-ini-perbandingannya",
           "https://www.kompas.com/food/read/2026/10/05/073100475/3-pengganti-krimer-kopi-yang-lebih-sehat-bisa-pakai-santan-kental",
-          "https://food.detik.com/resto-dan-kafe/d-8677618/5-coffee-shop-di-senayan-yang-seru-buat-nongkrong-kopinya-enak"
+          "https://www.antaranews.com/berita/5770402/matcha-vs-kopi-mana-yang-lebih-sehat-ini-perbandingannya",
+          "https://www.kompas.com/tren/read/2026/10/05/060000365/minum-kopi-decaf-ternyata-bisa-tingkatkan-daya-ingat-ini-temuan-peneliti",
+          "https://www.kompas.com/food/read/2026/10/04/140028175/gabungkan-kopi-dan-terasi-minuman-baru-di-vietnam-ini-bikin-penasaran",
+          "https://www.kompas.com/tren/read/2026/10/05/103000365/kafe-di-vietnam-ciptakan-kopi-dengan-pasta-udang-dan-taburan-tuna-kering"
         ],
-        "evidence_note": "Sebagian sumber berupa pengumuman dan liputan gaya hidup singkat, jadi informasinya deskriptif tanpa metrik kinerja pasar."
+        "evidence_note": "Sebagian sumber berupa pengumuman/feature tanpa data kuantitatif, dan beberapa artikel berbayar sehingga detail riset tidak tersedia."
       },
       "article_en": {
-        "title": "Coffee Shops, Consumption & Lifestyle: Mobility, New Brands, and Flavor Experiments",
-        "summary": "Three Jago Coffee founders were named Endeavor Entrepreneur Indonesia numbers 117–119, highlighting an electric cart model to widen coffee access [1]. At the same time, Shanghai’s M Stand officially opened in Jakarta via F&B ID and was brought in by Kawan Lama Group [2][3], while drinking spots ranged from a coffee-car hangout in Banda Aceh to a rest area offering Turkish coffee and digital payments [4][5]. Other coverage broadened the picture: a coffee-with-fermented-shrimp-paste experiment in Vietnam, creamer substitutes, and a nuanced take on matcha vs coffee [6][8][7].",
-        "lead": "M Stand’s arrival reinforces Jakarta as a stage for design-forward coffee, promising specialty profiles, flavor tweaks, and curated spaces [2], while a Simalungun rest area features Turkish coffee brewed with Fine Robusta Temanggung and supports digital transactions [5]. Banda Aceh’s new coffee-car zone adds another example of flexible service formats [4].",
+        "title": "New Stores, Electric Carts, and Coffee Choices: Shops, Consumption & Lifestyle, This Week",
+        "summary": "Shanghai’s M Stand has opened its first store in Jakarta’s PIK, while Jago Coffee drew attention with an electric cart model and recognition from Endeavor. Other coverage spotlights broader consumption choices—from creamer alternatives and a matcha-vs-coffee comparison to experimental coffee-with-shrimp-paste drinks in Vietnam. Coffee spaces also extend into public areas like rest stops and regional mobile-coffee zones.",
+        "lead": "M Stand’s entry was facilitated by Kawan Lama Group via F&B ID and is reported to carry a modern coffee concept in local media [1][2][3]. Jago Coffee’s three founders were named Endeavor Entrepreneurs after passing the International Selection Panel, with their electric cart approach highlighted [4]. Outside cafes, a rest stop features Turkish coffee made with Fine Robusta from Temanggung and supports digital payments [6].",
         "sections": [
           {
-            "heading": "Mobile formats and new consumption nodes",
+            "heading": "New arrivals: an overseas brand lands in Jakarta",
             "paragraphs": [
-              "Endeavor’s recognition of Jago Coffee comes alongside a focus on electric coffee carts as a way to bring daily coffee closer to consumers [1]. Beyond big cities, Banda Aceh organized a coffee-car area as a new hangout, showing how vehicles can serve as both counter and meeting point [4]. On the road, the Tigabalata Rest Area offers Turkish coffee, uses Fine Robusta Temanggung beans, and enables digital payments—a mix that underlines flexibility in both service and settlement [5]. The throughline: coffee moving to where people are, not only waiting behind a fixed bar."
+              "Local outlets report that Shanghai-born M Stand has opened its first Jakarta store in Pantai Indah Kapuk (PIK) [1]. The brand’s Indonesian debut comes via Kawan Lama Group through F&B ID, with reports noting a modern coffee concept with specialty touches and spatial design [2][3]. These are announcements; no performance data or market response figures are provided in the sources."
             ]
           },
           {
-            "heading": "Global brands and designed spaces",
+            "heading": "Mobile formats and alternative coffee spaces",
             "paragraphs": [
-              "Shanghai’s M Stand is now in Jakarta via F&B ID, with a modern lifestyle pitch around specialty coffee, flavor innovation, and space design [2]. Separate coverage notes the brand was brought in by Kawan Lama Group [3]. In a crowded landscape, curated lists like five Senayan shops underscore the importance of the on-site experience for urban drinkers, though these reads are lifestyle guides rather than market indicators [9]. These headlines add choice and positioning, not proof of commercial impact."
+              "Jago Coffee stands out with a mix of Endeavor recognition and an electric cart model to widen access to coffee, according to media coverage [4]. In Banda Aceh, the Pasar Aceh mobile coffee area is described as a new hangout spot, showing how gathering points can form beyond permanent cafes [5]. Meanwhile, a Tigabalata rest area highlights digital payments and Turkish coffee brewed with Fine Robusta Temanggung, signaling a different kind of on-the-road coffee experience [6]."
             ]
           },
           {
-            "heading": "Flavor experiments and ‘healthier’ options",
+            "heading": "Health as a filter for menu choices",
             "paragraphs": [
-              "On the flavor front, reporters flagged a Vietnamese drink that combines coffee with fermented shrimp paste—an attention-grabber, not necessarily a mainstream turn [6]. For everyday choices, a food piece suggested three creamer substitutes, including thick coconut milk, as potentially healthier options [8]. Meanwhile, the matcha vs coffee debate isn’t a simple yes/no; it depends on context and consumer needs [7]. The gist: more variety on offer, without evidence of a dominant shift in taste."
+              "Health-leaning angles are present, too. Kompas.com lists three creamer alternatives, including thick coconut milk [7]. Antara News walks through a matcha-vs-coffee comparison and notes there’s no simple yes/no answer [8]. There’s also a report on research suggesting decaf coffee may improve memory; methodological detail isn’t available in what we could access [9]."
+            ]
+          },
+          {
+            "heading": "Regional flavor experiments",
+            "paragraphs": [
+              "From Vietnam, media highlight an experimental drink that blends coffee with fermented shrimp paste [10]. Another variant adds shrimp paste and katsuobushi-style tuna flakes at a local cafe, per reporting [11]. These are logged as examples of creative flavors; sources do not present broad consumer acceptance data."
             ]
           }
         ],
-        "conclusion": "This week points to coffee meeting people in motion (carts, cars, rest areas), Jakarta welcoming another global brand, and ongoing conversations about flavor and health. The net effect is more options—yet mostly at the introduction and curation stage, not evidence of market change.",
+        "conclusion": "Taken together, this week’s coverage points to a more varied coffee landscape: a new player in a major city, mobile formats expanding access, and menus viewed through health cues and bolder experiments. Much of this remains at the announcement stage, serving more as directional signals than proof of shifts in consumer taste.",
         "recommendations": [
           {
-            "audience": "Small/mid-size operators",
-            "action": "Pilot mobile formats (electric carts, coffee cars) in permitted, high-footfall spots and track simple signals like traffic and repeats.",
-            "basis": "Electric-cart focus, a coffee-car zone, and rest-area service show the reach of non-static formats [1][4][5]."
+            "audience": "Public-space/rest area operators",
+            "action": "Standardize digital payments and offer a clearly identifiable signature preparation alongside local beans.",
+            "basis": "Tigabalata’s example combines digital checkout, Turkish coffee, and Fine Robusta Temanggung [6]."
           },
           {
-            "audience": "New brand/concept entrants",
-            "action": "Lead with a tight core menu and run limited local adaptations before rolling out extreme creations.",
-            "basis": "M Stand’s positioning is style-led, while the coffee–shrimp paste story shows attention doesn’t equal broad adoption [2][6]."
+            "audience": "Cafe owners and mobile micro-operators",
+            "action": "Pilot mobile channels or small clustered spots for local peak times before committing to permanent builds.",
+            "basis": "Jago Coffee’s electric cart model and the Banda Aceh mobile-coffee hangout zone [4][5]."
           },
           {
-            "audience": "Cafes emphasizing health-minded choices",
-            "action": "Offer and clearly label creamer alternatives (e.g., thick coconut milk) without overstated health claims.",
-            "basis": "Cremer-substitute coverage and the nuanced matcha vs coffee comparison support an informative—not hypey—approach [8][7]."
+            "audience": "Menu developers/baristas",
+            "action": "Provide creamer alternatives and a decaf option; trial extreme flavors in small batches before fixing them on the menu.",
+            "basis": "Coverage on creamer alternatives, interest around decaf, and Vietnam’s flavor experiments [7][9][10][11]."
           }
         ],
         "source_urls": [
-          "https://ekbis.sindonews.com/read/1757299/34/lolos-panel-global-endeavor-jago-coffee-perluas-akses-kopi-lewat-model-gerobak-listrik-1791220207",
-          "https://koran-jakarta.com/2026-10-05/m-stand-dari-shanghai-hadir-di-jakarta-bawa-konsep-modern-coffee-lifestyle",
+          "https://www.cantika.com/read/2121013/m-stand-resmi-buka-gerai-pertama-di-pik-tawarkan-tren-kopi-shanghai",
           "https://lifestyle.bisnis.com/read/20261005/223/2009613/grup-kawan-lama-resmi-boyong-merek-kopi-asal-shanghai-m-stand-ke-indonesia",
+          "https://koran-jakarta.com/2026-10-05/m-stand-dari-shanghai-hadir-di-jakarta-bawa-konsep-modern-coffee-lifestyle",
+          "https://ekbis.sindonews.com/read/1757299/34/lolos-panel-global-endeavor-jago-coffee-perluas-akses-kopi-lewat-model-gerobak-listrik-1791220207",
           "https://aceh.tribunnews.com/nanggroe/1047304/area-mobil-kopi-pasar-aceh-jadi-tempat-nongkrong-baru-di-banda-aceh",
           "https://mediaindonesia.com/nusantara/940278/mengintip-fasilitas-transaksi-digital-dan-kopi-turki-rest-area-tigabalata",
-          "https://www.kompas.com/food/read/2026/10/04/140028175/gabungkan-kopi-dan-terasi-minuman-baru-di-vietnam-ini-bikin-penasaran",
-          "https://www.antaranews.com/berita/5770402/matcha-vs-kopi-mana-yang-lebih-sehat-ini-perbandingannya",
           "https://www.kompas.com/food/read/2026/10/05/073100475/3-pengganti-krimer-kopi-yang-lebih-sehat-bisa-pakai-santan-kental",
-          "https://food.detik.com/resto-dan-kafe/d-8677618/5-coffee-shop-di-senayan-yang-seru-buat-nongkrong-kopinya-enak"
+          "https://www.antaranews.com/berita/5770402/matcha-vs-kopi-mana-yang-lebih-sehat-ini-perbandingannya",
+          "https://www.kompas.com/tren/read/2026/10/05/060000365/minum-kopi-decaf-ternyata-bisa-tingkatkan-daya-ingat-ini-temuan-peneliti",
+          "https://www.kompas.com/food/read/2026/10/04/140028175/gabungkan-kopi-dan-terasi-minuman-baru-di-vietnam-ini-bikin-penasaran",
+          "https://www.kompas.com/tren/read/2026/10/05/103000365/kafe-di-vietnam-ciptakan-kopi-dengan-pasta-udang-dan-taburan-tuna-kering"
         ],
-        "evidence_note": "Several sources are announcements and brief lifestyle pieces, so they describe presence and options rather than market performance metrics."
+        "evidence_note": "Most sources are announcements or lifestyle features with limited quantitative data, and some articles are paywalled so methodological details aren’t available."
       },
       "input_sources": [
         {
           "id": "1",
+          "url": "https://www.cantika.com/read/2121013/m-stand-resmi-buka-gerai-pertama-di-pik-tawarkan-tren-kopi-shanghai",
+          "title": "M Stand Resmi Buka Gerai Pertama di PIK, Tawarkan Tren Kopi Shanghai - cantika.com",
+          "source": "cantika.com",
+          "published_at": "Tue, 06 Oct 2026 05:30:00 GMT"
+        },
+        {
+          "id": "2",
           "url": "https://ekbis.sindonews.com/read/1757299/34/lolos-panel-global-endeavor-jago-coffee-perluas-akses-kopi-lewat-model-gerobak-listrik-1791220207",
           "title": "Lolos Panel Global Endeavor, Jago Coffee Perluas Akses Kopi lewat Model Gerobak Listrik",
           "source": "Sindonews",
           "published_at": "2026-10-05 12:58:07"
         },
         {
-          "id": "2",
+          "id": "3",
           "url": "https://koran-jakarta.com/2026-10-05/m-stand-dari-shanghai-hadir-di-jakarta-bawa-konsep-modern-coffee-lifestyle",
           "title": "M Stand dari Shanghai Hadir di Jakarta, Bawa Konsep Modern Coffee Lifestyle - Koran Jakarta ®",
           "source": "Koran Jakarta ®",
           "published_at": "Mon, 05 Oct 2026 04:58:00 GMT"
         },
         {
-          "id": "3",
+          "id": "4",
           "url": "https://www.kompas.com/tren/read/2026/10/05/103000365/kafe-di-vietnam-ciptakan-kopi-dengan-pasta-udang-dan-taburan-tuna-kering",
           "title": "Kafe di Vietnam Ciptakan Kopi dengan Pasta Udang dan Taburan Tuna Kering, seperti Apa?",
           "source": "Kompas.com",
           "published_at": "2026-10-05 03:30:00"
         },
         {
-          "id": "4",
+          "id": "5",
           "url": "https://www.kompas.com/food/read/2026/10/05/073100475/3-pengganti-krimer-kopi-yang-lebih-sehat-bisa-pakai-santan-kental",
           "title": "3 Pengganti Krimer Kopi yang Lebih Sehat, Bisa Pakai Santan Kental",
           "source": "Kompas.com",
           "published_at": "2026-10-05 00:31:00"
         },
         {
-          "id": "5",
+          "id": "6",
           "url": "https://www.kompas.com/tren/read/2026/10/05/060000365/minum-kopi-decaf-ternyata-bisa-tingkatkan-daya-ingat-ini-temuan-peneliti",
           "title": "Minum Kopi Decaf Ternyata Bisa Tingkatkan Daya Ingat, Ini Temuan Peneliti",
           "source": "Kompas.com",
           "published_at": "2026-10-04 23:00:00"
         },
         {
-          "id": "6",
+          "id": "7",
           "url": "https://lifestyle.bisnis.com/read/20261005/223/2009613/grup-kawan-lama-resmi-boyong-merek-kopi-asal-shanghai-m-stand-ke-indonesia",
           "title": "Grup Kawan Lama Resmi Boyong Merek Kopi asal Shanghai, M Stand ke Indonesia - Bisnis Style",
           "source": "Bisnis Style",
           "published_at": "Sun, 04 Oct 2026 19:10:02 GMT"
         },
         {
-          "id": "7",
+          "id": "8",
           "url": "https://aceh.tribunnews.com/nanggroe/1047304/area-mobil-kopi-pasar-aceh-jadi-tempat-nongkrong-baru-di-banda-aceh",
           "title": "Area Mobil Kopi Pasar Aceh Jadi Tempat Nongkrong Baru di Banda Aceh",
           "source": "Serambinews.com",
           "published_at": "2026-10-04 14:33:03"
         },
         {
-          "id": "8",
+          "id": "9",
           "url": "https://www.kompas.com/food/read/2026/10/04/140028175/gabungkan-kopi-dan-terasi-minuman-baru-di-vietnam-ini-bikin-penasaran",
           "title": "Gabungkan Kopi dan Terasi, Minuman Baru di Vietnam Ini Bikin Penasaran",
           "source": "Kompas.com",
           "published_at": "2026-10-04 07:00:28"
         },
         {
-          "id": "9",
+          "id": "10",
           "url": "https://www.antaranews.com/berita/5770402/matcha-vs-kopi-mana-yang-lebih-sehat-ini-perbandingannya",
           "title": "Matcha vs kopi, mana yang lebih sehat? Ini perbandingannya",
           "source": "Antara News",
           "published_at": "2026-10-04 02:50:34"
         },
         {
-          "id": "10",
+          "id": "11",
           "url": "https://mediaindonesia.com/nusantara/940278/mengintip-fasilitas-transaksi-digital-dan-kopi-turki-rest-area-tigabalata",
           "title": "Mengintip Fasilitas Transaksi Digital dan Kopi Turki Rest Area Tigabalata",
           "source": "Mediaindonesia",
           "published_at": "2026-10-03 13:28:00"
         },
         {
-          "id": "11",
+          "id": "12",
           "url": "https://rri.co.id/banda-aceh/ekonomi/bisnis/2757913/menyesap-kopi-mont-blanc-merangkai-kemitraan-panjang-rri-dan-portola-grand-arabia",
           "title": "Menyesap Kopi Mont Blanc, Merangkai Kemitraan Panjang RRI dan Portola Grand Arabia - RRI.co.id",
           "source": "RRI.co.id",
           "published_at": "Fri, 25 Sep 2026 00:48:00 GMT"
-        },
-        {
-          "id": "12",
-          "url": "https://food.detik.com/resto-dan-kafe/d-8677618/5-coffee-shop-di-senayan-yang-seru-buat-nongkrong-kopinya-enak",
-          "title": "5 Coffee Shop di Senayan yang Seru Buat Nongkrong, Kopinya Enak! - food.detik.com",
-          "source": "food.detik.com",
-          "published_at": "Fri, 25 Sep 2026 00:00:04 GMT"
         }
       ]
     },
