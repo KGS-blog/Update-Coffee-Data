@@ -93,22 +93,31 @@ function canonicalRow(item, sourceDate = dateISO, basis = 'Tanggal diamati Kabar
   const priceMin = Number(item.price_min), priceMax = Number(item.price_max);
   const rawPrice = Number(item.price);
   const numeric = rawPrice > 0 ? rawPrice : priceMin > 0 && priceMax >= priceMin ? (priceMin + priceMax) / 2 : NaN;
-  if (!item.product || !['Arabika', 'Robusta'].includes(item.type) || !['Biji kopi mentah', 'Biji kopi sangrai', 'Kopi bubuk'].includes(item.form) || !['IDR', 'USD'].includes(currency) || !(numeric > 0) || !item.source_url?.startsWith('https://')) return null;
+  const sourceType = item.source_type === 'field' ? 'field' : 'url';
+  const sourceUrl = String(item.source_url || '').trim();
+  const sourceIsValid = sourceType === 'field'
+    ? Boolean(item.source && item.source_detail)
+    : /^https:\/\//i.test(sourceUrl);
+  if (!item.product || !item.source || !sourceIsValid || !['Arabika', 'Robusta'].includes(item.type) || !['Biji kopi mentah', 'Biji kopi sangrai', 'Kopi bubuk'].includes(item.form) || !['IDR', 'USD'].includes(currency) || !(numeric > 0)) return null;
   const amount = Number(item.amount || 1);
   const unit = String(item.unit || 'kg').toLowerCase();
   const amountKg = unit === 'kg' ? amount : ['g', 'gram', 'gr'].includes(unit) ? amount / 1000 : null;
   if (!amountKg || amountKg <= 0) return null;
   const rowPeriod = quarterForDate(sourceDate);
   const pricePerKg = Math.round(numeric / amountKg * 100) / 100;
-  const productKey = `${item.source_url}|${String(item.product).toLowerCase().replace(/\s+/g, ' ')}|${currency}|${rowPeriod}`;
+  const sourceIdentity = sourceType === 'field'
+    ? `field|${String(item.source).toLowerCase().replace(/\s+/g, ' ')}|${String(item.source_detail).toLowerCase().replace(/\s+/g, ' ')}`
+    : sourceUrl;
+  const productKey = `${sourceIdentity}|${String(item.product).toLowerCase().replace(/\s+/g, ' ')}|${currency}|${rowPeriod}`;
   const id = sha(productKey);
   return { 
     observation_id: id, type: item.type, form: item.form, process: item.process || 'Tidak disebut', period: rowPeriod,
     date: sourceDate, date_basis: basis, currency, original_price: numeric, price_per_package: numeric,
     ...(priceMin > 0 && priceMax >= priceMin ? { price_range_per_kg: [Math.round(priceMin / amountKg), Math.round(priceMax / amountKg)] } : {}),
     package_size: { amount: amountKg * 1000, unit: 'g' }, price_per_kg: pricePerKg,
-    scale_100_to_999_applied: false, product: item.product, source: item.source, source_url: item.source_url,
-    product_url: item.product_url || item.source_url, quality_status: item.quality_status || null,
+    scale_100_to_999_applied: false, product: item.product, source: item.source, source_type: sourceType,
+    ...(sourceType === 'field' ? { source_detail: item.source_detail, source_url: null, product_url: null } : { source_url: sourceUrl, product_url: item.product_url || sourceUrl }),
+    quality_status: item.quality_status || null,
     ...(item.origin ? { origin: item.origin } : {})
   };
 }
@@ -162,11 +171,14 @@ async function main() {
   const groups = new Map();
   for (const row of dataset.listings) {
     const key = [row.type, row.form, row.process, row.period, row.currency].join('|');
-    const group = groups.get(key) || { type: row.type, form: row.form, process: row.process, period: row.period, currency: row.currency, listing_count: 0, source_urls: new Set(), prices: [] };
-    group.listing_count++; group.source_urls.add(row.source_url); group.prices.push(Number(row.price_per_kg)); groups.set(key, group);
+    const group = groups.get(key) || { type: row.type, form: row.form, process: row.process, period: row.period, currency: row.currency, listing_count: 0, source_ids: new Set(), source_urls: new Set(), prices: [] };
+    group.listing_count++;
+    group.source_ids.add(row.source_type === 'field' ? `field:${row.source}|${row.source_detail}` : `url:${row.source_url}`);
+    if (row.source_url) group.source_urls.add(row.source_url);
+    group.prices.push(Number(row.price_per_kg)); groups.set(key, group);
   }
   const median = values => { values.sort((a,b)=>a-b); const m=Math.floor(values.length/2); return values.length%2 ? values[m] : (values[m-1]+values[m])/2; };
-  dataset.summary = [...groups.values()].map(group => ({ type: group.type, form: group.form, process: group.process, period: group.period, currency: group.currency, listing_count: group.listing_count, source_count: group.source_urls.size, median_price_per_kg: median(group.prices), minimum_price_per_kg: Math.min(...group.prices), maximum_price_per_kg: Math.max(...group.prices), source_urls: [...group.source_urls] }));
+  dataset.summary = [...groups.values()].map(group => ({ type: group.type, form: group.form, process: group.process, period: group.period, currency: group.currency, listing_count: group.listing_count, source_count: group.source_ids.size, median_price_per_kg: median(group.prices), minimum_price_per_kg: Math.min(...group.prices), maximum_price_per_kg: Math.max(...group.prices), source_urls: [...group.source_urls] }));
   dataset.totals = { listings: dataset.listings.length, groups: dataset.summary.length, types: { Arabika: dataset.listings.filter(row => row.type === 'Arabika').length, Robusta: dataset.listings.filter(row => row.type === 'Robusta').length } };
   dataset.public_price_sources_checked_at = now.toISOString();
   fs.writeFileSync(DATA_PATH, `${JSON.stringify(dataset, null, 2)}\n`);

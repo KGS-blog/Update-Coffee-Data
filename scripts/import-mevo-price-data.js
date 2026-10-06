@@ -21,9 +21,12 @@ async function main() {
     const validListings = dataset.listings.filter(row => {
       let sourceIsSecure = false;
       try { sourceIsSecure = new URL(row?.source_url).protocol === 'https:'; } catch (_) {}
+      const sourceIsValid = row?.source_type === 'field'
+        ? Boolean(row.source && row.source_detail)
+        : sourceIsSecure;
       return row && typeof row.type === 'string' && typeof row.period === 'string' &&
         typeof row.currency === 'string' && Number.isFinite(Number(row.price_per_kg)) &&
-        Number(row.price_per_kg) > 0 && sourceIsSecure;
+        Number(row.price_per_kg) > 0 && sourceIsValid;
     });
     if (!validListings.length) throw new Error('No valid price observations were found.');
     fs.mkdirSync(path.dirname(OUTPUT), { recursive: true });

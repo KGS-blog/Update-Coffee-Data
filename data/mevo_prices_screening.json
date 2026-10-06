@@ -1,7 +1,7 @@
 {
-  "generated_at": "2026-10-06T09:46:43.601Z",
+  "generated_at": "2026-10-06T10:23:48.374Z",
   "method": {
-    "duplicate_key": "source_url + normalized product + type + form + currency + period + date + price_per_kg",
+    "duplicate_key": "source identity (URL or explicit field-source identity) + normalized product + type + form + currency + period + date + price_per_kg",
     "source_currency_rule": "Rows from specialtycoffee.id that were labeled IDR are excluded from IDR charts because the primary source states all its prices are USD; original source-currency prices are not reconstructed without verified FX metadata",
     "outlier_rule": "Tukey 1.5×IQR within source/type/form/currency/period groups with 8–100 unique observations; large batches are skipped because they can mix product tiers. Flagged items are pending review, not automatically invalid",
     "chart_policy": "source-currency mismatches, duplicates and flagged outliers excluded from IDR chart medians; raw source rows remain in mevo_prices.json"
@@ -25,6 +25,8 @@
       "price_per_kg": 784482,
       "product": "Indonesia Specialty Coffee – Abyssinia 85+",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -38,6 +40,8 @@
       "price_per_kg": 336560,
       "product": "Indonesia Specialty Coffee – Aceh Gayo G1",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -51,6 +55,8 @@
       "price_per_kg": 327752,
       "product": "Indonesia Specialty Coffee – Aceh Gayo Grade 2",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -64,6 +70,8 @@
       "price_per_kg": 399394,
       "product": "Indonesia Specialty Coffee – Age Coffee",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -77,6 +85,8 @@
       "price_per_kg": 462006,
       "product": "Indonesia Specialty Coffee – Bali Kintamani 85+",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -90,6 +100,8 @@
       "price_per_kg": 200608,
       "product": "Indonesia Specialty Coffee – Bali Kintamani ELB 350 SM",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -103,6 +115,8 @@
       "price_per_kg": 361784,
       "product": "Indonesia Specialty Coffee – Bali Kintamani G1",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -116,6 +130,8 @@
       "price_per_kg": 551636,
       "product": "Indonesia Specialty Coffee – Bali Natural",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -129,6 +145,8 @@
       "price_per_kg": 385010,
       "product": "Indonesia Specialty Coffee – Dino Hijau ELB",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -142,6 +160,8 @@
       "price_per_kg": 336560,
       "product": "Indonesia Specialty Coffee – Flores G1",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -155,6 +175,8 @@
       "price_per_kg": 587684,
       "product": "Indonesia Specialty Coffee – Gayo Anaerob Honey 85+",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -168,6 +190,8 @@
       "price_per_kg": 1196708,
       "product": "Indonesia Specialty Coffee – Gayo Carbonic Maceration 90+",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -181,6 +205,8 @@
       "price_per_kg": 433232,
       "product": "Indonesia Specialty Coffee – Gayo Full-Washed 85+",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -194,6 +220,8 @@
       "price_per_kg": 557024,
       "product": "Indonesia Specialty Coffee – Gayo Honey 85+",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -207,6 +235,8 @@
       "price_per_kg": 628614,
       "product": "Indonesia Specialty Coffee – Gayo Long Berry",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -220,6 +250,8 @@
       "price_per_kg": 533818,
       "product": "Indonesia Specialty Coffee – Gayo Natural 85+",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -233,6 +265,8 @@
       "price_per_kg": 981158,
       "product": "Indonesia Specialty Coffee – Gayo Natural Classic 90+",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -246,6 +280,8 @@
       "price_per_kg": 426044,
       "product": "Indonesia Specialty Coffee – Gayo Semi-Washed 85+",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -259,6 +295,8 @@
       "price_per_kg": 336560,
       "product": "Indonesia Specialty Coffee – Java Ijen G1",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -272,6 +310,8 @@
       "price_per_kg": 336560,
       "product": "Indonesia Specialty Coffee – Java Preanger G1",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -285,6 +325,8 @@
       "price_per_kg": 376170,
       "product": "Indonesia Specialty Coffee – Java Washed G1",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -298,6 +340,8 @@
       "price_per_kg": 354804,
       "product": "Indonesia Specialty Coffee – Jumbo 18+",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -311,6 +355,8 @@
       "price_per_kg": 336560,
       "product": "Indonesia Specialty Coffee – Kalosi G1",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -324,6 +370,8 @@
       "price_per_kg": 324158,
       "product": "Indonesia Specialty Coffee – Kalosi Grade 2",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -337,6 +385,8 @@
       "price_per_kg": 172008,
       "product": "Indonesia Specialty Coffee – Lampung ELB 350 SM G2",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -350,6 +400,8 @@
       "price_per_kg": 170212,
       "product": "Indonesia Specialty Coffee – Lampung ELB 450 SM G2",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -363,6 +415,8 @@
       "price_per_kg": 164824,
       "product": "Indonesia Specialty Coffee – Lampung Grade 2",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -376,6 +430,8 @@
       "price_per_kg": 161230,
       "product": "Indonesia Specialty Coffee – Lampung Grade 3",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -389,6 +445,8 @@
       "price_per_kg": 157636,
       "product": "Indonesia Specialty Coffee – Lampung Grade 4",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -402,6 +460,8 @@
       "price_per_kg": 696698,
       "product": "Indonesia Specialty Coffee – Lasuna Special",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -415,6 +475,8 @@
       "price_per_kg": 336560,
       "product": "Indonesia Specialty Coffee – Lintong G1",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -428,6 +490,8 @@
       "price_per_kg": 895850,
       "product": "Indonesia Specialty Coffee – Luwak (liar)",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -441,6 +505,8 @@
       "price_per_kg": 365528,
       "product": "Indonesia Specialty Coffee – Mandheling FTO G1",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -454,6 +520,8 @@
       "price_per_kg": 336560,
       "product": "Indonesia Specialty Coffee – Mandheling G1 (ritel)",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -467,6 +535,8 @@
       "price_per_kg": 324158,
       "product": "Indonesia Specialty Coffee – Mandheling Grade 2",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -480,6 +550,8 @@
       "price_per_kg": 302666,
       "product": "Indonesia Specialty Coffee – Mandheling Grade 3",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -493,6 +565,8 @@
       "price_per_kg": 270418,
       "product": "Indonesia Specialty Coffee – Mandheling Grade 3 Special",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -506,6 +580,8 @@
       "price_per_kg": 240030,
       "product": "Indonesia Specialty Coffee – Mandheling Grade 4",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -519,6 +595,8 @@
       "price_per_kg": 205988,
       "product": "Indonesia Specialty Coffee – Mandheling Grade 5",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -532,6 +610,8 @@
       "price_per_kg": 182784,
       "product": "Indonesia Specialty Coffee – Mandheling Grade 6",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -545,6 +625,8 @@
       "price_per_kg": 155662,
       "product": "Indonesia Specialty Coffee – Mandheling Low Grade/Pixel",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -558,6 +640,8 @@
       "price_per_kg": 351152,
       "product": "Indonesia Specialty Coffee – Mandheling Organik G1",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -571,6 +655,8 @@
       "price_per_kg": 343872,
       "product": "Indonesia Specialty Coffee – Mandheling Top Grade",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -584,6 +670,8 @@
       "price_per_kg": 288298,
       "product": "Indonesia Specialty Coffee – Old Crop / Vintage",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -597,6 +685,8 @@
       "price_per_kg": 164824,
       "product": "Indonesia Specialty Coffee – Sidikalang Grade 2",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -610,6 +700,8 @@
       "price_per_kg": 161230,
       "product": "Indonesia Specialty Coffee – Sidikalang Grade 3",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -623,6 +715,8 @@
       "price_per_kg": 157636,
       "product": "Indonesia Specialty Coffee – Sidikalang Grade 4",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -636,6 +730,8 @@
       "price_per_kg": 288298,
       "product": "Indonesia Specialty Coffee – Stinkycup (proses khusus)",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -649,6 +745,8 @@
       "price_per_kg": 175602,
       "product": "Indonesia Specialty Coffee – Sumatra ELB 350 BC Grade 1",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -662,6 +760,8 @@
       "price_per_kg": 172008,
       "product": "Indonesia Specialty Coffee – Sumatra ELB 350 BC Grade 2",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -675,6 +775,8 @@
       "price_per_kg": 168416,
       "product": "Indonesia Specialty Coffee – Sumatra ELB 400 BC Grade 3",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -688,6 +790,8 @@
       "price_per_kg": 166620,
       "product": "Indonesia Specialty Coffee – Sumatra ELB 450 BC Grade 3",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -701,6 +805,8 @@
       "price_per_kg": 161230,
       "product": "Indonesia Specialty Coffee – Sumatra Grade 3 (45 cacat)",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -714,6 +820,8 @@
       "price_per_kg": 159434,
       "product": "Indonesia Specialty Coffee – Sumatra Grade 4a (60 cacat)",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -727,6 +835,8 @@
       "price_per_kg": 157636,
       "product": "Indonesia Specialty Coffee – Sumatra Grade 4b (80 cacat)",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -740,6 +850,8 @@
       "price_per_kg": 331346,
       "product": "Indonesia Specialty Coffee – Sumatra Organik Grade 2",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -753,6 +865,8 @@
       "price_per_kg": 562412,
       "product": "Indonesia Specialty Coffee – Sumatra Peaberry",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -766,6 +880,8 @@
       "price_per_kg": 659024,
       "product": "Indonesia Specialty Coffee – Sumatra Super Peaberry 85+",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -779,6 +895,8 @@
       "price_per_kg": 981158,
       "product": "Indonesia Specialty Coffee – Thermal Gayo 90+",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -792,6 +910,8 @@
       "price_per_kg": 336560,
       "product": "Indonesia Specialty Coffee – Toraja G1",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -805,6 +925,8 @@
       "price_per_kg": 324158,
       "product": "Indonesia Specialty Coffee – Toraja Grade 2",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     },
@@ -818,6 +940,8 @@
       "price_per_kg": 569618,
       "product": "Indonesia Specialty Coffee – Wine Process (Bali/Java/Gayo→Mandheling)",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "duplicate_excluded_from_chart"
     }
@@ -834,6 +958,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Abyssinia 85+",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -848,6 +974,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Aceh Gayo G1",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -862,6 +990,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Aceh Gayo Grade 2",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -876,6 +1006,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Age Coffee",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -890,6 +1022,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Bali Kintamani 85+",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -904,6 +1038,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Bali Kintamani ELB 350 SM",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -918,6 +1054,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Bali Kintamani G1",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -932,6 +1070,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Bali Natural",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -946,6 +1086,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Dino Hijau ELB",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -960,6 +1102,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Flores G1",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -974,6 +1118,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Gayo Anaerob Honey 85+",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -988,6 +1134,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Gayo Carbonic Maceration 90+",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -1002,6 +1150,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Gayo Full-Washed 85+",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -1016,6 +1166,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Gayo Honey 85+",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -1030,6 +1182,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Gayo Long Berry",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -1044,6 +1198,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Gayo Natural 85+",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -1058,6 +1214,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Gayo Natural Classic 90+",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -1072,6 +1230,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Gayo Semi-Washed 85+",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -1086,6 +1246,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Java Ijen G1",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -1100,6 +1262,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Java Preanger G1",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -1114,6 +1278,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Java Washed G1",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -1128,6 +1294,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Jumbo 18+",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -1142,6 +1310,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Kalosi G1",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -1156,6 +1326,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Kalosi Grade 2",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -1170,6 +1342,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Lampung ELB 350 SM G2",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -1184,6 +1358,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Lampung ELB 450 SM G2",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -1198,6 +1374,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Lampung Grade 2",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -1212,6 +1390,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Lampung Grade 3",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -1226,6 +1406,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Lampung Grade 4",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -1240,6 +1422,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Lasuna Special",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -1254,6 +1438,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Lintong G1",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -1268,6 +1454,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Luwak (liar)",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -1282,6 +1470,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Mandheling FTO G1",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -1296,6 +1486,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Mandheling G1 (ritel)",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -1310,6 +1502,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Mandheling Grade 2",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -1324,6 +1518,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Mandheling Grade 3",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -1338,6 +1534,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Mandheling Grade 3 Special",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -1352,6 +1550,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Mandheling Grade 4",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -1366,6 +1566,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Mandheling Grade 5",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -1380,6 +1582,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Mandheling Grade 6",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -1394,6 +1598,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Mandheling Low Grade/Pixel",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -1408,6 +1614,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Mandheling Organik G1",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -1422,6 +1630,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Mandheling Top Grade",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -1436,6 +1646,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Old Crop / Vintage",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -1450,6 +1662,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Sidikalang Grade 2",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -1464,6 +1678,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Sidikalang Grade 3",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -1478,6 +1694,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Sidikalang Grade 4",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -1492,6 +1710,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Stinkycup (proses khusus)",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -1506,6 +1726,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Sumatra ELB 350 BC Grade 1",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -1520,6 +1742,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Sumatra ELB 350 BC Grade 2",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -1534,6 +1758,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Sumatra ELB 400 BC Grade 3",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -1548,6 +1774,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Sumatra ELB 450 BC Grade 3",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -1562,6 +1790,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Sumatra Grade 3 (45 cacat)",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -1576,6 +1806,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Sumatra Grade 4a (60 cacat)",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -1590,6 +1822,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Sumatra Grade 4b (80 cacat)",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -1604,6 +1838,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Sumatra Organik Grade 2",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -1618,6 +1854,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Sumatra Peaberry",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -1632,6 +1870,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Sumatra Super Peaberry 85+",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -1646,6 +1886,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Thermal Gayo 90+",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -1660,6 +1902,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Toraja G1",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -1674,6 +1918,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Toraja Grade 2",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -1688,6 +1934,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee - Wine Process (Bali/Java/Gayo-Mandheling)",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -1702,6 +1950,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee – Gayo Anaerob Natural 85+",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -1716,6 +1966,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee – Gayo Anaerob Washed 85+",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -1730,6 +1982,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee – Kintamani Wine Process 85+",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     },
@@ -1744,6 +1998,8 @@
       "source_currency": "USD",
       "product": "Indonesia Specialty Coffee – Toraja Anaerob Honey 85+",
       "source": "Indonesia Specialty Coffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
       "status": "excluded_from_idr_chart_currency_not_verified"
     }
@@ -1760,6 +2016,8 @@
       "upper_fence": 123750,
       "product": "TanyaBerita (Papua Wamena)",
       "source": "tanyaberita.com",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://www.tanyaberita.com/4129/harga-kopi-per-kg-terbaru/",
       "status": "pending_manual_review"
     },
@@ -1774,6 +2032,8 @@
       "upper_fence": 181500,
       "product": "Green Bean Arabika Ijen",
       "source": "Java Ijencoffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://www.ijencoffee.com/",
       "status": "pending_manual_review"
     },
@@ -1788,6 +2048,8 @@
       "upper_fence": 181500,
       "product": "Green Bean Arabika Ijen",
       "source": "Java Ijencoffee",
+      "source_type": "url",
+      "source_detail": null,
       "source_url": "https://www.ijencoffee.com/",
       "status": "pending_manual_review"
     }
@@ -1801,12 +2063,12 @@
       "current_count": 1216,
       "previous_count": 2,
       "current_sources": [
-        "https://arutalacoffee.com/blog/riset-komprehensif-dinamika-harga-green-bean-kopi-indonesia-varietas-tren-global",
-        "https://arutalacoffee.com/blog/harga-kopi-hari-ini-dinamika-pasar-lokal-kualitas-arutala-coffee-dan-keuntungan",
-        "https://www.tanyaberita.com/4129/harga-kopi-per-kg-terbaru/"
+        "url:https://arutalacoffee.com/blog/riset-komprehensif-dinamika-harga-green-bean-kopi-indonesia-varietas-tren-global",
+        "url:https://arutalacoffee.com/blog/harga-kopi-hari-ini-dinamika-pasar-lokal-kualitas-arutala-coffee-dan-keuntungan",
+        "url:https://www.tanyaberita.com/4129/harga-kopi-per-kg-terbaru/"
       ],
       "previous_sources": [
-        "https://www.indonesia-coffee.com/id/articles/rincian-biaya-pembelian-arabika-indonesia-vs-robusta-pTWosi"
+        "url:https://www.indonesia-coffee.com/id/articles/rincian-biaya-pembelian-arabika-indonesia-vs-robusta-pTWosi"
       ],
       "source_overlap": 0,
       "reason": "Pembanding periode sebelumnya memiliki kurang dari 5 observasi."
@@ -1819,10 +2081,10 @@
       "current_count": 1,
       "previous_count": 2,
       "current_sources": [
-        "https://arutalacoffee.com/blog/harga-kopi-hari-ini-dinamika-pasar-lokal-kualitas-arutala-coffee-dan-keuntungan"
+        "url:https://arutalacoffee.com/blog/harga-kopi-hari-ini-dinamika-pasar-lokal-kualitas-arutala-coffee-dan-keuntungan"
       ],
       "previous_sources": [
-        "https://www.indonesia-coffee.com/id/articles/rincian-biaya-pembelian-arabika-indonesia-vs-robusta-pTWosi"
+        "url:https://www.indonesia-coffee.com/id/articles/rincian-biaya-pembelian-arabika-indonesia-vs-robusta-pTWosi"
       ],
       "source_overlap": 0,
       "reason": "Pembanding periode sebelumnya memiliki kurang dari 5 observasi."
@@ -1835,13 +2097,13 @@
       "current_count": 13,
       "previous_count": 1216,
       "current_sources": [
-        "https://www.cnbcindonesia.com/research/20260803111814-128-755987/harga-kopi-dunia-mendidih-ri-dan-9-negara-ini-bisa-panen-cuan-jumbo",
-        "https://kopitime.id/harga-kopi-menjelang-akhir-tahun-2026-dan-perkembangan-pasar-global-1"
+        "url:https://www.cnbcindonesia.com/research/20260803111814-128-755987/harga-kopi-dunia-mendidih-ri-dan-9-negara-ini-bisa-panen-cuan-jumbo",
+        "url:https://kopitime.id/harga-kopi-menjelang-akhir-tahun-2026-dan-perkembangan-pasar-global-1"
       ],
       "previous_sources": [
-        "https://arutalacoffee.com/blog/riset-komprehensif-dinamika-harga-green-bean-kopi-indonesia-varietas-tren-global",
-        "https://arutalacoffee.com/blog/harga-kopi-hari-ini-dinamika-pasar-lokal-kualitas-arutala-coffee-dan-keuntungan",
-        "https://www.tanyaberita.com/4129/harga-kopi-per-kg-terbaru/"
+        "url:https://arutalacoffee.com/blog/riset-komprehensif-dinamika-harga-green-bean-kopi-indonesia-varietas-tren-global",
+        "url:https://arutalacoffee.com/blog/harga-kopi-hari-ini-dinamika-pasar-lokal-kualitas-arutala-coffee-dan-keuntungan",
+        "url:https://www.tanyaberita.com/4129/harga-kopi-per-kg-terbaru/"
       ],
       "source_overlap": 0,
       "reason": "Komposisi sumber periode ini berbeda; sumber yang sama hanya sedikit."
@@ -1854,10 +2116,10 @@
       "current_count": 6,
       "previous_count": 603,
       "current_sources": [
-        "https://kopitime.id/harga-kopi-menjelang-akhir-tahun-2026-dan-perkembangan-pasar-global-1"
+        "url:https://kopitime.id/harga-kopi-menjelang-akhir-tahun-2026-dan-perkembangan-pasar-global-1"
       ],
       "previous_sources": [
-        "https://arutalacoffee.com/blog/harga-kopi-hari-ini-dinamika-pasar-lokal-kualitas-arutala-coffee-dan-keuntungan"
+        "url:https://arutalacoffee.com/blog/harga-kopi-hari-ini-dinamika-pasar-lokal-kualitas-arutala-coffee-dan-keuntungan"
       ],
       "source_overlap": 0,
       "reason": "Komposisi sumber periode ini berbeda; sumber yang sama hanya sedikit."
@@ -1870,10 +2132,10 @@
       "current_count": 8,
       "previous_count": 1,
       "current_sources": [
-        "https://kopitime.id/harga-kopi-menjelang-akhir-tahun-2026-dan-perkembangan-pasar-global-1"
+        "url:https://kopitime.id/harga-kopi-menjelang-akhir-tahun-2026-dan-perkembangan-pasar-global-1"
       ],
       "previous_sources": [
-        "https://arutalacoffee.com/blog/harga-kopi-hari-ini-dinamika-pasar-lokal-kualitas-arutala-coffee-dan-keuntungan"
+        "url:https://arutalacoffee.com/blog/harga-kopi-hari-ini-dinamika-pasar-lokal-kualitas-arutala-coffee-dan-keuntungan"
       ],
       "source_overlap": 0,
       "reason": "Pembanding periode sebelumnya memiliki kurang dari 5 observasi."
@@ -1886,10 +2148,10 @@
       "current_count": 4,
       "previous_count": 541,
       "current_sources": [
-        "https://kopitime.id/harga-kopi-menjelang-akhir-tahun-2026-dan-perkembangan-pasar-global-1"
+        "url:https://kopitime.id/harga-kopi-menjelang-akhir-tahun-2026-dan-perkembangan-pasar-global-1"
       ],
       "previous_sources": [
-        "https://arutalacoffee.com/blog/harga-kopi-hari-ini-dinamika-pasar-lokal-kualitas-arutala-coffee-dan-keuntungan"
+        "url:https://arutalacoffee.com/blog/harga-kopi-hari-ini-dinamika-pasar-lokal-kualitas-arutala-coffee-dan-keuntungan"
       ],
       "source_overlap": 0,
       "reason": "Komposisi sumber periode ini berbeda; sumber yang sama hanya sedikit."
@@ -1902,15 +2164,15 @@
       "current_count": 26,
       "previous_count": 13,
       "current_sources": [
-        "https://www.ijencoffee.com/",
-        "https://kopen.id/",
-        "https://berkopi.com/",
-        "https://willkingreencoffee.com/katalog-lokal/",
-        "https://www.aski.coffee/marketplace"
+        "url:https://www.ijencoffee.com/",
+        "url:https://kopen.id/",
+        "url:https://berkopi.com/",
+        "url:https://willkingreencoffee.com/katalog-lokal/",
+        "url:https://www.aski.coffee/marketplace"
       ],
       "previous_sources": [
-        "https://www.cnbcindonesia.com/research/20260803111814-128-755987/harga-kopi-dunia-mendidih-ri-dan-9-negara-ini-bisa-panen-cuan-jumbo",
-        "https://kopitime.id/harga-kopi-menjelang-akhir-tahun-2026-dan-perkembangan-pasar-global-1"
+        "url:https://www.cnbcindonesia.com/research/20260803111814-128-755987/harga-kopi-dunia-mendidih-ri-dan-9-negara-ini-bisa-panen-cuan-jumbo",
+        "url:https://kopitime.id/harga-kopi-menjelang-akhir-tahun-2026-dan-perkembangan-pasar-global-1"
       ],
       "source_overlap": 0,
       "reason": "Komposisi sumber periode ini berbeda; sumber yang sama hanya sedikit."
@@ -1923,15 +2185,15 @@
       "current_count": 9,
       "previous_count": 8,
       "current_sources": [
-        "https://www.coffestroastery.com/id/shop",
-        "https://www.ijencoffee.com/",
-        "https://kopen.id/",
-        "https://berkopi.com/",
-        "https://www.aski.coffee/marketplace",
-        "https://willkingreencoffee.com/katalog-lokal/"
+        "url:https://www.coffestroastery.com/id/shop",
+        "url:https://www.ijencoffee.com/",
+        "url:https://kopen.id/",
+        "url:https://berkopi.com/",
+        "url:https://www.aski.coffee/marketplace",
+        "url:https://willkingreencoffee.com/katalog-lokal/"
       ],
       "previous_sources": [
-        "https://kopitime.id/harga-kopi-menjelang-akhir-tahun-2026-dan-perkembangan-pasar-global-1"
+        "url:https://kopitime.id/harga-kopi-menjelang-akhir-tahun-2026-dan-perkembangan-pasar-global-1"
       ],
       "source_overlap": 0,
       "reason": "Komposisi sumber periode ini berbeda; sumber yang sama hanya sedikit."
@@ -1944,11 +2206,11 @@
       "current_count": 8,
       "previous_count": 6,
       "current_sources": [
-        "https://kopibara.id/",
-        "https://berkopi.com/"
+        "url:https://kopibara.id/",
+        "url:https://berkopi.com/"
       ],
       "previous_sources": [
-        "https://kopitime.id/harga-kopi-menjelang-akhir-tahun-2026-dan-perkembangan-pasar-global-1"
+        "url:https://kopitime.id/harga-kopi-menjelang-akhir-tahun-2026-dan-perkembangan-pasar-global-1"
       ],
       "source_overlap": 0,
       "reason": "Komposisi sumber periode ini berbeda; sumber yang sama hanya sedikit."
@@ -1961,10 +2223,10 @@
       "current_count": 1,
       "previous_count": 4,
       "current_sources": [
-        "https://berkopi.com/"
+        "url:https://berkopi.com/"
       ],
       "previous_sources": [
-        "https://kopitime.id/harga-kopi-menjelang-akhir-tahun-2026-dan-perkembangan-pasar-global-1"
+        "url:https://kopitime.id/harga-kopi-menjelang-akhir-tahun-2026-dan-perkembangan-pasar-global-1"
       ],
       "source_overlap": 0,
       "reason": "Pembanding periode sebelumnya memiliki kurang dari 5 observasi."
