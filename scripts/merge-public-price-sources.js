@@ -98,7 +98,7 @@ function canonicalRow(item, sourceDate = dateISO, basis = 'Tanggal diamati Kabar
   const sourceIsValid = sourceType === 'field'
     ? Boolean(item.source && item.source_detail)
     : /^https:\/\//i.test(sourceUrl);
-  if (!item.product || !item.source || !sourceIsValid || !['Arabika', 'Robusta'].includes(item.type) || !['Biji kopi mentah', 'Biji kopi sangrai', 'Kopi bubuk'].includes(item.form) || !['IDR', 'USD'].includes(currency) || !(numeric > 0)) return null;
+  if (!item.product || !item.source || !sourceIsValid || !['Arabika', 'Robusta', 'Excelsa', 'Liberica', 'Blend'].includes(item.type) || !['Biji kopi mentah', 'Biji kopi sangrai', 'Kopi bubuk'].includes(item.form) || !['IDR', 'USD'].includes(currency) || !(numeric > 0)) return null;
   const amount = Number(item.amount || 1);
   const unit = String(item.unit || 'kg').toLowerCase();
   const amountKg = unit === 'kg' ? amount : ['g', 'gram', 'gr'].includes(unit) ? amount / 1000 : null;
@@ -129,7 +129,7 @@ async function fetchApprovedManualRows() {
     const response = await fetch('https://blog-api.qcoid.com/api/internal/price-list-imports', { headers: { Authorization: `Bearer ${secret}`, Accept: 'application/json' } });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     const data = await response.json();
-    return { records: (data.listings || []).flatMap(entry => entry.listings.map(row => ({ ...row, source: row.source, source_url: row.source_url, uploadId: entry.id }))), ids: (data.listings || []).map(entry => entry.id) };
+    return { records: (data.listings || []).flatMap(entry => entry.listings.map(row => ({ ...row, source: row.source, source_url: row.source_url, uploadId: entry.id, upload_date: entry.created_at }))), ids: (data.listings || []).map(entry => entry.id) };
   } catch (error) { console.warn(`Could not read approved admin price imports: ${error.message}`); return { records: [], ids: [] }; }
 }
 async function main() {
@@ -153,8 +153,12 @@ async function main() {
   const supplementById = new Map(supplement.listings.map(row => [row.observation_id, row]));
   let added = 0;
   for (const item of records) {
-    const sourceDate = /^\d{4}-\d{2}-\d{2}$/.test(String(item.source_date || '')) ? item.source_date : dateISO;
-    const basis = sourceDate === dateISO ? 'Tanggal diamati Kabar Kopi' : 'Tanggal sumber';
+    const sourceDate = /^\d{4}-\d{2}-\d{2}$/.test(String(item.source_date || '')) ? item.source_date
+      : item.source_type === 'field' && /^\d{4}-\d{2}-\d{2}/.test(String(item.upload_date || '')) ? item.upload_date.slice(0, 10)
+        : dateISO;
+    const basis = item.source_date_basis === 'upload' || (!item.source_date && item.source_type === 'field')
+      ? 'Tanggal unggah catatan lapangan'
+      : sourceDate === dateISO ? 'Tanggal diamati Kabar Kopi' : 'Tanggal sumber';
     const row = canonicalRow(item, sourceDate, basis);
     if (!row) continue;
     if (!supplementById.has(row.observation_id)) added++;
