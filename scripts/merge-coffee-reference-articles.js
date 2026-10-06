@@ -43,6 +43,7 @@ const identityKey = value => {
 };
 const titleKey = value => String(value || '').normalize('NFKC').toLocaleLowerCase()
   .replace(/[^\p{L}\p{N}]+/gu, ' ').trim();
+const isCuratedReference = article => ['cie_curated_reference', 'mevo_curated_growth'].includes(article?.source_type);
 const cleanDate = (value, precision) => {
   if (!value) return '';
   const text = String(value).trim();
@@ -80,7 +81,10 @@ const toPublicArticle = raw => {
   // Screen the actual title, description, excerpt and fetched coffee context.
   const material = `${title} ${raw.source_description || ''} ${raw.content_excerpt || ''} ${raw.coffee_relevance_context || ''}`;
   const coffeeSignal = /\b(kopi|coffee|coffea|arabica|robusta|espresso|café|cafe|green\s+bean|biji kopi|coffeehouse|coffee shop|coffeehouse chain|coffee shop chain)\b/i.test(material);
-  if (!coffeeSignal) return null;
+  const mevoCurated = raw.source_collection === 'artikel_pertumbuhan' || raw.source_type === 'mevo_curated_growth';
+  // MEVO already screened this collection for coffee relevance. Keep that
+  // provenance and do not reject a valid publisher URL on a second keyword gate.
+  if (!coffeeSignal && !mevoCurated) return null;
   const date = cleanDate(raw.source_published_date, raw.publication_date_precision) || cleanDate(raw.published_date, raw.publication_date_precision);
   const precision = raw.publication_date_precision || (/^20\d{2}$/.test(date) ? 'year' : /^20\d{2}-\d{2}$/.test(date) ? 'month' : date ? 'day' : null);
   const excerpt = String(raw.content_excerpt || raw.source_description || '').replace(/\s+/g, ' ').trim().slice(0, 360);
@@ -94,12 +98,14 @@ const toPublicArticle = raw => {
     ringkasan: excerpt,
     coffee_relevance_context: String(raw.coffee_relevance_context || '').slice(0, 1100),
     link_type: 'publisher_article',
-    source_type: 'cie_curated_reference',
+    source_type: mevoCurated ? 'mevo_curated_growth' : 'cie_curated_reference',
+    source_collection: raw.source_collection || 'coffee_relevant_articles',
+    material_type: raw.material_type || null,
     source_original_url: directUrl(raw.url) || url,
     source_content_sha256: raw.content_sha256 || null,
     extraction_status: raw.extraction_status || 'not_attempted',
     source_relevance: String(raw.relevance || 'UNLABELED').toUpperCase(),
-    relevance_status: 'passed_kabar_kopi_fulltext_coffee_signal',
+    relevance_status: mevoCurated ? 'mevo_screened_coffee_relevance' : 'passed_kabar_kopi_fulltext_coffee_signal',
     cluster_id: 'lainnya',
     cluster_name: 'Lainnya',
     cluster_assignment: 'unassigned',
@@ -135,7 +141,7 @@ for (const raw of corpus.articles) {
     continue;
   }
   const key = articleKey(candidate), title = titleKey(candidate.judul), hash = digest(candidate);
-  const sameExistingReference = feedByKey.get(key)?.source_type === 'cie_curated_reference';
+const sameExistingReference = isCuratedReference(feedByKey.get(key));
   if ((feedKeys.has(key) && !sameExistingReference) || (feedTitles.has(title) && !sameExistingReference)
     || (hash && ((!sameExistingReference && feedDigests.has(hash)) || seenDigest.has(hash))) || seenUrl.has(key) || seenTitle.has(title)) {
     rejected.duplicate_url_title_or_content++;
@@ -150,9 +156,9 @@ for (const raw of corpus.articles) {
 const eligibleByKey = new Map(eligible.map(article => [articleKey(article), article]));
 // Reconcile earlier runs when date enrichment or the independent coffee
 // relevance screen changes a reference's destination or eligibility.
-const beforeFeedReferenceCount = feed.artikel.filter(article => article.source_type === 'cie_curated_reference').length;
-feed.artikel = feed.artikel.filter(article => article.source_type !== 'cie_curated_reference' || eligibleByKey.has(articleKey(article)));
-const staleFeedReferencesRemoved = beforeFeedReferenceCount - feed.artikel.filter(article => article.source_type === 'cie_curated_reference').length;
+const beforeFeedReferenceCount = feed.artikel.filter(isCuratedReference).length;
+feed.artikel = feed.artikel.filter(article => !isCuratedReference(article) || eligibleByKey.has(articleKey(article)));
+const staleFeedReferencesRemoved = beforeFeedReferenceCount - feed.artikel.filter(isCuratedReference).length;
 
 for (const file of fs.readdirSync(path.join(DATA, 'arsip')).filter(name => /^berita-\d{4}-\d{2}\.json$/.test(name))) {
   const archivePath = path.join(DATA, 'arsip', file);
@@ -160,7 +166,7 @@ for (const file of fs.readdirSync(path.join(DATA, 'arsip')).filter(name => /^ber
   if (!Array.isArray(archive.artikel)) continue;
   const before = archive.artikel.length;
   archive.artikel = archive.artikel.filter(article => {
-    if (article.source_type !== 'cie_curated_reference') return true;
+    if (!isCuratedReference(article)) return true;
     const candidate = eligibleByKey.get(articleKey(article));
     return !!candidate && !!candidate.tanggal && archiveMonth(candidate) === file.slice(7, 14);
   });
@@ -179,7 +185,7 @@ const undated = read(UNDATED_ARCHIVE_PATH, { archive_type: 'undated_curated_refe
 if (!Array.isArray(undated.artikel)) undated.artikel = [];
 const beforeUndatedReferenceCount = undated.artikel.length;
 undated.artikel = undated.artikel.filter(article => {
-  if (article.source_type !== 'cie_curated_reference') return true;
+  if (!isCuratedReference(article)) return true;
   const candidate = eligibleByKey.get(articleKey(article));
   return !!candidate && !candidate.tanggal;
 });
@@ -190,7 +196,7 @@ for (const article of eligible) {
   const key = articleKey(article);
   const existingIndex = feed.artikel.findIndex(existing => articleKey(existing) === key);
   if (existingIndex < 0) { feed.artikel.push(article); addedToFeed++; }
-  else if (feed.artikel[existingIndex].source_type === 'cie_curated_reference') {
+    else if (isCuratedReference(feed.artikel[existingIndex])) {
     const old = feed.artikel[existingIndex];
     Object.assign(old, article, {
       cluster_id: old.cluster_id || article.cluster_id,
@@ -209,7 +215,7 @@ for (const article of eligible) {
     if (!byKey.has(key)) { archive.artikel.push(article); addedToArchives++; }
     else {
       const old = archive.artikel[byKey.get(key)];
-      if (old.source_type === 'cie_curated_reference') {
+      if (isCuratedReference(old)) {
         Object.assign(old, article, {
           cluster_id: old.cluster_id || article.cluster_id,
           cluster_name: old.cluster_name || article.cluster_name,
@@ -226,7 +232,7 @@ for (const article of eligible) {
     addedToArchives++;
   } else {
     const old = undated.artikel[undatedByKey.get(key)];
-    if (old.source_type === 'cie_curated_reference') Object.assign(old, article, {
+    if (isCuratedReference(old)) Object.assign(old, article, {
       cluster_id: old.cluster_id || article.cluster_id,
       cluster_name: old.cluster_name || article.cluster_name,
       cluster_assignment: old.cluster_assignment || article.cluster_assignment,
@@ -238,7 +244,7 @@ for (const article of eligible) {
 feed.artikel.sort((a, b) => (Date.parse(b.tanggal || b.pubDate || '') || 0) - (Date.parse(a.tanggal || a.pubDate || '') || 0));
 feed.fetched = feed.fetched || new Date().toISOString();
 feed.reference_ingest = {
-  source: 'KGS-blog/coffee-intelligence-engine/exports/coffee_relevant_articles.json',
+  source: ['KGS-blog/coffee-intelligence-engine/exports/coffee_relevant_articles.json', 'KGS-blog/coffee-feed/artikel_pertumbuhan.json'],
   imported_at: new Date().toISOString(),
   source_records: corpus.articles.length,
   accepted_candidates: eligible.length,

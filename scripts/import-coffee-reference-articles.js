@@ -3,6 +3,7 @@ const path = require('path');
 
 const ROOT = path.join(__dirname, '..');
 const SOURCE_URL = 'https://api.github.com/repos/KGS-blog/coffee-intelligence-engine/contents/exports/coffee_relevant_articles.json?ref=main';
+const GROWTH_SOURCE_URL = 'https://raw.githubusercontent.com/KGS-blog/coffee-feed/main/artikel_pertumbuhan.json';
 const OUTPUT = path.join(ROOT, 'data', 'coffee-reference-articles.json');
 const UA = { 'User-Agent': 'KabarKopiDataPipeline/1.0' };
 
@@ -61,6 +62,12 @@ async function getSource() {
   return response.json();
 }
 
+async function getGrowthSource() {
+  const response = await fetch(GROWTH_SOURCE_URL, { headers: { ...UA, Accept: 'application/json' }, signal: AbortSignal.timeout(20000) });
+  if (!response.ok) throw new Error(`Sumber pertumbuhan MEVO membalas HTTP ${response.status}`);
+  return response.json();
+}
+
 function deduplicate(rows, feedRows) {
   const feedKeys = new Set();
   for (const article of feedRows) {
@@ -96,7 +103,9 @@ function deduplicate(rows, feedRows) {
         relevance_label: raw.relevance_label || '',
         evidence_count: Number(raw.evidence_count) || 0,
         validated_at: raw.validated_at || null,
-        source_type: 'reference_article'
+        source_type: raw.source_collection === 'artikel_pertumbuhan' ? 'mevo_curated_growth' : 'reference_article',
+        source_collection: raw.source_collection || 'coffee_relevant_articles',
+        material_type: raw.material_type || null
       });
       if (internalReference) internalFileReferences++;
     } else if (!current.published_date && raw.published_date) {
@@ -115,9 +124,9 @@ function deduplicate(rows, feedRows) {
 }
 
 (async () => {
-  let source;
+  let source, growthSource;
   try {
-    source = await getSource();
+    [source, growthSource] = await Promise.all([getSource(), getGrowthSource()]);
   } catch (error) {
     if (fs.existsSync(OUTPUT)) {
       console.warn(`Coffee reference import skipped; retaining existing archive: ${error.message}`);
@@ -126,9 +135,18 @@ function deduplicate(rows, feedRows) {
     throw error;
   }
 
-  if (!source || !Array.isArray(source.articles)) throw new Error('Format sumber tidak valid: articles harus berupa array.');
-  // Source relevance labels are metadata, not the final Kabar Kopi decision.
-  const candidates = source.articles.filter(Boolean);
+  if (!source || !Array.isArray(source.articles)) throw new Error('Format sumber Coffee Intelligence Engine tidak valid: articles harus berupa array.');
+  if (!growthSource || !Array.isArray(growthSource.articles)) throw new Error('Format artikel_pertumbuhan.json tidak valid: articles harus berupa array.');
+  // Both upstream collections have been screened for coffee relevance by MEVO.
+  // Keep relevance labels as provenance metadata; CORE/MIXED is not a gate.
+  const engineCandidates = source.articles.filter(Boolean).map(article => ({ ...article, source_collection: 'coffee_relevant_articles' }));
+  const growthCandidates = growthSource.articles.filter(Boolean).map(article => ({
+    ...article,
+    id: `growth-${article.id}`,
+    source_collection: 'artikel_pertumbuhan',
+    material_type: article.material_type || 'growth'
+  }));
+  const candidates = [...engineCandidates, ...growthCandidates];
   const latestFeed = readJson(path.join(ROOT, 'data', 'berita-all.json'), { artikel: [] });
   const currentFeed = readJson(path.join(ROOT, 'data', 'berita.json'), { artikel: [] });
   const mergedFeed = [...(latestFeed.artikel || []), ...(currentFeed.artikel || [])];
@@ -157,8 +175,15 @@ function deduplicate(rows, feedRows) {
     schema_version: 1,
     collection_type: 'coffee_reference_articles',
     source_repository: 'KGS-blog/coffee-intelligence-engine',
-    source_path: 'exports/coffee_relevant_articles.json',
+    source_path: ['KGS-blog/coffee-intelligence-engine/exports/coffee_relevant_articles.json', 'KGS-blog/coffee-feed/artikel_pertumbuhan.json'],
     source_generated_at: source.generated_at || null,
+    mevo_growth_source: {
+      repository: 'KGS-blog/coffee-feed',
+      path: 'artikel_pertumbuhan.json',
+      generated_at: growthSource.generated_at || null,
+      source_records: growthSource.articles.length,
+      relevance_labels_retained_as_metadata: true
+    },
     fetched_at: new Date().toISOString(),
     content_fetch: previousCorpus.content_fetch || undefined,
     count: result.articles.length,
@@ -177,7 +202,7 @@ function deduplicate(rows, feedRows) {
 
   fs.mkdirSync(path.dirname(OUTPUT), { recursive: true });
   fs.writeFileSync(OUTPUT, JSON.stringify(output));
-  console.log(`Coffee reference corpus: ${result.articles.length} records saved; ${output.deduplication.duplicate_urls_or_article_aliases_removed} URL/article-alias duplicates removed; ${result.overlapsWithFeed} feed overlaps retained for independent screening; ${result.sameTitleGroups} repeated-title groups kept because titles alone are not safe deduplication keys.`);
+  console.log(`Coffee reference corpus: ${result.articles.length} records saved (${engineCandidates.length} engine + ${growthCandidates.length} MEVO growth candidates); ${output.deduplication.duplicate_urls_or_article_aliases_removed} URL/article-alias duplicates removed; ${result.overlapsWithFeed} feed overlaps retained for merge deduplication; ${result.sameTitleGroups} repeated-title groups kept because titles alone are not safe deduplication keys.`);
 })().catch(error => {
   console.error('Coffee reference import failed:', error.message);
   process.exitCode = 1;
