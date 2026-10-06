@@ -95,7 +95,17 @@ function reportSources(item, article = item.article || {}) {
   const inputs = item.input_sources || [];
   const sourceUrls = Array.isArray(article.source_urls) ? article.source_urls : [];
   const byUrl = new Map(inputs.map(source => [source.url, source]));
-  const ordered = sourceUrls.map(url => byUrl.get(url)).filter(Boolean);
+  // Keep source_urls positional: citation markers [1], [2], ... refer to this
+  // exact order. A source may be absent from input_sources after enrichment;
+  // dropping it here silently renumbers every later citation and can either
+  // misattribute evidence or fail the whole publication workflow.
+  const ordered = sourceUrls.map(url => {
+    const known = byUrl.get(url);
+    if (known) return known;
+    let hostname = '';
+    try { hostname = new URL(url).hostname.replace(/^www\./, ''); } catch (_) {}
+    return { id: '', url, source: hostname || 'Sumber penerbit', title: '' };
+  });
   return ordered.length ? ordered : inputs;
 }
 const publicReports = reports.map(item=>{const article=item.article||{}, page=`analisis-kopi/${fileFor(item,'id')}`, cluster=BERITA_KLASTER.find(entry=>entry.slug===item.cluster_id||entry.nama===item.cluster_name), refs=reportSources(item,article);const sources=refs.map((s,index)=>{const u=safeUrl(s.url);return u?`<li><a href="${esc(u)}" rel="noopener noreferrer">[${esc(article.source_urls?.length?index+1:s.id)}] ${esc(s.source||'Sumber asli')}${s.title?` — ${esc(s.title)}`:''}</a></li>`:''}).filter(Boolean).join('');return `<article class="report-card"><span class="candidate-badge">Artikel analisis · Publik · ${esc(item.cluster_name||cluster?.nama||'Kopi')} · ${esc(item.period_days||'')} hari</span><h3><a href="${esc(page)}">${esc(article.title||'Analisis pasar kopi')}</a></h3>${article.summary?`<p><strong>${esc(article.summary)}</strong></p>`:''}${article.lead?`<p>${esc(article.lead)}</p>`:''}<p class="source-line">Analisis editorial otomatis dari berita yang dihimpun. Kategori dan jumlah berita menunjukkan pola pemberitaan, bukan verifikasi kebenaran klaim atau dampak ekonomi.</p>${sources?`<details><summary>Sumber yang dikutip (${refs.length})</summary><ol>${sources}</ol></details>`:''}<p><a href="${esc(page)}">Baca analisis lengkap, kesimpulan, rekomendasi, sumber, dan batas bukti →</a></p></article>`}).join('');
