@@ -20,7 +20,9 @@
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "cluster_review_version": 0
+      "cluster_review_version": 0,
+      "source_collection": "coffee_relevant_articles",
+      "material_type": null
     },
     {
       "judul": "Sistem Pemasaran Kopi Robusta di Kota Pagar Alam Sumatera Selatan",
@@ -41,7 +43,9 @@
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "cluster_review_version": 0
+      "cluster_review_version": 0,
+      "source_collection": "coffee_relevant_articles",
+      "material_type": null
     },
     {
       "judul": "PENGARUH PERILAKU KEWIRAUSAHAAN TERHADAP KINERJA USAHATANI KOPI ORGANIK DI KABUPATEN SUMBAWA",
@@ -62,7 +66,9 @@
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "cluster_review_version": 0
+      "cluster_review_version": 0,
+      "source_collection": "coffee_relevant_articles",
+      "material_type": null
     },
     {
       "judul": "Analisis Strategi Pengembangan Usaha Koperasi Kopi Amungme Gold",
@@ -83,7 +89,9 @@
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "cluster_review_version": 0
+      "cluster_review_version": 0,
+      "source_collection": "coffee_relevant_articles",
+      "material_type": null
     },
     {
       "judul": "STRATEGI BAURAN PEMASARAN PRODUK HASIL AGROFORESTRI PETANI KTH SATRIA MANDIRI CIANJUR, JAWA BARAT",
@@ -104,7 +112,9 @@
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "cluster_review_version": 0
+      "cluster_review_version": 0,
+      "source_collection": "coffee_relevant_articles",
+      "material_type": null
     }
   ]
 }

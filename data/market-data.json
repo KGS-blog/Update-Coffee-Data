@@ -1,7 +1,7 @@
 {
   "meta": {
     "source": "Yahoo Finance (Arabica, IDR/USD) + International Coffee Organization (ICO Robustas daily indicator) via GitHub Actions",
-    "lastUpdated": "2026-10-06T15:11:50.077Z",
+    "lastUpdated": "2026-10-06T15:28:35.467Z",
     "nextUpdate": "Auto: GitHub Actions",
     "version": "1.0"
   },
@@ -9,9 +9,9 @@
     "symbol": "KC=F",
     "name": "Arabica C-Market",
     "unit": "cents/lb",
-    "current": 304.3,
-    "change": 4.25,
-    "changePercent": 1.42,
+    "current": 305.95,
+    "change": 1.65,
+    "changePercent": 0.54,
     "history": [
       {
         "month": "Jan 2021",
@@ -275,7 +275,7 @@
       },
       {
         "month": "Okt 2026",
-        "value": 304.3
+        "value": 305.95
       }
     ],
     "stale": false
@@ -293,7 +293,7 @@
     "sourceUnit": "US cents/lb",
     "sourceDate": "2026-10-05",
     "sourceUrl": "https://www.ico.org/resources/public-market-information/",
-    "lastUpdated": "2026-10-06T15:11:50.077Z"
+    "lastUpdated": "2026-10-06T15:28:35.467Z"
   },
   "idrUsd": {
     "symbol": "IDR=X",

@@ -20,7 +20,9 @@
       "cluster_review_version": 0,
       "publication_date_precision": "day",
       "publication_date_evidence": "2025-12-17T01:11:00+00:00",
-      "coffee_relevance_context": "i, dan Country Manager Solidaridad Indonesia, Yeni Fitriyanti, di Tenggarong, Senin (15/12). Sub-sektor perkebunan—mulai dari kelapa sawit, kopi, hingga kakao—menjadi fokus utama, seiring perannya yang semakin penting dalam menopang pendapatan asli daerah (PAD). Bupati Aulia Rahman Basri menegaskan, kemitraan ini merupakan … unggulan Kukar di pasar global, sekaligus memastikan petani kecil tetap sejahtera tanpa mengorbankan lingkungan. “Kami ingin petani sawit, kopi, dan kakao di Kukar mampu menghadapi perubahan iklim dan berdiri kuat di atas tanahnya sendiri,” katanya. Penandatanganan nota kesepahaman ini dirangkaikan dengan lokakarya multip … i sebagai aktor utama perubahan. Belasan perwakilan kelompok tani dan koperasi hadir, membawa cerita sekaligus potensi dari lapangan. Aroma kopi dari Desa Perangat Baru dan Cipari Makmur, kakao unggulan Desa Long Anai, hingga koperasi sawit swadaya Belayan Sejahtera, menjadi bukti bahwa komoditas rakyat Kukar memiliki kual"
+      "coffee_relevance_context": "i, dan Country Manager Solidaridad Indonesia, Yeni Fitriyanti, di Tenggarong, Senin (15/12). Sub-sektor perkebunan—mulai dari kelapa sawit, kopi, hingga kakao—menjadi fokus utama, seiring perannya yang semakin penting dalam menopang pendapatan asli daerah (PAD). Bupati Aulia Rahman Basri menegaskan, kemitraan ini merupakan … unggulan Kukar di pasar global, sekaligus memastikan petani kecil tetap sejahtera tanpa mengorbankan lingkungan. “Kami ingin petani sawit, kopi, dan kakao di Kukar mampu menghadapi perubahan iklim dan berdiri kuat di atas tanahnya sendiri,” katanya. Penandatanganan nota kesepahaman ini dirangkaikan dengan lokakarya multip … i sebagai aktor utama perubahan. Belasan perwakilan kelompok tani dan koperasi hadir, membawa cerita sekaligus potensi dari lapangan. Aroma kopi dari Desa Perangat Baru dan Cipari Makmur, kakao unggulan Desa Long Anai, hingga koperasi sawit swadaya Belayan Sejahtera, menjadi bukti bahwa komoditas rakyat Kukar memiliki kual",
+      "source_collection": "coffee_relevant_articles",
+      "material_type": null
     },
     {
       "judul": "ISSN: 2355 – 6323 Volume XII No",
@@ -41,7 +43,9 @@
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "cluster_review_version": 0
+      "cluster_review_version": 0,
+      "source_collection": "coffee_relevant_articles",
+      "material_type": null
     },
     {
       "judul": "SEJAGAT : Jurnal Pengabdian Masyarakat P3M Politeknik Negeri Jember Vol",
@@ -62,7 +66,9 @@
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "cluster_review_version": 0
+      "cluster_review_version": 0,
+      "source_collection": "coffee_relevant_articles",
+      "material_type": null
     },
     {
       "judul": "Jurnal Kajian Ekonomi dan Studi Pembangunan Volume XII No.3, Desember 2025 12 ANALISIS FAKTOR-FAKTOR YANG MEMPENGARUHI PENDAPATAN USAHA…",
@@ -83,7 +89,9 @@
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "cluster_review_version": 0
+      "cluster_review_version": 0,
+      "source_collection": "coffee_relevant_articles",
+      "material_type": null
     },
     {
       "judul": "Seberapa Sering Orang Indonesia Minum Teh dan Kopi? - GoodStats",
@@ -104,7 +112,9 @@
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "cluster_review_version": 0
+      "cluster_review_version": 0,
+      "source_collection": "coffee_relevant_articles",
+      "material_type": null
     },
     {
       "judul": "USDA FAS — Food Service Annual Indonesia 2025",
@@ -125,7 +135,9 @@
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "cluster_review_version": 0
+      "cluster_review_version": 0,
+      "source_collection": "coffee_relevant_articles",
+      "material_type": null
     }
   ]
 }

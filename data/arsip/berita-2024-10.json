@@ -20,7 +20,9 @@
       "cluster_review_version": 0,
       "publication_date_precision": "day",
       "publication_date_evidence": "2024-10-15T08:56:11+00:00",
-      "coffee_relevance_context": "Single origin coffee adalah kopi yang berasal dari satu wilayah geografis tertentu—entah itu satu negara, satu wilayah, atau bahkan satu perkebunan. Jenis kopi ini menawarkan pengalaman rasa yang unik … Single origin coffee adalah kopi yang berasal dari satu wilayah geografis tertentu—entah itu satu negara, satu wilayah, atau bahkan satu perkebunan. Jenis kopi ini menawarkan pengalaman rasa yang unik karena menc … offee adalah kopi yang berasal dari satu wilayah geografis tertentu—entah itu satu negara, satu wilayah, atau bahkan satu perkebunan. Jenis kopi ini menawarkan pengalaman rasa yang unik karena mencerminkan karakteristik spesifik dari tempat asalnya, yang dikenal dengan istilah terroir. Terroir merujuk pada kombinasi elemen"
+      "coffee_relevance_context": "Single origin coffee adalah kopi yang berasal dari satu wilayah geografis tertentu—entah itu satu negara, satu wilayah, atau bahkan satu perkebunan. Jenis kopi ini menawarkan pengalaman rasa yang unik … Single origin coffee adalah kopi yang berasal dari satu wilayah geografis tertentu—entah itu satu negara, satu wilayah, atau bahkan satu perkebunan. Jenis kopi ini menawarkan pengalaman rasa yang unik karena menc … offee adalah kopi yang berasal dari satu wilayah geografis tertentu—entah itu satu negara, satu wilayah, atau bahkan satu perkebunan. Jenis kopi ini menawarkan pengalaman rasa yang unik karena mencerminkan karakteristik spesifik dari tempat asalnya, yang dikenal dengan istilah terroir. Terroir merujuk pada kombinasi elemen",
+      "source_collection": "coffee_relevant_articles",
+      "material_type": null
     },
     {
       "judul": "Berhasil Tingkatkan Produktivitas Kebun Kopi, PalmCo Bawa Java Cofee Kembali Mendunia - AgroIndonesia",
@@ -41,7 +43,9 @@
       "cluster_review_version": 0,
       "publication_date_precision": "day",
       "publication_date_evidence": "2024-10-23T10:39:14+00:00",
-      "coffee_relevance_context": "r tweet Direktur Utama Holding Perkebunan PTPN III (Persero) Mohammad Abdul Ghani (kiri) bersama Dirut PalmCo Jatmiko Santosa saat di kebun kopi JCE, Bondowoso Jawa Timur. Sampai September tahun ini, JCE telah memproduksi 821 ton kopi arabika dan 32 persennya diserap pasar manca negara mulai dari Amerika hingga Eropa. http … ersama Dirut PalmCo Jatmiko Santosa saat di kebun kopi JCE, Bondowoso Jawa Timur. Sampai September tahun ini, JCE telah memproduksi 821 ton kopi arabika dan 32 persennya diserap pasar manca negara mulai dari Amerika hingga Eropa. https://agroindonesia.co.id/wp-content/uploads/2026/08/mutuagung.jpegKerja sama operasional (K … tuagung.jpegKerja sama operasional (KSO) dua subholding PTPN III (Persero), yakni PTPN IV PalmCo dan PTPN I SupportingCo di perkebunan Java Coffee Estate yang ada di kawasan Ijen Jawa Timur berhasil membawa dampak positif kepada perkebunan Kopi Arabika tertua ke tiga di dunia tersebut. Produksi kopi legendaris ini meningkat"
+      "coffee_relevance_context": "r tweet Direktur Utama Holding Perkebunan PTPN III (Persero) Mohammad Abdul Ghani (kiri) bersama Dirut PalmCo Jatmiko Santosa saat di kebun kopi JCE, Bondowoso Jawa Timur. Sampai September tahun ini, JCE telah memproduksi 821 ton kopi arabika dan 32 persennya diserap pasar manca negara mulai dari Amerika hingga Eropa. http … ersama Dirut PalmCo Jatmiko Santosa saat di kebun kopi JCE, Bondowoso Jawa Timur. Sampai September tahun ini, JCE telah memproduksi 821 ton kopi arabika dan 32 persennya diserap pasar manca negara mulai dari Amerika hingga Eropa. https://agroindonesia.co.id/wp-content/uploads/2026/08/mutuagung.jpegKerja sama operasional (K … tuagung.jpegKerja sama operasional (KSO) dua subholding PTPN III (Persero), yakni PTPN IV PalmCo dan PTPN I SupportingCo di perkebunan Java Coffee Estate yang ada di kawasan Ijen Jawa Timur berhasil membawa dampak positif kepada perkebunan Kopi Arabika tertua ke tiga di dunia tersebut. Produksi kopi legendaris ini meningkat",
+      "source_collection": "coffee_relevant_articles",
+      "material_type": null
     },
     {
       "judul": "Analisis Rantai Nilai Kopi untuk Meningkatkan Nilai Tambah Petani Kopi di Kecamatan Paguyangan Brebes",
@@ -62,7 +66,9 @@
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "cluster_review_version": 0
+      "cluster_review_version": 0,
+      "source_collection": "coffee_relevant_articles",
+      "material_type": null
     },
     {
       "judul": "ANALISIS STRATEGI PENGEMBANGAN USAHATANI AGRIBISNIS KOPI (STUDI KASUS: KOPI ARABIKA ENREKANG)",
@@ -83,7 +89,9 @@
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "cluster_review_version": 0
+      "cluster_review_version": 0,
+      "source_collection": "coffee_relevant_articles",
+      "material_type": null
     },
     {
       "judul": "Hasil Survei Pola Konsumsi Kopi 2024 - GoodStats",
@@ -104,7 +112,9 @@
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "cluster_review_version": 0
+      "cluster_review_version": 0,
+      "source_collection": "coffee_relevant_articles",
+      "material_type": null
     },
     {
       "judul": "Harga Kopi Robusta di Petani Turun Jadi Rp 55 Ribu/Kg",
@@ -125,7 +135,9 @@
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "cluster_review_version": 0
+      "cluster_review_version": 0,
+      "source_collection": "coffee_relevant_articles",
+      "material_type": null
     }
   ]
 }

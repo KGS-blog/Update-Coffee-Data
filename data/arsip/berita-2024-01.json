@@ -20,7 +20,9 @@
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "cluster_review_version": 0
+      "cluster_review_version": 0,
+      "source_collection": "coffee_relevant_articles",
+      "material_type": null
     },
     {
       "judul": "1143 © 2024 Program Studi Ilmu Lingkungan Sekolah Pascasarjana UNDIP JURNAL ILMU LINGKUNGAN Volume 22 Issue 5 (2024)…",
@@ -41,7 +43,9 @@
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "cluster_review_version": 0
+      "cluster_review_version": 0,
+      "source_collection": "coffee_relevant_articles",
+      "material_type": null
     },
     {
       "judul": "USDA FAS — Coffee Annual Indonesia 2024",
@@ -62,7 +66,9 @@
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "cluster_review_version": 0
+      "cluster_review_version": 0,
+      "source_collection": "coffee_relevant_articles",
+      "material_type": null
     }
   ]
 }

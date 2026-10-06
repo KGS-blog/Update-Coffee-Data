@@ -20,7 +20,9 @@
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "cluster_review_version": 0
+      "cluster_review_version": 0,
+      "source_collection": "coffee_relevant_articles",
+      "material_type": null
     },
     {
       "judul": "STRATEGI USAHA KECIL DAN MENENGAH (UKM) BERBASIS EKONOMI KREATIF PENGOLAHAN KOPI KABUPATEN ACEH TENGAH",
@@ -41,7 +43,9 @@
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "cluster_review_version": 0
+      "cluster_review_version": 0,
+      "source_collection": "coffee_relevant_articles",
+      "material_type": null
     },
     {
       "judul": "DOI: http://dx.doi.org/10.25181/jppt.v17i3.2174 Jurnal Penelitian Pertanian Terapan Vol",
@@ -62,7 +66,9 @@
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "cluster_review_version": 0
+      "cluster_review_version": 0,
+      "source_collection": "coffee_relevant_articles",
+      "material_type": null
     },
     {
       "judul": "Microsoft Word - R1. 1-9-261-Article Text-553-1-6-20220707.docx",
@@ -83,7 +89,9 @@
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "cluster_review_version": 0
+      "cluster_review_version": 0,
+      "source_collection": "coffee_relevant_articles",
+      "material_type": null
     },
     {
       "judul": "FAKTOR SOSIAL EKONOMI YANG MEMPENGARUHI PRODUKSI PETANI KOPI ROBUSTA PETIK MERAH DI KABUPATEN KEPAHIANG",
@@ -104,7 +112,9 @@
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "cluster_review_version": 0
+      "cluster_review_version": 0,
+      "source_collection": "coffee_relevant_articles",
+      "material_type": null
     },
     {
       "judul": "Journal of Socio Economics on Tropical Agriculture (Jurnal Sosial Ekonomi Pertanian Tropis) (JOSETA) VOL.4 NO",
@@ -125,7 +135,9 @@
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "cluster_review_version": 0
+      "cluster_review_version": 0,
+      "source_collection": "coffee_relevant_articles",
+      "material_type": null
     }
   ]
 }

@@ -20,7 +20,9 @@
       "cluster_review_version": 0,
       "publication_date_precision": "day",
       "publication_date_evidence": "2025-03-18T04:05:37+00:00",
-      "coffee_relevance_context": "Indonesia telah lama dikenal sebagai salah satu penghasil kopi terbaik di dunia, dan di antara kekayaan kopinya, Kopi Gayo dari Aceh adalah salah satu mutiara yang tak tergantikan. Kini, kami memperkenalkan Gayo Black Forest , sebuah varietas … Indonesia telah lama dikenal sebagai salah satu penghasil kopi terbaik di dunia, dan di antara kekayaan kopinya, Kopi Gayo dari Aceh adalah salah satu mutiara yang tak tergantikan. Kini, kami memperkenalkan Gayo Black Forest , sebuah varietas single origin istimewa yang siap memanjakan lidah para … tergantikan. Kini, kami memperkenalkan Gayo Black Forest , sebuah varietas single origin istimewa yang siap memanjakan lidah para penikmat kopi dengan notes cokelat, rum, dan ceri yang unik dan mendalam. 1. Apa Itu Gayo Black Forest? Gayo Black Forest adalah kopi single origin premium yang berasal dari dataran tinggi Gayo"
+      "coffee_relevance_context": "Indonesia telah lama dikenal sebagai salah satu penghasil kopi terbaik di dunia, dan di antara kekayaan kopinya, Kopi Gayo dari Aceh adalah salah satu mutiara yang tak tergantikan. Kini, kami memperkenalkan Gayo Black Forest , sebuah varietas … Indonesia telah lama dikenal sebagai salah satu penghasil kopi terbaik di dunia, dan di antara kekayaan kopinya, Kopi Gayo dari Aceh adalah salah satu mutiara yang tak tergantikan. Kini, kami memperkenalkan Gayo Black Forest , sebuah varietas single origin istimewa yang siap memanjakan lidah para … tergantikan. Kini, kami memperkenalkan Gayo Black Forest , sebuah varietas single origin istimewa yang siap memanjakan lidah para penikmat kopi dengan notes cokelat, rum, dan ceri yang unik dan mendalam. 1. Apa Itu Gayo Black Forest? Gayo Black Forest adalah kopi single origin premium yang berasal dari dataran tinggi Gayo",
+      "source_collection": "coffee_relevant_articles",
+      "material_type": null
     },
     {
       "judul": "Berita Sawit - Regulasi EUDR, Jadi Tantangan bagi Petani Kopi dan Sawit Kecil - InfoSAWIT",
@@ -41,7 +43,9 @@
       "cluster_review_version": 0,
       "publication_date_precision": "day",
       "publication_date_evidence": "2025-03-21T20:28:00+00:00",
-      "coffee_relevance_context": "geri Arif Havas Oegroseno. InfoSAWIT, JAKARTA – Wakil Menteri Luar Negeri Arif Havas Oegroseno mengungkapkan tantangan yang dihadapi petani kopi dan sawit kecil dalam memenuhi regulasi Uni Eropa (EU Deforestation Regulation/EUDR). saat membuka sebuah acara di Jakarta, ia menegaskan bahwa regulasi ini menuntut petani kecil, … menuntut petani kecil, koperasi, serta eksportir untuk memahami persyaratan ketat sebelum produk mereka dapat masuk ke pasar Eropa. “Petani kopi banyak yang langsung mengekspor, sementara petani sawit kecil biasanya menjual hasil panennya ke industri besar yang melakukan pemrosesan atau ekspor,” kata Havas. “Jadi, koperasi … ni sawit kecil biasanya menjual hasil panennya ke industri besar yang melakukan pemrosesan atau ekspor,” kata Havas. “Jadi, koperasi petani kopi dan kakao yang melakukan ekspor dianggap sebagai operator dan harus memenuhi Pasal 2 ayat 15 dan 16 dari regulasi EUDR.” Menurut Havas, regulasi ini mencakup kewajiban bagi operat"
+      "coffee_relevance_context": "geri Arif Havas Oegroseno. InfoSAWIT, JAKARTA – Wakil Menteri Luar Negeri Arif Havas Oegroseno mengungkapkan tantangan yang dihadapi petani kopi dan sawit kecil dalam memenuhi regulasi Uni Eropa (EU Deforestation Regulation/EUDR). saat membuka sebuah acara di Jakarta, ia menegaskan bahwa regulasi ini menuntut petani kecil, … menuntut petani kecil, koperasi, serta eksportir untuk memahami persyaratan ketat sebelum produk mereka dapat masuk ke pasar Eropa. “Petani kopi banyak yang langsung mengekspor, sementara petani sawit kecil biasanya menjual hasil panennya ke industri besar yang melakukan pemrosesan atau ekspor,” kata Havas. “Jadi, koperasi … ni sawit kecil biasanya menjual hasil panennya ke industri besar yang melakukan pemrosesan atau ekspor,” kata Havas. “Jadi, koperasi petani kopi dan kakao yang melakukan ekspor dianggap sebagai operator dan harus memenuhi Pasal 2 ayat 15 dan 16 dari regulasi EUDR.” Menurut Havas, regulasi ini mencakup kewajiban bagi operat",
+      "source_collection": "coffee_relevant_articles",
+      "material_type": null
     },
     {
       "judul": "USDA FAS — Coffee Annual Indonesia 2025",
@@ -62,7 +66,9 @@
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
-      "cluster_review_version": 0
+      "cluster_review_version": 0,
+      "source_collection": "coffee_relevant_articles",
+      "material_type": null
     }
   ]
 }
