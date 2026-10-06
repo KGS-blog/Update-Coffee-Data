@@ -14,6 +14,8 @@ on:
       - 'scripts/render-static-news.js'
       - 'scripts/generate-discovery-pages.js'
       - 'scripts/generate-weekly-brief.js'
+      - 'scripts/import-mevo-price-data.js'
+      - 'scripts/render-static-coffee-price-chart.js'
       - 'scripts/templates/kabar-kopi.html'
       - 'data/editorial-settings.json'
   schedule:
@@ -37,6 +39,8 @@ jobs:
           NEWSDATA_KEY: ${{ secrets.NEWSDATA_KEY }}
           USDA_API_KEY: ${{ secrets.USDA_API_KEY }}
         run: node scripts/fetch.js
+      - name: Save MEVO coffee price listings in Kabar Kopi
+        run: node scripts/import-mevo-price-data.js
       - name: Import deduplicated coffee reference articles
         env:
           COFFEE_ENGINE_READ_TOKEN: ${{ secrets.COFFEE_ENGINE_READ_TOKEN }}
@@ -77,6 +81,8 @@ jobs:
         run: node scripts/generate-editorial-pages.js
       - name: Render direct-source headlines into both crawlable entrypoints
         run: node scripts/render-static-news.js
+      - name: Render static home coffee price chart
+        run: node scripts/render-static-coffee-price-chart.js
       - name: Generate crawlable coffee data and calculator pages
         run: node scripts/generate-discovery-pages.js
       - name: Render public MEVO report previews into static HTML
