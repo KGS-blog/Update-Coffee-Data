@@ -1,6 +1,56 @@
 {
   "artikel": [
     {
+      "judul": "Dorong Hilirisasi, Pemkab Perkuat Branding Jember Surga Kopi - RRI.co.id",
+      "tautan": "https://rri.co.id/jember/regional/2789287/dorong-hilirisasi-pemkab-perkuat-branding-jember-surga-kopi",
+      "tanggal": "Tue, 06 Oct 2026 08:50:00 GMT",
+      "sumber": "RRI.co.id",
+      "asal": "google_news",
+      "aggregator": "Google News",
+      "link_type": "publisher_article",
+      "resolution_status": "resolved",
+      "tautan_google_news": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQN01rZkx2Zk9FUy1icVZzTUJkOUh4SHlRTl9jMnlIbC0wdDEyNjVzNDVGQmNQWUJxQW5oOXBSZVBKYmI1bWpfSTJkRjJGWXREbEhOdEZrLVJGdlE2bXhXdkVRRHJUdFhmSG1aYUdoczdCc0dVMF9QSGhxdGFNSFhlSTlrVnloQU9JOEs1UVVET0xkempOUzI2bHc3cWxLc0xhNjRJ?oc=5",
+      "extracted_at": "2026-10-06T08:57:47Z",
+      "extracted_from_url": "https://rri.co.id/jember/regional/2789287/dorong-hilirisasi-pemkab-perkuat-branding-jember-surga-kopi",
+      "resolved_url": "https://rri.co.id/jember/regional/2789287/dorong-hilirisasi-pemkab-perkuat-branding-jember-surga-kopi",
+      "source_content_type": "text/html",
+      "http_status": 200,
+      "extraction_status": "extracted",
+      "extraction_method": "html_article_or_main",
+      "source_title": "Dorong Hilirisasi, Pemkab Perkuat Branding Jember Surga Kopi - RRI.co.id",
+      "source_description": "Pemkab Jember mendorong Perusahaan Daerah Perkebunan (PDP) Kahyangan memperkuat hilirisasi produk perkebunan, terutama kopi, untuk meningkatkan nilai tambah komoditas, sekaligus menggerakkan ekonomi masyarakat sekitar perkebunan.",
+      "source_authors": [
+        "Anggi Widya Permani"
+      ],
+      "source_published_date": "2026-10-06",
+      "publication_date_precision": "day",
+      "publication_date_evidence": "2026-10-06T15:50:00+07:00",
+      "date_enrichment_version": 6,
+      "coffee_relevance_context": "Regional Dorong Hilirisasi, Pemkab Perkuat Branding Jember Surga Kopi 06 Okt 2026 15:50 WIB Jember Oleh - Anggi Widya Permani, Editor - Gandi Lukmanto Pemerintah Kabupaten Jember menggelar kegiatan gowes bersama yang menempuh rute dari Kebun Sumberw … RRI.CO.ID, Jember - Pemkab Jember mendorong Perusahaan Daerah Perkebunan (PDP) Kahyangan memperkuat hilirisasi produk perkebunan, terutama kopi, untuk meningkatkan nilai tambah komoditas, sekaligus menggerakkan ekonomi masyarakat sekitar perkebunan.Dorongan tersebut disampaikan Bupati Jember, Muhammad Fawait saat meninjau … panjangnya akan terlihat pada pertumbuhan BUMD kita,” ujarnya.Fawait mengatakan, Pemkab Jember juga tengah menyiapkan branding Jember Surga Kopi Indonesia. Sejumlah komoditas unggulan daerah, seperti kopi Robusta dan Liberika, cerutu, edamame, okra, hingga cokelat, dinilai memiliki potensi untuk dikembangkan lebih jauh. Ba",
+      "content_char_count": 2492,
+      "content_sha256": "fe73fdb11619fd5d998f87922cb1ccab61a756bc195eecc251d6046ae43e1c12",
+      "content_excerpt": "Regional Dorong Hilirisasi, Pemkab Perkuat Branding Jember Surga Kopi 06 Okt 2026 15:50 WIB Jember Oleh - Anggi Widya Permani, Editor - Gandi Lukmanto Pemerintah Kabupaten Jember menggelar kegiatan gowes bersama yang menempuh rute dari Kebun Sumberwadung hingga Pendopo Wahyawibawagraha pada Senin (5/10/2026). Foto: Pemkab Jember RRI.CO.ID, Jember - Pemkab Jember mendorong Perusahaan Daerah Perkebunan (PDP) Kahyangan ",
+      "fetch_error": null,
+      "retry_after": null,
+      "published_date": "2026-10-06",
+      "cluster_id": "kebijakan-regulasi",
+      "cluster_name": "Kebijakan & Regulasi",
+      "cluster_assignment": "ai_existing",
+      "cluster_ai_reviewed_at": "2026-10-06T08:57:50.582Z",
+      "cluster_review_version": 7,
+      "cluster_review_context_hash": "a55dd88ef96aa384781ed7f136cf60c3fcfb80f0c6e8f35d15e2504eb818f95d",
+      "cluster_relevance_review": {
+        "relevance": "relevant",
+        "title_context_match": "match",
+        "suggested_cluster_id": "kebijakan-regulasi",
+        "reason": "Judul menyebut dorongan hilirisasi dan penguatan branding; isi secara langsung membahas kebijakan Pemkab Jember pada hilirisasi kopi dan branding daerah.",
+        "evidence": "Judul: \"Dorong Hilirisasi, Pemkab Perkuat Branding Jember Surga Kopi\". Isi: \"Pemkab Jember mendorong Perusahaan Daerah Perkebunan (PDP) Kahyangan memperkuat hilirisasi... terutama kopi\"; \"Pemkab Jember juga tengah menyiapkan branding Jember Surga Kopi Indonesia.\"",
+        "reviewed_at": "2026-10-06T08:57:50.582Z"
+      },
+      "cluster_ai_reason": "Fokus utama artikel adalah inisiatif dan dorongan Pemkab Jember (program/kebijakan publik) untuk hilirisasi kopi dan penguatan branding daerah yang memengaruhi sektor kopi.",
+      "cluster_ai_evidence": "\"Pemkab Jember mendorong Perusahaan Daerah Perkebunan (PDP) Kahyangan memperkuat hilirisasi produk perkebunan, terutama kopi, untuk meningkatkan nilai tambah komoditas\"; \"Pemkab Jember juga tengah menyiapkan branding Jember Surga Kopi Indonesia.\""
+    },
+    {
       "judul": "PINTU Gandeng Kopikina Perluas Edukasi Crypto ke Industri Kopi - Industry.co.id",
       "tautan": "https://www.industry.co.id/read/157036/pintu-gandeng-kopikina-perluas-edukasi-crypto-ke-industri-kopi",
       "tanggal": "Tue, 06 Oct 2026 08:12:00 GMT",
@@ -19044,10 +19094,10 @@
       "cluster_ai_evidence": "\"The onset of a new El Niño event presents challenges for coffee farmers.\""
     }
   ],
-  "fetched": "2026-10-06T08:27:54.342Z",
+  "fetched": "2026-10-06T08:57:25.481Z",
   "reference_ingest": {
     "source": "KGS-blog/coffee-intelligence-engine/exports/coffee_relevant_articles.json",
-    "imported_at": "2026-10-06T08:28:12.310Z",
+    "imported_at": "2026-10-06T08:57:47.613Z",
     "source_records": 351,
     "accepted_candidates": 338,
     "dated_candidates": 304,
@@ -19062,7 +19112,7 @@
     }
   },
   "content_fetch": {
-    "last_batch_at": "2026-10-06T08:28:12Z",
+    "last_batch_at": "2026-10-06T08:57:47Z",
     "batch_size": 1,
     "batch_limit": 400,
     "purpose": "Short original-publisher context for relevance and cluster review; full article text is not stored or republished."

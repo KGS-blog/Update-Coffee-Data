@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-06T08:56:23.471Z",
+  "generated_at": "2026-10-06T08:58:31.185Z",
   "method": {
     "duplicate_key": "source_url + normalized product + type + form + currency + period + date + price_per_kg",
     "outlier_rule": "Tukey 1.5×IQR within source/type/form/currency/period groups with 8–100 unique observations; large batches are skipped because they can mix product tiers. Flagged items are pending review, not automatically invalid",
