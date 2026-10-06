@@ -108,10 +108,11 @@ function canonicalRow(item, sourceDate = dateISO, basis = 'Tanggal diamati Kabar
   const sourceIdentity = sourceType === 'field'
     ? `field|${String(item.source).toLowerCase().replace(/\s+/g, ' ')}|${String(item.source_detail).toLowerCase().replace(/\s+/g, ' ')}`
     : sourceUrl;
-  const productKey = `${sourceIdentity}|${String(item.product).toLowerCase().replace(/\s+/g, ' ')}|${currency}|${rowPeriod}`;
+  const priceLevel = ['customer', 'reseller', 'retail', 'wholesale', 'farmgate', 'unspecified'].includes(item.price_level) ? item.price_level : 'unspecified';
+  const productKey = `${sourceIdentity}|${String(item.product).toLowerCase().replace(/\s+/g, ' ')}|${priceLevel}|${currency}|${rowPeriod}`;
   const id = sha(productKey);
   return { 
-    observation_id: id, type: item.type, form: item.form, process: item.process || 'Tidak disebut', period: rowPeriod,
+    observation_id: id, type: item.type, form: item.form, process: item.process || 'Tidak disebut', price_level: priceLevel, period: rowPeriod,
     date: sourceDate, date_basis: basis, currency, original_price: numeric, price_per_package: numeric,
     ...(priceMin > 0 && priceMax >= priceMin ? { price_range_per_kg: [Math.round(priceMin / amountKg), Math.round(priceMax / amountKg)] } : {}),
     package_size: { amount: amountKg * 1000, unit: 'g' }, price_per_kg: pricePerKg,
@@ -170,15 +171,15 @@ async function main() {
   const currencies = new Set(dataset.listings.map(row => row.currency));
   const groups = new Map();
   for (const row of dataset.listings) {
-    const key = [row.type, row.form, row.process, row.period, row.currency].join('|');
-    const group = groups.get(key) || { type: row.type, form: row.form, process: row.process, period: row.period, currency: row.currency, listing_count: 0, source_ids: new Set(), source_urls: new Set(), prices: [] };
+    const key = [row.type, row.form, row.process, row.price_level || 'unspecified', row.period, row.currency].join('|');
+    const group = groups.get(key) || { type: row.type, form: row.form, process: row.process, price_level: row.price_level || 'unspecified', period: row.period, currency: row.currency, listing_count: 0, source_ids: new Set(), source_urls: new Set(), prices: [] };
     group.listing_count++;
     group.source_ids.add(row.source_type === 'field' ? `field:${row.source}|${row.source_detail}` : `url:${row.source_url}`);
     if (row.source_url) group.source_urls.add(row.source_url);
     group.prices.push(Number(row.price_per_kg)); groups.set(key, group);
   }
   const median = values => { values.sort((a,b)=>a-b); const m=Math.floor(values.length/2); return values.length%2 ? values[m] : (values[m-1]+values[m])/2; };
-  dataset.summary = [...groups.values()].map(group => ({ type: group.type, form: group.form, process: group.process, period: group.period, currency: group.currency, listing_count: group.listing_count, source_count: group.source_ids.size, median_price_per_kg: median(group.prices), minimum_price_per_kg: Math.min(...group.prices), maximum_price_per_kg: Math.max(...group.prices), source_urls: [...group.source_urls] }));
+  dataset.summary = [...groups.values()].map(group => ({ type: group.type, form: group.form, process: group.process, price_level: group.price_level, period: group.period, currency: group.currency, listing_count: group.listing_count, source_count: group.source_ids.size, median_price_per_kg: median(group.prices), minimum_price_per_kg: Math.min(...group.prices), maximum_price_per_kg: Math.max(...group.prices), source_urls: [...group.source_urls] }));
   dataset.totals = { listings: dataset.listings.length, groups: dataset.summary.length, types: { Arabika: dataset.listings.filter(row => row.type === 'Arabika').length, Robusta: dataset.listings.filter(row => row.type === 'Robusta').length } };
   dataset.public_price_sources_checked_at = now.toISOString();
   fs.writeFileSync(DATA_PATH, `${JSON.stringify(dataset, null, 2)}\n`);
