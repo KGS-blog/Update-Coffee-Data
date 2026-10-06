@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-10-06T14:35:11.150Z",
+  "generated_at": "2026-10-06T15:12:37.973Z",
   "months": [
     {
       "month": "2008-01",
@@ -390,7 +390,7 @@
     {
       "month": "2026-10",
       "file": "arsip/berita-2026-10.json",
-      "articles": 176
+      "articles": 177
     }
   ],
   "reference_collection": {

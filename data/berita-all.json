@@ -1,6 +1,52 @@
 {
   "artikel": [
     {
+      "judul": "TEI 2026 Akan Siapkan Zona Khusus Kopi, Teh dan Kakao Indonesia - SWA.co.id",
+      "tautan": "https://swa.co.id/read/478113/tei-2026-akan-siapkan-zona-khusus-kopi-teh-dan-kakao-indonesia",
+      "tanggal": "Tue, 06 Oct 2026 15:00:00 GMT",
+      "sumber": "SWA.co.id",
+      "asal": "google_news",
+      "aggregator": "Google News",
+      "link_type": "publisher_article",
+      "resolution_status": "resolved",
+      "tautan_google_news": "https://news.google.com/rss/articles/CBMilwFBVV95cUxNYjhsU3ZZV3pyQkdHSlJkN1Q2b1VmeW1iVWRrLVVqYTM5YWllQXhjc0NSNDR4RU1aeGVhMWRld1dqQlBmTHAyR0lpUERfQ1dXWUcxM1lvMmxhTDN5MEp0YUtYdnphZEhwaEdZa3E4a0xlQWlIRkVKR0lDRTQwLVpxZEFVT3FPajNQYVZwVF9pNTN3ZUdoMUNr?oc=5",
+      "extracted_at": "2026-10-06T15:12:36Z",
+      "extracted_from_url": "https://swa.co.id/read/478113/tei-2026-akan-siapkan-zona-khusus-kopi-teh-dan-kakao-indonesia",
+      "resolved_url": "https://swa.co.id/read/478113/tei-2026-akan-siapkan-zona-khusus-kopi-teh-dan-kakao-indonesia",
+      "source_content_type": "text/html",
+      "http_status": 200,
+      "extraction_status": "extracted",
+      "extraction_method": "html_article_or_main",
+      "source_title": "TEI 2026 Akan Siapkan Zona Khusus Kopi, Teh dan Kakao Indonesia - SWA.co.id",
+      "source_description": "Kementerian Perdagangan (Kemendag) menyiapkan Zona Kopi, Teh, dan Kakao (KoTeKa) dalam penyelenggaraan Trade Expo Indonesia (TEI) ke-41 yang akan berlangsung...",
+      "source_authors": [],
+      "source_published_date": "2026-10-06",
+      "publication_date_precision": "day",
+      "publication_date_evidence": "06 Oktober 2026, 21:55 WIB",
+      "date_enrichment_version": 6,
+      "coffee_relevance_context": "",
+      "content_char_count": 298,
+      "content_sha256": null,
+      "content_excerpt": "Dilarang keras mengambil konten (tulisan, foto, infografis, video, dan sebagainya) yang dimuat di situs web ini, melakukan crawling atau pengindeksan otomatis untuk platform AI (artificial intelligence) dan platform digital lainnya, tanpa izin tertulis dari direksi yang berwenang di situs web ini.",
+      "fetch_error": null,
+      "retry_after": null,
+      "published_date": "2026-10-06",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_ai_reviewed_at": "2026-10-06T15:12:37.973Z",
+      "cluster_review_version": 7,
+      "cluster_review_context_hash": "ceb45ecb3e8d8bca5145878e676168fc67d6e20d82902bb11ba33d46ff52c766",
+      "cluster_relevance_review": {
+        "relevance": "uncertain",
+        "title_context_match": "mismatch",
+        "suggested_cluster_id": "",
+        "reason": "Judul menyinggung rencana zona khusus kopi di TEI 2026 (indikasi topik event/ekspor), tetapi konteks yang tersedia hanya peringatan hak cipta sehingga isi tidak dapat diverifikasi. Relevansi industri kopi belum dapat dipastikan dan judul-isi tidak selaras.",
+        "evidence": "Judul: \"TEI 2026 Akan Siapkan Zona Khusus Kopi, Teh dan Kakao Indonesia\" | Konteks tersaji: \"Dilarang keras mengambil konten (tulisan, foto, infografis, video, dan sebagainya) yang dimuat di situs web ini, melakukan crawling atau pengindeksan otomatis...\"",
+        "reviewed_at": "2026-10-06T15:12:37.973Z"
+      }
+    },
+    {
       "judul": "Mengintip Peluang Usaha Toko Biji Kopi Nusantara - investor.id",
       "tautan": "https://investor.id/money-lab/456913/mengintip-peluang-usaha-toko-biji-kopi-nusantara",
       "tanggal": "Tue, 06 Oct 2026 13:16:38 GMT",
@@ -19422,10 +19468,10 @@
       "cluster_ai_evidence": "\"The onset of a new El Niño event presents challenges for coffee farmers.\""
     }
   ],
-  "fetched": "2026-10-06T14:34:48.417Z",
+  "fetched": "2026-10-06T15:11:50.077Z",
   "reference_ingest": {
     "source": "KGS-blog/coffee-intelligence-engine/exports/coffee_relevant_articles.json",
-    "imported_at": "2026-10-06T14:35:10.325Z",
+    "imported_at": "2026-10-06T15:12:36.089Z",
     "source_records": 351,
     "accepted_candidates": 338,
     "dated_candidates": 304,
@@ -19440,7 +19486,7 @@
     }
   },
   "content_fetch": {
-    "last_batch_at": "2026-10-06T13:48:19Z",
+    "last_batch_at": "2026-10-06T15:12:36Z",
     "batch_size": 1,
     "batch_limit": 400,
     "purpose": "Short original-publisher context for relevance and cluster review; full article text is not stored or republished."

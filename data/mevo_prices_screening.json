@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-06T15:11:28.048Z",
+  "generated_at": "2026-10-06T15:12:57.557Z",
   "method": {
     "duplicate_key": "source identity + product + type + form + process + price level + currency + period + date + package grams + price_per_kg",
     "source_currency_rule": "Rows from specialtycoffee.id labeled IDR are excluded because the source states the prices are USD and no verified FX record exists",
@@ -9,20 +9,20 @@
     "chart_policy": "Source-currency mismatches, duplicates, Wine process, non-selected package sizes, and conditionally detected high-price outliers are excluded; canonical raw price listings remain stored"
   },
   "summary": {
-    "raw_idr_observations": 2628,
-    "unique_idr_observations": 2566,
-    "duplicate_rows": 62,
+    "raw_idr_observations": 2704,
+    "unique_idr_observations": 2587,
+    "duplicate_rows": 117,
     "source_currency_mismatch_rows": 66,
-    "wine_process_excluded_rows": 154,
-    "package_size_excluded_rows": 912,
+    "wine_process_excluded_rows": 160,
+    "package_size_excluded_rows": 927,
     "package_selection_groups": {
-      "exact_1kg_groups": 1415,
-      "fallback_size_groups": 19,
+      "exact_1kg_groups": 1420,
+      "fallback_size_groups": 14,
       "unknown_size_groups": 0
     },
     "significant_period_moves": 3,
-    "high_price_outliers_excluded": 5,
-    "chart_eligible_unique_idr_observations": 1429
+    "high_price_outliers_excluded": 3,
+    "chart_eligible_unique_idr_observations": 1431
   },
   "duplicates": [
     {
@@ -1201,6 +1201,1051 @@
       "source_type": "url",
       "source_detail": null,
       "source_url": "https://specialtycoffee.id/id/pricelist/",
+      "status": "duplicate_excluded_from_chart"
+    },
+    {
+      "observation_id": "a551b624411a4d067962314841ed81c7415b83b63ab60d166bbb9ac0cef0cf40",
+      "duplicate_of": "1e52bd9a731f00fe72f30b3c1933f92dd505de1348e80493d7bad393fdfd2c0f",
+      "type": "Arabika",
+      "form": "Biji kopi sangrai",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "package_size": {
+        "amount": 100,
+        "unit": "g"
+      },
+      "price_per_kg": 400000,
+      "product": "Arabica Full Wash",
+      "source": "GOOD COFFEE GOOD DAY",
+      "source_type": "field",
+      "source_detail": "COFFEE TIME! PRICE LIST KOPI TEMANGGUNG",
+      "source_url": null,
+      "status": "duplicate_excluded_from_chart"
+    },
+    {
+      "observation_id": "a681bf243a07d0e455a549e0f8a6568d0d44b095892aee0dbb587f8cea3a5dec",
+      "duplicate_of": "4845daf5d28d565d87835abb4452057de0e53223885f38119915191d02fb370f",
+      "type": "Arabika",
+      "form": "Biji kopi sangrai",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "package_size": {
+        "amount": 100,
+        "unit": "g"
+      },
+      "price_per_kg": 700000,
+      "product": "Arabica Luwak",
+      "source": "GOOD COFFEE GOOD DAY",
+      "source_type": "field",
+      "source_detail": "COFFEE TIME! PRICE LIST KOPI TEMANGGUNG",
+      "source_url": null,
+      "status": "duplicate_excluded_from_chart"
+    },
+    {
+      "observation_id": "fda8c597101d5fda0629ba84cbc21c1da6976af12ee5454d4d6b18540bac3c54",
+      "duplicate_of": "c3e2a687e7a83f9976c5a28d7e5872d0f00e1a5c9e7c6794e37a37da3cd06170",
+      "type": "Arabika",
+      "form": "Biji kopi sangrai",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "package_size": {
+        "amount": 100,
+        "unit": "g"
+      },
+      "price_per_kg": 600000,
+      "product": "Arabica Natural Signature",
+      "source": "GOOD COFFEE GOOD DAY",
+      "source_type": "field",
+      "source_detail": "COFFEE TIME! PRICE LIST KOPI TEMANGGUNG",
+      "source_url": null,
+      "status": "duplicate_excluded_from_chart"
+    },
+    {
+      "observation_id": "b9ce4be64c483c86e7ecf24e17a1c941623b6bb1ade9f822596a76515dff83ce",
+      "duplicate_of": "0ce05b84c2dac14f5805810e0cc54ca3ce0c7ecffa4f05a5df431ce9d7962a2f",
+      "type": "Arabika",
+      "form": "Biji kopi sangrai",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "package_size": {
+        "amount": 100,
+        "unit": "g"
+      },
+      "price_per_kg": 550000,
+      "product": "Arabica Wine",
+      "source": "GOOD COFFEE GOOD DAY",
+      "source_type": "field",
+      "source_detail": "COFFEE TIME! PRICE LIST KOPI TEMANGGUNG",
+      "source_url": null,
+      "status": "duplicate_excluded_from_chart"
+    },
+    {
+      "observation_id": "53467091126ac1282f59459c8ba8f239e452e39e5cc32dd71095c864dc1f0ccc",
+      "duplicate_of": "aab862da0e735d4daa16771535612c75d9ea89f25e081c0ccf411404f5bf02de",
+      "type": "Arabika",
+      "form": "Biji kopi mentah",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 180000,
+      "product": "Arabika Bali Kintamani",
+      "source": "Willkin Green Coffee",
+      "source_type": "url",
+      "source_detail": null,
+      "source_url": "https://willkingreencoffee.com/katalog-lokal/",
+      "status": "duplicate_excluded_from_chart"
+    },
+    {
+      "observation_id": "928fa3ad65feb2d2b3a089a3af4a8488ebf550894d9fa20ed4600f335ab878df",
+      "duplicate_of": "1761b810776c5fdce8c7eaaf6a5aeb7d34b9c867459adec615df5a2d8dd4bb27",
+      "type": "Arabika",
+      "form": "Biji kopi mentah",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 160000,
+      "product": "Arabika Flores Bajawa",
+      "source": "Willkin Green Coffee",
+      "source_type": "url",
+      "source_detail": null,
+      "source_url": "https://willkingreencoffee.com/katalog-lokal/",
+      "status": "duplicate_excluded_from_chart"
+    },
+    {
+      "observation_id": "5094cb61c4da3b6182a700bc4e4987a068b2cfdfc33e6d0afe1e56228898edaf",
+      "duplicate_of": "f0fc5d786b19429d227a8f56e686107f517344e9dfea5f28537957f732a83ee7",
+      "type": "Arabika",
+      "form": "Biji kopi mentah",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 145000,
+      "product": "Arabika Gayo Honey",
+      "source": "Willkin Green Coffee",
+      "source_type": "url",
+      "source_detail": null,
+      "source_url": "https://willkingreencoffee.com/katalog-lokal/",
+      "status": "duplicate_excluded_from_chart"
+    },
+    {
+      "observation_id": "ab6f2c10924263c4832e0165f2503f572c07f56887645399d12e68d3c493c91d",
+      "duplicate_of": "75d24c07eb40f226d9b0193c02dd98b643676896dcbc0f841987a6ad3370fc38",
+      "type": "Arabika",
+      "form": "Biji kopi mentah",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 160000,
+      "product": "Arabika Gayo Natural",
+      "source": "Willkin Green Coffee",
+      "source_type": "url",
+      "source_detail": null,
+      "source_url": "https://willkingreencoffee.com/katalog-lokal/",
+      "status": "duplicate_excluded_from_chart"
+    },
+    {
+      "observation_id": "6d567cda95e5b812d43071c560f8e7357f31ac20b045d525f9a7c76f851db847",
+      "duplicate_of": "8d21c40751a8741f1bc26448e219208173a4e47c0c888bf6e6f5d717c3c704b7",
+      "type": "Arabika",
+      "form": "Biji kopi mentah",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 170000,
+      "product": "Arabika Gayo Organic",
+      "source": "Willkin Green Coffee",
+      "source_type": "url",
+      "source_detail": null,
+      "source_url": "https://willkingreencoffee.com/katalog-lokal/",
+      "status": "duplicate_excluded_from_chart"
+    },
+    {
+      "observation_id": "5ebe2d37b1e1554daa7188d5f7648eac4676572f81e34e470ff3c2c39c76c07a",
+      "duplicate_of": "a3cc672f284aa4a88f4c29d10195e180e7a527936d7082f4a75124ee1f32cb4b",
+      "type": "Arabika",
+      "form": "Biji kopi mentah",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 162900,
+      "product": "Arabika Gayo Washed",
+      "source": "Willkin Green Coffee",
+      "source_type": "url",
+      "source_detail": null,
+      "source_url": "https://willkingreencoffee.com/katalog-lokal/",
+      "status": "duplicate_excluded_from_chart"
+    },
+    {
+      "observation_id": "c4fac1d4afef10ee6d2050c592562dec8dc557acc4bacdfbc04dd040e360bfd3",
+      "duplicate_of": "7a5f3c86e83015e560c7d059011db2dd3d4c2dd9ab7e878642f149ab2e86646c",
+      "type": "Arabika",
+      "form": "Biji kopi mentah",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 150000,
+      "product": "Arabika Toraja",
+      "source": "Willkin Green Coffee",
+      "source_type": "url",
+      "source_detail": null,
+      "source_url": "https://willkingreencoffee.com/katalog-lokal/",
+      "status": "duplicate_excluded_from_chart"
+    },
+    {
+      "observation_id": "893c9f893672db40988e3ed94e98f62b7554fb50d1160d24276c3416f0a391c8",
+      "duplicate_of": "bf35e7f9eccc30c564efa4df6c508d4f64e6b10715bb6501c426321f04f355be",
+      "type": "Arabika",
+      "form": "Biji kopi mentah",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 115000,
+      "product": "Bali Kintamani Washed Citrus",
+      "source": "ASKI B2B Marketplace",
+      "source_type": "url",
+      "source_detail": null,
+      "source_url": "https://www.aski.coffee/marketplace",
+      "status": "duplicate_excluded_from_chart"
+    },
+    {
+      "observation_id": "56a139bee44850c214114558080391a52f9bb3d954535109c1054a28067c6c87",
+      "duplicate_of": "cd3737ffb25d365b7eb90a00b4d508f9fe756f642c2b7f409fa0821846dce4cc",
+      "type": "Robusta",
+      "form": "Biji kopi mentah",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 89941,
+      "product": "Dampit",
+      "source": "Kral Coffee",
+      "source_type": "field",
+      "source_detail": "Kral Coffee Greenbean Availability Flyer",
+      "source_url": null,
+      "status": "duplicate_excluded_from_chart"
+    },
+    {
+      "observation_id": "2bc267bfe1c1e9189aec64f48fe54f7aabec1ab88bb07a0f7f7e560357b67913",
+      "duplicate_of": "9ea54c2cfeb35101dd6defc23b4af8188a7ee35a4450ccb09177b1cf3cbc9d3b",
+      "type": "Robusta",
+      "form": "Biji kopi mentah",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 87000,
+      "product": "Dampit",
+      "source": "Kral Coffee",
+      "source_type": "field",
+      "source_detail": "Kral Coffee Greenbean Availability Flyer",
+      "source_url": null,
+      "status": "duplicate_excluded_from_chart"
+    },
+    {
+      "observation_id": "842bcd813ed7c5aa3c4229c6ea1aa77df0e89aaaa8fc8ddb3b7422294dd89fe2",
+      "duplicate_of": "24a9f44eabc41859c2cc1be589f3f377f67b13e7dffe83492e7c62cf272409fa",
+      "type": "Robusta",
+      "form": "Biji kopi mentah",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 85000,
+      "product": "Flores Bajawa Natural Fine Robusta",
+      "source": "ASKI B2B Marketplace",
+      "source_type": "url",
+      "source_detail": null,
+      "source_url": "https://www.aski.coffee/marketplace",
+      "status": "duplicate_excluded_from_chart"
+    },
+    {
+      "observation_id": "8deb10a7eb391a491752a7a96bb9760487293d47145757630127c061646063a7",
+      "duplicate_of": "1e5d6173095dd1bfc870c3b8ef2b0eb2bdcc7642c36536df093e241e2a0257db",
+      "type": "Arabika",
+      "form": "Biji kopi mentah",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 180000,
+      "product": "Flores Fullwash",
+      "source": "Kral Coffee",
+      "source_type": "field",
+      "source_detail": "Kral Coffee Greenbean Availability Flyer",
+      "source_url": null,
+      "status": "duplicate_excluded_from_chart"
+    },
+    {
+      "observation_id": "c37e1a3650b4d3a3206fedaf49659a9d5487b6a455b1eaf69f8fa866b680ef54",
+      "duplicate_of": "06304c7476aadc2f5be9bb511f06cca31ab38ee94557f4ce93ecec4fc5b33721",
+      "type": "Arabika",
+      "form": "Biji kopi mentah",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 175000,
+      "product": "Flores Fullwash",
+      "source": "Kral Coffee",
+      "source_type": "field",
+      "source_detail": "Kral Coffee Greenbean Availability Flyer",
+      "source_url": null,
+      "status": "duplicate_excluded_from_chart"
+    },
+    {
+      "observation_id": "ee533ac490b036ca488a8830cad7b6904e0d6089231cace86bc174e8bfe25c91",
+      "duplicate_of": "71a85aaeeeccc217d20f884e130bb6e4ca91c333b0384cb5cb2dc9682e04a073",
+      "type": "Arabika",
+      "form": "Biji kopi mentah",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 150000,
+      "product": "Flores G1 FW",
+      "source": "Biji Kopi Boanerges",
+      "source_type": "field",
+      "source_detail": "Update Pricelist Biji Kopi Boanerges Ί 24 September 2026",
+      "source_url": null,
+      "status": "duplicate_excluded_from_chart"
+    },
+    {
+      "observation_id": "229e779ef3f9583ea744290340c3fc4c3bd8c870078c732be213706ea59f2436",
+      "duplicate_of": "35a7e8f14502c41b0aafb01c0468e8e4d208151e040affae551281b4cc0d2da1",
+      "type": "Arabika",
+      "form": "Biji kopi mentah",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 145000,
+      "product": "Flores G2 FW",
+      "source": "Biji Kopi Boanerges",
+      "source_type": "field",
+      "source_detail": "Update Pricelist Biji Kopi Boanerges Ί 24 September 2026",
+      "source_url": null,
+      "status": "duplicate_excluded_from_chart"
+    },
+    {
+      "observation_id": "b600dac108c204efc953b8ba3e71522411c071ac844f73c714d087832b803be0",
+      "duplicate_of": "bf86bf2a80dfaa56c37bcd0744c601b90a620a6c95c8402f3d23f18d71c32ec7",
+      "type": "Robusta",
+      "form": "Biji kopi mentah",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 90000,
+      "product": "Flores Manggarai",
+      "source": "Kral Coffee",
+      "source_type": "field",
+      "source_detail": "Kral Coffee Greenbean Availability Flyer",
+      "source_url": null,
+      "status": "duplicate_excluded_from_chart"
+    },
+    {
+      "observation_id": "a764e27fdff4dff269a96cf90807ab8dc5260372f183d0324cddfc0579712410",
+      "duplicate_of": "04effd1ab0730343ddebf5d73c54482fb17a7cdfce99f908b5f254304ad75452",
+      "type": "Robusta",
+      "form": "Biji kopi mentah",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 87000,
+      "product": "Flores Manggarai",
+      "source": "Kral Coffee",
+      "source_type": "field",
+      "source_detail": "Kral Coffee Greenbean Availability Flyer",
+      "source_url": null,
+      "status": "duplicate_excluded_from_chart"
+    },
+    {
+      "observation_id": "b110540e42e8aa518abf927b32bb34ff8e5dd4f89560276587fee2c3d0fe19a6",
+      "duplicate_of": "773a5e5485f9ceed4eb67457e416866edfc41abee55d2b4d96124b80c08e31d8",
+      "type": "Arabika",
+      "form": "Biji kopi mentah",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 170000,
+      "product": "Gayo Fullwash",
+      "source": "Kral Coffee",
+      "source_type": "field",
+      "source_detail": "Kral Coffee Greenbean Availability Flyer",
+      "source_url": null,
+      "status": "duplicate_excluded_from_chart"
+    },
+    {
+      "observation_id": "8802f1f6b7cb1235b09ff305d9fcc415ba644ee1715f77a7792876c942322abc",
+      "duplicate_of": "fd86627bcbc71f677220f506029e48b1b50d25d79eb70c4300a698244828e5f1",
+      "type": "Arabika",
+      "form": "Biji kopi mentah",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 165000,
+      "product": "Gayo G1 SW",
+      "source": "Biji Kopi Boanerges",
+      "source_type": "field",
+      "source_detail": "Update Pricelist Biji Kopi Boanerges Ί 24 September 2026",
+      "source_url": null,
+      "status": "duplicate_excluded_from_chart"
+    },
+    {
+      "observation_id": "3bbb8a6c41f10b724fdfdc9fe42066da87bfa892e218abac13c8d08be850c380",
+      "duplicate_of": "c0a0c04df4760b41b2464e22f2315cb875eeac71aa04e5d362547901589d3ccd",
+      "type": "Arabika",
+      "form": "Biji kopi mentah",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 130000,
+      "product": "Gayo G2 SW",
+      "source": "Biji Kopi Boanerges",
+      "source_type": "field",
+      "source_detail": "Update Pricelist Biji Kopi Boanerges Ί 24 September 2026",
+      "source_url": null,
+      "status": "duplicate_excluded_from_chart"
+    },
+    {
+      "observation_id": "e5ce3dc608dccef472725ff9ac73fefac8b2c58b2f05ae8aab0c586d04894cfe",
+      "duplicate_of": "c42908b662979f20481e1cd57ca0bd273e66ffa83e5911c533443792aa6b2843",
+      "type": "Robusta",
+      "form": "Biji kopi mentah",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 62000,
+      "product": "Grade 3",
+      "source": "Biji Kopi Boanerges",
+      "source_type": "field",
+      "source_detail": "Update Pricelist Biji Kopi Boanerges Ί 24 September 2026",
+      "source_url": null,
+      "status": "duplicate_excluded_from_chart"
+    },
+    {
+      "observation_id": "bc77c8ae0fe49e74a3c597fc8f3f242b475000e27099d68f2a9d2f8c9746d6b4",
+      "duplicate_of": "1359f0c54435f1c0650dd849a2bbeb3f3dc4fc7d6e895e7f60ab8948a73e2208",
+      "type": "Arabika",
+      "form": "Biji kopi sangrai",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 450000,
+      "product": "Honey",
+      "source": "ROASTBEANS ARABICA",
+      "source_type": "field",
+      "source_detail": "Price list from ROASTBEANS ARABICA",
+      "source_url": null,
+      "status": "duplicate_excluded_from_chart"
+    },
+    {
+      "observation_id": "5c683208966b28214f1efa99a729620848a03b7f28666bd3e005f032c8352c27",
+      "duplicate_of": "a5539f638e22ba75310b56aadd43845187f011b8f760b939a67dedc98311a7d6",
+      "type": "Arabika",
+      "form": "Biji kopi mentah",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 132000,
+      "product": "Java Arabika Ijen",
+      "source": "Willkin Green Coffee",
+      "source_type": "url",
+      "source_detail": null,
+      "source_url": "https://willkingreencoffee.com/katalog-lokal/",
+      "status": "duplicate_excluded_from_chart"
+    },
+    {
+      "observation_id": "92934486274637622a3d4a9e65085beff0d3860731307341589fd4eb0f89df2e",
+      "duplicate_of": "101dad3df4dfcaae3915bbe1c3ea431004db250c7cc87d23828671201bca6a90",
+      "type": "Arabika",
+      "form": "Biji kopi mentah",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 120000,
+      "product": "Jawa Preanger Organic Honey",
+      "source": "ASKI B2B Marketplace",
+      "source_type": "url",
+      "source_detail": null,
+      "source_url": "https://www.aski.coffee/marketplace",
+      "status": "duplicate_excluded_from_chart"
+    },
+    {
+      "observation_id": "fa76306af46f752b5ac99ce03de919e3f8420479504b6c1f87556f9b188fbcfa",
+      "duplicate_of": "f0591c7c2665c2b6125083e3691432de976d6fb4c5d1361530cbd958bd046fe4",
+      "type": "Arabika",
+      "form": "Biji kopi mentah",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 220000,
+      "product": "Kintamani Natural",
+      "source": "Kral Coffee",
+      "source_type": "field",
+      "source_detail": "Kral Coffee Greenbean Availability Flyer",
+      "source_url": null,
+      "status": "duplicate_excluded_from_chart"
+    },
+    {
+      "observation_id": "9d01c42fa268cd8402607520d5794b567da1b535eb4c72a400f28a42692646aa",
+      "duplicate_of": "b912a4ee02f315b431687c79f7a492abc8f3c529f120a2654b30d5bb011d2b07",
+      "type": "Arabika",
+      "form": "Biji kopi mentah",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 210000,
+      "product": "Kintamani Natural",
+      "source": "Kral Coffee",
+      "source_type": "field",
+      "source_detail": "Kral Coffee Greenbean Availability Flyer",
+      "source_url": null,
+      "status": "duplicate_excluded_from_chart"
+    },
+    {
+      "observation_id": "5d58c27222fe612915d9a073dbe14f0d1b8bf1aa3fbb2ae14b7157040abda4f6",
+      "duplicate_of": "49f5dc69f983a302e5ab17d7162588ddbf7417c8e0d83c8186a235a3015df0d6",
+      "type": "Robusta",
+      "form": "Biji kopi mentah",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 90000,
+      "product": "Lampung",
+      "source": "Kral Coffee",
+      "source_type": "field",
+      "source_detail": "Kral Coffee Greenbean Availability Flyer",
+      "source_url": null,
+      "status": "duplicate_excluded_from_chart"
+    },
+    {
+      "observation_id": "8ecdd7a56ce28f10453dbf42c5913001787c4d55945cd90eaca1b5ebb6573d88",
+      "duplicate_of": "16aa861dbbcaba1f1ad3f22c07ebe5d548e58eaa1439f8dd53c5559d36dbb7b9",
+      "type": "Robusta",
+      "form": "Biji kopi mentah",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 87000,
+      "product": "Lampung",
+      "source": "Kral Coffee",
+      "source_type": "field",
+      "source_detail": "Kral Coffee Greenbean Availability Flyer",
+      "source_url": null,
+      "status": "duplicate_excluded_from_chart"
+    },
+    {
+      "observation_id": "b3c6345e3dc63c310927433ac4c49868f20b332d3996dc51ed3e63b13eceefa6",
+      "duplicate_of": "f63687489d7a8d63653c7337f16097b3a98298fbbd482d7d8792ee1c7be5d68d",
+      "type": "Robusta",
+      "form": "Biji kopi sangrai",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "package_size": {
+        "amount": 100,
+        "unit": "g"
+      },
+      "price_per_kg": 350000,
+      "product": "Lanang",
+      "source": "GOOD COFFEE GOOD DAY",
+      "source_type": "field",
+      "source_detail": "COFFEE TIME! PRICE LIST KOPI TEMANGGUNG",
+      "source_url": null,
+      "status": "duplicate_excluded_from_chart"
+    },
+    {
+      "observation_id": "a3ab6289d50a551fb9724e29806c67a2a1fc39786de8aafee7794a250c72eadd",
+      "duplicate_of": "f1a311f977f3d8a759cf52acb140011feedce22b99658800f26c52b06b594472",
+      "type": "Arabika",
+      "form": "Biji kopi sangrai",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 290000,
+      "product": "Long Barry",
+      "source": "ROASTBEANS ARABICA",
+      "source_type": "field",
+      "source_detail": "Price list from ROASTBEANS ARABICA",
+      "source_url": null,
+      "status": "duplicate_excluded_from_chart"
+    },
+    {
+      "observation_id": "2d66b4e994aa21646f8db1fdc8f7e2ef9cf3bd572cbdfb8827b70192957aa7d3",
+      "duplicate_of": "203f926e3573f8a08894d55a820c30b64f313ca0f1c4bca593e373dc1fb77e03",
+      "type": "Arabika",
+      "form": "Biji kopi mentah",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 220000,
+      "product": "Mandailing FW",
+      "source": "Kral Coffee",
+      "source_type": "field",
+      "source_detail": "Kral Coffee Greenbean Availability Flyer",
+      "source_url": null,
+      "status": "duplicate_excluded_from_chart"
+    },
+    {
+      "observation_id": "b022844273d7273d87f67680ece5278e18f345380d10914ec88b71b9217e9582",
+      "duplicate_of": "7207cef62aaabf781b46c93dcb0ef5de50e0bbc72a8452f2a55ff7f8f8956f89",
+      "type": "Arabika",
+      "form": "Biji kopi mentah",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 170000,
+      "product": "Mandailing FW",
+      "source": "Kral Coffee",
+      "source_type": "field",
+      "source_detail": "Kral Coffee Greenbean Availability Flyer",
+      "source_url": null,
+      "status": "duplicate_excluded_from_chart"
+    },
+    {
+      "observation_id": "b3db4e8d54d3e6d1b2661f1d7ac2dd9ccb468801fbe414ec58fe6beba98b6a38",
+      "duplicate_of": "3fa12bde449836f4cebb0064f3b6b2805c50812ad19ccebef765685fb80a42a0",
+      "type": "Arabika",
+      "form": "Biji kopi mentah",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 135000,
+      "product": "Mandheling Arabika",
+      "source": "Willkin Green Coffee",
+      "source_type": "url",
+      "source_detail": null,
+      "source_url": "https://willkingreencoffee.com/katalog-lokal/",
+      "status": "duplicate_excluded_from_chart"
+    },
+    {
+      "observation_id": "c1bb30074cbf29baddb587245600f681b0018884635f2f16c31def6f413e4c4d",
+      "duplicate_of": "9f5628b1e3e6f7d4c164ed1e4679494911be222ff77f30a58b9a59316e99c7ef",
+      "type": "Arabika",
+      "form": "Biji kopi mentah",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "package_size": {
+        "amount": 1002,
+        "unit": "g"
+      },
+      "price_per_kg": 189620.76,
+      "product": "Papua Fullwash",
+      "source": "Kral Coffee",
+      "source_type": "field",
+      "source_detail": "Kral Coffee Greenbean Availability Flyer",
+      "source_url": null,
+      "status": "duplicate_excluded_from_chart"
+    },
+    {
+      "observation_id": "5745767609e482d0a21ea57c15528038f1e01c626c99dec19470ef22fd5ec470",
+      "duplicate_of": "4033508fcce4362d45ddf9771058bbc50534cf3f1b6d0ce206d88df99bf019ec",
+      "type": "Arabika",
+      "form": "Biji kopi mentah",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 180000,
+      "product": "Papua Fullwash",
+      "source": "Kral Coffee",
+      "source_type": "field",
+      "source_detail": "Kral Coffee Greenbean Availability Flyer",
+      "source_url": null,
+      "status": "duplicate_excluded_from_chart"
+    },
+    {
+      "observation_id": "b608e0e38e6fa059aa37d27f25d0922000bea984192968298e515589896bab2f",
+      "duplicate_of": "9b1eac4c277ac6683b78a3665993a582bf696659cc607c1666e68cb27ddcb708",
+      "type": "Arabika",
+      "form": "Biji kopi sangrai",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 300000,
+      "product": "Peaberry",
+      "source": "ROASTBEANS ARABICA",
+      "source_type": "field",
+      "source_detail": "Price list from ROASTBEANS ARABICA",
+      "source_url": null,
+      "status": "duplicate_excluded_from_chart"
+    },
+    {
+      "observation_id": "3dd08a9bb8498242ae139f74fde40694df6dd14bbbfb64481ae68d3e56f4255d",
+      "duplicate_of": "9b9a061eb5d0c7c975940e7038cd3c7ce2b04728312705d7eacbbc31eaec9849",
+      "type": "Arabika",
+      "form": "Biji kopi sangrai",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 195000,
+      "product": "Premium",
+      "source": "ROASTBEANS ARABICA",
+      "source_type": "field",
+      "source_detail": "Price list from ROASTBEANS ARABICA",
+      "source_url": null,
+      "status": "duplicate_excluded_from_chart"
+    },
+    {
+      "observation_id": "28be135a51c802abf2d32b90d6cfec78f367aa66cca94d841995f626459eddc9",
+      "duplicate_of": "f182a0bb817dcc31ceef40a3d8877f92fd7e699731228831ff9c27ad5b6daa9c",
+      "type": "Robusta",
+      "form": "Biji kopi mentah",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 71500,
+      "product": "Robusta Lampung EK1",
+      "source": "Willkin Green Coffee",
+      "source_type": "url",
+      "source_detail": null,
+      "source_url": "https://willkingreencoffee.com/katalog-lokal/",
+      "status": "duplicate_excluded_from_chart"
+    },
+    {
+      "observation_id": "b1bdf00b3f86049c53cc8a55b1d97de56fecc6d8a9bb226f278f8ff2bbdf7389",
+      "duplicate_of": "a5bd117080cc109b329cb4769a4532cdc1f3d39396ea8cf87b7f8029e4e53062",
+      "type": "Robusta",
+      "form": "Biji kopi sangrai",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "package_size": {
+        "amount": 100,
+        "unit": "g"
+      },
+      "price_per_kg": 300000,
+      "product": "Robusta Natural",
+      "source": "GOOD COFFEE GOOD DAY",
+      "source_type": "field",
+      "source_detail": "COFFEE TIME! PRICE LIST KOPI TEMANGGUNG",
+      "source_url": null,
+      "status": "duplicate_excluded_from_chart"
+    },
+    {
+      "observation_id": "430bdd61b85e341e31ae96c6ef03de77b5a36fd216197dcb18fea9cc1258307b",
+      "duplicate_of": "6ae82f4a0349929a38fe88d5ddd99663d03c9bb3572f22bd95b5b62ab9df44a0",
+      "type": "Robusta",
+      "form": "Biji kopi mentah",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 82500,
+      "product": "Robusta Temanggung",
+      "source": "Willkin Green Coffee",
+      "source_type": "url",
+      "source_detail": null,
+      "source_url": "https://willkingreencoffee.com/katalog-lokal/",
+      "status": "duplicate_excluded_from_chart"
+    },
+    {
+      "observation_id": "dbba3f071a931ee03b8740303cc47dc4ad7b5878ae6e945a32d4d46fe6dffa31",
+      "duplicate_of": "34f7957caf8e1812444892a33becba1dc5baa4ce3ae1705a64a3e194119e0afd",
+      "type": "Robusta",
+      "form": "Biji kopi mentah",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 89985,
+      "product": "Sidikalang",
+      "source": "Kral Coffee",
+      "source_type": "field",
+      "source_detail": "Kral Coffee Greenbean Availability Flyer",
+      "source_url": null,
+      "status": "duplicate_excluded_from_chart"
+    },
+    {
+      "observation_id": "98024f921a7d603b830b5c2a903529eea9da5dc437aa1bc9849f318750de1a9e",
+      "duplicate_of": "d03d246f9d9dc61e70e2c5098d932a5f17aaac6b2ee1cf8f46e0d1b435524365",
+      "type": "Robusta",
+      "form": "Biji kopi mentah",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 87000,
+      "product": "Sidikalang",
+      "source": "Kral Coffee",
+      "source_type": "field",
+      "source_detail": "Kral Coffee Greenbean Availability Flyer",
+      "source_url": null,
+      "status": "duplicate_excluded_from_chart"
+    },
+    {
+      "observation_id": "49cd80560a260bc1151fc12cbddb2f275489c17b2cc42569a78cf2e31bf42baa",
+      "duplicate_of": "9af6030a39b4675fd676e526fc5079c7579061c4c7459d93050893b0e3f52276",
+      "type": "Arabika",
+      "form": "Biji kopi sangrai",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 280000,
+      "product": "Specialty",
+      "source": "ROASTBEANS ARABICA",
+      "source_type": "field",
+      "source_detail": "Price list from ROASTBEANS ARABICA",
+      "source_url": null,
+      "status": "duplicate_excluded_from_chart"
+    },
+    {
+      "observation_id": "aa8707fea5fe9914e24e2b29f0907769e50f06433b9edca6ecb911adfb82e64f",
+      "duplicate_of": "85b3fa958a1b06cf4108527e0438adb3b931ad1a1d220f28a7f3fc7007617f58",
+      "type": "Robusta",
+      "form": "Biji kopi mentah",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 90000,
+      "product": "Temanggung",
+      "source": "Kral Coffee",
+      "source_type": "field",
+      "source_detail": "Kral Coffee Greenbean Availability Flyer",
+      "source_url": null,
+      "status": "duplicate_excluded_from_chart"
+    },
+    {
+      "observation_id": "991e4bee419cddc778dee30347c8241fc880d34ab9cc6a9bd9c86e47cca5be91",
+      "duplicate_of": "b3e43589a72d7eef1f7eaa5ca9b3b92a5257ff61c6ad2170f3eb356f3daffdd0",
+      "type": "Robusta",
+      "form": "Biji kopi mentah",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 87000,
+      "product": "Temanggung",
+      "source": "Kral Coffee",
+      "source_type": "field",
+      "source_detail": "Kral Coffee Greenbean Availability Flyer",
+      "source_url": null,
+      "status": "duplicate_excluded_from_chart"
+    },
+    {
+      "observation_id": "6e01a2be07d76a3e974515d0223c4e6156389a1de77ce4b04ddc6540be728158",
+      "duplicate_of": "5e6b622e1c3bd2ad4b91ee97190a9fb0c653dba7f9890abf9c4a8c4251911350",
+      "type": "Robusta",
+      "form": "Biji kopi mentah",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 80000,
+      "product": "Temanggung - Grade 1",
+      "source": "Biji Kopi Boanerges",
+      "source_type": "field",
+      "source_detail": "Update Pricelist Biji Kopi Boanerges Ί 24 September 2026",
+      "source_url": null,
+      "status": "duplicate_excluded_from_chart"
+    },
+    {
+      "observation_id": "a7b8bb4d3cf3d6248ea0dc03d6ce7ee08c23b910d3614ed978364f5dd8417421",
+      "duplicate_of": "c5e2fd5b3912a0e682d0be61f64da8ad4b7dda4d7f73db7ad421c277d0d5805f",
+      "type": "Arabika",
+      "form": "Biji kopi mentah",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 140000,
+      "product": "Tengger Natural",
+      "source": "Biji Kopi Boanerges",
+      "source_type": "field",
+      "source_detail": "Update Pricelist Biji Kopi Boanerges Ί 24 September 2026",
+      "source_url": null,
+      "status": "duplicate_excluded_from_chart"
+    },
+    {
+      "observation_id": "add949338bbf9d4d29325bfe05feb763e9ab16f4a61df13fc7a045ee3f9e7cfb",
+      "duplicate_of": "1d90eec1840c1e1e9127dd549bafe46f37d7a1cce7b2e0f959d1dd94ad1e5c55",
+      "type": "Arabika",
+      "form": "Biji kopi mentah",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 180000,
+      "product": "Toraja Fullwash",
+      "source": "Kral Coffee",
+      "source_type": "field",
+      "source_detail": "Kral Coffee Greenbean Availability Flyer",
+      "source_url": null,
+      "status": "duplicate_excluded_from_chart"
+    },
+    {
+      "observation_id": "30aebb678955f0ae34ccf49c22761c6e5ea694381ac4691637859969ceda095b",
+      "duplicate_of": "72b978738782e7c0ac45a97451cd148f0befe0dd51e5f0a46a6168b435c40382",
+      "type": "Arabika",
+      "form": "Biji kopi mentah",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 175000,
+      "product": "Toraja Fullwash",
+      "source": "Kral Coffee",
+      "source_type": "field",
+      "source_detail": "Kral Coffee Greenbean Availability Flyer",
+      "source_url": null,
+      "status": "duplicate_excluded_from_chart"
+    },
+    {
+      "observation_id": "965f3c9a63e4b2ab5946aa0053eeb556009526d0eb01938867c83507f88103b1",
+      "duplicate_of": "569dfc9fc27b3231afd0468f57e30886c49ebbe496f6d6659dfeb2fa35416c07",
+      "type": "Robusta",
+      "form": "Biji kopi sangrai",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "package_size": {
+        "amount": 100,
+        "unit": "g"
+      },
+      "price_per_kg": 400000,
+      "product": "Wine",
+      "source": "GOOD COFFEE GOOD DAY",
+      "source_type": "field",
+      "source_detail": "COFFEE TIME! PRICE LIST KOPI TEMANGGUNG",
+      "source_url": null,
+      "status": "duplicate_excluded_from_chart"
+    },
+    {
+      "observation_id": "e8d900643909dca08ea38af0b93fea64804012ed92c3f410f8b225faaad0ad1f",
+      "duplicate_of": "1960c3b609d04733b9d31cd827361ca3450736dba89ba2963e445fbff1fbb679",
+      "type": "Arabika",
+      "form": "Biji kopi sangrai",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 600000,
+      "product": "Wine",
+      "source": "ROASTBEANS ARABICA",
+      "source_type": "field",
+      "source_detail": "Price list from ROASTBEANS ARABICA",
+      "source_url": null,
       "status": "duplicate_excluded_from_chart"
     }
   ],
@@ -3936,6 +4981,39 @@
       "status": "excluded_wine_process"
     },
     {
+      "observation_id": "d76177beaf5fdc71c224866c69392e519ff45190f6a2d57d74626a4654977802",
+      "type": "Arabika",
+      "form": "Biji kopi sangrai",
+      "process": "Wine",
+      "period": "Q4 2026",
+      "product": "Arabica Wine",
+      "price_per_kg": 450000,
+      "source": "GOOD COFFEE GOOD DAY",
+      "status": "excluded_wine_process"
+    },
+    {
+      "observation_id": "1868313e8a488cf22afdabb8fd021757d64b453d50ec60f0899e4cccdc70e36e",
+      "type": "Arabika",
+      "form": "Biji kopi sangrai",
+      "process": "Wine",
+      "period": "Q4 2026",
+      "product": "Arabica Wine",
+      "price_per_kg": 460000,
+      "source": "GOOD COFFEE GOOD DAY",
+      "status": "excluded_wine_process"
+    },
+    {
+      "observation_id": "08105898ac236bae07e6b8494e3cf4f2d8779ab6b9f5ac6484ca05f06b708fcb",
+      "type": "Arabika",
+      "form": "Biji kopi sangrai",
+      "process": "Wine",
+      "period": "Q4 2026",
+      "product": "Arabica Wine",
+      "price_per_kg": 500000,
+      "source": "GOOD COFFEE GOOD DAY",
+      "status": "excluded_wine_process"
+    },
+    {
       "observation_id": "569dfc9fc27b3231afd0468f57e30886c49ebbe496f6d6659dfeb2fa35416c07",
       "type": "Robusta",
       "form": "Biji kopi sangrai",
@@ -3955,6 +5033,39 @@
       "product": "Wine",
       "price_per_kg": 600000,
       "source": "ROASTBEANS ARABICA",
+      "status": "excluded_wine_process"
+    },
+    {
+      "observation_id": "85a8d85fe5f34ba89ce69a1b2072ab6a7b658998e8263525a272dfb7766dc19f",
+      "type": "Robusta",
+      "form": "Biji kopi sangrai",
+      "process": "Wine",
+      "period": "Q4 2026",
+      "product": "Wine",
+      "price_per_kg": 260000,
+      "source": "GOOD COFFEE GOOD DAY",
+      "status": "excluded_wine_process"
+    },
+    {
+      "observation_id": "071a75e43993a091d7fe3633fb3d096fbbcd0a27b7c11cc95f889a395918f862",
+      "type": "Robusta",
+      "form": "Biji kopi sangrai",
+      "process": "Wine",
+      "period": "Q4 2026",
+      "product": "Wine",
+      "price_per_kg": 260000,
+      "source": "GOOD COFFEE GOOD DAY",
+      "status": "excluded_wine_process"
+    },
+    {
+      "observation_id": "b757d72f15651659755381d2d79d3c8d1c6f47580420de87e027ada025823ee5",
+      "type": "Robusta",
+      "form": "Biji kopi sangrai",
+      "process": "Wine",
+      "period": "Q4 2026",
+      "product": "Wine",
+      "price_per_kg": 260000,
+      "source": "GOOD COFFEE GOOD DAY",
       "status": "excluded_wine_process"
     }
   ],
@@ -19462,6 +20573,261 @@
       "source": "arutalacoffee.com",
       "screening_method": "Excluded: an exact 1 kg listing exists for this source/product/period/tier",
       "status": "excluded_non_selected_pack_size"
+    },
+    {
+      "observation_id": "1e52bd9a731f00fe72f30b3c1933f92dd505de1348e80493d7bad393fdfd2c0f",
+      "type": "Arabika",
+      "form": "Biji kopi sangrai",
+      "process": "Full Wash",
+      "period": "Q4 2026",
+      "product": "Arabica Full Wash",
+      "package_size": {
+        "amount": 100,
+        "unit": "g"
+      },
+      "selected_package_grams": 1000,
+      "price_per_kg": 400000,
+      "source": "GOOD COFFEE GOOD DAY",
+      "screening_method": "Excluded: an exact 1 kg listing exists for this source/product/period/tier",
+      "status": "excluded_non_selected_pack_size"
+    },
+    {
+      "observation_id": "5b2dd79aad85eade5d60526575913f3f17ebe1011e6e55700c610b1548d392bb",
+      "type": "Arabika",
+      "form": "Biji kopi sangrai",
+      "process": "Full Wash",
+      "period": "Q4 2026",
+      "product": "Arabica Full Wash",
+      "package_size": {
+        "amount": 500,
+        "unit": "g"
+      },
+      "selected_package_grams": 1000,
+      "price_per_kg": 300000,
+      "source": "GOOD COFFEE GOOD DAY",
+      "screening_method": "Excluded: an exact 1 kg listing exists for this source/product/period/tier",
+      "status": "excluded_non_selected_pack_size"
+    },
+    {
+      "observation_id": "a5f2b2e0c856b89ef818ee39bb7b37cd1ec05c2f8079fe981fc002087c77a204",
+      "type": "Arabika",
+      "form": "Biji kopi sangrai",
+      "process": "Full Wash",
+      "period": "Q4 2026",
+      "product": "Arabica Full Wash",
+      "package_size": {
+        "amount": 250,
+        "unit": "g"
+      },
+      "selected_package_grams": 1000,
+      "price_per_kg": 340000,
+      "source": "GOOD COFFEE GOOD DAY",
+      "screening_method": "Excluded: an exact 1 kg listing exists for this source/product/period/tier",
+      "status": "excluded_non_selected_pack_size"
+    },
+    {
+      "observation_id": "4845daf5d28d565d87835abb4452057de0e53223885f38119915191d02fb370f",
+      "type": "Arabika",
+      "form": "Biji kopi sangrai",
+      "process": "Tidak disebut",
+      "period": "Q4 2026",
+      "product": "Arabica Luwak",
+      "package_size": {
+        "amount": 100,
+        "unit": "g"
+      },
+      "selected_package_grams": 1000,
+      "price_per_kg": 700000,
+      "source": "GOOD COFFEE GOOD DAY",
+      "screening_method": "Excluded: an exact 1 kg listing exists for this source/product/period/tier",
+      "status": "excluded_non_selected_pack_size"
+    },
+    {
+      "observation_id": "50a56a76f0328c9f2dbc1efdda080bfe082c0d06f7375a2c5a932bca5fab986b",
+      "type": "Arabika",
+      "form": "Biji kopi sangrai",
+      "process": "Tidak disebut",
+      "period": "Q4 2026",
+      "product": "Arabica Luwak",
+      "package_size": {
+        "amount": 500,
+        "unit": "g"
+      },
+      "selected_package_grams": 1000,
+      "price_per_kg": 520000,
+      "source": "GOOD COFFEE GOOD DAY",
+      "screening_method": "Excluded: an exact 1 kg listing exists for this source/product/period/tier",
+      "status": "excluded_non_selected_pack_size"
+    },
+    {
+      "observation_id": "2054e724b072f93b1a54350b2c8d00201ee7b471c5978599b777ffab37aa3627",
+      "type": "Arabika",
+      "form": "Biji kopi sangrai",
+      "process": "Tidak disebut",
+      "period": "Q4 2026",
+      "product": "Arabica Luwak",
+      "package_size": {
+        "amount": 250,
+        "unit": "g"
+      },
+      "selected_package_grams": 1000,
+      "price_per_kg": 540000,
+      "source": "GOOD COFFEE GOOD DAY",
+      "screening_method": "Excluded: an exact 1 kg listing exists for this source/product/period/tier",
+      "status": "excluded_non_selected_pack_size"
+    },
+    {
+      "observation_id": "c3e2a687e7a83f9976c5a28d7e5872d0f00e1a5c9e7c6794e37a37da3cd06170",
+      "type": "Arabika",
+      "form": "Biji kopi sangrai",
+      "process": "Natural",
+      "period": "Q4 2026",
+      "product": "Arabica Natural Signature",
+      "package_size": {
+        "amount": 100,
+        "unit": "g"
+      },
+      "selected_package_grams": 1000,
+      "price_per_kg": 600000,
+      "source": "GOOD COFFEE GOOD DAY",
+      "screening_method": "Excluded: an exact 1 kg listing exists for this source/product/period/tier",
+      "status": "excluded_non_selected_pack_size"
+    },
+    {
+      "observation_id": "7fc7281df678e1e94a520766c3cb7b9bf978ccccfeb423ad9d4ef3c15ec7e85b",
+      "type": "Arabika",
+      "form": "Biji kopi sangrai",
+      "process": "Natural",
+      "period": "Q4 2026",
+      "product": "Arabica Natural Signature",
+      "package_size": {
+        "amount": 500,
+        "unit": "g"
+      },
+      "selected_package_grams": 1000,
+      "price_per_kg": 350000,
+      "source": "GOOD COFFEE GOOD DAY",
+      "screening_method": "Excluded: an exact 1 kg listing exists for this source/product/period/tier",
+      "status": "excluded_non_selected_pack_size"
+    },
+    {
+      "observation_id": "668a366bd9dc3167a8ae53c46d322ecb9be83bbd6a7c84e9ad536e804a19b40a",
+      "type": "Arabika",
+      "form": "Biji kopi sangrai",
+      "process": "Natural",
+      "period": "Q4 2026",
+      "product": "Arabica Natural Signature",
+      "package_size": {
+        "amount": 250,
+        "unit": "g"
+      },
+      "selected_package_grams": 1000,
+      "price_per_kg": 400000,
+      "source": "GOOD COFFEE GOOD DAY",
+      "screening_method": "Excluded: an exact 1 kg listing exists for this source/product/period/tier",
+      "status": "excluded_non_selected_pack_size"
+    },
+    {
+      "observation_id": "f63687489d7a8d63653c7337f16097b3a98298fbbd482d7d8792ee1c7be5d68d",
+      "type": "Robusta",
+      "form": "Biji kopi sangrai",
+      "process": "Tidak disebut",
+      "period": "Q4 2026",
+      "product": "Lanang",
+      "package_size": {
+        "amount": 100,
+        "unit": "g"
+      },
+      "selected_package_grams": 1000,
+      "price_per_kg": 350000,
+      "source": "GOOD COFFEE GOOD DAY",
+      "screening_method": "Excluded: an exact 1 kg listing exists for this source/product/period/tier",
+      "status": "excluded_non_selected_pack_size"
+    },
+    {
+      "observation_id": "8e9f66fcf0a7745629f39c796c53e3e4a117b1e5cc74cd61b9b4ebb84487224a",
+      "type": "Robusta",
+      "form": "Biji kopi sangrai",
+      "process": "Tidak disebut",
+      "period": "Q4 2026",
+      "product": "Lanang",
+      "package_size": {
+        "amount": 500,
+        "unit": "g"
+      },
+      "selected_package_grams": 1000,
+      "price_per_kg": 220000,
+      "source": "GOOD COFFEE GOOD DAY",
+      "screening_method": "Excluded: an exact 1 kg listing exists for this source/product/period/tier",
+      "status": "excluded_non_selected_pack_size"
+    },
+    {
+      "observation_id": "c7ce3ad33f1e535310bcc25940d552ae9ab784c4b0bdd1db074e7e57b29f73b6",
+      "type": "Robusta",
+      "form": "Biji kopi sangrai",
+      "process": "Tidak disebut",
+      "period": "Q4 2026",
+      "product": "Lanang",
+      "package_size": {
+        "amount": 250,
+        "unit": "g"
+      },
+      "selected_package_grams": 1000,
+      "price_per_kg": 240000,
+      "source": "GOOD COFFEE GOOD DAY",
+      "screening_method": "Excluded: an exact 1 kg listing exists for this source/product/period/tier",
+      "status": "excluded_non_selected_pack_size"
+    },
+    {
+      "observation_id": "a5bd117080cc109b329cb4769a4532cdc1f3d39396ea8cf87b7f8029e4e53062",
+      "type": "Robusta",
+      "form": "Biji kopi sangrai",
+      "process": "Natural",
+      "period": "Q4 2026",
+      "product": "Robusta Natural",
+      "package_size": {
+        "amount": 100,
+        "unit": "g"
+      },
+      "selected_package_grams": 1000,
+      "price_per_kg": 300000,
+      "source": "GOOD COFFEE GOOD DAY",
+      "screening_method": "Excluded: an exact 1 kg listing exists for this source/product/period/tier",
+      "status": "excluded_non_selected_pack_size"
+    },
+    {
+      "observation_id": "3acf1e7c3e4cf2a616ed54858c6286ddce252d09f9e8d1697e4391d94eaab0e2",
+      "type": "Robusta",
+      "form": "Biji kopi sangrai",
+      "process": "Natural",
+      "period": "Q4 2026",
+      "product": "Robusta Natural",
+      "package_size": {
+        "amount": 500,
+        "unit": "g"
+      },
+      "selected_package_grams": 1000,
+      "price_per_kg": 190000,
+      "source": "GOOD COFFEE GOOD DAY",
+      "screening_method": "Excluded: an exact 1 kg listing exists for this source/product/period/tier",
+      "status": "excluded_non_selected_pack_size"
+    },
+    {
+      "observation_id": "bf5ab3eb75866df0f075415b74ad637ef97dbd50701b4fb12bb9d1ed88730c82",
+      "type": "Robusta",
+      "form": "Biji kopi sangrai",
+      "process": "Natural",
+      "period": "Q4 2026",
+      "product": "Robusta Natural",
+      "package_size": {
+        "amount": 250,
+        "unit": "g"
+      },
+      "selected_package_grams": 1000,
+      "price_per_kg": 220000,
+      "source": "GOOD COFFEE GOOD DAY",
+      "screening_method": "Excluded: an exact 1 kg listing exists for this source/product/period/tier",
+      "status": "excluded_non_selected_pack_size"
     }
   ],
   "outliers": [
@@ -19512,51 +20878,13 @@
       "previous_period": "Q3 2026",
       "period_change_percent": 40.9,
       "price_per_kg": 1177625,
-      "group_mean": 426447,
-      "upper_limit": 554381,
+      "group_mean": 391447,
+      "upper_limit": 508881,
       "product": "Kopi Luwak Arabica Ijen Fullwash Roasted",
       "source": "Berkopi Nusantara",
       "source_type": "url",
       "source_detail": null,
       "source_url": "https://berkopi.com/",
-      "screening_method": "Excluded high-price outlier: period median changed by over 30%; price is more than 30% above current-period mean",
-      "status": "excluded_high_outlier_after_period_change_over_30_percent"
-    },
-    {
-      "observation_id": "4845daf5d28d565d87835abb4452057de0e53223885f38119915191d02fb370f",
-      "type": "Arabika",
-      "form": "Biji kopi sangrai",
-      "process": "Tidak disebut",
-      "period": "Q4 2026",
-      "previous_period": "Q3 2026",
-      "period_change_percent": 40.9,
-      "price_per_kg": 700000,
-      "group_mean": 426447,
-      "upper_limit": 554381,
-      "product": "Arabica Luwak",
-      "source": "GOOD COFFEE GOOD DAY",
-      "source_type": "field",
-      "source_detail": "COFFEE TIME! PRICE LIST KOPI TEMANGGUNG",
-      "source_url": null,
-      "screening_method": "Excluded high-price outlier: period median changed by over 30%; price is more than 30% above current-period mean",
-      "status": "excluded_high_outlier_after_period_change_over_30_percent"
-    },
-    {
-      "observation_id": "c3e2a687e7a83f9976c5a28d7e5872d0f00e1a5c9e7c6794e37a37da3cd06170",
-      "type": "Arabika",
-      "form": "Biji kopi sangrai",
-      "process": "Natural",
-      "period": "Q4 2026",
-      "previous_period": "Q3 2026",
-      "period_change_percent": 40.9,
-      "price_per_kg": 600000,
-      "group_mean": 426447,
-      "upper_limit": 554381,
-      "product": "Arabica Natural Signature",
-      "source": "GOOD COFFEE GOOD DAY",
-      "source_type": "field",
-      "source_detail": "COFFEE TIME! PRICE LIST KOPI TEMANGGUNG",
-      "source_url": null,
       "screening_method": "Excluded high-price outlier: period median changed by over 30%; price is more than 30% above current-period mean",
       "status": "excluded_high_outlier_after_period_change_over_30_percent"
     }
@@ -19686,13 +21014,13 @@
       "type": "Arabika",
       "formClass": "roasted",
       "period": "Q4 2026",
-      "mean": 426447,
+      "mean": 391447,
       "previous_period": "Q3 2026",
       "period_change_percent": 40.9,
       "total": 16,
-      "included": 13,
-      "excluded": 3,
-      "upper_limit": 554381
+      "included": 15,
+      "excluded": 1,
+      "upper_limit": 508881
     },
     {
       "type": "Robusta",
@@ -19722,13 +21050,13 @@
       "type": "Robusta",
       "formClass": "roasted",
       "period": "Q4 2026",
-      "mean": 292542,
+      "mean": 212542,
       "previous_period": "Q3 2026",
-      "period_change_percent": 103.4,
+      "period_change_percent": 49.2,
       "total": 3,
       "included": 3,
       "excluded": 0,
-      "upper_limit": 380304
+      "upper_limit": 276304
     },
     {
       "type": "Arabika",
@@ -19920,7 +21248,7 @@
       "form": "roasted",
       "period": "Q4 2026",
       "previous_period": "Q3 2026",
-      "current_count": 13,
+      "current_count": 15,
       "previous_count": 6,
       "current_sources": [
         "url:https://kopibara.id/",
