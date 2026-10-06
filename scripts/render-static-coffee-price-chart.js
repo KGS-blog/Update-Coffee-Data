@@ -32,19 +32,62 @@ const classifyForm = row => {
   if (roasted && !green) return 'roasted';
   return 'unspecified';
 };
-const idr = (dataset.listings || []).filter(row =>
+const rawIdr = (dataset.listings || []).filter(row =>
   row && row.currency === 'IDR' && quarterIndex(row.period) &&
   Number.isFinite(Number(row.price_per_kg)) && Number(row.price_per_kg) > 0 &&
   (row.type === 'Arabika' || row.type === 'Robusta')
 ).map(row => ({ ...row, formClass: classifyForm(row) }));
-const formRows = {
-  green: idr.filter(row => row.formClass === 'green'),
-  roasted: idr.filter(row => row.formClass === 'roasted'),
-};
+// Normalize punctuation/spacing in product names to catch repeated snapshots
+// whose only difference is a hyphen glyph. Preserve every row in the source JSON;
+// only one representative is used in the chart and the rest are logged below.
+const normalizeProduct = value => String(value || '').normalize('NFKC').toLocaleLowerCase('id-ID').replace(/[^\p{L}\p{N}]+/gu, ' ').trim().replace(/\s+/g, ' ');
+const identity = row => [row.source_url, normalizeProduct(row.product), row.type, row.formClass, row.currency, row.period, row.date, Number(row.price_per_kg)].join('|');
+const seen = new Map();
+const uniqueIdr = [];
+const duplicateRows = [];
+for (const row of rawIdr) {
+  const key = identity(row);
+  if (seen.has(key)) duplicateRows.push({ ...row, duplicate_of: seen.get(key).observation_id });
+  else { seen.set(key, row); uniqueIdr.push(row); }
+}
 const median = values => {
   const sorted = values.slice().sort((a, b) => a - b);
   const middle = Math.floor(sorted.length / 2);
   return sorted.length ? (sorted.length % 2 ? sorted[middle] : (sorted[middle - 1] + sorted[middle]) / 2) : null;
+};
+const quartile = (sorted, fraction) => {
+  const position = (sorted.length - 1) * fraction;
+  const lower = Math.floor(position), upper = Math.ceil(position);
+  return sorted[lower] + (sorted[upper] - sorted[lower]) * (position - lower);
+};
+// Flag only source-local statistical extremes with enough observations. This
+// avoids treating legitimate price tiers from different market stages as errors.
+const sourceGroups = new Map();
+for (const row of uniqueIdr) {
+  // Rows without a stable source URL cannot be compared within a source and
+  // therefore remain visible without statistical outlier screening.
+  if (!row.source_url) continue;
+  const key = [row.type, row.formClass, row.currency, row.period, row.source_url].join('|');
+  const group = sourceGroups.get(key) || [];
+  group.push(row); sourceGroups.set(key, group);
+}
+const outlierRows = [];
+for (const group of sourceGroups.values()) {
+  // Very large source batches often contain several product tiers, so a single
+  // IQR fence would mislabel legitimate premium listings as errors.
+  if (group.length < 8 || group.length > 100) continue;
+  const prices = group.map(row => Number(row.price_per_kg)).sort((a, b) => a - b);
+  const q1 = quartile(prices, 0.25), q3 = quartile(prices, 0.75), iqr = q3 - q1;
+  const lower = q1 - 1.5 * iqr, upper = q3 + 1.5 * iqr;
+  for (const row of group) if (Number(row.price_per_kg) < lower || Number(row.price_per_kg) > upper) {
+    outlierRows.push({ ...row, lower_fence: Math.round(lower), upper_fence: Math.round(upper), screening_method: 'Tukey 1.5×IQR; source-local group of at least 8 unique observations' });
+  }
+}
+const outlierIds = new Set(outlierRows.map(row => row.observation_id));
+const idr = uniqueIdr.filter(row => !outlierIds.has(row.observation_id));
+const formRows = {
+  green: idr.filter(row => row.formClass === 'green'),
+  roasted: idr.filter(row => row.formClass === 'roasted'),
 };
 const formatIdr = value => `Rp${new Intl.NumberFormat('id-ID', { maximumFractionDigits: 0 }).format(value)}`;
 const displayPeriod = period => {
@@ -82,7 +125,30 @@ const chart = (rows, form, type) => {
 };
 const usdCount = (dataset.listings || []).filter(row => row && row.currency === 'USD' && quarterIndex(row.period) && Number.isFinite(Number(row.price_per_kg)) && Number(row.price_per_kg) > 0 && (row.type === 'Arabika' || row.type === 'Robusta')).length;
 const excludedFormCount = idr.length - formRows.green.length - formRows.roasted.length;
-const chartHtml = `<div class="price-form-grid">${chart(formRows.green, 'green', 'Arabika')}${chart(formRows.roasted, 'roasted', 'Arabika')}${chart(formRows.green, 'green', 'Robusta')}${chart(formRows.roasted, 'roasted', 'Robusta')}</div><p class="price-form-coverage"><span class="id-copy"><strong>Cakupan: ${idr.length.toLocaleString('id-ID')} observasi harga IDR dari ${((dataset.listings || []).length).toLocaleString('id-ID')} total observasi.</strong> Terdiri dari ${formRows.green.length.toLocaleString('id-ID')} observasi biji hijau, ${formRows.roasted.length.toLocaleString('id-ID')} observasi biji sangrai, dan ${excludedFormCount.toLocaleString('id-ID')} kopi bubuk atau bentuk yang tidak disebut jelas (tidak masuk grafik). ${usdCount.toLocaleString('id-ID')} observasi USD tetap ada di dataset, tetapi tidak digabung ke grafik rupiah. Observasi listing dari proses berbeda digabung; grafik tidak memisahkan atau membandingkan proses. Angka menghitung listing lintas periode, bukan produk unik; listing yang sama dapat diamati lagi pada kuartal berikutnya.</span><span class="en-copy"><strong>Scope: ${idr.length.toLocaleString('en-US')} IDR price observations out of ${((dataset.listings || []).length).toLocaleString('en-US')} total observations.</strong> These comprise ${formRows.green.length.toLocaleString('en-US')} green-bean observations, ${formRows.roasted.length.toLocaleString('en-US')} roasted-bean observations, and ${excludedFormCount.toLocaleString('en-US')} ground-coffee or unspecified-form observations (excluded from charts). ${usdCount.toLocaleString('en-US')} USD observations remain in the dataset and are not combined with IDR charts. Listings for different processing methods are combined; the charts do not split or compare processing methods. Counts are listings observed across periods, not unique products; a listing may be observed again in a later quarter.</span></p>`;
+// A comparison warning is separate from outlier handling: low counts or a
+// changed source mix weaken quarter-to-quarter comparability without deleting data.
+const comparisonWarnings = [];
+const periodGroups = new Map();
+for (const row of uniqueIdr) {
+  const key = [row.type, row.formClass, row.currency, row.period].join('|');
+  const group = periodGroups.get(key) || { type: row.type, form: row.formClass, period: row.period, sources: new Set(), count: 0 };
+  group.sources.add(row.source_url); group.count++; periodGroups.set(key, group);
+}
+for (const current of periodGroups.values()) {
+  const previous = [...periodGroups.values()].filter(g => g.type === current.type && g.form === current.form && quarterIndex(g.period) < quarterIndex(current.period)).sort((a,b)=>quarterIndex(b.period)-quarterIndex(a.period))[0];
+  if (!previous) continue;
+  const overlap = [...current.sources].filter(source => previous.sources.has(source)).length;
+  const union = new Set([...current.sources, ...previous.sources]).size;
+  if (previous.count < 5 || (union && overlap / union < 0.5)) comparisonWarnings.push({ type: current.type, form: current.form, period: current.period, previous_period: previous.period, current_count: current.count, previous_count: previous.count, current_sources: [...current.sources], previous_sources: [...previous.sources], source_overlap: overlap, reason: previous.count < 5 ? 'Pembanding periode sebelumnya memiliki kurang dari 5 observasi.' : 'Komposisi sumber periode ini berbeda; sumber yang sama hanya sedikit.' });
+}
+const labelForm = form => form === 'green' ? 'Biji hijau (green bean)' : 'Biji sangrai (roasted bean)';
+const flagged = outlierRows.map(row => `<li><strong>${esc(row.type)} · ${esc(labelForm(row.formClass))} · ${esc(displayPeriod(row.period))}: ${formatIdr(Number(row.price_per_kg))}/kg</strong> — ${esc(row.product)}; ${esc(row.source)}. <span class="id-copy">Terpisah untuk pemeriksaan; tidak masuk median grafik.</span><span class="en-copy">Separated for review; excluded from chart median.</span> <a href="${esc(row.source_url)}" target="_blank" rel="noopener noreferrer"><span class="id-copy">Periksa sumber</span><span class="en-copy">Check source</span></a></li>`).join('');
+const duplicateNote = duplicateRows.length ? `${duplicateRows.length} baris duplikat terdeteksi dari perbedaan tanda baca/nama produk dan tidak dihitung dua kali.` : 'Tidak ada duplikat nama-produk yang terdeteksi.';
+const warningItems = comparisonWarnings.map(item => `<li><span class="id-copy">${esc(item.type)} · ${esc(labelForm(item.form))} · ${esc(displayPeriod(item.period))} dibanding ${esc(displayPeriod(item.previous_period))}: ${item.current_count} observasi vs ${item.previous_count}; ${esc(item.reason)}</span><span class="en-copy">${esc(item.type)} · ${item.form === 'green' ? 'Green beans' : 'Roasted beans'} · ${esc(displayPeriod(item.period))} vs ${esc(displayPeriod(item.previous_period))}: ${item.current_count} observations vs ${item.previous_count}; ${item.previous_count < 5 ? 'The prior period has fewer than 5 observations.' : 'The source mix changed substantially; few sources overlap.'}</span></li>`).join('');
+const screenHtml = `<details class="price-screening"><summary><span class="id-copy">Pemeriksaan kualitas data</span><span class="en-copy">Data quality screening</span></summary><p><span class="id-copy">${duplicateNote} Pencilan statistik diperiksa per sumber, jenis, bentuk, mata uang, dan periode menggunakan pagar Tukey 1,5×IQR; grup harus memiliki sedikitnya 8 observasi unik. Penanda berarti perlu ditinjau, bukan otomatis salah.</span><span class="en-copy">${duplicateRows.length} duplicate rows caused by punctuation/product-name variants were detected and are not double-counted. Statistical outliers are screened within each source, type, form, currency, and period using Tukey’s 1.5×IQR fences; groups need at least 8 unique observations. A flag means review is needed, not that a value is automatically wrong.</span></p>${flagged ? `<ul>${flagged}</ul>` : `<p><span class="id-copy">Belum ada kandidat pencilan.</span><span class="en-copy">No outlier candidates found.</span></p>`}${warningItems ? `<h4><span class="id-copy">Catatan perbandingan periode</span><span class="en-copy">Period comparison notes</span></h4><ul>${warningItems}</ul>` : ''}<p><a href="/data/mevo_prices_screening.json" target="_blank" rel="noopener noreferrer"><span class="id-copy">Buka rincian screening (JSON) →</span><span class="en-copy">Open screening details (JSON) →</span></a></p></details>`;
+const chartHtml = `<div class="price-form-grid">${chart(formRows.green, 'green', 'Arabika')}${chart(formRows.roasted, 'roasted', 'Arabika')}${chart(formRows.green, 'green', 'Robusta')}${chart(formRows.roasted, 'roasted', 'Robusta')}</div><p class="price-form-coverage"><span class="id-copy"><strong>Cakupan: ${rawIdr.length.toLocaleString('id-ID')} observasi harga IDR terdeteksi.</strong> Setelah ${duplicateRows.length.toLocaleString('id-ID')} duplikat dikeluarkan dan ${outlierRows.length.toLocaleString('id-ID')} kandidat pencilan dipisahkan untuk tinjauan, grafik memakai ${idr.length.toLocaleString('id-ID')} observasi unik. Biji hijau: ${formRows.green.length.toLocaleString('id-ID')}; biji sangrai: ${formRows.roasted.length.toLocaleString('id-ID')}; kopi bubuk atau bentuk tak jelas tidak masuk grafik. ${usdCount.toLocaleString('id-ID')} observasi USD tetap terpisah. Proses digabung. Jumlah adalah listing, bukan transaksi.</span><span class="en-copy"><strong>Scope: ${rawIdr.length.toLocaleString('en-US')} IDR price observations detected.</strong> After removing ${duplicateRows.length.toLocaleString('en-US')} duplicates and separating ${outlierRows.length.toLocaleString('en-US')} outlier candidates for review, charts use ${idr.length.toLocaleString('en-US')} unique observations. Green beans: ${formRows.green.length.toLocaleString('en-US')}; roasted beans: ${formRows.roasted.length.toLocaleString('en-US')}; ground or unclear forms are excluded. ${usdCount.toLocaleString('en-US')} USD observations remain separate. Processing methods are combined. Counts are listings, not transactions.</span></p>`;
+const screening = { generated_at: new Date().toISOString(), method: { duplicate_key: 'source_url + normalized product + type + form + currency + period + date + price_per_kg', outlier_rule: 'Tukey 1.5×IQR within source/type/form/currency/period groups with 8–100 unique observations; large batches are skipped because they can mix product tiers. Flagged items are pending review, not automatically invalid', chart_policy: 'duplicates and flagged outliers excluded from chart medians; raw source rows remain in mevo_prices.json' }, summary: { raw_idr_observations: rawIdr.length, unique_idr_observations: uniqueIdr.length, duplicate_rows: duplicateRows.length, outlier_candidates: outlierRows.length }, duplicates: duplicateRows.map(row => ({ observation_id: row.observation_id, duplicate_of: row.duplicate_of, type: row.type, form: row.form, period: row.period, date: row.date, price_per_kg: row.price_per_kg, product: row.product, source: row.source, source_url: row.source_url, status: 'duplicate_excluded_from_chart' })), outliers: outlierRows.map(row => ({ observation_id: row.observation_id, type: row.type, form: row.form, period: row.period, date: row.date, price_per_kg: row.price_per_kg, lower_fence: row.lower_fence, upper_fence: row.upper_fence, product: row.product, source: row.source, source_url: row.source_url, status: 'pending_manual_review' })), comparison_warnings: comparisonWarnings };
+fs.writeFileSync(path.join(ROOT, 'data', 'mevo_prices_screening.json'), `${JSON.stringify(screening, null, 2)}\n`);
 const secureSource = value => { try { const url = new URL(String(value || '')); return url.protocol === 'https:' ? url.href : ''; } catch (_) { return ''; } };
 // Keep every public source represented by the canonical JSON, including sources
 // that currently provide only USD observations (even though charts are IDR-only).
@@ -103,6 +169,7 @@ for (const filename of ['index.html', 'kabar-kopi.html']) {
   const filePath = path.join(ROOT, filename);
   let html = fs.readFileSync(filePath, 'utf8');
   html = replaceRegion(html, 'PRICE_CHART', chartHtml);
+  html = replaceRegion(html, 'PRICE_SCREENING', screenHtml);
   html = replaceRegion(html, 'PRICE_SOURCES', sourceList);
   html = replaceRegion(html, 'PRICE_UPDATED', esc(updatedAt));
   html = replaceRegion(html, 'PRICE_COUNT', sourceCount);
