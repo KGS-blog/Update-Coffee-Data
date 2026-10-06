@@ -15,6 +15,9 @@ async function main() {
     if (!dataset || !Array.isArray(dataset.listings) || !Array.isArray(dataset.summary) || !dataset.totals) {
       throw new Error('The JSON did not match the expected MEVO price dataset shape.');
     }
+    if (!dataset.listings.every(row => typeof row?.form === 'string' && row.form.trim())) {
+      throw new Error('The MEVO price JSON is missing its required product-form classification.');
+    }
     const validListings = dataset.listings.filter(row => {
       let sourceIsSecure = false;
       try { sourceIsSecure = new URL(row?.source_url).protocol === 'https:'; } catch (_) {}

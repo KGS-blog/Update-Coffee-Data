@@ -12,26 +12,34 @@ const quarterIndex = value => {
   return match ? Number(match[2]) * 10 + Number(match[1]) : 0;
 };
 
-// Classify only when the product text says the form explicitly. A processing
-// method (Natural, Washed, Honey, etc.) does not tell us whether it is roasted.
-const greenForm = /\bgreen\s*(?:bean|beans|coffee)\b|\bgreenbean\b|\bunroasted\b|\braw\s+coffee\b|kopi\s+mentah|biji\s+mentah/i;
-const roastedForm = /\broast(?:ed|ing)?\b|\bsangrai\b/i;
+// The upstream price JSON is authoritative for product form. Do not infer form
+// from process labels or product titles when the source provides a form field.
+const formLabels = new Map([
+  ['biji kopi mentah', 'green'], ['green coffee beans', 'green'], ['green beans', 'green'],
+  ['biji kopi sangrai', 'roasted'], ['roasted coffee beans', 'roasted'], ['roasted beans', 'roasted'],
+  ['kopi bubuk', 'ground'], ['ground coffee', 'ground'],
+]);
 const classifyForm = row => {
+  const sourceForm = String(row.form || '').trim().toLocaleLowerCase('id-ID');
+  if (sourceForm) return formLabels.get(sourceForm) || 'unspecified';
+  // Backward compatibility only for old JSON snapshots that predate `form`.
+  // Powder is checked first so “roasted ground coffee” is never plotted as beans.
   const product = String(row.product || '');
-  const green = greenForm.test(product), roasted = roastedForm.test(product);
-  if (green && roasted) return 'unclear';
-  if (green) return 'green';
-  if (roasted) return 'roasted';
+  if (/\bground\b|\bbubuk\b|\bpowder\b|\binstant\b|\bgiling\b/i.test(product)) return 'ground';
+  const green = /\bgreen\s*(?:bean|beans|coffee)\b|\bgreenbean\b|\bunroasted\b|\braw\s+coffee\b|kopi\s+mentah|biji\s+mentah/i.test(product);
+  const roasted = /\broast(?:ed|ing)?\b|\bsangrai\b/i.test(product);
+  if (green && !roasted) return 'green';
+  if (roasted && !green) return 'roasted';
   return 'unspecified';
 };
 const idr = (dataset.listings || []).filter(row =>
   row && row.currency === 'IDR' && quarterIndex(row.period) &&
   Number.isFinite(Number(row.price_per_kg)) && Number(row.price_per_kg) > 0 &&
   (row.type === 'Arabika' || row.type === 'Robusta')
-).map(row => ({ ...row, form: classifyForm(row) }));
+).map(row => ({ ...row, formClass: classifyForm(row) }));
 const formRows = {
-  green: idr.filter(row => row.form === 'green'),
-  roasted: idr.filter(row => row.form === 'roasted'),
+  green: idr.filter(row => row.formClass === 'green'),
+  roasted: idr.filter(row => row.formClass === 'roasted'),
 };
 const median = values => {
   const sorted = values.slice().sort((a, b) => a - b);
@@ -64,17 +72,21 @@ const chart = (rows, form, type) => {
   const cls = type === 'Arabika' ? 'arabica' : 'robusta';
   const pathD = points.map((point, i) => `${i ? 'L' : 'M'} ${x(point.period)} ${y(point.median)}`).join(' ');
   const line = points.length > 1 ? `<path class="${cls}" d="${pathD}"/>` : '';
-  const dots = points.map(point => `<circle class="point ${cls}-point" cx="${x(point.period)}" cy="${y(point.median)}" r="6"><title>${esc(type)} · ${esc(displayPeriod(point.period))} · ${formatIdr(point.median)} · ${point.count} listings</title></circle>`).join('');
+  const dots = points.map(point => `<circle class="point ${cls}-point" cx="${x(point.period)}" cy="${y(point.median)}" r="6"><title>${esc(type)} · ${esc(displayPeriod(point.period))} · ${formatIdr(point.median)} · ${point.count} price observations</title></circle>`).join('');
   const periodLabels = periods.map(period => `<text x="${x(period)}" y="${height-16}" text-anchor="middle">${esc(displayPeriod(period))}</text>`).join('');
-  const table = `<div class="price-table-scroll"><table class="price-period-table"><thead><tr><th><span class="id-copy">Periode</span><span class="en-copy">Period</span></th><th><span class="id-copy">Median harga/kg</span><span class="en-copy">Median price/kg</span></th><th><span class="id-copy">Jumlah listing</span><span class="en-copy">Listings recorded</span></th></tr></thead><tbody>${points.map(point => `<tr><th scope="row">${esc(displayPeriod(point.period))}</th><td>${formatIdr(point.median)}</td><td class="count">${point.count.toLocaleString('id-ID')}</td></tr>`).join('')}</tbody></table></div>`;
+  const table = `<div class="price-table-scroll"><table class="price-period-table"><thead><tr><th><span class="id-copy">Periode</span><span class="en-copy">Period</span></th><th><span class="id-copy">Median harga/kg</span><span class="en-copy">Median price/kg</span></th><th><span class="id-copy">Jumlah observasi harga</span><span class="en-copy">Price observations</span></th></tr></thead><tbody>${points.map(point => `<tr><th scope="row">${esc(displayPeriod(point.period))}</th><td>${formatIdr(point.median)}</td><td class="count">${point.count.toLocaleString('id-ID')}</td></tr>`).join('')}</tbody></table></div>`;
   const formName = form === 'green' ? ['Green bean', 'Green beans'] : ['Roasted bean', 'Roasted beans'];
   const speciesName = type === 'Arabika' ? ['Arabika', 'Arabica'] : ['Robusta', 'Robusta'];
   const id = `${type.toLowerCase()}-${form}-chart`;
-  return `<section class="price-form-panel" aria-labelledby="${id}-heading"><h3 id="${id}-heading"><span class="id-copy">${speciesName[0]} · ${form === 'green' ? 'Biji hijau (green bean)' : 'Biji sangrai (roasted beans)'}</span><span class="en-copy">${speciesName[1]} · ${formName[1]}</span></h3><div class="price-chart-wrap"><svg class="price-chart" viewBox="0 0 ${width} ${height}" role="img" aria-labelledby="${id}-title ${id}-desc"><title id="${id}-title">${speciesName[1]} ${formName[1]} median listing prices per kilogram by period</title><desc id="${id}-desc">Median IDR listing prices for ${speciesName[1]} ${formName[1]}, with processing methods combined.</desc>${horizontalGrid}${line}${dots}${periodLabels}</svg></div>${table}<p class="price-count-note"><span class="id-copy">Median menggabungkan listing semua proses untuk jenis dan bentuk biji ini.</span><span class="en-copy">Median combines listings across all processing methods for this type and bean form.</span></p></section>`;
+  return `<section class="price-form-panel" aria-labelledby="${id}-heading"><h3 id="${id}-heading"><span class="id-copy">${speciesName[0]} · ${form === 'green' ? 'Biji hijau (green bean)' : 'Biji sangrai (roasted beans)'}</span><span class="en-copy">${speciesName[1]} · ${formName[1]}</span></h3><div class="price-chart-wrap"><svg class="price-chart" viewBox="0 0 ${width} ${height}" role="img" aria-labelledby="${id}-title ${id}-desc"><title id="${id}-title">${speciesName[1]} ${formName[1]} median listing prices per kilogram by period</title><desc id="${id}-desc">Median IDR listing prices for ${speciesName[1]} ${formName[1]}, with processing methods combined.</desc>${horizontalGrid}${line}${dots}${periodLabels}</svg></div>${table}<p class="price-count-note"><span class="id-copy">Median menggabungkan semua observasi harga untuk jenis dan bentuk biji ini; proses tidak dipisahkan.</span><span class="en-copy">The median combines all price observations for this type and bean form; processing methods are not split.</span></p></section>`;
 };
-const chartHtml = `<div class="price-form-grid">${chart(formRows.green, 'green', 'Arabika')}${chart(formRows.roasted, 'roasted', 'Arabika')}${chart(formRows.green, 'green', 'Robusta')}${chart(formRows.roasted, 'roasted', 'Robusta')}</div><p class="price-form-coverage"><span class="id-copy"><strong>Cakupan bentuk:</strong> ${formRows.green.length.toLocaleString('id-ID')} listing biji hijau · ${formRows.roasted.length.toLocaleString('id-ID')} listing biji sangrai · ${(idr.length - formRows.green.length - formRows.roasted.length).toLocaleString('id-ID')} listing tanpa bentuk yang jelas atau berupa kopi bubuk tidak dimasukkan ke keempat grafik.</span><span class="en-copy"><strong>Form coverage:</strong> ${formRows.green.length.toLocaleString('en-US')} green-bean listings · ${formRows.roasted.length.toLocaleString('en-US')} roasted-bean listings · ${(idr.length - formRows.green.length - formRows.roasted.length).toLocaleString('en-US')} listings with unclear form or ground coffee are excluded from all four charts.</span></p>`;
+const usdCount = (dataset.listings || []).filter(row => row && row.currency === 'USD' && quarterIndex(row.period) && Number.isFinite(Number(row.price_per_kg)) && Number(row.price_per_kg) > 0 && (row.type === 'Arabika' || row.type === 'Robusta')).length;
+const excludedFormCount = idr.length - formRows.green.length - formRows.roasted.length;
+const chartHtml = `<div class="price-form-grid">${chart(formRows.green, 'green', 'Arabika')}${chart(formRows.roasted, 'roasted', 'Arabika')}${chart(formRows.green, 'green', 'Robusta')}${chart(formRows.roasted, 'roasted', 'Robusta')}</div><p class="price-form-coverage"><span class="id-copy"><strong>Cakupan: ${idr.length.toLocaleString('id-ID')} observasi harga IDR dari ${((dataset.listings || []).length).toLocaleString('id-ID')} total observasi.</strong> Terdiri dari ${formRows.green.length.toLocaleString('id-ID')} observasi biji hijau, ${formRows.roasted.length.toLocaleString('id-ID')} biji sangrai, dan ${excludedFormCount.toLocaleString('id-ID')} kopi bubuk atau bentuk yang tidak disebut jelas (tidak masuk grafik). ${usdCount.toLocaleString('id-ID')} observasi USD tetap ada di dataset, tetapi tidak digabung ke grafik rupiah. Angka menghitung observasi lintas periode, bukan produk unik; satu produk dapat tercatat pada beberapa periode.</span><span class="en-copy"><strong>Scope: ${idr.length.toLocaleString('en-US')} IDR price observations out of ${((dataset.listings || []).length).toLocaleString('en-US')} total observations.</strong> These comprise ${formRows.green.length.toLocaleString('en-US')} green-bean observations, ${formRows.roasted.length.toLocaleString('en-US')} roasted-bean observations, and ${excludedFormCount.toLocaleString('en-US')} ground-coffee or unspecified-form observations (excluded from charts). ${usdCount.toLocaleString('en-US')} USD observations remain in the dataset and are not combined with IDR charts. Counts are observations across periods, not unique products; one product may be recorded in multiple periods.</span></p>`;
 const secureSource = value => { try { const url = new URL(String(value || '')); return url.protocol === 'https:' ? url.href : ''; } catch (_) { return ''; } };
-const sources = [...new Map(idr.map(row => [secureSource(row.source_url), row.source || row.source_url]).filter(([url]) => url)).entries()].sort((a,b)=>a[1].localeCompare(b[1]));
+// Keep every public source represented by the canonical JSON, including sources
+// that currently provide only USD observations (even though charts are IDR-only).
+const sources = [...new Map((dataset.listings || []).map(row => [secureSource(row?.source_url), row?.source || row?.source_url]).filter(([url]) => url)).entries()].sort((a,b)=>a[1].localeCompare(b[1]));
 const sourceList = sources.map(([url, name]) => `<li><a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(name)}</a></li>`).join('');
 const rawUpdatedAt = Date.parse(dataset.generated_at || '');
 const updatedAt = Number.isNaN(rawUpdatedAt)
@@ -96,4 +108,4 @@ for (const filename of ['index.html', 'kabar-kopi.html']) {
   html = replaceRegion(html, 'PRICE_COUNT', sourceCount);
   fs.writeFileSync(filePath, html);
 }
-console.log(`Rendered separate green-bean (${formRows.green.length}) and roasted-bean (${formRows.roasted.length}) IDR charts; left ${idr.length - formRows.green.length - formRows.roasted.length} listings outside form comparisons because bean form is unspecified or the product is ground coffee.`);
+console.log(`Rendered IDR charts from ${idr.length} price observations: ${formRows.green.length} green-bean, ${formRows.roasted.length} roasted-bean, and ${excludedFormCount} ground or unspecified-form observations excluded; ${usdCount} USD observations are not included in IDR charts.`);
