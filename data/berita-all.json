@@ -1,6 +1,25 @@
 {
   "artikel": [
     {
+      "judul": "Beda Nasib FORE dengan Kopi Kenangan - investor.id",
+      "tautan": "https://investor.id/market/456882/beda-nasib-fore-dengan-kopi-kenangan",
+      "tanggal": "Tue, 06 Oct 2026 09:03:41 GMT",
+      "sumber": "investor.id",
+      "asal": "google_news",
+      "aggregator": "Google News",
+      "link_type": "publisher_article",
+      "resolution_status": "resolved",
+      "tautan_google_news": "https://news.google.com/rss/articles/CBMiekFVX3lxTE9MbEZ2M2xQTjQzc0JpTmhOM1FWRmlvQlI1dEJ1RWZRbUZZazhTUFFMNUwzbXBFNDhrXzFTbDB2NmMwYzdubS1KaXZaVVpkY1htMkpzTGdOdWVJUFMtM3Q5a1RRQTRYRW5EYVczQ0dCSC0xN0JmWDdVclhn?oc=5",
+      "extraction_status": "http_error",
+      "extracted_at": "2026-10-06T09:07:48Z",
+      "fetch_error": "HTTP 403",
+      "retry_after": "2026-10-13T09:07:48Z",
+      "date_enrichment_version": 6,
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned"
+    },
+    {
       "judul": "Dorong Hilirisasi, Pemkab Perkuat Branding Jember Surga Kopi - RRI.co.id",
       "tautan": "https://rri.co.id/jember/regional/2789287/dorong-hilirisasi-pemkab-perkuat-branding-jember-surga-kopi",
       "tanggal": "Tue, 06 Oct 2026 08:50:00 GMT",
@@ -19094,10 +19113,10 @@
       "cluster_ai_evidence": "\"The onset of a new El Niño event presents challenges for coffee farmers.\""
     }
   ],
-  "fetched": "2026-10-06T08:57:25.481Z",
+  "fetched": "2026-10-06T09:07:30.974Z",
   "reference_ingest": {
     "source": "KGS-blog/coffee-intelligence-engine/exports/coffee_relevant_articles.json",
-    "imported_at": "2026-10-06T08:57:47.613Z",
+    "imported_at": "2026-10-06T09:07:48.805Z",
     "source_records": 351,
     "accepted_candidates": 338,
     "dated_candidates": 304,
@@ -19112,7 +19131,7 @@
     }
   },
   "content_fetch": {
-    "last_batch_at": "2026-10-06T08:57:47Z",
+    "last_batch_at": "2026-10-06T09:07:48Z",
     "batch_size": 1,
     "batch_limit": 400,
     "purpose": "Short original-publisher context for relevance and cluster review; full article text is not stored or republished."
