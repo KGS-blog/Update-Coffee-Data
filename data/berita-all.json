@@ -81,6 +81,49 @@
       "cluster_ai_evidence": "\"Pemerintah Kabupaten Jember akan segera meluncurkan branding baru daerah sebagai Jember Surga Kopi Indonesia... ini adalah strategi hilirisasi\""
     },
     {
+      "judul": "Pimpin Gowes di Kebun Sumberwadung Silo, Bupati Fawait Kenalkan Jargon 'Jember Surga Kopi'",
+      "tautan": "https://jatim.tribunnews.com/jember/562137/pimpin-gowes-di-kebun-sumberwadung-silo-bupati-fawait-kenalkan-jargon-jember-surga-kopi",
+      "tanggal": "2026-10-05 17:17:33",
+      "sumber": "Tribun News",
+      "ringkasan": "Kebun Sumberwadung merupakan salah satu kebun yang dikelola oleh Badan Usaha Milik Daerah (BUMD) Pemkab Jember.",
+      "asal": "newsdata",
+      "link_type": "publisher_article",
+      "extracted_at": "2026-10-06T05:30:55Z",
+      "extracted_from_url": "https://jatim.tribunnews.com/jember/562137/pimpin-gowes-di-kebun-sumberwadung-silo-bupati-fawait-kenalkan-jargon-jember-surga-kopi",
+      "resolved_url": "https://jatim.tribunnews.com/jember/562137/pimpin-gowes-di-kebun-sumberwadung-silo-bupati-fawait-kenalkan-jargon-jember-surga-kopi",
+      "source_content_type": "text/html",
+      "http_status": 202,
+      "extraction_status": "thin_content_or_shell",
+      "extraction_method": "html_body",
+      "source_title": "",
+      "source_description": "",
+      "source_authors": [],
+      "source_published_date": "",
+      "publication_date_precision": null,
+      "publication_date_evidence": null,
+      "date_enrichment_version": 6,
+      "coffee_relevance_context": "",
+      "content_char_count": 0,
+      "content_sha256": null,
+      "content_excerpt": "",
+      "fetch_error": null,
+      "retry_after": "2026-10-13T05:30:55Z",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_ai_reviewed_at": "2026-10-06T05:30:56.436Z",
+      "cluster_review_version": 7,
+      "cluster_review_context_hash": "9f563a882d76241d514ca5b373d1c65ec145b848b9e09de89856324674cc4391",
+      "cluster_relevance_review": {
+        "relevance": "uncertain",
+        "title_context_match": "unclear",
+        "suggested_cluster_id": "",
+        "reason": "Konten sangat tipis; judul menonjolkan gowes dan slogan kopi, namun konteks tidak memberi bahasan substansial tentang industri kopi.",
+        "evidence": "Judul: \"Pimpin Gowes di Kebun Sumberwadung Silo, Bupati Fawait Kenalkan Jargon 'Jember Surga Kopi'\" | Konteks: \"Kebun Sumberwadung merupakan salah satu kebun yang dikelola oleh Badan Usaha Milik Daerah (BUMD) Pemkab Jember.\"",
+        "reviewed_at": "2026-10-06T05:30:56.436Z"
+      }
+    },
+    {
       "judul": "Dukung Pemulihan Ekonomi Pascabencana, PT THL Sediakan Lahan Konsesi untuk Kopi Gayo dan Pangan",
       "tautan": "https://gayo.tribunnews.com/aceh-tengah/54539/dukung-pemulihan-ekonomi-pascabencana-pt-thl-sediakan-lahan-konsesi-untuk-kopi-gayo-dan-pangan",
       "tanggal": "2026-10-05 15:14:58",
@@ -18917,10 +18960,10 @@
       "cluster_ai_evidence": "\"The onset of a new El Niño event presents challenges for coffee farmers.\""
     }
   ],
-  "fetched": "2026-10-06T04:52:38.058Z",
+  "fetched": "2026-10-06T05:30:38.370Z",
   "reference_ingest": {
     "source": "KGS-blog/coffee-intelligence-engine/exports/coffee_relevant_articles.json",
-    "imported_at": "2026-10-06T04:52:52.437Z",
+    "imported_at": "2026-10-06T05:30:54.835Z",
     "source_records": 351,
     "accepted_candidates": 338,
     "dated_candidates": 304,
@@ -18935,8 +18978,8 @@
     }
   },
   "content_fetch": {
-    "last_batch_at": "2026-10-06T04:52:52Z",
-    "batch_size": 8,
+    "last_batch_at": "2026-10-06T05:30:54Z",
+    "batch_size": 1,
     "batch_limit": 400,
     "purpose": "Short original-publisher context for relevance and cluster review; full article text is not stored or republished."
   }
