@@ -6,11 +6,11 @@
   "period_note": "Kuartal berasal dari tanggal terbit sumber bila tersedia; selain itu dari tanggal listing diamati MEVO. Ini bukan tanggal transaksi.",
   "normalization_note": "Harga kemasan dinormalisasi ke 1 kg. Nilai IDR bulat 100–999 dibaca sebagai ribuan (contoh 150 menjadi Rp150.000) sesuai konvensi sumber MEVO.",
   "totals": {
-    "listings": 2794,
-    "groups": 53,
+    "listings": 2803,
+    "groups": 61,
     "types": {
-      "Arabika": 2139,
-      "Robusta": 655
+      "Arabika": 2143,
+      "Robusta": 658
     }
   },
   "summary": [
@@ -816,6 +816,76 @@
       ]
     },
     {
+      "type": "Blend",
+      "form": "Biji kopi sangrai",
+      "process": "Tidak disebut",
+      "price_level": "retail",
+      "period": "Q4 2026",
+      "currency": "IDR",
+      "listing_count": 2,
+      "source_count": 1,
+      "median_price_per_kg": 375000,
+      "minimum_price_per_kg": 350000,
+      "maximum_price_per_kg": 400000,
+      "source_urls": []
+    },
+    {
+      "type": "Arabika",
+      "form": "Biji kopi sangrai",
+      "process": "Full Wash",
+      "price_level": "retail",
+      "period": "Q4 2026",
+      "currency": "IDR",
+      "listing_count": 1,
+      "source_count": 1,
+      "median_price_per_kg": 400000,
+      "minimum_price_per_kg": 400000,
+      "maximum_price_per_kg": 400000,
+      "source_urls": []
+    },
+    {
+      "type": "Arabika",
+      "form": "Biji kopi sangrai",
+      "process": "Tidak disebut",
+      "price_level": "retail",
+      "period": "Q4 2026",
+      "currency": "IDR",
+      "listing_count": 1,
+      "source_count": 1,
+      "median_price_per_kg": 700000,
+      "minimum_price_per_kg": 700000,
+      "maximum_price_per_kg": 700000,
+      "source_urls": []
+    },
+    {
+      "type": "Arabika",
+      "form": "Biji kopi sangrai",
+      "process": "Natural",
+      "price_level": "retail",
+      "period": "Q4 2026",
+      "currency": "IDR",
+      "listing_count": 1,
+      "source_count": 1,
+      "median_price_per_kg": 600000,
+      "minimum_price_per_kg": 600000,
+      "maximum_price_per_kg": 600000,
+      "source_urls": []
+    },
+    {
+      "type": "Arabika",
+      "form": "Biji kopi sangrai",
+      "process": "Wine",
+      "price_level": "retail",
+      "period": "Q4 2026",
+      "currency": "IDR",
+      "listing_count": 1,
+      "source_count": 1,
+      "median_price_per_kg": 550000,
+      "minimum_price_per_kg": 550000,
+      "maximum_price_per_kg": 550000,
+      "source_urls": []
+    },
+    {
       "type": "Arabika",
       "form": "Biji kopi mentah",
       "process": "Tidak disebut",
@@ -880,6 +950,48 @@
       "source_urls": [
         "https://willkingreencoffee.com/katalog-lokal/"
       ]
+    },
+    {
+      "type": "Robusta",
+      "form": "Biji kopi sangrai",
+      "process": "Tidak disebut",
+      "price_level": "retail",
+      "period": "Q4 2026",
+      "currency": "IDR",
+      "listing_count": 1,
+      "source_count": 1,
+      "median_price_per_kg": 350000,
+      "minimum_price_per_kg": 350000,
+      "maximum_price_per_kg": 350000,
+      "source_urls": []
+    },
+    {
+      "type": "Robusta",
+      "form": "Biji kopi sangrai",
+      "process": "Natural",
+      "price_level": "retail",
+      "period": "Q4 2026",
+      "currency": "IDR",
+      "listing_count": 1,
+      "source_count": 1,
+      "median_price_per_kg": 300000,
+      "minimum_price_per_kg": 300000,
+      "maximum_price_per_kg": 300000,
+      "source_urls": []
+    },
+    {
+      "type": "Robusta",
+      "form": "Biji kopi sangrai",
+      "process": "Wine",
+      "price_level": "retail",
+      "period": "Q4 2026",
+      "currency": "IDR",
+      "listing_count": 1,
+      "source_count": 1,
+      "median_price_per_kg": 400000,
+      "minimum_price_per_kg": 400000,
+      "maximum_price_per_kg": 400000,
+      "source_urls": []
     }
   ],
   "listings": [
@@ -64182,6 +64294,166 @@
       "quality_status": null
     },
     {
+      "observation_id": "d0e2d84d175b7dc23f009ce490468ecb49dcfc506c8ad69c39b1bec8c2c520b9",
+      "type": "Blend",
+      "form": "Biji kopi sangrai",
+      "process": "Tidak disebut",
+      "price_level": "retail",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "date_basis": "Tanggal diamati Kabar Kopi",
+      "currency": "IDR",
+      "original_price": 40000,
+      "price_per_package": 40000,
+      "package_size": {
+        "amount": 100,
+        "unit": "g"
+      },
+      "price_per_kg": 400000,
+      "scale_100_to_999_applied": false,
+      "product": "50 : 50",
+      "source": "GOOD COFFEE GOOD DAY",
+      "source_type": "field",
+      "source_detail": "COFFEE TIME! PRICE LIST KOPI TEMANGGUNG",
+      "source_url": null,
+      "product_url": null,
+      "quality_status": null
+    },
+    {
+      "observation_id": "4aa709cfbe3845e6b9a98e62e16e83f08d8d276fc8bb0c71ecc2dfa99354371d",
+      "type": "Blend",
+      "form": "Biji kopi sangrai",
+      "process": "Tidak disebut",
+      "price_level": "retail",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "date_basis": "Tanggal diamati Kabar Kopi",
+      "currency": "IDR",
+      "original_price": 35000,
+      "price_per_package": 35000,
+      "package_size": {
+        "amount": 100,
+        "unit": "g"
+      },
+      "price_per_kg": 350000,
+      "scale_100_to_999_applied": false,
+      "product": "70 : 30",
+      "source": "GOOD COFFEE GOOD DAY",
+      "source_type": "field",
+      "source_detail": "COFFEE TIME! PRICE LIST KOPI TEMANGGUNG",
+      "source_url": null,
+      "product_url": null,
+      "quality_status": null
+    },
+    {
+      "observation_id": "1e52bd9a731f00fe72f30b3c1933f92dd505de1348e80493d7bad393fdfd2c0f",
+      "type": "Arabika",
+      "form": "Biji kopi sangrai",
+      "process": "Full Wash",
+      "price_level": "retail",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "date_basis": "Tanggal diamati Kabar Kopi",
+      "currency": "IDR",
+      "original_price": 40000,
+      "price_per_package": 40000,
+      "package_size": {
+        "amount": 100,
+        "unit": "g"
+      },
+      "price_per_kg": 400000,
+      "scale_100_to_999_applied": false,
+      "product": "Arabica Full Wash",
+      "source": "GOOD COFFEE GOOD DAY",
+      "source_type": "field",
+      "source_detail": "COFFEE TIME! PRICE LIST KOPI TEMANGGUNG",
+      "source_url": null,
+      "product_url": null,
+      "quality_status": null,
+      "origin": "Temanggung"
+    },
+    {
+      "observation_id": "4845daf5d28d565d87835abb4452057de0e53223885f38119915191d02fb370f",
+      "type": "Arabika",
+      "form": "Biji kopi sangrai",
+      "process": "Tidak disebut",
+      "price_level": "retail",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "date_basis": "Tanggal diamati Kabar Kopi",
+      "currency": "IDR",
+      "original_price": 70000,
+      "price_per_package": 70000,
+      "package_size": {
+        "amount": 100,
+        "unit": "g"
+      },
+      "price_per_kg": 700000,
+      "scale_100_to_999_applied": false,
+      "product": "Arabica Luwak",
+      "source": "GOOD COFFEE GOOD DAY",
+      "source_type": "field",
+      "source_detail": "COFFEE TIME! PRICE LIST KOPI TEMANGGUNG",
+      "source_url": null,
+      "product_url": null,
+      "quality_status": null,
+      "origin": "Temanggung"
+    },
+    {
+      "observation_id": "c3e2a687e7a83f9976c5a28d7e5872d0f00e1a5c9e7c6794e37a37da3cd06170",
+      "type": "Arabika",
+      "form": "Biji kopi sangrai",
+      "process": "Natural",
+      "price_level": "retail",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "date_basis": "Tanggal diamati Kabar Kopi",
+      "currency": "IDR",
+      "original_price": 60000,
+      "price_per_package": 60000,
+      "package_size": {
+        "amount": 100,
+        "unit": "g"
+      },
+      "price_per_kg": 600000,
+      "scale_100_to_999_applied": false,
+      "product": "Arabica Natural Signature",
+      "source": "GOOD COFFEE GOOD DAY",
+      "source_type": "field",
+      "source_detail": "COFFEE TIME! PRICE LIST KOPI TEMANGGUNG",
+      "source_url": null,
+      "product_url": null,
+      "quality_status": null,
+      "origin": "Temanggung"
+    },
+    {
+      "observation_id": "0ce05b84c2dac14f5805810e0cc54ca3ce0c7ecffa4f05a5df431ce9d7962a2f",
+      "type": "Arabika",
+      "form": "Biji kopi sangrai",
+      "process": "Wine",
+      "price_level": "retail",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "date_basis": "Tanggal diamati Kabar Kopi",
+      "currency": "IDR",
+      "original_price": 55000,
+      "price_per_package": 55000,
+      "package_size": {
+        "amount": 100,
+        "unit": "g"
+      },
+      "price_per_kg": 550000,
+      "scale_100_to_999_applied": false,
+      "product": "Arabica Wine",
+      "source": "GOOD COFFEE GOOD DAY",
+      "source_type": "field",
+      "source_detail": "COFFEE TIME! PRICE LIST KOPI TEMANGGUNG",
+      "source_url": null,
+      "product_url": null,
+      "quality_status": null,
+      "origin": "Temanggung"
+    },
+    {
       "observation_id": "380736a5276395eaac881dd6e7b496e77627985f21819e7a77e2305cc5c8fdc5",
       "type": "Arabika",
       "form": "Biji kopi mentah",
@@ -65279,6 +65551,33 @@
       "origin": "Pangalengan, Jawa Barat (1,400 mdpl)"
     },
     {
+      "observation_id": "f63687489d7a8d63653c7337f16097b3a98298fbbd482d7d8792ee1c7be5d68d",
+      "type": "Robusta",
+      "form": "Biji kopi sangrai",
+      "process": "Tidak disebut",
+      "price_level": "retail",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "date_basis": "Tanggal diamati Kabar Kopi",
+      "currency": "IDR",
+      "original_price": 35000,
+      "price_per_package": 35000,
+      "package_size": {
+        "amount": 100,
+        "unit": "g"
+      },
+      "price_per_kg": 350000,
+      "scale_100_to_999_applied": false,
+      "product": "Lanang",
+      "source": "GOOD COFFEE GOOD DAY",
+      "source_type": "field",
+      "source_detail": "COFFEE TIME! PRICE LIST KOPI TEMANGGUNG",
+      "source_url": null,
+      "product_url": null,
+      "quality_status": null,
+      "origin": "Temanggung"
+    },
+    {
       "observation_id": "ceba1006e988ade12f1d6c26a762f41c262ffaae25a89b8e92064e19a60dba49",
       "type": "Arabika",
       "form": "Biji kopi mentah",
@@ -65515,6 +65814,33 @@
       "origin": "Lampung"
     },
     {
+      "observation_id": "a5bd117080cc109b329cb4769a4532cdc1f3d39396ea8cf87b7f8029e4e53062",
+      "type": "Robusta",
+      "form": "Biji kopi sangrai",
+      "process": "Natural",
+      "price_level": "retail",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "date_basis": "Tanggal diamati Kabar Kopi",
+      "currency": "IDR",
+      "original_price": 30000,
+      "price_per_package": 30000,
+      "package_size": {
+        "amount": 100,
+        "unit": "g"
+      },
+      "price_per_kg": 300000,
+      "scale_100_to_999_applied": false,
+      "product": "Robusta Natural",
+      "source": "GOOD COFFEE GOOD DAY",
+      "source_type": "field",
+      "source_detail": "COFFEE TIME! PRICE LIST KOPI TEMANGGUNG",
+      "source_url": null,
+      "product_url": null,
+      "quality_status": null,
+      "origin": "Temanggung"
+    },
+    {
       "observation_id": "bdb68d0e0f0132ef69431b38e59b30d7d0c336f751ffaba04892085ab7f31b0e",
       "type": "Robusta",
       "form": "Biji kopi mentah",
@@ -65631,7 +65957,34 @@
       "product_url": "https://willkingreencoffee.com/katalog-lokal/",
       "quality_status": "Published USD range · midpoint used for summaries · observed by Kabar Kopi",
       "origin": "Temanggung, Jateng"
+    },
+    {
+      "observation_id": "569dfc9fc27b3231afd0468f57e30886c49ebbe496f6d6659dfeb2fa35416c07",
+      "type": "Robusta",
+      "form": "Biji kopi sangrai",
+      "process": "Wine",
+      "price_level": "retail",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "date_basis": "Tanggal diamati Kabar Kopi",
+      "currency": "IDR",
+      "original_price": 40000,
+      "price_per_package": 40000,
+      "package_size": {
+        "amount": 100,
+        "unit": "g"
+      },
+      "price_per_kg": 400000,
+      "scale_100_to_999_applied": false,
+      "product": "Wine",
+      "source": "GOOD COFFEE GOOD DAY",
+      "source_type": "field",
+      "source_detail": "COFFEE TIME! PRICE LIST KOPI TEMANGGUNG",
+      "source_url": null,
+      "product_url": null,
+      "quality_status": null,
+      "origin": "Temanggung"
     }
   ],
-  "public_price_sources_checked_at": "2026-10-06T11:02:20.455Z"
+  "public_price_sources_checked_at": "2026-10-06T13:03:35.088Z"
 }

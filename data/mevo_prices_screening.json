@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-06T11:03:38.816Z",
+  "generated_at": "2026-10-06T13:08:25.738Z",
   "method": {
     "duplicate_key": "source identity (URL or explicit field-source identity) + normalized product + type + form + currency + period + date + price_per_kg",
     "source_currency_rule": "Rows from specialtycoffee.id that were labeled IDR are excluded from IDR charts because the primary source states all its prices are USD; original source-currency prices are not reconstructed without verified FX metadata",
@@ -7,12 +7,12 @@
     "chart_policy": "source-currency mismatches, duplicates and flagged outliers excluded from IDR chart medians; raw source rows remain in mevo_prices.json"
   },
   "summary": {
-    "raw_idr_observations": 2587,
-    "unique_idr_observations": 2511,
+    "raw_idr_observations": 2594,
+    "unique_idr_observations": 2518,
     "duplicate_rows": 76,
     "source_currency_mismatch_rows": 66,
     "outlier_candidates": 3,
-    "chart_eligible_unique_idr_observations": 2442
+    "chart_eligible_unique_idr_observations": 2449
   },
   "duplicates": [
     {
@@ -2413,11 +2413,12 @@
       "form": "roasted",
       "period": "Q4 2026",
       "previous_period": "Q3 2026",
-      "current_count": 8,
+      "current_count": 12,
       "previous_count": 6,
       "current_sources": [
         "url:https://kopibara.id/",
-        "url:https://berkopi.com/"
+        "url:https://berkopi.com/",
+        "field:good coffee good day:coffee time price list kopi temanggung"
       ],
       "previous_sources": [
         "url:https://kopitime.id/harga-kopi-menjelang-akhir-tahun-2026-dan-perkembangan-pasar-global-1"
@@ -2430,10 +2431,11 @@
       "form": "roasted",
       "period": "Q4 2026",
       "previous_period": "Q3 2026",
-      "current_count": 1,
+      "current_count": 4,
       "previous_count": 4,
       "current_sources": [
-        "url:https://berkopi.com/"
+        "url:https://berkopi.com/",
+        "field:good coffee good day:coffee time price list kopi temanggung"
       ],
       "previous_sources": [
         "url:https://kopitime.id/harga-kopi-menjelang-akhir-tahun-2026-dan-perkembangan-pasar-global-1"

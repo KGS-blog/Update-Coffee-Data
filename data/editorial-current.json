@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated_at": "2026-10-06T11:02:32.857Z",
-  "feed_fetched": "2026-10-06T11:02:07.303Z",
+  "generated_at": "2026-10-06T13:03:51.084Z",
+  "feed_fetched": "2026-10-06T13:03:22.841Z",
   "mode": "auto",
   "settings": {
     "version": 1,
@@ -238,52 +238,54 @@
       "cluster_id": "event-kompetisi",
       "cluster_name": "Event & Kompetisi",
       "period_days": 30,
-      "generated_at": "2026-10-06T04:52:56.062Z",
+      "generated_at": "2026-10-06T13:03:51.084Z",
       "status": "ai_generated",
-      "fingerprint": "a4d5d80e06c9cbe8d839c5d2783d6a0a3112bedbd201f6916cc942c2bc5d0d73",
+      "fingerprint": "6f2be9880ae33b3115bd999e31e43557f7f88b719313e5ac689061b60c3821db",
       "article": {
-        "title": "Event Kopi, Awal Oktober 2026: Festival Lokal, Dorongan Ekspor, dan Aktivasi Lintas Industri",
-        "summary": "Sekitar 150 pelajar SMK di Tangerang mengikuti seminar bertema kopi “Secangkir Kopi Sejuta Mimpi” yang dikemas sebagai edukasi keselamatan berkendara [1]. Di saat yang sama, festival, pameran pemerintah daerah, hingga perayaan Hari Kopi Internasional di Roma menunjukkan panggung kopi hadir lintas format dan lokasi [2][3][5]. Polanya: sorotan asal biji di festival, ajakan peningkatan mutu dan ekspor di daerah, serta kolaborasi merek di luar skena kopi [4][6][7].",
-        "lead": "Di Depok, media lokal melaporkan Arabika Garut Yellow Bourbon menjadi produk paling diburu di stan Warung Biji pada Detos Coffee & Snack Festival 2026 [4], sementara FCE 2026 di NTT menekankan peningkatan kualitas dan pembukaan peluang ekspor bagi pelaku kopi setempat [2][3]. Di Roma, perayaan Hari Kopi Internasional menghadirkan sesi Coffee Tasting dengan stan Republik Dominika [5], dan Jawa Tengah menggelar pameran virtual arsip perjalanan kopi di wilayahnya [6].",
+        "title": "Rangkuman Event Kopi: 10.000 Cangkir Gratis, Zona KoTeKa TEI, dan Dorongan Pasar dari NTT",
+        "summary": "Lebih dari 10.000 kopi gratis dibagikan TOP Coffee di empat kota untuk merayakan Hari Kopi Sedunia, membuka rangkaian aktivasi dan acara kopi awal Oktober 2026 [1]. Trade Expo Indonesia 2026 menampilkan Zona KoTeKa (kopi, teh, kakao) dan FCE 2026 disebut sebagai momentum UMKM NTT memperluas pasar kopi, meski masih pada tataran pengumuman dan dorongan [2][4][5]. Aktivitas icip-icip juga berlangsung di Roma, sementara panggung lokal dan lintas industri di tanah air ikut bergerak [7][6][9].",
+        "lead": "Di Depok, Arabika Garut Yellow Bourbon dilaporkan jadi produk paling diburu di Detos Coffee & Snack Festival 2026 [6]. Di Tangerang, sekitar 150 pelajar SMK mengikuti seminar keselamatan berkendara bertema kopi [3], dan Pemprov Jateng membuka pameran virtual arsip perjalanan kopi di wilayahnya [8].",
         "sections": [
           {
-            "heading": "Festival dan sorotan asal",
+            "heading": "Perayaan berbasis seduh dan icip",
             "paragraphs": [
-              "Di Detos Coffee & Snack Festival 2026, Stapo.id menulis bahwa Arabika Garut Yellow Bourbon menjadi primadona di stan Warung Biji, khususnya di ranah seduhan manual [4]. Ini menunjukkan bagaimana festival lokal kerap menjadi etalase asal-usul biji yang spesifik. Di luar negeri, perayaan Hari Kopi Internasional 2026 di Roma menampilkan Coffee Tasting Experience dengan kehadiran stan Republik Dominika, menegaskan peran ajang icip-icip sebagai panggung promosi origin [5]."
+              "Distribusi lebih dari 10.000 cangkir gratis oleh TOP Coffee di empat kota menjadi salah satu penanda paling terlihat pada Hari Kopi Sedunia tahun ini [1]. Format icip-icip juga tampak di Roma lewat Coffee Tasting Experience yang menampilkan stan berbagai negara, termasuk Republik Dominika [7]. Di level festival lokal, Detos Coffee & Snack Festival 2026 di Depok melaporkan Arabika Garut Yellow Bourbon sebagai produk yang paling diburu di booth Warung Biji, mengindikasikan minat pada varietas spesifik dalam konteks acara ritel [6]. Polanya: brand dan panitia mengandalkan pengalaman rasa langsung untuk menarik massa, tanpa data lanjutan tentang konversi atau transaksi."
             ]
           },
           {
-            "heading": "Program daerah dan arah ekspor",
+            "heading": "Panggung dagang dan perluasan pasar",
             "paragraphs": [
-              "Di Nusa Tenggara Timur, FCE 2026 disebut sebagai momentum UMKM memperluas pasar kopi dan produk olahan [2]. Pada hari ketiga, penggiat kopi diajak meningkatkan kualitas dan membuka peluang ekspor—sebuah dorongan normatif yang menempatkan mutu sebagai pintu ke pasar luar [3]. Di Jawa Tengah, pemerintah provinsi mengumumkan pameran virtual arsip era kolonial dan perjalanan kopi di wilayahnya, menambah konteks sejarah di balik komoditas ini [6]. Meski sifatnya lebih informatif dan seremonial, rangkaian acara ini memperlihatkan peran institusi dalam edukasi dan visi pasar, tanpa data dampak yang bisa diukur saat ini [2][3][6]."
+              "Trade Expo Indonesia 2026 menghadirkan Zona KoTeKa untuk menampilkan kopi, teh, dan kakao Indonesia, sebagai etalase ke pasar internasional [2]. Di Nusa Tenggara Timur, FCE 2026 disebut menjadi momentum bagi UMKM memperluas pasar kopi dan produk olahan [4]. Pada hari ketiga, penggiat kopi diajak meningkatkan kualitas dan membuka peluang ekspor, menggambarkan fokus pada pembenahan hulu–hilir ketimbang perayaan semata [5]. Sejauh ini, informasi yang tersedia bersifat pengumuman dan ajakan; belum ada angka transaksi, kontrak dagang, atau target terukur yang dipublikasikan."
             ]
           },
           {
-            "heading": "Lintas industri dan komunitas muda",
+            "heading": "Kolaborasi lintas sektor dan literasi",
             "paragraphs": [
-              "Tanamera melaporkan keikutsertaannya di GAIKINDO Jakarta Auto Week (GJAW) di ICE BSD City, dengan jejak aktivasi sejak 2024 mendukung Mandiri Finance dan BYD, lalu pada 2025 terlibat di peluncuran Changan serta kolaborasi dengan Mercedes-Benz dan UPPF [7]. Ini contoh klaim brand tentang kopi hadir di pameran otomotif—kolaborasi lintas industri yang bersifat eksposur merek, bukan kompetisi [7]. Sementara itu, WMS menggelar seminar keselamatan berkendara bertema kopi untuk sekitar 150 pelajar SMK se-Tangerang, menunjukkan tema kopi dipakai sebagai pengait edukasi komunitas muda [1]."
+              "Tanamera Coffee menempatkan kopi spesialti Indonesia di kancah pameran otomotif melalui GAIKINDO Jakarta Auto Week (GJAW) di ICE BSD, mendukung berbagai aktivasi merek; keterlibatan mereka terdokumentasi sejak 2024 dan meluas pada 2025 dengan beberapa kolaborasi [9]. Di Tangerang, WMS mengemas edukasi keselamatan berkendara lewat acara bertema kopi untuk sekitar 150 pelajar SMK se‑Tangerang [3]. Sementara itu, Pemprov Jateng menggelar pameran virtual arsip era kolonial dan perjalanan kopi di wilayahnya, menambah dimensi sejarah dan literasi ke dalam kalender acara kopi [8]. Rangkaiannya menunjukkan kopi dipakai sebagai jembatan edukasi, budaya, dan promosi di berbagai ruang."
             ]
           }
         ],
-        "conclusion": "Awal Oktober 2026 memperlihatkan ekosistem event kopi yang tersebar: festival yang mengangkat asal, dorongan mutu dan ekspor dari program daerah, aktivasi di panggung non-kopi, serta agenda edukasi berbasis komunitas. Sebagian besar masih berupa showcase dan ajakan, bukan ajang yang menghasilkan indikator kinerja langsung.",
+        "conclusion": "Putaran acara awal Oktober ini lebih berat pada aktivasi rasa, etalase dagang, dan kolaborasi lintas sektor ketimbang kompetisi. Banyak inisiatif menekankan eksposur publik dan penguatan kualitas, tetapi belum tersedia data dampak atau hasil pasar yang dapat diukur, sehingga pembaca sebaiknya menunggu rilis lanjutan sebelum menilai efektivitasnya.",
         "recommendations": [
           {
-            "audience": "Roastery dan pelaku UMKM kopi daerah",
-            "action": "Prioritaskan kontrol mutu lot inti dan siapkan dokumentasi kualitas (cupping note, traceability) sebagai langkah awal menjajaki peluang ekspor yang diserukan di FCE 2026.",
-            "basis": "Ajakan peningkatan kualitas dan pembukaan peluang ekspor di FCE 2026 [3]."
+            "audience": "Roaster dan brand kopi",
+            "action": "Uji aktivasi di acara nonkopi (misalnya pameran otomotif) untuk menjangkau audiens baru.",
+            "basis": "Kehadiran berulang di GJAW menunjukkan kanal lintas industri yang aktif dimanfaatkan [9]."
           },
           {
-            "audience": "Penyelenggara booth/brand kopi",
-            "action": "Uji kanal eksposur lintas industri (mis. pameran otomotif) dengan paket sederhana berfokus 1–2 menu signature untuk mengukur respons audiens non-komunitas kopi.",
-            "basis": "Klaim aktivasi Tanamera di GJAW 2024–2025 sebagai contoh kehadiran kopi di event otomotif [7]."
+            "audience": "Penyelenggara/pendamping UMKM di FCE/TEI",
+            "action": "Fokuskan klinik pada konsistensi mutu dan kesiapan dokumen ekspor agar arahan kualitas bisa diterapkan segera.",
+            "basis": "FCE menekankan perbaikan kualitas dan peluang ekspor, sementara TEI menyiapkan etalase produk [5][2]."
           },
           {
-            "audience": "Kurator festival lokal",
-            "action": "Angkat 1–2 origin spesifik sebagai sorotan program (tasting terarah atau sesi edukasi singkat) agar pengunjung pulang dengan memori rasa yang jelas.",
-            "basis": "Peliputan bahwa Garut Yellow Bourbon menjadi primadona di stan Warung Biji pada festival Depok [4]."
+            "audience": "Panitia sesi icip gratis",
+            "action": "Padukan pembagian sampel dengan informasi singkat soal asal, proses, dan cara seduh agar edukasi tetap hadir di tengah aktivasi massa.",
+            "basis": "Format icip-icip menonjol di perayaan Hari Kopi Sedunia, baik di kota-kota di Indonesia maupun di Roma [1][7]."
           }
         ],
         "source_urls": [
+          "https://www.metrotvnews.com/read/kELCyjVJ-rayakan-hari-kopi-sedunia-top-coffee-berikan-rasa-serasadicafe-ke-4-kota-dan-bagikan-lebih-dari-10-000-kopi-gratis",
+          "https://www.vibizmedia.com/index.php/2026/10/06/tei-2026-hadirkan-zona-koteka-kopi-teh-dan-kakao-indonesia-siap-mendunia/",
           "https://www.motorplus-online.com/read/254418590/wms-gelar-seminar-safety-riding-secangkir-kopi-sejuta-mimpi-diramaikan-ratusan-pelajar-gen-z",
           "https://www.detikindonesia.co.id/fce-2026-jadi-momentum-umkm-ntt-perluas-pasar-kopi-wastra-dan-produk-olahan/",
           "https://kupang.tribunnews.com/provinsi-ntt/982088/fce-2026-hari-ketiga-penggiat-kopi-ntt-diajak-tingkatkan-kualitas-hingga-buka-peluang-ekspor",
@@ -292,51 +294,53 @@
           "https://jatengprov.go.id/publik/membaca-memori-masa-lalu-pameran-virtual-arsip-era-kolonial-dan-perjalanan-kopi-di-jawa-tengah/",
           "https://www.tanameracoffee.co.id/news/rfbgao4rsu"
         ],
-        "evidence_note": "Sebagian besar sumber adalah pengumuman/peliputan singkat tanpa data outcome (penjualan, jumlah pengunjung), dan beberapa informasi berasal dari klaim perusahaan, sehingga dampak tidak bisa disimpulkan."
+        "evidence_note": "Sebagian rujukan adalah pengumuman atau liputan singkat; tidak semua menyertakan angka transaksi atau capaian, sehingga dampak belum dapat diukur."
       },
       "article_en": {
-        "title": "Coffee Events, Early October 2026: Local Festivals, Export Push, and Cross‑Industry Activations",
-        "summary": "About 150 vocational students in Tangerang attended a coffee‑themed “Secangkir Kopi Sejuta Mimpi” safety‑riding seminar [1]. At the same time, festivals, regional government showcases, and an International Coffee Day tasting in Rome show coffee appearing across formats and locations [2][3][5]. Clear patterns: origin‑driven highlights at festivals, quality/export messaging in the regions, and brand collaborations beyond coffee’s usual stage [4][6][7].",
-        "lead": "In Depok, a local outlet reported Arabica Garut Yellow Bourbon as the most sought‑after offering at Warung Biji’s booth during the 2026 Detos Coffee & Snack Festival [4], while FCE 2026 in East Nusa Tenggara emphasized quality upgrades and opening export avenues for local players [2][3]. In Rome, International Coffee Day featured a Coffee Tasting Experience with a Dominican Republic stand [5], and Central Java launched a virtual archive exhibition on the region’s coffee history [6].",
+        "title": "Coffee Events Roundup: 10,000 Free Cups, TEI’s KoTeKa Zone, and NTT’s Market Push",
+        "summary": "More than 10,000 free cups were handed out by TOP Coffee across four cities for International Coffee Day, kicking off a dense slate of coffee activations in early October 2026 [1]. Trade Expo Indonesia 2026 is featuring a KoTeKa zone (coffee, tea, cocoa), while FCE 2026 is framed as momentum for NTT MSMEs to widen coffee markets—still at the announcement and encouragement stage [2][4][5]. Tasting-led activities also appeared in Rome, and local plus cross‑industry stages in Indonesia kept the calendar busy [7][6][9].",
+        "lead": "In Depok, Arabica Garut Yellow Bourbon was reported as the most sought-after item at Detos Coffee & Snack Festival 2026 [6]. In Tangerang, about 150 vocational students joined a coffee-themed road safety seminar [3], and Central Java’s provincial government launched a virtual archive exhibition on the region’s coffee history [8].",
         "sections": [
           {
-            "heading": "Festivals and origin spotlights",
+            "heading": "Taste-first celebrations",
             "paragraphs": [
-              "At the 2026 Detos Coffee & Snack Festival, Stapo.id reported Arabica Garut Yellow Bourbon as a crowd favorite at Warung Biji’s booth, especially for manual brews [4]. This underscores how local festivals often spotlight specific origins. Abroad, the 2026 International Coffee Day in Rome hosted a Coffee Tasting Experience with a Dominican Republic stand, reinforcing tastings as an origin showcase [5]."
+              "Distributing over 10,000 free cups in four cities, TOP Coffee provided one of the most visible markers of this year’s International Coffee Day [1]. Rome hosted a Coffee Tasting Experience with country booths, including the Dominican Republic [7]. At a local retail festival, the Detos Coffee & Snack Festival in Depok reported Arabica Garut Yellow Bourbon as the most sought-after item at Warung Biji’s booth, indicating concrete interest in specific varieties within consumer events [6]. The shared thread: brands and organizers rely on direct tasting to draw crowds, with no follow‑up data yet on conversion or transactions."
             ]
           },
           {
-            "heading": "Regional programs and the export drumbeat",
+            "heading": "Trade stages and market access",
             "paragraphs": [
-              "In East Nusa Tenggara, FCE 2026 was framed as a momentum for MSMEs to widen markets for coffee and processed products [2]. On day three, participants were urged to focus on quality and explore export opportunities—a normative push that positions quality as a gateway to overseas markets [3]. In Central Java, the provincial government announced a virtual archive exhibition on the colonial era and the region’s coffee journey, adding historical context to today’s commodity [6]. These are largely informational and ceremonial steps, without measurable outcomes yet [2][3][6]."
+              "Trade Expo Indonesia 2026 is introducing a KoTeKa zone to showcase Indonesian coffee, tea, and cocoa to international buyers [2]. In East Nusa Tenggara (NTT), FCE 2026 is described as momentum for MSMEs to expand coffee and processed‑product markets [4]. On day three, participants were urged to improve quality and explore export openings, signaling more emphasis on capability building than celebration alone [5]. So far, available information is announcements and encouragement; there are no published transaction figures, trade contracts, or measurable targets."
             ]
           },
           {
-            "heading": "Cross‑industry and youth engagement",
+            "heading": "Cross‑sector collaborations and literacy",
             "paragraphs": [
-              "Tanamera reported its presence at GAIKINDO Jakarta Auto Week (GJAW) at ICE BSD City, tracing activations back to 2024 supporting Mandiri Finance and BYD, then joining Changan’s 2025 launch and collaborating with Mercedes‑Benz and UPPF [7]. This is a brand claim illustrating coffee’s presence at auto shows—cross‑industry exposure rather than competition [7]. Meanwhile, WMS ran a coffee‑themed safety‑riding seminar for around 150 vocational students in Tangerang, showing coffee used as a hook for youth‑focused education [1]."
+              "Tanamera Coffee has been bringing Indonesian specialty coffee into the automotive scene via GAIKINDO Jakarta Auto Week (GJAW) at ICE BSD, supporting multiple brand activations; its involvement is documented since 2024 and expanded in 2025 with several collaborations [9]. In Tangerang, WMS wrapped road‑safety education in a coffee‑themed event for about 150 vocational students [3]. Meanwhile, Central Java’s government launched a virtual exhibition on colonial‑era archives and the region’s coffee journey, adding historical literacy to the month’s lineup [8]. Together, these show coffee being used as a bridge for education, culture, and promotion across sectors."
             ]
           }
         ],
-        "conclusion": "Early October 2026 shows a dispersed coffee‑event ecosystem: festivals elevating origins, regional programs pushing quality and export, non‑coffee stages for brand exposure, and community‑based education. Most items are showcases and calls to action, not events with immediate performance metrics.",
+        "conclusion": "This cycle skews toward taste‑driven activations, trade showcases, and cross‑sector tie‑ins rather than competitions. Many initiatives emphasize public exposure and quality uplift, but impact and market outcomes aren’t yet quantifiable, so it’s reasonable to wait for follow‑up releases before judging effectiveness.",
         "recommendations": [
           {
-            "audience": "Roasteries and regional MSMEs",
-            "action": "Prioritize QC on core lots and prepare quality documentation (cupping notes, traceability) as a first step toward export conversations echoed at FCE 2026.",
-            "basis": "Calls to improve quality and open export avenues at FCE 2026 [3]."
+            "audience": "Roasters and coffee brands",
+            "action": "Test activations at non‑coffee events (e.g., automotive shows) to reach new audiences.",
+            "basis": "Recurring presence at GJAW illustrates a viable cross‑industry channel [9]."
           },
           {
-            "audience": "Booth operators/coffee brands",
-            "action": "Test cross‑industry exposure (e.g., auto shows) with a lean menu of 1–2 signature drinks to gauge responses from non‑coffee audiences.",
-            "basis": "Tanamera’s reported activations at GJAW 2024–2025 as examples of coffee at automotive events [7]."
+            "audience": "Organizers and SME facilitators at FCE/TEI",
+            "action": "Prioritize clinics on quality consistency and export‑readiness documentation so guidance can be put into practice quickly.",
+            "basis": "FCE stresses quality and export openings, while TEI sets up a showcase platform [5][2]."
           },
           {
-            "audience": "Local festival curators",
-            "action": "Feature 1–2 specific origins as program highlights (guided tastings or short briefings) so visitors leave with a clear flavor memory.",
-            "basis": "Coverage that Garut Yellow Bourbon was a favorite at a Depok festival booth [4]."
+            "audience": "Tasting event teams",
+            "action": "Pair sample giveaways with concise information on origin, processing, and brewing to keep education embedded in mass activations.",
+            "basis": "Tasting formats stood out in International Coffee Day activities both in Indonesian cities and in Rome [1][7]."
           }
         ],
         "source_urls": [
+          "https://www.metrotvnews.com/read/kELCyjVJ-rayakan-hari-kopi-sedunia-top-coffee-berikan-rasa-serasadicafe-ke-4-kota-dan-bagikan-lebih-dari-10-000-kopi-gratis",
+          "https://www.vibizmedia.com/index.php/2026/10/06/tei-2026-hadirkan-zona-koteka-kopi-teh-dan-kakao-indonesia-siap-mendunia/",
           "https://www.motorplus-online.com/read/254418590/wms-gelar-seminar-safety-riding-secangkir-kopi-sejuta-mimpi-diramaikan-ratusan-pelajar-gen-z",
           "https://www.detikindonesia.co.id/fce-2026-jadi-momentum-umkm-ntt-perluas-pasar-kopi-wastra-dan-produk-olahan/",
           "https://kupang.tribunnews.com/provinsi-ntt/982088/fce-2026-hari-ketiga-penggiat-kopi-ntt-diajak-tingkatkan-kualitas-hingga-buka-peluang-ekspor",
@@ -345,53 +349,67 @@
           "https://jatengprov.go.id/publik/membaca-memori-masa-lalu-pameran-virtual-arsip-era-kolonial-dan-perjalanan-kopi-di-jawa-tengah/",
           "https://www.tanameracoffee.co.id/news/rfbgao4rsu"
         ],
-        "evidence_note": "Most sources are brief announcements/photo posts without outcome data, and some details come from company claims, so impact cannot be inferred."
+        "evidence_note": "Several references are brief news or announcements; most lack transaction or impact metrics, so effects cannot yet be quantified."
       },
       "input_sources": [
         {
           "id": "1",
+          "url": "https://www.metrotvnews.com/read/kELCyjVJ-rayakan-hari-kopi-sedunia-top-coffee-berikan-rasa-serasadicafe-ke-4-kota-dan-bagikan-lebih-dari-10-000-kopi-gratis",
+          "title": "Rayakan Hari Kopi Sedunia, TOP Coffee Berikan Rasa #SerasaDiCafe ke 4 Kota dan Bagikan Lebih dari 10.000 Kopi Gratis - MetroTVNews.com",
+          "source": "MetroTVNews.com",
+          "published_at": "Tue, 06 Oct 2026 12:29:43 GMT"
+        },
+        {
+          "id": "2",
+          "url": "https://www.vibizmedia.com/index.php/2026/10/06/tei-2026-hadirkan-zona-koteka-kopi-teh-dan-kakao-indonesia-siap-mendunia/",
+          "title": "TEI 2026 Hadirkan Zona KoTeKa, Kopi, Teh, dan Kakao Indonesia Siap Mendunia - vibizmedia.com",
+          "source": "vibizmedia.com",
+          "published_at": "Tue, 06 Oct 2026 11:12:41 GMT"
+        },
+        {
+          "id": "3",
           "url": "https://www.motorplus-online.com/read/254418590/wms-gelar-seminar-safety-riding-secangkir-kopi-sejuta-mimpi-diramaikan-ratusan-pelajar-gen-z",
           "title": "WMS Gelar Seminar Safety Riding ‘Secangkir Kopi Sejuta Mimpi’, Diramaikan Ratusan Pelajar Gen Z",
           "source": "Motorplus-online",
           "published_at": "2026-10-05 09:16:35"
         },
         {
-          "id": "2",
+          "id": "4",
           "url": "https://www.detikindonesia.co.id/fce-2026-jadi-momentum-umkm-ntt-perluas-pasar-kopi-wastra-dan-produk-olahan/",
           "title": "FCE 2026 Jadi Momentum UMKM NTT Perluas Pasar Kopi, Wastra, dan Produk Olahan - detikindonesia.co.id",
           "source": "detikindonesia.co.id",
           "published_at": "Mon, 05 Oct 2026 08:29:00 GMT"
         },
         {
-          "id": "3",
+          "id": "5",
           "url": "https://kupang.tribunnews.com/provinsi-ntt/982088/fce-2026-hari-ketiga-penggiat-kopi-ntt-diajak-tingkatkan-kualitas-hingga-buka-peluang-ekspor",
           "title": "FCE 2026 Hari Ketiga, Penggiat Kopi NTT Diajak Tingkatkan Kualitas hingga Buka Peluang Ekspor",
           "source": "Tribun News",
           "published_at": "2026-10-04 07:44:57"
         },
         {
-          "id": "4",
+          "id": "6",
           "url": "https://stapo.id/news/garut-yellow-bourbon-jadi-primadona",
           "title": "Garut Yellow Bourbon Jadi Primadona Warung Biji di Detos Coffee & Snack Festival 2026 - Stapo.id",
           "source": "stapo.id",
           "published_at": "2026-10-01T00:00:00.000Z"
         },
         {
-          "id": "5",
+          "id": "7",
           "url": "https://antaranews.com/berita/5767883/potret-perayaan-hari-kopi-internasional-di-roma",
           "title": "Potret perayaan Hari Kopi Internasional di Roma",
           "source": "antaranews.com",
           "published_at": "2026-10-01T00:00:00.000Z"
         },
         {
-          "id": "6",
+          "id": "8",
           "url": "https://jatengprov.go.id/publik/membaca-memori-masa-lalu-pameran-virtual-arsip-era-kolonial-dan-perjalanan-kopi-di-jawa-tengah/",
           "title": "Membaca Memori Masa Lalu, Pameran Virtual Arsip Era Kolonial dan Perjalanan Kopi di Jawa Tengah - Pemerintah Provinsi Jawa Tengah",
           "source": "Pemerintah Provinsi Jawa Tengah",
           "published_at": "Wed, 23 Sep 2026 09:38:29 GMT"
         },
         {
-          "id": "7",
+          "id": "9",
           "url": "https://www.tanameracoffee.co.id/news/rfbgao4rsu",
           "title": "Tanamera Coffee at GJAW",
           "source": "Tanamera",
@@ -403,148 +421,151 @@
       "cluster_id": "barista-teknik-seduh",
       "cluster_name": "Barista & Teknik Seduh",
       "period_days": 30,
-      "generated_at": "2026-10-05T16:16:03.769Z",
+      "generated_at": "2026-10-06T13:03:51.084Z",
       "status": "ai_generated",
-      "fingerprint": "321137a6b9e72146d4fd2a57073ca28222c1b454c7dbb41387f953bcb8fce7f9",
+      "fingerprint": "92d7ebe934dda9bffd5797b8babbb813b4060797d433529513320ba43675e08d",
       "article": {
-        "title": "Barista & Teknik Seduh: Dari Tips Pakar ke Ritme Kerja yang Konsisten",
-        "summary": "Kompas.com memuat tips seduh kopi dari pakar, sementara AEKI merilis panduan perawatan mesin espresso, SOP pembukaan–penutupan, serta bahan rekrutmen untuk barista pemula [1][2][5][3][4]. Benang merahnya sederhana dan bisa dipraktikkan: alat bersih, alur kerja jelas, dan keterampilan yang dibuktikan, bukan diangkat-angkat [2][5][4].",
-        "lead": "Checklist perawatan AEKI menegaskan backflush hanya dilakukan jika model dan petunjuk pabrik mendukung, sedangkan descaling adalah pekerjaan berbeda untuk kerak mineral [2]. SOP shift yang baik menetapkan tugas, penanggung jawab, kriteria selesai, dan tindakan saat hasil belum sesuai agar bar tahu kapan siap menerima pesanan dan kapan aman ditinggalkan [5].",
+        "title": "Barista & Teknik Seduh: dari “jangan langsung seduh” ke perawatan mesin dan SOP shift",
+        "summary": "Pada akhir September–awal Oktober 2026, AEKI menerbitkan panduan perawatan mesin espresso, SOP barista, serta materi rekrutmen untuk pemula [3][6][4][5], sementara Kompas dan Tribun mengangkat tips seduh kopi untuk pembaca umum [2][1]. Polanya seragam: rasa kopi bertumpu pada persiapan, kebersihan, dan disiplin kerja—bukan sekadar resep. Analisis ini merangkum benang merahnya tanpa menambah klaim yang tidak ada di sumber.",
+        "lead": "Tribun menekankan “jangan langsung seduh” untuk kopi hitam [1]. Kompas menyajikan kiat penyeduhan dari pakar [2]. Dari sisi bar, AEKI menulis checklist pembersihan: buang ampas, bilas portafilter dan group head, bersihkan steam wand, cuci drip tray dan komponen lepas; backflush hanya bila didukung model, sedangkan descaling adalah proses berbeda [3]. Untuk kerapihan operasional, SOP disarankan menetapkan tugas, penanggung jawab, kriteria selesai, dan tindakan korektif [6]. Bagi pelamar pemula, AEKI menegaskan CV satu halaman yang jujur serta jawaban wawancara yang spesifik lebih meyakinkan daripada klaim besar [5][4].",
         "sections": [
           {
-            "heading": "Teknik Seduh Dimulai dari Dasar yang Rapi",
+            "heading": "Teknik seduh: persiapan mengalahkan buru‑buru",
             "paragraphs": [
-              "Kompas.com menerbitkan artikel berisi tips menyeduh kopi dari pakar—sebuah pengingat bahwa kualitas cangkir ditopang praktik yang dapat diajarkan dan dipelajari [1]. Namun resep saja tidak cukup; kebersihan dan kesiapan alat ikut menentukan hasil. Panduan AEKI merinci rutinitas setelah seduh: buang ampas, bilas portafilter dan group head, bersihkan steam wand, lalu cuci drip tray serta bagian yang dapat dilepas [2].",
-              "AEKI juga menyarankan mengidentifikasi model mesin serta membaca bagian perawatan pabrik sebelum bertindak; lakukan backflush hanya bila didukung modelnya, dan pisahkan pekerjaan descaling karena sasarannya kerak mineral, bukan sisa kopi [2]. Intinya, teknik seduh yang konsisten berjalan di atas fondasi alat yang bersih dan dirawat sesuai petunjuk, bukan asumsi umum."
+              "Di sisi konsumen, dua artikel arus utama menyoroti hal yang sama: jangan terburu‑buru dan andalkan panduan pakar. Tribun menulis “jangan langsung seduh” sebagai kunci membuat kopi hitam lebih nikmat [1]. Kompas memuat tips penyeduhan menurut pakar untuk membuat kopi terasa enak [2]. Intinya, ada penekanan pada persiapan sebelum menuang air dan keputusan‑keputusan kecil yang memengaruhi hasil cangkir. Tanpa memaparkan rinciannya, kedua artikel mengarahkan pembaca pada kebiasaan yang lebih hati‑hati ketimbang menebak‑nebak."
             ]
           },
           {
-            "heading": "SOP Menjaga Ritme Lintas Shift",
+            "heading": "Perawatan mesin: langkah dasar dan batasnya",
             "paragraphs": [
-              "Untuk operasi harian, AEKI menekankan SOP opening–closing yang menyebutkan pekerjaan, siapa yang bertanggung jawab, kriteria selesai, dan langkah korektif jika pemeriksaan belum memenuhi standar [5]. Dengan begitu, tim dapat menentukan kapan bar siap menerima pesanan dan kapan area kerja aman ditinggalkan [5].",
-              "Checklist juga berfungsi sebagai catatan bagi shift berikutnya agar tidak mengandalkan ingatan rekan—praktis untuk meneruskan masalah yang masih terbuka dan mencegah kesalahan berulang [5]. Ini semua mendukung satu tujuan: konsistensi, tanpa bergantung pada satu orang saja."
+              "Untuk bar profesional, AEKI mengeluarkan checklist pembersihan yang memecah pekerjaan per komponen: buang ampas, bilas portafilter dan group head, bersihkan steam wand, lalu cuci drip tray dan bagian yang bisa dilepas [3]. Panduan itu juga menegaskan dua batas penting: backflush hanya dilakukan jika model dan petunjuk pabrikan mendukung, dan descaling adalah pekerjaan terpisah untuk kerak mineral [3]. Bahkan sebelum menyentuh mesin, teknisi atau barista diminta mengidentifikasi model dan membaca bagian care and cleaning pada manual [3]. Pesannya jelas: kebersihan yang benar berangkat dari prosedur dan spesifikasi, bukan kebiasaan turun‑temurun."
             ]
           },
           {
-            "heading": "Menyiapkan Talenta Pemula Secara Jujur",
+            "heading": "Operasi bar dan SDM: jelas, jujur, terdokumentasi",
             "paragraphs": [
-              "Bahan rekrutmen AEKI merangkum pola yang dicari pewawancara: alasan melamar, bukti kemampuan yang relevan, dan cara bersikap dalam pekerjaan pelayanan [3]. Bagi pemula, jawaban jujur, spesifik, dan didukung contoh kecil lebih meyakinkan ketimbang klaim besar; hindari menghafal mentah karena urutan pertanyaan dapat diubah dan detail tambahan bisa diminta [3].",
-              "Di tahap CV, AEKI menyarankan satu halaman yang langsung menunjukkan keterampilan relevan, bagaimana keterampilan dipelajari, serta buktinya. Pengalaman kafe bukan satu-satunya bekal—pelatihan, latihan terukur, kegiatan organisasi, dan kerja layanan pelanggan juga bernilai. Yang tidak disarankan: menaikkan level kemampuan demi membuat CV tampak penuh [4]. Pendekatan ini sejalan dengan tujuan seduh dan servis: kompeten secara nyata, bukan sekadar tertulis."
+              "Di area operasi dan SDM, AEKI menyarankan SOP opening–closing yang menetapkan pekerjaan, penanggung jawab, kriteria selesai, serta tindakan ketika hasil pemeriksaan belum sesuai [6]. Checklist seperti ini membantu menentukan kapan bar siap menerima pesanan dan menjembatani masalah antar‑shift tanpa mengandalkan ingatan [6]. Untuk perekrutan pemula, AEKI menulis bahwa pewawancara umumnya menilai alasan melamar, bukti kemampuan relevan, dan cara bersikap dalam pekerjaan layanan; jawaban jujur, spesifik, dengan contoh kecil lebih meyakinkan dari klaim besar [4]. Di atas kertas, CV satu halaman yang menampilkan keterampilan relevan, cara mempelajarinya, dan bukti praktik—termasuk pelatihan, latihan terukur, organisasi, atau kerja layanan pelanggan—dinilai cukup; hindari menaikkan level kemampuan demi terlihat penuh [5]."
             ]
           }
         ],
-        "conclusion": "Rangkaian sumber ini tidak menawarkan ramuan ajaib, melainkan dasar yang rapi: alat bersih sesuai manual, SOP yang menutup celah antarsift, dan keterampilan yang dinyatakan apa adanya. Jika tiga hal ini dijaga, sisanya—dari resep hingga ritme layanan—lebih mudah disetel.",
+        "conclusion": "Benang merahnya: seduh yang enak lahir dari persiapan yang tenang, mesin yang dirawat tepat, dan operasional yang tertulis jelas. Materi ini tidak menjanjikan hasil instan; ia mengajak bar dan pembaca umum kembali ke dasar yang bisa dipertanggungjawabkan.",
         "recommendations": [
           {
             "audience": "Pemilik/manager kedai",
-            "action": "Susun checklist opening–closing dengan kolom tugas, penanggung jawab, kriteria selesai, dan tindakan korektif; tempel di area kerja dan dipakai lintas shift.",
-            "basis": "AEKI menekankan struktur SOP tersebut agar tim tahu kapan bar siap melayani dan aman ditinggalkan [5]."
+            "action": "Revisi SOP opening/closing agar mencantumkan pekerjaan, penanggung jawab, kriteria selesai, dan tindakan korektif; gunakan checklist yang mudah dibaca shift berikutnya.",
+            "basis": "AEKI menekankan empat elemen SOP dan manfaat checklist untuk handover [6]."
           },
           {
             "audience": "Head barista/teknisi",
-            "action": "Pisahkan rutinitas harian (buang ampas, bilas portafilter/group head, bersihkan steam wand, cuci drip tray) dari jadwal backflush (hanya bila didukung) dan descaling.",
-            "basis": "AEKI membedakan langkah kebersihan pasca-seduh, backflush yang bergantung model, dan descaling untuk kerak mineral [2]."
+            "action": "Pisahkan rutinitas backflush dari jadwal descaling; pastikan model mesin mendukung backflush dan ikuti manual pabrikan.",
+            "basis": "Panduan AEKI membedakan backflush vs descaling dan meminta identifikasi model serta petunjuk perawatan [3]."
           },
           {
-            "audience": "Pelamar barista pemula",
-            "action": "Buat CV satu halaman berisi keterampilan relevan, cara mempelajarinya, dan bukti praktik; saat wawancara, jawab jujur dan spesifik tanpa menghafal kaku.",
-            "basis": "AEKI menyarankan format CV ringkas yang jujur serta kerangka jawaban berbasis contoh kecil yang relevan [4][3]."
+            "audience": "Pencari kerja barista pemula",
+            "action": "Susun CV satu halaman yang jujur dengan bukti praktik; siapkan jawaban wawancara yang spesifik alih‑alih klaim besar.",
+            "basis": "AEKI menyarankan format CV singkat berbasis bukti dan jawaban wawancara yang jujur serta spesifik [5][4]."
           }
         ],
         "source_urls": [
+          "https://style.tribunnews.com/life/385562/jangan-langsung-seduh-ini-cara-bikin-kopi-hitam-lebih-nikmat",
           "https://kompas.com/food/read/2026/10/02/172514175/cara-seduh-kopi-agar-nikmat-menurut-pakar-ini-tipsnya",
           "https://www.aeki-aice.org/cara-membersihkan-mesin-espresso/",
           "https://www.aeki-aice.org/pertanyaan-interview-barista/",
           "https://www.aeki-aice.org/contoh-cv-barista-pemula/",
           "https://www.aeki-aice.org/sop-barista-opening-closing/"
         ],
-        "evidence_note": "Sebagian konten Kompas.com berada di balik login; analisis ini merujuk ringkasan yang terlihat tanpa mengutip detail tertutup."
+        "evidence_note": "Detail teknis tips seduh dari Kompas dan Tribun tidak tersedia penuh di cuplikan, sehingga pembahasan mengikuti informasi yang benar‑benar tercantum."
       },
       "article_en": {
-        "title": "Baristas and Brewing: From Expert Pointers to Consistent Daily Routines",
-        "summary": "Kompas.com published expert tips on brewing, while AEKI rolled out an espresso machine care checklist, opening–closing SOP guidance, and entry-level hiring materials [1][2][5][3][4]. The common thread is practical and immediate: clean tools, clear workflows, and skills backed by evidence—not inflated claims [2][5][4].",
-        "lead": "AEKI’s maintenance checklist stresses backflushing only if the model and manufacturer instructions allow it, and treating descaling as a separate job for mineral buildup [2]. Its SOP template specifies tasks, owners, done criteria, and corrective steps so a bar knows when it’s ready to take orders and when the area is safe to leave [5].",
+        "title": "Baristas and Brewing: from “don’t brew right away” to machine care and shift SOPs",
+        "summary": "From late September to early October 2026, AEKI published guides on espresso machine care, barista opening/closing SOPs, and entry‑level hiring, while Kompas and Tribun ran brewing tips for mainstream readers [3][6][4][5][2][1]. Read together, they point to the same baseline: flavor relies on preparation, cleanliness, and disciplined work—not just a recipe. This piece traces the common threads without adding claims the sources don’t make.",
+        "lead": "Tribun highlights “don’t brew right away” for better black coffee [1]. Kompas features expert‑driven brewing tips [2]. On the bar side, AEKI lays out a cleaning checklist: remove the puck, rinse portafilter and group head, clean the steam wand, wash the drip tray and removable parts; backflush only if the model supports it, and treat descaling as a separate job [3]. For orderly operations, AEKI recommends SOPs that name the task, the owner, the done criteria, and what to do when checks fail [6]. For beginners, AEKI stresses a one‑page, honest CV and interview answers that are specific rather than grand claims [5][4].",
         "sections": [
           {
-            "heading": "Brewing Starts with Clean, Ready Gear",
+            "heading": "Brewing technique: preparation over haste",
             "paragraphs": [
-              "Kompas.com ran a piece with expert pointers on how to brew better—useful precisely because good cups come from teachable, repeatable practice [1]. But recipes alone won’t save a shot; equipment hygiene and readiness matter. AEKI details the post-brew routine: discard the puck, rinse the portafilter and group head, clean the steam wand, then wash the drip tray and other removable parts [2].",
-              "AEKI also advises identifying the machine model and reading its care section first; only backflush if the model supports it, and handle descaling separately because it targets mineral scale, not coffee residues [2]. In short, consistent technique sits on the foundation of clean tools maintained per the manual, not assumptions."
+              "For consumers, two mainstream pieces land on a similar point: avoid rushing and lean on expert guidance. Tribun’s line is “don’t brew right away” to make black coffee taste better [1]. Kompas carries expert suggestions on how to brew a tasty cup [2]. The shared emphasis is on preparation before pouring water and on small choices that shape the cup. Without divulging details, both steer readers toward more deliberate habits rather than guesswork."
             ]
           },
           {
-            "heading": "SOPs Keep the Bar Predictable Across Shifts",
+            "heading": "Machine care: core steps and clear limits",
             "paragraphs": [
-              "Operationally, AEKI highlights opening–closing SOPs that name the task, the responsible person, the done criteria, and what to do when checks fail to meet the standard [5]. That way a team can decide when the bar is ready to accept orders and when the station is safe to leave [5].",
-              "The checklist also serves as a handover note so the next shift doesn’t rely on someone’s memory—useful for carrying unresolved issues forward and preventing repeat mistakes [5]. The goal is simple: consistency that doesn’t depend on a single person."
+              "For professional bars, AEKI’s checklist breaks cleaning into components: knock out the puck, rinse the portafilter and group head, clean the steam wand, then wash the drip tray and removable parts [3]. It also draws two hard lines: only backflush if the model and manual support it, and treat descaling as a distinct task for mineral scale [3]. Even before touching the machine, baristas are told to identify the model and read the care and cleaning section of the manual [3]. The message is simple: correct hygiene follows procedure and specifications, not hand‑me‑down habits."
             ]
           },
           {
-            "heading": "Hiring New Baristas: Honest, Specific Beats Grand Claims",
+            "heading": "Bar operations and people: clear, honest, documented",
             "paragraphs": [
-              "AEKI’s interview guide says most questions probe three things: why you’re applying, proof of relevant skills, and how you behave in service work [3]. For beginners, honest, specific answers backed by small examples beat big, vague claims; don’t memorize rigidly because interviewers can change the order or dig for details [3].",
-              "On resumes, AEKI recommends one page that clearly shows relevant skills, how you learned them, and evidence. Café experience isn’t the only currency—training, measurable practice, student groups, and customer-service work also count. What to avoid: inflating skill levels just to pad the page [4]. That stance aligns with brewing and service goals: real competence, not just words."
+              "On operations and staffing, AEKI advises opening–closing SOPs that define tasks, owners, done criteria, and corrective actions when checks fail [6]. Such checklists help decide when the bar is ready for orders and carry open issues between shifts without relying on memory [6]. For entry‑level hiring, AEKI notes interviewers commonly assess why you apply, proof of relevant skills, and your service demeanor; honest, specific answers with small examples beat big claims [4]. On paper, a one‑page CV that shows relevant skills, how you learned them, and proof of practice—including training, measured drills, organizations, or customer‑service work—is sufficient; avoid inflating skill levels just to fill space [5]."
             ]
           }
         ],
-        "conclusion": "These sources don’t promise magic—just solid basics: gear cleaned per the manual, SOPs that close gaps between shifts, and skills presented as they are. With those in place, dialing in recipes and service rhythm becomes much more manageable.",
+        "conclusion": "Across the sources, good coffee starts with calm preparation, correctly maintained equipment, and clear roles on shift. None of this promises instant wins; it points bars and readers back to accountable basics.",
         "recommendations": [
           {
             "audience": "Cafe owners/managers",
-            "action": "Publish an opening–closing checklist with task, owner, done criteria, and corrective steps; post it at the bar and use it across shifts.",
-            "basis": "AEKI’s SOP guidance specifies this structure so teams know when they’re ready to serve and when the station is safe to leave [5]."
+            "action": "Revise opening/closing SOPs to include tasks, owners, done criteria, and corrective actions; use a checklist readable by the next shift.",
+            "basis": "AEKI emphasizes these four SOP elements and the handover value of checklists [6]."
           },
           {
             "audience": "Head baristas/techs",
-            "action": "Separate daily routines (discard puck, rinse portafilter/group head, clean steam wand, wash drip tray) from backflushing (only if supported) and descaling schedules.",
-            "basis": "AEKI distinguishes post-brew cleaning, model-dependent backflushing, and descaling for mineral scale [2]."
+            "action": "Separate routine backflush from scheduled descaling; confirm the machine model supports backflushing and follow the manual.",
+            "basis": "AEKI distinguishes backflushing versus descaling and asks for model identification and care instructions [3]."
           },
           {
-            "audience": "Entry-level applicants",
-            "action": "Keep a one-page resume with relevant skills, how you learned them, and evidence; in interviews, answer honestly and specifically rather than memorizing scripts.",
-            "basis": "AEKI recommends a concise, truthful resume and example-based interview responses [4][3]."
+            "audience": "Entry‑level barista candidates",
+            "action": "Build a one‑page, honest CV with proof of practice; prepare specific interview answers instead of sweeping claims.",
+            "basis": "AEKI recommends concise, evidence‑based CVs and honest, specific interview responses [5][4]."
           }
         ],
         "source_urls": [
+          "https://style.tribunnews.com/life/385562/jangan-langsung-seduh-ini-cara-bikin-kopi-hitam-lebih-nikmat",
           "https://kompas.com/food/read/2026/10/02/172514175/cara-seduh-kopi-agar-nikmat-menurut-pakar-ini-tipsnya",
           "https://www.aeki-aice.org/cara-membersihkan-mesin-espresso/",
           "https://www.aeki-aice.org/pertanyaan-interview-barista/",
           "https://www.aeki-aice.org/contoh-cv-barista-pemula/",
           "https://www.aeki-aice.org/sop-barista-opening-closing/"
         ],
-        "evidence_note": "The Kompas.com piece sits behind a login; this analysis relies only on the visible summary without quoting gated details."
+        "evidence_note": "The media pieces from Kompas and Tribun are only partially visible in the excerpts, so this analysis sticks to what is explicitly available."
       },
       "input_sources": [
         {
           "id": "1",
+          "url": "https://style.tribunnews.com/life/385562/jangan-langsung-seduh-ini-cara-bikin-kopi-hitam-lebih-nikmat",
+          "title": "Jangan Langsung Seduh, Ini Cara Bikin Kopi Hitam Lebih Nikmat",
+          "source": "Tribun News",
+          "published_at": "2026-10-06 00:28:56"
+        },
+        {
+          "id": "2",
           "url": "https://kompas.com/food/read/2026/10/02/172514175/cara-seduh-kopi-agar-nikmat-menurut-pakar-ini-tipsnya",
           "title": "Cara Seduh Kopi agar Nikmat Menurut Pakar, Ini Tipsnya",
           "source": "kompas.com",
           "published_at": "2026-10-01T00:00:00.000Z"
         },
         {
-          "id": "2",
+          "id": "3",
           "url": "https://www.aeki-aice.org/cara-membersihkan-mesin-espresso/",
           "title": "Cara Membersihkan Mesin Espresso: Checklist Perawatan Barista",
           "source": "AEKI",
           "published_at": "2026-09-25T08:43:16+07:00"
         },
         {
-          "id": "3",
+          "id": "4",
           "url": "https://www.aeki-aice.org/pertanyaan-interview-barista/",
           "title": "12 Pertanyaan Interview Barista dan Kerangka Jawaban untuk Pemula",
           "source": "AEKI",
           "published_at": "2026-09-24T11:14:56+07:00"
         },
         {
-          "id": "4",
+          "id": "5",
           "url": "https://www.aeki-aice.org/contoh-cv-barista-pemula/",
           "title": "Contoh CV Barista Pemula dan Cara Menulis Skill dengan Jujur",
           "source": "AEKI",
           "published_at": "2026-09-23T15:41:09+07:00"
         },
         {
-          "id": "5",
+          "id": "6",
           "url": "https://www.aeki-aice.org/sop-barista-opening-closing/",
           "title": "SOP Barista untuk Opening dan Closing: Contoh Checklist Shift",
           "source": "AEKI",
