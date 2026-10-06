@@ -204,6 +204,10 @@ const urls = [
   { loc: `${SITE}/en/coffee-market-data/`, lastmod: doc.generated_at || '' },
   { loc: `${SITE}/kalkulator-kopi/`, lastmod: doc.generated_at || '' },
   { loc: `${SITE}/en/coffee-export-calculator/`, lastmod: doc.generated_at || '' },
+  { loc: `${SITE}/persyaratan-ekspor-kopi/`, lastmod: doc.generated_at || '' },
+  { loc: `${SITE}/en/export-coffee-requirements/`, lastmod: doc.generated_at || '' },
+  { loc: `${SITE}/rangkuman-pekanan/`, lastmod: doc.generated_at || '' },
+  { loc: `${SITE}/en/weekly-coffee-brief/`, lastmod: doc.generated_at || '' },
 ];
 for (const item of reports) {
   for (const language of ['id','en']) {
