@@ -1,6 +1,55 @@
 {
   "artikel": [
     {
+      "judul": "PINTU Gandeng Kopikina Perluas Edukasi Crypto ke Industri Kopi - Industry.co.id",
+      "tautan": "https://www.industry.co.id/read/157036/pintu-gandeng-kopikina-perluas-edukasi-crypto-ke-industri-kopi",
+      "tanggal": "Tue, 06 Oct 2026 08:12:00 GMT",
+      "sumber": "Industry.co.id",
+      "asal": "google_news",
+      "aggregator": "Google News",
+      "link_type": "publisher_article",
+      "resolution_status": "resolved",
+      "tautan_google_news": "https://news.google.com/rss/articles/CBMiowFBVV95cUxQdk1HWk1Wa2t2NTFFc3QwWEpmNUJCbFd4WUZHZnFiYWJXcmstRHAwWExvcnFWamJ4dDhBVDdnZU84OTJPeHFGeWljQm5VZnVwZ3hTNF90Ymo1b0VIenM2QTJ2akFzWUxCYzdWcDJreTlFSXR1dW9mMk5tbnhyUkFYaE5naHJtcWtTN0FYaUpMT0NaWUw3UWo1dkROcVNnU2dDVjNv?oc=5",
+      "extracted_at": "2026-10-06T08:28:12Z",
+      "extracted_from_url": "https://www.industry.co.id/read/157036/pintu-gandeng-kopikina-perluas-edukasi-crypto-ke-industri-kopi",
+      "resolved_url": "https://www.industry.co.id/read/157036/pintu-gandeng-kopikina-perluas-edukasi-crypto-ke-industri-kopi",
+      "source_content_type": "text/html",
+      "http_status": 200,
+      "extraction_status": "extracted",
+      "extraction_method": "html_article_or_main",
+      "source_title": "PINTU Gandeng Kopikina Perluas Edukasi Crypto ke Industri Kopi - Industry.co.id",
+      "source_description": "Kolaborasi lintas industri ini menjadi bagian dari upaya PINTU memperkenalkan aset crypto sekaligus meningkatkan pemahaman mengenai peluang dan risikonya kepada…",
+      "source_authors": [
+        "Hariyanto",
+        "https://www.industry.co.id/author/hariyanto"
+      ],
+      "source_published_date": "2026-10-06",
+      "publication_date_precision": "day",
+      "publication_date_evidence": "2026-10-06T15:12:00+07:00",
+      "date_enrichment_version": 6,
+      "coffee_relevance_context": "n diawasi Otoritas Jasa Keuangan (OJK), memperluas edukasi aset crypto melalui program Pintu Goes to Office. Kali ini, PINTU menggandeng PT Kopi Kina Indonesia (Kopikina), perusahaan kopi dan roastery di Indonesia. Kegiatan edukasi tersebut digelar di Kopikina Kemang, Jakarta Selatan, pada 30 September 2026 dan diikuti pul … perluas edukasi aset crypto melalui program Pintu Goes to Office. Kali ini, PINTU menggandeng PT Kopi Kina Indonesia (Kopikina), perusahaan kopi dan roastery di Indonesia. Kegiatan edukasi tersebut digelar di Kopikina Kemang, Jakarta Selatan, pada 30 September 2026 dan diikuti puluhan staf Kopikina. Kolaborasi lintas indus … ai peluang dan risikonya kepada masyarakat dari berbagai latar belakang. Chief Marketing Officer PINTU Timothius Martin mengatakan industri kopi dan crypto memiliki karakteristik yang menarik untuk dipertemukan, terutama karena keduanya berkembang melalui kekuatan komunitas. “Program Pintu Goes to Office menjadi salah satu",
+      "content_char_count": 5402,
+      "content_sha256": "7e13240ca26b337a2f78deabc023e96946bfb6bc19353a6f936df50ce8dd65ea",
+      "content_excerpt": "Kolaborasi PINTU dan Kopikina INDUSTRY.co.id - JAKARTA – PT Pintu Kemana Saja (PINTU), platform investasi aset crypto yang berizin dan diawasi Otoritas Jasa Keuangan (OJK), memperluas edukasi aset crypto melalui program Pintu Goes to Office. Kali ini, PINTU menggandeng PT Kopi Kina Indonesia (Kopikina), perusahaan kopi dan roastery di Indonesia. Kegiatan edukasi tersebut digelar di Kopikina Kemang, Jakarta Selatan, p",
+      "fetch_error": null,
+      "retry_after": null,
+      "published_date": "2026-10-06",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_ai_reviewed_at": "2026-10-06T08:28:15.212Z",
+      "cluster_review_version": 7,
+      "cluster_review_context_hash": "4d96e87dc8176f316061615682e6957b222235025902998fab7d64b421d2b0d7",
+      "cluster_relevance_review": {
+        "relevance": "irrelevant",
+        "title_context_match": "match",
+        "suggested_cluster_id": "",
+        "reason": "Fokus utama artikel adalah edukasi aset crypto oleh PINTU; kopi hanya menjadi konteks kolaborasi (lokasi/mitra), bukan pokok bahasan industri kopi sesuai klaster yang tersedia.",
+        "evidence": "\"memperluas edukasi aset crypto melalui program Pintu Goes to Office\" | \"PINTU menggandeng PT Kopi Kina Indonesia (Kopikina), perusahaan kopi dan roastery di Indonesia.\" | \"Kegiatan edukasi tersebut digelar di Kopikina Kemang, Jakarta Selatan, pada 30 September 2026\"",
+        "reviewed_at": "2026-10-06T08:28:15.212Z"
+      }
+    },
+    {
       "judul": "M Stand Resmi Buka Gerai Pertama di PIK, Tawarkan Tren Kopi Shanghai - cantika.com",
       "tautan": "https://www.cantika.com/read/2121013/m-stand-resmi-buka-gerai-pertama-di-pik-tawarkan-tren-kopi-shanghai",
       "tanggal": "Tue, 06 Oct 2026 05:30:00 GMT",
@@ -18995,10 +19044,10 @@
       "cluster_ai_evidence": "\"The onset of a new El Niño event presents challenges for coffee farmers.\""
     }
   ],
-  "fetched": "2026-10-06T07:52:45.867Z",
+  "fetched": "2026-10-06T08:27:54.342Z",
   "reference_ingest": {
     "source": "KGS-blog/coffee-intelligence-engine/exports/coffee_relevant_articles.json",
-    "imported_at": "2026-10-06T07:53:02.056Z",
+    "imported_at": "2026-10-06T08:28:12.310Z",
     "source_records": 351,
     "accepted_candidates": 338,
     "dated_candidates": 304,
@@ -19013,7 +19062,7 @@
     }
   },
   "content_fetch": {
-    "last_batch_at": "2026-10-06T05:44:11Z",
+    "last_batch_at": "2026-10-06T08:28:12Z",
     "batch_size": 1,
     "batch_limit": 400,
     "purpose": "Short original-publisher context for relevance and cluster review; full article text is not stored or republished."
