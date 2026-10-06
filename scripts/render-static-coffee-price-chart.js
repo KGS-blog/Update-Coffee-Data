@@ -1,4 +1,4 @@
-// Render a crawlable quarterly price chart from Kabar Kopi's locally saved data.
+// Render crawlable quarterly prices, keeping explicitly identified bean forms apart.
 const fs = require('node:fs');
 const path = require('node:path');
 
@@ -11,11 +11,28 @@ const quarterIndex = value => {
   const match = /^Q([1-4])\s+(\d{4})$/.exec(String(value || ''));
   return match ? Number(match[2]) * 10 + Number(match[1]) : 0;
 };
+
+// Classify only when the product text says the form explicitly. A processing
+// method (Natural, Washed, Honey, etc.) does not tell us whether it is roasted.
+const greenForm = /\bgreen\s*(?:bean|beans|coffee)\b|\bgreenbean\b|\bunroasted\b|\braw\s+coffee\b|kopi\s+mentah|biji\s+mentah/i;
+const roastedForm = /\broast(?:ed|ing)?\b|\bsangrai\b/i;
+const classifyForm = row => {
+  const product = String(row.product || '');
+  const green = greenForm.test(product), roasted = roastedForm.test(product);
+  if (green && roasted) return 'unclear';
+  if (green) return 'green';
+  if (roasted) return 'roasted';
+  return 'unspecified';
+};
 const idr = (dataset.listings || []).filter(row =>
   row && row.currency === 'IDR' && quarterIndex(row.period) &&
   Number.isFinite(Number(row.price_per_kg)) && Number(row.price_per_kg) > 0 &&
   (row.type === 'Arabika' || row.type === 'Robusta')
-);
+).map(row => ({ ...row, form: classifyForm(row) }));
+const formRows = {
+  green: idr.filter(row => row.form === 'green'),
+  roasted: idr.filter(row => row.form === 'roasted'),
+};
 const periods = [...new Set(idr.map(row => row.period))].sort((a, b) => quarterIndex(a) - quarterIndex(b));
 const types = ['Arabika', 'Robusta'];
 const median = values => {
@@ -23,31 +40,36 @@ const median = values => {
   const middle = Math.floor(sorted.length / 2);
   return sorted.length ? (sorted.length % 2 ? sorted[middle] : (sorted[middle - 1] + sorted[middle]) / 2) : null;
 };
-const points = Object.fromEntries(types.map(type => [type, periods.map(period => {
-  const observations = idr.filter(row => row.type === type && row.period === period);
-  return { period, median: median(observations.map(row => Number(row.price_per_kg))), count: observations.length };
-})]));
 const formatIdr = value => `Rp${new Intl.NumberFormat('id-ID', { maximumFractionDigits: 0 }).format(value)}`;
-const allPrices = Object.values(points).flat().map(point => point.median).filter(Number.isFinite);
-const maxPrice = Math.max(50000, Math.ceil(Math.max(...allPrices) / 50000) * 50000);
-const width = 900, height = 330, left = 88, right = 24, top = 24, bottom = 50;
-const plotWidth = width - left - right, plotHeight = height - top - bottom;
-const quarterSpan = Math.max(1, quarterIndex(periods.at(-1)) - quarterIndex(periods[0]));
-const x = period => left + plotWidth * (quarterIndex(period) - quarterIndex(periods[0])) / quarterSpan;
-const y = value => top + plotHeight * (1 - value / maxPrice);
-const horizontalGrid = Array.from({ length: 5 }, (_, i) => {
-  const value = maxPrice * i / 4, yy = y(value);
-  return `<line class="grid" x1="${left}" x2="${width-right}" y1="${yy}" y2="${yy}"/><text x="${left-10}" y="${yy+4}" text-anchor="end">${i === 0 ? '0' : `${Math.round(value/1000)}k`}</text>`;
-}).join('');
-const lines = types.map(type => {
-  const present = points[type].filter(point => point.median !== null);
-  const cls = type === 'Arabika' ? 'arabica' : 'robusta';
-  const pathD = present.map((point, i) => `${i ? 'L' : 'M'} ${x(point.period)} ${y(point.median)}`).join(' ');
-  const dots = present.map(point => `<circle class="point ${cls}-point" cx="${x(point.period)}" cy="${y(point.median)}" r="5"><title>${esc(type)} · ${esc(point.period)} · ${formatIdr(point.median)} · n=${point.count}</title></circle>`).join('');
-  return `<path class="${cls}" d="${pathD}"/>${dots}`;
-}).join('');
-const periodLabels = periods.map(period => `<text x="${x(period)}" y="${height-16}" text-anchor="middle">${esc(period)}</text>`).join('');
-const svg = `<div class="price-legend"><span><i class="arabica-key"></i><span class="id-copy">Arabika</span><span class="en-copy">Arabica</span></span><span><i class="robusta-key"></i>Robusta</span></div><svg class="price-chart" viewBox="0 0 ${width} ${height}" role="img" aria-labelledby="coffee-price-svg-title coffee-price-svg-desc"><title id="coffee-price-svg-title">Median price listings by quarter</title><desc id="coffee-price-svg-desc">Median listed coffee prices per kilogram in Indonesian rupiah, with Arabica and Robusta shown separately.</desc>${horizontalGrid}${lines}${periodLabels}</svg><div class="price-table-scroll"><table class="price-period-table"><thead><tr><th><span class="id-copy">Periode</span><span class="en-copy">Period</span></th><th><span class="id-copy">Arabika · median/kg</span><span class="en-copy">Arabica · median/kg</span></th><th><span class="id-copy">Jumlah listing</span><span class="en-copy">Listings recorded</span></th><th>Robusta · median/kg</th><th><span class="id-copy">Jumlah listing</span><span class="en-copy">Listings recorded</span></th></tr></thead><tbody>${periods.map(period => { const a = points.Arabika.find(p => p.period === period), r = points.Robusta.find(p => p.period === period); return `<tr><th scope="row">${esc(period)}</th><td>${a.median === null ? '—' : formatIdr(a.median)}</td><td class="count">${a.count.toLocaleString('id-ID')}</td><td>${r.median === null ? '—' : formatIdr(r.median)}</td><td class="count">${r.count.toLocaleString('id-ID')}</td></tr>`; }).join('')}</tbody></table></div><p class="price-count-note"><span class="id-copy">Jumlah listing adalah banyaknya observasi harga yang masuk ke median untuk jenis kopi dan periode tersebut; bukan jumlah sumber unik.</span><span class="en-copy">Listings recorded are the price observations included in the median for that coffee type and period; this is not the number of unique sources.</span></p>`;
+const chart = (rows, prefix) => {
+  const points = Object.fromEntries(types.map(type => [type, periods.map(period => {
+    const observations = rows.filter(row => row.type === type && row.period === period);
+    return { period, median: median(observations.map(row => Number(row.price_per_kg))), count: observations.length };
+  })]));
+  const allPrices = Object.values(points).flat().map(point => point.median).filter(Number.isFinite);
+  const maxPrice = Math.max(50000, Math.ceil(Math.max(...allPrices, 0) / 50000) * 50000);
+  const width = 900, height = 300, left = 88, right = 24, top = 22, bottom = 48;
+  const plotWidth = width - left - right, plotHeight = height - top - bottom;
+  const quarterSpan = Math.max(1, quarterIndex(periods.at(-1)) - quarterIndex(periods[0]));
+  const x = period => left + plotWidth * (quarterIndex(period) - quarterIndex(periods[0])) / quarterSpan;
+  const y = value => top + plotHeight * (1 - value / maxPrice);
+  const horizontalGrid = Array.from({ length: 5 }, (_, i) => {
+    const value = maxPrice * i / 4, yy = y(value);
+    return `<line class="grid" x1="${left}" x2="${width-right}" y1="${yy}" y2="${yy}"/><text x="${left-10}" y="${yy+4}" text-anchor="end">${i === 0 ? '0' : `${Math.round(value/1000)}k`}</text>`;
+  }).join('');
+  const lines = types.map(type => {
+    const present = points[type].filter(point => point.median !== null);
+    const cls = type === 'Arabika' ? 'arabica' : 'robusta';
+    const pathD = present.map((point, i) => `${i ? 'L' : 'M'} ${x(point.period)} ${y(point.median)}`).join(' ');
+    const path = present.length > 1 ? `<path class="${cls}" d="${pathD}"/>` : '';
+    const dots = present.map(point => `<circle class="point ${cls}-point" cx="${x(point.period)}" cy="${y(point.median)}" r="5"><title>${esc(type)} · ${esc(point.period)} · ${formatIdr(point.median)} · ${point.count} listings</title></circle>`).join('');
+    return `${path}${dots}`;
+  }).join('');
+  const periodLabels = periods.map(period => `<text x="${x(period)}" y="${height-14}" text-anchor="middle">${esc(period)}</text>`).join('');
+  const table = `<div class="price-table-scroll"><table class="price-period-table"><thead><tr><th><span class="id-copy">Periode</span><span class="en-copy">Period</span></th><th><span class="id-copy">Arabika · median/kg</span><span class="en-copy">Arabica · median/kg</span></th><th><span class="id-copy">Jumlah listing</span><span class="en-copy">Listings recorded</span></th><th>Robusta · median/kg</th><th><span class="id-copy">Jumlah listing</span><span class="en-copy">Listings recorded</span></th></tr></thead><tbody>${periods.map(period => { const a = points.Arabika.find(p => p.period === period), r = points.Robusta.find(p => p.period === period); return `<tr><th scope="row">${esc(period)}</th><td>${a.median === null ? '—' : formatIdr(a.median)}</td><td class="count">${a.count.toLocaleString('id-ID')}</td><td>${r.median === null ? '—' : formatIdr(r.median)}</td><td class="count">${r.count.toLocaleString('id-ID')}</td></tr>`; }).join('')}</tbody></table></div>`;
+  return `<section class="price-form-panel" aria-labelledby="${prefix}-heading"><h3 id="${prefix}-heading"><span class="id-copy">${prefix === 'green' ? 'Biji hijau (green bean)' : 'Biji sangrai (roasted beans)'}</span><span class="en-copy">${prefix === 'green' ? 'Green beans' : 'Roasted beans'}</span></h3><div class="price-legend"><span><i class="arabica-key"></i><span class="id-copy">Arabika</span><span class="en-copy">Arabica</span></span><span><i class="robusta-key"></i>Robusta</span></div><div class="price-chart-wrap"><svg class="price-chart" viewBox="0 0 ${width} ${height}" role="img" aria-labelledby="${prefix}-chart-title ${prefix}-chart-desc"><title id="${prefix}-chart-title">${prefix === 'green' ? 'Green bean' : 'Roasted coffee'} median listing price per kg by quarter</title><desc id="${prefix}-chart-desc">IDR median prices per kilogram, with Arabica and Robusta shown separately. Only product listings explicitly identifying this form are included.</desc>${horizontalGrid}${lines}${periodLabels}</svg></div>${table}<p class="price-count-note"><span class="id-copy">Hanya listing yang nama produknya menyebut bentuk ini yang dihitung.</span><span class="en-copy">Only listings whose product name identifies this form are included.</span></p></section>`;
+};
+const chartHtml = `<div class="price-form-grid">${chart(formRows.green, 'green')}${chart(formRows.roasted, 'roasted')}</div><p class="price-form-coverage"><span class="id-copy"><strong>Cakupan bentuk:</strong> ${formRows.green.length.toLocaleString('id-ID')} listing biji hijau · ${formRows.roasted.length.toLocaleString('id-ID')} listing biji sangrai · ${(idr.length - formRows.green.length - formRows.roasted.length).toLocaleString('id-ID')} listing tidak masuk perbandingan bentuk karena tidak jelas atau berupa kopi bubuk.</span><span class="en-copy"><strong>Form coverage:</strong> ${formRows.green.length.toLocaleString('en-US')} green-bean listings · ${formRows.roasted.length.toLocaleString('en-US')} roasted-bean listings · ${(idr.length - formRows.green.length - formRows.roasted.length).toLocaleString('en-US')} listings are outside the form comparison because the form is unclear or the product is ground coffee.</span></p>`;
 const secureSource = value => { try { const url = new URL(String(value || '')); return url.protocol === 'https:' ? url.href : ''; } catch (_) { return ''; } };
 const sources = [...new Map(idr.map(row => [secureSource(row.source_url), row.source || row.source_url]).filter(([url]) => url)).entries()].sort((a,b)=>a[1].localeCompare(b[1]));
 const sourceList = sources.map(([url, name]) => `<li><a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(name)}</a></li>`).join('');
@@ -65,10 +87,10 @@ const replaceRegion = (html, name, value) => {
 for (const filename of ['index.html', 'kabar-kopi.html']) {
   const filePath = path.join(ROOT, filename);
   let html = fs.readFileSync(filePath, 'utf8');
-  html = replaceRegion(html, 'PRICE_CHART', svg);
+  html = replaceRegion(html, 'PRICE_CHART', chartHtml);
   html = replaceRegion(html, 'PRICE_SOURCES', sourceList);
   html = replaceRegion(html, 'PRICE_UPDATED', esc(updatedAt));
   html = replaceRegion(html, 'PRICE_COUNT', sourceCount);
   fs.writeFileSync(filePath, html);
 }
-console.log(`Rendered a static quarterly IDR chart from ${idr.length} observations across ${periods.length} periods; linked ${sources.length} source URLs.`);
+console.log(`Rendered separate green-bean (${formRows.green.length}) and roasted-bean (${formRows.roasted.length}) IDR charts; left ${idr.length - formRows.green.length - formRows.roasted.length} listings outside form comparisons because form is unspecified.`);
