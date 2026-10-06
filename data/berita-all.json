@@ -17,7 +17,18 @@
       "date_enrichment_version": 6,
       "cluster_id": "lainnya",
       "cluster_name": "Lainnya",
-      "cluster_assignment": "unassigned"
+      "cluster_assignment": "unassigned",
+      "cluster_ai_reviewed_at": "2026-10-06T11:02:32.857Z",
+      "cluster_review_version": 7,
+      "cluster_review_context_hash": "ec1647c3ae19d038bf161653a82113af7ed5352fbcc7fb7ea92bc0542db7e422",
+      "cluster_relevance_review": {
+        "relevance": "uncertain",
+        "title_context_match": "unclear",
+        "suggested_cluster_id": "",
+        "reason": "Cuplikan isi terlalu terbatas untuk menyimpulkan relevansi; editor perlu membuka sumber asli.",
+        "evidence": "\"Beda Nasib FORE dengan Kopi Kenangan\"",
+        "reviewed_at": "2026-10-06T11:02:32.857Z"
+      }
     },
     {
       "judul": "Dorong Hilirisasi, Pemkab Perkuat Branding Jember Surga Kopi - RRI.co.id",
@@ -152,6 +163,55 @@
       "cluster_id": "kedai-konsumsi-gaya-hidup",
       "cluster_name": "Kedai, Konsumsi & Gaya Hidup",
       "cluster_assignment": "rule_context"
+    },
+    {
+      "judul": "Jember Menuju “Surga Kopi Indonesia”, Gus Fawait Dorong Hilirisasi Kopi melalui PDP Kahyangan - KABAR RAKYAT",
+      "tautan": "https://kabarrakyat.id/jember-menuju-surga-kopi-indonesia-gus-fawait-dorong-hilirisasi-kopi-melalui-pdp-kahyangan",
+      "tanggal": "Tue, 06 Oct 2026 02:07:00 GMT",
+      "sumber": "KABAR RAKYAT",
+      "asal": "google_news",
+      "aggregator": "Google News",
+      "link_type": "publisher_article",
+      "resolution_status": "resolved",
+      "tautan_google_news": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNdTNVZEl5TkZkNnFYSzNybjdFWnRvbWRGYzdMd1FXVGU0ZGdvTnFydGRfRkRGSTFndUlhLVJpU3VxeUdCaWlBUnB1TUFzVzJNYm1CQkdSaDlKbzctLTFrYzhZRUpzOHhjR0ZCRXBKM2VsS2dQYVgyTmlrZTBURm9lVDlLSEdqZVBKVmhtTk1DcXZOSUI0Qm85WVZkQXJlNE56ZmptdDY2UWRjOG1tVG8tYm5ycw?oc=5",
+      "extracted_at": "2026-10-06T11:02:29Z",
+      "extracted_from_url": "https://kabarrakyat.id/jember-menuju-surga-kopi-indonesia-gus-fawait-dorong-hilirisasi-kopi-melalui-pdp-kahyangan",
+      "resolved_url": "https://kabarrakyat.id/jember-menuju-surga-kopi-indonesia-gus-fawait-dorong-hilirisasi-kopi-melalui-pdp-kahyangan",
+      "source_content_type": "text/html",
+      "http_status": 200,
+      "extraction_status": "extracted",
+      "extraction_method": "html_body",
+      "source_title": "Jember Menuju “Surga Kopi Indonesia”, Gus Fawait Dorong Hilirisasi Kopi melalui PDP Kahyangan",
+      "source_description": "",
+      "source_authors": [
+        "Kabar",
+        "Don Ramadhan"
+      ],
+      "source_published_date": "2026-10-06",
+      "publication_date_precision": "day",
+      "publication_date_evidence": "2026-10-06T09:07:36+0700",
+      "date_enrichment_version": 6,
+      "coffee_relevance_context": "Jember Menuju “Surga Kopi Indonesia”, Gus Fawait Dorong Hilirisasi Kopi melalui PDP Kahyangan - Mencerahkan Home KONTAK KAMI News All Nasional Politik Pendidikan Embongan Jawa Timuran Hiburan All Sport Wis … Jember Menuju “Surga Kopi Indonesia”, Gus Fawait Dorong Hilirisasi Kopi melalui PDP Kahyangan - Mencerahkan Home KONTAK KAMI News All Nasional Politik Pendidikan Embongan Jawa Timuran Hiburan All Sport Wisata Kuliner Ekonomi All Investasi Pendidikan K … uran Hiburan All Sport Wisata Kuliner Ekonomi All Investasi Pendidikan Kesehatan Kriminal Koran Home News Jawa Timuran Jember Menuju “Surga Kopi Indonesia”, Gus Fawait Dorong Hilirisasi Kopi melalui PDP Kahyangan Jawa Timuran Jember Menuju “Surga Kopi Indonesia”, Gus Fawait Dorong Hilirisasi Kopi melalui PDP Kahyangan Don",
+      "content_char_count": 5744,
+      "content_sha256": "e7f3198ee9851eba435e9b41e6c0a91de360b39302767c2fc422f30f5f7004a4",
+      "content_excerpt": "Jember Menuju “Surga Kopi Indonesia”, Gus Fawait Dorong Hilirisasi Kopi melalui PDP Kahyangan - Mencerahkan Home KONTAK KAMI News All Nasional Politik Pendidikan Embongan Jawa Timuran Hiburan All Sport Wisata Kuliner Ekonomi All Investasi Pendidikan Kesehatan Kriminal Koran Home News Jawa Timuran Jember Menuju “Surga Kopi Indonesia”, Gus Fawait Dorong Hilirisasi Kopi melalui PDP Kahyangan Jawa Timuran Jember Menuju “",
+      "fetch_error": null,
+      "retry_after": null,
+      "published_date": "2026-10-06",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_ai_reviewed_at": "2026-10-06T11:02:32.857Z",
+      "cluster_review_version": 7,
+      "cluster_review_context_hash": "88ba41ebfa4905306022ef586ea4db1f496ffc52ac8a68013f896817cc8eedfb",
+      "cluster_relevance_review": {
+        "relevance": "relevant",
+        "title_context_match": "match",
+        "suggested_cluster_id": "kebijakan-regulasi",
+        "reason": "Judul dan satu-satunya konteks yang tersedia menekankan dorongan hilirisasi kopi melalui PDP Kahyangan oleh tokoh publik, yang mengarah pada program/kebijakan yang memengaruhi sektor kopi.",
+        "evidence": "\"Jember Menuju “Surga Kopi Indonesia”, Gus Fawait Dorong Hilirisasi Kopi melalui PDP Kahyangan\"",
+        "reviewed_at": "2026-10-06T11:02:32.857Z"
+      }
     },
     {
       "judul": "Perkuat Branding Jember Surga Kopi, Gus Fawait Tinjau Kebun Sumberwadung Lewat Aksi Gowes dan Baksos - Nusantara News",
@@ -19113,10 +19173,10 @@
       "cluster_ai_evidence": "\"The onset of a new El Niño event presents challenges for coffee farmers.\""
     }
   ],
-  "fetched": "2026-10-06T10:24:02.819Z",
+  "fetched": "2026-10-06T11:02:07.303Z",
   "reference_ingest": {
     "source": "KGS-blog/coffee-intelligence-engine/exports/coffee_relevant_articles.json",
-    "imported_at": "2026-10-06T10:24:26.825Z",
+    "imported_at": "2026-10-06T11:02:29.724Z",
     "source_records": 351,
     "accepted_candidates": 338,
     "dated_candidates": 304,
@@ -19131,7 +19191,7 @@
     }
   },
   "content_fetch": {
-    "last_batch_at": "2026-10-06T09:07:48Z",
+    "last_batch_at": "2026-10-06T11:02:29Z",
     "batch_size": 1,
     "batch_limit": 400,
     "purpose": "Short original-publisher context for relevance and cluster review; full article text is not stored or republished."
