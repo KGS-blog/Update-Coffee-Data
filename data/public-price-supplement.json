@@ -1,0 +1,694 @@
+{
+  "version": 1,
+  "updated_at": "2026-10-06T08:18:18.393Z",
+  "listings": [
+    {
+      "observation_id": "e47f1c2cb936857d391d84b9d8fe97ff094be6321323805c884b0a09a767a67c",
+      "type": "Robusta",
+      "form": "Biji kopi mentah",
+      "process": "Natural",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "date_basis": "Tanggal diamati Kabar Kopi",
+      "currency": "IDR",
+      "original_price": 85000,
+      "price_per_package": 85000,
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 85000,
+      "scale_100_to_999_applied": false,
+      "product": "Flores Bajawa Natural Fine Robusta",
+      "source": "ASKI B2B Marketplace",
+      "source_url": "https://www.aski.coffee/marketplace",
+      "product_url": "https://www.aski.coffee/marketplace",
+      "quality_status": "Estimasi harga marketplace · tanggal diamati Kabar Kopi",
+      "origin": "Bajawa, Flores (1,200 mdpl)"
+    },
+    {
+      "observation_id": "7f9d53124ed406a59bf0fc973c56c25cc98d0bd2288299d1e874bd9976e80ddc",
+      "type": "Arabika",
+      "form": "Biji kopi mentah",
+      "process": "Washed",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "date_basis": "Tanggal diamati Kabar Kopi",
+      "currency": "IDR",
+      "original_price": 162900,
+      "price_per_package": 162900,
+      "price_range_per_kg": [
+        154800,
+        171000
+      ],
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 162900,
+      "scale_100_to_999_applied": false,
+      "product": "Arabika Gayo Washed",
+      "source": "Willkin Green Coffee",
+      "source_url": "https://willkingreencoffee.com/katalog-lokal/",
+      "product_url": "https://willkingreencoffee.com/katalog-lokal/",
+      "quality_status": "Rentang harga katalog · titik tengah dipakai untuk ringkasan · tanggal diamati Kabar Kopi",
+      "origin": "Aceh Tengah"
+    },
+    {
+      "observation_id": "6792a0eefe8524f81c3ce01b8acd74f85fa3051f779865eb47e6b34737e31211",
+      "type": "Arabika",
+      "form": "Biji kopi mentah",
+      "process": "Washed",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "date_basis": "Tanggal diamati Kabar Kopi",
+      "currency": "USD",
+      "original_price": 9.05,
+      "price_per_package": 9.05,
+      "price_range_per_kg": [
+        9,
+        10
+      ],
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 9.05,
+      "scale_100_to_999_applied": false,
+      "product": "Arabika Gayo Washed",
+      "source": "Willkin Green Coffee",
+      "source_url": "https://willkingreencoffee.com/katalog-lokal/",
+      "product_url": "https://willkingreencoffee.com/katalog-lokal/",
+      "quality_status": "Published USD range · midpoint used for summaries · observed by Kabar Kopi",
+      "origin": "Aceh Tengah"
+    },
+    {
+      "observation_id": "edfc8f04fee0d5d41509fbd94ab480829e57f1f5a36054998098f953f7607d28",
+      "type": "Arabika",
+      "form": "Biji kopi mentah",
+      "process": "Natural",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "date_basis": "Tanggal diamati Kabar Kopi",
+      "currency": "IDR",
+      "original_price": 160000,
+      "price_per_package": 160000,
+      "price_range_per_kg": [
+        150000,
+        170000
+      ],
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 160000,
+      "scale_100_to_999_applied": false,
+      "product": "Arabika Gayo Natural",
+      "source": "Willkin Green Coffee",
+      "source_url": "https://willkingreencoffee.com/katalog-lokal/",
+      "product_url": "https://willkingreencoffee.com/katalog-lokal/",
+      "quality_status": "Rentang harga katalog · titik tengah dipakai untuk ringkasan · tanggal diamati Kabar Kopi",
+      "origin": "Aceh Tengah"
+    },
+    {
+      "observation_id": "9281a2f11f8f81597fe25666f5146d8912a4234dd625c1670764b71ad96668be",
+      "type": "Arabika",
+      "form": "Biji kopi mentah",
+      "process": "Natural",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "date_basis": "Tanggal diamati Kabar Kopi",
+      "currency": "USD",
+      "original_price": 8.885,
+      "price_per_package": 8.885,
+      "price_range_per_kg": [
+        8,
+        9
+      ],
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 8.89,
+      "scale_100_to_999_applied": false,
+      "product": "Arabika Gayo Natural",
+      "source": "Willkin Green Coffee",
+      "source_url": "https://willkingreencoffee.com/katalog-lokal/",
+      "product_url": "https://willkingreencoffee.com/katalog-lokal/",
+      "quality_status": "Published USD range · midpoint used for summaries · observed by Kabar Kopi",
+      "origin": "Aceh Tengah"
+    },
+    {
+      "observation_id": "74527b52356a13e8f7aece8931d714eb84a00c79c25a1ef76f27a9faa1b2d663",
+      "type": "Arabika",
+      "form": "Biji kopi mentah",
+      "process": "Tidak disebut",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "date_basis": "Tanggal diamati Kabar Kopi",
+      "currency": "IDR",
+      "original_price": 150000,
+      "price_per_package": 150000,
+      "price_range_per_kg": [
+        140000,
+        160000
+      ],
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 150000,
+      "scale_100_to_999_applied": false,
+      "product": "Arabika Toraja",
+      "source": "Willkin Green Coffee",
+      "source_url": "https://willkingreencoffee.com/katalog-lokal/",
+      "product_url": "https://willkingreencoffee.com/katalog-lokal/",
+      "quality_status": "Rentang harga katalog · titik tengah dipakai untuk ringkasan · tanggal diamati Kabar Kopi",
+      "origin": "Tana Toraja, Sulawesi"
+    },
+    {
+      "observation_id": "5713ef8686b3759031df1fd41a455026c5eb44df277beb0dc019df35ef5970db",
+      "type": "Arabika",
+      "form": "Biji kopi mentah",
+      "process": "Tidak disebut",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "date_basis": "Tanggal diamati Kabar Kopi",
+      "currency": "USD",
+      "original_price": 8.335,
+      "price_per_package": 8.335,
+      "price_range_per_kg": [
+        8,
+        9
+      ],
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 8.34,
+      "scale_100_to_999_applied": false,
+      "product": "Arabika Toraja",
+      "source": "Willkin Green Coffee",
+      "source_url": "https://willkingreencoffee.com/katalog-lokal/",
+      "product_url": "https://willkingreencoffee.com/katalog-lokal/",
+      "quality_status": "Published USD range · midpoint used for summaries · observed by Kabar Kopi",
+      "origin": "Tana Toraja, Sulawesi"
+    },
+    {
+      "observation_id": "96168c07fd06fd3c7f6d20003f09ed18f451e2a1fe06eb26c1964af4fdf6d47e",
+      "type": "Arabika",
+      "form": "Biji kopi mentah",
+      "process": "Tidak disebut",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "date_basis": "Tanggal diamati Kabar Kopi",
+      "currency": "IDR",
+      "original_price": 160000,
+      "price_per_package": 160000,
+      "price_range_per_kg": [
+        150000,
+        170000
+      ],
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 160000,
+      "scale_100_to_999_applied": false,
+      "product": "Arabika Flores Bajawa",
+      "source": "Willkin Green Coffee",
+      "source_url": "https://willkingreencoffee.com/katalog-lokal/",
+      "product_url": "https://willkingreencoffee.com/katalog-lokal/",
+      "quality_status": "Rentang harga katalog · titik tengah dipakai untuk ringkasan · tanggal diamati Kabar Kopi",
+      "origin": "Ngada, Flores"
+    },
+    {
+      "observation_id": "30906d6853ae2d7ca6f74c8f0193d141f25e3bc964edbb9c495792fdc244570c",
+      "type": "Arabika",
+      "form": "Biji kopi mentah",
+      "process": "Tidak disebut",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "date_basis": "Tanggal diamati Kabar Kopi",
+      "currency": "USD",
+      "original_price": 8.885,
+      "price_per_package": 8.885,
+      "price_range_per_kg": [
+        8,
+        9
+      ],
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 8.89,
+      "scale_100_to_999_applied": false,
+      "product": "Arabika Flores Bajawa",
+      "source": "Willkin Green Coffee",
+      "source_url": "https://willkingreencoffee.com/katalog-lokal/",
+      "product_url": "https://willkingreencoffee.com/katalog-lokal/",
+      "quality_status": "Published USD range · midpoint used for summaries · observed by Kabar Kopi",
+      "origin": "Ngada, Flores"
+    },
+    {
+      "observation_id": "380736a5276395eaac881dd6e7b496e77627985f21819e7a77e2305cc5c8fdc5",
+      "type": "Arabika",
+      "form": "Biji kopi mentah",
+      "process": "Tidak disebut",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "date_basis": "Tanggal diamati Kabar Kopi",
+      "currency": "IDR",
+      "original_price": 180000,
+      "price_per_package": 180000,
+      "price_range_per_kg": [
+        170000,
+        190000
+      ],
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 180000,
+      "scale_100_to_999_applied": false,
+      "product": "Arabika Bali Kintamani",
+      "source": "Willkin Green Coffee",
+      "source_url": "https://willkingreencoffee.com/katalog-lokal/",
+      "product_url": "https://willkingreencoffee.com/katalog-lokal/",
+      "quality_status": "Rentang harga katalog · titik tengah dipakai untuk ringkasan · tanggal diamati Kabar Kopi",
+      "origin": "Kintamani, Bali"
+    },
+    {
+      "observation_id": "3dd30372fdedf34b0629de721a894600c0e2ac2538185823cb350a7345f7782b",
+      "type": "Arabika",
+      "form": "Biji kopi mentah",
+      "process": "Tidak disebut",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "date_basis": "Tanggal diamati Kabar Kopi",
+      "currency": "USD",
+      "original_price": 10,
+      "price_per_package": 10,
+      "price_range_per_kg": [
+        9,
+        11
+      ],
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 10,
+      "scale_100_to_999_applied": false,
+      "product": "Arabika Bali Kintamani",
+      "source": "Willkin Green Coffee",
+      "source_url": "https://willkingreencoffee.com/katalog-lokal/",
+      "product_url": "https://willkingreencoffee.com/katalog-lokal/",
+      "quality_status": "Published USD range · midpoint used for summaries · observed by Kabar Kopi",
+      "origin": "Kintamani, Bali"
+    },
+    {
+      "observation_id": "80404743d06cbf44a6a383272150665a6bd29b618b6a932bfef7c892d0543690",
+      "type": "Robusta",
+      "form": "Biji kopi mentah",
+      "process": "Tidak disebut",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "date_basis": "Tanggal diamati Kabar Kopi",
+      "currency": "IDR",
+      "original_price": 71500,
+      "price_per_package": 71500,
+      "price_range_per_kg": [
+        65000,
+        78000
+      ],
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 71500,
+      "scale_100_to_999_applied": false,
+      "product": "Robusta Lampung EK1",
+      "source": "Willkin Green Coffee",
+      "source_url": "https://willkingreencoffee.com/katalog-lokal/",
+      "product_url": "https://willkingreencoffee.com/katalog-lokal/",
+      "quality_status": "Rentang harga katalog · titik tengah dipakai untuk ringkasan · tanggal diamati Kabar Kopi",
+      "origin": "Lampung"
+    },
+    {
+      "observation_id": "f1f55145e9319e93b1609568ea6a8688f9e448ea461b30f37f7e0dd390faef01",
+      "type": "Robusta",
+      "form": "Biji kopi mentah",
+      "process": "Tidak disebut",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "date_basis": "Tanggal diamati Kabar Kopi",
+      "currency": "USD",
+      "original_price": 3.9699999999999998,
+      "price_per_package": 3.9699999999999998,
+      "price_range_per_kg": [
+        4,
+        4
+      ],
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 3.97,
+      "scale_100_to_999_applied": false,
+      "product": "Robusta Lampung EK1",
+      "source": "Willkin Green Coffee",
+      "source_url": "https://willkingreencoffee.com/katalog-lokal/",
+      "product_url": "https://willkingreencoffee.com/katalog-lokal/",
+      "quality_status": "Published USD range · midpoint used for summaries · observed by Kabar Kopi",
+      "origin": "Lampung"
+    },
+    {
+      "observation_id": "bdb68d0e0f0132ef69431b38e59b30d7d0c336f751ffaba04892085ab7f31b0e",
+      "type": "Robusta",
+      "form": "Biji kopi mentah",
+      "process": "Tidak disebut",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "date_basis": "Tanggal diamati Kabar Kopi",
+      "currency": "IDR",
+      "original_price": 82500,
+      "price_per_package": 82500,
+      "price_range_per_kg": [
+        75000,
+        90000
+      ],
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 82500,
+      "scale_100_to_999_applied": false,
+      "product": "Robusta Temanggung",
+      "source": "Willkin Green Coffee",
+      "source_url": "https://willkingreencoffee.com/katalog-lokal/",
+      "product_url": "https://willkingreencoffee.com/katalog-lokal/",
+      "quality_status": "Rentang harga katalog · titik tengah dipakai untuk ringkasan · tanggal diamati Kabar Kopi",
+      "origin": "Temanggung, Jateng"
+    },
+    {
+      "observation_id": "96dce5634b4e0ebcebedfb448b9b3b834f8516156cd8ecc54332ace2b64ee6d7",
+      "type": "Robusta",
+      "form": "Biji kopi mentah",
+      "process": "Tidak disebut",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "date_basis": "Tanggal diamati Kabar Kopi",
+      "currency": "USD",
+      "original_price": 4.585,
+      "price_per_package": 4.585,
+      "price_range_per_kg": [
+        4,
+        5
+      ],
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 4.59,
+      "scale_100_to_999_applied": false,
+      "product": "Robusta Temanggung",
+      "source": "Willkin Green Coffee",
+      "source_url": "https://willkingreencoffee.com/katalog-lokal/",
+      "product_url": "https://willkingreencoffee.com/katalog-lokal/",
+      "quality_status": "Published USD range · midpoint used for summaries · observed by Kabar Kopi",
+      "origin": "Temanggung, Jateng"
+    },
+    {
+      "observation_id": "ceba1006e988ade12f1d6c26a762f41c262ffaae25a89b8e92064e19a60dba49",
+      "type": "Arabika",
+      "form": "Biji kopi mentah",
+      "process": "Tidak disebut",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "date_basis": "Tanggal diamati Kabar Kopi",
+      "currency": "IDR",
+      "original_price": 135000,
+      "price_per_package": 135000,
+      "price_range_per_kg": [
+        125000,
+        145000
+      ],
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 135000,
+      "scale_100_to_999_applied": false,
+      "product": "Mandheling Arabika",
+      "source": "Willkin Green Coffee",
+      "source_url": "https://willkingreencoffee.com/katalog-lokal/",
+      "product_url": "https://willkingreencoffee.com/katalog-lokal/",
+      "quality_status": "Rentang harga katalog · titik tengah dipakai untuk ringkasan · tanggal diamati Kabar Kopi",
+      "origin": "Mandailing Natal, Sumut"
+    },
+    {
+      "observation_id": "91fa0f1254d2b46fb82bb9a88f20c038f7de496abee9fbd1b2d50d775d5afafa",
+      "type": "Arabika",
+      "form": "Biji kopi mentah",
+      "process": "Tidak disebut",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "date_basis": "Tanggal diamati Kabar Kopi",
+      "currency": "USD",
+      "original_price": 7.5,
+      "price_per_package": 7.5,
+      "price_range_per_kg": [
+        7,
+        8
+      ],
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 7.5,
+      "scale_100_to_999_applied": false,
+      "product": "Mandheling Arabika",
+      "source": "Willkin Green Coffee",
+      "source_url": "https://willkingreencoffee.com/katalog-lokal/",
+      "product_url": "https://willkingreencoffee.com/katalog-lokal/",
+      "quality_status": "Published USD range · midpoint used for summaries · observed by Kabar Kopi",
+      "origin": "Mandailing Natal, Sumut"
+    },
+    {
+      "observation_id": "f7c21060a51610fc15177c0ae77409fa14ea0263d4eeec28258d2a4a673984de",
+      "type": "Arabika",
+      "form": "Biji kopi mentah",
+      "process": "Tidak disebut",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "date_basis": "Tanggal diamati Kabar Kopi",
+      "currency": "IDR",
+      "original_price": 132000,
+      "price_per_package": 132000,
+      "price_range_per_kg": [
+        122000,
+        142000
+      ],
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 132000,
+      "scale_100_to_999_applied": false,
+      "product": "Java Arabika Ijen",
+      "source": "Willkin Green Coffee",
+      "source_url": "https://willkingreencoffee.com/katalog-lokal/",
+      "product_url": "https://willkingreencoffee.com/katalog-lokal/",
+      "quality_status": "Rentang harga katalog · titik tengah dipakai untuk ringkasan · tanggal diamati Kabar Kopi",
+      "origin": "Ijen, Jatim"
+    },
+    {
+      "observation_id": "1609ef6f961fcc69c6f945eb84eb5f27e853725438d6bcc8d506af0aa6a506f4",
+      "type": "Arabika",
+      "form": "Biji kopi mentah",
+      "process": "Tidak disebut",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "date_basis": "Tanggal diamati Kabar Kopi",
+      "currency": "USD",
+      "original_price": 7.335,
+      "price_per_package": 7.335,
+      "price_range_per_kg": [
+        7,
+        8
+      ],
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 7.34,
+      "scale_100_to_999_applied": false,
+      "product": "Java Arabika Ijen",
+      "source": "Willkin Green Coffee",
+      "source_url": "https://willkingreencoffee.com/katalog-lokal/",
+      "product_url": "https://willkingreencoffee.com/katalog-lokal/",
+      "quality_status": "Published USD range · midpoint used for summaries · observed by Kabar Kopi",
+      "origin": "Ijen, Jatim"
+    },
+    {
+      "observation_id": "3621a946fc8dd2c60503cfdca6827d71bffaedd2dcf9cd145c88d6c0df14a226",
+      "type": "Arabika",
+      "form": "Biji kopi mentah",
+      "process": "Tidak disebut",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "date_basis": "Tanggal diamati Kabar Kopi",
+      "currency": "IDR",
+      "original_price": 170000,
+      "price_per_package": 170000,
+      "price_range_per_kg": [
+        160000,
+        180000
+      ],
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 170000,
+      "scale_100_to_999_applied": false,
+      "product": "Arabika Gayo Organic",
+      "source": "Willkin Green Coffee",
+      "source_url": "https://willkingreencoffee.com/katalog-lokal/",
+      "product_url": "https://willkingreencoffee.com/katalog-lokal/",
+      "quality_status": "Rentang harga katalog · titik tengah dipakai untuk ringkasan · tanggal diamati Kabar Kopi",
+      "origin": "Aceh Tengah"
+    },
+    {
+      "observation_id": "b5f12202270ed1c33e56011a62b60703794c9ef17deaf8bf68b2343738ebd783",
+      "type": "Arabika",
+      "form": "Biji kopi mentah",
+      "process": "Tidak disebut",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "date_basis": "Tanggal diamati Kabar Kopi",
+      "currency": "USD",
+      "original_price": 9.445,
+      "price_per_package": 9.445,
+      "price_range_per_kg": [
+        9,
+        10
+      ],
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 9.45,
+      "scale_100_to_999_applied": false,
+      "product": "Arabika Gayo Organic",
+      "source": "Willkin Green Coffee",
+      "source_url": "https://willkingreencoffee.com/katalog-lokal/",
+      "product_url": "https://willkingreencoffee.com/katalog-lokal/",
+      "quality_status": "Published USD range · midpoint used for summaries · observed by Kabar Kopi",
+      "origin": "Aceh Tengah"
+    },
+    {
+      "observation_id": "4f9bf4f4c432484beeb66f83a723abb4f3646ae7739b7a77060abc51efd62335",
+      "type": "Arabika",
+      "form": "Biji kopi mentah",
+      "process": "Honey",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "date_basis": "Tanggal diamati Kabar Kopi",
+      "currency": "IDR",
+      "original_price": 145000,
+      "price_per_package": 145000,
+      "price_range_per_kg": [
+        135000,
+        155000
+      ],
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 145000,
+      "scale_100_to_999_applied": false,
+      "product": "Arabika Gayo Honey",
+      "source": "Willkin Green Coffee",
+      "source_url": "https://willkingreencoffee.com/katalog-lokal/",
+      "product_url": "https://willkingreencoffee.com/katalog-lokal/",
+      "quality_status": "Rentang harga katalog · titik tengah dipakai untuk ringkasan · tanggal diamati Kabar Kopi",
+      "origin": "Aceh Tengah"
+    },
+    {
+      "observation_id": "230d4ba4edde1f2a8fc9ce225f94d277fcc295b99b540a8fb02e995ffee6f948",
+      "type": "Arabika",
+      "form": "Biji kopi mentah",
+      "process": "Honey",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "date_basis": "Tanggal diamati Kabar Kopi",
+      "currency": "USD",
+      "original_price": 8.055,
+      "price_per_package": 8.055,
+      "price_range_per_kg": [
+        8,
+        9
+      ],
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 8.06,
+      "scale_100_to_999_applied": false,
+      "product": "Arabika Gayo Honey",
+      "source": "Willkin Green Coffee",
+      "source_url": "https://willkingreencoffee.com/katalog-lokal/",
+      "product_url": "https://willkingreencoffee.com/katalog-lokal/",
+      "quality_status": "Published USD range · midpoint used for summaries · observed by Kabar Kopi",
+      "origin": "Aceh Tengah"
+    },
+    {
+      "observation_id": "2809d0e1e1f0bf8a53152b6ec009f2ffff84f9d3bad7c8962ec8629e671a0b97",
+      "type": "Arabika",
+      "form": "Biji kopi mentah",
+      "process": "Honey",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "date_basis": "Tanggal diamati Kabar Kopi",
+      "currency": "IDR",
+      "original_price": 120000,
+      "price_per_package": 120000,
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 120000,
+      "scale_100_to_999_applied": false,
+      "product": "Jawa Preanger Organic Honey",
+      "source": "ASKI B2B Marketplace",
+      "source_url": "https://www.aski.coffee/marketplace",
+      "product_url": "https://www.aski.coffee/marketplace",
+      "quality_status": "Estimasi harga marketplace · tanggal diamati Kabar Kopi",
+      "origin": "Pangalengan, Jawa Barat (1,400 mdpl)"
+    },
+    {
+      "observation_id": "82c881455f6930419d28ad61869287fd110d271671d31b94719643982d45e99d",
+      "type": "Arabika",
+      "form": "Biji kopi mentah",
+      "process": "Washed",
+      "period": "Q4 2026",
+      "date": "2026-10-06",
+      "date_basis": "Tanggal diamati Kabar Kopi",
+      "currency": "IDR",
+      "original_price": 115000,
+      "price_per_package": 115000,
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 115000,
+      "scale_100_to_999_applied": false,
+      "product": "Bali Kintamani Washed Citrus",
+      "source": "ASKI B2B Marketplace",
+      "source_url": "https://www.aski.coffee/marketplace",
+      "product_url": "https://www.aski.coffee/marketplace",
+      "quality_status": "Estimasi harga marketplace · tanggal diamati Kabar Kopi",
+      "origin": "Kintamani, Bangli (1,350 mdpl)"
+    }
+  ]
+}

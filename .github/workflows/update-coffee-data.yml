@@ -15,6 +15,7 @@ on:
       - 'scripts/generate-discovery-pages.js'
       - 'scripts/generate-weekly-brief.js'
       - 'scripts/import-mevo-price-data.js'
+      - 'scripts/merge-public-price-sources.js'
       - 'scripts/render-static-coffee-price-chart.js'
       - 'scripts/templates/kabar-kopi.html'
       - 'data/editorial-settings.json'
@@ -41,6 +42,10 @@ jobs:
         run: node scripts/fetch.js
       - name: Save MEVO coffee price listings in Kabar Kopi
         run: node scripts/import-mevo-price-data.js
+      - name: Fetch public price catalogues and approved admin OCR listings
+        env:
+          MEVO_SYNC_SECRET: ${{ secrets.MEVO_SYNC_SECRET }}
+        run: node scripts/merge-public-price-sources.js
       - name: Import deduplicated coffee reference articles
         env:
           COFFEE_ENGINE_READ_TOKEN: ${{ secrets.COFFEE_ENGINE_READ_TOKEN }}
