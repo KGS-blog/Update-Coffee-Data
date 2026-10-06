@@ -10,6 +10,7 @@ const SUPPLEMENT_PATH = path.join(ROOT, 'data', 'public-price-supplement.json');
 const sources = [
   { name: 'ASKI B2B Marketplace', url: 'https://www.aski.coffee/marketplace', kind: 'aski' },
   { name: 'Willkin Green Coffee', url: 'https://willkingreencoffee.com/katalog-lokal/', kind: 'willkin' },
+  { name: 'Indonesia Specialty Coffee', url: 'https://specialtycoffee.id/id/pricelist/', kind: 'specialtycoffee' },
 ];
 const now = new Date();
 const dateISO = now.toISOString().slice(0, 10);
@@ -58,6 +59,33 @@ function parsePublicListings(kind, html, source) {
       }
     }
   }
+  if (kind === 'specialtycoffee') {
+    // The page identifies all prices as USD and separates wholesale FOB/ton
+    // from retail green-bean prices/kg. Import only the directly comparable
+    // retail USD/kg column; never infer an IDR conversion or mix wholesale.
+    const sourceUrl = sources.find(item => item.kind === kind).url;
+    const sourceDate = html.match(/<time[^>]*datetime="(\d{4}-\d{2}-\d{2})"/i)?.[1];
+    if (!sourceDate) throw new Error('Could not verify the price-list update date.');
+    const blocks = cards(html, /<tr\b[^>]*class="[^"]*\bpl-row\b[^"]*"/gi);
+    for (const block of blocks) {
+      const nameCell = block.match(/<td\b[^>]*class="[^"]*c-variant[^"]*"[^>]*>([\s\S]*?)<\/td>/i)?.[1] || '';
+      const product = decode(nameCell.match(/class="v-name"[^>]*>([\s\S]*?)<\//i)?.[1]);
+      const badge = decode(nameCell.match(/class="v-badge[^"]*"[^>]*>([\s\S]*?)<\//i)?.[1]);
+      const priceCell = block.match(/<td\b[^>]*data-label="Green\s*\/\s*Kg"[^>]*>([\s\S]*?)<\/td>/i)?.[1] || '';
+      const priceText = decode(priceCell.replace(/<[^>]*>/g, ' ')).replace(/\$/g, '').replace(/,/g, '').trim();
+      const price = Number(priceText);
+      const type = /robusta/i.test(badge) ? 'Robusta' : /arabica/i.test(badge) ? 'Arabika' : '';
+      if (!product || !type || !(price > 0)) continue;
+      const productUrl = nameCell.match(/href="(https:\/\/[^\"]+)"/i)?.[1] || sourceUrl;
+      output.push({
+        source, source_url: sourceUrl, product_url: productUrl, product, type,
+        form: 'Biji kopi mentah',
+        process: product.match(/\b(natural|washed|wash|honey|wine|anaerob|semi[- ]?wash|carbonic maceration)\b/i)?.[0] || 'Tidak disebut',
+        currency: 'USD', price, amount: 1, unit: 'kg', source_date: sourceDate,
+        quality_status: 'Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton'
+      });
+    }
+  }
   return output;
 }
 function canonicalRow(item, sourceDate = dateISO, basis = 'Tanggal diamati Kabar Kopi') {
@@ -80,7 +108,7 @@ function canonicalRow(item, sourceDate = dateISO, basis = 'Tanggal diamati Kabar
     ...(priceMin > 0 && priceMax >= priceMin ? { price_range_per_kg: [Math.round(priceMin / amountKg), Math.round(priceMax / amountKg)] } : {}),
     package_size: { amount: amountKg * 1000, unit: 'g' }, price_per_kg: pricePerKg,
     scale_100_to_999_applied: false, product: item.product, source: item.source, source_url: item.source_url,
-    product_url: item.source_url, quality_status: item.quality_status || null,
+    product_url: item.product_url || item.source_url, quality_status: item.quality_status || null,
     ...(item.origin ? { origin: item.origin } : {})
   };
 }
