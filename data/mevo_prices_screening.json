@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-06T15:29:00.492Z",
+  "generated_at": "2026-10-06T22:43:30.662Z",
   "method": {
     "duplicate_key": "source identity + product + type + form + process + price level + currency + period + date + package grams + price_per_kg",
     "source_currency_rule": "Rows from specialtycoffee.id labeled IDR are excluded because the source states the prices are USD and no verified FX record exists",
@@ -9,20 +9,20 @@
     "chart_policy": "Source-currency mismatches, duplicates, Wine process, non-selected package sizes, and conditionally detected high-price outliers are excluded; canonical raw price listings remain stored"
   },
   "summary": {
-    "raw_idr_observations": 2704,
-    "unique_idr_observations": 2587,
+    "raw_idr_observations": 2720,
+    "unique_idr_observations": 2603,
     "duplicate_rows": 117,
     "source_currency_mismatch_rows": 66,
     "wine_process_excluded_rows": 160,
-    "package_size_excluded_rows": 927,
+    "package_size_excluded_rows": 932,
     "package_selection_groups": {
-      "exact_1kg_groups": 1420,
+      "exact_1kg_groups": 1431,
       "fallback_size_groups": 14,
       "unknown_size_groups": 0
     },
     "significant_period_moves": 3,
-    "high_price_outliers_excluded": 3,
-    "chart_eligible_unique_idr_observations": 1431
+    "high_price_outliers_excluded": 4,
+    "chart_eligible_unique_idr_observations": 1441
   },
   "duplicates": [
     {
@@ -20626,6 +20626,40 @@
       "status": "excluded_non_selected_pack_size"
     },
     {
+      "observation_id": "fbb6b0b89adf7d5d361debe01ffa8da239b94f7c7278f73128cf66f263589e86",
+      "type": "Arabika",
+      "form": "Biji kopi sangrai",
+      "process": "Tidak disebut",
+      "period": "Q4 2026",
+      "product": "Arabica Komersial",
+      "package_size": {
+        "amount": 250,
+        "unit": "g"
+      },
+      "selected_package_grams": 1000,
+      "price_per_kg": 300000,
+      "source": "Kopi Logawa Banyumas",
+      "screening_method": "Excluded: an exact 1 kg listing exists for this source/product/period/tier",
+      "status": "excluded_non_selected_pack_size"
+    },
+    {
+      "observation_id": "f110a758827e54be73293e16499b8aa72a198c23bd45d16a498c9127e4637e1f",
+      "type": "Arabika",
+      "form": "Biji kopi sangrai",
+      "process": "Tidak disebut",
+      "period": "Q4 2026",
+      "product": "Arabica Komersial",
+      "package_size": {
+        "amount": 500,
+        "unit": "g"
+      },
+      "selected_package_grams": 1000,
+      "price_per_kg": 290000,
+      "source": "Kopi Logawa Banyumas",
+      "screening_method": "Excluded: an exact 1 kg listing exists for this source/product/period/tier",
+      "status": "excluded_non_selected_pack_size"
+    },
+    {
       "observation_id": "4845daf5d28d565d87835abb4452057de0e53223885f38119915191d02fb370f",
       "type": "Arabika",
       "form": "Biji kopi sangrai",
@@ -20779,6 +20813,57 @@
       "status": "excluded_non_selected_pack_size"
     },
     {
+      "observation_id": "82d09b5f22af2d7822ff94a4f6389621cbb6883037f490d3883253a44ed59771",
+      "type": "Robusta",
+      "form": "Biji kopi sangrai",
+      "process": "Tidak disebut",
+      "period": "Q4 2026",
+      "product": "Robusta",
+      "package_size": {
+        "amount": 200,
+        "unit": "g"
+      },
+      "selected_package_grams": 1000,
+      "price_per_kg": 250000,
+      "source": "Kopi Logawa Banyumas",
+      "screening_method": "Excluded: an exact 1 kg listing exists for this source/product/period/tier",
+      "status": "excluded_non_selected_pack_size"
+    },
+    {
+      "observation_id": "b82f3407bc3b9f6834ca822a290b8a1f34e9333673b6d047bf0abbcb3a582ab5",
+      "type": "Robusta",
+      "form": "Biji kopi sangrai",
+      "process": "Tidak disebut",
+      "period": "Q4 2026",
+      "product": "Robusta",
+      "package_size": {
+        "amount": 250,
+        "unit": "g"
+      },
+      "selected_package_grams": 1000,
+      "price_per_kg": 240000,
+      "source": "Kopi Logawa Banyumas",
+      "screening_method": "Excluded: an exact 1 kg listing exists for this source/product/period/tier",
+      "status": "excluded_non_selected_pack_size"
+    },
+    {
+      "observation_id": "d855579d502a1e78f1afef23149d802889d4ff4a26cf001acc2fb49d4b8a14f4",
+      "type": "Robusta",
+      "form": "Biji kopi sangrai",
+      "process": "Tidak disebut",
+      "period": "Q4 2026",
+      "product": "Robusta",
+      "package_size": {
+        "amount": 500,
+        "unit": "g"
+      },
+      "selected_package_grams": 1000,
+      "price_per_kg": 230000,
+      "source": "Kopi Logawa Banyumas",
+      "screening_method": "Excluded: an exact 1 kg listing exists for this source/product/period/tier",
+      "status": "excluded_non_selected_pack_size"
+    },
+    {
       "observation_id": "a5bd117080cc109b329cb4769a4532cdc1f3d39396ea8cf87b7f8029e4e53062",
       "type": "Robusta",
       "form": "Biji kopi sangrai",
@@ -20878,13 +20963,32 @@
       "previous_period": "Q3 2026",
       "period_change_percent": 40.9,
       "price_per_kg": 1177625,
-      "group_mean": 391447,
-      "upper_limit": 508881,
+      "group_mean": 382675,
+      "upper_limit": 497478,
       "product": "Kopi Luwak Arabica Ijen Fullwash Roasted",
       "source": "Berkopi Nusantara",
       "source_type": "url",
       "source_detail": null,
       "source_url": "https://berkopi.com/",
+      "screening_method": "Excluded high-price outlier: period median changed by over 30%; price is more than 30% above current-period mean",
+      "status": "excluded_high_outlier_after_period_change_over_30_percent"
+    },
+    {
+      "observation_id": "da7b63f8e7d6f73cfa44c51dc069acdefdd61dae67fa7ce34ce004cace3b5537",
+      "type": "Arabika",
+      "form": "Biji kopi sangrai",
+      "process": "Tidak disebut",
+      "period": "Q4 2026",
+      "previous_period": "Q3 2026",
+      "period_change_percent": 40.9,
+      "price_per_kg": 500000,
+      "group_mean": 382675,
+      "upper_limit": 497478,
+      "product": "Arabica Luwak",
+      "source": "GOOD COFFEE GOOD DAY",
+      "source_type": "field",
+      "source_detail": "COFFEE TIME! PRICE LIST KOPI TEMANGGUNG",
+      "source_url": null,
       "screening_method": "Excluded high-price outlier: period median changed by over 30%; price is more than 30% above current-period mean",
       "status": "excluded_high_outlier_after_period_change_over_30_percent"
     }
@@ -20930,11 +21034,11 @@
       "type": "Arabika",
       "formClass": "green",
       "period": "Q4 2026",
-      "mean": 169725,
+      "mean": 170680,
       "previous_period": null,
       "period_change_percent": null,
-      "total": 53,
-      "included": 53,
+      "total": 58,
+      "included": 58,
       "excluded": 0,
       "upper_limit": null
     },
@@ -20978,11 +21082,11 @@
       "type": "Robusta",
       "formClass": "green",
       "period": "Q4 2026",
-      "mean": 83455,
+      "mean": 84182,
       "previous_period": null,
       "period_change_percent": null,
-      "total": 24,
-      "included": 24,
+      "total": 27,
+      "included": 27,
       "excluded": 0,
       "upper_limit": null
     },
@@ -21014,13 +21118,13 @@
       "type": "Arabika",
       "formClass": "roasted",
       "period": "Q4 2026",
-      "mean": 391447,
+      "mean": 382675,
       "previous_period": "Q3 2026",
       "period_change_percent": 40.9,
-      "total": 16,
-      "included": 15,
-      "excluded": 1,
-      "upper_limit": 508881
+      "total": 18,
+      "included": 16,
+      "excluded": 2,
+      "upper_limit": 497478
     },
     {
       "type": "Robusta",
@@ -21050,13 +21154,13 @@
       "type": "Robusta",
       "formClass": "roasted",
       "period": "Q4 2026",
-      "mean": 212542,
+      "mean": 198156,
       "previous_period": "Q3 2026",
-      "period_change_percent": 49.2,
-      "total": 3,
-      "included": 3,
+      "period_change_percent": 39,
+      "total": 4,
+      "included": 4,
       "excluded": 0,
-      "upper_limit": 276304
+      "upper_limit": 257603
     },
     {
       "type": "Arabika",
@@ -21202,14 +21306,16 @@
       "form": "green",
       "period": "Q4 2026",
       "previous_period": "Q3 2026",
-      "current_count": 53,
+      "current_count": 58,
       "previous_count": 13,
       "current_sources": [
         "url:https://www.ijencoffee.com/",
         "url:https://kopen.id/",
         "url:https://berkopi.com/",
+        "field:kopi logawa banyumas:kopi logawa banyumas price list",
         "url:https://willkingreencoffee.com/katalog-lokal/",
         "url:https://www.aski.coffee/marketplace",
+        "field:coffee beyond borders:coffee regionals overview",
         "field:kral coffee:kral coffee greenbean availability flyer",
         "field:biji kopi boanerges:update pricelist biji kopi boanerges ί 24 september 2026"
       ],
@@ -21225,7 +21331,7 @@
       "form": "green",
       "period": "Q4 2026",
       "previous_period": "Q3 2026",
-      "current_count": 24,
+      "current_count": 27,
       "previous_count": 6,
       "current_sources": [
         "url:https://www.coffestroastery.com/id/shop",
@@ -21235,7 +21341,9 @@
         "field:kral coffee:kral coffee greenbean availability flyer",
         "url:https://www.aski.coffee/marketplace",
         "field:biji kopi boanerges:update pricelist biji kopi boanerges ί 24 september 2026",
-        "url:https://willkingreencoffee.com/katalog-lokal/"
+        "field:kopi logawa banyumas:kopi logawa banyumas price list",
+        "url:https://willkingreencoffee.com/katalog-lokal/",
+        "field:coffee beyond borders:robusta temanggung"
       ],
       "previous_sources": [
         "url:https://kopitime.id/harga-kopi-menjelang-akhir-tahun-2026-dan-perkembangan-pasar-global-1"
@@ -21248,12 +21356,13 @@
       "form": "roasted",
       "period": "Q4 2026",
       "previous_period": "Q3 2026",
-      "current_count": 15,
+      "current_count": 16,
       "previous_count": 6,
       "current_sources": [
         "url:https://kopibara.id/",
         "url:https://berkopi.com/",
         "field:good coffee good day:coffee time price list kopi temanggung",
+        "field:kopi logawa banyumas:kopi logawa banyumas price list",
         "field:roastbeans arabica:price list from roastbeans arabica"
       ],
       "previous_sources": [
@@ -21267,11 +21376,12 @@
       "form": "roasted",
       "period": "Q4 2026",
       "previous_period": "Q3 2026",
-      "current_count": 3,
+      "current_count": 4,
       "previous_count": 4,
       "current_sources": [
         "url:https://berkopi.com/",
-        "field:good coffee good day:coffee time price list kopi temanggung"
+        "field:good coffee good day:coffee time price list kopi temanggung",
+        "field:kopi logawa banyumas:kopi logawa banyumas price list"
       ],
       "previous_sources": [
         "url:https://kopitime.id/harga-kopi-menjelang-akhir-tahun-2026-dan-perkembangan-pasar-global-1"
@@ -21306,9 +21416,10 @@
       "form": "green",
       "period": "Q4 2026",
       "channels": {
+        "wholesale": 7,
+        "retail": 3,
         "customer": 5,
-        "reseller": 6,
-        "wholesale": 5
+        "reseller": 6
       }
     },
     {
@@ -21318,7 +21429,8 @@
       "channels": {
         "customer": 5,
         "reseller": 5,
-        "wholesale": 2
+        "wholesale": 4,
+        "retail": 1
       }
     }
   ]

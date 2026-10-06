@@ -1,0 +1,28 @@
+{
+  "bulan": "2021-02",
+  "artikel": [
+    {
+      "judul": "4 Makanan Ringan Pendamping Kopi Panas dan Dingin - WARTAKOPI.COM",
+      "tautan": "https://wartakopi.com/4-makanan-ringan-pendamping-kopi-panas-dan-dingin",
+      "tanggal": "2021-02-14T00:00:00.000Z",
+      "publication_date_precision": "day",
+      "publication_date_evidence": null,
+      "sumber": "wartakopi.com",
+      "ringkasan": "",
+      "coffee_relevance_context": "",
+      "link_type": "publisher_article",
+      "source_type": "mevo_curated_growth",
+      "source_collection": "artikel_pertumbuhan",
+      "material_type": "growth",
+      "source_original_url": "https://wartakopi.com/4-makanan-ringan-pendamping-kopi-panas-dan-dingin",
+      "source_content_sha256": null,
+      "extraction_status": "fetch_error",
+      "source_relevance": "CORE",
+      "relevance_status": "mevo_screened_coffee_relevance",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    }
+  ]
+}

@@ -69,6 +69,29 @@
       "cluster_review_version": 0,
       "source_collection": "coffee_relevant_articles",
       "material_type": null
+    },
+    {
+      "judul": "Rekomendasi Kopi untuk Menurunkan Berat Badan yang dapat Dicoba - KopiTime",
+      "tautan": "https://kopitime.id/rekomendasi-kopi-untuk-menurunkan-berat-badan-yang-dapat-dicoba",
+      "tanggal": "2025-01-10T00:00:00.000Z",
+      "publication_date_precision": "day",
+      "publication_date_evidence": "2025-01-10 03:16:10",
+      "sumber": "kopitime.id",
+      "ringkasan": "Rekomendasi Kopi untuk Menurunkan Berat Badan yang dapat Dicoba W widya 2025-01-10 03:16:10 · 1 year ago Rekomendasi Yo folks! Siapa nih yang lagi pengen diet tapi susah banget nahan cravings buat ngopi? Wah, pas banget nih! Gue bakal kasih lo rekomendasi kopi yang gak cuma enak buat dinikmatin tiap hari tapi katanya juga bisa bantu lo buat turunin berat bad",
+      "coffee_relevance_context": "Rekomendasi Kopi untuk Menurunkan Berat Badan yang dapat Dicoba W widya 2025-01-10 03:16:10 · 1 year ago Rekomendasi Yo folks! Siapa nih yang lagi pengen diet tapi susah banget nahan cravings buat … Yo folks! Siapa nih yang lagi pengen diet tapi susah banget nahan cravings buat ngopi? Wah, pas banget nih! Gue bakal kasih lo rekomendasi kopi yang gak cuma enak buat dinikmatin tiap hari tapi katanya juga bisa bantu lo buat turunin berat badan. Asik banget kan? Langsung aja simak, ya! Kopi Hitam Tanpa Gula: Kunci Diet S … gak cuma enak buat dinikmatin tiap hari tapi katanya juga bisa bantu lo buat turunin berat badan. Asik banget kan? Langsung aja simak, ya! Kopi Hitam Tanpa Gula: Kunci Diet Sukses yang Tidak Boleh Ketinggalan Lo pasti udah sering denger kan kalau kopi hitam tanpa gula tuh baik buat diet? Yup, bener banget tuh! Kopi hitam",
+      "link_type": "publisher_article",
+      "source_type": "mevo_curated_growth",
+      "source_collection": "artikel_pertumbuhan",
+      "material_type": "growth",
+      "source_original_url": "https://kopitime.id/rekomendasi-kopi-untuk-menurunkan-berat-badan-yang-dapat-dicoba",
+      "source_content_sha256": "4d275440aad905538e0714f1eec3aa74ee1a47c2f09e4e96a19ff4b45a2d07cf",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "mevo_screened_coffee_relevance",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
     }
   ]
 }

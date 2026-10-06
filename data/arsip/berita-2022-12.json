@@ -161,6 +161,29 @@
       "cluster_review_version": 0,
       "source_collection": "coffee_relevant_articles",
       "material_type": null
+    },
+    {
+      "judul": "Perbedaan Kopi Proses Natural dan Honey",
+      "tautan": "https://kertakoffie.com/perbedaan-kopi-proses-natural-dan-honey",
+      "tanggal": "2022-12-23T00:00:00.000Z",
+      "publication_date_precision": "day",
+      "publication_date_evidence": "2022-12-23T06:44:45+00:00",
+      "sumber": "kertakoffie.com",
+      "ringkasan": "Pasca Panen Natural Proses natural, juga dikenal sebagai proses kering, adalah metode pengolahan biji kopi yang melibatkan pengeringan cherry kopi (buah yang mengelilingi biji) di bawah sinar matahari setelah dipanen. Proses ini menghasilkan kopi dengan profil rasa buah yang bold dan kuat. Dalam proses natural, buah kopi dipanen dan kemudian dibiarkan kering",
+      "coffee_relevance_context": "Pasca Panen Natural Proses natural, juga dikenal sebagai proses kering, adalah metode pengolahan biji kopi yang melibatkan pengeringan cherry kopi (buah yang mengelilingi biji) di bawah sinar matahari setelah dipanen. Proses ini menghasilkan kopi dengan profil rasa buah yang bold dan k … sca Panen Natural Proses natural, juga dikenal sebagai proses kering, adalah metode pengolahan biji kopi yang melibatkan pengeringan cherry kopi (buah yang mengelilingi biji) di bawah sinar matahari setelah dipanen. Proses ini menghasilkan kopi dengan profil rasa buah yang bold dan kuat. Dalam proses natural, buah kopi dip … kopi yang melibatkan pengeringan cherry kopi (buah yang mengelilingi biji) di bawah sinar matahari setelah dipanen. Proses ini menghasilkan kopi dengan profil rasa buah yang bold dan kuat. Dalam proses natural, buah kopi dipanen dan kemudian dibiarkan kering di bawah sinar matahari di bedengan atau di tanah. cherry dibalik",
+      "link_type": "publisher_article",
+      "source_type": "mevo_curated_growth",
+      "source_collection": "artikel_pertumbuhan",
+      "material_type": "growth",
+      "source_original_url": "https://kertakoffie.com/perbedaan-kopi-proses-natural-dan-honey",
+      "source_content_sha256": "7282c2ccd5bf732f7da8c14b8cb964434537b625aa3525c4dfe64fede447a0d2",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "mevo_screened_coffee_relevance",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
     }
   ]
 }
