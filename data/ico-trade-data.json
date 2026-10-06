@@ -3,10 +3,13 @@
   "source": "International Coffee Organization (ICO), Coffee Trade Globe",
   "source_url": "https://data.ico.org/globe/#m=flows&f=export&y=2025&c=ID",
   "api_endpoint": "https://data.ico.org/globe/api/v1/globe/bundle?year=2025",
-  "fetched_at": "2026-10-06T20:05:23.761Z",
+  "fetched_at": "2026-10-06T20:09:32.117Z",
   "api_generated_at": "2026-10-01T00:00:53.421Z",
   "trade_window_through": "2026-08",
   "year": 2025,
+  "public_trade_year": 2025,
+  "api_trade_window_through": "2026-08",
+  "public_year_access_note": "This public snapshot uses ICO's free complete year (2025) where the API reports entitlement gating. Other bundle years returned HTTP 402 during the latest check.",
   "geography": "Indonesia",
   "units": {
     "volume": "60-kg bags",
@@ -17,6 +20,885 @@
     "bags_60kg": 11043071,
     "tonnes": 662584.26,
     "value_usd": 3084771085
+  },
+  "trade": {
+    "exports_bags_60kg": 11043071,
+    "exports_value_usd": 3084771085,
+    "imports_bags_60kg": 967117,
+    "imports_value_usd": 384382750,
+    "reexports_bags_60kg": 901274,
+    "reexports_value_usd": 260861314,
+    "partner_flows_available_in_public_bundle": [
+      {
+        "origin_iso2": "ID",
+        "destination_iso2": "PH",
+        "bags_60kg": 1133000,
+        "customs_value_usd": 259059000.00000003,
+        "reported_by": "exporter"
+      },
+      {
+        "origin_iso2": "ID",
+        "destination_iso2": "US",
+        "bags_60kg": 627000,
+        "customs_value_usd": 321738000,
+        "reported_by": "exporter"
+      },
+      {
+        "origin_iso2": "ID",
+        "destination_iso2": "BE",
+        "bags_60kg": 603000,
+        "customs_value_usd": 190550000,
+        "reported_by": "exporter"
+      },
+      {
+        "origin_iso2": "VN",
+        "destination_iso2": "ID",
+        "bags_60kg": 367000,
+        "customs_value_usd": 198567000,
+        "reported_by": "importer"
+      },
+      {
+        "origin_iso2": "ID",
+        "destination_iso2": "EG",
+        "bags_60kg": 335000,
+        "customs_value_usd": 98803000,
+        "reported_by": "exporter"
+      },
+      {
+        "origin_iso2": "ID",
+        "destination_iso2": "MY",
+        "bags_60kg": 274000,
+        "customs_value_usd": 82365000,
+        "reported_by": "exporter"
+      },
+      {
+        "origin_iso2": "ID",
+        "destination_iso2": "DZ",
+        "bags_60kg": 243000,
+        "customs_value_usd": 69635000,
+        "reported_by": "exporter"
+      },
+      {
+        "origin_iso2": "ID",
+        "destination_iso2": "DE",
+        "bags_60kg": 207000,
+        "customs_value_usd": 62668000,
+        "reported_by": "exporter"
+      },
+      {
+        "origin_iso2": "ID",
+        "destination_iso2": "GB",
+        "bags_60kg": 196000,
+        "customs_value_usd": 68311000,
+        "reported_by": "exporter"
+      },
+      {
+        "origin_iso2": "ID",
+        "destination_iso2": "RU",
+        "bags_60kg": 179000,
+        "customs_value_usd": 55191000,
+        "reported_by": "exporter"
+      },
+      {
+        "origin_iso2": "ID",
+        "destination_iso2": "IN",
+        "bags_60kg": 173000,
+        "customs_value_usd": 44662000,
+        "reported_by": "exporter"
+      },
+      {
+        "origin_iso2": "ID",
+        "destination_iso2": "VN",
+        "bags_60kg": 150000,
+        "customs_value_usd": 39186000,
+        "reported_by": "exporter"
+      },
+      {
+        "origin_iso2": "ID",
+        "destination_iso2": "JP",
+        "bags_60kg": 148000,
+        "customs_value_usd": 52914000,
+        "reported_by": "exporter"
+      },
+      {
+        "origin_iso2": "ID",
+        "destination_iso2": "CN",
+        "bags_60kg": 142000,
+        "customs_value_usd": 59146000,
+        "reported_by": "exporter"
+      },
+      {
+        "origin_iso2": "ID",
+        "destination_iso2": "TH",
+        "bags_60kg": 120000,
+        "customs_value_usd": 35585000,
+        "reported_by": "exporter"
+      },
+      {
+        "origin_iso2": "ID",
+        "destination_iso2": "IT",
+        "bags_60kg": 103000,
+        "customs_value_usd": 28534000,
+        "reported_by": "exporter"
+      },
+      {
+        "origin_iso2": "ID",
+        "destination_iso2": "GE",
+        "bags_60kg": 101000,
+        "customs_value_usd": 29131000,
+        "reported_by": "exporter"
+      },
+      {
+        "origin_iso2": "ID",
+        "destination_iso2": "MA",
+        "bags_60kg": 83000,
+        "customs_value_usd": 26418000,
+        "reported_by": "exporter"
+      },
+      {
+        "origin_iso2": "TL",
+        "destination_iso2": "ID",
+        "bags_60kg": 68000,
+        "customs_value_usd": 6941000,
+        "reported_by": "exporter"
+      },
+      {
+        "origin_iso2": "ID",
+        "destination_iso2": "NL",
+        "bags_60kg": 65000,
+        "customs_value_usd": 20067000,
+        "reported_by": "exporter"
+      },
+      {
+        "origin_iso2": "ID",
+        "destination_iso2": "CA",
+        "bags_60kg": 51000,
+        "customs_value_usd": 21667000,
+        "reported_by": "exporter"
+      }
+    ]
+  },
+  "rankings": {
+    "metrics": {
+      "export_volume": {
+        "rank": 4,
+        "countries_count": 51,
+        "indonesia_value": 11043071,
+        "top_five": [
+          {
+            "iso": "BR",
+            "value": 40251425
+          },
+          {
+            "iso": "VN",
+            "value": 29159150
+          },
+          {
+            "iso": "CO",
+            "value": 13242633
+          },
+          {
+            "iso": "ID",
+            "value": 11043071
+          },
+          {
+            "iso": "UG",
+            "value": 8774794
+          }
+        ]
+      },
+      "export_customs_value": {
+        "rank": 5,
+        "countries_count": 51,
+        "indonesia_value": 3084771085,
+        "top_five": [
+          {
+            "iso": "BR",
+            "value": 15668485626
+          },
+          {
+            "iso": "VN",
+            "value": 8921599629
+          },
+          {
+            "iso": "CO",
+            "value": 5079696247
+          },
+          {
+            "iso": "ET",
+            "value": 3303262948
+          },
+          {
+            "iso": "ID",
+            "value": 3084771085
+          }
+        ]
+      },
+      "import_volume": {
+        "rank": 39,
+        "countries_count": 183,
+        "indonesia_value": 967117,
+        "top_five": [
+          {
+            "iso": "US",
+            "value": 28689138
+          },
+          {
+            "iso": "DE",
+            "value": 22040823
+          },
+          {
+            "iso": "IT",
+            "value": 11432405
+          },
+          {
+            "iso": "FR",
+            "value": 7508691
+          },
+          {
+            "iso": "JP",
+            "value": 6974201
+          }
+        ]
+      },
+      "import_customs_value": {
+        "rank": 40,
+        "countries_count": 183,
+        "indonesia_value": 384382750,
+        "top_five": [
+          {
+            "iso": "US",
+            "value": 14013285767
+          },
+          {
+            "iso": "DE",
+            "value": 9569214205
+          },
+          {
+            "iso": "FR",
+            "value": 4723236913
+          },
+          {
+            "iso": "IT",
+            "value": 4686912296
+          },
+          {
+            "iso": "NL",
+            "value": 3110089264
+          }
+        ]
+      },
+      "reexport_volume": {
+        "rank": 13,
+        "countries_count": 95,
+        "indonesia_value": 901274,
+        "top_five": [
+          {
+            "iso": "DE",
+            "value": 13220057
+          },
+          {
+            "iso": "IT",
+            "value": 5939436
+          },
+          {
+            "iso": "NL",
+            "value": 5144166
+          },
+          {
+            "iso": "BE",
+            "value": 4970317
+          },
+          {
+            "iso": "ES",
+            "value": 3286819
+          }
+        ]
+      },
+      "reexport_customs_value": {
+        "rank": 18,
+        "countries_count": 99,
+        "indonesia_value": 260861314,
+        "top_five": [
+          {
+            "iso": "DE",
+            "value": 6640867978
+          },
+          {
+            "iso": "CH",
+            "value": 4487334347
+          },
+          {
+            "iso": "IT",
+            "value": 3766642280
+          },
+          {
+            "iso": "NL",
+            "value": 2715060123
+          },
+          {
+            "iso": "BE",
+            "value": 2135041823
+          }
+        ]
+      },
+      "production": {
+        "rank": 4,
+        "countries_count": 54,
+        "indonesia_value": 11971518,
+        "top_five": [
+          {
+            "iso": "BR",
+            "value": 65400000
+          },
+          {
+            "iso": "VN",
+            "value": 31884718
+          },
+          {
+            "iso": "CO",
+            "value": 12800000
+          },
+          {
+            "iso": "ID",
+            "value": 11971518
+          },
+          {
+            "iso": "ET",
+            "value": 11911072
+          }
+        ]
+      },
+      "consumption": {
+        "rank": 5,
+        "countries_count": 200,
+        "indonesia_value": 6040411,
+        "top_five": [
+          {
+            "iso": "US",
+            "value": 24639165
+          },
+          {
+            "iso": "BR",
+            "value": 23520635
+          },
+          {
+            "iso": "DE",
+            "value": 9592622
+          },
+          {
+            "iso": "JP",
+            "value": 6248565
+          },
+          {
+            "iso": "ID",
+            "value": 6040411
+          }
+        ]
+      }
+    },
+    "ico_reported": {
+      "production": 4,
+      "imports": 39,
+      "consumption": 5
+    },
+    "ranking_note": "Positions are calculated by descending values in this public ICO bundle for the selected year; ICO-supplied production, import, and consumption rank fields are retained separately."
+  },
+  "production": {
+    "bags_60kg": 11971518,
+    "arabica_share": 0.2273,
+    "series": [
+      [
+        1990,
+        8029611
+      ],
+      [
+        1991,
+        6566322
+      ],
+      [
+        1992,
+        6253284
+      ],
+      [
+        1993,
+        5809347
+      ],
+      [
+        1994,
+        4813696
+      ],
+      [
+        1995,
+        6833623
+      ],
+      [
+        1996,
+        7775742
+      ],
+      [
+        1997,
+        7347228
+      ],
+      [
+        1998,
+        6757496
+      ],
+      [
+        1999,
+        6755518
+      ],
+      [
+        2000,
+        6813587
+      ],
+      [
+        2001,
+        6694044
+      ],
+      [
+        2002,
+        6483480
+      ],
+      [
+        2003,
+        7060918
+      ],
+      [
+        2004,
+        8446602
+      ],
+      [
+        2005,
+        7981379
+      ],
+      [
+        2006,
+        7523004
+      ],
+      [
+        2007,
+        8768827
+      ],
+      [
+        2008,
+        10527220
+      ],
+      [
+        2009,
+        9747230
+      ],
+      [
+        2010,
+        9128512
+      ],
+      [
+        2011,
+        6888923
+      ],
+      [
+        2012,
+        13070039
+      ],
+      [
+        2013,
+        12900949
+      ],
+      [
+        2014,
+        10946278
+      ],
+      [
+        2015,
+        12585475
+      ],
+      [
+        2016,
+        11541027
+      ],
+      [
+        2017,
+        10852315
+      ],
+      [
+        2018,
+        9617594
+      ],
+      [
+        2019,
+        11432943
+      ],
+      [
+        2020,
+        12126002
+      ],
+      [
+        2021,
+        11701995
+      ],
+      [
+        2022,
+        11981015
+      ],
+      [
+        2023,
+        9732084
+      ],
+      [
+        2024,
+        11534018
+      ],
+      [
+        2025,
+        11971518
+      ]
+    ]
+  },
+  "consumption": {
+    "bags_60kg": 6040411,
+    "per_capita_kg": 1.29,
+    "series": [
+      [
+        1990,
+        1261000
+      ],
+      [
+        1991,
+        1299500
+      ],
+      [
+        1992,
+        1339000
+      ],
+      [
+        1993,
+        1379500
+      ],
+      [
+        1994,
+        1421500
+      ],
+      [
+        1995,
+        1464500
+      ],
+      [
+        1996,
+        1509000
+      ],
+      [
+        1997,
+        1555000
+      ],
+      [
+        1998,
+        1602000
+      ],
+      [
+        1999,
+        1651000
+      ],
+      [
+        2000,
+        1785667
+      ],
+      [
+        2001,
+        1925412
+      ],
+      [
+        2002,
+        2028836
+      ],
+      [
+        2003,
+        2167905
+      ],
+      [
+        2004,
+        2361952
+      ],
+      [
+        2005,
+        2575321
+      ],
+      [
+        2006,
+        2821931
+      ],
+      [
+        2007,
+        3215938
+      ],
+      [
+        2008,
+        3660934
+      ],
+      [
+        2009,
+        3902028
+      ],
+      [
+        2010,
+        3930942
+      ],
+      [
+        2011,
+        4153494
+      ],
+      [
+        2012,
+        4306838
+      ],
+      [
+        2013,
+        4544889
+      ],
+      [
+        2014,
+        4676875
+      ],
+      [
+        2015,
+        4859917
+      ],
+      [
+        2016,
+        4915811
+      ],
+      [
+        2017,
+        5037735
+      ],
+      [
+        2018,
+        5117492
+      ],
+      [
+        2019,
+        5399278
+      ],
+      [
+        2020,
+        5535561
+      ],
+      [
+        2021,
+        5611036
+      ],
+      [
+        2022,
+        5701869
+      ],
+      [
+        2023,
+        5879488
+      ],
+      [
+        2024,
+        5995807
+      ],
+      [
+        2025,
+        6040411
+      ]
+    ]
+  },
+  "export_composition": {
+    "grs": {
+      "G": 0.7435,
+      "R": 0.0013,
+      "S": 0.2551
+    },
+    "procMix": {
+      "Spray Dried": 0.0989,
+      "Freeze Dried": 0.0226,
+      "Unspecified": 0.0843,
+      "Extract": 0.0045,
+      "Preparations": 0.0462,
+      "Dry": 0.7213,
+      "Wet": 0.0222
+    },
+    "comboMix": {
+      "SSD": 0.0989,
+      "SFD": 0.0226,
+      "R": 0.0013,
+      "SE": 0.0045,
+      "SP": 0.0462,
+      "S": 0.0829,
+      "GRD": 0.6162,
+      "GAW": 0.0184,
+      "GAD": 0.1027,
+      "GADD": 0.0002,
+      "GRW": 0.0037,
+      "GADO": 0.0015,
+      "GRDD": 0.0002,
+      "GRWO": 0.0001,
+      "GRDO": 0.0005,
+      "RD": 0
+    },
+    "comboDetails": [
+      {
+        "code": "SSD",
+        "share": 0.0989,
+        "label": "Soluble Spray Dried",
+        "bags": 4078505,
+        "form": "Soluble",
+        "type": "Unspecified",
+        "method": "Spray Dried",
+        "info": "Unspecified"
+      },
+      {
+        "code": "SFD",
+        "share": 0.0226,
+        "label": "Soluble Freeze Dried",
+        "bags": 1980552,
+        "form": "Soluble",
+        "type": "Unspecified",
+        "method": "Freeze Dried",
+        "info": "Unspecified"
+      },
+      {
+        "code": "R",
+        "share": 0.0013,
+        "label": "Roasted",
+        "bags": 648965,
+        "form": "Roasted",
+        "type": "Unspecified",
+        "method": "Unspecified",
+        "info": "Unspecified"
+      },
+      {
+        "code": "SE",
+        "share": 0.0045,
+        "label": "Soluble Extract",
+        "bags": 7172929,
+        "form": "Soluble",
+        "type": "Unspecified",
+        "method": "Extract",
+        "info": "Unspecified"
+      },
+      {
+        "code": "SP",
+        "share": 0.0462,
+        "label": "Soluble Preparation",
+        "bags": 1052532,
+        "form": "Soluble",
+        "type": "Unspecified",
+        "method": "Preparations",
+        "info": "Unspecified"
+      },
+      {
+        "code": "S",
+        "share": 0.0829,
+        "label": "Soluble",
+        "bags": 4083444,
+        "form": "Soluble",
+        "type": "Unspecified",
+        "method": "Unspecified",
+        "info": "Unspecified"
+      },
+      {
+        "code": "GRD",
+        "share": 0.6162,
+        "label": "Green Robusta Dry",
+        "bags": 44960980,
+        "form": "Green",
+        "type": "Robusta",
+        "method": "Dry",
+        "info": "Unspecified"
+      },
+      {
+        "code": "GAW",
+        "share": 0.0184,
+        "label": "Green Arabica Wet",
+        "bags": 35654031,
+        "form": "Green",
+        "type": "Arabica",
+        "method": "Wet",
+        "info": "Unspecified"
+      },
+      {
+        "code": "GAD",
+        "share": 0.1027,
+        "label": "Green Arabica Dry",
+        "bags": 39028634,
+        "form": "Green",
+        "type": "Arabica",
+        "method": "Dry",
+        "info": "Unspecified"
+      },
+      {
+        "code": "GADD",
+        "share": 0.0002,
+        "label": "Green Arabica Dry Decaffeinated",
+        "bags": 547425,
+        "form": "Green",
+        "type": "Arabica",
+        "method": "Dry",
+        "info": "Decaffeinated"
+      },
+      {
+        "code": "GRW",
+        "share": 0.0037,
+        "label": "Green Robusta Wet",
+        "bags": 548799,
+        "form": "Green",
+        "type": "Robusta",
+        "method": "Wet",
+        "info": "Unspecified"
+      },
+      {
+        "code": "GADO",
+        "share": 0.0015,
+        "label": "Green Arabica Dry Organic",
+        "bags": 78781,
+        "form": "Green",
+        "type": "Arabica",
+        "method": "Dry",
+        "info": "Organic"
+      },
+      {
+        "code": "GRDD",
+        "share": 0.0002,
+        "label": "Green Robusta Dry Decaffeinated",
+        "bags": 23026,
+        "form": "Green",
+        "type": "Robusta",
+        "method": "Dry",
+        "info": "Decaffeinated"
+      },
+      {
+        "code": "GRWO",
+        "share": 0.0001,
+        "label": "Green Robusta Wet Organic",
+        "bags": 3116,
+        "form": "Green",
+        "type": "Robusta",
+        "method": "Wet",
+        "info": "Organic"
+      },
+      {
+        "code": "GRDO",
+        "share": 0.0005,
+        "label": "Green Robusta Dry Organic",
+        "bags": 10114,
+        "form": "Green",
+        "type": "Robusta",
+        "method": "Dry",
+        "info": "Organic"
+      },
+      {
+        "code": "RD",
+        "share": 0,
+        "label": "Roasted Decaffeinated",
+        "bags": 28101,
+        "form": "Roasted",
+        "type": "Unspecified",
+        "method": "Unspecified",
+        "info": "Decaffeinated"
+      }
+    ]
   },
   "top_destinations": [
     {
@@ -90,5 +972,129 @@
       "tonnes": 10358.16
     }
   ],
-  "notes": "Annual calendar-year trade totals and destination partner rankings as provided by ICO. Destination rankings are based on export volume. Kept separate from BPS figures because source coverage, classification, and compilation methods may differ."
+  "top_import_origins": [
+    {
+      "iso2": "VN",
+      "name": "Viet Nam",
+      "bags_60kg": 366920,
+      "tonnes": 22015.2
+    },
+    {
+      "iso2": "BR",
+      "name": "Brazil",
+      "bags_60kg": 359843,
+      "tonnes": 21590.579999999998
+    },
+    {
+      "iso2": "MY",
+      "name": "Malaysia",
+      "bags_60kg": 125392,
+      "tonnes": 7523.5199999999995
+    },
+    {
+      "iso2": "TL",
+      "name": "Timor-Leste",
+      "bags_60kg": 61309,
+      "tonnes": 3678.54
+    },
+    {
+      "iso2": "PG",
+      "name": "Papua New Guinea",
+      "bags_60kg": 13167,
+      "tonnes": 790.02
+    },
+    {
+      "iso2": "SG",
+      "name": "Singapore",
+      "bags_60kg": 4472,
+      "tonnes": 268.32
+    },
+    {
+      "iso2": "CO",
+      "name": "Colombia",
+      "bags_60kg": 3848,
+      "tonnes": 230.88
+    },
+    {
+      "iso2": "KR",
+      "name": "Republic of Korea",
+      "bags_60kg": 3549,
+      "tonnes": 212.94
+    },
+    {
+      "iso2": "CN",
+      "name": "China (Mainland)",
+      "bags_60kg": 2936,
+      "tonnes": 176.16
+    },
+    {
+      "iso2": "CH",
+      "name": "Switzerland",
+      "bags_60kg": 1922,
+      "tonnes": 115.32
+    }
+  ],
+  "top_reexport_destinations": [
+    {
+      "iso2": "DE",
+      "name": "Germany",
+      "bags_60kg": 90086,
+      "tonnes": 5405.16
+    },
+    {
+      "iso2": "PH",
+      "name": "Philippines",
+      "bags_60kg": 90064,
+      "tonnes": 5403.84
+    },
+    {
+      "iso2": "EG",
+      "name": "Egypt",
+      "bags_60kg": 86030,
+      "tonnes": 5161.8
+    },
+    {
+      "iso2": "US",
+      "name": "United States of America",
+      "bags_60kg": 79233,
+      "tonnes": 4753.98
+    },
+    {
+      "iso2": "VN",
+      "name": "Viet Nam",
+      "bags_60kg": 68936,
+      "tonnes": 4136.16
+    },
+    {
+      "iso2": "MY",
+      "name": "Malaysia",
+      "bags_60kg": 66747,
+      "tonnes": 4004.8199999999997
+    },
+    {
+      "iso2": "DZ",
+      "name": "Algeria",
+      "bags_60kg": 48533,
+      "tonnes": 2911.98
+    },
+    {
+      "iso2": "TH",
+      "name": "Thailand",
+      "bags_60kg": 47132,
+      "tonnes": 2827.92
+    },
+    {
+      "iso2": "IN",
+      "name": "India",
+      "bags_60kg": 31814,
+      "tonnes": 1908.84
+    },
+    {
+      "iso2": "IT",
+      "name": "Italy",
+      "bags_60kg": 24260,
+      "tonnes": 1455.6
+    }
+  ],
+  "notes": "Annual calendar-year trade totals and destination partner rankings as provided by ICO. Destination rankings are based on export volume. The public bundle also supplies annual coffee-year production and consumption series, partner flows, import and re-export rankings, and Indonesia export composition by form and processing method. Kept separate from BPS figures because source coverage, classification, and compilation methods may differ."
 }
