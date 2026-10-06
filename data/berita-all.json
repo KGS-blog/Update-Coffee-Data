@@ -18995,10 +18995,10 @@
       "cluster_ai_evidence": "\"The onset of a new El Niño event presents challenges for coffee farmers.\""
     }
   ],
-  "fetched": "2026-10-06T06:49:51.274Z",
+  "fetched": "2026-10-06T06:51:32.034Z",
   "reference_ingest": {
     "source": "KGS-blog/coffee-intelligence-engine/exports/coffee_relevant_articles.json",
-    "imported_at": "2026-10-06T06:50:05.601Z",
+    "imported_at": "2026-10-06T06:51:47.136Z",
     "source_records": 351,
     "accepted_candidates": 338,
     "dated_candidates": 304,
