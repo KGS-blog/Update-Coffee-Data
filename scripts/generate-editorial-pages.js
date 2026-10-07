@@ -278,3 +278,6 @@ for (const item of reports) {
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(entry => `  <url><loc>${entry.loc}</loc>${entry.lastmod ? `<lastmod>${entry.lastmod.slice(0,10)}</lastmod>` : ''}</url>`).join('\n')}\n</urlset>\n`;
 fs.writeFileSync(path.join(ROOT,'sitemap.xml'),sitemap);
 console.log(`Generated ${urls.length - 1} editorial pages and sitemap.`);
+// The editorial-page generator rebuilds both homepages from the template, so
+// immediately restore the crawlable coffee-price charts from the canonical data.
+require('./render-static-coffee-price-chart.js');

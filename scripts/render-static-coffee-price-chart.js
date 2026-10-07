@@ -152,20 +152,23 @@ const displayPeriod = period => {
   const match = /^(Q[1-4])\s+(\d{4})$/.exec(period);
   return match ? `${match[2]} · ${match[1]}` : period;
 };
+const compactPeriod = period => {
+  const match = /^(Q[1-4])\s+(\d{4})$/.exec(period);
+  return match ? `${match[1]} ’${match[2].slice(-2)}` : period;
+};
 const chart = (rows, form, type) => {
   const records = rows.filter(row => row.type === type);
-  const allRecords = sizeSelectedRows.filter(row => row.type === type && row.formClass === form);
-  const periods = [...new Set(allRecords.map(row => row.period))].sort((a, b) => quarterIndex(a) - quarterIndex(b));
-  const points = periods.map(period => {
+  const candidatePeriods = [...new Set(records.map(row => row.period))].sort((a, b) => quarterIndex(a) - quarterIndex(b));
+  const points = candidatePeriods.map(period => {
     const observations = records.filter(row => row.period === period);
     return { period, median: median(observations.map(row => Number(row.price_per_kg))), count: observations.length };
-  });
+  }).filter(point => Number.isFinite(point.median) && point.count > 0);
+  const periods = points.map(point => point.period);
   const allPrices = points.map(point => point.median).filter(Number.isFinite);
   const maxPrice = Math.max(50000, Math.ceil(Math.max(...allPrices, 0) / 50000) * 50000);
-  const width = 900, height = 330, left = 88, right = 24, top = 24, bottom = 50;
+  const width = 640, height = 230, left = 66, right = 16, top = 16, bottom = 38;
   const plotWidth = width - left - right, plotHeight = height - top - bottom;
-  const quarterSpan = Math.max(1, quarterIndex(periods.at(-1)) - quarterIndex(periods[0]));
-  const x = period => periods.length === 1 ? left + plotWidth / 2 : left + plotWidth * (quarterIndex(period) - quarterIndex(periods[0])) / quarterSpan;
+  const x = period => periods.length <= 1 ? left + plotWidth / 2 : left + plotWidth * periods.indexOf(period) / (periods.length - 1);
   const y = value => top + plotHeight * (1 - value / maxPrice);
   const horizontalGrid = Array.from({ length: 5 }, (_, i) => {
     const value = maxPrice * i / 4, yy = y(value);
@@ -180,15 +183,14 @@ const chart = (rows, form, type) => {
     return `${command} ${x(point.period)} ${y(point.median)}`;
   }).filter(Boolean).join(' ');
   const line = pathD.includes('L') ? `<path class="${cls}" d="${pathD}"/>` : '';
-  const dots = points.map(point => Number.isFinite(point.median)
-    ? `<circle class="point ${cls}-point" cx="${x(point.period)}" cy="${y(point.median)}" r="6"><title>${esc(type)} · ${esc(displayPeriod(point.period))} · ${formatIdr(point.median)} · ${point.count} eligible price observations</title></circle>`
-    : `<text class="no-data" x="${x(point.period)}" y="${top + plotHeight / 2}" text-anchor="middle"><title>No eligible observations for this period</title>—</text>`).join('');
-  const periodLabels = periods.map(period => `<text x="${x(period)}" y="${height-16}" text-anchor="middle">${esc(displayPeriod(period))}</text>`).join('');
+  const dots = points.map(point => `<circle class="point ${cls}-point" cx="${x(point.period)}" cy="${y(point.median)}" r="5"><title>${esc(type)} · ${esc(displayPeriod(point.period))} · ${formatIdr(point.median)} · ${point.count} eligible price observations</title></circle>`).join('');
+  const periodLabels = periods.map(period => `<text x="${x(period)}" y="${height-12}" text-anchor="middle">${esc(compactPeriod(period))}</text>`).join('');
   const table = `<div class="price-table-scroll"><table class="price-period-table"><thead><tr><th><span class="id-copy">Periode</span><span class="en-copy">Period</span></th><th><span class="id-copy">Median harga/kg</span><span class="en-copy">Median price/kg</span></th><th><span class="id-copy">Jumlah observasi harga</span><span class="en-copy">Price observations</span></th></tr></thead><tbody>${points.map(point => `<tr><th scope="row">${esc(displayPeriod(point.period))}</th><td>${Number.isFinite(point.median) ? formatIdr(point.median) : '<span class="id-copy">Tidak ada observasi harga yang memenuhi cakupan</span><span class="en-copy">No eligible price observations</span>'}</td><td class="count">${point.count.toLocaleString('id-ID')}</td></tr>`).join('')}</tbody></table></div>`;
   const formName = form === 'green' ? ['Green bean', 'Green beans'] : ['Roasted bean', 'Roasted beans'];
   const speciesName = type === 'Arabika' ? ['Arabika', 'Arabica'] : ['Robusta', 'Robusta'];
   const id = `${type.toLowerCase()}-${form}-chart`;
-  return `<section class="price-form-panel" aria-labelledby="${id}-heading"><h3 id="${id}-heading"><span class="id-copy">${speciesName[0]} · ${form === 'green' ? 'Biji hijau (green bean)' : 'Biji sangrai (roasted beans)'}</span><span class="en-copy">${speciesName[1]} · ${formName[1]}</span></h3><div class="price-chart-wrap"><svg class="price-chart" viewBox="0 0 ${width} ${height}" role="img" aria-labelledby="${id}-title ${id}-desc"><title id="${id}-title">${speciesName[1]} ${formName[1]} median listing prices per kilogram by period</title><desc id="${id}-desc">Median IDR listing prices for ${speciesName[1]} ${formName[1]}, with processing methods combined.</desc>${horizontalGrid}${line}${dots}${periodLabels}</svg></div>${table}<p class="price-count-note"><span class="id-copy">Jumlah menunjukkan observasi listing harga, bukan transaksi.</span><span class="en-copy">Counts show price-listing observations, not transactions.</span></p></section>`;
+  const chartBody = points.length ? `<div class="price-chart-wrap"><svg class="price-chart" viewBox="0 0 ${width} ${height}" role="img" aria-labelledby="${id}-title ${id}-desc"><title id="${id}-title">${speciesName[1]} ${formName[1]} median listing prices per kilogram by period</title><desc id="${id}-desc">Median IDR listing prices for ${speciesName[1]} ${formName[1]}, with processing methods combined. Only periods with eligible observations are shown.</desc>${horizontalGrid}${line}${dots}${periodLabels}</svg></div>${table}` : `<p class="price-no-data"><span class="id-copy">Belum ada observasi harga yang memenuhi cakupan.</span><span class="en-copy">No eligible price observations are available.</span></p>`;
+  return `<section class="price-form-panel" aria-labelledby="${id}-heading"><h3 id="${id}-heading"><span class="id-copy">${speciesName[0]} · ${form === 'green' ? 'Biji hijau (green bean)' : 'Biji sangrai (roasted beans)'}</span><span class="en-copy">${speciesName[1]} · ${formName[1]}</span></h3>${chartBody}<p class="price-count-note"><span class="id-copy">Jumlah menunjukkan observasi listing harga, bukan transaksi.</span><span class="en-copy">Counts show price-listing observations, not transactions.</span></p></section>`;
 };
 const usdCount = (dataset.listings || []).filter(row => row && row.currency === 'USD' && quarterIndex(row.period) && Number.isFinite(Number(row.price_per_kg)) && Number(row.price_per_kg) > 0 && (row.type === 'Arabika' || row.type === 'Robusta')).length;
 const excludedFormCount = idr.length - formRows.green.length - formRows.roasted.length;
