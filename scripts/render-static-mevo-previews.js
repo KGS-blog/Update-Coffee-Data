@@ -42,8 +42,9 @@ async function main() {
   for (const filename of files) {
     const target = path.join(root, filename);
     let html = fs.readFileSync(target, "utf8");
-    html = html.replace("<!-- STATIC_PUBLIC_MEVO_PREVIEW_ID -->", render(id.slice(0, 3), "id"));
-    html = html.replace("<!-- STATIC_PUBLIC_MEVO_PREVIEW_EN -->", render(en.slice(0, 3), "en"));
+    // The homepage card is designed for one concise, latest-report preview.
+    html = html.replace("<!-- STATIC_PUBLIC_MEVO_PREVIEW_ID -->", render(id.slice(0, 1), "id"));
+    html = html.replace("<!-- STATIC_PUBLIC_MEVO_PREVIEW_EN -->", render(en.slice(0, 1), "en"));
     html = html.replace("<!-- STATIC_MEVO_SEARCH_INDEX -->", searchIndex);
     fs.writeFileSync(target, html);
   }
