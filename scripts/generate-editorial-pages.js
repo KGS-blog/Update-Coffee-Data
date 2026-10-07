@@ -27,6 +27,17 @@ const latestNews = directFeedArticles.slice().sort((a, b) => Date.parse(b.tangga
 const psdDoc = fs.existsSync(path.join(ROOT, 'data/psd.json')) ? JSON.parse(fs.readFileSync(path.join(ROOT, 'data/psd.json'), 'utf8')) : { data: [] };
 const exportDoc = fs.existsSync(path.join(ROOT, 'data/ekspor.json')) ? JSON.parse(fs.readFileSync(path.join(ROOT, 'data/ekspor.json'), 'utf8')) : { data: [] };
 const icoDoc = fs.existsSync(path.join(ROOT, 'data/ico-trade-data.json')) ? JSON.parse(fs.readFileSync(path.join(ROOT, 'data/ico-trade-data.json'), 'utf8')) : null;
+const icoExportRank = icoDoc?.rankings?.metrics?.export_volume;
+const industryPillarId = icoDoc?.status === 'success' && icoExportRank?.rank && icoExportRank?.countries_count
+  ? `Pada ${icoDoc.year}, ICO menempatkan Indonesia di peringkat ${icoExportRank.rank} dari ${icoExportRank.countries_count} pelapor volume ekspor. Telusuri negara tujuan dan bentuk ekspor, lalu bandingkan seri ICO, USDA, dan BPS.`
+  : psdRows.length
+    ? `Data USDA terbaru mencatat produksi Indonesia ${fmtID(Number(psdRows.find(row => Number(row.tahun) === psdYear && row.atribut === 'Production')?.nilai) || 0)} ribu kantong 60 kg pada MY ${psdYear}. Telusuri ekspor, konsumsi, dan seri ICO serta BPS untuk melihat cakupan tiap sumber.`
+    : 'Jelajahi data produksi, perdagangan, dan konsumsi kopi Indonesia dari ICO, USDA, dan BPS, dengan cakupan setiap sumber dijelaskan.';
+const industryPillarEn = icoDoc?.status === 'success' && icoExportRank?.rank && icoExportRank?.countries_count
+  ? `In ${icoDoc.year}, ICO ranked Indonesia ${icoExportRank.rank} of ${icoExportRank.countries_count} reporting exporters by volume. Explore destinations and export forms, then compare ICO, USDA, and BPS series.`
+  : psdRows.length
+    ? `The latest USDA data records Indonesia's production at ${new Intl.NumberFormat('en-US').format(Number(psdRows.find(row => Number(row.tahun) === psdYear && row.atribut === 'Production')?.nilai) || 0)} thousand 60-kg bags in MY ${psdYear}. Explore exports, consumption, and ICO and BPS series with each source's coverage.`
+    : 'Explore Indonesia coffee production, trade, and consumption data from ICO, USDA, and BPS, with each source’s coverage explained.';
 const reports = (doc.articles || []).filter(item => item.status === 'ai_generated' || item.status === 'editor_selected');
 const editorialUpdateNotice = doc.status === 'retained_previous' ? ' Belum cukup berita penerbit langsung untuk membuat laporan baru; laporan terakhir tetap ditampilkan dan belum diperbarui.' : '';
 const output = path.join(ROOT, 'analisis-kopi');
@@ -200,6 +211,8 @@ function renderPage(item, language) {
 
 let portal = fs.readFileSync(path.join(ROOT, 'scripts/templates/kabar-kopi.html'), 'utf8');
 portal = portal.replace('<!-- STATIC_PSD_TIME -->', esc(dataUpdated))
+  .replace('<!-- DYNAMIC_INDUSTRY_PILLAR_ID -->', esc(industryPillarId))
+  .replace('<!-- DYNAMIC_INDUSTRY_PILLAR_EN -->', esc(industryPillarEn))
   .replace('<!-- STATIC_PSD_SUMMARY -->', psdSummary)
   .replace('<!-- STATIC_BPS_SUMMARY -->', exportSummary)
   .replace('<!-- STATIC_MARKET_ARABICA -->', marketSnapshotHtml(marketArabica, '¢/lb'))

@@ -147,6 +147,38 @@ const formRows = {
   green: idr.filter(row => row.formClass === 'green'),
   roasted: idr.filter(row => row.formClass === 'roasted'),
 };
+const priceSeriesNames = {
+  'Arabika|green': ['Arabika biji hijau', 'Arabica green beans'],
+  'Arabika|roasted': ['Arabika biji sangrai', 'Arabica roasted beans'],
+  'Robusta|green': ['Robusta biji hijau', 'Robusta green beans'],
+  'Robusta|roasted': ['Robusta biji sangrai', 'Robusta roasted beans'],
+};
+const priceSeries = Object.entries(priceSeriesNames).map(([key, names]) => {
+  const [type, form] = key.split('|');
+  const periods = [...new Set(idr.filter(row => row.type === type && row.formClass === form).map(row => row.period))]
+    .sort((a, b) => quarterIndex(a) - quarterIndex(b));
+  const points = periods.map(period => {
+    const rows = idr.filter(row => row.type === type && row.formClass === form && row.period === period);
+    return { period, median: median(rows.map(row => Number(row.price_per_kg))), count: rows.length };
+  });
+  const current = points.at(-1), previous = points.at(-2);
+  return current ? { names, current, previous, change: previous?.median > 0 ? (current.median / previous.median - 1) * 100 : null } : null;
+}).filter(Boolean);
+const idPeriod = period => { const match = /^(Q[1-4])\s+(\d{4})$/.exec(period || ''); return match ? `${match[1]} ${match[2]}` : period; };
+const enPeriod = period => { const match = /^(Q[1-4])\s+(\d{4})$/.exec(period || ''); return match ? `${match[1]} ${match[2]}` : period; };
+const idrText = value => `Rp${new Intl.NumberFormat('id-ID', { maximumFractionDigits: 0 }).format(value)}`;
+const priceInsight = priceSeries.filter(item => Number.isFinite(item.change))
+  .sort((a, b) => Math.abs(b.change) - Math.abs(a.change))[0];
+const pricePillarId = priceInsight
+  ? `Pada ${idPeriod(priceInsight.current.period)}, median listing ${priceInsight.names[0]} ${priceInsight.change >= 0 ? 'naik' : 'turun'} ${Math.abs(priceInsight.change).toLocaleString('id-ID', { maximumFractionDigits: 1 })}% menjadi ${idrText(priceInsight.current.median)} dibanding ${idPeriod(priceInsight.previous.period)}. Lihat pergerakan empat seri dan telusuri sumbernya.`
+  : priceSeries.length
+    ? `Periode terbaru yang tercatat adalah ${idPeriod(priceSeries.map(item => item.current.period).sort((a, b) => quarterIndex(a) - quarterIndex(b)).at(-1))}. Bandingkan median listing Arabika dan Robusta untuk biji hijau maupun sangrai, lalu telusuri sumbernya.`
+    : 'Bandingkan median listing Arabika dan Robusta untuk biji hijau maupun sangrai per periode, lalu telusuri sumbernya.';
+const pricePillarEn = priceInsight
+  ? `In ${enPeriod(priceInsight.current.period)}, the median ${priceInsight.names[1]} listing ${priceInsight.change >= 0 ? 'rose' : 'fell'} ${Math.abs(priceInsight.change).toLocaleString('en-US', { maximumFractionDigits: 1 })}% to ${idrText(priceInsight.current.median)} from ${enPeriod(priceInsight.previous.period)}. Explore all four series and trace their sources.`
+  : priceSeries.length
+    ? `The latest recorded period is ${enPeriod(priceSeries.map(item => item.current.period).sort((a, b) => quarterIndex(a) - quarterIndex(b)).at(-1))}. Compare Arabica and Robusta listings for green and roasted beans, then trace their sources.`
+    : 'Compare Arabica and Robusta listings for green and roasted beans by period, then trace their sources.';
 const formatIdr = value => `Rp${new Intl.NumberFormat('id-ID', { maximumFractionDigits: 0 }).format(value)}`;
 const displayPeriod = period => {
   const match = /^(Q[1-4])\s+(\d{4})$/.exec(period);
@@ -272,6 +304,8 @@ const replaceRegion = (html, name, value) => {
 for (const filename of ['index.html', 'kabar-kopi.html']) {
   const filePath = path.join(ROOT, filename);
   let html = fs.readFileSync(filePath, 'utf8');
+  html = html.replace('<!-- DYNAMIC_PRICE_PILLAR_ID -->', pricePillarId)
+    .replace('<!-- DYNAMIC_PRICE_PILLAR_EN -->', pricePillarEn);
   html = replaceRegion(html, 'PRICE_CHART', chartHtml);
   html = replaceRegion(html, 'PRICE_SCREENING', screenHtml);
   html = replaceRegion(html, 'PRICE_SOURCES', sourceList);
