@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-06T22:43:30.662Z",
+  "generated_at": "2026-10-07T05:16:29.557Z",
   "method": {
     "duplicate_key": "source identity + product + type + form + process + price level + currency + period + date + package grams + price_per_kg",
     "source_currency_rule": "Rows from specialtycoffee.id labeled IDR are excluded because the source states the prices are USD and no verified FX record exists",
@@ -10,19 +10,19 @@
   },
   "summary": {
     "raw_idr_observations": 2720,
-    "unique_idr_observations": 2603,
-    "duplicate_rows": 117,
+    "unique_idr_observations": 2617,
+    "duplicate_rows": 103,
     "source_currency_mismatch_rows": 66,
     "wine_process_excluded_rows": 160,
     "package_size_excluded_rows": 932,
     "package_selection_groups": {
-      "exact_1kg_groups": 1431,
+      "exact_1kg_groups": 1445,
       "fallback_size_groups": 14,
       "unknown_size_groups": 0
     },
     "significant_period_moves": 3,
     "high_price_outliers_excluded": 4,
-    "chart_eligible_unique_idr_observations": 1441
+    "chart_eligible_unique_idr_observations": 1455
   },
   "duplicates": [
     {
@@ -1280,158 +1280,6 @@
       "status": "duplicate_excluded_from_chart"
     },
     {
-      "observation_id": "53467091126ac1282f59459c8ba8f239e452e39e5cc32dd71095c864dc1f0ccc",
-      "duplicate_of": "aab862da0e735d4daa16771535612c75d9ea89f25e081c0ccf411404f5bf02de",
-      "type": "Arabika",
-      "form": "Biji kopi mentah",
-      "period": "Q4 2026",
-      "date": "2026-10-06",
-      "package_size": {
-        "amount": 1000,
-        "unit": "g"
-      },
-      "price_per_kg": 180000,
-      "product": "Arabika Bali Kintamani",
-      "source": "Willkin Green Coffee",
-      "source_type": "url",
-      "source_detail": null,
-      "source_url": "https://willkingreencoffee.com/katalog-lokal/",
-      "status": "duplicate_excluded_from_chart"
-    },
-    {
-      "observation_id": "928fa3ad65feb2d2b3a089a3af4a8488ebf550894d9fa20ed4600f335ab878df",
-      "duplicate_of": "1761b810776c5fdce8c7eaaf6a5aeb7d34b9c867459adec615df5a2d8dd4bb27",
-      "type": "Arabika",
-      "form": "Biji kopi mentah",
-      "period": "Q4 2026",
-      "date": "2026-10-06",
-      "package_size": {
-        "amount": 1000,
-        "unit": "g"
-      },
-      "price_per_kg": 160000,
-      "product": "Arabika Flores Bajawa",
-      "source": "Willkin Green Coffee",
-      "source_type": "url",
-      "source_detail": null,
-      "source_url": "https://willkingreencoffee.com/katalog-lokal/",
-      "status": "duplicate_excluded_from_chart"
-    },
-    {
-      "observation_id": "5094cb61c4da3b6182a700bc4e4987a068b2cfdfc33e6d0afe1e56228898edaf",
-      "duplicate_of": "f0fc5d786b19429d227a8f56e686107f517344e9dfea5f28537957f732a83ee7",
-      "type": "Arabika",
-      "form": "Biji kopi mentah",
-      "period": "Q4 2026",
-      "date": "2026-10-06",
-      "package_size": {
-        "amount": 1000,
-        "unit": "g"
-      },
-      "price_per_kg": 145000,
-      "product": "Arabika Gayo Honey",
-      "source": "Willkin Green Coffee",
-      "source_type": "url",
-      "source_detail": null,
-      "source_url": "https://willkingreencoffee.com/katalog-lokal/",
-      "status": "duplicate_excluded_from_chart"
-    },
-    {
-      "observation_id": "ab6f2c10924263c4832e0165f2503f572c07f56887645399d12e68d3c493c91d",
-      "duplicate_of": "75d24c07eb40f226d9b0193c02dd98b643676896dcbc0f841987a6ad3370fc38",
-      "type": "Arabika",
-      "form": "Biji kopi mentah",
-      "period": "Q4 2026",
-      "date": "2026-10-06",
-      "package_size": {
-        "amount": 1000,
-        "unit": "g"
-      },
-      "price_per_kg": 160000,
-      "product": "Arabika Gayo Natural",
-      "source": "Willkin Green Coffee",
-      "source_type": "url",
-      "source_detail": null,
-      "source_url": "https://willkingreencoffee.com/katalog-lokal/",
-      "status": "duplicate_excluded_from_chart"
-    },
-    {
-      "observation_id": "6d567cda95e5b812d43071c560f8e7357f31ac20b045d525f9a7c76f851db847",
-      "duplicate_of": "8d21c40751a8741f1bc26448e219208173a4e47c0c888bf6e6f5d717c3c704b7",
-      "type": "Arabika",
-      "form": "Biji kopi mentah",
-      "period": "Q4 2026",
-      "date": "2026-10-06",
-      "package_size": {
-        "amount": 1000,
-        "unit": "g"
-      },
-      "price_per_kg": 170000,
-      "product": "Arabika Gayo Organic",
-      "source": "Willkin Green Coffee",
-      "source_type": "url",
-      "source_detail": null,
-      "source_url": "https://willkingreencoffee.com/katalog-lokal/",
-      "status": "duplicate_excluded_from_chart"
-    },
-    {
-      "observation_id": "5ebe2d37b1e1554daa7188d5f7648eac4676572f81e34e470ff3c2c39c76c07a",
-      "duplicate_of": "a3cc672f284aa4a88f4c29d10195e180e7a527936d7082f4a75124ee1f32cb4b",
-      "type": "Arabika",
-      "form": "Biji kopi mentah",
-      "period": "Q4 2026",
-      "date": "2026-10-06",
-      "package_size": {
-        "amount": 1000,
-        "unit": "g"
-      },
-      "price_per_kg": 162900,
-      "product": "Arabika Gayo Washed",
-      "source": "Willkin Green Coffee",
-      "source_type": "url",
-      "source_detail": null,
-      "source_url": "https://willkingreencoffee.com/katalog-lokal/",
-      "status": "duplicate_excluded_from_chart"
-    },
-    {
-      "observation_id": "c4fac1d4afef10ee6d2050c592562dec8dc557acc4bacdfbc04dd040e360bfd3",
-      "duplicate_of": "7a5f3c86e83015e560c7d059011db2dd3d4c2dd9ab7e878642f149ab2e86646c",
-      "type": "Arabika",
-      "form": "Biji kopi mentah",
-      "period": "Q4 2026",
-      "date": "2026-10-06",
-      "package_size": {
-        "amount": 1000,
-        "unit": "g"
-      },
-      "price_per_kg": 150000,
-      "product": "Arabika Toraja",
-      "source": "Willkin Green Coffee",
-      "source_type": "url",
-      "source_detail": null,
-      "source_url": "https://willkingreencoffee.com/katalog-lokal/",
-      "status": "duplicate_excluded_from_chart"
-    },
-    {
-      "observation_id": "893c9f893672db40988e3ed94e98f62b7554fb50d1160d24276c3416f0a391c8",
-      "duplicate_of": "bf35e7f9eccc30c564efa4df6c508d4f64e6b10715bb6501c426321f04f355be",
-      "type": "Arabika",
-      "form": "Biji kopi mentah",
-      "period": "Q4 2026",
-      "date": "2026-10-06",
-      "package_size": {
-        "amount": 1000,
-        "unit": "g"
-      },
-      "price_per_kg": 115000,
-      "product": "Bali Kintamani Washed Citrus",
-      "source": "ASKI B2B Marketplace",
-      "source_type": "url",
-      "source_detail": null,
-      "source_url": "https://www.aski.coffee/marketplace",
-      "status": "duplicate_excluded_from_chart"
-    },
-    {
       "observation_id": "56a139bee44850c214114558080391a52f9bb3d954535109c1054a28067c6c87",
       "duplicate_of": "cd3737ffb25d365b7eb90a00b4d508f9fe756f642c2b7f409fa0821846dce4cc",
       "type": "Robusta",
@@ -1467,25 +1315,6 @@
       "source_type": "field",
       "source_detail": "Kral Coffee Greenbean Availability Flyer",
       "source_url": null,
-      "status": "duplicate_excluded_from_chart"
-    },
-    {
-      "observation_id": "842bcd813ed7c5aa3c4229c6ea1aa77df0e89aaaa8fc8ddb3b7422294dd89fe2",
-      "duplicate_of": "24a9f44eabc41859c2cc1be589f3f377f67b13e7dffe83492e7c62cf272409fa",
-      "type": "Robusta",
-      "form": "Biji kopi mentah",
-      "period": "Q4 2026",
-      "date": "2026-10-06",
-      "package_size": {
-        "amount": 1000,
-        "unit": "g"
-      },
-      "price_per_kg": 85000,
-      "product": "Flores Bajawa Natural Fine Robusta",
-      "source": "ASKI B2B Marketplace",
-      "source_type": "url",
-      "source_detail": null,
-      "source_url": "https://www.aski.coffee/marketplace",
       "status": "duplicate_excluded_from_chart"
     },
     {
@@ -1698,44 +1527,6 @@
       "status": "duplicate_excluded_from_chart"
     },
     {
-      "observation_id": "5c683208966b28214f1efa99a729620848a03b7f28666bd3e005f032c8352c27",
-      "duplicate_of": "a5539f638e22ba75310b56aadd43845187f011b8f760b939a67dedc98311a7d6",
-      "type": "Arabika",
-      "form": "Biji kopi mentah",
-      "period": "Q4 2026",
-      "date": "2026-10-06",
-      "package_size": {
-        "amount": 1000,
-        "unit": "g"
-      },
-      "price_per_kg": 132000,
-      "product": "Java Arabika Ijen",
-      "source": "Willkin Green Coffee",
-      "source_type": "url",
-      "source_detail": null,
-      "source_url": "https://willkingreencoffee.com/katalog-lokal/",
-      "status": "duplicate_excluded_from_chart"
-    },
-    {
-      "observation_id": "92934486274637622a3d4a9e65085beff0d3860731307341589fd4eb0f89df2e",
-      "duplicate_of": "101dad3df4dfcaae3915bbe1c3ea431004db250c7cc87d23828671201bca6a90",
-      "type": "Arabika",
-      "form": "Biji kopi mentah",
-      "period": "Q4 2026",
-      "date": "2026-10-06",
-      "package_size": {
-        "amount": 1000,
-        "unit": "g"
-      },
-      "price_per_kg": 120000,
-      "product": "Jawa Preanger Organic Honey",
-      "source": "ASKI B2B Marketplace",
-      "source_type": "url",
-      "source_detail": null,
-      "source_url": "https://www.aski.coffee/marketplace",
-      "status": "duplicate_excluded_from_chart"
-    },
-    {
       "observation_id": "fa76306af46f752b5ac99ce03de919e3f8420479504b6c1f87556f9b188fbcfa",
       "duplicate_of": "f0591c7c2665c2b6125083e3691432de976d6fb4c5d1361530cbd958bd046fe4",
       "type": "Arabika",
@@ -1888,25 +1679,6 @@
       "status": "duplicate_excluded_from_chart"
     },
     {
-      "observation_id": "b3db4e8d54d3e6d1b2661f1d7ac2dd9ccb468801fbe414ec58fe6beba98b6a38",
-      "duplicate_of": "3fa12bde449836f4cebb0064f3b6b2805c50812ad19ccebef765685fb80a42a0",
-      "type": "Arabika",
-      "form": "Biji kopi mentah",
-      "period": "Q4 2026",
-      "date": "2026-10-06",
-      "package_size": {
-        "amount": 1000,
-        "unit": "g"
-      },
-      "price_per_kg": 135000,
-      "product": "Mandheling Arabika",
-      "source": "Willkin Green Coffee",
-      "source_type": "url",
-      "source_detail": null,
-      "source_url": "https://willkingreencoffee.com/katalog-lokal/",
-      "status": "duplicate_excluded_from_chart"
-    },
-    {
       "observation_id": "c1bb30074cbf29baddb587245600f681b0018884635f2f16c31def6f413e4c4d",
       "duplicate_of": "9f5628b1e3e6f7d4c164ed1e4679494911be222ff77f30a58b9a59316e99c7ef",
       "type": "Arabika",
@@ -1983,25 +1755,6 @@
       "status": "duplicate_excluded_from_chart"
     },
     {
-      "observation_id": "28be135a51c802abf2d32b90d6cfec78f367aa66cca94d841995f626459eddc9",
-      "duplicate_of": "f182a0bb817dcc31ceef40a3d8877f92fd7e699731228831ff9c27ad5b6daa9c",
-      "type": "Robusta",
-      "form": "Biji kopi mentah",
-      "period": "Q4 2026",
-      "date": "2026-10-06",
-      "package_size": {
-        "amount": 1000,
-        "unit": "g"
-      },
-      "price_per_kg": 71500,
-      "product": "Robusta Lampung EK1",
-      "source": "Willkin Green Coffee",
-      "source_type": "url",
-      "source_detail": null,
-      "source_url": "https://willkingreencoffee.com/katalog-lokal/",
-      "status": "duplicate_excluded_from_chart"
-    },
-    {
       "observation_id": "b1bdf00b3f86049c53cc8a55b1d97de56fecc6d8a9bb226f278f8ff2bbdf7389",
       "duplicate_of": "a5bd117080cc109b329cb4769a4532cdc1f3d39396ea8cf87b7f8029e4e53062",
       "type": "Robusta",
@@ -2018,25 +1771,6 @@
       "source_type": "field",
       "source_detail": "COFFEE TIME! PRICE LIST KOPI TEMANGGUNG",
       "source_url": null,
-      "status": "duplicate_excluded_from_chart"
-    },
-    {
-      "observation_id": "430bdd61b85e341e31ae96c6ef03de77b5a36fd216197dcb18fea9cc1258307b",
-      "duplicate_of": "6ae82f4a0349929a38fe88d5ddd99663d03c9bb3572f22bd95b5b62ab9df44a0",
-      "type": "Robusta",
-      "form": "Biji kopi mentah",
-      "period": "Q4 2026",
-      "date": "2026-10-06",
-      "package_size": {
-        "amount": 1000,
-        "unit": "g"
-      },
-      "price_per_kg": 82500,
-      "product": "Robusta Temanggung",
-      "source": "Willkin Green Coffee",
-      "source_type": "url",
-      "source_detail": null,
-      "source_url": "https://willkingreencoffee.com/katalog-lokal/",
       "status": "duplicate_excluded_from_chart"
     },
     {
@@ -21034,11 +20768,11 @@
       "type": "Arabika",
       "formClass": "green",
       "period": "Q4 2026",
-      "mean": 170680,
+      "mean": 167092,
       "previous_period": null,
       "period_change_percent": null,
-      "total": 58,
-      "included": 58,
+      "total": 69,
+      "included": 69,
       "excluded": 0,
       "upper_limit": null
     },
@@ -21082,11 +20816,11 @@
       "type": "Robusta",
       "formClass": "green",
       "period": "Q4 2026",
-      "mean": 84182,
+      "mean": 83731,
       "previous_period": null,
       "period_change_percent": null,
-      "total": 27,
-      "included": 27,
+      "total": 30,
+      "included": 30,
       "excluded": 0,
       "upper_limit": null
     },
@@ -21306,7 +21040,7 @@
       "form": "green",
       "period": "Q4 2026",
       "previous_period": "Q3 2026",
-      "current_count": 58,
+      "current_count": 69,
       "previous_count": 13,
       "current_sources": [
         "url:https://www.ijencoffee.com/",
@@ -21331,7 +21065,7 @@
       "form": "green",
       "period": "Q4 2026",
       "previous_period": "Q3 2026",
-      "current_count": 27,
+      "current_count": 30,
       "previous_count": 6,
       "current_sources": [
         "url:https://www.coffestroastery.com/id/shop",
