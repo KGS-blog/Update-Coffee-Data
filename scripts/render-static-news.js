@@ -17,7 +17,7 @@ const feed = JSON.parse(fs.readFileSync(feedPath, "utf8"));
 const articles = (Array.isArray(feed.artikel) ? feed.artikel : [])
   .filter(article => article.cluster_assignment !== "editor_irrelevant" && isDirectPublisherUrl(article.tautan || article.link))
   .sort((a, b) => dateValue(b) - dateValue(a))
-  .slice(0, 6);
+  .slice(0, 5);
 const formatDate = article => {
   const date = new Date(dateValue(article));
   if (Number.isNaN(date.getTime())) return "";

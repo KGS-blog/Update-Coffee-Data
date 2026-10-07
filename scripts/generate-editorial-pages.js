@@ -143,6 +143,17 @@ function reportSources(item, article = item.article || {}, orderedUrls = usesOrd
   return ordered.length ? ordered : inputs;
 }
 const publicReports = reports.map(item=>{const article=item.article||{}, page=`analisis-kopi/${fileFor(item,'id')}`, cluster=BERITA_KLASTER.find(entry=>entry.slug===item.cluster_id||entry.nama===item.cluster_name), orderedUrls=usesOrderedSourceUrls(article), refs=reportSources(item,article,orderedUrls);const sources=refs.map((s,index)=>{const u=safeUrl(s.url);return u?`<li><a href="${esc(u)}" rel="noopener noreferrer">[${esc(orderedUrls?index+1:s.id)}] ${esc(s.source||'Sumber asli')}${s.title?` — ${esc(s.title)}`:''}</a></li>`:''}).filter(Boolean).join('');return `<article class="report-card"><span class="candidate-badge">Artikel analisis · Publik · ${esc(item.cluster_name||cluster?.nama||'Kopi')} · ${esc(item.period_days||'')} hari</span><h3><a href="${esc(page)}">${esc(article.title||'Analisis pasar kopi')}</a></h3>${article.summary?`<p><strong>${esc(article.summary)}</strong></p>`:''}${article.lead?`<p>${esc(article.lead)}</p>`:''}<p class="source-line">Analisis editorial otomatis dari berita yang dihimpun. Kategori dan jumlah berita menunjukkan pola pemberitaan, bukan verifikasi kebenaran klaim atau dampak ekonomi.</p>${sources?`<details><summary>Sumber yang dikutip (${refs.length})</summary><ol>${sources}</ol></details>`:''}<p><a href="${esc(page)}">Baca analisis lengkap, kesimpulan, rekomendasi, sumber, dan batas bukti →</a></p></article>`}).join('');
+function homeEditorialPreview(item, language) {
+  const en = language === 'en';
+  const article = item && (en ? item.article_en : item.article);
+  if (!article) return `<p class="source-line">${en ? 'A public editorial analysis will appear here when available.' : 'Analisis editorial publik akan tampil di sini saat tersedia.'}</p>`;
+  const page = `/analisis-kopi/${fileFor(item, language)}`;
+  const summary = String(article.summary || article.lead || '').trim();
+  const excerpt = summary.length > 260 ? `${summary.slice(0, 257).trimEnd()}…` : summary;
+  return `<article class="editorial-home-item"><h3><a href="${esc(page)}">${esc(article.title || (en ? 'Coffee Analysis' : 'Analisis Kopi'))}</a></h3>${excerpt ? `<p>${esc(excerpt)}</p>` : ''}<a class="editorial-home-link" href="${esc(page)}">${en ? 'Read the analysis →' : 'Baca analisis →'}</a></article>`;
+}
+const latestPublicReport = reports.find(item => item.article?.title);
+const latestEnglishPublicReport = reports.find(item => item.article_en?.title);
 function renderPage(item, language) {
   const en = language === 'en';
   const article = (en ? item.article_en : item.article) || {};
@@ -203,6 +214,8 @@ portal = portal.replace('<!-- STATIC_PSD_TIME -->', esc(dataUpdated))
   .replaceAll('STATIC_ICO_EXPORT_SOURCE', esc(icoDoc?.source_url || 'https://data.ico.org/globe/'))
   .replace('STATIC_EXPORT_SOURCE', esc(exportSourceUrl))
   .replace('<!-- STATIC_HOME_TOPICS -->', topicChips)
+  .replace('<!-- STATIC_HOME_EDITORIAL_PREVIEW_ID -->', homeEditorialPreview(latestPublicReport, 'id'))
+  .replace('<!-- STATIC_HOME_EDITORIAL_PREVIEW_EN -->', homeEditorialPreview(latestEnglishPublicReport, 'en'))
   .replace('<!-- STATIC_TOPIC_COUNTS -->', topicRows)
   .replace('<!-- STATIC_NEWS -->', `${newsCards}<p class="source-line">Menampilkan ${fmtID(Math.min(24, directFeedArticles.length))} berita terbaru dengan tautan langsung ke penerbit dari ${fmtID(totalNews)} berita dalam feed. Arsip dan filter lengkap tersedia saat JavaScript aktif.</p>`)
   .replace('<!-- STATIC_CLUSTERS -->', analysisCards || '<p class="empty">Peta topik belum tersedia.</p>')
@@ -245,6 +258,12 @@ const urls = [
   { loc: `${SITE}/en/coffee-export-calculator/`, lastmod: doc.generated_at || '' },
   { loc: `${SITE}/persyaratan-ekspor-kopi/`, lastmod: doc.generated_at || '' },
   { loc: `${SITE}/en/export-coffee-requirements/`, lastmod: doc.generated_at || '' },
+  { loc: `${SITE}/harga-kopi/`, lastmod: doc.generated_at || '' },
+  { loc: `${SITE}/en/coffee-prices/`, lastmod: doc.generated_at || '' },
+  { loc: `${SITE}/analisis-report-kopi/`, lastmod: doc.generated_at || '' },
+  { loc: `${SITE}/en/coffee-analysis-reports/`, lastmod: doc.generated_at || '' },
+  { loc: `${SITE}/berita-kopi/`, lastmod: doc.generated_at || '' },
+  { loc: `${SITE}/en/coffee-news/`, lastmod: doc.generated_at || '' },
   { loc: `${SITE}/rangkuman-pekanan/`, lastmod: doc.generated_at || '' },
   { loc: `${SITE}/en/weekly-coffee-brief/`, lastmod: doc.generated_at || '' },
 ];

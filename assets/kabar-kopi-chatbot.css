@@ -1,0 +1,12 @@
+#kk-guide-launcher{position:fixed;right:22px;bottom:22px;z-index:1000;border:0;border-radius:999px;background:#62432e;color:#fff;padding:13px 18px;font:700 14px/1.2 system-ui,sans-serif;box-shadow:0 5px 20px #20160f38;cursor:pointer}
+#kk-guide-launcher:hover{background:#322419}
+#kk-guide-dialog{width:min(560px,calc(100vw - 24px));max-height:min(760px,calc(100dvh - 36px));padding:0;border:1px solid #e7e1d8;border-radius:12px;background:#fbfaf7;color:#20201e;box-shadow:0 20px 70px #20160f45;font:15px/1.5 system-ui,sans-serif}
+#kk-guide-dialog::backdrop{background:#20160f80}
+.kk-guide-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:20px 22px 14px;border-bottom:1px solid #e7e1d8}
+.kk-guide-head h2{margin:0 0 4px;font:700 23px/1.2 Georgia,serif}.kk-guide-head p{margin:0;color:#77736d;font-size:12px}
+#kk-guide-close{border:1px solid #d8cfc4;border-radius:6px;background:#fff;color:#322419;padding:7px 10px;font:600 13px system-ui,sans-serif;cursor:pointer}
+.kk-guide-body{padding:16px 22px 22px;overflow:auto;max-height:calc(min(760px,100dvh - 36px) - 80px)}
+.kk-guide-form{display:flex;gap:8px}.kk-guide-form input{min-width:0;flex:1;border:1px solid #d8cfc4;border-radius:6px;padding:11px 12px;font:inherit}.kk-guide-form button{border:0;border-radius:6px;background:#a4472d;color:#fff;padding:0 15px;font:700 14px system-ui,sans-serif;cursor:pointer}
+.kk-guide-examples{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0 16px}.kk-guide-example{border:1px solid #e1d8cd;border-radius:20px;background:#fff;color:#51483f;padding:6px 10px;font:12px system-ui,sans-serif;cursor:pointer}.kk-guide-example:hover{border-color:#a4472d}
+#kk-guide-status{min-height:20px;color:#77736d;font-size:12px;margin:10px 0}.kk-guide-answer{border-top:1px solid #e7e1d8;padding:14px 0}.kk-guide-answer h3{font:700 16px/1.35 Georgia,serif;margin:0 0 7px}.kk-guide-answer p{white-space:pre-line;margin:0 0 8px;color:#51483f}.kk-guide-answer a{color:#8d3c26;font-weight:700;text-decoration:underline;text-underline-offset:2px}.kk-guide-privacy{border-top:1px solid #e7e1d8;padding-top:12px;margin:15px 0 0;color:#77736d;font-size:11px}
+@media(max-width:520px){#kk-guide-launcher{right:14px;bottom:14px;padding:12px 15px}.kk-guide-head{padding:17px}.kk-guide-body{padding:14px 17px 18px}.kk-guide-form{flex-direction:column}.kk-guide-form button{padding:10px}}
