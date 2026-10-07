@@ -292,9 +292,7 @@
       renderHome();renderTopics();renderNews(true);renderAnalysis(result);
     }
     function renderHome(){
-      const top=allNews.find(a=>a._topic!==(language==='en'?'Other':'Lainnya'))||allNews[0];
-      if(top){const u=safeUrl(top.tautan||top.link),feature=$('#lead-story');if(feature?.dataset.hasAuthorArticle!=='true'){feature.innerHTML='<div class="eyebrow">'+(language==='en'?'Latest feed · ':'Pilihan feed · ')+esc(top._topic)+'</div><a class="lead-link" '+(u?'href="'+esc(u)+'" target="_blank" rel="noopener noreferrer"':'')+'><h2>'+esc(titleOf(top))+'</h2></a><p>'+esc(nameOf(top))+' · '+esc(dateText(top))+'</p><a class="home-feature-link" href="#berita">'+(language==='en'?'Browse all news →':'Buka semua berita →')+'</a>';feature.querySelector('.home-feature-link').addEventListener('click',e=>{e.preventDefault();activate('berita')})}}
-
+      // Keep the build-generated lead card stable; replacing it after feed fetch causes a visible first-load jump.
       $('#ticker-text').textContent=allNews.slice(0,5).map(titleOf).join('  ·  ');
     }
     function renderTopics(){
