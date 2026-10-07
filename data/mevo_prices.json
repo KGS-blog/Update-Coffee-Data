@@ -1,15 +1,15 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-10-06T07:42:47.470385+00:00",
+  "generated_at": "2026-10-07T20:56:07.971830+00:00",
   "form_note": "Bentuk produk disalin dari label form yang tersimpan pada data MEVO, misalnya Biji kopi mentah, Biji kopi sangrai, atau Kopi bubuk. Nilai Tidak disebut berarti arsip belum memiliki label bentuk.",
   "currency_note": "Harga dalam IDR tetap IDR. Mata uang lain ditampilkan terpisah tanpa konversi.",
   "period_note": "Kuartal berasal dari tanggal terbit sumber bila tersedia; selain itu dari tanggal listing diamati MEVO. Ini bukan tanggal transaksi.",
   "normalization_note": "Harga kemasan dinormalisasi ke 1 kg. Nilai IDR bulat 100–999 dibaca sebagai ribuan (contoh 150 menjadi Rp150.000) sesuai konvensi sumber MEVO.",
   "totals": {
-    "listings": 3261,
+    "listings": 3264,
     "groups": 115,
     "types": {
-      "Arabika": 2393,
+      "Arabika": 2396,
       "Robusta": 790
     }
   },
@@ -199,14 +199,15 @@
       "price_level": "unspecified",
       "period": "Q3 2026",
       "currency": "IDR",
-      "listing_count": 85,
-      "source_count": 3,
+      "listing_count": 86,
+      "source_count": 4,
       "median_price_per_kg": 336560,
       "minimum_price_per_kg": 50000,
       "maximum_price_per_kg": 981158,
       "source_urls": [
         "https://www.cnbcindonesia.com/research/20260803111814-128-755987/harga-kopi-dunia-mendidih-ri-dan-9-negara-ini-bisa-panen-cuan-jumbo",
         "https://specialtycoffee.id/id/pricelist/",
+        "https://www.detik.com/jabar/cirebon-raya/d-8662786/dari-lereng-ciremai-identitas-kopi-dijaga-bersiap-tebar-pesona-ke-dunia",
         "https://kopitime.id/harga-kopi-menjelang-akhir-tahun-2026-dan-perkembangan-pasar-global-1"
       ]
     },
@@ -475,13 +476,14 @@
       "price_level": "unspecified",
       "period": "Q4 2026",
       "currency": "IDR",
-      "listing_count": 9,
-      "source_count": 2,
+      "listing_count": 10,
+      "source_count": 3,
       "median_price_per_kg": 174000,
       "minimum_price_per_kg": 169000,
       "maximum_price_per_kg": 650000,
       "source_urls": [
         "https://www.ijencoffee.com/",
+        "https://kopi.online/",
         "https://berkopi.com/"
       ]
     },
@@ -725,11 +727,11 @@
       "price_level": "unspecified",
       "period": "Q4 2026",
       "currency": "IDR",
-      "listing_count": 1,
+      "listing_count": 2,
       "source_count": 1,
-      "median_price_per_kg": 358000,
+      "median_price_per_kg": 476500,
       "minimum_price_per_kg": 358000,
-      "maximum_price_per_kg": 358000,
+      "maximum_price_per_kg": 595000,
       "source_urls": [
         "https://kopi.online/"
       ]
@@ -63702,6 +63704,33 @@
       "quality_status": "Harga ritel biji hijau USD/kg untuk pesanan 1–9 kg · tidak digabung dengan harga grosir FOB per ton"
     },
     {
+      "observation_id": "growth-0325c579f060d1b1090614bb3f167851dd92c0ff1493f9f1700a1e7a9328d8ef",
+      "type": "Arabika",
+      "form": "Biji kopi mentah",
+      "process": "Tidak disebut",
+      "period": "Q3 2026",
+      "date": "2026-09-14",
+      "date_basis": "Tanggal terbit sumber",
+      "currency": "IDR",
+      "original_price": 170000,
+      "price_per_package": 170000,
+      "package_size": {
+        "amount": 1,
+        "unit": "kg"
+      },
+      "price_per_kg": 170000,
+      "scale_100_to_999_applied": false,
+      "product": "Arabika berada di kisaran Rp170 ribu per kilogram, sedangkan ",
+      "source": "Dari Lereng Ciremai Identitas Kopi Dijaga, Bersiap Tebar Pesona ke Dunia",
+      "source_url": "https://www.detik.com/jabar/cirebon-raya/d-8662786/dari-lereng-ciremai-identitas-kopi-dijaga-bersiap-tebar-pesona-ke-dunia",
+      "product_url": "https://www.detik.com/jabar/cirebon-raya/d-8662786/dari-lereng-ciremai-identitas-kopi-dijaga-bersiap-tebar-pesona-ke-dunia",
+      "quality_status": null,
+      "source_evidence": "Menurut Robi, dari sisi ekonomi bertani kopi sebenarnya cukup menjanjikan. Saat ini, harga jual kopi Arabika berada di kisaran Rp170 ribu per kilogram, sedangkan Robusta sekitar Rp85 ribu-Rp90 ribu per kilogram.\n\"Itu dalam bentuk green bean. Memang kebanyakan dalam bentuk green bean,\" kata dia.",
+      "evidence_id": "1d6908419ec834906fa8",
+      "normalization_basis": "Ribuan rupiah",
+      "import_method": "local_growth_explicit_price"
+    },
+    {
       "observation_id": "0a10595df56a05c52fd430feab99996728aac10e12ccd1a42c64b9abb7eae7a1",
       "type": "Arabika",
       "form": "Biji kopi mentah",
@@ -66347,6 +66376,29 @@
       "quality_status": null
     },
     {
+      "observation_id": "55a017841aec4590b7879bb84e1db62ab7e0ad5e35ef1d789aba96991fa1431f",
+      "type": "Arabika",
+      "form": "Kopi bubuk",
+      "process": "Semi-washed",
+      "period": "Q4 2026",
+      "date": "2026-10-02",
+      "date_basis": "Tanggal diamati MEVO",
+      "currency": "IDR",
+      "original_price": 59500,
+      "price_per_package": 59500,
+      "package_size": {
+        "amount": 100,
+        "unit": "g"
+      },
+      "price_per_kg": 595000,
+      "scale_100_to_999_applied": false,
+      "product": "Kopi Arabika Kintamani Bali",
+      "source": "Supplier Kopi & Distributor Kopi Indonesia | Kopi Online",
+      "source_url": "https://kopi.online/",
+      "product_url": "https://kopi.online/product/kopi-arabika-kintamani-bali",
+      "quality_status": null
+    },
+    {
       "observation_id": "6a9c3520e0495bca18665b2d18b0a027d832959732f3ceae95624e63df0e4b1a",
       "type": "Arabika",
       "form": "Kopi bubuk",
@@ -66367,6 +66419,29 @@
       "source": "Supplier Kopi & Distributor Kopi Indonesia | Kopi Online",
       "source_url": "https://kopi.online/",
       "product_url": "https://kopi.online/product/kopi-blend-premium-blue",
+      "quality_status": null
+    },
+    {
+      "observation_id": "c8290dc5e3d32001109f4b166d43d7befb2a24eeded4d11a43ef52a824cc0f28",
+      "type": "Arabika",
+      "form": "Biji kopi mentah",
+      "process": "Washed (Fullwashed)",
+      "period": "Q4 2026",
+      "date": "2026-10-02",
+      "date_basis": "Tanggal diamati MEVO",
+      "currency": "IDR",
+      "original_price": 475000,
+      "price_per_package": 475000,
+      "package_size": {
+        "amount": 1000,
+        "unit": "g"
+      },
+      "price_per_kg": 475000,
+      "scale_100_to_999_applied": false,
+      "product": "Kopi Flores Arabika Green Beans",
+      "source": "Supplier Kopi & Distributor Kopi Indonesia | Kopi Online",
+      "source_url": "https://kopi.online/",
+      "product_url": "https://kopi.online/product/kopi-flores-arabika-green-beans",
       "quality_status": null
     },
     {
@@ -78802,5 +78877,5 @@
       "quality_status": null
     }
   ],
-  "public_price_sources_checked_at": "2026-10-07T20:45:05.841Z"
+  "public_price_sources_checked_at": "2026-10-07T21:23:07.082Z"
 }
