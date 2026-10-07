@@ -1,7 +1,1039 @@
 {
   "version": 1,
-  "generated_at": "2026-10-07T05:16:20.665Z",
+  "generated_at": "2026-10-07T12:32:08.977Z",
   "articles": [
+    {
+      "cluster_id": "kedai-konsumsi-gaya-hidup",
+      "cluster_name": "Kedai, Konsumsi & Gaya Hidup",
+      "period_days": 30,
+      "generated_at": "2026-10-07T12:32:08.977Z",
+      "status": "ai_generated",
+      "fingerprint": "42789fd60c1c58647e68e651bba5867d33008b01ff5b1a9678f0360bf53dac35",
+      "article": {
+        "title": "Kedai, Konsumsi & Gaya Hidup: saat tren Shanghai mendarat, kopi pasta udang viral, dan gerobak listrik dilirik",
+        "summary": "M Stand dari Shanghai resmi membuka gerai pertama di Pantai Indah Kapuk (PIK), Jakarta, membawa konsep modern coffee lifestyle ke pasar lokal [1][2]. Di Hue, Vietnam, sebuah kafe menarik perhatian karena menyajikan kopi dengan pasta udang fermentasi dan taburan tuna kering [3]. Pada saat yang sama, Jago Coffee mendapat pengakuan Endeavor untuk model gerobak listrik, sementara blog KopiTime menilai harga kopi sedang cenderung bullish dan bertahan di level tinggi karena dolar AS melemah [4][6].",
+        "lead": "Di sisi konsumsi, Kompas.com mengulas tiga pengganti krimer yang dinilai lebih sehat, termasuk santan kental [5]. Di sisi budaya, sebuah fitur daerah menyoroti kedai kopi legendaris Indonesia yang tetap bertahan lintas generasi, menandakan lanskap yang memadukan warisan dan konsep baru [8].",
+        "sections": [
+          {
+            "heading": "Konsep baru berdampingan dengan warisan",
+            "paragraphs": [
+              "Kehadiran M Stand di PIK menegaskan arus masuk konsep gaya hidup kopi internasional ke Jakarta. Informasi yang dipublikasikan menekankan racikan dan desain ruang ala Shanghai, namun pada tahap ini lebih berupa pengumuman pembukaan gerai ketimbang data kinerja atau dampak pasar [1][2].",
+              "Di lain sisi, liputan mengenai kedai kopi legendaris yang bertahan lintas generasi mengingatkan bahwa pasar domestik juga punya basis penikmat yang menghargai kontinuitas dan cerita lama. Bahan tersebut bersifat feature, tanpa angka soal skala bisnis atau perubahan selera, tetapi menambah konteks keragaman ekosistem kedai [8]."
+            ]
+          },
+          {
+            "heading": "Eksperimen rasa lintas batas",
+            "paragraphs": [
+              "Kabar dari Hue, Vietnam, tentang kopi dengan pasta udang fermentasi dan taburan tuna kering menunjukkan ruang eksperimen rasa yang kian berani. Publikasi tersebut menggambarkan menu unik di satu kedai, tanpa klaim adopsi luas atau data penjualan, sehingga wajar dipandang sebagai contoh eksplorasi, bukan arus utama [3]."
+            ]
+          },
+          {
+            "heading": "Akses, mobilitas, dan harga input",
+            "paragraphs": [
+              "Di ranah penyediaan, Jago Coffee disebut memperluas akses kopi dengan model gerobak listrik dan baru saja mendapat pengakuan dari panel internasional Endeavor. Ini menandai validasi jejaring terhadap pendekatan mobilitas, meski publikasi yang ada tetap berupa pengumuman dan tidak memuat metrik dampak operasional [4].",
+              "Untuk latar biaya, blog KopiTime menulis bahwa harga kopi berada di fase bullish dan stabil di level tinggi, dengan pelemahan dolar disebut sebagai salah satu penjelasan. Ini analisis blog, bukan rilis data resmi, tetapi relevan sebagai pembacaan sentimen biaya bahan baku yang dihadapi pelaku kedai [6][7]."
+            ]
+          },
+          {
+            "heading": "Pilihan konsumsi harian",
+            "paragraphs": [
+              "Di tingkat rumah tangga, Kompas.com merangkum tiga alternatif krimer yang dinilai lebih sehat—termasuk santan kental—sebagai opsi bagi penikmat kopi yang ingin menyesuaikan asupan [5]. Ini saran praktis, tanpa janji hasil kesehatan tertentu, namun berguna di tengah diskusi rasa, biaya, dan kebiasaan minum kopi."
+            ]
+          }
+        ],
+        "conclusion": "Rangkaian kabar pekan ini memperlihatkan ekosistem kopi yang ramai: konsep global hadir, eksperimen rasa muncul, pendekatan mobilitas dilirik, sementara pilihan konsumsi tetap membumi. Sebagian besar informasi masih berupa pengumuman, feature, atau analisis blog, jadi maknanya lebih pada peta kemungkinan ketimbang bukti perubahan pasar.",
+        "recommendations": [
+          {
+            "audience": "Pemilik kedai/kafe",
+            "action": "Pantau pergerakan harga dan kurs; uji rekayasa menu atau porsi untuk mengelola biaya bahan baku.",
+            "basis": "Analisis KopiTime menyebut harga kopi cenderung bullish dan bertahan tinggi, dengan pelemahan dolar sebagai salah satu faktor [6][7]."
+          },
+          {
+            "audience": "Pengusaha kopi skala kecil",
+            "action": "Pertimbangkan uji coba format mobil (mis. gerobak listrik) untuk memperluas jangkauan secara bertahap.",
+            "basis": "Model gerobak listrik Jago Coffee mendapat pengakuan Endeavor, meski publikasi tidak memuat metrik dampak [4]."
+          },
+          {
+            "audience": "Penikmat kopi rumahan",
+            "action": "Coba pengganti krimer seperti santan kental sesuai selera dan kebutuhan pribadi.",
+            "basis": "Kompas.com merangkum tiga alternatif krimer yang dinilai lebih sehat, termasuk santan kental [5]."
+          }
+        ],
+        "source_urls": [
+          "https://www.cantika.com/read/2121013/m-stand-resmi-buka-gerai-pertama-di-pik-tawarkan-tren-kopi-shanghai",
+          "https://koran-jakarta.com/2026-10-05/m-stand-dari-shanghai-hadir-di-jakarta-bawa-konsep-modern-coffee-lifestyle",
+          "https://www.cnnindonesia.com/gaya-hidup/20261005114335-262-1411680/sajian-kopi-dengan-pasta-udang-dan-tuna-di-vietnam-gimana-rasanya",
+          "https://ekbis.sindonews.com/read/1757299/34/lolos-panel-global-endeavor-jago-coffee-perluas-akses-kopi-lewat-model-gerobak-listrik-1791220207",
+          "https://www.kompas.com/food/read/2026/10/05/073100475/3-pengganti-krimer-kopi-yang-lebih-sehat-bisa-pakai-santan-kental",
+          "https://kopitime.id/harga-kopi-bergerak-stabil-pada-level-tinggi-akibat-lemahnya-dolar-1",
+          "https://kopitime.id/harga-kopi-kembali-menguat-apakah-tren-bullish-akan-berlanjut-",
+          "https://www.harapanrakyat.com/2026/10/menelusuri-sejarah-kedai-kopi-legendaris-di-indonesia-yang-bertahan-lintas-generasi/"
+        ],
+        "evidence_note": "Sebagian sumber berupa pengumuman, feature, dan analisis blog sehingga detail angka dan dampak terukur terbatas."
+      },
+      "article_en": {
+        "title": "Coffee shops, consumption, and lifestyle: Shanghai concept lands, shrimp‑paste coffee makes noise, electric carts get a nod",
+        "summary": "Shanghai’s M Stand opened its first store in Jakarta’s Pantai Indah Kapuk (PIK), highlighting a modern coffee‑lifestyle pitch to local drinkers [1][2]. In Hue, Vietnam, a cafe drew buzz for serving coffee with fermented shrimp paste and dried tuna flakes [3]. At the same time, Jago Coffee earned Endeavor recognition for its electric cart model, while the KopiTime blog reads coffee prices as bullish and holding at high levels amid a weaker US dollar [4][6].",
+        "lead": "On the consumption side, Kompas.com outlined three “healthier” coffee‑creamer swaps, including thick coconut milk [5]. Culturally, a regional feature revisited Indonesia’s long‑standing coffee houses, underscoring a scene where heritage and new concepts sit side by side [8].",
+        "sections": [
+          {
+            "heading": "New concepts alongside heritage",
+            "paragraphs": [
+              "M Stand’s arrival in PIK signals another international lifestyle‑coffee concept touching down in Jakarta. The coverage focuses on Shanghai‑style drinks and space design, but at this stage it is an opening announcement rather than evidence of market impact or performance [1][2].",
+              "Meanwhile, a feature on enduring, multi‑generation Indonesian coffee shops reminds us the domestic scene has a base that values continuity and long stories. It is a feature piece without metrics on scale or shifting tastes, yet it adds context to how diverse the shop ecosystem is [8]."
+            ]
+          },
+          {
+            "heading": "Cross‑border flavor experiments",
+            "paragraphs": [
+              "News from Hue about coffee topped with fermented shrimp paste and dried tuna shows how far flavor trials can go. The publication highlights one shop’s menu without claims of broad adoption or sales data, so it’s best read as experimentation rather than a new mainstream [3]."
+            ]
+          },
+          {
+            "heading": "Access, mobility, and input costs",
+            "paragraphs": [
+              "On the supply side, Jago Coffee is described as widening access via an electric‑cart format and just received international Endeavor recognition. That signals network validation of a mobility approach, though the material is still an announcement and lacks operational impact metrics [4].",
+              "For cost backdrop, the KopiTime blog argues coffee prices are in a bullish phase and steady at elevated levels, pointing to a weaker dollar as one factor. It is blog analysis rather than official data, but relevant as a read on input‑cost sentiment facing shops [6][7]."
+            ]
+          },
+          {
+            "heading": "Everyday consumption choices",
+            "paragraphs": [
+              "At home, Kompas.com lists three “healthier” creamer alternatives—including thick coconut milk—as practical options for drinkers adjusting their intake [5]. It’s a useful note amid discussions of taste, cost, and daily coffee habits, without promising particular health outcomes."
+            ]
+          }
+        ],
+        "conclusion": "Taken together, the week’s items show a busy coffee ecosystem: global concepts arrive, flavors are tested, mobility gets attention, and everyday choices stay pragmatic. Much of the material is announcement, feature, or blog analysis, so it maps possibilities more than it proves market shifts.",
+        "recommendations": [
+          {
+            "audience": "Cafe owners/operators",
+            "action": "Track bean prices and FX; test menu engineering or sizes to manage input costs.",
+            "basis": "KopiTime frames prices as bullish and high, with a weaker dollar cited among drivers [6][7]."
+          },
+          {
+            "audience": "Small coffee entrepreneurs",
+            "action": "Pilot a mobile format (e.g., electric cart) to extend reach gradually.",
+            "basis": "Jago Coffee’s electric‑cart approach received Endeavor recognition, though the announcement does not include impact metrics [4]."
+          },
+          {
+            "audience": "Home coffee drinkers",
+            "action": "Try creamer swaps like thick coconut milk based on taste and your own needs.",
+            "basis": "Kompas.com lists three alternatives presented as healthier options, including thick coconut milk [5]."
+          }
+        ],
+        "source_urls": [
+          "https://www.cantika.com/read/2121013/m-stand-resmi-buka-gerai-pertama-di-pik-tawarkan-tren-kopi-shanghai",
+          "https://koran-jakarta.com/2026-10-05/m-stand-dari-shanghai-hadir-di-jakarta-bawa-konsep-modern-coffee-lifestyle",
+          "https://www.cnnindonesia.com/gaya-hidup/20261005114335-262-1411680/sajian-kopi-dengan-pasta-udang-dan-tuna-di-vietnam-gimana-rasanya",
+          "https://ekbis.sindonews.com/read/1757299/34/lolos-panel-global-endeavor-jago-coffee-perluas-akses-kopi-lewat-model-gerobak-listrik-1791220207",
+          "https://www.kompas.com/food/read/2026/10/05/073100475/3-pengganti-krimer-kopi-yang-lebih-sehat-bisa-pakai-santan-kental",
+          "https://kopitime.id/harga-kopi-bergerak-stabil-pada-level-tinggi-akibat-lemahnya-dolar-1",
+          "https://kopitime.id/harga-kopi-kembali-menguat-apakah-tren-bullish-akan-berlanjut-",
+          "https://www.harapanrakyat.com/2026/10/menelusuri-sejarah-kedai-kopi-legendaris-di-indonesia-yang-bertahan-lintas-generasi/"
+        ],
+        "evidence_note": "Much of the source set is announcement, feature writing, or blog analysis, so numeric detail and measurable impacts are limited."
+      },
+      "input_sources": [
+        {
+          "id": "1",
+          "url": "https://www.harapanrakyat.com/2026/10/menelusuri-sejarah-kedai-kopi-legendaris-di-indonesia-yang-bertahan-lintas-generasi/",
+          "title": "Menelusuri Sejarah Kedai Kopi Legendaris di Indonesia yang Bertahan Lintas Generasi - Harapan Rakyat",
+          "source": "Harapan Rakyat",
+          "published_at": "Wed, 07 Oct 2026 11:03:55 GMT"
+        },
+        {
+          "id": "2",
+          "url": "https://www.cnnindonesia.com/gaya-hidup/20261005114335-262-1411680/sajian-kopi-dengan-pasta-udang-dan-tuna-di-vietnam-gimana-rasanya",
+          "title": "Sajian Kopi dengan Pasta Udang dan Tuna di Vietnam, Gimana Rasanya?",
+          "source": "Cnnindonesia",
+          "published_at": "2026-10-06 08:00:00"
+        },
+        {
+          "id": "3",
+          "url": "https://www.cantika.com/read/2121013/m-stand-resmi-buka-gerai-pertama-di-pik-tawarkan-tren-kopi-shanghai",
+          "title": "M Stand Resmi Buka Gerai Pertama di PIK, Tawarkan Tren Kopi Shanghai - cantika.com",
+          "source": "cantika.com",
+          "published_at": "Tue, 06 Oct 2026 05:30:00 GMT"
+        },
+        {
+          "id": "4",
+          "url": "https://ekbis.sindonews.com/read/1757299/34/lolos-panel-global-endeavor-jago-coffee-perluas-akses-kopi-lewat-model-gerobak-listrik-1791220207",
+          "title": "Lolos Panel Global Endeavor, Jago Coffee Perluas Akses Kopi lewat Model Gerobak Listrik",
+          "source": "Sindonews",
+          "published_at": "2026-10-05 12:58:07"
+        },
+        {
+          "id": "5",
+          "url": "https://koran-jakarta.com/2026-10-05/m-stand-dari-shanghai-hadir-di-jakarta-bawa-konsep-modern-coffee-lifestyle",
+          "title": "M Stand dari Shanghai Hadir di Jakarta, Bawa Konsep Modern Coffee Lifestyle - Koran Jakarta ®",
+          "source": "Koran Jakarta ®",
+          "published_at": "Mon, 05 Oct 2026 04:58:00 GMT"
+        },
+        {
+          "id": "6",
+          "url": "https://www.kompas.com/tren/read/2026/10/05/103000365/kafe-di-vietnam-ciptakan-kopi-dengan-pasta-udang-dan-taburan-tuna-kering",
+          "title": "Kafe di Vietnam Ciptakan Kopi dengan Pasta Udang dan Taburan Tuna Kering, seperti Apa?",
+          "source": "Kompas.com",
+          "published_at": "2026-10-05 03:30:00"
+        },
+        {
+          "id": "7",
+          "url": "https://www.kompas.com/food/read/2026/10/05/073100475/3-pengganti-krimer-kopi-yang-lebih-sehat-bisa-pakai-santan-kental",
+          "title": "3 Pengganti Krimer Kopi yang Lebih Sehat, Bisa Pakai Santan Kental",
+          "source": "Kompas.com",
+          "published_at": "2026-10-05 00:31:00"
+        },
+        {
+          "id": "8",
+          "url": "https://kopitime.id/harga-kopi-kembali-bullish-dan-faktor-yang-memengaruhi-kenaikannya-1",
+          "title": "Harga Kopi Kembali Bullish dan Faktor yang Memengaruhi Kenaikannya - KopiTime",
+          "source": "kopitime.id",
+          "published_at": "2026-10-05T00:00:00.000Z"
+        },
+        {
+          "id": "9",
+          "url": "https://kopitime.id/apa-yang-mendorong-harga-kopi-kembali-berada-dalam-tren-bullish-1",
+          "title": "Apa yang Mendorong Harga Kopi Kembali Berada dalam Tren Bullish - KopiTime",
+          "source": "kopitime.id",
+          "published_at": "2026-10-05T00:00:00.000Z"
+        },
+        {
+          "id": "10",
+          "url": "https://kopitime.id/harga-kopi-memasuki-fase-bullish-setelah-periode-pergerakan-melemah-1",
+          "title": "Harga Kopi Memasuki Fase Bullish Setelah Periode Pergerakan Melemah - KopiTime",
+          "source": "kopitime.id",
+          "published_at": "2026-10-05T00:00:00.000Z"
+        },
+        {
+          "id": "11",
+          "url": "https://kopitime.id/harga-kopi-bergerak-stabil-pada-level-tinggi-akibat-lemahnya-dolar-1",
+          "title": "Harga Kopi Bergerak Stabil pada Level Tinggi Akibat Lemahnya Dolar - KopiTime",
+          "source": "kopitime.id",
+          "published_at": "2026-10-05T00:00:00.000Z"
+        },
+        {
+          "id": "12",
+          "url": "https://kopitime.id/harga-kopi-kembali-menguat-apakah-tren-bullish-akan-berlanjut-",
+          "title": "Harga Kopi Kembali Menguat, Apakah Tren Bullish Akan Berlanjut? - KopiTime",
+          "source": "kopitime.id",
+          "published_at": "2026-10-05T00:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "barista-teknik-seduh",
+      "cluster_name": "Barista & Teknik Seduh",
+      "period_days": 30,
+      "generated_at": "2026-10-07T12:32:08.977Z",
+      "status": "ai_generated",
+      "fingerprint": "afdd7ae7c67e92b9dd6e7fc65cc9dad24febd72ee23bebca384fb49202b9f899",
+      "article": {
+        "title": "Barista & Teknik Seduh: Kembali ke Dasar yang Membuat Hasil Konsisten",
+        "summary": "Dalam beberapa pekan terakhir, rilis dari asosiasi dan blog kopi menekankan fondasi bar yang rapi: kebersihan mesin, SOP shift, pilihan gelas, dan literasi menu; sementara media arus utama memuat kiat seduh dari pakar serta anjuran praktis seperti “jangan langsung seduh.” [3][6][10][2][1] Bukan tren rasa baru, melainkan penataan proses dan keterampilan agar hasil cangkir lebih ajek di rumah maupun di kafe. [7][9][12]",
+        "lead": "Checklist AEKI merinci urutan bersih-bersih—buang ampas, bilas portafilter dan group head, bersihkan steam wand, cuci drip tray—dengan catatan backflush hanya jika modelnya mendukung dan descaling adalah pekerjaan berbeda. [3] Di sisi penyajian, satu panduan menekankan bentuk cangkir memengaruhi retensi panas, yang berdampak ke pengalaman minum. [10]",
+        "sections": [
+          {
+            "heading": "1) Standarisasi kebersihan bar",
+            "paragraphs": [
+              "Poin kebersihan paling konkret datang dari AEKI: setelah seduh, ampas dibuang, portafilter dan group head dibilas, steam wand dibersihkan, lalu drip tray dan bagian lepas-pasang dicuci. Backflush dilakukan hanya bila didukung pabrikan; descaling beda urusan karena menyasar kerak mineral. [3] Penekanan ini berguna karena banyak kedai mencampuradukkan keduanya, padahal risikonya bisa pada performa dan umur mesin. [3]",
+              "Masih dari AEKI, contoh SOP opening–closing meminta tiap tugas punya penanggung jawab, kriteria selesai, dan tindakan korektif bila hasil inspeksi belum sesuai; checklist juga membantu serah-terima antar-shift tanpa mengandalkan ingatan. [6] Intinya: susun standar kerja yang bisa dicek, bukan sekadar niat baik. [6]"
+            ]
+          },
+          {
+            "heading": "2) Dasar seduh dan penyajian",
+            "paragraphs": [
+              "Kompas memuat tips seduh dari pakar, sementara Tribun menyoroti anjuran “jangan langsung seduh” untuk kopi hitam; keduanya adalah saran praktis, bukan klaim perubahan pasar. [2][1] Untuk konteks di rumah, tersedia panduan seduh kopi hitam panas langkah demi langkah. [9]",
+              "Di ranah istilah, ada penjelasan ringkas perbedaan es kopi hitam seperti cold brew dan americano—berguna agar barista dan pelanggan bicara hal yang sama saat memesan. [7] Satu catatan teknis yang jarang disorot: pilihan gelas berpengaruh langsung pada retensi suhu, sehingga bentuk dan ketebalan wadah ikut menentukan seberapa lama profil rasa bertahan hangat. [10]"
+            ]
+          },
+          {
+            "heading": "3) Jalur masuk kerja barista",
+            "paragraphs": [
+              "Bagi pemula, contoh CV disarankan satu halaman, fokus ke keterampilan relevan, bagaimana keterampilan itu dipelajari, serta bukti praktiknya; jangan menaikkan level kemampuan demi tampilan. [5] Ini memudahkan perekrut membaca cepat tanpa menebak-nebak kompetensi. [5]",
+              "Materi interview merangkum 12 pertanyaan umum yang pada dasarnya menilai tiga hal: alasan melamar, bukti kemampuan, dan sikap layanan. Kandidat dianjurkan tidak menghafal jawaban; respons jujur, spesifik, dan didukung contoh kecil lebih meyakinkan. [4]"
+            ]
+          }
+        ],
+        "conclusion": "Benang merahnya sederhana: hasil cangkir yang stabil lahir dari rutinitas yang jelas, istilah yang rapi, dan kandidat yang apa adanya. Ini bukan gebrakan teknis, melainkan disiplin harian yang—kalau konsisten—membuat kerja bar lebih tenang dan memudahkan pelanggan memahami apa yang mereka pesan.",
+        "recommendations": [
+          {
+            "audience": "Kedai kecil dan tim bar",
+            "action": "Terapkan checklist harian untuk bersih-bersih mesin dan SOP shift; pisahkan backflush dari descaling sesuai panduan pabrikan.",
+            "basis": "AEKI menekankan urutan pembersihan, batas backflush, dan manfaat checklist serta SOP dengan kriteria selesai dan tindakan korektif. [3][6]"
+          },
+          {
+            "audience": "Calon barista pemula",
+            "action": "Buat CV satu halaman dengan bukti konkret dan siapkan contoh spesifik untuk tiga area penilaian saat interview.",
+            "basis": "Panduan CV meminta fokus pada bukti praktik; materi interview merangkum tiga aspek utama dan menganjurkan jawaban jujur–spesifik. [5][4]"
+          },
+          {
+            "audience": "Home brewer dan kedai",
+            "action": "Cocokkan bentuk–ketebalan gelas dengan target retensi suhu minuman panas.",
+            "basis": "Panduan gelas menyatakan wadah berdampak teknis langsung pada retensi suhu. [10]"
+          }
+        ],
+        "source_urls": [
+          "https://kompas.com/food/read/2026/10/02/172514175/cara-seduh-kopi-agar-nikmat-menurut-pakar-ini-tipsnya",
+          "https://style.tribunnews.com/life/385562/jangan-langsung-seduh-ini-cara-bikin-kopi-hitam-lebih-nikmat",
+          "https://www.aeki-aice.org/cara-membersihkan-mesin-espresso/",
+          "https://www.aeki-aice.org/sop-barista-opening-closing/",
+          "https://arutalacoffee.com/blog/nama-nama-gelas-kopi-dan-bentuk-cangkir-barista",
+          "https://arutalacoffee.com/blog/panduan-lengkap-jenis-dan-istilah-es-kopi-hitam",
+          "https://www.aeki-aice.org/contoh-cv-barista-pemula/",
+          "https://www.aeki-aice.org/pertanyaan-interview-barista/",
+          "https://arutalacoffee.com/blog/panduan-lengkap-seduh-kopi-hitam-panas-di-rumah"
+        ],
+        "evidence_note": "Sebagian sumber berupa panduan umum dan judul berita; analisis dibatasi pada pernyataan yang eksplisit di rilis tersebut."
+      },
+      "article_en": {
+        "title": "Baristas & Brewing: Back to Basics That Make Cups More Consistent",
+        "summary": "Recent releases from an association and coffee blogs spotlight bar fundamentals: machine hygiene, shift SOPs, glassware choice, and menu literacy; mainstream outlets ran expert brewing tips and a practical note to “not brew immediately.” [3][6][10][2][1] This is less about new flavors and more about organizing processes and skills so cups are steadier at home and in cafés. [7][9][12]",
+        "lead": "AEKI’s checklist lays out cleaning in order—discard the puck, rinse the portafilter and group head, clean the steam wand, wash the drip tray—and flags that backflushing is model-dependent while descaling is a different job. [3] On service, one guide highlights that cup shape affects heat retention, which changes the drinking experience. [10]",
+        "sections": [
+          {
+            "heading": "1) Standardizing bar hygiene",
+            "paragraphs": [
+              "AEKI’s most concrete hygiene notes: after brewing, discard the puck, rinse portafilter and group head, clean the steam wand, then wash the drip tray and removable parts. Backflush only if the manufacturer supports it; descaling deals with mineral buildup and is separate. [3] This matters because teams often conflate the two, risking performance and machine longevity. [3]",
+              "Their opening–closing SOP example assigns an owner, a done-criteria, and corrective actions for each task; checklists also smooth handovers without relying on memory. [6] In short: build checkable standards, not wishful thinking. [6]"
+            ]
+          },
+          {
+            "heading": "2) Brewing and service fundamentals",
+            "paragraphs": [
+              "Kompas published expert brewing tips, while Tribun highlighted an advice line to “not brew immediately” for black coffee; both are practical suggestions, not market-shift claims. [2][1] For the home crowd, there’s also a step-by-step guide to making hot black coffee. [9]",
+              "On terminology, there’s a primer distinguishing iced black options like cold brew and americano—useful so baristas and guests speak the same language at the counter. [7] One underlined technical note: cup choice directly impacts heat retention, so form and thickness help decide how long a flavor profile stays warm. [10]"
+            ]
+          },
+          {
+            "heading": "3) Getting job-ready",
+            "paragraphs": [
+              "For newcomers, the CV example should fit on one page, focus on relevant skills, how they were learned, and practical proof; avoid inflating ability levels. [5] This helps hiring managers scan without guessing competence. [5]",
+              "Interview material groups 12 common questions into three aims: motivation, evidence of ability, and service attitude. Candidates are advised not to memorize answers; honest, specific responses backed by small examples are more convincing. [4]"
+            ]
+          }
+        ],
+        "conclusion": "The throughline is simple: steadier cups come from clear routines, tidy terminology, and straightforward candidates. It’s not a technical breakthrough—just daily discipline that calms bar work and helps guests order what they actually want.",
+        "recommendations": [
+          {
+            "audience": "Small cafés and bar teams",
+            "action": "Adopt daily machine-cleaning checklists and shift SOPs; separate backflushing from descaling per the manufacturer’s notes.",
+            "basis": "AEKI details the cleaning order, limits on backflush, and the value of checklists and SOPs with done-criteria and corrective actions. [3][6]"
+          },
+          {
+            "audience": "Entry-level baristas",
+            "action": "Build a one-page CV with concrete proof and prepare specific examples for the three interview focus areas.",
+            "basis": "The CV guide emphasizes practical evidence; the interview piece outlines the three assessment pillars and encourages honest, specific replies. [5][4]"
+          },
+          {
+            "audience": "Home brewers and cafés",
+            "action": "Match cup form and thickness to your target heat retention for hot drinks.",
+            "basis": "The glassware guide states cup choice directly affects heat retention. [10]"
+          }
+        ],
+        "source_urls": [
+          "https://kompas.com/food/read/2026/10/02/172514175/cara-seduh-kopi-agar-nikmat-menurut-pakar-ini-tipsnya",
+          "https://style.tribunnews.com/life/385562/jangan-langsung-seduh-ini-cara-bikin-kopi-hitam-lebih-nikmat",
+          "https://www.aeki-aice.org/cara-membersihkan-mesin-espresso/",
+          "https://www.aeki-aice.org/sop-barista-opening-closing/",
+          "https://arutalacoffee.com/blog/nama-nama-gelas-kopi-dan-bentuk-cangkir-barista",
+          "https://arutalacoffee.com/blog/panduan-lengkap-jenis-dan-istilah-es-kopi-hitam",
+          "https://www.aeki-aice.org/contoh-cv-barista-pemula/",
+          "https://www.aeki-aice.org/pertanyaan-interview-barista/",
+          "https://arutalacoffee.com/blog/panduan-lengkap-seduh-kopi-hitam-panas-di-rumah"
+        ],
+        "evidence_note": "Some sources are general guides and headlines; this analysis sticks to explicit statements in those releases."
+      },
+      "input_sources": [
+        {
+          "id": "1",
+          "url": "https://style.tribunnews.com/life/385562/jangan-langsung-seduh-ini-cara-bikin-kopi-hitam-lebih-nikmat",
+          "title": "Jangan Langsung Seduh, Ini Cara Bikin Kopi Hitam Lebih Nikmat",
+          "source": "Tribun News",
+          "published_at": "2026-10-06 00:28:56"
+        },
+        {
+          "id": "2",
+          "url": "https://kompas.com/food/read/2026/10/02/172514175/cara-seduh-kopi-agar-nikmat-menurut-pakar-ini-tipsnya",
+          "title": "Cara Seduh Kopi agar Nikmat Menurut Pakar, Ini Tipsnya",
+          "source": "kompas.com",
+          "published_at": "2026-10-01T00:00:00.000Z"
+        },
+        {
+          "id": "3",
+          "url": "https://www.aeki-aice.org/cara-membersihkan-mesin-espresso/",
+          "title": "Cara Membersihkan Mesin Espresso: Checklist Perawatan Barista",
+          "source": "AEKI",
+          "published_at": "2026-09-25T08:43:16+07:00"
+        },
+        {
+          "id": "4",
+          "url": "https://www.aeki-aice.org/pertanyaan-interview-barista/",
+          "title": "12 Pertanyaan Interview Barista dan Kerangka Jawaban untuk Pemula",
+          "source": "AEKI",
+          "published_at": "2026-09-24T11:14:56+07:00"
+        },
+        {
+          "id": "5",
+          "url": "https://www.aeki-aice.org/contoh-cv-barista-pemula/",
+          "title": "Contoh CV Barista Pemula dan Cara Menulis Skill dengan Jujur",
+          "source": "AEKI",
+          "published_at": "2026-09-23T15:41:09+07:00"
+        },
+        {
+          "id": "6",
+          "url": "https://www.aeki-aice.org/sop-barista-opening-closing/",
+          "title": "SOP Barista untuk Opening dan Closing: Contoh Checklist Shift",
+          "source": "AEKI",
+          "published_at": "2026-09-21T13:09:23+07:00"
+        },
+        {
+          "id": "7",
+          "url": "https://arutalacoffee.com/blog/panduan-lengkap-jenis-dan-istilah-es-kopi-hitam",
+          "title": "Panduan Lengkap Jenis dan Istilah Es Kopi Hitam",
+          "source": "arutalacoffee.com",
+          "published_at": "2026-09-18T00:00:00.000Z"
+        },
+        {
+          "id": "8",
+          "url": "https://arutalacoffee.com/blog/resep-kopi-rempah-arab-variasi-dan-cara-buat",
+          "title": "Resep Kopi Rempah Arab: Variasi dan Cara Buat",
+          "source": "arutalacoffee.com",
+          "published_at": "2026-09-18T00:00:00.000Z"
+        },
+        {
+          "id": "9",
+          "url": "https://arutalacoffee.com/blog/panduan-lengkap-seduh-kopi-hitam-panas-di-rumah",
+          "title": "Panduan Lengkap Seduh Kopi Hitam Panas di Rumah",
+          "source": "arutalacoffee.com",
+          "published_at": "2026-09-18T00:00:00.000Z"
+        },
+        {
+          "id": "10",
+          "url": "https://arutalacoffee.com/blog/nama-nama-gelas-kopi-dan-bentuk-cangkir-barista",
+          "title": "Nama-Nama Gelas Kopi dan Bentuk Cangkir Barista",
+          "source": "arutalacoffee.com",
+          "published_at": "2026-09-17T00:00:00.000Z"
+        },
+        {
+          "id": "11",
+          "url": "https://arutalacoffee.com/blog/apakah-cappucino-termasuk-kopi-ini-faktanya",
+          "title": "Apakah Cappucino Termasuk Kopi? Ini Faktanya",
+          "source": "arutalacoffee.com",
+          "published_at": "2026-09-16T00:00:00.000Z"
+        },
+        {
+          "id": "12",
+          "url": "https://arutalacoffee.com/blog/panduan-lengkap-alat-seduh-kopi-untuk-pemula",
+          "title": "Panduan Lengkap Alat Seduh Kopi untuk Pemula",
+          "source": "arutalacoffee.com",
+          "published_at": "2026-09-16T00:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "brand-global",
+      "cluster_name": "Brand Global",
+      "period_days": 30,
+      "generated_at": "2026-10-07T12:32:08.977Z",
+      "status": "ai_generated",
+      "fingerprint": "20298c9db9fc3cc4c6258589e12ee97df6e0f18175167bc7f026ad602ebc24f0",
+      "article": {
+        "title": "Brand Global: Pergerakan Modal, Ekspansi, dan Kemasan Kopi di Penghujung 2026",
+        "summary": "Luckin Coffee membidik debut di Timur Tengah setelah penjualan saham minoritas senilai $1 miliar ke Mubadala dan penunjukan eksekutif Mubadala ke dewan [9][6]. Di segmen kapsul, Nespresso akan menghentikan kapsul kertas kompos rumahan dan fokus pada daur ulang kapsul aluminium, sementara Podback menambah lebih dari 200 supermarket Co‑op sebagai titik pengumpulan serta kini bermitra dengan >1.500 lokasi ritel dan 260 pusat daur ulang otoritas lokal di Inggris [3][8]. Di sisi ekspansi merek, Drop Coffee membuka kafe internasional perdana di Jepang, The Miners masuk pasar Eropa kedelapan, dan Cotti Coffee memulai ekspansi regional di Inggris [1][10][11].",
+        "lead": "Kopi Kenangan memberi sinyal IPO setelah mencetak laba tahunan pertama, menambah lebih dari 200 gerai bersih dan pendapatan naik 62% pada 2026 [12]. Keurig Dr Pepper menunjuk CEO baru untuk spin‑off Global Coffee Co setelah kandidat sebelumnya beralih ke Heineken [7], sementara Luckin meresmikan gerai ke‑30.000 pada Februari 2026 [5].",
+        "sections": [
+          {
+            "heading": "Modal dan tata kelola: sinyal kuat dari pemain besar",
+            "paragraphs": [
+              "Masuknya Mubadala dengan investasi $1 miliar di Luckin Coffee diikuti penempatan eksekutifnya di dewan, memberi konteks mengapa rencana debut di Timur Tengah kini kembali di meja dan didukung dana kekayaan berdaulat Abu Dhabi [6][9]. Di luar rencana pasar, skala jaringan Luckin—30.000 gerai per Februari 2026—menjadi penanda kemampuan eksekusi, meski hasil ekspansi baru tetap perlu dibuktikan [5].",
+              "Kopi Kenangan menunjukkan kesiapan menuju pasar modal setelah mencatat laba tahunan pertama dan pertumbuhan operasi yang kuat pada 2026 (200+ gerai bersih, pendapatan naik 62%) [12]. Di level korporasi global, Keurig Dr Pepper menegaskan arah restrukturisasi dengan menunjuk CEO baru untuk spin‑off Global Coffee Co, menyusul perubahan rencana kandidat sebelumnya [7]."
+            ]
+          },
+          {
+            "heading": "Jejak baru: dari Tokyo ke pasar regional Inggris",
+            "paragraphs": [
+              "Drop Coffee memilih Jepang sebagai lokasi kafe internasional perdana; media mencatat ini menjadikannya yang terbaru dalam deretan roaster spesialti internasional yang memulai kiprah luar negeri di negara tersebut [1]. Di Eropa, The Miners akan memasuki pasar kedelapan, menambah dari 36 gerai yang sudah beroperasi dan tujuh lainnya dalam pengembangan [10].",
+              "Di Inggris, Cotti Coffee—operator berfokus nilai—akan memulai ekspansi regional setelah membuka gerai perdana di London pada Februari 2026 [11]. Sementara itu, Luckin menyiapkan langkah ke Timur Tengah setelah sebelumnya pernah menjajaki kawasan tersebut pada 2019 [9]."
+            ]
+          },
+          {
+            "heading": "Kapsul dan daur ulang: fokus ke aluminium dan akses konsumen",
+            "paragraphs": [
+              "Nespresso akan menghentikan kapsul kertas kompos rumahan yang diluncurkan di 14 pasar Eropa, dan mengalihkan fokus pada program daur ulang kapsul aluminium [3]. Di Inggris, Podback memperluas jaringan pengumpulan ke lebih dari 200 supermarket Co‑op, di samping kemitraan yang sudah mencakup lebih dari 1.500 lokasi ritel dan 260 pusat daur ulang otoritas lokal [8].",
+              "Langkah‑langkah ini menyoroti dua pendekatan: produsen menyederhanakan material yang didukung, sementara infrastruktur pengumpulan memperbanyak titik akses. Dampaknya terhadap tingkat daur ulang dan preferensi konsumen masih menunggu data lanjutan."
+            ]
+          }
+        ],
+        "conclusion": "Pola yang terlihat: merek besar merapikan struktur modal dan dewan untuk membuka pintu pasar baru, operator spesialti dan bernilai menambah jejak lintas negara, dan produsen kapsul mengonsolidasikan pendekatan material sambil memperluas titik pengumpulan. Sebagian besar langkah masih berupa pengumuman; keberhasilan dan implikasinya akan bergantung pada eksekusi di lapangan dan dukungan infrastruktur setempat.",
+        "recommendations": [
+          {
+            "audience": "Jaringan kopi yang menargetkan Timur Tengah",
+            "action": "Amankan keselarasan tata kelola dan kemitraan lokal sejak awal, meniru langkah penempatan perwakilan investor kunci di dewan ketika masuk pasar baru.",
+            "basis": "Luckin menambah eksekutif Mubadala ke dewan seiring rencana debut kawasan setelah investasi $1 miliar [6][9]."
+          },
+          {
+            "audience": "Produsen kapsul di Inggris",
+            "action": "Selaraskan strategi material dan pengumpulan dengan skema yang tersedia secara luas untuk memudahkan keterlibatan konsumen.",
+            "basis": "Nespresso memfokuskan pada daur ulang aluminium, sementara Podback menambah >200 Co‑op dan bermitra dengan >1.500 lokasi ritel serta 260 pusat otoritas lokal [3][8]."
+          },
+          {
+            "audience": "Roaster yang mencari pasar perdana di luar negeri",
+            "action": "Pertimbangkan Jepang sebagai pintu masuk yang telah dipilih sejumlah grup spesialti internasional, dengan uji tuntas pada biaya dan regulasi lokal.",
+            "basis": "Drop Coffee membuka kafe internasional pertama di Jepang sebagai bagian dari pola yang dicatat media [1]."
+          }
+        ],
+        "source_urls": [
+          "https://worldcoffeeportal.com/news/swedens-drop-coffee-roasters-opens-first-international-cafe-in-japan",
+          "https://worldcoffeeportal.com/news/nespresso-to-phase-out-home-compostable-paper-coffee-capsules",
+          "https://worldcoffeeportal.com/news/coffee-industry-investments-mergers-and-acquisitions-september-2026",
+          "https://worldcoffeeportal.com/news/luckin-coffee-adds-mubadala-executive-to-board-of-directors",
+          "https://worldcoffeeportal.com/news/keurig-dr-pepper-appoints-new-ceo-for-global-coffee-co-spinoff",
+          "https://worldcoffeeportal.com/news/podback-expands-coffee-capsule-recycling-to-over-200-co-op-supermarkets",
+          "https://worldcoffeeportal.com/news/luckin-coffee-eyes-middle-east-debut-after-1bn-mubadala-stake-sale",
+          "https://worldcoffeeportal.com/news/czech-specialty-coffee-group-the-miners-to-enter-seventh-european-market",
+          "https://worldcoffeeportal.com/news/chinas-cotti-coffee-to-kickstart-uk-regional-expansion",
+          "https://worldcoffeeportal.com/news/kopi-kenangan-founder-increases-stake-in-indonesian-coffee-chain"
+        ],
+        "evidence_note": "Sebagian besar materi adalah pengumuman perusahaan tanpa rincian hasil implementasi, sehingga dampak akhirnya belum dapat disimpulkan."
+      },
+      "article_en": {
+        "title": "Global Brands: Capital, Expansion, and Capsules in Late 2026",
+        "summary": "Luckin Coffee is eyeing a Middle East debut after selling a $1bn minority stake to Mubadala and adding a Mubadala executive to its board [9][6]. In capsules, Nespresso will phase out home‑compostable paper pods to focus on aluminum capsule recycling, while Podback has added collection at 200+ Co‑op supermarkets and now works with 1,500+ retail sites and 260 local authority recycling centers in the UK [3][8]. On market moves, Drop Coffee opened its first international café in Japan, The Miners is entering its eighth European market, and Cotti Coffee is kickstarting regional expansion in the UK [1][10][11].",
+        "lead": "Kopi Kenangan signaled an imminent IPO after posting its first annual profit, adding 200+ net new stores and a 62% revenue increase in 2026 [12]. Keurig Dr Pepper named a new CEO for the Global Coffee Co spinoff after a prior appointee joined Heineken [7], and Luckin marked its 30,000th store in February 2026 [5].",
+        "sections": [
+          {
+            "heading": "Capital and governance: setting the stage",
+            "paragraphs": [
+              "Mubadala’s $1bn investment in Luckin and the appointment of its executive to the coffee chain’s board frame why a Middle East debut is back on the table with backing from Abu Dhabi’s sovereign wealth fund [6][9]. Beyond plans, Luckin’s scale—30,000 stores as of February 2026—signals execution capacity, though outcomes of new entries remain to be seen [5].",
+              "Kopi Kenangan looks IPO‑ready after turning its first annual profit alongside strong 2026 expansion (200+ net new stores, revenue up 62%) [12]. At the global corporate level, Keurig Dr Pepper underscored its restructuring path by appointing a new CEO for the Global Coffee Co spinoff after a leadership change [7]."
+            ]
+          },
+          {
+            "heading": "Footprint plays: Tokyo, the UK regions, and beyond",
+            "paragraphs": [
+              "Drop Coffee chose Japan for its first international café; coverage notes it is the latest among international specialty roasters to make their first overseas move there [1]. In Europe, The Miners will enter its eighth market, adding to 36 outlets already open and seven in development [10].",
+              "In the UK, value‑focused Cotti Coffee will kickstart regional expansion after opening its first UK stores in London in February 2026 [11]. Meanwhile, Luckin is preparing a Middle East move after previously exploring the region in 2019 [9]."
+            ]
+          },
+          {
+            "heading": "Capsules and collection: aluminum first, more drop‑off points",
+            "paragraphs": [
+              "Nespresso will phase out home‑compostable paper capsules launched across 14 European markets and refocus on aluminum capsule recycling [3]. In the UK, Podback is expanding access, adding collection at 200+ Co‑op supermarkets alongside partnerships with 1,500+ retail sites and 260 local authority centers [8].",
+              "Taken together, producers are simplifying supported materials while collection networks multiply. Measurable effects on recycling rates and consumer uptake will require follow‑up data."
+            ]
+          }
+        ],
+        "conclusion": "The pattern is clear: brands are tuning capital and boards to unlock new markets, specialty and value operators are widening their cross‑border footprint, and capsule makers are consolidating material strategies as collection infrastructure grows. Most moves are still announcements; execution and local infrastructure will determine what sticks.",
+        "recommendations": [
+          {
+            "audience": "Coffee chains targeting the Middle East",
+            "action": "Secure governance alignment and local partnerships early, mirroring the placement of key investor representation on the board when entering new markets.",
+            "basis": "Luckin added a Mubadala executive to its board alongside plans for a regional debut after a $1bn investment [6][9]."
+          },
+          {
+            "audience": "Capsule producers in the UK",
+            "action": "Match product materials and take‑back to schemes with broad access points to lower participation friction.",
+            "basis": "Nespresso is focusing on aluminum recycling, while Podback added 200+ Co‑ops and partners with 1,500+ retail sites and 260 local authority centers [3][8]."
+          },
+          {
+            "audience": "Roasters planning a first step abroad",
+            "action": "Weigh Japan as a tested entry path among specialty groups, with careful diligence on costs and regulation.",
+            "basis": "Drop Coffee’s first international café is in Japan, noted as a common first move by peers [1]."
+          }
+        ],
+        "source_urls": [
+          "https://worldcoffeeportal.com/news/swedens-drop-coffee-roasters-opens-first-international-cafe-in-japan",
+          "https://worldcoffeeportal.com/news/nespresso-to-phase-out-home-compostable-paper-coffee-capsules",
+          "https://worldcoffeeportal.com/news/coffee-industry-investments-mergers-and-acquisitions-september-2026",
+          "https://worldcoffeeportal.com/news/luckin-coffee-adds-mubadala-executive-to-board-of-directors",
+          "https://worldcoffeeportal.com/news/keurig-dr-pepper-appoints-new-ceo-for-global-coffee-co-spinoff",
+          "https://worldcoffeeportal.com/news/podback-expands-coffee-capsule-recycling-to-over-200-co-op-supermarkets",
+          "https://worldcoffeeportal.com/news/luckin-coffee-eyes-middle-east-debut-after-1bn-mubadala-stake-sale",
+          "https://worldcoffeeportal.com/news/czech-specialty-coffee-group-the-miners-to-enter-seventh-european-market",
+          "https://worldcoffeeportal.com/news/chinas-cotti-coffee-to-kickstart-uk-regional-expansion",
+          "https://worldcoffeeportal.com/news/kopi-kenangan-founder-increases-stake-in-indonesian-coffee-chain"
+        ],
+        "evidence_note": "Most items are company announcements without disclosed post‑implementation results, so downstream impact cannot yet be assessed."
+      },
+      "input_sources": [
+        {
+          "id": "1",
+          "url": "https://worldcoffeeportal.com/news/swedens-drop-coffee-roasters-opens-first-international-cafe-in-japan",
+          "title": "Sweden’s Drop Coffee Roasters opens first international café in Japan",
+          "source": "worldcoffeeportal.com",
+          "published_at": "2026-10-05T00:00:00.000Z"
+        },
+        {
+          "id": "2",
+          "url": "https://worldcoffeeportal.com/news/the-week-in-coffee-28-september-4-october-2026",
+          "title": "The Week in Coffee, 28 September - 4 October 2026",
+          "source": "worldcoffeeportal.com",
+          "published_at": "2026-10-05T00:00:00.000Z"
+        },
+        {
+          "id": "3",
+          "url": "https://worldcoffeeportal.com/news/nespresso-to-phase-out-home-compostable-paper-coffee-capsules",
+          "title": "Nespresso to phase out home compostable paper coffee capsules",
+          "source": "worldcoffeeportal.com",
+          "published_at": "2026-10-02T00:00:00.000Z"
+        },
+        {
+          "id": "4",
+          "url": "https://stapo.id/news/novan-kopi-jalan-terus-bisnis",
+          "title": "Novan \"Kopi Jalan Terus\": Bisnis Kopi dari Zaman Dulu Sampai Sekarang Enggak Akan Mati - Stapo.id",
+          "source": "stapo.id",
+          "published_at": "2026-10-01T00:00:00.000Z"
+        },
+        {
+          "id": "5",
+          "url": "https://worldcoffeeportal.com/news/coffee-industry-investments-mergers-and-acquisitions-september-2026",
+          "title": "Coffee industry investments, mergers and acquisitions: September 2026",
+          "source": "worldcoffeeportal.com",
+          "published_at": "2026-10-01T00:00:00.000Z"
+        },
+        {
+          "id": "6",
+          "url": "https://worldcoffeeportal.com/news/luckin-coffee-adds-mubadala-executive-to-board-of-directors",
+          "title": "Luckin Coffee adds Mubadala executive to Board of Directors",
+          "source": "worldcoffeeportal.com",
+          "published_at": "2026-10-01T00:00:00.000Z"
+        },
+        {
+          "id": "7",
+          "url": "https://worldcoffeeportal.com/news/keurig-dr-pepper-appoints-new-ceo-for-global-coffee-co-spinoff",
+          "title": "Keurig Dr Pepper appoints new CEO for Global Coffee Co spinoff",
+          "source": "worldcoffeeportal.com",
+          "published_at": "2026-10-01T00:00:00.000Z"
+        },
+        {
+          "id": "8",
+          "url": "https://worldcoffeeportal.com/news/podback-expands-coffee-capsule-recycling-to-over-200-co-op-supermarkets",
+          "title": "Podback expands coffee capsule recycling to over 200 Co-op supermarkets",
+          "source": "worldcoffeeportal.com",
+          "published_at": "2026-09-29T00:00:00.000Z"
+        },
+        {
+          "id": "9",
+          "url": "https://worldcoffeeportal.com/news/luckin-coffee-eyes-middle-east-debut-after-1bn-mubadala-stake-sale",
+          "title": "Luckin Coffee eyes Middle East debut after $1bn Mubadala stake sale",
+          "source": "worldcoffeeportal.com",
+          "published_at": "2026-09-29T00:00:00.000Z"
+        },
+        {
+          "id": "10",
+          "url": "https://worldcoffeeportal.com/news/czech-specialty-coffee-group-the-miners-to-enter-seventh-european-market",
+          "title": "Czech specialty coffee group The Miners to enter eighth European market",
+          "source": "worldcoffeeportal.com",
+          "published_at": "2026-09-29T00:00:00.000Z"
+        },
+        {
+          "id": "11",
+          "url": "https://worldcoffeeportal.com/news/chinas-cotti-coffee-to-kickstart-uk-regional-expansion",
+          "title": "China’s Cotti Coffee to kickstart UK regional expansion",
+          "source": "worldcoffeeportal.com",
+          "published_at": "2026-09-25T00:00:00.000Z"
+        },
+        {
+          "id": "12",
+          "url": "https://worldcoffeeportal.com/news/kopi-kenangan-founder-increases-stake-in-indonesian-coffee-chain",
+          "title": "Kopi Kenangan founder gives clearest indication yet IPO is imminent",
+          "source": "worldcoffeeportal.com",
+          "published_at": "2026-09-24T00:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "harga-pasar",
+      "cluster_name": "Harga & Pasar",
+      "period_days": 30,
+      "generated_at": "2026-10-07T12:32:08.977Z",
+      "status": "ai_generated",
+      "fingerprint": "e0d08113f03f22ebc72eaa8bcad5e21abb977e52a37b1d261a5b0ac257565e16",
+      "article": {
+        "title": "Harga kopi: dolar melemah, sinyal Brasil tarik‑ulur (awal Oktober 2026)",
+        "summary": "Kontrak arabika Desember 2026 ditutup di $288,75 per pon pada 2 Oktober, naik 0,21% karena pelemahan dolar AS dan stok di gudang bursa yang rendah [1]. Sehari sebelumnya, kontrak yang sama turun 0,84% ke $288,25 per pon saat indeks dolar menguat [2]. Di luar faktor mata uang, pasar menimbang risiko kekeringan pada fase pembungaan di Brasil dan kenaikan estimasi produksi resmi yang menahan reli [3][5].",
+        "lead": "Selain pengaruh nilai tukar, laporan menyebut stok kopi di gudang bursa sedang rendah, sementara prospek hingga akhir tahun makin jadi sorotan [1][8]. Di sisi suplai, sinyal dari Brasil bercampur: kekeringan pada fase pembungaan menambah risiko, namun estimasi resmi yang dinaikkan membatasi kenaikan harga [3][5].",
+        "sections": [
+          {
+            "heading": "Mata uang masih jadi tuas harga",
+            "paragraphs": [
+              "Pergerakan dua hari beruntun memperlihatkan seberapa cepat dolar AS memengaruhi arabika. 1 Oktober, penguatan indeks dolar menekan kontrak Desember 2026 hingga turun 0,84% ke $288,25 per pon [2]. Keesokan harinya, pelemahan dolar membantu harga pulih 0,21% ke $288,75 per pon, diperkuat komentar soal stok bursa yang tipis [1]. Nada serupa juga muncul di liputan lain yang menyebut pelemahan dolar memberi dorongan positif ke harga kopi [4]."
+            ]
+          },
+          {
+            "heading": "Brasil: data resmi vs risiko cuaca",
+            "paragraphs": [
+              "Kabar dari Brasil berjalan dua arah. Conab menaikkan estimasi produksi, yang dilaporkan memicu koreksi harga dan menambah tekanan dari sisi pasokan [5][7]. Setelah nada optimistis itu, harga disebut sempat terkoreksi, menandakan pasar cepat merespons sinyal suplai resmi [6].",
+              "Di sisi lain, laporan pasar juga menyoroti kondisi kering di Brasil pada tahap pembungaan untuk musim 2026/27—fase krusial yang jika terganggu bisa mengurangi potensi panen. Ini menjadi penopang harga ketika berita cuaca memburuk [3]. Kombinasi estimasi produksi yang naik dan risiko cuaca membuat reli rapuh dan mudah dibalik oleh headline berikutnya."
+            ]
+          },
+          {
+            "heading": "Stok bursa dan fokus ke akhir tahun",
+            "paragraphs": [
+              "Selain faktor makro dan Brasil, rendahnya stok di gudang bursa ikut disebut sebagai alasan aksi beli menutup posisi pendek ketika dolar melemah [1]. Di saat yang sama, prospek hingga akhir tahun 2026 disebut semakin menjadi sorotan pelaku pasar—tetapi tanpa angka baru yang tegas, narasi ini lebih berupa penjagaan posisi ketimbang sinyal tren pasti [8]."
+            ]
+          }
+        ],
+        "conclusion": "Awal Oktober memperlihatkan pasar yang sensitif: dolar mengarahkan napas jangka pendek, sementara Brasil memberi sinyal tarik‑ulur antara potensi panen lebih besar dan risiko cuaca. Dalam keadaan seperti ini, kenaikan cenderung bersifat taktis dan mudah berbalik, sampai ada data fisik yang lebih solid.",
+        "recommendations": [
+          {
+            "audience": "Roaster dan importir",
+            "action": "Pertimbangkan pembelian bertahap atau lindung nilai sebagian saat pelemahan dolar memicu reli, sambil memantau rilis Conab dan kabar cuaca Brasil yang bisa membalik arah cepat.",
+            "basis": "Harga naik saat dolar melemah dengan stok bursa rendah [1][4], turun saat dolar menguat [2], serta bereaksi terhadap estimasi produksi Brasil dan kabar koreksi setelahnya [5][6]."
+          },
+          {
+            "audience": "Trader berjangka",
+            "action": "Prioritaskan pemantauan DXY dan headline produksi Brasil; gunakan ukuran posisi konservatif mengingat stok bursa yang rendah bisa memperbesar pergerakan harga.",
+            "basis": "Harga peka terhadap naik‑turunnya dolar [1][2], komentar tentang stok bursa rendah [1], dan tekanan dari prospek produksi Brasil [5][7]."
+          },
+          {
+            "audience": "Produsen/eksportir Brasil",
+            "action": "Tinjau peluang penjualan forward saat harga menguat, dengan kesadaran bahwa risiko kekeringan menopang harga namun estimasi produksi yang dinaikkan bisa membatasi reli.",
+            "basis": "Risiko cuaca pada fase pembungaan [3] berlawanan arah dengan estimasi produksi yang dinaikkan dan sinyal koreksi pasar [5][6]."
+          }
+        ],
+        "source_urls": [
+          "https://vibiznews.com/index.php/2026/10/05/rekomendasi-harga-kopi-arabika-5-oktober-2026",
+          "https://vibiznews.com/index.php/2026/10/02/rekomendasi-harga-kopi-arabika-2-oktober-2026",
+          "https://vibiznews.com/index.php/2026/10/01/harga-kopi-arabika-1-oktober-2026-merosot-tertekan-penguatan-dolar-as",
+          "https://kopitime.id/dolar-amerika-melemah-harga-kopi-mendapat-dorongan-positif-di-pasar-1",
+          "https://kopitime.id/conab-naikkan-estimasi-produksi-brasil-harga-kopi-mengalami-penurunan-1",
+          "https://kopitime.id/harga-kopi-terkoreksi-setelah-conab-optimistis-terhadap-produksi-brasil-1",
+          "https://kopitime.id/harga-kopi-tertekan-oleh-prospek-peningkatan-produksi-brasil-1",
+          "https://kopitime.id/prospek-harga-kopi-hingga-akhir-tahun-2026-semakin-menjadi-sorotan-1"
+        ],
+        "evidence_note": "Sebagian materi berupa ringkasan/judul blog; angka harga harian hanya tersedia dari laporan Vibiznews."
+      },
+      "article_en": {
+        "title": "Coffee prices: softer dollar, Brazil signals pull both ways (early Oct 2026)",
+        "summary": "December 2026 arabica settled at $288.75/lb on 2 October, up 0.21% as a weaker US dollar and thin exchange inventories provided support [1]. The day before, the same contract fell 0.84% to $288.25/lb as the dollar index strengthened [2]. Beyond FX, the market weighed dry weather during Brazil’s flowering stage and a higher official production estimate that capped rallies [3][5].",
+        "lead": "Beyond currencies, reports flagged low certified stocks at exchange warehouses, while year‑end prospects drew more attention from market participants [1][8]. On the supply side, Brazil’s signals were mixed: flowering‑stage dryness added risk, but a raised official crop estimate limited upside [3][5].",
+        "sections": [
+          {
+            "heading": "The dollar is still steering near‑term moves",
+            "paragraphs": [
+              "Back‑to‑back sessions showed how quickly FX swings translate into arabica. On 1 October, a stronger dollar pushed the December 2026 contract down 0.84% to $288.25/lb [2]. A day later, a softer dollar helped prices rebound 0.21% to $288.75/lb, with commentary also citing thin exchange inventories [1]. Other coverage echoed that a weaker greenback has been a tailwind for coffee prices [4]."
+            ]
+          },
+          {
+            "heading": "Brazil: official estimate vs. weather risk",
+            "paragraphs": [
+              "News from Brazil cut both ways. Conab raised its production estimate, reported as a catalyst for a price correction and added supply pressure [5][7]. After that optimistic tone, prices were said to have pulled back, underscoring how quickly the market reacts to official supply signals [6].",
+              "At the same time, market reports highlighted dry conditions during Brazil’s critical flowering phase for the 2026/27 crop—an element that can underpin prices when weather turns adverse [3]. With a higher estimate on paper and weather risk in the field, rallies remain fragile and headline‑driven."
+            ]
+          },
+          {
+            "heading": "Exchange stocks and a watchful eye on year‑end",
+            "paragraphs": [
+              "Alongside macro and Brazil, low exchange stocks were cited as a reason for short‑covering when the dollar eased [1]. Meanwhile, outlooks into late 2026 are getting more attention—but without fresh, decisive figures, this is more about positioning than a confirmed trend signal [8]."
+            ]
+          }
+        ],
+        "conclusion": "Early October shows a sensitive market: the dollar dictates short‑term breathing room, while Brazil sends mixed signals between bigger crop potential and weather risk. In this setup, up‑moves look tactical and reversible until firmer physical data arrives.",
+        "recommendations": [
+          {
+            "audience": "Roasters and importers",
+            "action": "Consider scaling in purchases or partial hedges on dollar‑led rallies while tracking Conab releases and Brazil weather that can flip direction quickly.",
+            "basis": "Prices rose on a weaker dollar with low exchange stocks [1][4], fell on a stronger dollar [2], and reacted to Brazil’s higher estimate and subsequent pullback headlines [5][6]."
+          },
+          {
+            "audience": "Futures traders",
+            "action": "Prioritize monitoring the DXY and Brazil production headlines; keep position sizes conservative as low exchange stocks can amplify moves.",
+            "basis": "Prices are sensitive to dollar swings [1][2], commentary notes low exchange stocks [1], and supply pressure from Brazil’s production outlook [5][7]."
+          },
+          {
+            "audience": "Brazilian producers/exporters",
+            "action": "Review forward sales on strength, recognizing dryness risk can support prices while the raised production estimate can cap rallies.",
+            "basis": "Flowering‑stage weather risk [3] versus the higher official estimate and related market pullback [5][6]."
+          }
+        ],
+        "source_urls": [
+          "https://vibiznews.com/index.php/2026/10/05/rekomendasi-harga-kopi-arabika-5-oktober-2026",
+          "https://vibiznews.com/index.php/2026/10/02/rekomendasi-harga-kopi-arabika-2-oktober-2026",
+          "https://vibiznews.com/index.php/2026/10/01/harga-kopi-arabika-1-oktober-2026-merosot-tertekan-penguatan-dolar-as",
+          "https://kopitime.id/dolar-amerika-melemah-harga-kopi-mendapat-dorongan-positif-di-pasar-1",
+          "https://kopitime.id/conab-naikkan-estimasi-produksi-brasil-harga-kopi-mengalami-penurunan-1",
+          "https://kopitime.id/harga-kopi-terkoreksi-setelah-conab-optimistis-terhadap-produksi-brasil-1",
+          "https://kopitime.id/harga-kopi-tertekan-oleh-prospek-peningkatan-produksi-brasil-1",
+          "https://kopitime.id/prospek-harga-kopi-hingga-akhir-tahun-2026-semakin-menjadi-sorotan-1"
+        ],
+        "evidence_note": "Some items are blog summaries/headlines; daily price figures are available from Vibiznews reports only."
+      },
+      "input_sources": [
+        {
+          "id": "1",
+          "url": "https://kopitime.id/dolar-amerika-melemah-harga-kopi-mendapat-dorongan-positif-di-pasar-1",
+          "title": "Dolar Amerika Melemah, Harga Kopi Mendapat Dorongan Positif di Pasar - KopiTime",
+          "source": "kopitime.id",
+          "published_at": "2026-10-05T00:00:00.000Z"
+        },
+        {
+          "id": "2",
+          "url": "https://kopitime.id/kenapa-kopi-kembali-dalam-mode-bullish-dan-apa-penyebabnya-bedah-tuntas-pasar-komoditas-kopi",
+          "title": "Kenapa Kopi Kembali dalam Mode Bullish dan Apa Penyebabnya: Bedah Tuntas Pasar Komoditas Kopi - KopiTime",
+          "source": "kopitime.id",
+          "published_at": "2026-10-05T00:00:00.000Z"
+        },
+        {
+          "id": "3",
+          "url": "https://kopitime.id/mengapa-pasar-kopi-kembali-bullish-setelah-mengalami-tekanan-1",
+          "title": "Mengapa Pasar Kopi Kembali Bullish Setelah Mengalami Tekanan - KopiTime",
+          "source": "kopitime.id",
+          "published_at": "2026-10-05T00:00:00.000Z"
+        },
+        {
+          "id": "4",
+          "url": "https://vibiznews.com/index.php/2026/10/05/rekomendasi-harga-kopi-arabika-5-oktober-2026",
+          "title": "Rekomendasi Harga Kopi Arabika 5 Oktober 2026 - Vibiznews.com",
+          "source": "vibiznews.com",
+          "published_at": "2026-10-05T00:00:00.000Z"
+        },
+        {
+          "id": "5",
+          "url": "https://vibiznews.com/index.php/2026/10/02/rekomendasi-harga-kopi-arabika-2-oktober-2026",
+          "title": "Rekomendasi Harga Kopi Arabika 2 Oktober 2026 - Vibiznews.com",
+          "source": "vibiznews.com",
+          "published_at": "2026-10-01T00:00:00.000Z"
+        },
+        {
+          "id": "6",
+          "url": "https://vibiznews.com/index.php/2026/10/01/harga-kopi-arabika-1-oktober-2026-merosot-tertekan-penguatan-dolar-as",
+          "title": "Harga Kopi Arabika 1 Oktober 2026 Merosot Tertekan Penguatan Dolar AS - Vibiznews.com",
+          "source": "vibiznews.com",
+          "published_at": "2026-10-01T00:00:00.000Z"
+        },
+        {
+          "id": "7",
+          "url": "https://kopitime.id/prospek-harga-kopi-hingga-akhir-tahun-2026-semakin-menjadi-sorotan-1",
+          "title": "Prospek Harga Kopi hingga Akhir Tahun 2026 Semakin Menjadi Sorotan - KopiTime",
+          "source": "kopitime.id",
+          "published_at": "2026-09-25T00:00:00.000Z"
+        },
+        {
+          "id": "8",
+          "url": "https://kopitime.id/harga-kopi-tertekan-oleh-prospek-peningkatan-produksi-brasil-1",
+          "title": "Harga Kopi Tertekan oleh Prospek Peningkatan Produksi Brasil - KopiTime",
+          "source": "kopitime.id",
+          "published_at": "2026-09-24T00:00:00.000Z"
+        },
+        {
+          "id": "9",
+          "url": "https://kopitime.id/conab-naikkan-estimasi-produksi-brasil-harga-kopi-mengalami-penurunan-1",
+          "title": "Conab Naikkan Estimasi Produksi Brasil, Harga Kopi Mengalami Penurunan - KopiTime",
+          "source": "kopitime.id",
+          "published_at": "2026-09-24T00:00:00.000Z"
+        },
+        {
+          "id": "10",
+          "url": "https://kopitime.id/harga-kopi-terkoreksi-setelah-conab-optimistis-terhadap-produksi-brasil-1",
+          "title": "Harga kopi terkoreksi setelah Conab optimistis terhadap produksi Brasil - KopiTime",
+          "source": "kopitime.id",
+          "published_at": "2026-09-24T00:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "event-kompetisi",
+      "cluster_name": "Event & Kompetisi",
+      "period_days": 30,
+      "generated_at": "2026-10-07T12:32:08.977Z",
+      "status": "ai_generated",
+      "fingerprint": "4b383424b4ba8d941a00b7cf4332a980aea6c781b58782d757565adbb9b441d0",
+      "article": {
+        "title": "Oktober Ramai Event Kopi: 10.000 cangkir gratis, etalase ekspor, dan aktivasi lintas industri",
+        "summary": "Lebih dari 10.000 kopi dibagikan gratis di empat kota pada perayaan Hari Kopi Sedunia 2026 oleh TOP Coffee [1]. Di waktu yang sama, rangkaian pameran dari Depok, Bitung, hingga Kupang, serta sesi cicip kopi di Roma, ikut memadati kalender awal Oktober [7][3][5][8]. Polanya: perayaan publik, etalase dagang, dan kolaborasi lintas sektor yang menggunakan kopi sebagai pengait audiens.",
+        "lead": "TEI 2026 menyiapkan zona KoTeKa (kopi, teh, kakao) sebagai panggung promosi produk Indonesia, meski klaim “siap mendunia” masih berupa positioning acara [2]. Di tingkat daerah, FCE 2026 mengundang pelaku kopi NTT untuk menaikkan kualitas dan melihat peluang ekspor, sementara Jateng membuka pameran virtual sejarah kopi sebagai edukasi publik [6][9].",
+        "sections": [
+          {
+            "heading": "Awal Oktober jadi panggung kopi",
+            "paragraphs": [
+              "Perayaan Hari Kopi Sedunia 2026 diramaikan pembagian lebih dari 10.000 cangkir kopi gratis oleh TOP Coffee di empat kota [1]. Di Roma, ada Coffee Tasting Experience yang menampilkan stan negara, menunjukkan momen perayaan juga hadir di Eropa [8]. Di tingkat kota, pembukaan Bitung Market & Expo FPSL juga menonjolkan sajian kopi saat pejabat daerah mencicipi Americano es pada hari pembukaan [3]. Rangkaian ini menandai lonjakan aktivitas publik bertema kopi di awal Oktober tanpa menyiratkan perubahan selera pasar tertentu."
+            ]
+          },
+          {
+            "heading": "Dari etalase dagang ke ajakan ekspor",
+            "paragraphs": [
+              "TEI 2026 menghadirkan zona KoTeKa untuk menyorot kopi, teh, dan kakao Indonesia; narasi “siap mendunia” adalah bahasa promosi acara, bukan data kinerja ekspor [2]. Di NTT, FCE 2026 disebut sebagai momentum UMKM memperluas pasar kopi bersama komoditas lain [5]. Pada hari ketiga FCE, pelaku kopi diajak fokus pada peningkatan kualitas dan membuka peluang ekspor—sebuah ajakan dan target, bukan capaian langsung [6]. Sisi edukasi publik turut berjalan lewat pameran virtual arsip perjalanan kopi di Jawa Tengah, yang memperkaya konteks sejarah tanpa klaim komersial [9]."
+            ]
+          },
+          {
+            "heading": "Aktivasi lintas industri dan komunitas",
+            "paragraphs": [
+              "Di luar panggung kopi murni, Tanamera menyatakan terus membawa kopi spesialti Indonesia ke hajatan otomotif GJAW lewat kolaborasi brand, dengan contoh kemitraan pada 2024–2025; ini adalah klaim perusahaan tentang aktivitas mereka [10]. Tema kopi juga dipakai pada seminar safety riding “Secangkir Kopi Sejuta Mimpi” yang menggaet sekitar 150 pelajar SMK di Tangerang—lebih ke edukasi berkendara dengan kemasan ramah komunitas ketimbang acara industri kopi [4]. Pola ini menunjukkan kopi dipakai sebagai jembatan ke audiens baru, namun tidak memberi bukti dampak komersial langsung."
+            ]
+          },
+          {
+            "heading": "Sorotan varietas di festival lokal",
+            "paragraphs": [
+              "Di Depok Town Square, Arabika Garut Yellow Bourbon dilaporkan menjadi varietas paling diburu di stan Warung Biji pada DETOS Coffee & Snack Festival 2026 [7]. Ini adalah potret preferensi pengunjung pada satu festival, berguna sebagai sinyal kurasi produk, tapi tidak cukup untuk menyimpulkan tren nasional."
+            ]
+          }
+        ],
+        "conclusion": "Di Oktober 2026, kopi tampil di banyak panggung: perayaan publik, etalase promosi dagang, lintas industri, dan festival lokal. Data yang tersedia lebih banyak menunjukkan intensitas acara daripada dampaknya; manfaat praktisnya adalah visibilitas dan jejaring, sementara hasil komersial atau perubahan selera belum terukur.",
+        "recommendations": [
+          {
+            "audience": "UMKM dan roaster daerah",
+            "action": "Gunakan momen pameran/ekspo untuk sesi cupping terkurasi dan perbaikan mutu berkelanjutan seperti ajakan pada FCE; dokumentasikan feedback pengunjung secara sistematis.",
+            "basis": "FCE mendorong peningkatan kualitas dan melihat peluang ekspor; ini ajakan dan sarana belajar, bukan hasil instan [6][5]."
+          },
+          {
+            "audience": "Penyelenggara pameran dan dinas terkait",
+            "action": "Sediakan klinik kesiapan ekspor dan materi edukasi sejarah/asal-usul untuk menambah nilai acara tanpa janji berlebihan.",
+            "basis": "Zona KoTeKa TEI bersifat promosi, sementara pameran virtual Jateng memberi konteks edukatif yang melengkapi agenda dagang [2][9]."
+          },
+          {
+            "audience": "Brand kopi yang ingin menjangkau audiens baru",
+            "action": "Uji aktivasi lintas industri atau komunitas di event non-kopi, ukur keterlibatan sederhana (traffic stan, signup), tanpa mengasumsikan dampak penjualan langsung.",
+            "basis": "Klaim kolaborasi Tanamera di GJAW dan seminar bertema kopi untuk pelajar menunjukkan pintu masuk ke audiens non-kopi [10][4]."
+          }
+        ],
+        "source_urls": [
+          "https://www.metrotvnews.com/read/kELCyjVJ-rayakan-hari-kopi-sedunia-top-coffee-berikan-rasa-serasadicafe-ke-4-kota-dan-bagikan-lebih-dari-10-000-kopi-gratis",
+          "https://www.vibizmedia.com/index.php/2026/10/06/tei-2026-hadirkan-zona-koteka-kopi-teh-dan-kakao-indonesia-siap-mendunia/",
+          "https://manado.tribunnews.com/bitung/1896013/pembukaan-bitung-market-dan-expo-fpsl-hengky-dan-randito-nikmati-kopi-americano-ice",
+          "https://www.motorplus-online.com/read/254418590/wms-gelar-seminar-safety-riding-secangkir-kopi-sejuta-mimpi-diramaikan-ratusan-pelajar-gen-z",
+          "https://www.detikindonesia.co.id/fce-2026-jadi-momentum-umkm-ntt-perluas-pasar-kopi-wastra-dan-produk-olahan/",
+          "https://kupang.tribunnews.com/provinsi-ntt/982088/fce-2026-hari-ketiga-penggiat-kopi-ntt-diajak-tingkatkan-kualitas-hingga-buka-peluang-ekspor",
+          "https://stapo.id/news/garut-yellow-bourbon-jadi-primadona",
+          "https://antaranews.com/berita/5767883/potret-perayaan-hari-kopi-internasional-di-roma",
+          "https://jatengprov.go.id/publik/membaca-memori-masa-lalu-pameran-virtual-arsip-era-kolonial-dan-perjalanan-kopi-di-jawa-tengah/",
+          "https://www.tanameracoffee.co.id/news/rfbgao4rsu"
+        ],
+        "evidence_note": "Sebagian sumber adalah pengumuman atau liputan singkat tanpa data pengunjung/transaksi, sehingga analisis fokus pada pola acara, bukan dampak komersial."
+      },
+      "article_en": {
+        "title": "October’s Coffee Events: 10,000 free cups, export showcases, and cross‑industry activations",
+        "summary": "TOP Coffee handed out more than 10,000 free cups across four cities for International Coffee Day 2026 [1]. At the same time, exhibitions from Depok, Bitung, and Kupang, plus a tasting session in Rome, crowded the early‑October calendar [7][3][5][8]. The pattern: public celebrations, trade showcases, and cross‑sector tie‑ins using coffee as an audience hook.",
+        "lead": "TEI 2026 set up a KoTeKa zone (coffee, tea, cocoa) as a promotion stage for Indonesian products, while the “ready to go global” line is event positioning rather than proof of export outcomes [2]. Regionally, FCE 2026 invited NTT coffee actors to focus on quality and explore export opportunities, and Central Java launched a virtual archive exhibition on the history of coffee as public education [6][9].",
+        "sections": [
+          {
+            "heading": "Early October turns into a coffee stage",
+            "paragraphs": [
+              "International Coffee Day 2026 saw TOP Coffee distribute more than 10,000 free cups in four cities [1]. In Rome, a Coffee Tasting Experience featured national booths, showing the celebration also played out in Europe [8]. Locally, the Bitung Market & Expo FPSL opening highlighted coffee being served as city officials enjoyed iced Americanos on day one [3]. Together, these signal a spike in coffee‑themed public activity without implying any specific shift in consumer taste."
+            ]
+          },
+          {
+            "heading": "From trade floors to export prompts",
+            "paragraphs": [
+              "TEI 2026’s KoTeKa zone spotlighted coffee, tea, and cocoa from Indonesia; “ready to go global” reads as promotional framing, not export performance data [2]. In NTT, FCE 2026 was billed as momentum for MSMEs to widen coffee markets alongside other goods [5]. On day three, participants were urged to improve quality and look at export avenues—an invitation and target, not an immediate achievement [6]. Public education also featured via Central Java’s virtual archive show on coffee’s journey, which adds context without commercial claims [9]."
+            ]
+          },
+          {
+            "heading": "Cross‑industry and community activations",
+            "paragraphs": [
+              "Beyond pure coffee stages, Tanamera says it continues bringing Indonesian specialty coffee to the GJAW auto show through brand collaborations, citing partnerships in 2024–2025; this is the company’s own account of its activity [10]. A safety riding seminar branded with a coffee theme engaged about 150 vocational students in Tangerang—more road‑safety education with a friendly wrapper than a coffee‑industry event [4]. These examples show coffee as a bridge to new audiences, with no direct evidence of commercial impact."
+            ]
+          },
+          {
+            "heading": "Variety spotlights at local festivals",
+            "paragraphs": [
+              "At Depok Town Square, the Arabica Garut Yellow Bourbon was reported as the most sought‑after variety at Warung Biji’s booth during the DETOS Coffee & Snack Festival 2026 [7]. It’s a useful snapshot for curation, but not enough to infer a national trend."
+            ]
+          }
+        ],
+        "conclusion": "In October 2026, coffee appeared on multiple stages: public celebrations, trade promotion, cross‑industry tie‑ins, and local festivals. Available coverage shows activity volume more than measurable impact; visibility and networking are the near‑term takeaways, while commercial outcomes or taste shifts remain unquantified.",
+        "recommendations": [
+          {
+            "audience": "MSMEs and regional roasters",
+            "action": "Use fairs/expos for curated cuppings and ongoing quality work as prompted at FCE; log visitor feedback systematically.",
+            "basis": "FCE emphasized quality improvements and exploring export options—an invitation to learn, not instant results [6][5]."
+          },
+          {
+            "audience": "Event organizers and local agencies",
+            "action": "Offer export‑readiness clinics and history/origin education to add value without overpromising.",
+            "basis": "TEI’s KoTeKa serves promotion, while Central Java’s virtual show adds educational depth to complement trade agendas [2][9]."
+          },
+          {
+            "audience": "Coffee brands seeking new audiences",
+            "action": "Pilot cross‑industry or community activations at non‑coffee events, track simple engagement (booth traffic, signups), and avoid assuming direct sales impact.",
+            "basis": "Tanamera’s account of GJAW collaborations and the coffee‑themed safety seminar illustrate such entry points [10][4]."
+          }
+        ],
+        "source_urls": [
+          "https://www.metrotvnews.com/read/kELCyjVJ-rayakan-hari-kopi-sedunia-top-coffee-berikan-rasa-serasadicafe-ke-4-kota-dan-bagikan-lebih-dari-10-000-kopi-gratis",
+          "https://www.vibizmedia.com/index.php/2026/10/06/tei-2026-hadirkan-zona-koteka-kopi-teh-dan-kakao-indonesia-siap-mendunia/",
+          "https://manado.tribunnews.com/bitung/1896013/pembukaan-bitung-market-dan-expo-fpsl-hengky-dan-randito-nikmati-kopi-americano-ice",
+          "https://www.motorplus-online.com/read/254418590/wms-gelar-seminar-safety-riding-secangkir-kopi-sejuta-mimpi-diramaikan-ratusan-pelajar-gen-z",
+          "https://kupang.tribunnews.com/provinsi-ntt/982088/fce-2026-hari-ketiga-penggiat-kopi-ntt-diajak-tingkatkan-kualitas-hingga-buka-peluang-ekspor",
+          "https://stapo.id/news/garut-yellow-bourbon-jadi-primadona",
+          "https://antaranews.com/berita/5767883/potret-perayaan-hari-kopi-internasional-di-roma",
+          "https://www.tanameracoffee.co.id/news/rfbgao4rsu"
+        ],
+        "evidence_note": "Several items are announcements or brief reports without visitor/transaction data, so the analysis focuses on event patterns rather than commercial impact."
+      },
+      "input_sources": [
+        {
+          "id": "1",
+          "url": "https://www.metrotvnews.com/read/kELCyjVJ-rayakan-hari-kopi-sedunia-top-coffee-berikan-rasa-serasadicafe-ke-4-kota-dan-bagikan-lebih-dari-10-000-kopi-gratis",
+          "title": "Rayakan Hari Kopi Sedunia, TOP Coffee Berikan Rasa #SerasaDiCafe ke 4 Kota dan Bagikan Lebih dari 10.000 Kopi Gratis - MetroTVNews.com",
+          "source": "MetroTVNews.com",
+          "published_at": "Tue, 06 Oct 2026 12:29:43 GMT"
+        },
+        {
+          "id": "2",
+          "url": "https://www.vibizmedia.com/index.php/2026/10/06/tei-2026-hadirkan-zona-koteka-kopi-teh-dan-kakao-indonesia-siap-mendunia/",
+          "title": "TEI 2026 Hadirkan Zona KoTeKa, Kopi, Teh, dan Kakao Indonesia Siap Mendunia - vibizmedia.com",
+          "source": "vibizmedia.com",
+          "published_at": "Tue, 06 Oct 2026 11:12:41 GMT"
+        },
+        {
+          "id": "3",
+          "url": "https://manado.tribunnews.com/bitung/1896013/pembukaan-bitung-market-dan-expo-fpsl-hengky-dan-randito-nikmati-kopi-americano-ice",
+          "title": "Pembukaan Bitung Market dan Expo FPSL, Hengky dan Randito Nikmati Kopi Americano Ice",
+          "source": "Tribunmanado.co.id",
+          "published_at": "2026-10-06 04:36:13"
+        },
+        {
+          "id": "4",
+          "url": "https://www.motorplus-online.com/read/254418590/wms-gelar-seminar-safety-riding-secangkir-kopi-sejuta-mimpi-diramaikan-ratusan-pelajar-gen-z",
+          "title": "WMS Gelar Seminar Safety Riding ‘Secangkir Kopi Sejuta Mimpi’, Diramaikan Ratusan Pelajar Gen Z",
+          "source": "Motorplus-online",
+          "published_at": "2026-10-05 09:16:35"
+        },
+        {
+          "id": "5",
+          "url": "https://www.detikindonesia.co.id/fce-2026-jadi-momentum-umkm-ntt-perluas-pasar-kopi-wastra-dan-produk-olahan/",
+          "title": "FCE 2026 Jadi Momentum UMKM NTT Perluas Pasar Kopi, Wastra, dan Produk Olahan - detikindonesia.co.id",
+          "source": "detikindonesia.co.id",
+          "published_at": "Mon, 05 Oct 2026 08:29:00 GMT"
+        },
+        {
+          "id": "6",
+          "url": "https://kupang.tribunnews.com/provinsi-ntt/982088/fce-2026-hari-ketiga-penggiat-kopi-ntt-diajak-tingkatkan-kualitas-hingga-buka-peluang-ekspor",
+          "title": "FCE 2026 Hari Ketiga, Penggiat Kopi NTT Diajak Tingkatkan Kualitas hingga Buka Peluang Ekspor",
+          "source": "Tribun News",
+          "published_at": "2026-10-04 07:44:57"
+        },
+        {
+          "id": "7",
+          "url": "https://stapo.id/news/garut-yellow-bourbon-jadi-primadona",
+          "title": "Garut Yellow Bourbon Jadi Primadona Warung Biji di Detos Coffee & Snack Festival 2026 - Stapo.id",
+          "source": "stapo.id",
+          "published_at": "2026-10-01T00:00:00.000Z"
+        },
+        {
+          "id": "8",
+          "url": "https://antaranews.com/berita/5767883/potret-perayaan-hari-kopi-internasional-di-roma",
+          "title": "Potret perayaan Hari Kopi Internasional di Roma",
+          "source": "antaranews.com",
+          "published_at": "2026-10-01T00:00:00.000Z"
+        },
+        {
+          "id": "9",
+          "url": "https://jatengprov.go.id/publik/membaca-memori-masa-lalu-pameran-virtual-arsip-era-kolonial-dan-perjalanan-kopi-di-jawa-tengah/",
+          "title": "Membaca Memori Masa Lalu, Pameran Virtual Arsip Era Kolonial dan Perjalanan Kopi di Jawa Tengah - Pemerintah Provinsi Jawa Tengah",
+          "source": "Pemerintah Provinsi Jawa Tengah",
+          "published_at": "Wed, 23 Sep 2026 09:38:29 GMT"
+        },
+        {
+          "id": "10",
+          "url": "https://www.tanameracoffee.co.id/news/rfbgao4rsu",
+          "title": "Tanamera Coffee at GJAW",
+          "source": "Tanamera",
+          "published_at": "2026-09-19"
+        }
+      ]
+    },
     {
       "cluster_id": "event-kompetisi",
       "cluster_name": "Event & Kompetisi",
