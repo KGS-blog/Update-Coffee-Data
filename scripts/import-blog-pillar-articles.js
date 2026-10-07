@@ -4,6 +4,7 @@ const path = require('node:path');
 const ROOT = path.resolve(__dirname, '..');
 const SOURCE = 'https://raw.githubusercontent.com/KGS-blog/Blog/main/articles.json';
 const OUTPUT = path.join(ROOT, 'data/blog-pillar-articles.json');
+const KABAR_PILLARS = new Set(['harga', 'ekspor', 'data-tren', 'analisis', 'berita']);
 
 async function main() {
   const response = await fetch(SOURCE, { headers: { 'user-agent': 'KabarKopi-pillar-import/1.0' }, signal: AbortSignal.timeout(30000) });
@@ -13,7 +14,7 @@ async function main() {
 
   const articles = document.articles.filter(article =>
     article && article.status === 'Published' &&
-    ['data-tren', 'berita'].includes(article.kabar_pillar) &&
+    KABAR_PILLARS.has(article.kabar_pillar) &&
     Number.isFinite(Number(article.id)) && article.title_id && article.title_en &&
     article.desc_id && article.desc_en && article.content_id && article.content_en
   );

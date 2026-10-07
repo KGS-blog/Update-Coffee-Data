@@ -38,6 +38,20 @@ const authoredFor = pillar => authored.filter(article => article.kabar_pillar ==
   .sort((a,b) => Date.parse(b.date) - Date.parse(a.date))[0] || null;
 const authoredPath = (article, language) => `/artikel-pilar/${slugify(article.title_id)}-${language}-${article.id}.html`;
 const featuredNews = authoredFor('berita');
+const authoredPillarLabels = {
+  harga: ['Harga & Tracking Kopi', 'Coffee Prices & Tracking'],
+  ekspor: ['Panduan Ekspor Kopi', 'Coffee Export Guide'],
+  'data-tren': ['Data & Tren Industri', 'Industry Data & Trends'],
+  analisis: ['Analisis & Report', 'Analysis & Reports']
+};
+function authoredFeature(article, pillar, language) {
+  if (!article) return '';
+  const en = language === 'en';
+  const date = authoredDate(article);
+  const label = authoredPillarLabels[pillar] || ['Berita Terkini', 'Latest News'];
+  const href = `${SITE}${authoredPath(article, language)}`;
+  return `<section class="panel"><div class="eyebrow">${esc(en ? label[1] : label[0])} · ${en ? 'Bylined article · featured for 7 days' : 'Artikel penulis · sorotan 7 hari'}</div><h2><a href="${href}">${esc(en ? article.title_en : article.title_id)}</a></h2><p>${esc(en ? article.desc_en : article.desc_id)}</p><p class="muted">${date ? new Intl.DateTimeFormat(en ? 'en-GB' : 'id-ID', { day:'numeric', month:'short', year:'numeric', timeZone:'Asia/Jakarta' }).format(new Date(date)) : ''}</p><a href="${href}">${en ? 'Read the full article →' : 'Baca artikel lengkap →'}</a></section>`;
+}
 
 const pillarLinks = [
   { id:'/harga-kopi/', en:'/en/coffee-prices/', label:'Harga & Tracking Kopi', labelEn:'Coffee Prices & Tracking' },
@@ -73,6 +87,19 @@ const pages = [
 ];
 
 for (const config of pages) {
+  const authoredPillar = {
+    '/harga-kopi/': 'harga',
+    '/persyaratan-ekspor-kopi/': 'ekspor',
+    '/data-tren-kopi/': 'data-tren',
+    '/analisis-report-kopi/': 'analisis'
+  }[config.idPath];
+  if (authoredPillar) {
+    const item = authoredFor(authoredPillar)?.article;
+    if (item) {
+      config.bodyId = authoredFeature(item, authoredPillar, 'id') + config.bodyId;
+      config.bodyEn = authoredFeature(item, authoredPillar, 'en') + config.bodyEn;
+    }
+  }
   for (const language of ['id','en']) {
     const pagePath = language === 'en' ? config.enPath : config.idPath;
     const output = path.join(ROOT, pagePath.replace(/^\//,'') , 'index.html');

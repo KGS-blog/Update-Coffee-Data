@@ -9,6 +9,13 @@ const snapshot = fs.existsSync(snapshotPath) ? JSON.parse(fs.readFileSync(snapsh
 const articles = Array.isArray(snapshot.articles) ? snapshot.articles : [];
 const now = Date.now();
 const sevenDays = 7 * 24 * 60 * 60 * 1000;
+const pillars = {
+  harga: { id: 'Harga & Tracking Kopi', en: 'Coffee Prices & Tracking', marker: 'HARGA' },
+  ekspor: { id: 'Panduan Ekspor Kopi', en: 'Coffee Export Guide', marker: 'EKSPOR' },
+  'data-tren': { id: 'Data & Tren Industri', en: 'Industry Data & Trends', marker: 'DATA_TREN' },
+  analisis: { id: 'Analisis & Report', en: 'Analysis & Reports', marker: 'ANALISIS' },
+  berita: { id: 'Berita Terkini', en: 'Latest News', marker: 'BERITA' }
+};
 const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[c]));
 const slugify = value => String(value || '').normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/&/g, ' dan ').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 70) || 'artikel-kopi';
 const articleDate = article => {
@@ -54,6 +61,16 @@ function teaser(article, pillar) {
   const read = ['Baca artikel lengkap →','Read the full article →'];
   return `<article class="blog-pillar-feature"><div class="eyebrow"><span class="id-copy">${eyebrow[0]}</span><span class="en-copy">${eyebrow[1]}</span></div><h2><a class="id-copy" href="${hrefId}">${esc(article.title_id)}</a><a class="en-copy" href="${hrefEn}">${esc(article.title_en)}</a></h2><p>${desc}</p><a class="home-feature-link id-copy" href="${hrefId}">${read[0]}</a><a class="home-feature-link en-copy" href="${hrefEn}">${read[1]}</a></article>`;
 }
+function homeTeaser(article, pillar) {
+  if (!article) return '';
+  const labels = pillars[pillar];
+  const hrefId = articlePath(article, 'id');
+  const hrefEn = articlePath(article, 'en');
+  const date = articleDate(article);
+  const dateId = date ? new Intl.DateTimeFormat('id-ID', { day:'numeric', month:'short', year:'numeric', timeZone:'Asia/Jakarta' }).format(new Date(date)) : '';
+  const dateEn = date ? new Intl.DateTimeFormat('en-GB', { day:'numeric', month:'short', year:'numeric', timeZone:'Asia/Jakarta' }).format(new Date(date)) : '';
+  return `<article class="pillar-article-feature"><div class="eyebrow"><span class="id-copy">${esc(labels.id)} · Tulisan penulis</span><span class="en-copy">${esc(labels.en)} · Bylined article</span></div><h3><a class="id-copy" href="${hrefId}">${esc(article.title_id)}</a><a class="en-copy" href="${hrefEn}">${esc(article.title_en)}</a></h3><p><span class="id-copy">${esc(article.desc_id)}</span><span class="en-copy">${esc(article.desc_en)}</span></p><div class="pillar-author-meta"><span class="id-copy">Terbit ${esc(dateId)} · ditampilkan 7 hari</span><span class="en-copy">Published ${esc(dateEn)} · featured for 7 days</span></div><a class="home-feature-link id-copy" href="${hrefId}">Baca artikel lengkap →</a><a class="home-feature-link en-copy" href="${hrefEn}">Read the full article →</a></article>`;
+}
 function standalone(article, lang) {
   const en = lang === 'en';
   const title = esc(en ? article.title_en : article.title_id);
@@ -64,7 +81,8 @@ function standalone(article, lang) {
   const blogCanonical = `${BLOG}${blogPath(article, lang)}`;
   const content = safeArticleHtml(en ? article.content_en : article.content_id);
   const schema = { '@context':'https://schema.org','@type':'Article',headline:title,description,datePublished:date || undefined,inLanguage:en?'en':'id',author:{'@type':'Person','name':article.author || 'Kabar Kopi'},publisher:{'@type':'Organization','name':'Kabar Kopi','url':`${SITE}/`},mainEntityOfPage:canonical,isPartOf:{'@type':'Blog','name':'Kabar Kopi'},isAccessibleForFree:true };
-  return `<!doctype html><html lang="${en?'en':'id'}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${title} | Kabar Kopi</title><meta name="description" content="${description}"><link rel="canonical" href="${blogCanonical}"><link rel="alternate" hreflang="id" href="${en?opposite:canonical}"><link rel="alternate" hreflang="en" href="${en?canonical:opposite}"><script type="application/ld+json">${JSON.stringify(schema).replace(/</g,'\\u003c')}</script><style>body{max-width:900px;margin:40px auto;padding:0 22px;font:17px/1.75 system-ui,sans-serif;color:#29231e}h1,h2,h3{font-family:Georgia,serif;line-height:1.2}h1{font-size:42px}a{color:#704b31}.byline{color:#746f68;font-size:14px;border-bottom:1px solid #e7e1d8;padding-bottom:18px}.body{margin:30px 0}.note{background:#f5f1eb;border-left:4px solid #a4472d;padding:14px 18px}</style></head><body><p><a href="${SITE}/">${en?'← Kabar Kopi home':'← Beranda Kabar Kopi'}</a></p><main><div class="eyebrow">${en?(article.kabar_pillar==='berita'?'Latest News · Author article':'Coffee Data & Trends · Author article'):(article.kabar_pillar==='berita'?'Berita Terkini · Artikel penulis':'Data & Tren Kopi · Artikel penulis')}</div><h1>${title}</h1><p class="intro">${description}</p><p class="byline">${date?new Intl.DateTimeFormat(en?'en-US':'id-ID',{dateStyle:'long',timeZone:'UTC'}).format(new Date(date)):''} · ${en?'Also published on Kabar Kopi Blog':'Terbit juga di Blog Kabar Kopi'}</p><article class="body">${content}</article><div class="note">${en?'This bylined article was published on the Kabar Kopi Blog and featured in this section for seven days.':'Artikel penulis ini diterbitkan di Blog Kabar Kopi dan ditampilkan sebagai sorotan di bagian ini selama tujuh hari.'}</div><p><a href="${blogCanonical}">${en?'Open the Blog edition':'Buka edisi Blog'}</a></p></main></body></html>`;
+  const pillarLabel = pillars[article.kabar_pillar] || pillars['data-tren'];
+  return `<!doctype html><html lang="${en?'en':'id'}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${title} | Kabar Kopi</title><meta name="description" content="${description}"><link rel="canonical" href="${blogCanonical}"><link rel="alternate" hreflang="id" href="${en?opposite:canonical}"><link rel="alternate" hreflang="en" href="${en?canonical:opposite}"><script type="application/ld+json">${JSON.stringify(schema).replace(/</g,'\\u003c')}</script><style>body{max-width:900px;margin:40px auto;padding:0 22px;font:17px/1.75 system-ui,sans-serif;color:#29231e}h1,h2,h3{font-family:Georgia,serif;line-height:1.2}h1{font-size:42px}a{color:#704b31}.byline{color:#746f68;font-size:14px;border-bottom:1px solid #e7e1d8;padding-bottom:18px}.body{margin:30px 0}.note{background:#f5f1eb;border-left:4px solid #a4472d;padding:14px 18px}</style></head><body><p><a href="${SITE}/">${en?'← Kabar Kopi home':'← Beranda Kabar Kopi'}</a></p><main><div class="eyebrow">${esc(en?pillarLabel.en:pillarLabel.id)} · ${en?'Bylined article':'Artikel penulis'}</div><h1>${title}</h1><p class="intro">${description}</p><p class="byline">${date?new Intl.DateTimeFormat(en?'en-US':'id-ID',{dateStyle:'long',timeZone:'UTC'}).format(new Date(date)):''} · ${en?'Also published on Kabar Kopi Blog':'Terbit juga di Blog Kabar Kopi'}</p><article class="body">${content}</article><div class="note">${en?'This bylined article was published on the Kabar Kopi Blog and featured in this section for seven days.':'Artikel penulis ini diterbitkan di Blog Kabar Kopi dan ditampilkan sebagai sorotan di bagian ini selama tujuh hari.'}</div><p><a href="${blogCanonical}">${en?'Open the Blog edition':'Buka edisi Blog'}</a></p></main></body></html>`;
 }
 
 const outputDir = path.join(ROOT, 'artikel-pilar');
@@ -82,6 +100,15 @@ for (const file of ['index.html','kabar-kopi.html']) {
   let html = fs.readFileSync(target, 'utf8');
   const dataLead = currentFor('data-tren');
   const newsLead = currentFor('berita');
+  for (const [pillar, labels] of Object.entries(pillars)) {
+    const article = currentFor(pillar);
+    const marker = `<!-- BLOG_PILLAR_HOME_${labels.marker} -->`;
+    if (article) {
+      const expiresAt = new Date(Date.parse(articleDate(article)) + sevenDays).toISOString();
+      html = html.replace(`data-pillar-card="${pillar}"`, `data-pillar-card="${pillar}" data-has-author-article="true" data-author-expires-at="${expiresAt}"`);
+    }
+    html = html.replace(marker, homeTeaser(article, pillar));
+  }
   html = html.replace('<!-- BLOG_PILLAR_DATA_TREN -->', teaser(dataLead, 'data-tren') || '<p class="section-intro">Harga acuan kopi terbaru, ringkasan perubahan pasar, dan data ekspor Indonesia. Angka diperbarui dari feed berkala dan ditautkan ke sumbernya.</p>');
   html = html.replace('<!-- BLOG_PILLAR_BERITA -->', newsLead ? `${teaser(newsLead, 'berita')}<p class="source-line id-copy"><a id="weekly-brief-link" href="/rangkuman-pekanan/">Baca rangkuman kopi pekan ini →</a></p><p class="source-line en-copy"><a id="weekly-brief-link-en" href="/en/weekly-coffee-brief/">Read this week’s coffee brief →</a></p>` : '<p class="section-intro" style="margin:4px 0 0"><span class="id-copy">Berita kopi dari berbagai sumber, disatukan dalam satu feed dan dikelompokkan menurut topik.</span><span class="en-copy">Coffee news from multiple sources, brought together in one feed and grouped by topic.</span></p><p class="source-line"><a id="weekly-brief-link" href="/rangkuman-pekanan/">Baca rangkuman kopi pekan ini →</a></p>');
   fs.writeFileSync(target, html);
