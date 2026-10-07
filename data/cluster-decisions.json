@@ -20,6 +20,221 @@
       "url": "https://kupang.tribunnews.com/provinsi-ntt/982088/fce-2026-hari-ketiga-penggiat-kopi-ntt-diajak-tingkatkan-kualitas-hingga-buka-peluang-ekspor",
       "cluster_id": "event-kompetisi",
       "decided_at": "2026-10-05T10:03:05.487Z"
+    },
+    {
+      "url": "https://flores.tribunnews.com/nagekeo/65894/sebelum-meninggal-wabup-nagekeo-sempat-minum-kopi-usai-antar-semen-perbaiki-jalan",
+      "cluster_id": "tidak-relevan",
+      "decision": "irrelevant",
+      "reason": "Editor memastikan penyebutan kopi bukan pokok berita.",
+      "decided_at": "2026-10-07T17:59:10.886Z"
+    },
+    {
+      "url": "https://www.bankbsi.co.id/promo/coffee-drive-ev-hybrid-experience-bekasi",
+      "cluster_id": "tidak-relevan",
+      "decision": "irrelevant",
+      "reason": "Editor memastikan penyebutan kopi bukan pokok berita.",
+      "decided_at": "2026-10-07T18:00:13.629Z"
+    },
+    {
+      "url": "https://www.kompasiana.com/lini17077/6ab4ef8a34777c746c6bded2/lini-kopi-surabaya-coffe-homey-di-surabaya-selatan",
+      "cluster_id": "kedai-konsumsi-gaya-hidup",
+      "decided_at": "2026-10-07T18:00:29.080Z"
+    },
+    {
+      "url": "https://pelakita.id/2026/10/05/dari-dunia-hitam-kopi-seko-ke-sorowako-bahar-makkutana-bawa-semangat-koperasi-luwu-utara-ke-harkopnas-79/",
+      "cluster_id": "produksi-panen",
+      "decided_at": "2026-10-07T18:00:31.812Z"
+    },
+    {
+      "url": "https://www.antaranews.com/berita/5770398/benarkah-kopi-bisa-membakar-lemak-ini-fakta-dan-risikonya",
+      "cluster_id": "kedai-konsumsi-gaya-hidup",
+      "decided_at": "2026-10-07T18:00:43.976Z"
+    },
+    {
+      "url": "https://wow.tribunnews.com/news/405874/motif-pengeroyokan-di-metland-cileungsi-terungkap-berawal-dari-tantang-balap-lari-di-warung-kopi",
+      "cluster_id": "tidak-relevan",
+      "decision": "irrelevant",
+      "reason": "Editor memastikan penyebutan kopi bukan pokok berita.",
+      "decided_at": "2026-10-07T18:00:52.832Z"
+    },
+    {
+      "url": "https://www.beritasatu.com/internasional/3031198/10-destinasi-kopi-terbaik-dunia-2026-ho-chi-minh-city-nomor-2",
+      "cluster_id": "kedai-konsumsi-gaya-hidup",
+      "decided_at": "2026-10-07T18:00:58.781Z"
+    },
+    {
+      "url": "https://kupang.tribunnews.com/provinsi-ntt/982021/gubernur-bi-destry-damayanti-ungkap-potensi-besar-tenun-ntt-hingga-kopi",
+      "cluster_id": "pendidikan-industri",
+      "decided_at": "2026-10-07T18:01:09.956Z"
+    },
+    {
+      "url": "https://www.cnbcindonesia.com/lifestyle/20260924163656-33-770649/waktu-terbaik-minum-kopi-efeknya-bisa-cegah-sakit-jantung",
+      "cluster_id": "kedai-konsumsi-gaya-hidup",
+      "decided_at": "2026-10-07T18:01:17.416Z"
+    },
+    {
+      "url": "https://probolinggokab.go.id/dkupp-kabupaten-probolinggo-perkuat-communal-branding-gula-aren-dan-kopi/",
+      "cluster_id": "kebijakan-regulasi",
+      "decided_at": "2026-10-07T18:01:30.631Z"
+    },
+    {
+      "url": "https://kompas.com/homey/read/2026/09/28/200000176/jangan-langsung-buang-ampas-kopi-bisa-disulap-jadi-kompos",
+      "cluster_id": "kedai-konsumsi-gaya-hidup",
+      "decided_at": "2026-10-07T18:01:56.236Z"
+    },
+    {
+      "url": "https://antaranews.com/berita/5762016/secangkir-kopi-sejuta-kehangatan-lrt-jabodebek-semakin-dekat-dengan-pengguna",
+      "cluster_id": "kedai-konsumsi-gaya-hidup",
+      "decided_at": "2026-10-07T18:02:11.219Z"
+    },
+    {
+      "url": "https://insight.jakpat.net/thai-tea-preferences-who-rules-the-market/",
+      "cluster_id": "tidak-relevan",
+      "decision": "irrelevant",
+      "reason": "Editor memastikan penyebutan kopi bukan pokok berita.",
+      "decided_at": "2026-10-07T18:02:25.687Z"
+    },
+    {
+      "url": "https://kompas.com/tren/read/2026/09/27/193000065/bawa-es-kopi-saat-wawancara-kerja-gen-z-dinilai-terlalu-santai-",
+      "cluster_id": "kedai-konsumsi-gaya-hidup",
+      "decided_at": "2026-10-07T18:02:34.628Z"
+    },
+    {
+      "url": "https://biz.kompas.com/read/2026/09/25/171057828/antara-ibu-kopi-dan-mimpi-kisah-anak-rantau-mengejar-asa",
+      "cluster_id": "kedai-konsumsi-gaya-hidup",
+      "decided_at": "2026-10-07T18:02:55.148Z"
+    },
+    {
+      "url": "https://entertainment.kompas.com/read/2026/09/12/154700566/tiba-di-jakarta-cheng-lei-penasaran-kopi-indonesia-",
+      "cluster_id": "kedai-konsumsi-gaya-hidup",
+      "decided_at": "2026-10-07T18:03:02.481Z"
+    },
+    {
+      "url": "https://regional.kompas.com/read/2026/09/11/182550778/di-kayu-aro-petani-kerinci-merayakan-kopi-yang-mulai-mendunia",
+      "cluster_id": "pendidikan-industri",
+      "decided_at": "2026-10-07T18:03:12.907Z"
+    },
+    {
+      "url": "https://kompas.com/food/read/2026/09/11/163100675/ampas-kopi-ternyata-bisa-diubah-menjadi-material-bangunan-kok-bisa-",
+      "cluster_id": "kedai-konsumsi-gaya-hidup",
+      "decided_at": "2026-10-07T18:03:20.856Z"
+    },
+    {
+      "url": "https://jawapos.com/lifestyle/2609060353/tidak-semua-orang-cocok-minum-kopi-ini-5-kelompok-yang-perlu-waspada",
+      "cluster_id": "kedai-konsumsi-gaya-hidup",
+      "decided_at": "2026-10-07T18:03:26.645Z"
+    },
+    {
+      "url": "https://jawapos.com/kepribadian/2609030494/8-alasan-mengapa-minum-kopi-di-pagi-hari-mungkin-dapat-membantu-kamu-hidup-lebih-lama-dengan-bahagia",
+      "cluster_id": "kedai-konsumsi-gaya-hidup",
+      "decided_at": "2026-10-07T18:03:32.267Z"
+    },
+    {
+      "url": "https://lifestyle.kompas.com/read/2026/09/01/100600720/kombinasi-kopi-dan-membaca-di-pagi-hari-ini-manfaatnya",
+      "cluster_id": "kedai-konsumsi-gaya-hidup",
+      "decided_at": "2026-10-07T18:03:38.472Z"
+    },
+    {
+      "url": "https://jawapos.com/kuliner/2609260299/lagi-viral-5-rekomendasi-salt-bread-di-alam-sutra-pencinta-pastry-wajib-coba",
+      "cluster_id": "kedai-konsumsi-gaya-hidup",
+      "decided_at": "2026-10-07T18:03:47.797Z"
+    },
+    {
+      "url": "https://mediaindonesia.com/kuliner/938001/tren-kuliner-urban-bergeser-smoothie-hingga-bowl-makin-diminati",
+      "cluster_id": "kedai-konsumsi-gaya-hidup",
+      "decided_at": "2026-10-07T18:03:55.456Z"
+    },
+    {
+      "url": "https://insight.jakpat.net/thai-tea-consumption-top-brands/",
+      "cluster_id": "tidak-relevan",
+      "decision": "irrelevant",
+      "reason": "Editor memastikan penyebutan kopi bukan pokok berita.",
+      "decided_at": "2026-10-07T18:04:04.402Z"
+    },
+    {
+      "url": "https://www.kemendag.go.id/berita/siaran-pers/dorong-akses-pasar-dua-arah-kemendag-perkuat-perdagangan-indonesia-cili",
+      "cluster_id": "kebijakan-regulasi",
+      "decided_at": "2026-10-07T18:04:10.438Z"
+    },
+    {
+      "url": "https://www.kemendag.go.id/berita/siaran-pers/reaktivasi-perundingan-perdagangan-indonesia-maroko-wamendag-roro-dorong-negosiasi-tuntas-di-2027",
+      "cluster_id": "ekspor-daya-saing",
+      "decided_at": "2026-10-07T18:04:22.433Z"
+    },
+    {
+      "url": "https://www.kemendag.go.id/berita/siaran-pers/kemendag-selaraskan-program-pengembangan-ekspor-untuk-pacu-ekspor-jawa-dan-sumatra",
+      "cluster_id": "ekspor-daya-saing",
+      "decided_at": "2026-10-07T18:04:32.189Z"
+    },
+    {
+      "url": "https://www.kemendag.go.id/berita/siaran-pers/periode-januari-juli-2026-business-matching-kemendag-fasilitasi-1021-umkm-dan-catatkan-rp595-triliun",
+      "cluster_id": "ekspor-daya-saing",
+      "decided_at": "2026-10-07T18:04:40.495Z"
+    },
+    {
+      "url": "https://www.kemendag.go.id/berita/siaran-pers/gandeng-ritel-modern-untuk-perluas-akses-pasar-umkm-mendag-busan-resmikan-pojok-product-placement-pilihan-busan",
+      "cluster_id": "ekspor-daya-saing",
+      "decided_at": "2026-10-07T18:04:49.890Z"
+    },
+    {
+      "url": "https://www.kemendag.go.id/berita/siaran-pers/bertemu-dengan-menteri-investasi-dan-perdagangan-luar-negeri-mesir-mendag-busan-dorong-pertemuan-ke-2-jtc-pada-2026",
+      "cluster_id": "ekspor-daya-saing",
+      "decided_at": "2026-10-07T18:04:59.515Z"
+    },
+    {
+      "url": "https://jawapos.com/zodiak/2608170120/ramalan-kesehatan-zodiak-leo-senin-17-agustus-2026-kurangi-kopi-dan-jaga-tenggorokan",
+      "cluster_id": "kedai-konsumsi-gaya-hidup",
+      "decided_at": "2026-10-07T18:05:05.256Z"
+    },
+    {
+      "url": "https://jawapos.com/lifestyle/2608140366/tak-perlu-selalu-mengandalkan-kopi-ini-5-cara-bikin-pikiran-tetap-fokus",
+      "cluster_id": "kedai-konsumsi-gaya-hidup",
+      "decided_at": "2026-10-07T18:05:11.271Z"
+    },
+    {
+      "url": "https://jawapos.com/lifestyle/2608080231/tak-melulu-kopi-5-minuman-ini-bisa-bantu-lawan-kantuk-dan-tambah-energi",
+      "cluster_id": "kedai-konsumsi-gaya-hidup",
+      "decided_at": "2026-10-07T18:05:16.811Z"
+    },
+    {
+      "url": "https://jawapos.com/lifestyle/2608060270/kopi-tak-hanya-bikin-melek-ini-4-manfaat-kesehatan-yang-jarang-diketahui",
+      "cluster_id": "kedai-konsumsi-gaya-hidup",
+      "decided_at": "2026-10-07T18:05:24.822Z"
+    },
+    {
+      "url": "https://kertakoffie.com/the-ultimate-guide-to-the-best-coffee-for-gut-health",
+      "cluster_id": "kedai-konsumsi-gaya-hidup",
+      "decided_at": "2026-10-07T18:05:55.574Z"
+    },
+    {
+      "url": "https://kertakoffie.com/how-coffee-became-a-global-daily-ritual",
+      "cluster_id": "kedai-konsumsi-gaya-hidup",
+      "decided_at": "2026-10-07T18:06:06.311Z"
+    },
+    {
+      "url": "https://insight.jakpat.net/indonesia-beverage-consumption/",
+      "cluster_id": "riset-tren-konsumen",
+      "decided_at": "2026-10-07T18:06:19.172Z"
+    },
+    {
+      "url": "https://jurnal.unigal.ac.id/mimbaragribisnis/article/download/22081/pdf_1",
+      "cluster_id": "produksi-panen",
+      "decided_at": "2026-10-07T18:06:33.719Z"
+    },
+    {
+      "url": "https://megapolitan.antaranews.com/berita/447661/menanam-harapan-untuk-perempuan-dan-petani-muda-di-lereng-kintamani",
+      "cluster_id": "produksi-panen",
+      "decided_at": "2026-10-07T18:06:43.339Z"
+    },
+    {
+      "url": "https://kertakoffie.com/harga-green-bean-kopi-arabika",
+      "cluster_id": "harga-pasar",
+      "decided_at": "2026-10-07T18:06:54.183Z"
+    },
+    {
+      "url": "https://kopen.id/supplier-biji-kopi-terbaik",
+      "cluster_id": "ekspor-daya-saing",
+      "decided_at": "2026-10-07T18:07:07.214Z"
     }
   ],
   "accepted_candidate_ids": [],
@@ -27,5 +242,5 @@
     "budaya-sastra-kopi",
     "kriminal-keamanan-komoditas-kopi"
   ],
-  "updated_at": "2026-10-05T10:03:05.487Z"
+  "updated_at": "2026-10-07T18:07:07.214Z"
 }
