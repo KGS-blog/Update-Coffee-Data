@@ -113,9 +113,21 @@ const newsCards = directFeedArticles.slice().sort((a,b)=>Date.parse(b.tanggal||'
   return `<article class="news-card"><span class="category">${cluster}</span><h2 class="news-title">${url?`<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${title}</a>`:title}</h2><div class="meta">${esc(item.sumber||'Sumber berita')}${newsDate(item)?` <i class="dot"></i> ${newsDate(item)}`:''}${sourceRouteLabel(url)}</div>${item.ringkasan?`<p class="news-desc">${esc(item.ringkasan)}</p>`:''}</article>`;
 }).join('');
 const analysisCards = classifiedCategories.map((c,index)=>{const count=(c.items||[]).length, share=totalNews?count/totalNews*100:0, avg=classifiedCategories.length?totalNews/classifiedCategories.length:0;return `<article class="analysis-card"><div class="eyebrow">${fmtID(count)} berita</div><div class="num">${Math.round(share)}%</div><h3>${esc(c.nama)}</h3><p>${avg?(count/avg).toLocaleString('id-ID',{maximumFractionDigits:1}):'0'}× rata-rata volume klaster · peringkat ${index+1} dari ${classifiedCategories.length}</p><div class="bar" aria-label="Porsi dari seluruh berita"><i style="width:${Math.max(1,share)}%"></i></div></article>`}).join('');
-function reportSources(item, article = item.article || {}) {
+function citationIdsFor(article = {}) {
+  const text = [article.summary, article.lead, ...(article.sections || []).flatMap(section => [section.heading, ...(section.paragraphs || [])]), article.conclusion, ...(article.recommendations || []).flatMap(rec => [rec.audience, rec.action, rec.basis])].join(' ');
+  return new Set([...text.matchAll(/\[(\d+)\]/g)].map(match => match[1]));
+}
+function usesOrderedSourceUrls(article = {}) {
+  const urls = Array.isArray(article.source_urls) ? article.source_urls : [];
+  return urls.length > 0 && [...citationIdsFor(article)].every(id => Number(id) >= 1 && Number(id) <= urls.length);
+}
+function reportSources(item, article = item.article || {}, orderedUrls = usesOrderedSourceUrls(article)) {
   const inputs = item.input_sources || [];
   const sourceUrls = Array.isArray(article.source_urls) ? article.source_urls : [];
+  // Citations normally refer to positions in source_urls. If a generated draft
+  // instead cites stable input IDs (such as [8]) beyond that shorter array,
+  // retain the original numbered input list so citations still resolve.
+  if (!orderedUrls && inputs.length) return inputs;
   const byUrl = new Map(inputs.map(source => [source.url, source]));
   // Keep source_urls positional: citation markers [1], [2], ... refer to this
   // exact order. A source may be absent from input_sources after enrichment;
@@ -130,7 +142,7 @@ function reportSources(item, article = item.article || {}) {
   });
   return ordered.length ? ordered : inputs;
 }
-const publicReports = reports.map(item=>{const article=item.article||{}, page=`analisis-kopi/${fileFor(item,'id')}`, cluster=BERITA_KLASTER.find(entry=>entry.slug===item.cluster_id||entry.nama===item.cluster_name), refs=reportSources(item,article);const sources=refs.map((s,index)=>{const u=safeUrl(s.url);return u?`<li><a href="${esc(u)}" rel="noopener noreferrer">[${esc(article.source_urls?.length?index+1:s.id)}] ${esc(s.source||'Sumber asli')}${s.title?` — ${esc(s.title)}`:''}</a></li>`:''}).filter(Boolean).join('');return `<article class="report-card"><span class="candidate-badge">Artikel analisis · Publik · ${esc(item.cluster_name||cluster?.nama||'Kopi')} · ${esc(item.period_days||'')} hari</span><h3><a href="${esc(page)}">${esc(article.title||'Analisis pasar kopi')}</a></h3>${article.summary?`<p><strong>${esc(article.summary)}</strong></p>`:''}${article.lead?`<p>${esc(article.lead)}</p>`:''}<p class="source-line">Analisis editorial otomatis dari berita yang dihimpun. Kategori dan jumlah berita menunjukkan pola pemberitaan, bukan verifikasi kebenaran klaim atau dampak ekonomi.</p>${sources?`<details><summary>Sumber yang dikutip (${refs.length})</summary><ol>${sources}</ol></details>`:''}<p><a href="${esc(page)}">Baca analisis lengkap, kesimpulan, rekomendasi, sumber, dan batas bukti →</a></p></article>`}).join('');
+const publicReports = reports.map(item=>{const article=item.article||{}, page=`analisis-kopi/${fileFor(item,'id')}`, cluster=BERITA_KLASTER.find(entry=>entry.slug===item.cluster_id||entry.nama===item.cluster_name), orderedUrls=usesOrderedSourceUrls(article), refs=reportSources(item,article,orderedUrls);const sources=refs.map((s,index)=>{const u=safeUrl(s.url);return u?`<li><a href="${esc(u)}" rel="noopener noreferrer">[${esc(orderedUrls?index+1:s.id)}] ${esc(s.source||'Sumber asli')}${s.title?` — ${esc(s.title)}`:''}</a></li>`:''}).filter(Boolean).join('');return `<article class="report-card"><span class="candidate-badge">Artikel analisis · Publik · ${esc(item.cluster_name||cluster?.nama||'Kopi')} · ${esc(item.period_days||'')} hari</span><h3><a href="${esc(page)}">${esc(article.title||'Analisis pasar kopi')}</a></h3>${article.summary?`<p><strong>${esc(article.summary)}</strong></p>`:''}${article.lead?`<p>${esc(article.lead)}</p>`:''}<p class="source-line">Analisis editorial otomatis dari berita yang dihimpun. Kategori dan jumlah berita menunjukkan pola pemberitaan, bukan verifikasi kebenaran klaim atau dampak ekonomi.</p>${sources?`<details><summary>Sumber yang dikutip (${refs.length})</summary><ol>${sources}</ol></details>`:''}<p><a href="${esc(page)}">Baca analisis lengkap, kesimpulan, rekomendasi, sumber, dan batas bukti →</a></p></article>`}).join('');
 function renderPage(item, language) {
   const en = language === 'en';
   const article = (en ? item.article_en : item.article) || {};
@@ -145,10 +157,9 @@ function renderPage(item, language) {
   const clusterName = en ? (item.cluster_name_en || cluster?.nama_en || item.cluster_name || '') : (item.cluster_name || '');
   const sections = (article.sections || []).map(section => `<section><h2>${esc(section.heading)}</h2>${(section.paragraphs || []).map(text => `<p>${esc(text)}</p>`).join('')}</section>`).join('');
   const recommendations = (article.recommendations || []).map(rec => `<li><strong>${esc(rec.audience)}:</strong> ${esc(rec.action)}<p class="basis">${en ? 'Basis' : 'Dasar'}: ${esc(rec.basis)}</p></li>`).join('');
-  const hasOrderedUrls = Array.isArray(article.source_urls) && article.source_urls.length > 0;
-  const sources = reportSources(item, article);
-  const citationText = [summary, lead, ...(article.sections || []).flatMap(section => [section.heading, ...(section.paragraphs || [])]), article.conclusion, ...(article.recommendations || []).flatMap(rec => [rec.audience, rec.action, rec.basis])].join(' ');
-  const citationIds = new Set([...citationText.matchAll(/\[(\d+)\]/g)].map(match => match[1]));
+  const hasOrderedUrls = usesOrderedSourceUrls(article);
+  const sources = reportSources(item, article, hasOrderedUrls);
+  const citationIds = citationIdsFor(article);
   const listedCitationIds = new Set(sources.map((source, index) => String(hasOrderedUrls ? index + 1 : source.id)));
   const missingCitations = [...citationIds].filter(id => !listedCitationIds.has(id));
   if (missingCitations.length) {
