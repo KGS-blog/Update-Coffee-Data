@@ -107,6 +107,8 @@ jobs:
         run: node scripts/import-blog-pillar-articles.js
       - name: Render weekly Blog article features and crawlable Kabar pages
         run: node scripts/render-blog-pillar-articles.js
+      - name: Generate bilingual pages for the five Kabar Kopi pillars
+        run: node scripts/generate-pillar-pages.js
       - name: Verify Kabar Kopi entrypoint parity
         run: node scripts/check-kabar-entrypoints.js
       - name: Save private editor cluster queue
@@ -120,5 +122,5 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -A data/ analisis-kopi/ artikel-pilar/ data-tren-kopi/ kalkulator-kopi/ persyaratan-ekspor-kopi/ en/ rangkuman-pekanan/ index.html kabar-kopi.html tentang-kabar-kopi.html sitemap.xml
+          git add -A data/ analisis-kopi/ artikel-pilar/ data-tren-kopi/ kalkulator-kopi/ persyaratan-ekspor-kopi/ harga-kopi/ analisis-report-kopi/ berita-kopi/ en/ rangkuman-pekanan/ index.html kabar-kopi.html tentang-kabar-kopi.html sitemap.xml
           git diff --staged --quiet || (git commit -m "data: update [$(date -u +'%Y-%m-%d %H:%M UTC')]" && git push)
