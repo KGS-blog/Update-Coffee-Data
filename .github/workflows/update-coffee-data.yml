@@ -15,6 +15,8 @@ on:
       - 'scripts/generate-discovery-pages.js'
       - 'scripts/generate-editorial-pages.js'
       - 'scripts/generate-weekly-brief.js'
+      - 'scripts/import-blog-pillar-articles.js'
+      - 'scripts/render-blog-pillar-articles.js'
       - 'scripts/import-mevo-price-data.js'
       - 'scripts/import-ico-trade-data.js'
       - 'scripts/import-coffee-reference-articles.js'
@@ -101,6 +103,10 @@ jobs:
         run: node scripts/render-static-mevo-previews.js
       - name: Generate crawlable bilingual weekly coffee briefs
         run: node scripts/generate-weekly-brief.js
+      - name: Import bilingual Blog articles selected for Kabar Kopi
+        run: node scripts/import-blog-pillar-articles.js
+      - name: Render weekly Blog article features and crawlable Kabar pages
+        run: node scripts/render-blog-pillar-articles.js
       - name: Verify Kabar Kopi entrypoint parity
         run: node scripts/check-kabar-entrypoints.js
       - name: Save private editor cluster queue
@@ -114,5 +120,5 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -A data/ analisis-kopi/ data-tren-kopi/ kalkulator-kopi/ persyaratan-ekspor-kopi/ en/ rangkuman-pekanan/ index.html kabar-kopi.html tentang-kabar-kopi.html sitemap.xml
+          git add -A data/ analisis-kopi/ artikel-pilar/ data-tren-kopi/ kalkulator-kopi/ persyaratan-ekspor-kopi/ en/ rangkuman-pekanan/ index.html kabar-kopi.html tentang-kabar-kopi.html sitemap.xml
           git diff --staged --quiet || (git commit -m "data: update [$(date -u +'%Y-%m-%d %H:%M UTC')]" && git push)
