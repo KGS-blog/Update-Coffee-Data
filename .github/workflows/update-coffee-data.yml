@@ -86,9 +86,26 @@ jobs:
             curl --fail --silent --show-error -X PUT -H "Authorization: Bearer $MEVO_SYNC_SECRET" -H 'Content-Type: application/json' --data-binary "$response" "$endpoint" >/dev/null || { echo "::warning::Migrasi D1 diperlukan; pembaruan data utama tetap berjalan."; exit 0; }
           fi
           printf '%s\n' "$response" > data/cluster-candidates.json
+      - name: Decide whether this push needs OpenAI
+        id: openai_gate
+        if: github.event_name == 'push'
+        run: |
+          node <<'NODE'
+          const fs = require('node:fs');
+          const event = JSON.parse(fs.readFileSync(process.env.GITHUB_EVENT_PATH, 'utf8'));
+          const files = [...new Set((event.commits || []).flatMap(commit => [
+            ...(commit.added || []), ...(commit.modified || []), ...(commit.removed || [])
+          ]))];
+          const needsOpenAI = files.some(file =>
+            /^scripts\/(fetch\.js|fetch-news-context\.py|process-portal-data\.js|import-(mevo-price-data|ico-trade-data|coffee-reference-articles|blog-pillar-articles)\.js|merge-(public-price-sources|coffee-reference-articles)\.js|fetch-coffee-reference-articles\.py)$/.test(file) ||
+            /^data\/(berita-all|berita|editorial-settings|cluster-decisions|cluster-candidates|cluster-catalog)\.json$/.test(file)
+          );
+          fs.appendFileSync(process.env.GITHUB_OUTPUT, `enabled=${needsOpenAI}\n`);
+          console.log(`OpenAI gate: ${needsOpenAI ? 'enabled' : 'disabled'} for ${files.length} changed files`);
+          NODE
       - name: Index archive, apply clustering decisions, and generate editorial
         env:
-          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_API_KEY: ${{ (github.event_name != 'push' || steps.openai_gate.outputs.enabled == 'true') && secrets.OPENAI_API_KEY || '' }}
           OPENAI_CLUSTER_MODEL: gpt-5.4-nano
           OPENAI_EDITORIAL_MODEL: gpt-5.4-mini
         run: node scripts/process-portal-data.js
