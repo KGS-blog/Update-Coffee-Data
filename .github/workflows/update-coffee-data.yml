@@ -13,6 +13,8 @@ on:
       - 'scripts/render-static-mevo-previews.js'
       - 'scripts/render-static-news.js'
       - 'scripts/generate-discovery-pages.js'
+      - 'scripts/generate-training-directory.js'
+      - 'data/lembaga-pelatihan-kopi.json'
       - 'scripts/generate-editorial-pages.js'
       - 'scripts/generate-weekly-brief.js'
       - 'scripts/import-blog-pillar-articles.js'
@@ -121,6 +123,8 @@ jobs:
         run: node scripts/render-static-coffee-price-chart.js
       - name: Generate crawlable coffee data and calculator pages
         run: node scripts/generate-discovery-pages.js
+      - name: Generate crawlable coffee training directory
+        run: node scripts/generate-training-directory.js
       - name: Render public MEVO report previews into static HTML
         run: node scripts/render-static-mevo-previews.js
       - name: Generate crawlable bilingual weekly coffee briefs
@@ -146,5 +150,5 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add -A data/ analisis-kopi/ artikel-pilar/ data-tren-kopi/ kalkulator-kopi/ persyaratan-ekspor-kopi/ harga-kopi/ analisis-report-kopi/ berita-kopi/ kalender-event-kopi/ en/ rangkuman-pekanan/ index.html kabar-kopi.html tentang-kabar-kopi.html sitemap.xml
+          git add -A data/ analisis-kopi/ artikel-pilar/ data-tren-kopi/ kalkulator-kopi/ persyaratan-ekspor-kopi/ harga-kopi/ analisis-report-kopi/ berita-kopi/ kalender-event-kopi/ lembaga-pelatihan-kopi/ en/ rangkuman-pekanan/ index.html kabar-kopi.html tentang-kabar-kopi.html sitemap.xml scripts/generate-training-directory.js scripts/templates/kabar-kopi.html
           git diff --staged --quiet || (git commit -m "data: update [$(date -u +'%Y-%m-%d %H:%M UTC')]" && git push)
