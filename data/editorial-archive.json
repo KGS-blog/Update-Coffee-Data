@@ -1,7 +1,211 @@
 {
   "version": 1,
-  "generated_at": "2026-10-08T04:05:09.102Z",
+  "generated_at": "2026-10-08T04:32:39.357Z",
   "articles": [
+    {
+      "cluster_id": "kedai-konsumsi-gaya-hidup",
+      "cluster_name": "Kedai, Konsumsi & Gaya Hidup",
+      "period_days": 30,
+      "generated_at": "2026-10-08T04:32:39.357Z",
+      "status": "ai_generated",
+      "fingerprint": "482148641174063161864d91706c7ad597a3af645db933ad4c047bf6ed1d6a21",
+      "article": {
+        "title": "461.991 Kedai Kopi? Format Layanan dan Rasa Juga Bergerak",
+        "summary": "Tribun News memberitakan pernyataan Kepala BPS bahwa Indonesia memiliki 461.991 kedai kopi, lebih dari tiga kali lipat Amerika Serikat, dan disebut terbanyak di dunia [1][2]. Di saat bersamaan, tiga pendiri Jago Coffee/Kopi Gerobakan terpilih sebagai Endeavor Entrepreneur, sorot model gerobak listrik yang mendekatkan kopi ke konsumen [3][4]. Arus gaya juga masuk: M Stand dari Shanghai buka gerai perdana di Jakarta, sementara Vietnam memunculkan eksperimen kopi dengan krim/pasta udang [5][6][7].",
+        "lead": "Angka 461.991 kedai kopi itu muncul di pemberitaan Tribun News yang mengutip Kepala BPS, bersamaan dengan klaim “terbanyak di dunia” dan perbandingan tiga kali lipat lebih banyak dari AS [1][2]. Di hilir, pengakuan Endeavor untuk Jago Coffee/Kopi Gerobakan dan ekspansi M Stand memberi gambaran soal format layanan dan selera yang tengah dicoba pasar [3][4][5][6].",
+        "sections": [
+          {
+            "heading": "Angka kedai: klaim besar, konteks terbatas",
+            "paragraphs": [
+              "Tribun News melaporkan Kepala BPS menyebut jumlah kedai kopi di Indonesia mencapai 461.991 gerai dan diklaim terbanyak di dunia, lebih dari tiga kali lipat Amerika Serikat [1][2]. Ini memberi gambaran skala ekosistem kedai, tapi di level publik, berita tidak memuat definisi operasional “kedai kopi” atau metodologi perhitungan, sehingga pembaca sebaiknya memperlakukan angka ini sebagai klaim resmi yang diberitakan media, bukan dataset yang bisa diaudit [1][2]."
+            ]
+          },
+          {
+            "heading": "Layanan makin dekat: gerobak listrik dan model ringkas",
+            "paragraphs": [
+              "Liputan soal tiga pendiri Jago Coffee/Kopi Gerobakan yang lolos International Selection Panel Endeavor menekankan pendekatan membawa kopi lebih dekat ke konsumen lewat gerobak (termasuk listrik) [3][4]. Pengakuan ini menunjukkan model berformat kecil mendapat sorotan di tingkat kewirausahaan, meski pemberitaan masih berupa capaian seleksi dan belum memuat dampak operasional luas di pasar [3][4]."
+            ]
+          },
+          {
+            "heading": "Gaya dan rasa: Shanghai masuk Jakarta, Vietnam bereksperimen",
+            "paragraphs": [
+              "Di Jakarta, M Stand dari Shanghai resmi membuka gerai pertama, menawarkan konsep “modern coffee lifestyle”, racikan spesialti, dan desain ruang yang menjadi bagian dari daya tariknya [5][6]. Ini bentuk aliran gaya internasional ke pasar lokal dan untuk saat ini masih berupa pengumuman pembukaan gerai.",
+              "Di Vietnam, pemberitaan menyorot sajian kopi dengan krim/pasta fermentasi udang di sebuah kedai di Hue—contoh eksperimen rasa yang tidak umum di menu arus utama [7]. Sementara itu, untuk preferensi konsumsi, Kompas.com mengulas alternatif krimer yang dianggap lebih sehat seperti santan kental—relevan bagi konsumen yang ingin menyesuaikan profil rasa dan asupan harian [8]."
+            ]
+          }
+        ],
+        "conclusion": "Gambaran pekan ini: jumlah kedai diklaim sangat besar, format layanan ringkas mendapat sorotan kewirausahaan, dan arus gaya-eksperimen terus mengalir. Bagi pelaku, ini lebih berguna dibaca sebagai sinyal arah pilihan format dan diferensiasi menu ketimbang bukti lonjakan permintaan atau pergeseran selera yang pasti.",
+        "recommendations": [
+          {
+            "audience": "Pemilik/pengelola kedai",
+            "action": "Uji format berjejak kecil (pop-up/gerobak listrik) di area lalu lintas tinggi sebelum menambah gerai permanen.",
+            "basis": "Sorotan Endeavor pada model gerobak yang mendekatkan kopi ke konsumen menunjukkan minat pada distribusi ringkas, meski masih berupa capaian seleksi [3][4]."
+          },
+          {
+            "audience": "Pengembang menu",
+            "action": "Coba edisi terbatas menu eksploratif yang terinspirasi tren regional, sambil validasi rasa dengan uji kecil terlebih dulu.",
+            "basis": "Contoh eksperimen di Vietnam menunjukkan ruang untuk rasa non-lazim, tetapi masih kasus spesifik, bukan arus utama [7]."
+          },
+          {
+            "audience": "Konsumen sadar gizi",
+            "action": "Pertimbangkan pengganti krimer seperti santan kental bila ingin menyesuaikan asupan harian.",
+            "basis": "Kompas.com membahas opsi pengganti krimer yang dinilai lebih sehat [8]."
+          }
+        ],
+        "source_urls": [
+          "https://www.tribunnews.com/nasional/7893433/tembus-461-ribu-gerai-kepala-bps-ungkap-indonesia-miliki-kedai-kopi-terbanyak-di-dunia",
+          "https://jakarta.tribunnews.com/jakarta/444037/jumlah-kedai-kopi-indonesia-3-kali-lipat-as-bps-ungkap-potensi-besarnya",
+          "https://www.tribunnews.com/bisnis/7893500/lolos-seleksi-panel-di-kanada-3-pendiri-kopi-gerobakan-terpilih-sebagai-endeavor-entrepreneur",
+          "https://ekbis.sindonews.com/read/1757299/34/lolos-panel-global-endeavor-jago-coffee-perluas-akses-kopi-lewat-model-gerobak-listrik-1791220207",
+          "https://www.cantika.com/read/2121013/m-stand-resmi-buka-gerai-pertama-di-pik-tawarkan-tren-kopi-shanghai",
+          "https://koran-jakarta.com/2026-10-05/m-stand-dari-shanghai-hadir-di-jakarta-bawa-konsep-modern-coffee-lifestyle",
+          "https://www.cnnindonesia.com/gaya-hidup/20261005114335-262-1411680/sajian-kopi-dengan-pasta-udang-dan-tuna-di-vietnam-gimana-rasanya",
+          "https://www.kompas.com/food/read/2026/10/05/073100475/3-pengganti-krimer-kopi-yang-lebih-sehat-bisa-pakai-santan-kental"
+        ],
+        "evidence_note": "Sebagian besar materi berupa pernyataan pejabat, liputan seleksi kewirausahaan, dan pengumuman pembukaan gerai/menu; detail metodologi dan data pasar tidak tersedia di berita yang dirujuk."
+      },
+      "article_en": {
+        "title": "461,991 Coffee Shops? Service Formats and Flavors Are on the Move Too",
+        "summary": "Tribun News reported the Statistics Indonesia chief’s statement that Indonesia has 461,991 coffee shops—said to be the most in the world—and more than triple the United States [1][2]. At the same time, three Jago Coffee/Kopi Gerobakan founders were selected as Endeavor Entrepreneurs, highlighting cart and e-cart models that bring coffee closer to consumers [3][4]. Style flows are visible as well: Shanghai’s M Stand opened its first Jakarta store, while a café in Vietnam experiments with coffee served with shrimp-paste cream [5][6][7].",
+        "lead": "The 461,991 figure comes from Tribun News coverage quoting the Statistics Indonesia chief, alongside the “most in the world” claim and the three-times-the-US comparison [1][2]. Downstream, Endeavor’s recognition of Jago Coffee/Kopi Gerobakan and M Stand’s entry sketch where operators are testing formats and taste [3][4][5][6].",
+        "sections": [
+          {
+            "heading": "A big shop count, limited public context",
+            "paragraphs": [
+              "Tribun News says the Statistics Indonesia chief put the number of coffee shops at 461,991 and called it the world’s highest, more than triple the US [1][2]. It signals the ecosystem’s scale, but the reports don’t provide an operational definition of “coffee shop” or the counting method, so readers should treat this as an official claim reported by media—not an auditable dataset [1][2]."
+            ]
+          },
+          {
+            "heading": "Bringing coffee closer: compact formats and e-carts",
+            "paragraphs": [
+              "Coverage of three Jago Coffee/Kopi Gerobakan founders passing Endeavor’s International Selection Panel underscores a model that brings coffee closer to consumers via carts, including electric ones [3][4]. The recognition shows small-footprint formats are drawing entrepreneurial attention, though the news is about selection success and doesn’t document broad market impact yet [3][4]."
+            ]
+          },
+          {
+            "heading": "Style and taste: Shanghai lands in Jakarta, Vietnam experiments",
+            "paragraphs": [
+              "In Jakarta, Shanghai’s M Stand opened its first store with a “modern coffee lifestyle,” specialty drinks, and space design as part of the appeal [5][6]. It’s a clear case of international style entering the local scene, currently in the form of a launch announcement.",
+              "In Vietnam, reports point to coffee served with fermented shrimp-paste cream at a café in Hue—an example of flavor experimentation outside the mainstream [7]. Meanwhile, for everyday consumption choices, Kompas.com discusses creamers considered healthier, such as thick coconut milk, which is relevant for those tweaking taste and intake [8]."
+            ]
+          }
+        ],
+        "conclusion": "This week’s snapshot: a very large claimed shop count, compact service formats getting entrepreneurial spotlight, and a steady flow of style and experimentation. For operators, this reads more like signals about format choices and menu differentiation than proof of demand surges or taste shifts.",
+        "recommendations": [
+          {
+            "audience": "Shop owners/operators",
+            "action": "Pilot small-footprint formats (pop-ups/e-carts) in high-traffic areas before adding permanent stores.",
+            "basis": "Endeavor’s spotlight on cart models that bring coffee closer to consumers suggests interest in compact distribution, though it’s still about selection, not market-wide impact [3][4]."
+          },
+          {
+            "audience": "Menu developers",
+            "action": "Test limited-run experimental items inspired by regional trends, with small-scale validation first.",
+            "basis": "The Vietnam example shows room for non-mainstream flavors, but it’s a specific case rather than a mainstream shift [7]."
+          },
+          {
+            "audience": "Health-conscious consumers",
+            "action": "Consider creamer alternatives like thick coconut milk if you want to adjust daily intake.",
+            "basis": "Kompas.com outlines options considered healthier as substitutes for coffee creamers [8]."
+          }
+        ],
+        "source_urls": [
+          "https://www.tribunnews.com/nasional/7893433/tembus-461-ribu-gerai-kepala-bps-ungkap-indonesia-miliki-kedai-kopi-terbanyak-di-dunia",
+          "https://jakarta.tribunnews.com/jakarta/444037/jumlah-kedai-kopi-indonesia-3-kali-lipat-as-bps-ungkap-potensi-besarnya",
+          "https://www.tribunnews.com/bisnis/7893500/lolos-seleksi-panel-di-kanada-3-pendiri-kopi-gerobakan-terpilih-sebagai-endeavor-entrepreneur",
+          "https://ekbis.sindonews.com/read/1757299/34/lolos-panel-global-endeavor-jago-coffee-perluas-akses-kopi-lewat-model-gerobak-listrik-1791220207",
+          "https://www.cantika.com/read/2121013/m-stand-resmi-buka-gerai-pertama-di-pik-tawarkan-tren-kopi-shanghai",
+          "https://koran-jakarta.com/2026-10-05/m-stand-dari-shanghai-hadir-di-jakarta-bawa-konsep-modern-coffee-lifestyle",
+          "https://www.cnnindonesia.com/gaya-hidup/20261005114335-262-1411680/sajian-kopi-dengan-pasta-udang-dan-tuna-di-vietnam-gimana-rasanya",
+          "https://www.kompas.com/food/read/2026/10/05/073100475/3-pengganti-krimer-kopi-yang-lebih-sehat-bisa-pakai-santan-kental"
+        ],
+        "evidence_note": "Most items are official statements, entrepreneurship coverage, and store/menu announcements; methods and market-wide data aren’t available in the cited reports."
+      },
+      "input_sources": [
+        {
+          "id": "1",
+          "url": "https://www.harapanrakyat.com/2026/10/menelusuri-sejarah-kedai-kopi-legendaris-di-indonesia-yang-bertahan-lintas-generasi/",
+          "title": "Menelusuri Sejarah Kedai Kopi Legendaris di Indonesia yang Bertahan Lintas Generasi - Harapan Rakyat",
+          "source": "Harapan Rakyat",
+          "published_at": "Wed, 07 Oct 2026 11:03:55 GMT"
+        },
+        {
+          "id": "2",
+          "url": "https://www.tribunnews.com/bisnis/7893500/lolos-seleksi-panel-di-kanada-3-pendiri-kopi-gerobakan-terpilih-sebagai-endeavor-entrepreneur",
+          "title": "Lolos Seleksi Panel di Kanada, 3 Pendiri Kopi Gerobakan Terpilih Sebagai Endeavor Entrepreneur",
+          "source": "Tribun News",
+          "published_at": "2026-10-07 10:17:26"
+        },
+        {
+          "id": "3",
+          "url": "https://jakarta.tribunnews.com/jakarta/444037/jumlah-kedai-kopi-indonesia-3-kali-lipat-as-bps-ungkap-potensi-besarnya",
+          "title": "Jumlah Kedai Kopi Indonesia 3 Kali Lipat AS, BPS Ungkap Potensi Besarnya",
+          "source": "Tribun News",
+          "published_at": "2026-10-07 09:52:50"
+        },
+        {
+          "id": "4",
+          "url": "https://www.tribunnews.com/nasional/7893433/tembus-461-ribu-gerai-kepala-bps-ungkap-indonesia-miliki-kedai-kopi-terbanyak-di-dunia",
+          "title": "Tembus 461 Ribu Gerai, Kepala BPS Ungkap Indonesia Miliki Kedai Kopi Terbanyak di Dunia",
+          "source": "Tribun News",
+          "published_at": "2026-10-07 08:39:16"
+        },
+        {
+          "id": "5",
+          "url": "https://www.cnnindonesia.com/gaya-hidup/20261005114335-262-1411680/sajian-kopi-dengan-pasta-udang-dan-tuna-di-vietnam-gimana-rasanya",
+          "title": "Sajian Kopi dengan Pasta Udang dan Tuna di Vietnam, Gimana Rasanya?",
+          "source": "Cnnindonesia",
+          "published_at": "2026-10-06 08:00:00"
+        },
+        {
+          "id": "6",
+          "url": "https://www.cantika.com/read/2121013/m-stand-resmi-buka-gerai-pertama-di-pik-tawarkan-tren-kopi-shanghai",
+          "title": "M Stand Resmi Buka Gerai Pertama di PIK, Tawarkan Tren Kopi Shanghai - cantika.com",
+          "source": "cantika.com",
+          "published_at": "Tue, 06 Oct 2026 05:30:00 GMT"
+        },
+        {
+          "id": "7",
+          "url": "https://ekbis.sindonews.com/read/1757299/34/lolos-panel-global-endeavor-jago-coffee-perluas-akses-kopi-lewat-model-gerobak-listrik-1791220207",
+          "title": "Lolos Panel Global Endeavor, Jago Coffee Perluas Akses Kopi lewat Model Gerobak Listrik",
+          "source": "Sindonews",
+          "published_at": "2026-10-05 12:58:07"
+        },
+        {
+          "id": "8",
+          "url": "https://koran-jakarta.com/2026-10-05/m-stand-dari-shanghai-hadir-di-jakarta-bawa-konsep-modern-coffee-lifestyle",
+          "title": "M Stand dari Shanghai Hadir di Jakarta, Bawa Konsep Modern Coffee Lifestyle - Koran Jakarta ®",
+          "source": "Koran Jakarta ®",
+          "published_at": "Mon, 05 Oct 2026 04:58:00 GMT"
+        },
+        {
+          "id": "9",
+          "url": "https://www.kompas.com/tren/read/2026/10/05/103000365/kafe-di-vietnam-ciptakan-kopi-dengan-pasta-udang-dan-taburan-tuna-kering",
+          "title": "Kafe di Vietnam Ciptakan Kopi dengan Pasta Udang dan Taburan Tuna Kering, seperti Apa?",
+          "source": "Kompas.com",
+          "published_at": "2026-10-05 03:30:00"
+        },
+        {
+          "id": "10",
+          "url": "https://www.kompas.com/food/read/2026/10/05/073100475/3-pengganti-krimer-kopi-yang-lebih-sehat-bisa-pakai-santan-kental",
+          "title": "3 Pengganti Krimer Kopi yang Lebih Sehat, Bisa Pakai Santan Kental",
+          "source": "Kompas.com",
+          "published_at": "2026-10-05 00:31:00"
+        },
+        {
+          "id": "11",
+          "url": "https://kopitime.id/harga-kopi-kembali-bullish-dan-faktor-yang-memengaruhi-kenaikannya-1",
+          "title": "Harga Kopi Kembali Bullish dan Faktor yang Memengaruhi Kenaikannya - KopiTime",
+          "source": "kopitime.id",
+          "published_at": "2026-10-05T00:00:00.000Z"
+        },
+        {
+          "id": "12",
+          "url": "https://kopitime.id/apa-yang-mendorong-harga-kopi-kembali-berada-dalam-tren-bullish-1",
+          "title": "Apa yang Mendorong Harga Kopi Kembali Berada dalam Tren Bullish - KopiTime",
+          "source": "kopitime.id",
+          "published_at": "2026-10-05T00:00:00.000Z"
+        }
+      ]
+    },
     {
       "cluster_id": "kedai-konsumsi-gaya-hidup",
       "cluster_name": "Kedai, Konsumsi & Gaya Hidup",
