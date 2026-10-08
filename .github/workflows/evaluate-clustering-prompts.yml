@@ -1,0 +1,30 @@
+name: Evaluate coffee news clustering prompts
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  paired-prompt-evaluation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Run read-only paired evaluation
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_CLUSTER_MODEL: gpt-5.4-nano
+          EVAL_OUTPUT: clustering-evaluation-result.json
+        run: node scripts/evaluate-clustering-prompts.js
+      - name: Save detailed results
+        uses: actions/upload-artifact@v4
+        with:
+          name: clustering-prompt-evaluation-${{ github.run_id }}
+          path: clustering-evaluation-result.json
+          if-no-files-found: error
+          retention-days: 30
