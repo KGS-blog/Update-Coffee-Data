@@ -24,6 +24,20 @@ global.window = { BERITA_KLASTER: definitions };
 const clustering = clusterBerita(feedArticles);
 delete global.window;
 const latestNews = directFeedArticles.slice().sort((a, b) => Date.parse(b.tanggal || '') - Date.parse(a.tanggal || '')).slice(0, 6);
+const leadSummary = item => {
+  const raw = item?.source_description || item?.deskripsi || item?.description || item?.content_excerpt || '';
+  let text = String(raw).replace(/<[^>]*>/g, ' ').replace(/&nbsp;/gi, ' ').replace(/&amp;/gi, '&').replace(/&#39;|&apos;/gi, String.fromCharCode(39)).replace(/&quot;/gi, '"').replace(/&lt;/gi, '<').replace(/&gt;/gi, '>').replace(/\s+/g, ' ').trim();
+  const title = String(item?.source_title || item?.judul || '').trim();
+  if (title && text.toLocaleLowerCase('id-ID').startsWith(title.toLocaleLowerCase('id-ID'))) text = text.slice(title.length).replace(/^\s*[-–—:|.]+\s*/, '');
+  if (!text) return '';
+  const limit = 230;
+  if (text.length > limit) {
+    const excerpt = text.slice(0, limit + 1);
+    const boundary = Math.max(excerpt.lastIndexOf('. '), excerpt.lastIndexOf('! '), excerpt.lastIndexOf('? '));
+    text = boundary > 110 ? excerpt.slice(0, boundary + 1) : `${excerpt.slice(0, limit).replace(/\s+\S*$/, '')}…`;
+  }
+  return text;
+};
 const psdDoc = fs.existsSync(path.join(ROOT, 'data/psd.json')) ? JSON.parse(fs.readFileSync(path.join(ROOT, 'data/psd.json'), 'utf8')) : { data: [] };
 const exportDoc = fs.existsSync(path.join(ROOT, 'data/ekspor.json')) ? JSON.parse(fs.readFileSync(path.join(ROOT, 'data/ekspor.json'), 'utf8')) : { data: [] };
 const icoDoc = fs.existsSync(path.join(ROOT, 'data/ico-trade-data.json')) ? JSON.parse(fs.readFileSync(path.join(ROOT, 'data/ico-trade-data.json'), 'utf8')) : null;
@@ -248,7 +262,8 @@ const leadNews = latestNews.find(item => {
 }) || latestNews[0];
 if (leadNews) {
   const leadUrl = safeUrl(leadNews.tautan);
-  const lead = `<div class="eyebrow">Pilihan feed · ${esc(topicNames.get(String(leadNews.tautan||'')) || 'Berita kopi terbaru')}</div>${leadUrl ? `<a class="lead-link" href="${esc(leadUrl)}" target="_blank" rel="noopener noreferrer">` : ''}<h1>${esc(leadNews.judul || 'Kabar terbaru tentang kopi')}</h1>${leadUrl ? '</a>' : ''}<p>${esc(leadNews.sumber || 'Sumber berita')}${leadNews.tanggal ? ` · ${esc(new Intl.DateTimeFormat('id-ID',{day:'numeric',month:'short',year:'numeric'}).format(new Date(leadNews.tanggal)))}` : ''}${sourceRouteLabel(leadUrl)}</p>`;
+  const summary = leadSummary(leadNews);
+  const lead = `<div class="eyebrow">Pilihan feed · ${esc(topicNames.get(String(leadNews.tautan||'')) || 'Berita kopi terbaru')}</div>${leadUrl ? `<a class="lead-link" href="${esc(leadUrl)}" target="_blank" rel="noopener noreferrer">` : ''}<h1>${esc(leadNews.judul || 'Kabar terbaru tentang kopi')}</h1>${leadUrl ? '</a>' : ''}${summary ? `<p class="lead-summary">${esc(summary)}</p>` : ''}<p class="lead-meta">${esc(leadNews.sumber || 'Sumber berita')}${leadNews.tanggal ? ` · ${esc(new Intl.DateTimeFormat('id-ID',{day:'numeric',month:'short',year:'numeric'}).format(new Date(leadNews.tanggal)))}` : ''}${sourceRouteLabel(leadUrl)}</p>`;
   portal = portal.replace('<!-- STATIC_LEAD -->', lead);
 }
 const latest = latestNews.slice(1).map(item => {
