@@ -1,7 +1,7 @@
 {
   "version": 1,
-  "generated_at": "2026-10-08T05:29:33.430Z",
-  "feed_fetched": "2026-10-08T05:20:48.527Z",
+  "generated_at": "2026-10-08T05:50:19.213Z",
+  "feed_fetched": "2026-10-08T05:39:28.922Z",
   "mode": "auto",
   "settings": {
     "version": 1,
@@ -12,7 +12,7 @@
     "minimum_articles_per_topic": 5,
     "language": "id"
   },
-  "status": "ready",
+  "status": "needs_api_key",
   "articles": [
     {
       "cluster_id": "kedai-konsumsi-gaya-hidup",
