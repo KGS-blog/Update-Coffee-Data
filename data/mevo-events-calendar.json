@@ -1,0 +1,116 @@
+{
+  "schema": "kabar-kopi-events-calendar-v1",
+  "source": "https://raw.githubusercontent.com/KGS-blog/coffee-feed/main/mevo_events.json",
+  "timezone": "Asia/Jakarta",
+  "fetched_at": "2026-10-08T07:01:55.600Z",
+  "events": [
+    {
+      "id": "event-5047c6310facd164",
+      "name": "Sinara Fest 2026",
+      "start_date": "2026-09-03",
+      "end_date": "2026-09-04",
+      "location": "Semarang",
+      "country": "",
+      "organizer": "",
+      "category": "Coffee-related event",
+      "date_status": "SOURCE_EXTRACTED",
+      "note": "Tanggal pelaksanaan diekstrak dari konteks acara; kolom kosong berarti belum disebut secara jelas.",
+      "sources": [
+        {
+          "url": "https://www.jawapos.com/ekonomi/2609070206/dorong-umkm-naik-kelas-lewat-hilirisasi-kopi-kakao-dan-kelapa",
+          "kind": "growth_article"
+        }
+      ]
+    },
+    {
+      "id": "event-7d37054015f9907c",
+      "name": "Jogja Coffee Week",
+      "start_date": "2026-09-04",
+      "end_date": "2026-09-06",
+      "location": "Jogja Expo Center (JEC), Yogyakarta",
+      "country": "",
+      "organizer": "",
+      "category": "Coffee-related event",
+      "date_status": "SOURCE_EXTRACTED",
+      "note": "Tanggal pelaksanaan diekstrak dari konteks acara; kolom kosong berarti belum disebut secara jelas.",
+      "sources": [
+        {
+          "url": "https://wartakopi.com/tahun-ini-jogja-coffee-week-perkuat-ekosistem-kopi-lewat-bisnis-dan-lelang/",
+          "kind": "growth_article"
+        }
+      ]
+    },
+    {
+      "id": "icx-jakarta-2026",
+      "name": "Indonesia Coffee Expo Jakarta 2026",
+      "start_date": "2026-09-04",
+      "end_date": "2026-09-06",
+      "location": "Jakarta International Convention Center (JICC)",
+      "country": "Indonesia",
+      "organizer": "Dyandra Promosindo dan SCAI",
+      "category": "Coffee Expo",
+      "date_status": "REPORTED_COMPLETED",
+      "note": "Event sudah selesai menurut laporan Stapo, terbit 10 September 2026.",
+      "sources": [
+        {
+          "url": "https://www.stapo.id/news/icx-jakarta-2026-4/",
+          "kind": "news"
+        }
+      ]
+    },
+    {
+      "id": "event-620bde0ce753de58",
+      "name": "Detos Coffee & Snack Festival 2026",
+      "start_date": "2026-10-02",
+      "end_date": "2026-10-04",
+      "location": "Depok Town Square",
+      "country": "",
+      "organizer": "",
+      "category": "Coffee-related event",
+      "date_status": "SOURCE_EXTRACTED",
+      "note": "Tanggal pelaksanaan diekstrak dari konteks acara; kolom kosong berarti belum disebut secara jelas.",
+      "sources": [
+        {
+          "url": "https://www.stapo.id/news/novan-kopi-jalan-terus-bisnis/",
+          "kind": "growth_article"
+        }
+      ]
+    },
+    {
+      "id": "cbe-9-2026",
+      "name": "Cafe & Brasserie Expo Indonesia — edisi 9",
+      "start_date": "2026-10-09",
+      "end_date": "2026-10-11",
+      "location": "NICE, PIK 2, Hall 5",
+      "country": "Indonesia",
+      "organizer": "PT Panorama Media",
+      "category": "Coffee / Cafe / F&B Expo",
+      "date_status": "SOURCE_CONFIRMED",
+      "note": "Rundown terperinci belum tersedia; jadwal mengikuti halaman resmi saat diperiksa.",
+      "sources": [
+        {
+          "url": "https://cafebrasserieexpo.com/",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "event-fca843e543949e57",
+      "name": "Trade Expo Indonesia (TEI)",
+      "start_date": "2026-10-14",
+      "end_date": "2026-10-18",
+      "location": "Indonesia Convention Exhibition (ICE) BSD City, Kabupaten Tangerang, Banten",
+      "country": "",
+      "organizer": "",
+      "category": "Coffee-related event",
+      "date_status": "SOURCE_EXTRACTED",
+      "note": "Tanggal pelaksanaan diekstrak dari konteks acara; kolom kosong berarti belum disebut secara jelas.",
+      "sources": [
+        {
+          "url": "https://www.antaranews.com/berita/5765093/kemendag-tei-momentum-perkuat-merek-kopi-indonesia-di-pasar-global",
+          "kind": "growth_article"
+        }
+      ]
+    }
+  ]
+}

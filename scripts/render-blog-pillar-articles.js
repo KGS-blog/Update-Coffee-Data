@@ -50,6 +50,29 @@ function currentFor(pillar) {
     .filter(item => item.date && Date.parse(item.date) <= now && now - Date.parse(item.date) <= sevenDays)
     .sort((a,b) => Date.parse(b.date) - Date.parse(a.date))[0]?.article || null;
 }
+function homeContext(article, field) {
+  const source = String(article?.[field] || '');
+  const paragraphs = [...source.matchAll(/<p\b[^>]*>([\s\S]*?)<\/p>/gi)];
+  for (const match of paragraphs) {
+    const text = match[1]
+      .replace(/<br\s*\/?\s*>/gi, ' ')
+      .replace(/<[^>]+>/g, ' ')
+      .replace(/&nbsp;|&#160;/gi, ' ')
+      .replace(/&amp;/gi, '&').replace(/&lt;/gi, '<').replace(/&gt;/gi, '>')
+      .replace(/&quot;|&#34;/gi, '"').replace(/&#39;|&apos;/gi, "'")
+      .replace(/&#(\d+);/g, (_, n) => String.fromCodePoint(Number(n)))
+      .replace(/&#x([\da-f]+);/gi, (_, n) => String.fromCodePoint(parseInt(n, 16)))
+      .replace(/\s+/g, ' ').trim();
+    if (text.length >= 90) return text;
+  }
+  return '';
+}
+function homeTopics(article, field) {
+  return [...String(article?.[field] || '').matchAll(/<h2\b[^>]*>([\s\S]*?)<\/h2>/gi)]
+    .map(match => match[1].replace(/<[^>]+>/g, ' ').replace(/&amp;/gi, '&').replace(/&nbsp;|&#160;/gi, ' ').replace(/\s+/g, ' ').trim())
+    .filter(text => text && !/^(penutup|closing|kesimpulan|conclusion)$/i.test(text))
+    .slice(0, 3);
+}
 function teaser(article, pillar) {
   if (!article) return '';
   const en = pillar === 'data-tren';
@@ -69,7 +92,12 @@ function homeTeaser(article, pillar) {
   const date = articleDate(article);
   const dateId = date ? new Intl.DateTimeFormat('id-ID', { day:'numeric', month:'short', year:'numeric', timeZone:'Asia/Jakarta' }).format(new Date(date)) : '';
   const dateEn = date ? new Intl.DateTimeFormat('en-GB', { day:'numeric', month:'short', year:'numeric', timeZone:'Asia/Jakarta' }).format(new Date(date)) : '';
-  return `<article class="pillar-article-feature"><div class="eyebrow"><span class="id-copy">${esc(labels.id)} · Tulisan penulis</span><span class="en-copy">${esc(labels.en)} · Bylined article</span></div><h3><a class="id-copy" href="${hrefId}">${esc(article.title_id)}</a><a class="en-copy" href="${hrefEn}">${esc(article.title_en)}</a></h3><p><span class="id-copy">${esc(article.desc_id)}</span><span class="en-copy">${esc(article.desc_en)}</span></p><div class="pillar-author-meta"><span class="id-copy">Terbit ${esc(dateId)} · ditampilkan 7 hari</span><span class="en-copy">Published ${esc(dateEn)} · featured for 7 days</span></div><a class="home-feature-link id-copy" href="${hrefId}">Baca artikel lengkap →</a><a class="home-feature-link en-copy" href="${hrefEn}">Read the full article →</a></article>`;
+  const contextId = homeContext(article, 'content_id');
+  const contextEn = homeContext(article, 'content_en');
+  const topicsId = homeTopics(article, 'content_id');
+  const topicsEn = homeTopics(article, 'content_en');
+  const topicList = (items, lang) => items.length ? `<ul class="${lang}-copy">${items.map(item => `<li>${esc(item)}</li>`).join('')}</ul>` : '';
+  return `<article class="pillar-article-feature"><div class="eyebrow"><span class="id-copy">${esc(labels.id)} · Tulisan penulis</span><span class="en-copy">${esc(labels.en)} · Bylined article</span></div><h3><a class="id-copy" href="${hrefId}">${esc(article.title_id)}</a><a class="en-copy" href="${hrefEn}">${esc(article.title_en)}</a></h3><p class="pillar-feature-summary"><span class="id-copy">${esc(article.desc_id)}</span><span class="en-copy">${esc(article.desc_en)}</span></p>${contextId || contextEn ? `<p class="pillar-feature-context"><span class="id-copy">${esc(contextId)}</span><span class="en-copy">${esc(contextEn)}</span></p>` : ''}${topicsId.length || topicsEn.length ? `<section class="pillar-feature-highlights"><h4><span class="id-copy">Pokok bahasan</span><span class="en-copy">In this article</span></h4>${topicList(topicsId, 'id')}${topicList(topicsEn, 'en')}</section>` : ''}<div class="pillar-author-meta"><span class="id-copy">Terbit ${esc(dateId)} · ditampilkan 7 hari</span><span class="en-copy">Published ${esc(dateEn)} · featured for 7 days</span></div><a class="home-feature-link id-copy" href="${hrefId}">Baca artikel lengkap →</a><a class="home-feature-link en-copy" href="${hrefEn}">Read the full article →</a></article>`;
 }
 function standalone(article, lang) {
   const en = lang === 'en';
@@ -105,7 +133,8 @@ for (const file of ['index.html','kabar-kopi.html']) {
     const marker = `<!-- BLOG_PILLAR_HOME_${labels.marker} -->`;
     if (article) {
       const expiresAt = new Date(Date.parse(articleDate(article)) + sevenDays).toISOString();
-      html = html.replace(`data-pillar-card="${pillar}"`, `data-pillar-card="${pillar}" data-has-author-article="true" data-author-expires-at="${expiresAt}"`);
+      const cardAttributes = new RegExp(`data-pillar-card="${pillar}"(?: data-has-author-article="true" data-author-expires-at="[^"]*")*`);
+      html = html.replace(cardAttributes, `data-pillar-card="${pillar}" data-has-author-article="true" data-author-expires-at="${expiresAt}"`);
     }
     html = html.replace(marker, homeTeaser(article, pillar));
   }
