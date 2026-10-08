@@ -12,7 +12,7 @@ Analisis dan pilihan editorial menggunakan bahan berita pada rentang waktu di `d
 
 ## Mengaktifkan AI
 
-Di pengaturan repo GitHub, tambahkan Actions secret bernama `OPENAI_API_KEY` dengan API key OpenAI. Jangan menaruh key di HTML, JSON publik, atau variabel biasa. Opsional, tambahkan Actions variable `OPENAI_MODEL`; bila kosong, workflow memakai `gpt-5`. Pemanggilan AI berjalan di GitHub Actions, bukan di perangkat pembaca. Pemakaian API dapat menimbulkan biaya sesuai akun OpenAI.
+Di pengaturan repo GitHub, tambahkan Actions secret bernama `OPENAI_API_KEY` dengan API key OpenAI. Jangan menaruh key di HTML, JSON publik, atau variabel biasa. Workflow memakai model hemat sesuai tugas: `gpt-5.4-nano` untuk peninjauan relevansi dan clustering, serta `gpt-5.4-mini` untuk penyusunan artikel editorial. Pemanggilan AI berjalan di GitHub Actions, bukan di perangkat pembaca. Editorial otomatis dibatasi satu kali per 24 jam untuk tiap topik. Pemakaian API dapat menimbulkan biaya sesuai akun OpenAI.
 
 Tanpa secret tersebut, pengindeksan arsip dan pengelompokan berbasis kata kunci tetap berjalan, tetapi kandidat AI dan artikel editorial penuh belum dihasilkan.
 

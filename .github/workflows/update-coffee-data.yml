@@ -89,7 +89,8 @@ jobs:
       - name: Index archive, apply clustering decisions, and generate editorial
         env:
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
-          OPENAI_MODEL: ${{ vars.OPENAI_MODEL }}
+          OPENAI_CLUSTER_MODEL: gpt-5.4-nano
+          OPENAI_EDITORIAL_MODEL: gpt-5.4-mini
         run: node scripts/process-portal-data.js
       - name: Publish crawlable editorial pages and sitemap
         run: node scripts/generate-editorial-pages.js
