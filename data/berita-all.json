@@ -40139,5 +40139,35 @@
     "batch_size": 400,
     "batch_limit": 400,
     "purpose": "Short original-publisher context for relevance and cluster review; full article text is not stored or republished."
+  },
+  "metodologi_deduplikasi": {
+    "version": "2026-10-09-v1",
+    "article_identity": "normalized_publisher_url",
+    "rules_id": [
+      "Satukan rekaman hanya jika URL penerbit setelah normalisasi sama; abaikan fragmen, parameter pelacakan umum, dan parameter open_from saat membandingkan.",
+      "Jangan membuang artikel penerbit karena judulnya sama atau mirip dengan artikel lain.",
+      "Simpan URL penerbit berbeda sebagai rekaman liputan terpisah, termasuk salinan sindikasi; jangan anggap salinan sebagai bukti independen.",
+      "Kemiripan judul, tanggal, entitas, atau topik hanya dapat menjadi petunjuk hubungan peristiwa; tidak menggabungkan rekaman dan tidak membuktikan asal bukti independen.",
+      "Jika hubungan sumber atau peristiwa belum jelas, pertahankan kedua rekaman dan tandai untuk pemeriksaan; jangan menghapus diam-diam.",
+      "Hasil Google News yang belum memiliki URL penerbit terverifikasi adalah petunjuk penemuan, bukan sumber penerbit independen. Jika judulnya cocok dengan artikel ber-URL penerbit terverifikasi, hasil agregator tidak ditampilkan sebagai sumber kedua."
+    ],
+    "rules_en": [
+      "Collapse records only when normalized publisher URLs match; ignore fragments, common tracking parameters, and open_from parameters.",
+      "Never discard a publisher article because its title matches or resembles another article.",
+      "Keep different publisher URLs as separate coverage records, including syndicated copies; do not count copies as independent evidence.",
+      "Similarity of title, date, entities, or topic may suggest an event relation; it does not merge records or prove independent evidence origins.",
+      "If source or event relations are uncertain, retain both records for review instead of silently deleting either one.",
+      "An unresolved Google News result is a discovery pointer, not an independent publisher source. Suppress it when a verified publisher article with a matching headline is available."
+    ],
+    "evidence_counting_id": "Jumlah URL/artikel menunjukkan volume liputan, bukan jumlah konfirmasi independen. Artikel yang mengulang siaran pers, kutipan, atau dataset yang sama memiliki satu asal bukti sampai ada verifikasi terpisah.",
+    "evidence_counting_en": "Article or URL counts describe coverage volume, not independent confirmations. Reports repeating the same press release, quotation, or dataset share one evidence origin until separately verified.",
+    "current_capabilities": {
+      "canonical_url_deduplication": true,
+      "headline_only_deletion": false,
+      "automatic_cross_publisher_event_grouping": false,
+      "syndication_lineage_detection": false,
+      "independent_claim_origin_verification": false
+    },
+    "uncertainty_policy": "retain_records_and_flag_for_review"
   }
 }
