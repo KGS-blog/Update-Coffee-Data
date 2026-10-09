@@ -1,0 +1,98 @@
+{
+  "source_group": "respondent panel",
+  "market_tier": "consumer sale",
+  "currency": "IDR",
+  "method": "For each period, calculate one median price per supplier region from monthly average consumer prices, then take the median across regions. One supplier per region per user instruction. No supplier, region, product, or respondent counts are included.",
+  "groups": [
+    {
+      "type": "Arabika",
+      "form": "green",
+      "period": "Q2 2026",
+      "price_per_kg": 130000.0
+    },
+    {
+      "type": "Arabika",
+      "form": "green",
+      "period": "Q3 2026",
+      "price_per_kg": 155600.0
+    },
+    {
+      "type": "Arabika",
+      "form": "green",
+      "period": "Q4 2026",
+      "price_per_kg": 156000.0
+    },
+    {
+      "type": "Arabika",
+      "form": "roasted",
+      "period": "Q1 2026",
+      "price_per_kg": 217500.0
+    },
+    {
+      "type": "Arabika",
+      "form": "roasted",
+      "period": "Q2 2026",
+      "price_per_kg": 175000.0
+    },
+    {
+      "type": "Arabika",
+      "form": "roasted",
+      "period": "Q3 2026",
+      "price_per_kg": 269187.5
+    },
+    {
+      "type": "Arabika",
+      "form": "roasted",
+      "period": "Q4 2026",
+      "price_per_kg": 237500.0
+    },
+    {
+      "type": "Robusta",
+      "form": "green",
+      "period": "Q4 2025",
+      "price_per_kg": 69704.0
+    },
+    {
+      "type": "Robusta",
+      "form": "green",
+      "period": "Q1 2026",
+      "price_per_kg": 70691.75
+    },
+    {
+      "type": "Robusta",
+      "form": "green",
+      "period": "Q2 2026",
+      "price_per_kg": 71300.0
+    },
+    {
+      "type": "Robusta",
+      "form": "green",
+      "period": "Q3 2026",
+      "price_per_kg": 71150.0
+    },
+    {
+      "type": "Robusta",
+      "form": "roasted",
+      "period": "Q4 2025",
+      "price_per_kg": 125000.0
+    },
+    {
+      "type": "Robusta",
+      "form": "roasted",
+      "period": "Q1 2026",
+      "price_per_kg": 125000.0
+    },
+    {
+      "type": "Robusta",
+      "form": "roasted",
+      "period": "Q2 2026",
+      "price_per_kg": 125000.0
+    },
+    {
+      "type": "Robusta",
+      "form": "roasted",
+      "period": "Q3 2026",
+      "price_per_kg": 127500.0
+    }
+  ]
+}

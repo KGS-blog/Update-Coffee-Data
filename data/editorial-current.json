@@ -1032,5 +1032,15 @@
         }
       ]
     }
-  ]
+  ],
+  "citation_policy": {
+    "version": "stable-source-id-verbatim-excerpt-v2",
+    "marker_rule": "[n] maps only to input_sources item whose id is n; it never means the nth source_urls entry.",
+    "url_rule": "Every cited input source URL must appear exactly in the article source_urls list; source_urls may contain no uncited or unknown URL.",
+    "evidence_rule": "Each cited source_id requires a claim and an exact verbatim quote found in that source supplied excerpt after punctuation and whitespace normalization.",
+    "on_failure": "reject_new_article_and_retain_previous_article",
+    "limitation": "Text matching checks traceability, not whether the cited passage logically supports the claim or whether the publisher claim is true.",
+    "legacy": "For existing articles without citation_mode, markers within source_urls length use source_urls order; out-of-range markers use stable input_sources IDs.",
+    "current_data_note": "Current stored articles predate evidence-quote validation; their citation references resolve structurally, but editors should still verify that each cited passage supports its claim."
+  }
 }

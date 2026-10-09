@@ -51,6 +51,21 @@ function headlineKey(article) {
   }
   return title.normalize("NFKC").toLowerCase().replace(/[^\p{L}\p{N}]+/gu, " ").trim();
 }
+// Article identity is URL-based. A matching headline is never sufficient to
+// discard a publisher record: separate outlets may independently cover the
+// same event or republish a wire story. Tracking parameters and fragments do
+// not create a new article identity.
+function normalizedPublisherUrl(value) {
+  try {
+    const url = new URL(String(value || ""));
+    url.hash = "";
+    Array.from(url.searchParams.keys()).forEach(function (key) {
+      if (/^(utm_.+|gclid|dclid|fbclid|msclkid|mc_cid|mc_eid|open_from)$/i.test(key)) url.searchParams.delete(key);
+    });
+    return url.href;
+  } catch (_) { return String(value || "").trim(); }
+}
+const DEDUPLICATION_POLICY = JSON.parse(fs.readFileSync(path.join(OUT, "metodologi-deduplikasi-berita.json"), "utf8"));
 function decodeXmlText(value) {
   return String(value || "").replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, "$1").replace(/&amp;/g, "&").replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&#39;|&apos;/g, "'").trim();
 }
@@ -347,16 +362,12 @@ async function getGoogleNewsCandidates() {
     if (artikel && artikel.length) {
       const KOPI_RX = /kopi|coffee|arabica|robusta/i;
       const seen = new Set();
-      const seenTitles = new Set();
       const uniq = artikel.filter(function (a) {
         const href = String(a.tautan || "");
         if (!/^https?:\/\//i.test(href) || isGoogleNewsRedirect(href) || a.link_type === "aggregator_redirect") return false;
-        const k = href || String(a.judul || "");
+        const k = normalizedPublisherUrl(href) || String(a.judul || "");
         if (seen.has(k)) return false;
         seen.add(k);
-        const title = headlineKey(a);
-        if (title && seenTitles.has(title)) return false;
-        if (title) seenTitles.add(title);
         return true;
       });
       // Engine is curated; NewsData results must still mention coffee in title.
@@ -381,7 +392,7 @@ async function getGoogleNewsCandidates() {
       diag.google_news_published = aggregators.length + " dari maksimum " + aggregatorCap + " item agregator; porsi " + (simpan.length ? Math.round(aggregators.length / simpan.length * 100) : 0) + "%";
       console.log("berita relevan:", simpan.length, "dari", uniq.length, "| engine:", eng.length);
       if (!eng.length && !lain.length) diag.feed = "tidak ada berita dengan tautan artikel langsung";
-      fs.writeFileSync(path.join(OUT, "berita.json"), JSON.stringify({ sumber: sumberBerita, artikel: simpan, diagnostik: diag, fetched: now }));
+      fs.writeFileSync(path.join(OUT, "berita.json"), JSON.stringify({ sumber: sumberBerita, artikel: simpan, diagnostik: diag, fetched: now, metodologi_deduplikasi: DEDUPLICATION_POLICY }));
       // ARSIP BULANAN: kumulatif per bulan, dedupe by tautan
       try {
         const bln = now.slice(0, 7);
@@ -389,9 +400,9 @@ async function getGoogleNewsCandidates() {
         fs.mkdirSync(path.join(OUT, "arsip"), { recursive: true });
         let arsip = { bulan: bln, artikel: [] };
         try { arsip = JSON.parse(fs.readFileSync(arsipPath, "utf8")); } catch (e0) {}
-        const byUrl = new Map((arsip.artikel || []).map(function (a) { return [String(a.tautan || a.judul), a]; }));
+        const byUrl = new Map((arsip.artikel || []).map(function (a) { return [normalizedPublisherUrl(a.tautan || a.judul), a]; }));
         simpan.forEach(function (a) {
-          const k = String(a.tautan || a.judul), old = byUrl.get(k);
+          const k = normalizedPublisherUrl(a.tautan || a.judul), old = byUrl.get(k);
           if (!old) { arsip.artikel.push(a); byUrl.set(k, a); }
           else if (!old.ringkasan && a.ringkasan) old.ringkasan = a.ringkasan;
           if (!old && !isGoogleNewsRedirect(a.tautan)) {
@@ -404,6 +415,18 @@ async function getGoogleNewsCandidates() {
             }
           }
         });
+        // Retire unresolved aggregator pointers when the archive has a verified
+        // publisher record for the same headline. Distinct publisher URLs stay.
+        const publisherTitles = new Set(arsip.artikel.filter(function (a) { return !isGoogleNewsRedirect(a.tautan || a.link) && a.link_type !== "aggregator_redirect"; }).map(headlineKey).filter(Boolean));
+        const archiveSeenUrls = new Set();
+        arsip.artikel = arsip.artikel.filter(function (a) {
+          const url = String(a.tautan || a.link || "");
+          if ((isGoogleNewsRedirect(url) || a.link_type === "aggregator_redirect") && publisherTitles.has(headlineKey(a))) return false;
+          const identity = normalizedPublisherUrl(url || a.judul);
+          if (archiveSeenUrls.has(identity)) return false;
+          archiveSeenUrls.add(identity);
+          return true;
+        });
         fs.writeFileSync(arsipPath, JSON.stringify(arsip, null, 1));
         console.log("saved data/arsip/berita-" + bln + ".json:", arsip.artikel.length, "artikel terkumpul");
       } catch (eA) { console.log("arsip skip:", eA.message); }
@@ -415,6 +438,13 @@ async function getGoogleNewsCandidates() {
         // Keep the clustering/search master focused on publisher sources.
         // Unresolved aggregator records remain searchable in monthly archives.
         all.artikel = (all.artikel || []).filter(function (a) { return a.link_type !== "aggregator_redirect" && !isGoogleNewsRedirect(a.tautan || a.link); });
+        const existingArticleUrls = new Set();
+        all.artikel = all.artikel.filter(function (a) {
+          const identity = normalizedPublisherUrl(a.tautan || a.link || a.judul);
+          if (existingArticleUrls.has(identity)) return false;
+          existingArticleUrls.add(identity);
+          return true;
+        });
         // TERAPKAN override pengguna (klaster-final.json: [{tautan, klaster}])
         try {
           const ov = JSON.parse(fs.readFileSync(path.join(OUT, "klaster-final.json"), "utf8"));
@@ -427,14 +457,9 @@ async function getGoogleNewsCandidates() {
             });
           }
         } catch (eOv) {}
-        const byUrl = new Map((all.artikel || []).map(function (a, idx) { return [String(a.tautan || a.judul), idx]; }));
+        const byUrl = new Map((all.artikel || []).map(function (a, idx) { return [normalizedPublisherUrl(a.tautan || a.link || a.judul), idx]; }));
         directSimpan.concat(aggregators, recoveredHistorical).forEach(function (a) {
-          const k = String(a.tautan || a.judul);
-          const titleKey = headlineKey(a);
-          const duplicate = (all.artikel || []).some(function (existing) {
-            return String(existing.tautan || existing.link || "") === k || (titleKey && headlineKey(existing) === titleKey);
-          });
-          if (!byUrl.has(k) && duplicate) return;
+          const k = normalizedPublisherUrl(a.tautan || a.link || a.judul);
           if (!byUrl.has(k)) { all.artikel.push(a); byUrl.set(k, all.artikel.length - 1); }
           else {
             const old = all.artikel[byUrl.get(k)];
@@ -449,13 +474,14 @@ async function getGoogleNewsCandidates() {
               all.artikel[priorIndex] = Object.assign({}, all.artikel[priorIndex], a);
               all.artikel.splice(index, 1);
               byUrl.clear();
-              all.artikel.forEach(function (item, idx) { byUrl.set(String(item.tautan || item.judul), idx); });
+              all.artikel.forEach(function (item, idx) { byUrl.set(normalizedPublisherUrl(item.tautan || item.link || item.judul), idx); });
             }
           }
         });
         all.artikel.sort(function (a, b) { return (Date.parse(b.tanggal) || 0) - (Date.parse(a.tanggal) || 0); });
         if (all.artikel.length > 500) all.artikel = all.artikel.slice(0, 500);
         all.fetched = now;
+        all.metodologi_deduplikasi = DEDUPLICATION_POLICY;
         fs.writeFileSync(ALL_PATH, JSON.stringify(all));
         console.log("saved data/berita-all.json:", all.artikel.length, "artikel kumulatif");
       } catch (eAll) { console.log("berita-all skip:", eAll.message); }

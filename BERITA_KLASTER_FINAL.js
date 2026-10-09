@@ -49,7 +49,8 @@ function clusterBerita(artikel) {
         total_artikel: artikel.filter(a => String(a.cluster_assignment || "") !== "editor_irrelevant").length,
         clustering_timestamp: new Date().toISOString(),
         klaster: [],
-        lainnya_items: []
+        lainnya_items: [],
+        unclassified_items: []
     };
 
     // Initialize clusters
@@ -64,38 +65,66 @@ function clusterBerita(artikel) {
         persen: 0
     }));
 
-    let lainnya = { nama: "Lainnya", nama_en: "Others", items: [] };
+    let lainnya = { nama: "Lainnya", nama_en: "Other", items: [] };
+    let unclassified = { nama: "Belum diklasifikasikan", nama_en: "Unclassified", items: [] };
 
     // Clustering logic
     artikel.filter(a => String(a.cluster_assignment || "") !== "editor_irrelevant").forEach(a => {
-        const t = String(a.judul || "").toLowerCase();
+        const title = String(a.judul || "").toLocaleLowerCase("id-ID");
+        const summary = [a.ringkasan, a.source_description, a.description].filter(Boolean).join(" ").toLocaleLowerCase("id-ID");
+        const body = [a.content_excerpt, a.coffee_relevance_context].filter(Boolean).join(" ").toLocaleLowerCase("id-ID");
         const saved = String(a.cluster_id || a.cluster_name || a.klaster_user || "").toLowerCase();
         const assignment = String(a.cluster_assignment || "").toLowerCase();
-        // The server has explicitly left this item unclassified. Do not
-        // silently replace that decision with a weak browser keyword match.
-        if (["lainnya", "other"].includes(saved) || assignment === "unassigned") {
-            lainnya.items.push(a);
-            return;
+        // “Lainnya” is reserved for an explicit editor decision that no
+        // existing topic fits. Pending or legacy-unassigned stories have a
+        // separate bucket so they do not distort the public topic counts.
+        const pendingAssignment = assignment === "unassigned" || !saved || ["belum-diklasifikasikan", "belum diklasifikasikan", "unclassified"].includes(saved);
+        if (["lainnya", "other"].includes(saved)) {
+            if (["editor", "editor_override"].includes(assignment)) {
+                lainnya.items.push(a);
+                return;
+            }
+            if (!pendingAssignment) {
+                unclassified.items.push(a);
+                return;
+            }
         }
-        const hit = kl.find(k => saved && [k.slug, k.nama].some(v => String(v || "").toLowerCase() === saved))
-            || kl.find(k => k.kunci.some(kw => t.indexOf(kw) !== -1));
-        (hit || lainnya).items.push(a);
+        const savedHit = !pendingAssignment && kl.find(k => saved && [k.slug, k.nama].some(v => String(v || "").toLowerCase() === saved));
+        const matchScore = cluster => cluster.kunci.reduce((score, rawKeyword) => {
+            const keyword = String(rawKeyword || "").toLocaleLowerCase("id-ID").trim();
+            if (!keyword) return score;
+            const escaped = keyword.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+            const pattern = keyword.length <= 4 && /^[\p{L}\p{N}]+$/u.test(keyword)
+                ? new RegExp(`(^|[^\\p{L}\\p{N}])${escaped}($|[^\\p{L}\\p{N}])`, "u")
+                : null;
+            const matches = value => pattern ? pattern.test(value) : value.includes(keyword);
+            return score + (matches(title) ? 4 : 0) + (matches(summary) ? 2 : 0) + (matches(body) ? 1 : 0);
+        }, 0);
+        const rankedHits = pendingAssignment ? kl.map(cluster => ({ cluster, score: matchScore(cluster) }))
+            .filter(item => item.score > 0).sort((left, right) => right.score - left.score) : [];
+        const hit = savedHit || rankedHits[0]?.cluster;
+        (hit || unclassified).items.push(a);
     });
 
     // Calculate percentages
     kl.forEach(k => {
         k.jumlah = k.items.length;
-        k.persen = artikel.length ? Math.round((k.jumlah / artikel.length) * 100) : 0;
+        k.persen = result.total_artikel ? Math.round((k.jumlah / result.total_artikel) * 100) : 0;
     });
 
     lainnya.jumlah = lainnya.items.length;
-    lainnya.persen = artikel.length ? Math.round((lainnya.jumlah / artikel.length) * 100) : 0;
+    lainnya.persen = result.total_artikel ? Math.round((lainnya.jumlah / result.total_artikel) * 100) : 0;
+    unclassified.jumlah = unclassified.items.length;
+    unclassified.persen = result.total_artikel ? Math.round((unclassified.jumlah / result.total_artikel) * 100) : 0;
 
     // Return formatted result
     result.klaster = kl.filter(k => k.items.length > 0);
     result.lainnya_items = lainnya.items;
     result.lainnya_jumlah = lainnya.jumlah;
     result.lainnya_persen = lainnya.persen;
+    result.unclassified_items = unclassified.items;
+    result.unclassified_jumlah = unclassified.jumlah;
+    result.unclassified_persen = unclassified.persen;
 
     return result;
 }
@@ -135,7 +164,8 @@ async function fetchAndClusterBerita() {
             success: false,
             error: error.message,
             klaster: [],
-            lainnya_items: []
+            lainnya_items: [],
+            unclassified_items: []
         };
     }
 }
