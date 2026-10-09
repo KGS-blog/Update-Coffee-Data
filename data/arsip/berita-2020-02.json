@@ -1,0 +1,28 @@
+{
+  "bulan": "2020-02",
+  "artikel": [
+    {
+      "judul": "Yafet Wetipo, Dosen yang Beralih Profesi Jadi Roaster Kopi",
+      "tautan": "https://suarapapua.com/2020/02/27/yafet-wetipo-dosen-yang-beralih-profesi-jadi-roaster-kopi",
+      "tanggal": "2020-02-27T00:00:00.000Z",
+      "publication_date_precision": "day",
+      "publication_date_evidence": "2020-02-27T15:08:36+09:00",
+      "sumber": "suarapapua.com",
+      "ringkasan": "ArtikelBeritaEkonomiFeatureTanah PapuaMamta Yafet Steven Wetipo, pengusaha kopi bersertifikat Roaster di Kota Jayapura ketika diwawancarai Suara Papua di kediamannya, di Waena, Kota Jayapura, pekan lalu. (Ist - SP) JAYAPURA, SUARAPAPUA.com— “Membantu orang lain merupakan hobi, terutama menginginkan Papua maju, berarti harus saling membantu. Papua maju bukan ",
+      "coffee_relevance_context": "ArtikelBeritaEkonomiFeatureTanah PapuaMamta Yafet Steven Wetipo, pengusaha kopi bersertifikat Roaster di Kota Jayapura ketika diwawancarai Suara Papua di kediamannya, di Waena, Kota Jayapura, pekan lalu. (Ist - SP) JAYAPURA, SUARAPAPUA.com— “Membantu orang la … mua orang Papua harus bisa.” Itulah sepenggal kalimat yang diungkapkan Yafet Steven Wetipo. Pengusaha muda Papua yang sedang merintis usaha kopi Papua di Jayapura. Nama usahanya ia beri nama Highland Roastery. Ia menceritakan hal ini saat suarapapua.com bertemu di kediamannya, jalan Yoka Pantai Waena, Distrik Heram Kota Ja … a Wacana (UKSW), Salah Tiga, Jawa Tengah pada 2013. Baca juga: Tiga Anak Muda Papua Dinobatkan Sebagai Pengusaha Muda Terbaik ads Pengusaha kopi asal Kurima, Kabupaten Yahukimo ini adalah satu-satunya anak Papua yang memiliki sertifikat Roaster di Kota Jayapura. Waktu itu, keseharian Yafet hanya mengajar lazimnya pengajar",
+      "link_type": "publisher_article",
+      "source_type": "mevo_curated_growth",
+      "source_collection": "artikel_pertumbuhan",
+      "material_type": "growth",
+      "source_original_url": "https://suarapapua.com/2020/02/27/yafet-wetipo-dosen-yang-beralih-profesi-jadi-roaster-kopi",
+      "source_content_sha256": "4538ccd43d22944b5700d94be34b12489700fc26321e2befc16ea7c66fa41a1c",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "mevo_screened_coffee_relevance",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    }
+  ]
+}

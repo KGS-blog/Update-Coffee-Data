@@ -23,6 +23,29 @@
       "cluster_review_version": 0,
       "source_collection": "coffee_relevant_articles",
       "material_type": null
+    },
+    {
+      "judul": "Berkunjung ke Pengolahan Kopi CM di Bondowoso, Harga Jual Tembus Rp 350 Ribu Per Kg | beritajatim.com",
+      "tautan": "https://beritajatim.com/berkunjung-ke-pengolahan-kopi-cm-di-bondowoso-harga-jual-tembus-rp-350-ribu-per-kg",
+      "tanggal": "2024-08-10T00:00:00.000Z",
+      "publication_date_precision": "day",
+      "publication_date_evidence": "2024-08-10T08:13:44+07:00",
+      "sumber": "beritajatim.com",
+      "ringkasan": "Bondowoso (beritajatim.com) – Pengolahan biji kopi memiliki beragam metode yang unik, salah satunya adalah Carbonic Maceration (CM). Metode ini semakin populer di kalangan pecinta kopi, terutama di Kabupaten Bondowoso. Salah satu pengolah kopi CM yang terkenal di daerah ini adalah Java Raung Coffee, yang berlokasi di Desa Sukosari Lor, Kecamatan Sumberwringi",
+      "coffee_relevance_context": "Bondowoso (beritajatim.com) – Pengolahan biji kopi memiliki beragam metode yang unik, salah satunya adalah Carbonic Maceration (CM). Metode ini semakin populer di kalangan pecinta kopi, terutama di Kabupaten Bondowoso. Salah satu … biji kopi memiliki beragam metode yang unik, salah satunya adalah Carbonic Maceration (CM). Metode ini semakin populer di kalangan pecinta kopi, terutama di Kabupaten Bondowoso. Salah satu pengolah kopi CM yang terkenal di daerah ini adalah Java Raung Coffee, yang berlokasi di Desa Sukosari Lor, Kecamatan Sumberwringin. A … adalah Carbonic Maceration (CM). Metode ini semakin populer di kalangan pecinta kopi, terutama di Kabupaten Bondowoso. Salah satu pengolah kopi CM yang terkenal di daerah ini adalah Java Raung Coffee, yang berlokasi di Desa Sukosari Lor, Kecamatan Sumberwringin. Andi Wijaya, pemilik Java Raung Coffee, menjelaskan bahwa pr",
+      "link_type": "publisher_article",
+      "source_type": "mevo_curated_growth",
+      "source_collection": "artikel_pertumbuhan",
+      "material_type": "growth",
+      "source_original_url": "https://beritajatim.com/berkunjung-ke-pengolahan-kopi-cm-di-bondowoso-harga-jual-tembus-rp-350-ribu-per-kg",
+      "source_content_sha256": "e1539b0cfb61a4dbac6f601a94cddd12e14ff6727488096abe8ec25635256ddc",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "mevo_screened_coffee_relevance",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
     }
   ]
 }

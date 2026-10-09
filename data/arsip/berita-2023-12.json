@@ -1,0 +1,28 @@
+{
+  "bulan": "2023-12",
+  "artikel": [
+    {
+      "judul": "Perkebunan Kopi di Indonesia, Menjelajahi Aromanya yang Kaya - Kopi Spesial Indonesia",
+      "tautan": "https://specialtycoffee.id/id/articles/coffee-plantation-indonesia",
+      "tanggal": "2023-12-18T00:00:00.000Z",
+      "publication_date_precision": "day",
+      "publication_date_evidence": "2023-12-18T16:46:46+00:00",
+      "sumber": "specialtycoffee.id",
+      "ringkasan": "Daftar Isi Perkebunan kopi di Indonesia, dengan bentang alamnya yang beragam dan tanahnya yang kaya akan vulkanis, Indonesia berdiri sebagai pusat produksi kopi dunia. Dalam postingan blog ini, kita akan menyelami dunia perkebunan kopi Indonesia yang menawan, mengungkap cita rasa unik, metode pengolahan, dan tantangan yang dihadapi oleh industri yang berkemb",
+      "coffee_relevance_context": "Daftar Isi Perkebunan kopi di Indonesia, dengan bentang alamnya yang beragam dan tanahnya yang kaya akan vulkanis, Indonesia berdiri sebagai pusat produksi kopi dunia. Dalam postingan blog ini, kita akan me … bunan kopi di Indonesia, dengan bentang alamnya yang beragam dan tanahnya yang kaya akan vulkanis, Indonesia berdiri sebagai pusat produksi kopi dunia. Dalam postingan blog ini, kita akan menyelami dunia perkebunan kopi Indonesia yang menawan, mengungkap cita rasa unik, metode pengolahan, dan tantangan yang dihadapi oleh i … ang kaya akan vulkanis, Indonesia berdiri sebagai pusat produksi kopi dunia. Dalam postingan blog ini, kita akan menyelami dunia perkebunan kopi Indonesia yang menawan, mengungkap cita rasa unik, metode pengolahan, dan tantangan yang dihadapi oleh industri yang berkembang pesat ini. Keanekaragaman Perkebunan Kopi di Indone",
+      "link_type": "publisher_article",
+      "source_type": "mevo_curated_growth",
+      "source_collection": "artikel_pertumbuhan",
+      "material_type": "growth",
+      "source_original_url": "https://specialtycoffee.id/id/articles/coffee-plantation-indonesia",
+      "source_content_sha256": "420252ff894df6a3baa9b8f96d758a451dd8971c604139e7f31b90c570a5b061",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "mevo_screened_coffee_relevance",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    }
+  ]
+}

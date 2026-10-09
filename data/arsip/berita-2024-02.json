@@ -1,0 +1,28 @@
+{
+  "bulan": "2024-02",
+  "artikel": [
+    {
+      "judul": "Petani Ngada Kembangkan Budidaya dan Wisata Kopi Arabika Organik",
+      "tautan": "https://kompas.id/artikel/petani-ngada-kembangkan-budidaya-dan-wisata-kopi-arabika-organik",
+      "tanggal": "2024-02-02T00:00:00.000Z",
+      "publication_date_precision": "day",
+      "publication_date_evidence": "2024-02-02T13:00:30+07:00",
+      "sumber": "kompas.id",
+      "ringkasan": "Petani Ngada Kembangkan Budidaya dan Wisata Kopi Arabika Organik ekonomiPetani Ngada Kembangkan B...Petani Ngada Kembangkan Budidaya dan Wisata Kopi Arabika OrganikPengembangan budidaya kopi arabika di Ngada dilakukan bertahap selaras dengan pembangunan destinasi wisata kopi.02 Feb 2024 13:00 WIB · ekonomiBagikanSalin PranalaOleh KORNELIS KEWA AMA00:0000:001",
+      "coffee_relevance_context": "Petani Ngada Kembangkan Budidaya dan Wisata Kopi Arabika Organik ekonomiPetani Ngada Kembangkan B...Petani Ngada Kembangkan Budidaya dan Wisata Kopi Arabika OrganikPengembangan budidaya kopi arabika di Ngada dilakukan bertahap s … ni Ngada Kembangkan Budidaya dan Wisata Kopi Arabika Organik ekonomiPetani Ngada Kembangkan B...Petani Ngada Kembangkan Budidaya dan Wisata Kopi Arabika OrganikPengembangan budidaya kopi arabika di Ngada dilakukan bertahap selaras dengan pembangunan destinasi wisata kopi.02 Feb 2024 13:00 WIB · ekonomiBagikanSalin PranalaO … pi Arabika Organik ekonomiPetani Ngada Kembangkan B...Petani Ngada Kembangkan Budidaya dan Wisata Kopi Arabika OrganikPengembangan budidaya kopi arabika di Ngada dilakukan bertahap selaras dengan pembangunan destinasi wisata kopi.02 Feb 2024 13:00 WIB · ekonomiBagikanSalin PranalaOleh KORNELIS KEWA AMA00:0000:0010101.00xBA",
+      "link_type": "publisher_article",
+      "source_type": "mevo_curated_growth",
+      "source_collection": "artikel_pertumbuhan",
+      "material_type": "growth",
+      "source_original_url": "https://kompas.id/artikel/petani-ngada-kembangkan-budidaya-dan-wisata-kopi-arabika-organik",
+      "source_content_sha256": "e39f1225be0da6d86cf2763c4b5311646a3eeef060f4fc1adba3039b85c1658d",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "mevo_screened_coffee_relevance",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    }
+  ]
+}

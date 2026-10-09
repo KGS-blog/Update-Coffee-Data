@@ -1,0 +1,28 @@
+{
+  "bulan": "2022-09",
+  "artikel": [
+    {
+      "judul": "Coffee Roasting Class Bersama Ahli Kopi Dunia, Manuel Diaz",
+      "tautan": "https://timesindonesia.co.id/gaya-hidup/426354/coffee-roasting-class-bersama-ahli-kopi-dunia-manuel-diaz",
+      "tanggal": "2022-09-01T00:00:00.000Z",
+      "publication_date_precision": "day",
+      "publication_date_evidence": null,
+      "sumber": "timesindonesia.co.id",
+      "ringkasan": "",
+      "coffee_relevance_context": "",
+      "link_type": "publisher_article",
+      "source_type": "mevo_curated_growth",
+      "source_collection": "artikel_pertumbuhan",
+      "material_type": "growth",
+      "source_original_url": "https://timesindonesia.co.id/gaya-hidup/426354/coffee-roasting-class-bersama-ahli-kopi-dunia-manuel-diaz",
+      "source_content_sha256": null,
+      "extraction_status": "http_error",
+      "source_relevance": "CORE",
+      "relevance_status": "mevo_screened_coffee_relevance",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    }
+  ]
+}

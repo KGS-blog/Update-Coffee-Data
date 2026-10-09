@@ -1,0 +1,51 @@
+{
+  "bulan": "2022-08",
+  "artikel": [
+    {
+      "judul": "Cerita Para Pemuda Tuai Keberkahan Dari Panen Kopi Musiman; Cerita Para Pemuda Tuai Keberkahan Dari Panen Kopi Musiman",
+      "tautan": "http://mongabay.co.id/2022/08/20/cerita-para-pemuda-tuai-keberkahan-dari-panen-kopi-musiman",
+      "tanggal": "2022-08-20T00:00:00.000Z",
+      "publication_date_precision": "day",
+      "publication_date_evidence": "2022-08-20T04:22:54+00:00",
+      "sumber": "mongabay.co.id",
+      "ringkasan": "Cerita Para Pemuda Tuai Keberkahan Dari Panen Kopi Musiman Falahi Mubarok [Kudus] 20 Agu 2022 jawa tengah Komentar Bagikan article Bagikan artikel ini Jika Anda menyukai cerita ini, bagikan dengan orang lain. Facebook Linkedin Threads Whatsapp Reddit Email Tautan halaman Saat musim panen raya kopi tiba, para pemuda di Desa Rahtawu, Kecamatan Gebong, Kabupate",
+      "coffee_relevance_context": "Cerita Para Pemuda Tuai Keberkahan Dari Panen Kopi Musiman Falahi Mubarok [Kudus] 20 Agu 2022 jawa tengah Komentar Bagikan article Bagikan artikel ini Jika Anda menyukai cerita ini, bagikan dengan orang lain. Facebook Linkedin Thr … a Anda menyukai cerita ini, bagikan dengan orang lain. Facebook Linkedin Threads Whatsapp Reddit Email Tautan halaman Saat musim panen raya kopi tiba, para pemuda di Desa Rahtawu, Kecamatan Gebong, Kabupaten Kudus, Jawa Tengah turut mendapatkan keberkahan. Para pemuda itu bekerja bekerja sebagai pengangkut dan penggiling b … n Gebong, Kabupaten Kudus, Jawa Tengah turut mendapatkan keberkahan. Para pemuda itu bekerja bekerja sebagai pengangkut dan penggiling biji kopi. Mereka bisa mendapatkan rezeki antara Rp50 ribu hingga Rp320 ribu dalam sehari. Kepala Desa Rahtawu, Didik Ariyadi (50) mengungkapkan bahwa kopi merupakan tananam pertanian andal",
+      "link_type": "publisher_article",
+      "source_type": "mevo_curated_growth",
+      "source_collection": "artikel_pertumbuhan",
+      "material_type": "growth",
+      "source_original_url": "https://mongabay.co.id/2022/08/20/cerita-para-pemuda-tuai-keberkahan-dari-panen-kopi-musiman",
+      "source_content_sha256": "18c959e267e1376eae4edb39a21e3028823fc40fae40224476459e127da9c334",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "mevo_screened_coffee_relevance",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    },
+    {
+      "judul": "Tren Kopi Infused Alkohol, Biji Kopi Direndam Whisky hingga Arak Bali",
+      "tautan": "https://food.detik.com/info-kuliner/d-6225227/tren-kopi-i-infused-i-alkohol-biji-kopi-direndam-whisky-hingga-arak-bali",
+      "tanggal": "2022-08-10T00:00:00.000Z",
+      "publication_date_precision": "day",
+      "publication_date_evidence": "2022-08-10T07:30:30+07:00",
+      "sumber": "food.detik.com",
+      "ringkasan": "Ngopi Yuk! Tren Kopi Infused Alkohol, Biji Kopi Direndam Whisky hingga Arak Bali Andi Annisa Dwi R - detikFood Rabu, 10 Agu 2022 07:30 WIB ... Tautan telah disalin Foto: Getty Images/iStockphoto/Boyloso Jakarta - Penggemar kopi dan minuman alkohol bisa mencicipi dua minuman favoritnya sekaligus. Kopi infused alkohol dibuat dari paduan biji kopi yang direndam",
+      "coffee_relevance_context": "Ngopi Yuk! Tren Kopi Infused Alkohol, Biji Kopi Direndam Whisky hingga Arak Bali Andi Annisa Dwi R - detikFood Rabu, 10 Agu 2022 07:30 WIB ... Tautan telah disalin Foto: Getty Images/iStockphoto/Boylo … Ngopi Yuk! Tren Kopi Infused Alkohol, Biji Kopi Direndam Whisky hingga Arak Bali Andi Annisa Dwi R - detikFood Rabu, 10 Agu 2022 07:30 WIB ... Tautan telah disalin Foto: Getty Images/iStockphoto/Boyloso Jakarta - Penggemar kopi … di Annisa Dwi R - detikFood Rabu, 10 Agu 2022 07:30 WIB ... Tautan telah disalin Foto: Getty Images/iStockphoto/Boyloso Jakarta - Penggemar kopi dan minuman alkohol bisa mencicipi dua minuman favoritnya sekaligus. Kopi infused alkohol dibuat dari paduan biji kopi yang direndam minuman alkohol seperti Whisky, wine, hingga a",
+      "link_type": "publisher_article",
+      "source_type": "mevo_curated_growth",
+      "source_collection": "artikel_pertumbuhan",
+      "material_type": "growth",
+      "source_original_url": "https://food.detik.com/info-kuliner/d-6225227/tren-kopi-i-infused-i-alkohol-biji-kopi-direndam-whisky-hingga-arak-bali",
+      "source_content_sha256": "efac8f11ecfd24f8a82f2c6593f743a908c711bd1398e6cc118a89beba7adc16",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "mevo_screened_coffee_relevance",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    }
+  ]
+}

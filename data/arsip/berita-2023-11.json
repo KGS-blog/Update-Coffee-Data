@@ -23,6 +23,29 @@
       "cluster_review_version": 0,
       "source_collection": "coffee_relevant_articles",
       "material_type": null
+    },
+    {
+      "judul": "4 Metode Pengeringan Buah Kopi, dari Full Wash hingga Wine",
+      "tautan": "https://kompas.com/food/read/2023/11/07/120300875/4-metode-pengeringan-buah-kopi-dari-full-wash-hingga-wine-",
+      "tanggal": "2023-11-07T00:00:00.000Z",
+      "publication_date_precision": "day",
+      "publication_date_evidence": "2023-11-07T12:03:00+07:00",
+      "sumber": "kompas.com",
+      "ringkasan": "4 Metode Pengeringan Buah Kopi, dari Full Wash hingga Wine Login Gabung KOMPAS.com+ Konten yang disimpan Konten yang disukai Atur Minat Berikan Masukanmu Gabung Kompas.com PLUS News Nasional Global Megapolitan Regional Pemilu Hype Konsultasi Hukum Cek Fakta Surat Pembaca Indeks Kilas Daerah Kilas Korporasi Kilas Kementerian Sorot Politik Kilas Badan Negara K",
+      "coffee_relevance_context": "4 Metode Pengeringan Buah Kopi, dari Full Wash hingga Wine Login Gabung KOMPAS.com+ Konten yang disimpan Konten yang disukai Atur Minat Berikan Masukanmu Gabung Kompas.com PLUS News Nasional Global Megapolitan … ota & Pemukiman yang Berkelanjutan Konsumsi & Produksi yang bertanggungjawab PROGRAM LESTARI Lihat semua Bagikan: 4 Metode Pengeringan Buah Kopi, dari Full Wash hingga Wine Komentar: Baca berita tanpa iklan. Gabung Kompas.com+ Kompas.com Food Tips Kuliner Tumbuh bersama kekuatan mimpi perempuan Indonesia 4 Metode Pengering … ta tanpa iklan. Gabung Kompas.com+ Kompas.com Food Tips Kuliner Tumbuh bersama kekuatan mimpi perempuan Indonesia 4 Metode Pengeringan Buah Kopi, dari Full Wash hingga Wine Kompas.com, 7 November 2023, 12:03 WIB Krisda Tiofani, Yuharrani Aisyah Tim Redaksi Krisda Tiofani Penulis Yuharrani Aisyah Editor Lihat Foto Metode pe",
+      "link_type": "publisher_article",
+      "source_type": "mevo_curated_growth",
+      "source_collection": "artikel_pertumbuhan",
+      "material_type": "growth",
+      "source_original_url": "https://kompas.com/food/read/2023/11/07/120300875/4-metode-pengeringan-buah-kopi-dari-full-wash-hingga-wine-",
+      "source_content_sha256": "bed373677a872e6383789de006f88423f4e19141736e9c2d6a40fa51cd62302f",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "mevo_screened_coffee_relevance",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
     }
   ]
 }

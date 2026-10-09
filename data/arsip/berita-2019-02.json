@@ -1,0 +1,28 @@
+{
+  "bulan": "2019-02",
+  "artikel": [
+    {
+      "judul": "Cerita Felix Soba Meo memulai usaha dan mengangkat nama kopi bajawa",
+      "tautan": "https://peluangusaha.kontan.co.id/news/cerita-felix-soba-meo-memulai-usaha-dan-mengangkat-nama-kopi-bajawa",
+      "tanggal": "2019-02-09T00:00:00.000Z",
+      "publication_date_precision": "day",
+      "publication_date_evidence": "2019-02-09T12:05:28+07:00",
+      "sumber": "peluangusaha.kontan.co.id",
+      "ringkasan": "Cerita Felix Soba Meo memulai usaha dan mengangkat nama kopi bajawa PELUANGUSAHA / Cerita Felix Soba Meo memulai usaha dan mengangkat nama kopi bajawa Sabtu, 09 Februari 2019 / 12:05 WIB INDEKS BERITA Reporter: Merlinda Riska | Editor: S.S. Kurniawan KONTAN.CO.ID - Kopi bajawa semakin populer, setelah film Ada Apa Dengan Cinta 2 yang tayang di bioskop pada 2",
+      "coffee_relevance_context": "Cerita Felix Soba Meo memulai usaha dan mengangkat nama kopi bajawa PELUANGUSAHA / Cerita Felix Soba Meo memulai usaha dan mengangkat nama kopi bajawa Sabtu, 09 Februari 2019 / 12:05 WIB INDEKS BERITA Reporter: Merlinda Riska | Editor: S.S. … Cerita Felix Soba Meo memulai usaha dan mengangkat nama kopi bajawa PELUANGUSAHA / Cerita Felix Soba Meo memulai usaha dan mengangkat nama kopi bajawa Sabtu, 09 Februari 2019 / 12:05 WIB INDEKS BERITA Reporter: Merlinda Riska | Editor: S.S. Kurniawan KONTAN.CO.ID - Kopi bajawa semakin populer, setelah film Ada Apa Dengan … gangkat nama kopi bajawa Sabtu, 09 Februari 2019 / 12:05 WIB INDEKS BERITA Reporter: Merlinda Riska | Editor: S.S. Kurniawan KONTAN.CO.ID - Kopi bajawa semakin populer, setelah film Ada Apa Dengan Cinta 2 yang tayang di bioskop pada 2016 lalu menyebut nama kopi asal Flores, Nusa Tenggara Timur, itu. Dalam adegan di sebuah",
+      "link_type": "publisher_article",
+      "source_type": "mevo_curated_growth",
+      "source_collection": "artikel_pertumbuhan",
+      "material_type": "growth",
+      "source_original_url": "https://peluangusaha.kontan.co.id/news/cerita-felix-soba-meo-memulai-usaha-dan-mengangkat-nama-kopi-bajawa",
+      "source_content_sha256": "acbb42e70792569fd7c167addaefe0676fe0d2ad3411b4d49e4b6ed51a39483a",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "mevo_screened_coffee_relevance",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    }
+  ]
+}

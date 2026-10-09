@@ -1,0 +1,28 @@
+{
+  "bulan": "2023-08",
+  "artikel": [
+    {
+      "judul": "Setelah Jeruk, Petani di Awan Olah Kopi Jadi Arak | BALIPOST.com",
+      "tautan": "https://balipost.com/news/2023/08/14/355961/Setelah-Jeruk,Petani-di-Awan...html",
+      "tanggal": "2023-08-14T00:00:00.000Z",
+      "publication_date_precision": "day",
+      "publication_date_evidence": "2023-08-14T16:22:29+00:00",
+      "sumber": "balipost.com",
+      "ringkasan": "Bali > Bangli > Setelah Jeruk, Petani di Awan Olah Kopi Jadi ArakBangliMikroPetani di Awan memproduksi arak jeruk untuk mengatasi anjloknya harga jual jeruk saat musim panen. (BP/Istimewa)BANGLI, BALIPOST.com – Sukses mengolah jeruk jadi arak, kelompok petani di Desa Awan, Kintamani yang tergabung dalam kelompok UMKM Tirta Kauripan kini membuat arak dari kop",
+      "coffee_relevance_context": "Bali > Bangli > Setelah Jeruk, Petani di Awan Olah Kopi Jadi ArakBangliMikroPetani di Awan memproduksi arak jeruk untuk mengatasi anjloknya harga jual jeruk saat musim panen. (BP/Istimewa)BANGLI, BALIPOST.com – Sukses mengolah jeruk ja … mengolah jeruk jadi arak, kelompok petani di Desa Awan, Kintamani yang tergabung dalam kelompok UMKM Tirta Kauripan kini membuat arak dari kopi. Arak kopi yang dihasilkan telah dipasarkan ke sejumlah daerah.Arak kopi mulai dikembangkan UMKM Tirta Kauripan sejak tiga bulan lalu. Pembuatan arak kopi dilatarbelakangi karena … eruk jadi arak, kelompok petani di Desa Awan, Kintamani yang tergabung dalam kelompok UMKM Tirta Kauripan kini membuat arak dari kopi. Arak kopi yang dihasilkan telah dipasarkan ke sejumlah daerah.Arak kopi mulai dikembangkan UMKM Tirta Kauripan sejak tiga bulan lalu. Pembuatan arak kopi dilatarbelakangi karena hasil panen",
+      "link_type": "publisher_article",
+      "source_type": "mevo_curated_growth",
+      "source_collection": "artikel_pertumbuhan",
+      "material_type": "growth",
+      "source_original_url": "https://balipost.com/news/2023/08/14/355961/Setelah-Jeruk,Petani-di-Awan...html",
+      "source_content_sha256": "361939251beb7f8bee13b635071cfc260cac071b992bb4c69b6ccd157dd3e35c",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "mevo_screened_coffee_relevance",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    }
+  ]
+}

@@ -207,6 +207,29 @@
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
       "cluster_review_version": 0
+    },
+    {
+      "judul": "Infused Coffee Diprediksi Bakal jadi Tren Kopi 2023",
+      "tautan": "https://food.detik.com/info-kuliner/d-6494902/infused-coffee-diprediksi-bakal-jadi-tren-kopi-2023",
+      "tanggal": "2023-01-03T00:00:00.000Z",
+      "publication_date_precision": "day",
+      "publication_date_evidence": "2023-01-03T07:30:00+07:00",
+      "sumber": "food.detik.com",
+      "ringkasan": "Ngopi Yuk! Infused Coffee Diprediksi Bakal jadi Tren Kopi 2023 Riska Fitria - detikFood Selasa, 03 Jan 2023 07:30 WIB ... Tautan telah disalin Foto: iStock Jakarta - Tak hanya berupa bubuk kopi yang diseduh air panas, kopi juga selalu menghadirkan tren setiap tahun. Tahun 2023, infused coffee diprediksi akan menjadi tren.Industri kopi selalu bergerak begitu ",
+      "coffee_relevance_context": "Ngopi Yuk! Infused Coffee Diprediksi Bakal jadi Tren Kopi 2023 Riska Fitria - detikFood Selasa, 03 Jan 2023 07:30 WIB ... Tautan telah disalin Foto: iStock Jakarta - Tak hanya berupa bubuk kopi yang disedu … Ngopi Yuk! Infused Coffee Diprediksi Bakal jadi Tren Kopi 2023 Riska Fitria - detikFood Selasa, 03 Jan 2023 07:30 WIB ... Tautan telah disalin Foto: iStock Jakarta - Tak hanya berupa bubuk kopi yang diseduh air panas, kopi juga selalu me … ren Kopi 2023 Riska Fitria - detikFood Selasa, 03 Jan 2023 07:30 WIB ... Tautan telah disalin Foto: iStock Jakarta - Tak hanya berupa bubuk kopi yang diseduh air panas, kopi juga selalu menghadirkan tren setiap tahun. Tahun 2023, infused coffee diprediksi akan menjadi tren.Industri kopi selalu bergerak begitu dinamis, sehi",
+      "link_type": "publisher_article",
+      "source_type": "mevo_curated_growth",
+      "source_collection": "artikel_pertumbuhan",
+      "material_type": "growth",
+      "source_original_url": "https://food.detik.com/info-kuliner/d-6494902/infused-coffee-diprediksi-bakal-jadi-tren-kopi-2023",
+      "source_content_sha256": "9c4730090e5cb71b5a7c8e04e35902c8dea80cd1006fbcdbacbcbe1e7b14346f",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "mevo_screened_coffee_relevance",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
     }
   ]
 }

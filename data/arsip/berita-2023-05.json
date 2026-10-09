@@ -69,6 +69,29 @@
       "cluster_review_version": 0,
       "source_collection": "coffee_relevant_articles",
       "material_type": null
+    },
+    {
+      "judul": "Hadiri Expo Kopi Papua 2023, Ini Harapan Petani Kopi Asal Pegunungan Bintang - Papua Bangkit",
+      "tautan": "https://papuabangkit.com/2023/05/28/hadiri-expo-kopi-papua-2023-ini-harapan-petani-kopi-asal-pegunungan-bintang",
+      "tanggal": "2023-05-28T00:00:00.000Z",
+      "publication_date_precision": "day",
+      "publication_date_evidence": "2023-05-28T13:04:31+07:00",
+      "sumber": "papuabangkit.com",
+      "ringkasan": "Hadiri Expo Kopi Papua 2023, Ini Harapan Petani Kopi Asal Pegunungan BintangDiposting oleh admin | Mei 28, 2023 | Ekora, Headlines, Kabupaten Pegunungan Bintang | 0 | ShareDua petani kopi asal Pegunungan Bintang, Bertus Uopmabin dan Primus Uropmabin saat hadir di Pameran Papua Expo Coffee 2023 di Jayapura.JAYAPURA (PB.COM)—Papua Youth Creative Hub (PYCH) ber",
+      "coffee_relevance_context": "Hadiri Expo Kopi Papua 2023, Ini Harapan Petani Kopi Asal Pegunungan BintangDiposting oleh admin | Mei 28, 2023 | Ekora, Headlines, Kabupaten Pegunungan Bintang | 0 | ShareDua petani kopi asal Peg … Hadiri Expo Kopi Papua 2023, Ini Harapan Petani Kopi Asal Pegunungan BintangDiposting oleh admin | Mei 28, 2023 | Ekora, Headlines, Kabupaten Pegunungan Bintang | 0 | ShareDua petani kopi asal Pegunungan Bintang, Bertus Uopmabin dan … tani Kopi Asal Pegunungan BintangDiposting oleh admin | Mei 28, 2023 | Ekora, Headlines, Kabupaten Pegunungan Bintang | 0 | ShareDua petani kopi asal Pegunungan Bintang, Bertus Uopmabin dan Primus Uropmabin saat hadir di Pameran Papua Expo Coffee 2023 di Jayapura.JAYAPURA (PB.COM)—Papua Youth Creative Hub (PYCH) bersama Pe",
+      "link_type": "publisher_article",
+      "source_type": "mevo_curated_growth",
+      "source_collection": "artikel_pertumbuhan",
+      "material_type": "growth",
+      "source_original_url": "https://papuabangkit.com/2023/05/28/hadiri-expo-kopi-papua-2023-ini-harapan-petani-kopi-asal-pegunungan-bintang",
+      "source_content_sha256": "bf06df36d85b1983001040f4927bff5c45f69dbfccbfed570a7d9748de4e8c8f",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "mevo_screened_coffee_relevance",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
     }
   ]
 }

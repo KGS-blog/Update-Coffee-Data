@@ -2,8 +2,26 @@
   "schema": "kabar-kopi-events-calendar-v1",
   "source": "https://raw.githubusercontent.com/KGS-blog/coffee-feed/main/mevo_events.json",
   "timezone": "Asia/Jakarta",
-  "fetched_at": "2026-10-08T11:25:26.929Z",
+  "fetched_at": "2026-10-09T04:35:18.503Z",
   "events": [
+    {
+      "id": "event-0ff2a35f6b09a6fc",
+      "name": "Jogja Coffee Week 2026",
+      "start_date": "2026-08-24",
+      "end_date": "2026-08-24",
+      "location": "Yogyakarta, termasuk Jogja Coffee Week (JCW), agar tidak sekadar menjadi sarana promosi bahan baku kopi",
+      "country": "",
+      "organizer": "",
+      "category": "Coffee-related event",
+      "date_status": "SOURCE_EXTRACTED",
+      "note": "Tanggal pelaksanaan diekstrak dari konteks acara; kolom kosong berarti belum disebut secara jelas.",
+      "sources": [
+        {
+          "url": "https://rri.co.id/yogyakarta/regional/2678632/jogja-coffee-week-ruang-pengembangan-kopi-bernilai-tambah",
+          "kind": "growth_article"
+        }
+      ]
+    },
     {
       "id": "event-5047c6310facd164",
       "name": "Sinara Fest 2026",
@@ -23,24 +41,6 @@
       ]
     },
     {
-      "id": "event-7d37054015f9907c",
-      "name": "Jogja Coffee Week",
-      "start_date": "2026-09-04",
-      "end_date": "2026-09-06",
-      "location": "Jogja Expo Center (JEC), Yogyakarta",
-      "country": "",
-      "organizer": "",
-      "category": "Coffee-related event",
-      "date_status": "SOURCE_EXTRACTED",
-      "note": "Tanggal pelaksanaan diekstrak dari konteks acara; kolom kosong berarti belum disebut secara jelas.",
-      "sources": [
-        {
-          "url": "https://wartakopi.com/tahun-ini-jogja-coffee-week-perkuat-ekosistem-kopi-lewat-bisnis-dan-lelang/",
-          "kind": "growth_article"
-        }
-      ]
-    },
-    {
       "id": "icx-jakarta-2026",
       "name": "Indonesia Coffee Expo Jakarta 2026",
       "start_date": "2026-09-04",
@@ -55,6 +55,24 @@
         {
           "url": "https://www.stapo.id/news/icx-jakarta-2026-4/",
           "kind": "news"
+        }
+      ]
+    },
+    {
+      "id": "event-285bc98604135c9d",
+      "name": "Jogja Coffee Week 2026",
+      "start_date": "2026-09-06",
+      "end_date": "2026-09-06",
+      "location": "Yogyakarta maupun di Indonesia",
+      "country": "",
+      "organizer": "",
+      "category": "Coffee-related event",
+      "date_status": "SOURCE_EXTRACTED",
+      "note": "Tanggal pelaksanaan diekstrak dari konteks acara; kolom kosong berarti belum disebut secara jelas.",
+      "sources": [
+        {
+          "url": "https://rri.co.id/yogyakarta/regional/2678632/jogja-coffee-week-ruang-pengembangan-kopi-bernilai-tambah",
+          "kind": "growth_article"
         }
       ]
     },
@@ -95,6 +113,24 @@
       ]
     },
     {
+      "id": "event-becfb283443bd495",
+      "name": "Festival Kopi",
+      "start_date": "2026-10-09",
+      "end_date": "2026-10-09",
+      "location": "",
+      "country": "",
+      "organizer": "",
+      "category": "Coffee-related event",
+      "date_status": "SOURCE_EXTRACTED",
+      "note": "Tanggal pelaksanaan diekstrak dari konteks acara; kolom kosong berarti belum disebut secara jelas.",
+      "sources": [
+        {
+          "url": "https://ketik.com/pacitan/wisata-kuliner/ada-1000-cup-kopi-gratis-di-festival-kopi-pacitan-8-9-oktober-kerek-produk-lokal-naik-kelas",
+          "kind": "growth_article"
+        }
+      ]
+    },
+    {
       "id": "event-fca843e543949e57",
       "name": "Trade Expo Indonesia (TEI)",
       "start_date": "2026-10-14",
@@ -108,6 +144,10 @@
       "sources": [
         {
           "url": "https://www.antaranews.com/berita/5765093/kemendag-tei-momentum-perkuat-merek-kopi-indonesia-di-pasar-global",
+          "kind": "growth_article"
+        },
+        {
+          "url": "https://www.agrofarm.co.id/2026/10/capai-rekor-tertinggi-ekspor-kopi-indonesia-tembus-usd-251-miliar/",
           "kind": "growth_article"
         }
       ]

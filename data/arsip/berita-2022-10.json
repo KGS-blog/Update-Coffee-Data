@@ -1,0 +1,28 @@
+{
+  "bulan": "2022-10",
+  "artikel": [
+    {
+      "judul": "Yuk Mengenal Nitro Coffe, Kopi yang Diolah dengan Gas Nitrogen - Parapuan",
+      "tautan": "https://parapuan.co/read/533539747/yuk-mengenal-nitro-coffe-kopi-yang-diolah-dengan-gas-nitrogen",
+      "tanggal": "2022-10-24T00:00:00.000Z",
+      "publication_date_precision": "day",
+      "publication_date_evidence": null,
+      "sumber": "parapuan.co",
+      "ringkasan": "",
+      "coffee_relevance_context": "",
+      "link_type": "publisher_article",
+      "source_type": "mevo_curated_growth",
+      "source_collection": "artikel_pertumbuhan",
+      "material_type": "growth",
+      "source_original_url": "https://parapuan.co/read/533539747/yuk-mengenal-nitro-coffe-kopi-yang-diolah-dengan-gas-nitrogen",
+      "source_content_sha256": null,
+      "extraction_status": "thin_content_or_shell",
+      "source_relevance": "CORE",
+      "relevance_status": "mevo_screened_coffee_relevance",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    }
+  ]
+}

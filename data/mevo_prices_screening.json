@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-08T11:25:27.579Z",
+  "generated_at": "2026-10-09T04:35:18.994Z",
   "method": {
     "duplicate_key": "source identity + product + type + form + process + price level + currency + period + date + package grams + price_per_kg",
     "source_currency_rule": "Rows from specialtycoffee.id labeled IDR are excluded because the source states the prices are USD and no verified FX record exists",
@@ -9,20 +9,20 @@
     "chart_policy": "Source-currency mismatches, duplicates, Wine process, non-selected package sizes, and conditionally detected high-price outliers are excluded; canonical raw price listings remain stored"
   },
   "summary": {
-    "raw_idr_observations": 2906,
-    "unique_idr_observations": 2803,
+    "raw_idr_observations": 2911,
+    "unique_idr_observations": 2808,
     "duplicate_rows": 103,
     "source_currency_mismatch_rows": 66,
     "wine_process_excluded_rows": 170,
     "package_size_excluded_rows": 932,
     "package_selection_groups": {
-      "exact_1kg_groups": 1571,
+      "exact_1kg_groups": 1576,
       "fallback_size_groups": 64,
       "unknown_size_groups": 0
     },
     "significant_period_moves": 1,
-    "high_price_outliers_excluded": 2,
-    "chart_eligible_unique_idr_observations": 1633
+    "high_price_outliers_excluded": 1,
+    "chart_eligible_unique_idr_observations": 1639
   },
   "duplicates": [
     {
@@ -20761,45 +20761,86 @@
   ],
   "outliers": [
     {
-      "observation_id": "efbb81c9ee3c01049bf3f4773fdc1838fb91a3be6cbae7ab4798e5d375c8f1d2",
+      "observation_id": "growth-bf7e98d72eb16c32d3b0198978c9b274c0909d9227cefbc782678ed2abade13e",
       "type": "Robusta",
       "form": "Biji kopi mentah",
       "process": "Tidak disebut",
-      "period": "Q3 2026",
-      "previous_period": "Q2 2026",
-      "period_change_percent": 56.4,
-      "price_per_kg": 180000,
-      "group_mean": 98750,
-      "upper_limit": 128375,
-      "product": "KopiTime – Robusta Lampung (eceran premium high)",
-      "source": "kopitime.id",
+      "period": "Q2 2026",
+      "previous_period": "Q3 2025",
+      "period_change_percent": 32.7,
+      "price_per_kg": 140000,
+      "group_mean": 97500,
+      "upper_limit": 126750,
+      "product": "robusta, dan Rp 140 ribu/kg untuk kopi ",
+      "source": "50 Bibit dan Kisah Senyap Kopi Cibulao Menjaga Hulu Ciliwung",
       "source_type": "url",
       "source_detail": null,
-      "source_url": "https://kopitime.id/harga-kopi-menjelang-akhir-tahun-2026-dan-perkembangan-pasar-global-1",
-      "screening_method": "Excluded high-price outlier: period median changed by over 30%; price is more than 30% above current-period mean",
-      "status": "excluded_high_outlier_after_period_change_over_30_percent"
-    },
-    {
-      "observation_id": "9390c17117407f1af3ae4de25dba0c964bf55ad54ca6a2f9205c4d76308a0cb3",
-      "type": "Robusta",
-      "form": "Biji kopi mentah",
-      "process": "Tidak disebut",
-      "period": "Q3 2026",
-      "previous_period": "Q2 2026",
-      "period_change_percent": 56.4,
-      "price_per_kg": 185000,
-      "group_mean": 98750,
-      "upper_limit": 128375,
-      "product": "KopiTime – Robusta Temanggung (eceran premium high)",
-      "source": "kopitime.id",
-      "source_type": "url",
-      "source_detail": null,
-      "source_url": "https://kopitime.id/harga-kopi-menjelang-akhir-tahun-2026-dan-perkembangan-pasar-global-1",
+      "source_url": "https://www.detik.com/jabar/berita/d-8533647/50-bibit-dan-kisah-senyap-kopi-cibulao-menjaga-hulu-ciliwung",
       "screening_method": "Excluded high-price outlier: period median changed by over 30%; price is more than 30% above current-period mean",
       "status": "excluded_high_outlier_after_period_change_over_30_percent"
     }
   ],
   "period_summaries": [
+    {
+      "type": "Robusta",
+      "formClass": "green",
+      "period": "Q2 2025",
+      "mean": 79000,
+      "previous_period": null,
+      "period_change_percent": null,
+      "total": 2,
+      "included": 2,
+      "excluded": 0,
+      "upper_limit": null
+    },
+    {
+      "type": "Robusta",
+      "formClass": "green",
+      "period": "Q3 2025",
+      "mean": 73500,
+      "previous_period": null,
+      "period_change_percent": null,
+      "total": 2,
+      "included": 2,
+      "excluded": 0,
+      "upper_limit": null
+    },
+    {
+      "type": "Robusta",
+      "formClass": "green",
+      "period": "Q2 2026",
+      "mean": 97500,
+      "previous_period": "Q3 2025",
+      "period_change_percent": 32.7,
+      "total": 2,
+      "included": 1,
+      "excluded": 1,
+      "upper_limit": 126750
+    },
+    {
+      "type": "Robusta",
+      "formClass": "green",
+      "period": "Q3 2026",
+      "mean": 98750,
+      "previous_period": null,
+      "period_change_percent": null,
+      "total": 8,
+      "included": 8,
+      "excluded": 0,
+      "upper_limit": null
+    },
+    {
+      "type": "Robusta",
+      "formClass": "green",
+      "period": "Q4 2026",
+      "mean": 82020,
+      "previous_period": null,
+      "period_change_percent": null,
+      "total": 51,
+      "included": 51,
+      "excluded": 0,
+      "upper_limit": null
+    },
     {
       "type": "Arabika",
       "formClass": "green",
@@ -20809,6 +20850,30 @@
       "period_change_percent": null,
       "total": 2,
       "included": 2,
+      "excluded": 0,
+      "upper_limit": null
+    },
+    {
+      "type": "Arabika",
+      "formClass": "green",
+      "period": "Q4 2025",
+      "mean": 125000,
+      "previous_period": null,
+      "period_change_percent": null,
+      "total": 1,
+      "included": 1,
+      "excluded": 0,
+      "upper_limit": null
+    },
+    {
+      "type": "Arabika",
+      "formClass": "green",
+      "period": "Q1 2026",
+      "mean": 120000,
+      "previous_period": null,
+      "period_change_percent": null,
+      "total": 1,
+      "included": 1,
       "excluded": 0,
       "upper_limit": null
     },
@@ -20845,54 +20910,6 @@
       "period_change_percent": null,
       "total": 92,
       "included": 92,
-      "excluded": 0,
-      "upper_limit": null
-    },
-    {
-      "type": "Robusta",
-      "formClass": "green",
-      "period": "Q3 2025",
-      "mean": 73500,
-      "previous_period": null,
-      "period_change_percent": null,
-      "total": 2,
-      "included": 2,
-      "excluded": 0,
-      "upper_limit": null
-    },
-    {
-      "type": "Robusta",
-      "formClass": "green",
-      "period": "Q2 2026",
-      "mean": 55000,
-      "previous_period": null,
-      "period_change_percent": null,
-      "total": 1,
-      "included": 1,
-      "excluded": 0,
-      "upper_limit": null
-    },
-    {
-      "type": "Robusta",
-      "formClass": "green",
-      "period": "Q3 2026",
-      "mean": 98750,
-      "previous_period": "Q2 2026",
-      "period_change_percent": 56.4,
-      "total": 8,
-      "included": 6,
-      "excluded": 2,
-      "upper_limit": 128375
-    },
-    {
-      "type": "Robusta",
-      "formClass": "green",
-      "period": "Q4 2026",
-      "mean": 82020,
-      "previous_period": null,
-      "period_change_percent": null,
-      "total": 51,
-      "included": 51,
       "excluded": 0,
       "upper_limit": null
     },
@@ -21007,19 +21024,67 @@
   ],
   "comparison_warnings": [
     {
+      "type": "Robusta",
+      "form": "green",
+      "period": "Q3 2025",
+      "previous_period": "Q2 2025",
+      "current_count": 2,
+      "previous_count": 2,
+      "current_sources": [
+        "url:https://www.indonesia-coffee.com/id/articles/rincian-biaya-pembelian-arabika-indonesia-vs-robusta-pTWosi"
+      ],
+      "previous_sources": [
+        "url:https://gemasuryafm.com/2025/06/17/panen-harga-kopi-robusta-mulai-berpihak-pada-petani-produksi-belum-bisa-penuhi-kebutuhan-pasar/"
+      ],
+      "source_overlap": 0,
+      "reason": "Pembanding periode sebelumnya memiliki kurang dari 5 observasi."
+    },
+    {
+      "type": "Arabika",
+      "form": "green",
+      "period": "Q4 2025",
+      "previous_period": "Q3 2025",
+      "current_count": 1,
+      "previous_count": 2,
+      "current_sources": [
+        "url:https://kabarsdgs.com/sustainability/2025/11/21271/harga-kopi-arabika-gayo-di-bener-meriah-naik-dipicu-cuaca-baik-dan-permintaan-tinggi/"
+      ],
+      "previous_sources": [
+        "url:https://www.indonesia-coffee.com/id/articles/rincian-biaya-pembelian-arabika-indonesia-vs-robusta-pTWosi"
+      ],
+      "source_overlap": 0,
+      "reason": "Pembanding periode sebelumnya memiliki kurang dari 5 observasi."
+    },
+    {
+      "type": "Arabika",
+      "form": "green",
+      "period": "Q1 2026",
+      "previous_period": "Q4 2025",
+      "current_count": 1,
+      "previous_count": 1,
+      "current_sources": [
+        "url:https://rri.co.id/jember/bisnis/2110344/harga-kopi-bondowoso-melonjak-pengusaha-tahan-harga-jual"
+      ],
+      "previous_sources": [
+        "url:https://kabarsdgs.com/sustainability/2025/11/21271/harga-kopi-arabika-gayo-di-bener-meriah-naik-dipicu-cuaca-baik-dan-permintaan-tinggi/"
+      ],
+      "source_overlap": 0,
+      "reason": "Pembanding periode sebelumnya memiliki kurang dari 5 observasi."
+    },
+    {
       "type": "Arabika",
       "form": "green",
       "period": "Q2 2026",
-      "previous_period": "Q3 2025",
+      "previous_period": "Q1 2026",
       "current_count": 1066,
-      "previous_count": 2,
+      "previous_count": 1,
       "current_sources": [
         "url:https://arutalacoffee.com/blog/riset-komprehensif-dinamika-harga-green-bean-kopi-indonesia-varietas-tren-global",
         "url:https://arutalacoffee.com/blog/harga-kopi-hari-ini-dinamika-pasar-lokal-kualitas-arutala-coffee-dan-keuntungan",
         "url:https://www.tanyaberita.com/4129/harga-kopi-per-kg-terbaru/"
       ],
       "previous_sources": [
-        "url:https://www.indonesia-coffee.com/id/articles/rincian-biaya-pembelian-arabika-indonesia-vs-robusta-pTWosi"
+        "url:https://rri.co.id/jember/bisnis/2110344/harga-kopi-bondowoso-melonjak-pengusaha-tahan-harga-jual"
       ],
       "source_overlap": 0,
       "reason": "Pembanding periode sebelumnya memiliki kurang dari 5 observasi."
@@ -21078,6 +21143,22 @@
     },
     {
       "type": "Robusta",
+      "form": "green",
+      "period": "Q3 2026",
+      "previous_period": "Q2 2026",
+      "current_count": 8,
+      "previous_count": 1,
+      "current_sources": [
+        "url:https://kopitime.id/harga-kopi-menjelang-akhir-tahun-2026-dan-perkembangan-pasar-global-1"
+      ],
+      "previous_sources": [
+        "url:https://arutalacoffee.com/blog/harga-kopi-hari-ini-dinamika-pasar-lokal-kualitas-arutala-coffee-dan-keuntungan"
+      ],
+      "source_overlap": 0,
+      "reason": "Pembanding periode sebelumnya memiliki kurang dari 5 observasi."
+    },
+    {
+      "type": "Robusta",
       "form": "roasted",
       "period": "Q3 2026",
       "previous_period": "Q2 2026",
@@ -21091,22 +21172,6 @@
       ],
       "source_overlap": 0,
       "reason": "Komposisi sumber periode ini berbeda; sumber yang sama hanya sedikit."
-    },
-    {
-      "type": "Robusta",
-      "form": "green",
-      "period": "Q3 2026",
-      "previous_period": "Q2 2026",
-      "current_count": 6,
-      "previous_count": 1,
-      "current_sources": [
-        "url:https://kopitime.id/harga-kopi-menjelang-akhir-tahun-2026-dan-perkembangan-pasar-global-1"
-      ],
-      "previous_sources": [
-        "url:https://arutalacoffee.com/blog/harga-kopi-hari-ini-dinamika-pasar-lokal-kualitas-arutala-coffee-dan-keuntungan"
-      ],
-      "source_overlap": 0,
-      "reason": "Pembanding periode sebelumnya memiliki kurang dari 5 observasi."
     },
     {
       "type": "Arabika",
@@ -21163,7 +21228,7 @@
       "period": "Q4 2026",
       "previous_period": "Q3 2026",
       "current_count": 51,
-      "previous_count": 6,
+      "previous_count": 8,
       "current_sources": [
         "url:https://www.coffestroastery.com/id/shop",
         "url:https://www.ijencoffee.com/",
@@ -21388,7 +21453,7 @@
       "form": "green",
       "period": "Q3 2026",
       "channels": {
-        "retail": 2,
+        "retail": 4,
         "wholesale": 2,
         "farmgate": 2
       }

@@ -1,7 +1,611 @@
 {
   "version": 1,
-  "generated_at": "2026-10-08T05:29:33.430Z",
+  "generated_at": "2026-10-09T04:31:33.573Z",
   "articles": [
+    {
+      "cluster_id": "kedai-konsumsi-gaya-hidup",
+      "cluster_name": "Kedai, Konsumsi & Gaya Hidup",
+      "period_days": 30,
+      "generated_at": "2026-10-09T04:31:33.573Z",
+      "status": "ai_generated",
+      "fingerprint": "b53ad5b3f779f1726fcd0cad931a5598f984ec5371fa65b58f7569053eb2a6f2",
+      "article": {
+        "title": "Kedai Kopi Indonesia Makin Banyak, Tapi Pasar Masih Dibentuk oleh Lokasi, Biaya, dan Cara Orang Minum Kopi",
+        "summary": "Data yang beredar minggu ini menunjukkan Indonesia punya 461.991 kedai kopi, atau lebih dari tiga kali lipat jumlah di Amerika Serikat [1][2]. Di saat yang sama, ada pameran bisnis kafe dan kopi kekinian yang digelar tiga hari di PIK 2, sementara sejumlah liputan lain menyorot kedai kopi lokal, harga menu di bawah Rp20 ribu, dan usaha menekan biaya nongkrong [3][4][5].",
+        "lead": "Angka 461.991 kedai kopi menempatkan Indonesia sebagai negara dengan jumlah kedai kopi terbanyak di dunia, dan jaraknya disebut lebih dari tiga kali lipat dibanding Amerika Serikat [1][2]. Di level lapangan, perhatian masih terbagi antara konsentrasi gerai di area tertentu seperti Kartasura dan Solo Baru, peluang bisnis yang dipamerkan di ajang CBE 2026, sampai cara konsumen tetap bisa minum kopi tanpa keluar biaya besar [3][4][5].",
+        "sections": [
+          {
+            "heading": "Kepadatan gerai jadi ciri yang paling jelas",
+            "paragraphs": [
+              "Data BPS yang dikutip media menyebut Indonesia punya 461.991 kedai kopi, angka yang besar dan cukup untuk menegaskan betapa padatnya jaringan kedai di dalam negeri [1][2]. Namun, angka nasional ini tidak otomatis berarti sebarannya merata. Di Sukoharjo, konsentrasi coffee shop paling banyak disebut berada di Kartasura dan Solo Baru, jadi pusat perhatian justru bergeser ke kantong-kantong lokasi yang menampung banyak usaha serupa [3].",
+              "Dari sini, pola yang terlihat bukan sekadar jumlah yang besar, melainkan penumpukan gerai di titik tertentu. Itu penting karena dalam bisnis kedai kopi, lokasi masih jadi faktor yang paling mudah dibaca dari data yang tersedia [3]."
+            ]
+          },
+          {
+            "heading": "Bisnis kopi bergerak di dua sisi: pameran dan gerobakan",
+            "paragraphs": [
+              "Di satu sisi, CBE 2026 digelar di NICE PIK 2 selama tiga hari, 9–11 Oktober 2026, dan memasuki edisi ke-9 [3]. Pengumuman ini menunjukkan ada ruang khusus untuk inspirasi usaha dan peluang di segmen kafe serta kopi kekinian, meski dari bahan yang ada kita hanya bisa bilang itu sebuah agenda pameran, bukan bukti langsung bahwa pasar sedang naik atau turun [3].",
+              "Di sisi lain, ada liputan tentang tiga pendiri Kopi Gerobakan yang lolos seleksi panel di Kanada dan terpilih sebagai Endeavor Entrepreneur [7]. Pernyataan yang menonjol dari liputan itu adalah pandangan bahwa masa depan kopi bukan hanya soal menambah kedai, tetapi membawa kopi lebih dekat ke konsumen [7]. Ini sejalan dengan hadirnya format yang lebih dekat ke pembeli, dari gerobak sampai konsep kedai yang lebih ringkas [7]."
+            ]
+          },
+          {
+            "heading": "Harga, kebiasaan nongkrong, dan batas kantong",
+            "paragraphs": [
+              "Beberapa liputan lain menempatkan kopi sebagai bagian dari cara orang mengatur pengeluaran harian. Ada panduan minum kopi ala kafe di bawah Rp20 ribu untuk WFC, dan ada juga tips agar tetap bisa nongkrong di kafe tanpa bikin boncos [4][5]. Dari bahan yang tersedia, intinya jelas: harga masih jadi titik tekan utama dalam konsumsi kopi sehari-hari [4][5].",
+              "Di luar itu, ada contoh kedai kopi di Hue, Vietnam, yang menyajikan kopi dengan krim atau pasta fermentasi udang dan tuna [6]. Contoh ini tidak perlu dibaca sebagai tren umum, tetapi sebagai pengingat bahwa kedai kopi bisa mengambil bentuk menu yang sangat berbeda dari kebiasaan sehari-hari di Indonesia [6]."
+            ]
+          }
+        ],
+        "conclusion": "Kalau disatukan, berita-berita ini menunjukkan ekosistem kopi bergerak di antara dua hal: jumlah gerai yang sangat besar dan cara konsumsi yang makin sensitif pada lokasi serta harga [1][2][3][4][5]. Jadi, yang paling menonjol bukan satu arah pertumbuhan, melainkan keragaman model usaha dan kebiasaan minum kopi yang terus dicari bentuk paling pasnya.",
+        "recommendations": [
+          {
+            "audience": "Calon pelaku usaha kopi",
+            "action": "Perhatikan lokasi yang sudah padat gerai seperti Kartasura dan Solo Baru sebelum membuka usaha baru.",
+            "basis": "Data yang tersedia menunjukkan konsentrasi coffee shop paling banyak berada di dua kawasan itu [3]."
+          },
+          {
+            "audience": "Pelaku usaha dengan menu harian",
+            "action": "Siapkan pilihan harga terjangkau, termasuk menu di bawah Rp20 ribu.",
+            "basis": "Beberapa liputan menyorot kopi ala kafe di bawah Rp20 ribu dan cara nongkrong hemat sebagai perhatian utama konsumen [4][5]."
+          },
+          {
+            "audience": "Pembaca yang mengikuti perkembangan bisnis kopi",
+            "action": "Bedakan antara pengumuman acara, target, dan data pasar saat menilai arah industri kopi.",
+            "basis": "Bahan yang ada berisi campuran data BPS, agenda pameran, dan pernyataan pelaku usaha, jadi tiap jenis informasi perlu dibaca sesuai porsinya [1][2][3][7]."
+          }
+        ],
+        "source_urls": [
+          "https://www.tribunnews.com/nasional/7893433/tembus-461-ribu-gerai-kepala-bps-ungkap-indonesia-miliki-kedai-kopi-terbanyak-di-dunia",
+          "https://jakarta.tribunnews.com/jakarta/444037/jumlah-kedai-kopi-indonesia-3-kali-lipat-as-bps-ungkap-potensi-besarnya",
+          "https://newsmaker.tribunnews.com/news/185292/dpmptsp-sukoharjo-catat-151-kedai-kopi-kartasura-jadi-magnet-umkm-kopi-di-perbatasan-solo",
+          "https://jawapos.com/lifestyle/2610080180/nongkrong-in-this-economy-tetap-aman-rekomendasi-menu-kopi-ala-kafe-di-bawah-rp-20-ribu-untuk-wfc",
+          "https://jawapos.com/lifestyle/2610080178/simak-life-hack-beli-kopi-tanpa-bikin-boncos-in-this-economy-tetap-bisa-nongkrong-di-kafe",
+          "https://www.cnnindonesia.com/gaya-hidup/20261005114335-262-1411680/sajian-kopi-dengan-pasta-udang-dan-tuna-di-vietnam-gimana-rasanya",
+          "https://www.tribunnews.com/bisnis/7893500/lolos-seleksi-panel-di-kanada-3-pendiri-kopi-gerobakan-terpilih-sebagai-endeavor-entrepreneur"
+        ],
+        "evidence_note": "Sebagian bahan berisi pengumuman, profil, dan target, jadi analisis ini membatasi diri pada fakta yang memang disebut sumber."
+      },
+      "article_en": {
+        "title": "Indonesia’s Coffee Shop Scene Looks Dense, Price-Sensitive, and Highly Localized",
+        "summary": "This week’s stories point to a coffee market in Indonesia with 461,991 coffee shops, more than three times the number in the United States [1][2]. At the same time, a three-day café and coffee business expo is set for PIK 2, while other reports focus on local shop clusters, low-priced drinks, and ways consumers keep café visits affordable [3][4][5].",
+        "lead": "The figure of 461,991 coffee shops puts Indonesia at the top globally, with the total said to be more than three times the United States [1][2]. On the ground, attention is split between dense clusters in places such as Kartasura and Solo Baru, a business fair for contemporary cafés and coffee, and consumer habits shaped by price and convenience [3][4][5].",
+        "sections": [
+          {
+            "heading": "A crowded shop map is the clearest pattern",
+            "paragraphs": [
+              "The BPS figure cited by the media puts Indonesia at 461,991 coffee shops, a number large enough to show just how dense the country’s café landscape is [1][2]. But the national total does not mean the shops are evenly spread. In Sukoharjo, the highest concentration of coffee shops is reported in Kartasura and Solo Baru, which shifts the focus to pockets where similar businesses gather [3].",
+              "So the most visible pattern is not only scale, but clustering. That matters because, from the available data, location remains one of the easiest factors to read in coffee retail [3]."
+            ]
+          },
+          {
+            "heading": "Coffee business activity runs through fairs and street-level formats",
+            "paragraphs": [
+              "On one side, CBE 2026 will take place at NICE PIK 2 for three days, from 9 to 11 October 2026, and it is entering its ninth edition [3]. The announcement points to a dedicated space for ideas and business opportunities in cafés and contemporary coffee, but with the available material, it should be read as an event notice, not proof of market growth or decline [3].",
+              "On the other side, three founders of Kopi Gerobakan were selected as Endeavor Entrepreneurs after a panel process in Canada [7]. One line from that report stands out: the future of coffee is not just about building more cafés, but about bringing coffee closer to consumers [7]. That fits a broader picture where delivery formats and smaller-scale models sit alongside traditional shops [7]."
+            ]
+          },
+          {
+            "heading": "Price remains central to everyday coffee consumption",
+            "paragraphs": [
+              "Other reports place coffee squarely inside daily budgeting. One piece highlights café-style coffee options priced below Rp20,000 for people working from cafés, and another offers tips for enjoying coffee and hanging out without overspending [4][5]. Based on the available material, the main takeaway is simple: price is still a major concern in everyday coffee consumption [4][5].",
+              "There is also an example from Hue, Vietnam, where a coffee shop serves coffee with fermented shrimp paste or tuna cream [6]. That should not be treated as a general trend, only as a reminder that coffee shops can take very different menu forms from what is common in Indonesia [6]."
+            ]
+          }
+        ],
+        "conclusion": "Taken together, these stories show an ecosystem shaped by two forces: a very large number of outlets and consumer behavior that is closely tied to location and price [1][2][3][4][5]. The main point is not a single growth story, but a mix of business models and drinking habits that are still finding their most workable form.",
+        "recommendations": [
+          {
+            "audience": "Aspiring coffee business owners",
+            "action": "Study highly concentrated locations such as Kartasura and Solo Baru before opening a new shop.",
+            "basis": "The available data shows the strongest concentration of coffee shops in those two areas [3]."
+          },
+          {
+            "audience": "Operators with everyday menus",
+            "action": "Keep affordable options on the menu, including drinks under Rp20,000.",
+            "basis": "The reports highlight sub-Rp20,000 café-style coffee and budget-conscious café visits as a clear consumer concern [4][5]."
+          },
+          {
+            "audience": "Readers tracking the coffee industry",
+            "action": "Separate event announcements, company claims, and market data when judging the direction of the coffee business.",
+            "basis": "The source set mixes BPS figures, an expo announcement, and entrepreneur remarks, so each should be read in its own category [1][2][3][7]."
+          }
+        ],
+        "source_urls": [
+          "https://www.tribunnews.com/nasional/7893433/tembus-461-ribu-gerai-kepala-bps-ungkap-indonesia-miliki-kedai-kopi-terbanyak-di-dunia",
+          "https://jakarta.tribunnews.com/jakarta/444037/jumlah-kedai-kopi-indonesia-3-kali-lipat-as-bps-ungkap-potensi-besarnya",
+          "https://newsmaker.tribunnews.com/news/185292/dpmptsp-sukoharjo-catat-151-kedai-kopi-kartasura-jadi-magnet-umkm-kopi-di-perbatasan-solo",
+          "https://jawapos.com/lifestyle/2610080180/nongkrong-in-this-economy-tetap-aman-rekomendasi-menu-kopi-ala-kafe-di-bawah-rp-20-ribu-untuk-wfc",
+          "https://jawapos.com/lifestyle/2610080178/simak-life-hack-beli-kopi-tanpa-bikin-boncos-in-this-economy-tetap-bisa-nongkrong-di-kafe",
+          "https://www.cnnindonesia.com/gaya-hidup/20261005114335-262-1411680/sajian-kopi-dengan-pasta-udang-dan-tuna-di-vietnam-gimana-rasanya",
+          "https://www.tribunnews.com/bisnis/7893500/lolos-seleksi-panel-di-kanada-3-pendiri-kopi-gerobakan-terpilih-sebagai-endeavor-entrepreneur"
+        ],
+        "evidence_note": "Some of the source material is an announcement, profile, or stated target, so the analysis stays within what the sources explicitly say."
+      },
+      "input_sources": [
+        {
+          "id": "1",
+          "url": "https://tangerang.tribunnews.com/tangerang-selatan/61467/sudah-pernah-kehilangan-gas-kedai-kopi-di-pondok-aren-kembali-dibobol-maling",
+          "title": "Sudah Pernah Kehilangan Gas, Kedai Kopi di Pondok Aren Kembali Dibobol Maling",
+          "source": "Tribun News",
+          "published_at": "2026-10-08 13:09:06"
+        },
+        {
+          "id": "2",
+          "url": "https://jawapos.com/bisnis/2610080231/cari-inspirasi-dan-peluang-usaha-kafe-dan-kopi-kekinian-cbe-2026-digelar-di-nice-pik-2",
+          "title": "Cari Inspirasi dan Peluang Usaha Kafe dan Kopi Kekinian, CBE 2026 Digelar di NICE PIK 2",
+          "source": "Jawapos",
+          "published_at": "2026-10-08 09:50:01"
+        },
+        {
+          "id": "3",
+          "url": "https://newsmaker.tribunnews.com/news/185292/dpmptsp-sukoharjo-catat-151-kedai-kopi-kartasura-jadi-magnet-umkm-kopi-di-perbatasan-solo",
+          "title": "DPMPTSP Sukoharjo Catat 151 Kedai Kopi, Kartasura Jadi Magnet UMKM Kopi di Perbatasan Solo",
+          "source": "Tribun News",
+          "published_at": "2026-10-08 08:34:00"
+        },
+        {
+          "id": "4",
+          "url": "https://jawapos.com/lifestyle/2610080180/nongkrong-in-this-economy-tetap-aman-rekomendasi-menu-kopi-ala-kafe-di-bawah-rp-20-ribu-untuk-wfc",
+          "title": "Nongkrong In This Economy Tetap Aman! Rekomendasi Menu Kopi Ala Kafe di Bawah Rp 20 Ribu untuk WFC",
+          "source": "Jawapos",
+          "published_at": "2026-10-08 08:22:04"
+        },
+        {
+          "id": "5",
+          "url": "https://jawapos.com/lifestyle/2610080178/simak-life-hack-beli-kopi-tanpa-bikin-boncos-in-this-economy-tetap-bisa-nongkrong-di-kafe",
+          "title": "Simak Life Hack Beli Kopi Tanpa Bikin Boncos, In This Economy Tetap Bisa Nongkrong di Kafe!",
+          "source": "Jawapos",
+          "published_at": "2026-10-08 07:50:46"
+        },
+        {
+          "id": "6",
+          "url": "https://www.harapanrakyat.com/2026/10/menelusuri-sejarah-kedai-kopi-legendaris-di-indonesia-yang-bertahan-lintas-generasi/",
+          "title": "Menelusuri Sejarah Kedai Kopi Legendaris di Indonesia yang Bertahan Lintas Generasi - Harapan Rakyat",
+          "source": "Harapan Rakyat",
+          "published_at": "Wed, 07 Oct 2026 11:03:55 GMT"
+        },
+        {
+          "id": "7",
+          "url": "https://www.tribunnews.com/bisnis/7893500/lolos-seleksi-panel-di-kanada-3-pendiri-kopi-gerobakan-terpilih-sebagai-endeavor-entrepreneur",
+          "title": "Lolos Seleksi Panel di Kanada, 3 Pendiri Kopi Gerobakan Terpilih Sebagai Endeavor Entrepreneur",
+          "source": "Tribun News",
+          "published_at": "2026-10-07 10:17:26"
+        },
+        {
+          "id": "8",
+          "url": "https://jakarta.tribunnews.com/jakarta/444037/jumlah-kedai-kopi-indonesia-3-kali-lipat-as-bps-ungkap-potensi-besarnya",
+          "title": "Jumlah Kedai Kopi Indonesia 3 Kali Lipat AS, BPS Ungkap Potensi Besarnya",
+          "source": "Tribun News",
+          "published_at": "2026-10-07 09:52:50"
+        },
+        {
+          "id": "9",
+          "url": "https://www.tribunnews.com/nasional/7893433/tembus-461-ribu-gerai-kepala-bps-ungkap-indonesia-miliki-kedai-kopi-terbanyak-di-dunia",
+          "title": "Tembus 461 Ribu Gerai, Kepala BPS Ungkap Indonesia Miliki Kedai Kopi Terbanyak di Dunia",
+          "source": "Tribun News",
+          "published_at": "2026-10-07 08:39:16"
+        },
+        {
+          "id": "10",
+          "url": "https://arutalacoffee.com/blog/menu-restoran-mewah-budaya-kopi-spesialti",
+          "title": "Menu Restoran Mewah & Budaya Kopi Spesialti",
+          "source": "arutalacoffee.com",
+          "published_at": "2026-10-07T00:00:00.000Z"
+        },
+        {
+          "id": "11",
+          "url": "https://arutalacoffee.com/blog/coffee-shop-artinya-budaya-dan-etiket-kedai-kopi",
+          "title": "Coffee Shop Artinya: Budaya dan Etiket Kedai Kopi",
+          "source": "arutalacoffee.com",
+          "published_at": "2026-10-07T00:00:00.000Z"
+        },
+        {
+          "id": "12",
+          "url": "https://www.cnnindonesia.com/gaya-hidup/20261005114335-262-1411680/sajian-kopi-dengan-pasta-udang-dan-tuna-di-vietnam-gimana-rasanya",
+          "title": "Sajian Kopi dengan Pasta Udang dan Tuna di Vietnam, Gimana Rasanya?",
+          "source": "Cnnindonesia",
+          "published_at": "2026-10-06 08:00:00"
+        }
+      ]
+    },
+    {
+      "cluster_id": "event-kompetisi",
+      "cluster_name": "Event & Kompetisi",
+      "period_days": 30,
+      "generated_at": "2026-10-09T04:31:33.573Z",
+      "status": "ai_generated",
+      "fingerprint": "4e4081636cc238ee599a2b0eb4908e304137f7d6ba529e56a3c414dc86a486a2",
+      "article": {
+        "title": "Gelaran Kopi Oktober 2026: Festival, Expo, dan Edukasi Makin Padat",
+        "summary": "Sejumlah acara kopi pada awal Oktober 2026 menampilkan pola yang mirip: ada festival, expo, dan perayaan Hari Kopi Sedunia yang dipakai untuk mengumpulkan pelaku usaha, petani, pelajar, dan pengunjung. Angka yang muncul juga jelas, mulai dari 1.000 cangkir gratis di Pacitan, lebih dari 10.000 kopi gratis dari TOP Coffee, sampai sekitar 150 pelajar yang ikut seminar safety riding di Tangerang. [1] [2] [5]\n\nDi saat yang sama, beberapa kegiatan tidak hanya berhenti di hiburan. Ada dorongan untuk naik kelas lewat kualitas, peluang pasar, dan ekspor, sementara di tempat lain kopi dipakai sebagai pintu masuk untuk promosi produk lokal dan edukasi yang lebih luas. [3] [6] [7]",
+        "lead": "Dari Pacitan sampai NTT, rangkaian acara kopi pada awal Oktober 2026 memperlihatkan satu hal sederhana: kopi masih jadi format yang mudah dipakai untuk mengumpulkan massa, promosi produk, dan menyisipkan pesan pengembangan usaha. Di beberapa tempat, penyelenggara juga membawa angka yang tegas, seperti 1.000 cup gratis di Festival Kopi Pacitan dan lebih dari 10.000 kopi gratis dalam perayaan Hari Kopi Sedunia oleh TOP Coffee. [1] [2]",
+        "sections": [
+          {
+            "heading": "Festival dan pembagian kopi masih jadi daya tarik utama",
+            "paragraphs": [
+              "Festival Kopi Pacitan pada 8–9 Oktober 2026 memasang agenda Seduh 1.000 Cup Kopi Pacitan Gratis di PLUT KUMKM Kabupaten Pacitan. Dari materi yang tersedia, fokusnya jelas pada pengenalan produk lokal lewat format festival, bukan pada ukuran dampak yang sudah terukur. [1]",
+              "Pola serupa terlihat pada perayaan Hari Kopi Sedunia oleh TOP Coffee yang digelar di empat kota dan membagikan lebih dari 10.000 kopi gratis. Ini menunjukkan acara kopi masih sering dibangun dari kombinasi pengalaman langsung, pembagian sampel, dan klaim kedekatan dengan konsumen, meski data yang ada hanya menyebut bentuk acaranya. [2]",
+              "Di Depok, DETOS Coffee & Snack Festival 2026 juga memperlihatkan fungsi serupa sebagai ruang pamer dan jualan, dengan Garut Yellow Bourbon disebut sebagai varian yang paling diburu oleh penikmat seduhan manual. Fakta yang tersedia cukup untuk menunjukkan minat pengunjung pada satu varian, tetapi tidak cukup untuk menilai tren pasar yang lebih luas. [8]"
+            ]
+          },
+          {
+            "heading": "Kopi dipakai sebagai pintu masuk untuk promosi dan pengembangan usaha",
+            "paragraphs": [
+              "Beberapa kegiatan bergerak melampaui sekadar festival. TEI 2026 menghadirkan Zona KoTeKa untuk kopi, teh, dan kakao Indonesia, sementara FCE 2026 di NTT disebut sebagai momentum UMKM memperluas pasar kopi, wastra, dan produk olahan. Keduanya lebih menonjol sebagai ajang bisnis dan jejaring, dengan tujuan yang masih berbentuk target atau harapan penyelenggara. [3] [6]",
+              "Di Kerinci, Festival Kopi Kerinci Tanah Surga 2026 ditutup oleh Bupati Monadi setelah rangkaian acara yang mempertemukan petani, penggiat, pelaku usaha, dan pecinta kopi. Dari bahan yang ada, pesan utamanya adalah semangat masyarakat dipandang sebagai kekuatan untuk memajukan kopi Kerinci, tetapi sumber tidak memberi angka hasil atau capaian akhir. [12]",
+              "Di Pacitan, narasi produk lokal naik kelas juga muncul dari festival yang digelar di PLUT KUMKM. Ini sejalan dengan pola di beberapa daerah lain: kopi dijadikan wajah yang mudah dikenali untuk mengangkat produk lokal, tanpa berarti data yang tersedia sudah membuktikan dampak ekonominya. [1] [6] [12]"
+            ]
+          },
+          {
+            "heading": "Edukasi dan perayaan juga ikut menempel pada agenda kopi",
+            "paragraphs": [
+              "Tidak semua acara berisi jualan dan promosi. WMS menggelar seminar safety riding bertajuk Secangkir Kopi Sejuta Mimpi yang diikuti sekitar 150 pelajar SMK se-Tangerang. Acara ini jelas menempatkan kopi hanya sebagai bingkai tema, sementara isi utamanya adalah edukasi keselamatan berkendara. [5]",
+              "Di Roma, perayaan Hari Kopi Internasional juga tercatat lewat Coffee Tasting Experience, dengan secangkir kopi dari stan Republik Dominika menjadi salah satu potret yang diangkat. Sementara itu, pameran virtual arsip era kolonial dan perjalanan kopi di Jawa Tengah menunjukkan bahwa kopi juga dipakai sebagai bahan baca sejarah, bukan hanya bahan promosi acara. [9] [11]",
+              "Di sisi lain, sejumlah sumber seperti FCE 2026 menekankan kualitas, sikap, dan peluang ekspor, tetapi masih dalam bentuk arahan atau ajakan. Jadi, pembaca perlu membedakan mana yang benar-benar terjadi dan mana yang baru menjadi tujuan kegiatan. [6] [7]"
+            ]
+          }
+        ],
+        "conclusion": "Kumpulan berita ini memperlihatkan bahwa event kopi pada awal Oktober 2026 bergerak di tiga jalur yang saling tumpang tindih: promosi produk lokal, penguatan jejaring usaha, dan penyisipan edukasi. Angka yang tersedia cukup untuk menunjukkan skala beberapa acara, tetapi belum cukup untuk menyimpulkan perubahan pasar atau keberhasilan jangka panjang. [1] [2] [5] [6]",
+        "recommendations": [
+          {
+            "audience": "Penyelenggara acara kopi daerah",
+            "action": "Pisahkan dengan jelas tujuan festival, promosi produk, dan edukasi agar publik mudah menangkap isi acaranya.",
+            "basis": "Sejumlah acara dalam data menggabungkan pembagian kopi gratis, promosi UMKM, dan pesan edukasi dalam satu format. [1] [2] [5] [6]"
+          },
+          {
+            "audience": "Pelaku UMKM kopi",
+            "action": "Manfaatkan festival dan expo sebagai ruang perkenalan produk, tetapi siapkan data hasil penjualan atau kontak usaha jika ingin menilai manfaatnya dengan lebih nyata.",
+            "basis": "Bahan yang tersedia baru menunjukkan aktivitas promosi dan target pasar, belum hasil terukur. [3] [6] [12]"
+          }
+        ],
+        "source_urls": [
+          "https://ketik.com/pacitan/wisata-kuliner/ada-1000-cup-kopi-gratis-di-festival-kopi-pacitan-8-9-oktober-kerek-produk-lokal-naik-kelas",
+          "https://www.metrotvnews.com/read/kELCyjVJ-rayakan-hari-kopi-sedunia-top-coffee-berikan-rasa-serasadicafe-ke-4-kota-dan-bagikan-lebih-dari-10-000-kopi-gratis",
+          "https://www.vibizmedia.com/index.php/2026/10/06/tei-2026-hadirkan-zona-koteka-kopi-teh-dan-kakao-indonesia-siap-mendunia/",
+          "https://www.motorplus-online.com/read/254418590/wms-gelar-seminar-safety-riding-secangkir-kopi-sejuta-mimpi-diramaikan-ratusan-pelajar-gen-z",
+          "https://www.detikindonesia.co.id/fce-2026-jadi-momentum-umkm-ntt-perluas-pasar-kopi-wastra-dan-produk-olahan/",
+          "https://kupang.tribunnews.com/provinsi-ntt/982088/fce-2026-hari-ketiga-penggiat-kopi-ntt-diajak-tingkatkan-kualitas-hingga-buka-peluang-ekspor",
+          "https://stapo.id/news/garut-yellow-bourbon-jadi-primadona",
+          "https://kerincisatu.kerincikab.go.id/bupati-monadi-tutup-festival-kopi-kerinci-2026-semangat-masyarakat-jadi-kekuatan-majukan-kopi-kerinci"
+        ],
+        "evidence_note": "Sebagian sumber hanya memuat pengumuman, tema acara, atau target penyelenggara, jadi analisis ini dibatasi pada fakta yang benar-benar disebutkan."
+      },
+      "article_en": {
+        "title": "Coffee Events in Early October 2026: Festivals, Expos, and Education Share the Same Stage",
+        "summary": "A cluster of coffee-related events in early October 2026 followed a similar pattern: festivals, expos, and World Coffee Day activations brought together businesses, farmers, students, and visitors. The numbers are specific too, from 1,000 free cups in Pacitan to more than 10,000 free coffees from TOP Coffee and around 150 vocational students in a riding-safety seminar in Tangerang. [1] [2] [5]\n\nSeveral events also went beyond celebration. They were used to push local products, talk about market access and exports, and attach coffee to wider public education, while the available sources mostly stop at announcements, targets, and event formats. [3] [6] [7]",
+        "lead": "From Pacitan to East Nusa Tenggara, early October 2026 showed how coffee events can still work as an easy format for gathering crowds, promoting local products, and carrying business messages. Some organizers also gave clear numbers, such as 1,000 free cups at the Pacitan Coffee Festival and more than 10,000 free coffees in TOP Coffee’s World Coffee Day campaign. [1] [2]",
+        "sections": [
+          {
+            "heading": "Free coffee and festival formats still do much of the work",
+            "paragraphs": [
+              "The Pacitan Coffee Festival on 8–9 October 2026 included a program to pour 1,000 free cups of Pacitan coffee at the PLUT KUMKM office in Pacitan Regency. Based on the material available, the main point is product introduction through a festival setting, not any measured impact yet. [1]",
+              "A similar pattern appears in TOP Coffee’s World Coffee Day activities, which ran in four cities and handed out more than 10,000 free coffees. This shows that coffee events are still often built around sampling, public engagement, and brand visibility, although the source only confirms the event format and the number distributed. [2]",
+              "In Depok, the DETOS Coffee & Snack Festival 2026 also worked as a showcase and sales space, with Garut Yellow Bourbon described as the variety most sought after by manual-brew fans. That tells us there was clear interest in one variety, but it is not enough to claim a broader market trend. [8]"
+            ]
+          },
+          {
+            "heading": "Coffee is also being used to frame business promotion and market access",
+            "paragraphs": [
+              "Several events clearly moved beyond a simple festival model. TEI 2026 introduced a KoTeKa zone for Indonesia’s coffee, tea, and cocoa, while FCE 2026 in East Nusa Tenggara was described as a moment for MSMEs to expand markets for coffee, woven textiles, and processed products. Both are best read as business and networking platforms, with aims that are still presented as targets or hopes by the organizers. [3] [6]",
+              "In Kerinci, the 2026 Tanah Surga Coffee Festival was closed by Regent Monadi after a series of activities that brought together farmers, coffee actors, business players, and coffee lovers. The available source says community spirit is seen as a strength for advancing Kerinci coffee, but it gives no final performance data. [12]",
+              "Pacitan’s festival also used a “local products moving up” message, which matches the broader pattern across these reports: coffee is often the most visible entry point for promoting local products. The data here does not prove economic impact, only the stated intent. [1] [6] [12]"
+            ]
+          },
+          {
+            "heading": "Education and commemoration are also tied to coffee",
+            "paragraphs": [
+              "Not all of these events were about sales or promotion. WMS held a riding-safety seminar titled A Cup of Coffee, A Million Dreams, with around 150 vocational students from across Tangerang taking part. In this case, coffee is mainly a theme wrapper around the core message of road safety education. [5]",
+              "In Rome, International Coffee Day was marked through a Coffee Tasting Experience, with a cup from the Dominican Republic booth among the images highlighted. Separately, a virtual exhibition on colonial archives and the history of coffee in Central Java shows coffee being used as a historical subject, not just an event theme. [9] [11]",
+              "Elsewhere, FCE 2026 emphasized quality, character, and export opportunities, but those points appear as guidance or ambition rather than proven outcomes. Readers should separate what actually happened from what was merely being encouraged. [6] [7]"
+            ]
+          }
+        ],
+        "conclusion": "Taken together, these reports show coffee events in early October 2026 moving along three overlapping tracks: local product promotion, business networking, and public education. The numbers are enough to show scale in some cases, but not enough to prove market change or long-term success. [1] [2] [5] [6]",
+        "recommendations": [
+          {
+            "audience": "Coffee event organizers",
+            "action": "Keep festival activity, product promotion, and education clearly separated in the program so audiences can understand what the event is trying to do.",
+            "basis": "Several items in the data combine free coffee distribution, MSME promotion, and educational messaging in one event format. [1] [2] [5] [6]"
+          },
+          {
+            "audience": "Coffee MSMEs",
+            "action": "Use festivals and expos as product-introduction spaces, but prepare sales or contact data if you want to judge the benefit more concretely.",
+            "basis": "The available material shows promotion and market targets, but not measurable outcomes. [3] [6] [12]"
+          }
+        ],
+        "source_urls": [
+          "https://ketik.com/pacitan/wisata-kuliner/ada-1000-cup-kopi-gratis-di-festival-kopi-pacitan-8-9-oktober-kerek-produk-lokal-naik-kelas",
+          "https://www.metrotvnews.com/read/kELCyjVJ-rayakan-hari-kopi-sedunia-top-coffee-berikan-rasa-serasadicafe-ke-4-kota-dan-bagikan-lebih-dari-10-000-kopi-gratis",
+          "https://www.vibizmedia.com/index.php/2026/10/06/tei-2026-hadirkan-zona-koteka-kopi-teh-dan-kakao-indonesia-siap-mendunia/",
+          "https://www.motorplus-online.com/read/254418590/wms-gelar-seminar-safety-riding-secangkir-kopi-sejuta-mimpi-diramaikan-ratusan-pelajar-gen-z",
+          "https://www.detikindonesia.co.id/fce-2026-jadi-momentum-umkm-ntt-perluas-pasar-kopi-wastra-dan-produk-olahan/",
+          "https://kupang.tribunnews.com/provinsi-ntt/982088/fce-2026-hari-ketiga-penggiat-kopi-ntt-diajak-tingkatkan-kualitas-hingga-buka-peluang-ekspor",
+          "https://stapo.id/news/garut-yellow-bourbon-jadi-primadona",
+          "https://kerincisatu.kerincikab.go.id/bupati-monadi-tutup-festival-kopi-kerinci-2026-semangat-masyarakat-jadi-kekuatan-majukan-kopi-kerinci"
+        ],
+        "evidence_note": "Some sources only provide event announcements, themes, or organizer targets, so this analysis stays within the facts actually stated."
+      },
+      "input_sources": [
+        {
+          "id": "1",
+          "url": "https://ketik.com/pacitan/wisata-kuliner/ada-1000-cup-kopi-gratis-di-festival-kopi-pacitan-8-9-oktober-kerek-produk-lokal-naik-kelas",
+          "title": "Ada 1.000 Cup Kopi Gratis di Festival Kopi Pacitan 8-9 Oktober, Kerek Produk Lokal Naik Kelas",
+          "source": "ketik.com",
+          "published_at": "2026-10-07T00:00:00.000Z"
+        },
+        {
+          "id": "2",
+          "url": "https://www.metrotvnews.com/read/kELCyjVJ-rayakan-hari-kopi-sedunia-top-coffee-berikan-rasa-serasadicafe-ke-4-kota-dan-bagikan-lebih-dari-10-000-kopi-gratis",
+          "title": "Rayakan Hari Kopi Sedunia, TOP Coffee Berikan Rasa #SerasaDiCafe ke 4 Kota dan Bagikan Lebih dari 10.000 Kopi Gratis - MetroTVNews.com",
+          "source": "MetroTVNews.com",
+          "published_at": "Tue, 06 Oct 2026 12:29:43 GMT"
+        },
+        {
+          "id": "3",
+          "url": "https://www.vibizmedia.com/index.php/2026/10/06/tei-2026-hadirkan-zona-koteka-kopi-teh-dan-kakao-indonesia-siap-mendunia/",
+          "title": "TEI 2026 Hadirkan Zona KoTeKa, Kopi, Teh, dan Kakao Indonesia Siap Mendunia - vibizmedia.com",
+          "source": "vibizmedia.com",
+          "published_at": "Tue, 06 Oct 2026 11:12:41 GMT"
+        },
+        {
+          "id": "4",
+          "url": "https://manado.tribunnews.com/bitung/1896013/pembukaan-bitung-market-dan-expo-fpsl-hengky-dan-randito-nikmati-kopi-americano-ice",
+          "title": "Pembukaan Bitung Market dan Expo FPSL, Hengky dan Randito Nikmati Kopi Americano Ice",
+          "source": "Tribunmanado.co.id",
+          "published_at": "2026-10-06 04:36:13"
+        },
+        {
+          "id": "5",
+          "url": "https://www.motorplus-online.com/read/254418590/wms-gelar-seminar-safety-riding-secangkir-kopi-sejuta-mimpi-diramaikan-ratusan-pelajar-gen-z",
+          "title": "WMS Gelar Seminar Safety Riding ‘Secangkir Kopi Sejuta Mimpi’, Diramaikan Ratusan Pelajar Gen Z",
+          "source": "Motorplus-online",
+          "published_at": "2026-10-05 09:16:35"
+        },
+        {
+          "id": "6",
+          "url": "https://www.detikindonesia.co.id/fce-2026-jadi-momentum-umkm-ntt-perluas-pasar-kopi-wastra-dan-produk-olahan/",
+          "title": "FCE 2026 Jadi Momentum UMKM NTT Perluas Pasar Kopi, Wastra, dan Produk Olahan - detikindonesia.co.id",
+          "source": "detikindonesia.co.id",
+          "published_at": "Mon, 05 Oct 2026 08:29:00 GMT"
+        },
+        {
+          "id": "7",
+          "url": "https://kupang.tribunnews.com/provinsi-ntt/982088/fce-2026-hari-ketiga-penggiat-kopi-ntt-diajak-tingkatkan-kualitas-hingga-buka-peluang-ekspor",
+          "title": "FCE 2026 Hari Ketiga, Penggiat Kopi NTT Diajak Tingkatkan Kualitas hingga Buka Peluang Ekspor",
+          "source": "Tribun News",
+          "published_at": "2026-10-04 07:44:57"
+        },
+        {
+          "id": "8",
+          "url": "https://stapo.id/news/garut-yellow-bourbon-jadi-primadona",
+          "title": "Garut Yellow Bourbon Jadi Primadona Warung Biji di Detos Coffee & Snack Festival 2026 - Stapo.id",
+          "source": "stapo.id",
+          "published_at": "2026-10-01T00:00:00.000Z"
+        },
+        {
+          "id": "9",
+          "url": "https://antaranews.com/berita/5767883/potret-perayaan-hari-kopi-internasional-di-roma",
+          "title": "Potret perayaan Hari Kopi Internasional di Roma",
+          "source": "antaranews.com",
+          "published_at": "2026-10-01T00:00:00.000Z"
+        },
+        {
+          "id": "10",
+          "url": "https://food.detik.com/info-kuliner/d-8687491/rayakan-hari-kopi-sedunia-kenali-5-racikan-kopi-unik-asli-indonesia",
+          "title": "Rayakan Hari Kopi Sedunia, Kenali 5 Racikan Kopi Unik Asli Indonesia",
+          "source": "food.detik.com",
+          "published_at": "2026-10-01T00:00:00.000Z"
+        },
+        {
+          "id": "11",
+          "url": "https://jatengprov.go.id/publik/membaca-memori-masa-lalu-pameran-virtual-arsip-era-kolonial-dan-perjalanan-kopi-di-jawa-tengah/",
+          "title": "Membaca Memori Masa Lalu, Pameran Virtual Arsip Era Kolonial dan Perjalanan Kopi di Jawa Tengah - Pemerintah Provinsi Jawa Tengah",
+          "source": "Pemerintah Provinsi Jawa Tengah",
+          "published_at": "Wed, 23 Sep 2026 09:38:29 GMT"
+        },
+        {
+          "id": "12",
+          "url": "https://kerincisatu.kerincikab.go.id/bupati-monadi-tutup-festival-kopi-kerinci-2026-semangat-masyarakat-jadi-kekuatan-majukan-kopi-kerinci",
+          "title": "Bupati Monadi Tutup Festival Kopi Kerinci 2026, Semangat Masyarakat Jadi Kekuatan Majukan Kopi Kerinci - KerinciSatu; Bupati Monadi Tutup Festival Kopi Kerinci 2026, Semangat Masyarakat Jadi Kekuatan Majukan Kopi Kerinci",
+          "source": "kerincisatu.kerincikab.go.id",
+          "published_at": "2026-09-20T00:00:00.000Z"
+        }
+      ]
+    },
+    {
+      "cluster_id": "harga-pasar",
+      "cluster_name": "Harga & Pasar",
+      "period_days": 30,
+      "generated_at": "2026-10-09T04:31:33.573Z",
+      "status": "ai_generated",
+      "fingerprint": "cbca0930d0961d26773569bb48ebb999573be1c118b5a2d508dbb7d4ead90416",
+      "article": {
+        "title": "Harga Kopi Bergerak Naik Tipis, Lalu Menguat Lagi di Pasar Arabika",
+        "summary": "Dalam kumpulan berita ini, harga kopi bergerak dalam pola naik-turun yang masih didominasi dorongan dari pasar arabika berjangka dan pengaruh nilai tukar dolar AS. Pada awal Oktober 2026, kontrak Desember 2026 sempat turun ke $288,25 per pon, lalu naik tipis ke $288,75, sebelum melonjak ke $292,55 per pon pada 6 Oktober. Di pasar domestik Vietnam, harga kopi juga dilaporkan naik sedikit pada 8 Oktober 2026 [1][2][3][7][8].",
+        "lead": "Fakta paling jelas dari kumpulan berita ini adalah harga kopi arabika bergerak naik lagi setelah sempat melemah pada 1 Oktober 2026, sementara berita terbaru dari Vietnam menyebut harga kopi domestik naik sedikit pada 8 Oktober 2026 [1][8]. Perubahan di pasar berjangka itu datang bersama sinyal yang berulang: penguatan atau pelemahan dolar AS, stok gudang bursa yang rendah, dan kondisi cuaca Brasil yang terus dipantau [2][3][7][8].",
+        "sections": [
+          {
+            "heading": "Gerak harga yang paling konsisten terlihat di arabika berjangka",
+            "paragraphs": [
+              "Data yang paling rinci datang dari kontrak arabika Desember 2026. Pada 1 Oktober, harga ditutup turun ke $288,25 per pon setelah dolar AS menguat dan cuaca Brasil dinilai kondusif [8]. Dua hari kemudian, harga naik tipis 0,21% ke $288,75 per pon, didorong pelemahan dolar AS, aksi short covering, dan stok gudang bursa yang rendah [7]. Lalu pada 6 Oktober, kontrak yang sama kembali melonjak 1,32% ke $292,55 per pon [3], dan pada sesi 6 Oktober itu kenaikannya disebut berlanjut untuk hari ketiga berturut-turut [2].",
+              "paragraphs2_if_needed??"
+            ]
+          },
+          {
+            "heading": "Faktor yang disebut sumber masih berputar di isu yang sama",
+            "paragraphs": [
+              "Pendorong yang muncul berulang bukan datang dari satu kejadian tunggal, melainkan dari kombinasi faktor pasar. Beberapa berita menyebut penguatan real Brasil, yang bisa menekan minat ekspor [3], sementara yang lain menyorot kekhawatiran dampak El Niño terhadap panen Brasil [2]. Ada juga laporan bahwa kondisi kering di Brasil dapat mengganggu prospek panen 2026/27 pada fase pembungaan yang penting [8]. Di sisi lain, penguatan dolar AS disebut menekan harga pada 1 Oktober, sedangkan pelemahan dolar memberi dorongan positif pada 2 Oktober [7][8].",
+              "paragraphs2_if_needed??"
+            ]
+          },
+          {
+            "heading": "Pasar domestik memberi sinyal yang lebih ringan",
+            "paragraphs": [
+              "Di luar bursa berjangka, berita dari Vietnam pada 8 Oktober menyebut harga kopi domestik naik sedikit [1]. Sumber itu juga menempatkan kenaikan ini di tengah berita lain tentang penurunan harga lada, tetapi untuk kopi sendiri tidak ada angka rinci yang ditampilkan dalam kutipan yang tersedia [1]. Karena datanya singkat, yang bisa dibaca hanya bahwa pasar lokal ikut bergerak naik, tanpa cukup dasar untuk menyimpulkan besarnya perubahan atau penyebab tunggalnya.",
+              "paragraphs2_if_needed??"
+            ]
+          }
+        ],
+        "conclusion": "Secara gabungan, kumpulan berita ini menunjukkan pasar kopi yang masih sensitif terhadap pergerakan dolar, cuaca Brasil, dan kondisi stok, dengan arabika sebagai pusat perhatian utama. Arah harga belum terlihat tenang, tetapi data yang ada lebih cocok dibaca sebagai fase harga yang mudah bergerak daripada tanda perubahan besar yang sudah pasti.",
+        "recommendations": [
+          {
+            "audience": "Pedagang dan pelaku pasar kopi",
+            "action": "Pantau pergerakan dolar AS, cuaca Brasil, dan level stok gudang bursa sebelum membaca arah harga berikutnya.",
+            "basis": "Tiga faktor itu muncul berulang dalam berita harga 1–6 Oktober 2026 [2][3][7][8]."
+          },
+          {
+            "audience": "Pembaca yang mengikuti pasar domestik",
+            "action": "Perhatikan rilis harga lokal secara terpisah dari bursa berjangka karena data domestik yang tersedia masih sangat terbatas.",
+            "basis": "Berita Vietnam hanya menyebut harga kopi naik sedikit tanpa angka rinci [1]."
+          }
+        ],
+        "source_urls": [
+          "https://vietnam.vn/id/ban-tin-nong-san-hom-nay-8-10-gia-ca-phe-tang-nhe",
+          "https://vibiznews.com/index.php/2026/10/07/rekomendasi-harga-kopi-arabika-7-oktober-2026",
+          "https://vibiznews.com/index.php/2026/10/06/rekomendasi-harga-kopi-arabika-6-oktober-2026",
+          "https://vibiznews.com/index.php/2026/10/05/rekomendasi-harga-kopi-arabika-5-oktober-2026",
+          "https://vibiznews.com/index.php/2026/10/02/rekomendasi-harga-kopi-arabika-2-oktober-2026",
+          "https://vibiznews.com/index.php/2026/10/01/harga-kopi-arabika-1-oktober-2026-merosot-tertekan-penguatan-dolar-as"
+        ],
+        "evidence_note": "Data yang tersedia terutama berisi ringkasan berita harga harian dan satu kabar pasar domestik yang singkat, jadi pembacaan ini terbatas pada fakta yang disebut sumber."
+      },
+      "article_en": {
+        "title": "Coffee Prices Edge Up, Then Rally Again in the Arabica Market",
+        "summary": "Across this set of stories, coffee prices moved in a choppy but upward-leaning pattern, led by arabica futures and shaped by the U.S. dollar, Brazil weather, and warehouse stocks. In early October 2026, the December 2026 arabica contract slipped to $288.25 a pound, then recovered to $288.75, before jumping to $292.55 on October 6. Domestic coffee prices in Vietnam were also reported slightly higher on October 8, 2026 [1][2][3][7][8].",
+        "lead": "The clearest takeaway from this news bundle is that arabica prices rose again after a brief dip on October 1, 2026, while the latest Vietnam report says domestic coffee prices inched up on October 8, 2026 [1][8]. The market moves were tied to the same set of signals throughout the period: swings in the U.S. dollar, low exchange warehouse stocks, and weather concerns in Brazil [2][3][7][8].",
+        "sections": [
+          {
+            "heading": "The clearest price pattern is in arabica futures",
+            "paragraphs": [
+              "The most detailed figures come from the December 2026 arabica contract. On October 1, it closed lower at $288.25 per pound after a stronger U.S. dollar and favorable weather in Brazil [8]. Two days later, the price edged up 0.21% to $288.75 per pound, helped by a weaker dollar, short covering, and low exchange warehouse stocks [7]. By October 6, the same contract had climbed again, this time by 1.32% to $292.55 per pound [3], and that session was described as the third straight day of gains [2].",
+              "paragraphs2_if_needed??"
+            ]
+          },
+          {
+            "heading": "The drivers mentioned in the reports keep circling back to the same themes",
+            "paragraphs": [
+              "The reports do not point to one single shock. Instead, they repeat a small set of market drivers. Some stories mention a stronger Brazilian real, which can reduce export interest [3], while others cite concern that El Niño may affect Brazil’s crop [2]. Another report says dry conditions in Brazil could hurt the 2026/27 crop outlook during the critical flowering stage [8]. Currency moves also matter: a stronger dollar was said to pressure prices on October 1, while a weaker dollar supported them on October 2 [7][8].",
+              "paragraphs2_if_needed??"
+            ]
+          },
+          {
+            "heading": "Domestic market data is softer, but still points upward",
+            "paragraphs": [
+              "Outside the futures market, the Vietnam report on October 8 said domestic coffee prices rose slightly [1]. That item appears alongside a note that pepper prices fell, but the excerpt does not provide a detailed coffee price or a specific size of the move [1]. With data this limited, the only safe reading is that local prices were higher, not that the market made a large or lasting shift.",
+              "paragraphs2_if_needed??"
+            ]
+          }
+        ],
+        "conclusion": "Taken together, the reports show a coffee market that is still highly sensitive to the dollar, Brazil weather, and inventory levels, with arabica at the center of the move. The data point to a market that remains active and reactive, not to a confirmed long-term trend.",
+        "recommendations": [
+          {
+            "audience": "Coffee traders and market followers",
+            "action": "Watch the U.S. dollar, Brazil weather, and exchange stocks before reading the next price move.",
+            "basis": "Those factors appear repeatedly in the October 1–6 arabica reports [2][3][7][8]."
+          },
+          {
+            "audience": "Readers tracking domestic prices",
+            "action": "Treat local price updates separately from futures moves, since the available domestic data is still thin.",
+            "basis": "The Vietnam report only says coffee prices rose slightly and does not give a detailed figure [1]."
+          }
+        ],
+        "source_urls": [
+          "https://vietnam.vn/id/ban-tin-nong-san-hom-nay-8-10-gia-ca-phe-tang-nhe",
+          "https://vibiznews.com/index.php/2026/10/07/rekomendasi-harga-kopi-arabika-7-oktober-2026",
+          "https://vibiznews.com/index.php/2026/10/06/rekomendasi-harga-kopi-arabika-6-oktober-2026",
+          "https://vibiznews.com/index.php/2026/10/05/rekomendasi-harga-kopi-arabika-5-oktober-2026",
+          "https://vibiznews.com/index.php/2026/10/02/rekomendasi-harga-kopi-arabika-2-oktober-2026",
+          "https://vibiznews.com/index.php/2026/10/01/harga-kopi-arabika-1-oktober-2026-merosot-tertekan-penguatan-dolar-as"
+        ],
+        "evidence_note": "The available material is mostly daily price summaries plus one brief domestic market note, so the analysis stays close to what is explicitly reported."
+      },
+      "input_sources": [
+        {
+          "id": "1",
+          "url": "https://vietnam.vn/id/ban-tin-nong-san-hom-nay-8-10-gia-ca-phe-tang-nhe",
+          "title": "Berita pertanian hari ini (8 Oktober): Harga kopi naik sedikit.",
+          "source": "vietnam.vn",
+          "published_at": "2026-10-08T00:00:00.000Z"
+        },
+        {
+          "id": "2",
+          "url": "https://vibiznews.com/index.php/2026/10/07/rekomendasi-harga-kopi-arabika-7-oktober-2026",
+          "title": "Rekomendasi Harga Kopi Arabika 7 Oktober 2026 - Vibiznews.com",
+          "source": "vibiznews.com",
+          "published_at": "2026-10-07T00:00:00.000Z"
+        },
+        {
+          "id": "3",
+          "url": "https://vibiznews.com/index.php/2026/10/06/rekomendasi-harga-kopi-arabika-6-oktober-2026",
+          "title": "Rekomendasi Harga Kopi Arabika 6 Oktober 2026 - Vibiznews.com",
+          "source": "vibiznews.com",
+          "published_at": "2026-10-06T00:00:00.000Z"
+        },
+        {
+          "id": "4",
+          "url": "https://kopitime.id/dolar-amerika-melemah-harga-kopi-mendapat-dorongan-positif-di-pasar-1",
+          "title": "Dolar Amerika Melemah, Harga Kopi Mendapat Dorongan Positif di Pasar - KopiTime",
+          "source": "kopitime.id",
+          "published_at": "2026-10-05T00:00:00.000Z"
+        },
+        {
+          "id": "5",
+          "url": "https://kopitime.id/kenapa-kopi-kembali-dalam-mode-bullish-dan-apa-penyebabnya-bedah-tuntas-pasar-komoditas-kopi",
+          "title": "Kenapa Kopi Kembali dalam Mode Bullish dan Apa Penyebabnya: Bedah Tuntas Pasar Komoditas Kopi - KopiTime",
+          "source": "kopitime.id",
+          "published_at": "2026-10-05T00:00:00.000Z"
+        },
+        {
+          "id": "6",
+          "url": "https://kopitime.id/mengapa-pasar-kopi-kembali-bullish-setelah-mengalami-tekanan-1",
+          "title": "Mengapa Pasar Kopi Kembali Bullish Setelah Mengalami Tekanan - KopiTime",
+          "source": "kopitime.id",
+          "published_at": "2026-10-05T00:00:00.000Z"
+        },
+        {
+          "id": "7",
+          "url": "https://vibiznews.com/index.php/2026/10/05/rekomendasi-harga-kopi-arabika-5-oktober-2026",
+          "title": "Rekomendasi Harga Kopi Arabika 5 Oktober 2026 - Vibiznews.com",
+          "source": "vibiznews.com",
+          "published_at": "2026-10-05T00:00:00.000Z"
+        },
+        {
+          "id": "8",
+          "url": "https://vibiznews.com/index.php/2026/10/02/rekomendasi-harga-kopi-arabika-2-oktober-2026",
+          "title": "Rekomendasi Harga Kopi Arabika 2 Oktober 2026 - Vibiznews.com",
+          "source": "vibiznews.com",
+          "published_at": "2026-10-01T00:00:00.000Z"
+        },
+        {
+          "id": "9",
+          "url": "https://vibiznews.com/index.php/2026/10/01/harga-kopi-arabika-1-oktober-2026-merosot-tertekan-penguatan-dolar-as",
+          "title": "Harga Kopi Arabika 1 Oktober 2026 Merosot Tertekan Penguatan Dolar AS - Vibiznews.com",
+          "source": "vibiznews.com",
+          "published_at": "2026-10-01T00:00:00.000Z"
+        },
+        {
+          "id": "10",
+          "url": "https://kopitime.id/prospek-harga-kopi-hingga-akhir-tahun-2026-semakin-menjadi-sorotan-1",
+          "title": "Prospek Harga Kopi hingga Akhir Tahun 2026 Semakin Menjadi Sorotan - KopiTime",
+          "source": "kopitime.id",
+          "published_at": "2026-09-25T00:00:00.000Z"
+        },
+        {
+          "id": "11",
+          "url": "https://kopitime.id/harga-kopi-tertekan-oleh-prospek-peningkatan-produksi-brasil-1",
+          "title": "Harga Kopi Tertekan oleh Prospek Peningkatan Produksi Brasil - KopiTime",
+          "source": "kopitime.id",
+          "published_at": "2026-09-24T00:00:00.000Z"
+        },
+        {
+          "id": "12",
+          "url": "https://kopitime.id/conab-naikkan-estimasi-produksi-brasil-harga-kopi-mengalami-penurunan-1",
+          "title": "Conab Naikkan Estimasi Produksi Brasil, Harga Kopi Mengalami Penurunan - KopiTime",
+          "source": "kopitime.id",
+          "published_at": "2026-09-24T00:00:00.000Z"
+        }
+      ]
+    },
     {
       "cluster_id": "kedai-konsumsi-gaya-hidup",
       "cluster_name": "Kedai, Konsumsi & Gaya Hidup",

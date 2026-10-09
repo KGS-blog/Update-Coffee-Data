@@ -1,0 +1,28 @@
+{
+  "bulan": "2018-09",
+  "artikel": [
+    {
+      "judul": "Kopi Kintamani Diminati Pasar Luar Negeri, Karena Ini Ekspor Tersendat | BALIPOST.com",
+      "tautan": "https://balipost.com/news/2018/09/10/55138/Kopi-Kintamani-Diminati-Pasar-Luar...html",
+      "tanggal": "2018-09-10T00:00:00.000Z",
+      "publication_date_precision": "day",
+      "publication_date_evidence": "2018-09-10T09:16:07+00:00",
+      "sumber": "balipost.com",
+      "ringkasan": "Bali > Bangli > Kopi Kintamani Diminati Pasar Luar Negeri, Karena Ini Ekspor TersendatBaliBangliEkonomiPertanianBANGLI, BALIPOST.com – Kopi Kintamani selama ini menjadi salah satu komoditi pertanian unggulan yang banyak dihasilkan petani di Kintamani, selain jeruk. Cita rasanya yang khas membuat kopi Kintamani tak hanya diminati pasar di dalam negeri, namun ",
+      "coffee_relevance_context": "Bali > Bangli > Kopi Kintamani Diminati Pasar Luar Negeri, Karena Ini Ekspor TersendatBaliBangliEkonomiPertanianBANGLI, BALIPOST.com – Kopi Kintamani selama ini menjadi salah satu komoditi pertanian u … Bali > Bangli > Kopi Kintamani Diminati Pasar Luar Negeri, Karena Ini Ekspor TersendatBaliBangliEkonomiPertanianBANGLI, BALIPOST.com – Kopi Kintamani selama ini menjadi salah satu komoditi pertanian unggulan yang banyak dihasilkan petani di Kintamani, selain jeruk. Cita rasanya yang khas membuat kopi Kintamani tak han … ini menjadi salah satu komoditi pertanian unggulan yang banyak dihasilkan petani di Kintamani, selain jeruk. Cita rasanya yang khas membuat kopi Kintamani tak hanya diminati pasar di dalam negeri, namun juga luar negeri.Meski sudah dikenal hingga ke luar negeri, tak banyak petani kopi di Kintamani yang mau memasarkan kopin",
+      "link_type": "publisher_article",
+      "source_type": "mevo_curated_growth",
+      "source_collection": "artikel_pertumbuhan",
+      "material_type": "growth",
+      "source_original_url": "https://balipost.com/news/2018/09/10/55138/Kopi-Kintamani-Diminati-Pasar-Luar...html",
+      "source_content_sha256": "697db1e2c442d74ebf342a2dd54536cac4e33e00a48715b2aadf2fb87667f577",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "mevo_screened_coffee_relevance",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
+    }
+  ]
+}
