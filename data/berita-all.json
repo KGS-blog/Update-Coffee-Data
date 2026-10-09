@@ -1323,9 +1323,11 @@
       "fetch_error": null,
       "retry_after": null,
       "published_date": "2026-10-07",
-      "cluster_id": "lainnya",
-      "cluster_name": "Lainnya",
-      "cluster_assignment": "unassigned"
+      "cluster_id": "brand-global",
+      "cluster_name": "Brand Global",
+      "cluster_assignment": "rule_context",
+      "cluster_rule_method": "contextual_subject_rules_v1",
+      "cluster_rule_explanation": "Entitas merek kopi yang disebut bersama sinyal bisnis/keuangan; ini klasifikasi topik merek, bukan sekadar kata ‘brand’."
     },
     {
       "judul": "Ekspor Kopi Indonesia Cetak Rekor Rp44,87 triliun pada 2025 - RRI.co.id",
@@ -1917,9 +1919,11 @@
       "fetch_error": null,
       "retry_after": null,
       "published_date": "2026-10-07",
-      "cluster_id": "lainnya",
-      "cluster_name": "Lainnya",
-      "cluster_assignment": "unassigned"
+      "cluster_id": "event-kompetisi",
+      "cluster_name": "Event & Kompetisi",
+      "cluster_assignment": "rule_context",
+      "cluster_rule_method": "contextual_subject_rules_v1",
+      "cluster_rule_explanation": "Judul/konteks menempatkan expo atau pameran kopi sebagai pokok berita; sinyal event mengungguli kecocokan kata yang lebih umum."
     },
     {
       "judul": "TEI 2026 Hadirkan Zona Khusus Kopi, Teh, dan Kakao, Permudah Buyer Temukan Produk Indonesia - Agricom.id",
@@ -1954,9 +1958,11 @@
       "fetch_error": null,
       "retry_after": null,
       "published_date": "2026-10-06",
-      "cluster_id": "lainnya",
-      "cluster_name": "Lainnya",
-      "cluster_assignment": "unassigned"
+      "cluster_id": "event-kompetisi",
+      "cluster_name": "Event & Kompetisi",
+      "cluster_assignment": "rule_context",
+      "cluster_rule_method": "contextual_subject_rules_v1",
+      "cluster_rule_explanation": "Judul/konteks menempatkan expo atau pameran kopi sebagai pokok berita; sinyal event mengungguli kecocokan kata yang lebih umum."
     },
     {
       "judul": "TEI 2026 Satukan Kopi, Teh, Kakao, Mudahkan Pembeli Temukan Produk - RRI.co.id",
@@ -2026,9 +2032,9 @@
       "fetch_error": null,
       "retry_after": null,
       "published_date": "2026-10-06",
-      "cluster_id": "lainnya",
-      "cluster_name": "Lainnya",
-      "cluster_assignment": "unassigned",
+      "cluster_id": "event-kompetisi",
+      "cluster_name": "Event & Kompetisi",
+      "cluster_assignment": "rule_context",
       "cluster_ai_reviewed_at": "2026-10-06T15:12:37.973Z",
       "cluster_review_version": 7,
       "cluster_review_context_hash": "ceb45ecb3e8d8bca5145878e676168fc67d6e20d82902bb11ba33d46ff52c766",
@@ -2039,7 +2045,9 @@
         "reason": "Judul menyinggung rencana zona khusus kopi di TEI 2026 (indikasi topik event/ekspor), tetapi konteks yang tersedia hanya peringatan hak cipta sehingga isi tidak dapat diverifikasi. Relevansi industri kopi belum dapat dipastikan dan judul-isi tidak selaras.",
         "evidence": "Judul: \"TEI 2026 Akan Siapkan Zona Khusus Kopi, Teh dan Kakao Indonesia\" | Konteks tersaji: \"Dilarang keras mengambil konten (tulisan, foto, infografis, video, dan sebagainya) yang dimuat di situs web ini, melakukan crawling atau pengindeksan otomatis...\"",
         "reviewed_at": "2026-10-06T15:12:37.973Z"
-      }
+      },
+      "cluster_rule_method": "contextual_subject_rules_v1",
+      "cluster_rule_explanation": "Klasifikasi aturan kontekstual memakai kecocokan pokok judul dan isi dengan batas cluster; bukan pencocokan kata kunci tunggal."
     },
     {
       "judul": "Bakar Lahan untuk Buka Kebun Kopi, 2 Warga di Empat Lawang Diamankan Polisi",
@@ -5649,9 +5657,9 @@
       "ringkasan": "Gubernur BI, Destry Damayanti, mengungkapkan besarnya potensi ekonomi yang dimiliki NTT, mulai dari tenun hingga kopi.",
       "asal": "newsdata",
       "link_type": "publisher_article",
-      "cluster_id": "lainnya",
-      "cluster_name": "Lainnya",
-      "cluster_assignment": "unassigned",
+      "cluster_id": "kebijakan-regulasi",
+      "cluster_name": "Kebijakan & Regulasi",
+      "cluster_assignment": "editor",
       "cluster_ai_reviewed_at": "2026-10-06T04:52:56.062Z",
       "cluster_review_version": 7,
       "extracted_at": "2026-10-05T09:18:55Z",
@@ -5682,7 +5690,9 @@
         "reason": "Kopi hanya disebut sebagai bagian dari daftar potensi bersama komoditas lain; bukan fokus substantif industri kopi.",
         "evidence": "\"besarnya potensi ekonomi yang dimiliki NTT, mulai dari tenun hingga kopi.\"",
         "reviewed_at": "2026-10-06T04:52:56.062Z"
-      }
+      },
+      "editor_cluster_reason": "Koreksi editor: aktor utama adalah Gubernur Bank Indonesia yang menyampaikan arah/potensi ekonomi daerah; untuk pengelompokan editorial portal, pokok kelembagaan ini masuk Kebijakan & Regulasi. Ini tidak boleh ditafsirkan sebagai bukti adanya kebijakan kopi baru.",
+      "editor_cluster_reason_type": "editorial_topic_correction"
     },
     {
       "judul": "Ketika Kopi dan Seni Bertemu, Menikmati Galeri Jadi Pengalaman yang Berbeda",
@@ -13018,9 +13028,9 @@
       "extraction_status": "thin_content_or_shell",
       "source_relevance": "CORE",
       "relevance_status": "mevo_screened_coffee_relevance",
-      "cluster_id": "lainnya",
-      "cluster_name": "Lainnya",
-      "cluster_assignment": "unassigned",
+      "cluster_id": "produksi-panen",
+      "cluster_name": "Produksi & Panen",
+      "cluster_assignment": "rule_context",
       "cluster_review_version": 7,
       "extracted_at": "2026-10-06T22:37:38Z",
       "extracted_from_url": "https://arutalacoffee.com/blog/asal-usul-kopi-luwak-sejarah-proses-karakter",
@@ -13048,7 +13058,9 @@
         "reason": "Membahas asal, bahan baku, dan proses kopi luwak; muatan pengetahuan industri.",
         "evidence": "\"pahami asal, bahan baku, dan proses dasarnya\"",
         "reviewed_at": "2026-10-07T12:32:08.977Z"
-      }
+      },
+      "cluster_rule_method": "contextual_subject_rules_v1",
+      "cluster_rule_explanation": "Isi membahas asal, proses, atau pengolahan biji kopi; sinyal proses kopi cocok dengan Produksi & Panen."
     },
     {
       "judul": "Panduan Mesin Press Kopi untuk Seduh di Rumah",
@@ -16917,9 +16929,9 @@
       "extraction_status": "extracted",
       "source_relevance": "CORE",
       "relevance_status": "passed_kabar_kopi_fulltext_coffee_signal",
-      "cluster_id": "lainnya",
-      "cluster_name": "Lainnya",
-      "cluster_assignment": "unassigned",
+      "cluster_id": "edukasi-industri",
+      "cluster_name": "Pendidikan & Industri",
+      "cluster_assignment": "editor",
       "cluster_review_version": 7,
       "publication_date_precision": "day",
       "publication_date_evidence": "2026-09-11T18:25:50+07:00",
@@ -32814,9 +32826,9 @@
       "extraction_status": "extracted",
       "source_relevance": "CORE",
       "relevance_status": "mevo_screened_coffee_relevance",
-      "cluster_id": "lainnya",
-      "cluster_name": "Lainnya",
-      "cluster_assignment": "unassigned",
+      "cluster_id": "produksi-panen",
+      "cluster_name": "Produksi & Panen",
+      "cluster_assignment": "rule_context",
       "cluster_review_version": 0,
       "extracted_at": "2026-10-09T04:24:36Z",
       "extracted_from_url": "https://kertakoffie.com/proses-fermentasi-bagaimana-memengaruhi-rasa-kopi",
@@ -32836,7 +32848,9 @@
       "content_excerpt": "Fermentasi adalah salah satu tahap paling penting dalam pengolahan kopi setelah buah kopi dipanen. Proses ini secara langsung memengaruhi karakteristik rasa kopi yang kita nikmati. Fermentasi dalam pengolahan kopi terjadi ketika gula dan senyawa lain dalam pulp (daging buah) kopi terurai oleh mikroorganisme alami seperti ragi dan bakteri. Hasil dari proses ini adalah perubahan kimia yang memengaruhi aroma, rasa, dan ",
       "fetch_error": null,
       "retry_after": null,
-      "published_date": "2024-10-08"
+      "published_date": "2024-10-08",
+      "cluster_rule_method": "contextual_subject_rules_v1",
+      "cluster_rule_explanation": "Isi membahas asal, proses, atau pengolahan biji kopi; sinyal proses kopi cocok dengan Produksi & Panen."
     },
     {
       "judul": "Mang Tempayan dan Kopi Batubalay - Kerta Koffie",
@@ -33149,9 +33163,9 @@
       "extraction_status": "extracted",
       "source_relevance": "CORE",
       "relevance_status": "mevo_screened_coffee_relevance",
-      "cluster_id": "lainnya",
-      "cluster_name": "Lainnya",
-      "cluster_assignment": "unassigned",
+      "cluster_id": "produksi-panen",
+      "cluster_name": "Produksi & Panen",
+      "cluster_assignment": "rule_context",
       "cluster_review_version": 0,
       "extracted_at": "2026-10-09T04:24:39Z",
       "extracted_from_url": "https://beritajatim.com/berkunjung-ke-pengolahan-kopi-cm-di-bondowoso-harga-jual-tembus-rp-350-ribu-per-kg",
@@ -33171,7 +33185,9 @@
       "content_excerpt": "Bondowoso (beritajatim.com) – Pengolahan biji kopi memiliki beragam metode yang unik, salah satunya adalah Carbonic Maceration (CM). Metode ini semakin populer di kalangan pecinta kopi, terutama di Kabupaten Bondowoso. Salah satu pengolah kopi CM yang terkenal di daerah ini adalah Java Raung Coffee, yang berlokasi di Desa Sukosari Lor, Kecamatan Sumberwringin. Andi Wijaya, pemilik Java Raung Coffee, menjelaskan bahwa",
       "fetch_error": null,
       "retry_after": null,
-      "published_date": "2024-08-10"
+      "published_date": "2024-08-10",
+      "cluster_rule_method": "contextual_subject_rules_v1",
+      "cluster_rule_explanation": "Isi membahas asal, proses, atau pengolahan biji kopi; sinyal proses kopi cocok dengan Produksi & Panen."
     },
     {
       "judul": "ABSTRACT Local wisdom is a community’s view or way of dealing with various problems, including coffee cultivation.The use…",
@@ -33567,9 +33583,9 @@
       "extraction_status": "extracted",
       "source_relevance": "CORE",
       "relevance_status": "passed_kabar_kopi_fulltext_coffee_signal",
-      "cluster_id": "lainnya",
-      "cluster_name": "Lainnya",
-      "cluster_assignment": "unassigned",
+      "cluster_id": "produksi-panen",
+      "cluster_name": "Produksi & Panen",
+      "cluster_assignment": "rule_context",
       "cluster_review_version": 0,
       "extracted_at": "2026-10-09T04:24:46Z",
       "extracted_from_url": "https://ejournal.stiperfb.ac.id/index.php/jtp/article/download/40/35/67",
@@ -33589,7 +33605,9 @@
       "content_excerpt": "39 Copyright© 2024 | Jurnal Teknologi Peternakan | Volume 1, Nomor 1, Maret 2024 PRINSIP PENANGANAN PASCAPANEN BIJI KOPI ARABIKA GUNA MENINGKATKAN MUTU PRODUK DI KABUPATEN NGADA Maria Alfonsa Ngaku1, Marten Umbu Kaleka2 Sekolah Tinggi Pertanian Flores Bajawa1,2 Email Korespondensi: mariangaku07@gmail.com Info Artikel ABSTRAK Histori Artikel: Masuk: 15 Januari 2024 Diterima: 25 Januari 2024 Diterbitkan: 23 Maret 2024 ",
       "fetch_error": null,
       "retry_after": null,
-      "published_date": "2024-03-23"
+      "published_date": "2024-03-23",
+      "cluster_rule_method": "contextual_subject_rules_v1",
+      "cluster_rule_explanation": "Isi membahas asal, proses, atau pengolahan biji kopi; sinyal proses kopi cocok dengan Produksi & Panen."
     },
     {
       "judul": "Harga Kopi Arabika Februari 2024 Rp 70 Ribu | Media Perkebunan | Media Perkebunan",
@@ -33691,9 +33709,9 @@
       "extraction_status": "extracted",
       "source_relevance": "CORE",
       "relevance_status": "passed_kabar_kopi_fulltext_coffee_signal",
-      "cluster_id": "lainnya",
-      "cluster_name": "Lainnya",
-      "cluster_assignment": "unassigned",
+      "cluster_id": "produksi-panen",
+      "cluster_name": "Produksi & Panen",
+      "cluster_assignment": "rule_context",
       "cluster_review_version": 0,
       "extracted_at": "2026-10-09T04:24:50Z",
       "extracted_from_url": "https://mediaindonesia.com/jurnal-kopi/657624/buah-manis-dari-proses-eksperimental",
@@ -33713,7 +33731,9 @@
       "content_excerpt": "Buah Manis dari Proses Eksperimental Login Headline Pelaku Pencabulan Lebih Dilindungi Jumlah kasus kekerasan seksual terhadap anak telah mencapai puluhan ribu. Home News Politik dan HukumEkonomiMegapolitanInternasionalHumanioraOlahragaSepakbolaJabar Lifestyle OtomotifHiburanTeknologiFesyenTravelistaKuliner Views EditorialPodiumOpiniKolom PakarSketsa Visual FotoVideoInfografis Nusantara Kesehatan Jelita Forum Mahasis",
       "fetch_error": null,
       "retry_after": null,
-      "published_date": "2024-03-09"
+      "published_date": "2024-03-09",
+      "cluster_rule_method": "contextual_subject_rules_v1",
+      "cluster_rule_explanation": "Isi membahas asal, proses, atau pengolahan biji kopi; sinyal proses kopi cocok dengan Produksi & Panen."
     },
     {
       "judul": "Daftar Kedai Kopi Paling Favorit di Aceh, Ada yang Sudah 77 Tahun",
@@ -35135,9 +35155,9 @@
       "extraction_status": "extracted",
       "source_relevance": "CORE",
       "relevance_status": "mevo_screened_coffee_relevance",
-      "cluster_id": "lainnya",
-      "cluster_name": "Lainnya",
-      "cluster_assignment": "unassigned",
+      "cluster_id": "produksi-panen",
+      "cluster_name": "Produksi & Panen",
+      "cluster_assignment": "rule_context",
       "cluster_review_version": 0,
       "extracted_at": "2026-10-09T04:25:06Z",
       "extracted_from_url": "https://kertakoffie.com/perbedaan-kopi-proses-natural-dan-honey",
@@ -35157,7 +35177,9 @@
       "content_excerpt": "Pasca Panen Natural Proses natural, juga dikenal sebagai proses kering, adalah metode pengolahan biji kopi yang melibatkan pengeringan cherry kopi (buah yang mengelilingi biji) di bawah sinar matahari setelah dipanen. Proses ini menghasilkan kopi dengan profil rasa buah yang bold dan kuat. Dalam proses natural, buah kopi dipanen dan kemudian dibiarkan kering di bawah sinar matahari di bedengan atau di tanah. cherry d",
       "fetch_error": null,
       "retry_after": null,
-      "published_date": "2022-12-23"
+      "published_date": "2022-12-23",
+      "cluster_rule_method": "contextual_subject_rules_v1",
+      "cluster_rule_explanation": "Isi membahas asal, proses, atau pengolahan biji kopi; sinyal proses kopi cocok dengan Produksi & Panen."
     },
     {
       "judul": "Otten Coffee Kenalkan Infused Coffee di 2023",
@@ -36279,9 +36301,9 @@
       "extraction_status": "extracted",
       "source_relevance": "CORE",
       "relevance_status": "mevo_screened_coffee_relevance",
-      "cluster_id": "lainnya",
-      "cluster_name": "Lainnya",
-      "cluster_assignment": "unassigned",
+      "cluster_id": "produksi-panen",
+      "cluster_name": "Produksi & Panen",
+      "cluster_assignment": "rule_context",
       "cluster_review_version": 0,
       "extracted_at": "2026-10-09T04:25:19Z",
       "extracted_from_url": "https://kompas.com/food/read/2021/12/24/190700675/4-metode-pengolahan-buah-kopi-pascapanen-dari-natural-hingga-honey",
@@ -36301,7 +36323,9 @@
       "content_excerpt": "4 Metode Pengolahan Buah Kopi Pascapanen, dari Natural hingga Honey Login Gabung KOMPAS.com+ Konten yang disimpan Konten yang disukai Atur Minat Berikan Masukanmu Gabung Kompas.com PLUS News Nasional Global Megapolitan Regional Pemilu Hype Konsultasi Hukum Cek Fakta Surat Pembaca Indeks Kilas Daerah Kilas Korporasi Kilas Kementerian Sorot Politik Kilas Badan Negara Kelana Indonesia Kalbe Health Corner Kilas Parlemen ",
       "fetch_error": null,
       "retry_after": null,
-      "published_date": "2021-12-24"
+      "published_date": "2021-12-24",
+      "cluster_rule_method": "contextual_subject_rules_v1",
+      "cluster_rule_explanation": "Isi membahas asal, proses, atau pengolahan biji kopi; sinyal proses kopi cocok dengan Produksi & Panen."
     },
     {
       "judul": "Brewing Coffee di Rumah? Why Not! - KOPEN",
@@ -37583,9 +37607,9 @@
       "extraction_status": "extracted",
       "source_relevance": "CORE",
       "relevance_status": "mevo_screened_coffee_relevance",
-      "cluster_id": "lainnya",
-      "cluster_name": "Lainnya",
-      "cluster_assignment": "unassigned",
+      "cluster_id": "produksi-panen",
+      "cluster_name": "Produksi & Panen",
+      "cluster_assignment": "rule_context",
       "cluster_review_version": 0,
       "extracted_at": "2026-10-09T04:25:57Z",
       "extracted_from_url": "https://kertakoffie.com/5-metode-pasca-panen-yang-lazim-di-indonesia",
@@ -37605,7 +37629,9 @@
       "content_excerpt": "Pasca panen adalah proses setelah masa panen yang memproses ceri kopi menjadi green bean, yang kadang disebut biji kopi mentah yang belum di roasting (sangrai). Berikut ini adalah 5 Metode Pasca panen yg lazim di Indonesia. 1. Fullwash Biji kopi dengan proses fullwash memiliki proses pencucian yang cukup panjang, mula-mula buah kopi yang telah dipetik dimasukkan ke dalam bak berisi air untuk memisahkan buah kopi yang",
       "fetch_error": null,
       "retry_after": null,
-      "published_date": "2019-03-23"
+      "published_date": "2019-03-23",
+      "cluster_rule_method": "contextual_subject_rules_v1",
+      "cluster_rule_explanation": "Isi membahas asal, proses, atau pengolahan biji kopi; sinyal proses kopi cocok dengan Produksi & Panen."
     },
     {
       "judul": "Fakta Menarik tentang Kopi - Kerta Koffie",
