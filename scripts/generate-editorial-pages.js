@@ -13,11 +13,19 @@ const decisionsPath = path.join(ROOT, 'data/cluster-decisions.json');
 const catalog = fs.existsSync(catalogPath) ? JSON.parse(fs.readFileSync(catalogPath, 'utf8')) : { clusters: BERITA_KLASTER };
 const decisions = fs.existsSync(decisionsPath) ? JSON.parse(fs.readFileSync(decisionsPath, 'utf8')) : { overrides: [] };
 const definitions = Array.isArray(catalog.clusters) && catalog.clusters.length ? catalog.clusters : BERITA_KLASTER;
-const overrides = new Map((decisions.overrides || []).map(item => [String(item.url || item.tautan || ''), item.cluster_id || item.klaster]));
-const directPublisherUrl = value => { try { const url = new URL(String(value || '')); return url.protocol === 'https:' && url.hostname !== 'news.google.com' && !url.hostname.endsWith('.google.com'); } catch (_) { return false; } };
-const directFeedArticles = (feed.artikel || []).filter(item => item.link_type !== 'aggregator_redirect' && directPublisherUrl(item.tautan));
+const articleOverrides = new Map((decisions.overrides || []).map(item => [String(item.url || item.tautan || ''), item]));
+const directFeedArticles = (feed.artikel || []).filter(item => {
+  const key = String(item.tautan || item.link || '');
+  const override = articleOverrides.get(key);
+  const irrelevant = item.cluster_assignment === 'editor_irrelevant'
+    || override?.decision === 'irrelevant'
+    || String(override?.cluster_id || '').toLowerCase() === 'tidak-relevan';
+  const googleDiscoveryUrl = /^(https?:\/\/)?(news\.google\.com|google\.com)\//i.test(key);
+  return !irrelevant && item.link_type !== 'aggregator_redirect' && !googleDiscoveryUrl;
+});
 const feedArticles = directFeedArticles.map(item => {
-  const cluster = overrides.get(String(item.tautan || ''));
+  const override = articleOverrides.get(String(item.tautan || item.link || ''));
+  const cluster = override?.cluster_id || override?.klaster;
   return cluster ? { ...item, cluster_id: cluster, cluster_assignment: 'editor_override' } : item;
 });
 global.window = { BERITA_KLASTER: definitions };

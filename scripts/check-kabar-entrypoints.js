@@ -9,9 +9,10 @@ if (home !== legacy) {
   console.error("Kabar Kopi entrypoints differ: index.html serves / while kabar-kopi.html is also public. Rebuild both from scripts/templates/kabar-kopi.html and render headlines into both before publishing.");
   process.exit(1);
 }
-const chartCount = (home.match(/class="price-chart"/g) || []).length;
-if (home.includes('<!-- STATIC_PRICE_CHART -->') || chartCount !== 4) {
-  console.error(`Homepage coffee-price charts are missing or incomplete (found ${chartCount}/4). Render scripts/render-static-coffee-price-chart.js before publishing.`);
+const chartCount = (home.match(/class="price-chart price-chart-combined"/g) || []).length;
+const seriesCount = (home.match(/class="overview-series"/g) || []).length;
+if (home.includes('<!-- STATIC_PRICE_CHART -->') || chartCount !== 1 || seriesCount !== 4) {
+  console.error(`Homepage coffee-price chart is missing or incomplete (found ${chartCount} combined chart(s), ${seriesCount}/4 series). Render scripts/render-static-coffee-price-chart.js before publishing.`);
   process.exit(1);
 }
 console.log("Kabar Kopi root and /kabar-kopi.html are synchronized.");

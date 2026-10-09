@@ -64,8 +64,10 @@
     },
     {
       "url": "https://kupang.tribunnews.com/provinsi-ntt/982021/gubernur-bi-destry-damayanti-ungkap-potensi-besar-tenun-ntt-hingga-kopi",
-      "cluster_id": "pendidikan-industri",
-      "decided_at": "2026-10-07T18:01:09.956Z"
+      "cluster_id": "kebijakan-regulasi",
+      "reason": "Koreksi editor: aktor utama adalah Gubernur Bank Indonesia yang menyampaikan arah/potensi ekonomi daerah; untuk pengelompokan editorial portal, pokok kelembagaan ini masuk Kebijakan & Regulasi. Ini tidak boleh ditafsirkan sebagai bukti adanya kebijakan kopi baru.",
+      "reason_type": "editorial_topic_correction",
+      "decided_at": "2026-10-09T17:40:17.000Z"
     },
     {
       "url": "https://www.cnbcindonesia.com/lifestyle/20260924163656-33-770649/waktu-terbaik-minum-kopi-efeknya-bisa-cegah-sakit-jantung",
@@ -111,7 +113,7 @@
     },
     {
       "url": "https://regional.kompas.com/read/2026/09/11/182550778/di-kayu-aro-petani-kerinci-merayakan-kopi-yang-mulai-mendunia",
-      "cluster_id": "pendidikan-industri",
+      "cluster_id": "edukasi-industri",
       "decided_at": "2026-10-07T18:03:12.907Z"
     },
     {

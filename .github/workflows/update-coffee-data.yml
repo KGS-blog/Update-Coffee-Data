@@ -16,6 +16,9 @@ on:
       - 'scripts/generate-training-directory.js'
       - 'data/lembaga-pelatihan-kopi.json'
       - 'scripts/generate-editorial-pages.js'
+      - 'scripts/check-clustering-consistency.js'
+      - 'scripts/check-kabar-entrypoints.js'
+      - 'docs/clustering-quality-rules.md'
       - 'scripts/generate-weekly-brief.js'
       - 'scripts/import-blog-pillar-articles.js'
       - 'scripts/render-blog-pillar-articles.js'
@@ -33,6 +36,17 @@ on:
   schedule:
     - cron: '0 0 * * *'   # Daily at 00:00 UTC (07:00 WIB)
   workflow_dispatch:
+    inputs:
+      enable_cluster_review:
+        description: 'Use OpenAI to review eligible unassigned coffee news (max 40 items per run)'
+        required: false
+        type: boolean
+        default: false
+      enable_editorial_generation:
+        description: 'Use OpenAI to generate or refresh bilingual editorial reports'
+        required: false
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -90,28 +104,27 @@ jobs:
             curl --fail --silent --show-error -X PUT -H "Authorization: Bearer $MEVO_SYNC_SECRET" -H 'Content-Type: application/json' --data-binary "$response" "$endpoint" >/dev/null || { echo "::warning::Migrasi D1 diperlukan; pembaruan data utama tetap berjalan."; exit 0; }
           fi
           printf '%s\n' "$response" > data/cluster-candidates.json
-      - name: Decide whether this push needs OpenAI
+      - name: Enable only explicitly requested OpenAI tasks
         id: openai_gate
-        if: github.event_name == 'push'
+        if: github.event_name == 'workflow_dispatch'
         run: |
           node <<'NODE'
           const fs = require('node:fs');
           const event = JSON.parse(fs.readFileSync(process.env.GITHUB_EVENT_PATH, 'utf8'));
-          const files = [...new Set((event.commits || []).flatMap(commit => [
-            ...(commit.added || []), ...(commit.modified || []), ...(commit.removed || [])
-          ]))];
-          const needsOpenAI = files.some(file =>
-            /^scripts\/(fetch\.js|fetch-news-context\.py|process-portal-data\.js|import-(mevo-price-data|ico-trade-data|coffee-reference-articles|blog-pillar-articles)\.js|merge-(public-price-sources|coffee-reference-articles)\.js|fetch-coffee-reference-articles\.py)$/.test(file) ||
-            /^data\/(berita-all|berita|editorial-settings|cluster-decisions|cluster-candidates|cluster-catalog)\.json$/.test(file)
-          );
-          fs.appendFileSync(process.env.GITHUB_OUTPUT, `enabled=${needsOpenAI}\n`);
-          console.log(`OpenAI gate: ${needsOpenAI ? 'enabled' : 'disabled'} for ${files.length} changed files`);
+          const inputs = event.inputs || {};
+          const cluster = inputs.enable_cluster_review === 'true';
+          const editorial = inputs.enable_editorial_generation === 'true';
+          fs.appendFileSync(process.env.GITHUB_OUTPUT, `cluster=${cluster}\neditorial=${editorial}\nenabled=${cluster || editorial}\n`);
+          console.log(`OpenAI tasks explicitly requested: cluster review=${cluster}, editorial=${editorial}`);
           NODE
       - name: Index archive, apply clustering decisions, and generate editorial
         env:
-          OPENAI_API_KEY: ${{ (github.event_name != 'push' || steps.openai_gate.outputs.enabled == 'true') && secrets.OPENAI_API_KEY || '' }}
+          OPENAI_API_KEY: ${{ steps.openai_gate.outputs.enabled == 'true' && secrets.OPENAI_API_KEY || '' }}
           OPENAI_CLUSTER_MODEL: gpt-5.4-nano
           OPENAI_EDITORIAL_MODEL: gpt-5.4-mini
+          OPENAI_CLUSTER_REVIEW_ENABLED: ${{ steps.openai_gate.outputs.cluster == 'true' }}
+          OPENAI_EDITORIAL_ENABLED: ${{ steps.openai_gate.outputs.editorial == 'true' }}
+          COFFEE_CLUSTER_REVIEW_LIMIT: '40'
         run: node scripts/process-portal-data.js
       - name: Fetch approved MEVO coffee events
         run: node scripts/fetch-mevo-events.js
@@ -137,6 +150,8 @@ jobs:
         run: node scripts/generate-pillar-pages.js
       - name: Render MEVO events calendar and SEO landing pages
         run: node scripts/render-coffee-events.js
+      - name: Verify clustering totals, entrypoints, and static-runtime parity
+        run: node scripts/check-clustering-consistency.js
       - name: Verify Kabar Kopi entrypoint parity
         run: node scripts/check-kabar-entrypoints.js
       - name: Save private editor cluster queue

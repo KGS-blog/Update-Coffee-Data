@@ -10,6 +10,8 @@ const readJson = (name, fallback) => {
 };
 const escape = value => String(value ?? '').replace(/[&<>"']/g, ch => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[ch]));
 const dateValue = article => Date.parse(article.tanggal || article.pubDate || '') || 0;
+const decisions = readJson('cluster-decisions.json', { overrides: [] });
+const articleOverrides = new Map((decisions.overrides || []).map(item => [String(item.url || item.tautan || ''), item]));
 const directUrl = value => {
   try {
     const url = new URL(String(value || ''));
@@ -17,9 +19,16 @@ const directUrl = value => {
   } catch (_) { return false; }
 };
 const direct = (readJson('berita-all.json', { artikel: [] }).artikel || [])
-  .filter(article => article.cluster_assignment !== 'editor_irrelevant' && directUrl(article.tautan || article.link))
+  .filter(article => {
+    const key = String(article.tautan || article.link || '');
+    const override = articleOverrides.get(key);
+    return article.cluster_assignment !== 'editor_irrelevant'
+      && override?.decision !== 'irrelevant'
+      && String(override?.cluster_id || '').toLowerCase() !== 'tidak-relevan'
+      && article.link_type !== 'aggregator_redirect'
+      && directUrl(key);
+  })
   .sort((a, b) => dateValue(b) - dateValue(a));
-const decisions = readJson('cluster-decisions.json', { overrides: [] });
 const overrides = new Map((decisions.overrides || []).map(item => [String(item.url || item.tautan || ''), item.cluster_id || item.klaster]));
 const catalog = readJson('cluster-catalog.json', { clusters: BERITA_KLASTER });
 global.window = { BERITA_KLASTER: Array.isArray(catalog.clusters) && catalog.clusters.length ? catalog.clusters : BERITA_KLASTER };

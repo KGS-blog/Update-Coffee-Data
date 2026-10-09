@@ -121,14 +121,54 @@ function buildArchiveIndex() {
 function getHighConfidenceCluster(article, taxonomy) {
   const title = titleOf(article).toLowerCase();
   const context = articleContextOf(article).toLowerCase();
-  if (article.extraction_status !== "extracted") return null;
-  if (context.trim().length < 60) return null;
   const material = `${title} ${context}`;
+  const extracted = article.extraction_status === "extracted" && context.trim().length >= 60;
+  // Allow a few highly specific headline patterns when a publisher blocks
+  // extraction or provides only a short meta description. Generic keyword
+  // matches still require a substantive extracted article context.
+  const specificHeadline = /\b(kopi luwak|coffee luwak)\b/.test(title)
+    || (/\b(cafe|café|coffee|kopi)\b.{0,35}\b(expo|exhibition|trade show|festival|conference|summit)\b/.test(title)
+      || /\b(expo|exhibition|trade show|festival|conference|summit)\b.{0,35}\b(cafe|café|coffee|kopi)\b/.test(title))
+    || /\bcoffee\s+lab\b/.test(title)
+    || (/\btei\s+20\d{2}\b/.test(title) && /\b(zona|zone|pameran|expo|buyer)\b/.test(title))
+    || /\b(kopi|coffee)\b.{0,50}\b(kelas|class|workshop|komunitas|community|budaya tuli|bahasa isyarat)\b/.test(title)
+    || /\b(kopi kenangan|janji jiwa|fore coffee|kopi cinta|starbucks|point coffee)\b/.test(title)
+    || /\b(gubernur|menteri|kementerian|pemerintah|bank indonesia|bi)\b.{0,100}\b(kopi|coffee)\b/.test(title);
+  if (!extracted && !(context.trim().length >= 35 && specificHeadline)) return null;
   const opening = /\b(resmi\s+dibuka|resmi\s+hadir|dibuka|hadir|soft\s+opening|grand\s+opening|buka\s+cabang|spot\s+ngopi\s+baru|tempat\s+nongkrong\s+baru)\b/.test(title);
   const coffeeBusiness = /\b(kopi|coffee)\b/.test(material);
   const venue = /\b(kedai|kafe|cafe|café|gerai|outlet|coffee\s*shop|coffee\s*bar|resto|restoran|spot\s+ngopi|tempat\s+nongkrong)\b/.test(material);
   const eventContext = /\b(pasar|festival|kompetisi|lomba|pameran|munas|hari\s+kopi|coffee\s+day|party|konferensi|seminar|gjaw|soundrenaline)\b/.test(title);
   const namedVenueOpening = /\b(kopi|coffee)\b.*\b(resmi\s+dibuka|resmi\s+hadir|dibuka|hadir)\b/.test(material);
+  const consumerCommunityActivity = /\b(kelas|class|bahasa\s+isyarat|budaya\s+tuli|masyarakat|komunitas|community|pengunjung|pelanggan|konsumen)\b/.test(material);
+  const knownCoffeeBrand = /\b(kopi kenangan|janji jiwa|fore coffee|kopi cinta|starbucks|point coffee)\b/.test(material);
+  const brandBusinessSignal = /\b(pendapatan|revenue|laba|untung|profit|sumbang|donasi|gerai|cabang|ekspansi|penjualan|sales|ceo|ipo|akuisisi|merger|laporan esg|program esg|golden hour)\b/.test(material);
+  const consumerSurveySignal = /\b\d{1,3}(?:[,.]\d+)?\s*%/.test(title)
+    && /\b(anak muda|konsumen|preferensi|favorit|favorite|survei|survey|riset)\b/.test(material);
+  const coffeeEventInTitle = /\b(cafe|café|coffee|kopi)\b.{0,35}\b(expo|exhibition|trade show|pameran|festival|conference|summit)\b/.test(title)
+    || /\b(expo|exhibition|trade show|pameran|festival|conference|summit)\b.{0,35}\b(cafe|café|coffee|kopi)\b/.test(title)
+    || (/\btei\s+20\d{2}\b/.test(title) && /\b(zona|zone|pameran|buyer)\b/.test(title));
+  const coffeeExpo = coffeeEventInTitle;
+  const governmentActor = /\b(gubernur|menteri|kementerian|pemerintah|bank indonesia|bi)\b/.test(title);
+  const policyAction = /\b(regulasi|peraturan|kebijakan|aturan|dorong|mendorong|program|potensi besar|potensi ekonomi|tata kelola|dukungan|pemberdayaan)\b/.test(title);
+  const coffeeProcessing = /\b(asal[- ]usul|sejarah|proses|pengolahan|pascapanen|pasca panen|fermentasi|karakter)\b/.test(title)
+    && /\b(luwak|green bean|biji kopi|cherry kopi|buah kopi)\b/.test(material);
+
+  // Central-subject signals have precedence over broad cluster keywords.
+  if (coffeeExpo && (/\b(digelar|akan digelar|hadirkan|program|berlangsung|zona|menyelenggarakan|diselenggarakan)\b/.test(title + " " + context)
+      || /\b(festival|conference|summit|expo|exhibition|pameran)\b/.test(title))) {
+    return taxonomy.find(c => c.slug === "event-kompetisi") || null;
+  }
+  if (coffeeProcessing) return taxonomy.find(c => c.slug === "produksi-panen") || null;
+  if (governmentActor && coffeeBusiness && policyAction) return taxonomy.find(c => c.slug === "kebijakan-regulasi") || null;
+  if (knownCoffeeBrand && brandBusinessSignal && !consumerSurveySignal) return taxonomy.find(c => c.slug === "brand-global") || null;
+  if (knownCoffeeBrand && consumerCommunityActivity) return taxonomy.find(c => c.slug === "kedai-konsumsi-gaya-hidup") || null;
+  if (/\b(coffee\s+lab|cafe\s+lab|café\s+lab)\b/.test(material)
+      && /\b(pengalaman|experience|menikmati|kunjungan|tasting|lab)\b/.test(material)) {
+    return taxonomy.find(c => c.slug === "kedai-konsumsi-gaya-hidup") || null;
+  }
+  if (/\b(makanan\s+ringan|snack|food\s+pairing|pendamping\s+kopi|pastry)\b/.test(title)
+      && coffeeBusiness) return taxonomy.find(c => c.slug === "kedai-konsumsi-gaya-hidup") || null;
   if (coffeeBusiness && !eventContext && (venue || (opening && namedVenueOpening))) {
     return taxonomy.find(c => c.slug === "kedai-konsumsi-gaya-hidup") || null;
   }
@@ -137,6 +177,31 @@ function getHighConfidenceCluster(article, taxonomy) {
     && /\b(merek|brand|coffee\s+lifestyle|coffee\s+chain|coffee\s+company|merek\s+kopi|brand\s+kopi)\b/.test(material);
   if (coffeeBusiness && foreignBrandEntry) return taxonomy.find(c => c.slug === "brand-global") || null;
   return null;
+}
+
+function contextualRuleExplanation(article, cluster) {
+  const title = titleOf(article).toLowerCase();
+  const context = articleContextOf(article).toLowerCase();
+  const material = `${title} ${context}`;
+  if (cluster.slug === "event-kompetisi" && /\b(expo|exhibition|trade show|pameran)\b/.test(material)) {
+    return "Judul/konteks menempatkan expo atau pameran kopi sebagai pokok berita; sinyal event mengungguli kecocokan kata yang lebih umum.";
+  }
+  if (cluster.slug === "brand-global" && /\b(kopi kenangan|janji jiwa|fore coffee|kopi cinta|starbucks|point coffee)\b/.test(material)) {
+    return "Entitas merek kopi yang disebut bersama sinyal bisnis/keuangan; ini klasifikasi topik merek, bukan sekadar kata ‘brand’.";
+  }
+  if (cluster.slug === "kedai-konsumsi-gaya-hidup" && /\b(kelas|class|bahasa isyarat|budaya tuli|komunitas|community)\b/.test(material)) {
+    return "Pokok berita adalah aktivitas publik/komunitas yang diselenggarakan merek atau ruang kopi; event hanya format kegiatannya.";
+  }
+  if (cluster.slug === "kedai-konsumsi-gaya-hidup" && /\b(coffee lab|cafe lab|café lab|makanan ringan|snack|food pairing|pendamping kopi|pastry)\b/.test(material)) {
+    return "Isi berfokus pada pengalaman kedai atau konsumsi/pasangan makanan, bukan pembahasan produksi hulu.";
+  }
+  if (cluster.slug === "produksi-panen" && /\b(luwak|proses|pengolahan|pascapanen|pasca panen|fermentasi)\b/.test(material)) {
+    return "Isi membahas asal, proses, atau pengolahan biji kopi; sinyal proses kopi cocok dengan Produksi & Panen.";
+  }
+  if (cluster.slug === "kebijakan-regulasi") {
+    return "Ada aktor pemerintah/regulator dan tindakan atau agenda kebijakan yang secara eksplisit terkait kopi.";
+  }
+  return "Klasifikasi aturan kontekstual memakai kecocokan pokok judul dan isi dengan batas cluster; bukan pencocokan kata kunci tunggal.";
 }
 
 function getConsumerEventCluster(article, taxonomy) {
@@ -233,10 +298,19 @@ function applyEditorialDecisions(articles, taxonomy) {
     const holdForReview = explicitlyUnassigned || needsConsumerEventReview;
     // Keyword matches are retrieval hints, never enough to assign a news item.
     // Old keyword/AI guesses return to contextual review; human decisions win.
+    const offlineReclassification = process.argv.includes("--offline") && process.argv.includes("--reclassify-only");
     const previousIsLegacyKeyword = a.cluster_assignment === "keyword"
-      || (a.cluster_assignment === "ai_existing" && (Number(a.cluster_review_version || 0) < 4 || a.cluster_review_context_hash !== clusterContextHash(a)));
+      || (a.cluster_assignment === "ai_existing" && !offlineReclassification
+        && (Number(a.cluster_review_version || 0) < 4 || a.cluster_review_context_hash !== clusterContextHash(a)));
     const fixed = selected || contextual || consumerEvent || (holdForReview ? null : (previousIsLegacyKeyword ? null : previous)) || null;
     const next = { ...a, link_type: linkTypeOf(articleKey(a)), cluster_id: fixed ? fixed.slug : "belum-diklasifikasikan", cluster_name: fixed ? fixed.nama : "Belum diklasifikasikan" };
+    if (contextual) {
+      next.cluster_rule_method = "contextual_subject_rules_v1";
+      next.cluster_rule_explanation = contextualRuleExplanation(a, contextual).slice(0, 500);
+    } else if (selected) {
+      delete next.cluster_rule_method;
+      delete next.cluster_rule_explanation;
+    }
     if (selected && override?.reason) {
       next.editor_cluster_reason = String(override.reason).slice(0, 500);
       next.editor_cluster_reason_type = String(override.reason_type || "").slice(0, 60);
@@ -261,6 +335,46 @@ function applyEditorialDecisions(articles, taxonomy) {
     return next;
   });
   return { articles: updated, unknown };
+}
+
+function applyContextualRulesOnly(articles, taxonomy) {
+  const decisions = read("cluster-decisions.json", { overrides: [] });
+  const overrides = new Map((decisions.overrides || []).map(item => [String(item.url || item.tautan || ""), item]));
+  const byId = new Map(taxonomy.map(cluster => [cluster.slug, cluster]));
+  const byName = new Map(taxonomy.map(cluster => [cluster.nama.toLowerCase(), cluster]));
+  let assigned = 0, editorOverridesApplied = 0;
+  const updated = articles.map(article => {
+    if (isAggregatorArticle(article)) return article;
+    const override = overrides.get(articleKey(article));
+    const chosen = String(override?.cluster_id || override?.klaster || "");
+    if (override?.decision === "irrelevant" || chosen === "tidak-relevan") {
+      return { ...article, cluster_id: "tidak-relevan", cluster_name: "Tidak Relevan", cluster_assignment: "editor_irrelevant", editorial_relevance: "irrelevant" };
+    }
+    const selected = chosen ? (byId.get(chosen) || byName.get(chosen.toLowerCase())) : null;
+    if (selected) {
+      if (article.cluster_id !== selected.slug || article.cluster_assignment !== "editor") editorOverridesApplied += 1;
+      const next = { ...article, cluster_id: selected.slug, cluster_name: selected.nama, cluster_assignment: "editor" };
+      delete next.cluster_rule_method;
+      delete next.cluster_rule_explanation;
+      if (override.reason) next.editor_cluster_reason = String(override.reason).slice(0, 500);
+      if (override.reason_type) next.editor_cluster_reason_type = String(override.reason_type).slice(0, 60);
+      return next;
+    }
+    if (article.cluster_assignment !== "unassigned") return article;
+    const cluster = getHighConfidenceCluster(article, taxonomy) || getConsumerEventCluster(article, taxonomy);
+    if (!cluster) return article;
+    assigned += 1;
+    return {
+      ...article,
+      link_type: linkTypeOf(articleKey(article)),
+      cluster_id: cluster.slug,
+      cluster_name: cluster.nama,
+      cluster_assignment: "rule_context",
+      cluster_rule_method: "contextual_subject_rules_v1",
+      cluster_rule_explanation: contextualRuleExplanation(article, cluster).slice(0, 500)
+    };
+  });
+  return { articles: updated, assigned, editorOverridesApplied };
 }
 
 const clusterSuggestionSchema = {
@@ -466,9 +580,18 @@ async function generateEditorial(articles, taxonomy) {
 }
 
 async function main() {
-  await syncEditorClusterDecisions();
+  const offline = process.argv.includes("--offline") || process.argv.includes("--rules-only");
+  if (offline) console.log("offline mode: kept local editor cluster decisions; no remote/API calls");
+  else await syncEditorClusterDecisions();
   const taxonomy = effectiveTaxonomy();
   const source = read("berita-all.json", { artikel: [] });
+  if (process.argv.includes("--rules-only")) {
+    const result = applyContextualRulesOnly(Array.isArray(source.artikel) ? source.artikel : [], taxonomy);
+    source.artikel = result.articles.filter(a => !isAggregatorArticle(a));
+    write("berita-all.json", source);
+    console.log("editor overrides synchronized:", result.editorOverridesApplied, "; high-confidence contextual rules applied:", result.assigned);
+    return;
+  }
   const { articles, unknown } = applyEditorialDecisions(Array.isArray(source.artikel) ? source.artikel : [], taxonomy);
   const archiveDirectory = path.join(DATA, "arsip");
   const historicalArticles = fs.existsSync(archiveDirectory)
@@ -498,10 +621,10 @@ async function main() {
       && a.extraction_status === "extracted" && articleContextOf(a).length >= 80
       && (Number(a.cluster_review_version || 0) < CLUSTER_REVIEW_VERSION || a.cluster_review_context_hash !== clusterContextHash(a)))
     .sort((a, b) => Number(["cie_curated_reference", "mevo_curated_growth"].includes(b.source_type)) - Number(["cie_curated_reference", "mevo_curated_growth"].includes(a.source_type)) || dateOf(b) - dateOf(a))
-    .slice(0, 160);
+    .slice(0, Math.min(40, Math.max(1, Number(process.env.COFFEE_CLUSTER_REVIEW_LIMIT) || 40)));
   let aiResult = { assignments: [], reviews: [], candidates: [] };
   const reviewedKeys = new Set();
-  if (reviewed.length && process.env.OPENAI_API_KEY) {
+  if (reviewed.length && process.env.OPENAI_API_KEY && process.env.OPENAI_CLUSTER_REVIEW_ENABLED !== "false") {
     // Keep structured responses small enough that every article gets a usable
     // context/relevance decision. One oversized response used to fail as a
     // whole and leave hundreds of stories in “Lainnya” without review.
@@ -582,7 +705,11 @@ async function main() {
   const trulyUnassigned = articles.filter(a => !isAggregatorArticle(a) && a.cluster_assignment === "unassigned");
   write("cluster-candidates.json", mergeCandidates(oldCandidates, aiResult.candidates, trulyUnassigned, articles));
   const updated = read("berita-all.json", { artikel: [] }).artikel;
-  await generateEditorial(updated.filter(a => !isAggregatorArticle(a) && a.cluster_assignment !== "editor_irrelevant"), taxonomy);
+  if (process.env.OPENAI_API_KEY && process.env.OPENAI_EDITORIAL_ENABLED !== "false") {
+    await generateEditorial(updated.filter(a => !isAggregatorArticle(a) && a.cluster_assignment !== "editor_irrelevant"), taxonomy);
+  } else {
+    console.log("AI editorial generation skipped; enable it explicitly when the source material warrants a new report.");
+  }
   console.log("portal data processed:", updated.length, "articles;", reviewed.length, "unmatched reviewed;", unknown.length, "unmatched total");
 }
 
