@@ -6,6 +6,7 @@ const path = require("node:path");
 const crypto = require("node:crypto");
 const { BERITA_KLASTER } = require("../BERITA_KLASTER_FINAL.js");
 const { applyHistoricalReferenceClusters } = require("./cluster-reference");
+const { canonicalClusterId, mergeDecisionOverrides } = require("./cluster-decision-utils");
 
 const DATA = path.join(__dirname, "..", "data");
 const REMOTE_CLUSTER_DECISIONS_URL = "https://raw.githubusercontent.com/KGS-blog/Blog/main/kabar-kopi-cluster-decisions.json";
@@ -86,7 +87,7 @@ async function syncEditorClusterDecisions() {
     const local = read("cluster-decisions.json", { overrides: [] });
     write("cluster-decisions.json", {
       version: 1,
-      overrides: Array.isArray(remote.overrides) ? remote.overrides : (local.overrides || []),
+      overrides: mergeDecisionOverrides(local.overrides || [], Array.isArray(remote.overrides) ? remote.overrides : []),
       accepted_candidate_ids: [...new Set(remote.accepted_candidate_ids.map(String))],
       rejected_candidate_ids: [...new Set(remote.rejected_candidate_ids.map(String))],
       updated_at: remote.updated_at || null
@@ -278,7 +279,7 @@ function applyEditorialDecisions(articles, taxonomy) {
   const updated = articles.map(a => {
     const key = articleKey(a);
     const override = overrideMap.get(key);
-    const chosen = String(override?.cluster_id || override?.klaster || "");
+    const chosen = canonicalClusterId(override?.cluster_id || override?.klaster || "");
     if (override?.decision === "irrelevant" || chosen === "tidak-relevan") {
       const next = { ...a, link_type: linkTypeOf(key), cluster_id: "tidak-relevan", cluster_name: "Tidak Relevan", cluster_assignment: "editor_irrelevant", editorial_relevance: "irrelevant", editorial_relevance_reason: String(override.reason || "Ditandai tidak relevan oleh editor.") };
       if (override?.reason) {
@@ -346,7 +347,7 @@ function applyContextualRulesOnly(articles, taxonomy) {
   const updated = articles.map(article => {
     if (isAggregatorArticle(article)) return article;
     const override = overrides.get(articleKey(article));
-    const chosen = String(override?.cluster_id || override?.klaster || "");
+    const chosen = canonicalClusterId(override?.cluster_id || override?.klaster || "");
     if (override?.decision === "irrelevant" || chosen === "tidak-relevan") {
       return { ...article, cluster_id: "tidak-relevan", cluster_name: "Tidak Relevan", cluster_assignment: "editor_irrelevant", editorial_relevance: "irrelevant" };
     }

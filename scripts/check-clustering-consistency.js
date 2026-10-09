@@ -2,6 +2,7 @@
 const fs = require('node:fs');
 const path = require('node:path');
 const { BERITA_KLASTER, clusterBerita } = require('../BERITA_KLASTER_FINAL.js');
+const { canonicalClusterId } = require('./cluster-decision-utils');
 
 const root = path.join(__dirname, '..');
 const readJson = (file, fallback) => {
@@ -15,7 +16,7 @@ const definitions = Array.isArray(catalog.clusters) && catalog.clusters.length ?
 const overrides = new Map((decisions.overrides || []).map(item => [String(item.url || item.tautan || ''), item]));
 const validOverrideIds = new Set([...definitions.map(cluster => cluster.slug), 'lainnya', 'other', 'tidak-relevan']);
 for (const [url, override] of overrides) {
-  const chosen = String(override.cluster_id || override.klaster || '');
+  const chosen = canonicalClusterId(override.cluster_id || override.klaster || '');
   if (chosen && !validOverrideIds.has(chosen)) throw new Error(`${url}: editor decision refers to unknown cluster ID “${chosen}”`);
 }
 const ineligible = article => {
@@ -29,7 +30,7 @@ const ineligible = article => {
 };
 const eligible = (feed.artikel || []).filter(article => !ineligible(article)).map(article => {
   const override = overrides.get(String(article.tautan || article.link || ''));
-  const chosen = override?.cluster_id || override?.klaster;
+  const chosen = canonicalClusterId(override?.cluster_id || override?.klaster || '');
   if (chosen && article.cluster_id !== chosen) {
     throw new Error(`${article.tautan || article.link}: saved editor override (${chosen}) conflicts with feed assignment (${article.cluster_id || 'none'})`);
   }

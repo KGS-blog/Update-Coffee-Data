@@ -17,6 +17,7 @@ on:
       - 'data/lembaga-pelatihan-kopi.json'
       - 'scripts/generate-editorial-pages.js'
       - 'scripts/check-clustering-consistency.js'
+      - 'scripts/cluster-decision-utils.js'
       - 'scripts/check-kabar-entrypoints.js'
       - 'docs/clustering-quality-rules.md'
       - 'scripts/generate-weekly-brief.js'
