@@ -3726,7 +3726,8 @@
       "aggregator": "Google News",
       "link_type": "publisher",
       "resolution_status": "resolved",
-      "tautan_google_news": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBFdm1HZWQ1NzVFLVdJWWdqNjNHdWtTLTJ4LXlJNkRYcHp6dVN4SUkxUk1JOVVSeG5ocFJZX3pBR3dHaUZzQ2ZUM0dUelpUbjh4VVNrM0xHeUdjMUlHa3BPRg?oc=5"
+      "tautan_google_news": "https://news.google.com/rss/articles/CBMiYEFVX3lxTFBFdm1HZWQ1NzVFLVdJWWdqNjNHdWtTLTJ4LXlJNkRYcHp6dVN4SUkxUk1JOVVSeG5ocFJZX3pBR3dHaUZzQ2ZUM0dUelpUbjh4VVNrM0xHeUdjMUlHa3BPRg?oc=5",
+      "ringkasan": "Jember Surga Kopi Indonesia. 👇 Bupati Muhammad Fawait dalam waktu dekat akan memperkenalkan jenama Surga Kopi Indonesia untuk Kabupaten Jember, Jawa Timur -- Ikuti kami di 👉https://bit.ly/392voLE #beritaviral #jawatimur #viral berita #beritaterkini #terpopuler #news #beritajatim #infojatim #newsupdate #FYI #fyp"
     },
     {
       "judul": "Viral Isu Boikot Produk Indonesia, Kenangan Coffee Malaysia Kena Imbas? - detikFood",
@@ -3810,6 +3811,80 @@
       "ringkasan": "Gigi kuning dapat mengganggu rasa percaya diri. Kenali cara sederhana membantu menjaga warna gigi tetap bersih dengan mengatur pola makan sehari-hari.",
       "asal": "newsdata",
       "link_type": "publisher"
+    },
+    {
+      "judul": "Pacitan gelar Feskop 2026 untuk perkuat ekosistem kopi lokal",
+      "tautan": "https://www.antaranews.com/berita/5778958/pacitan-gelar-feskop-2026-untuk-perkuat-ekosistem-kopi-lokal",
+      "tanggal": "2026-10-09 11:58:10",
+      "sumber": "Antara News",
+      "ringkasan": "Pemerintah Kabupaten Pacitan, Jawa Timur, mendorong penguatan ekosistem kopi lokal dari petani hingga kedai melalui ...",
+      "asal": "newsdata",
+      "link_type": "publisher"
+    },
+    {
+      "judul": "Rutin Minum Kopi Bisa Turunkan Risiko Penyakit Liver? Ini Kata Dokter",
+      "tautan": "https://www.cnbcindonesia.com/lifestyle/20261009152004-33-774806/rutin-minum-kopi-bisa-turunkan-risiko-penyakit-liver-ini-kata-dokter",
+      "tanggal": "2026-10-09 10:35:00",
+      "sumber": "Cnbc Indonesia",
+      "ringkasan": "Konsumsi kopi dalam jumlah wajar dapat menurunkan risiko penyakit hati, termasuk fibrosis dan sirosis. Namun, pola hidup sehat tetap penting.",
+      "asal": "newsdata",
+      "link_type": "publisher"
+    },
+    {
+      "judul": "8 Warga Palembang Tertipu Bisnis Kopi Online Aplikasi Folgers, Rugi Rp 96,6 Juta, Begini Modusnya",
+      "tautan": "https://palembang.tribunnews.com/metro/1331276/8-warga-palembang-tertipu-bisnis-kopi-online-aplikasi-folgers-rugi-rp-966-juta-begini-modusnya",
+      "tanggal": "2026-10-09 10:32:15",
+      "sumber": "Tribun News",
+      "ringkasan": "Kasus dugaan penipuan dan penggelapan ini dilaporkan ke Sentra Pelayanan Kepolisian Terpadu (SPKT) Polrestabes Palembang pada Jumat (9/10/2026).",
+      "asal": "newsdata",
+      "link_type": "publisher"
+    },
+    {
+      "judul": "Kapan Waktu Terbaik Minum Kopi Sebelum Olahraga?",
+      "tautan": "https://www.fimela.com/lifestyle/read/8309564/kapan-waktu-terbaik-minum-kopi-sebelum-olahraga",
+      "tanggal": "2026-10-09 10:26:38",
+      "sumber": "Fimela.com",
+      "ringkasan": "Minum kopi sebelum olahraga bisa menjadi salah satu cara untuk membantu tubuh lebih siap bergerak. Namun, waktu konsumsinya juga perlu diperhatikan agar manfaat kafein terasa optimal.",
+      "asal": "newsdata",
+      "link_type": "publisher"
+    },
+    {
+      "judul": "Kedai Kopi di Banyumas Ini Manfaatkan QRIS untuk Hadapi Persaingan Usaha",
+      "tautan": "https://jateng.harianjogja.com/r-1274396/kedai-kopi-di-banyumas-ini-manfaatkan-qris-untuk-hadapi-persaingan-usaha",
+      "tanggal": "2026-10-09 09:42:11",
+      "sumber": "Harianjogja",
+      "ringkasan": "Kedai kopi Berkah Swasembada di Banyumas memanfaatkan QRIS BRI dan layanan digital dengan pendampingan BRI Region 11 Yogyakarta.",
+      "asal": "newsdata",
+      "link_type": "publisher"
+    },
+    {
+      "judul": "Kopi Gayo Tumbuh di Lereng Merapi, Klaten Bidik Panen Berkualitas",
+      "tautan": "https://www.cnnindonesia.com/nasional/20261009162440-25-1413613/kopi-gayo-tumbuh-di-lereng-merapi-klaten-bidik-panen-berkualitas",
+      "tanggal": "2026-10-09 09:41:02",
+      "sumber": "Cnnindonesia",
+      "ringkasan": "Kini, keragaman varietas kopi di Kabupaten Klaten bertambah lewat kehadiran bibit kopi arabika varietas Gayo 3 dari Pemkab Gayo Lues.",
+      "asal": "newsdata",
+      "link_type": "publisher"
+    },
+    {
+      "judul": "Aksi Unik Kepala Dinas Pacitan Jajal Skill Barista di Festival Kopi 2026, Bupati Beri Apresiasi",
+      "tautan": "https://jatim.tribunnews.com/jatim/562570/aksi-unik-kepala-dinas-pacitan-jajal-skill-barista-di-festival-kopi-2026-bupati-beri-apresiasi",
+      "tanggal": "2026-10-09 09:19:40",
+      "sumber": "Tribun News",
+      "ringkasan": "Suasana berbeda terlihat di Gedung PLUT Pacitan, Jalan Panglima Sudirman, Kelurahan Baleharjo, Kecamatan/Kabupaten Pacitan, Jatim Jumat (9/10/2026)",
+      "asal": "newsdata",
+      "link_type": "publisher"
+    },
+    {
+      "judul": "BERITA POPULER: Ranking FIFA Indonesia Nanjak hingga FORE vs Kopi Kenangan - investor.id",
+      "tautan": "https://investor.id/market/456942/berita-populer-ranking-fifa-indonesia-nanjak-hingga-fore-vs-kopi-kenangan",
+      "tanggal": "Tue, 06 Oct 2026 22:19:00 GMT",
+      "sumber": "investor.id",
+      "asal": "google_news",
+      "aggregator": "Google News",
+      "link_type": "publisher",
+      "resolution_status": "resolved",
+      "tautan_google_news": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxONVhkcnVVd1VqNTJwNkxWaHlERlNTX2RpUnlPYzEyNWhEUUpyamJKc295WVNwakZzenk3Qkl3VmJtYVYzdUxtelVzRGN5QzM3cUsyaEY2c3JieFJyQjZqZEkzLXkzTmczUHMzOGxMR01WR244cVR2STZUYkVQU1VIZ0VCQ3dFakQ3WlcySHFnT0F5ZllaYldRcG9jeVl5VVdnQ1k4d1E4M3E3elk?oc=5"
     }
   ]
 }

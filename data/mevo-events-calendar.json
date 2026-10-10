@@ -2,7 +2,7 @@
   "schema": "kabar-kopi-events-calendar-v1",
   "source": "https://raw.githubusercontent.com/KGS-blog/coffee-feed/main/mevo_events.json",
   "timezone": "Asia/Jakarta",
-  "fetched_at": "2026-10-09T19:37:43.779Z",
+  "fetched_at": "2026-10-10T04:11:53.434Z",
   "events": [
     {
       "id": "event-0ff2a35f6b09a6fc",
