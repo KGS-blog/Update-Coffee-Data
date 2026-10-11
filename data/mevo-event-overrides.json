@@ -214,6 +214,24 @@
         { "url": "https://denpasartourism.com/en/event", "kind": "official_city_events_calendar_2026" },
         { "url": "https://denpasartourism.com/en/activity/denpasar-festival", "kind": "official_city_tourism_event_context" }
       ]
+    },
+    {
+      "id": "feskop-pacitan-2026",
+      "name": "Festival Kopi Pacitan (Feskop) 2026",
+      "start_date": "2026-10-08",
+      "end_date": "2026-10-09",
+      "location": "Gedung Pusat Layanan Usaha Terpadu (PLUT), Pacitan, Jawa Timur",
+      "country": "Indonesia",
+      "organizer": "Pemerintah Kabupaten Pacitan melalui Dikuperin",
+      "category": "Coffee festival & local industry event",
+      "date_status": "REPORTED_POST_EVENT_CORROBORATED",
+      "note": "Dicatat sebagai satu acara selesai pada 8–9 Oktober 2026. ANTARA mengonfirmasi kegiatan dan venue Gedung PLUT pada 9 Oktober; jadwal dua hari 8–9 Oktober dan penyelenggaraan Pemkab melalui Dikuperin dilaporkan sebelum acara oleh JBM dan dikonfirmasi liputan pascaacara Pacitanku. Liputan berbeda digabung sebagai satu event.",
+      "sources": [
+        { "url": "https://www.antaranews.com/berita/5778958/pacitan-gelar-feskop-2026-untuk-perkuat-ekosistem-kopi-lokal", "kind": "post_event_news_report" },
+        { "url": "https://jatim.tribunnews.com/jatim/562570/aksi-unik-kepala-dinas-pacitan-jajal-skill-barista-di-festival-kopi-2026-bupati-beri-apresiasi", "kind": "post_event_news_report" },
+        { "url": "https://jbm.co.id/meracik-kopi-merajut-sinergi-festival-kopi-pacitan-2026-digelar-8-9-oktober/", "kind": "pre_event_schedule_report" },
+        { "url": "https://pacitanku.com/2026/10/10/sedot-barista-bandung-hingga-surabaya-festival-kopi-pacitan-2026-gairahkan-ekosistem-lokal/", "kind": "post_event_schedule_confirmation" }
+      ]
     }
   ]
 }
