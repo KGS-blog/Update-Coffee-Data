@@ -203,16 +203,16 @@
       "name": "Denpasar Festival 2026",
       "start_date": "2026-12-01",
       "end_date": "2026-12-31",
-      "location": "Monumen Catur Muka, Denpasar, Bali (kalender resmi hanya memberi bulan dan venue umum)",
+      "location": "Monumen Catur Muka, Denpasar, Bali",
       "country": "Indonesia",
       "organizer": "Pemerintah Kota Denpasar",
-      "category": "City festival; coffee participation unconfirmed",
-      "date_status": "NEEDS_REVIEW_EXACT_DATES_AND_COFFEE_RELEVANCE",
-      "note": "Dinas Pariwisata Bali mencantumkan Denpasar Festival pada kalender Desember 2026 di Monumen Catur Muka, tetapi belum memberi tanggal pelaksanaan khusus. Sumber resmi Denfest menerangkan festival kota dan ekonomi kreatif, namun belum mengonfirmasi zona atau tenant kopi untuk edisi 2026. Jangan tayangkan sebagai agenda kopi sampai tanggal dan relevansi kopi pada edisi ini dikonfirmasi.",
+      "category": "Festival kota; peluang retail umum",
+      "date_status": "OFFICIAL_SOURCE_DATES_COFFEE_PROGRAM_UNCONFIRMED",
+      "note": "Disparda Bali mengonfirmasi acara berlangsung 1–31 Desember 2026 di Monumen Catur Muka, pukul 08.30–16.30 WITA; kalender resmi Kota Denpasar juga mencantumkan Denpasar Festival 2026. Ini festival kota umum, bukan acara kopi khusus. Sumber resmi yang diperiksa belum mengonfirmasi zona, tenant, atau program kopi edisi 2026; peluang kopi tidak boleh diasumsikan sebagai bagian dari program.",
       "sources": [
-        { "url": "https://disparda.baliprov.go.id/?language=en", "kind": "official_tourism_calendar_month_only" },
-        { "url": "https://denpasartourism.com/en/activity/denpasar-festival", "kind": "official_city_tourism_event" },
-        { "url": "https://denpasarfestival.id/", "kind": "official_festival" }
+        { "url": "https://disparda.baliprov.go.id/event/denpasar-festival", "kind": "official_provincial_tourism_event_dates_venue_hours" },
+        { "url": "https://denpasartourism.com/en/event", "kind": "official_city_events_calendar_2026" },
+        { "url": "https://denpasartourism.com/en/activity/denpasar-festival", "kind": "official_city_tourism_event_context" }
       ]
     }
   ]
