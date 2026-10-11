@@ -29,12 +29,14 @@ function card(event, lang, compact = false) {
   const sourceLabel = event.sources?.[0]?.kind === 'official'
     ? (lang === 'en' ? 'Official source' : 'Sumber resmi')
     : (lang === 'en' ? 'Source' : 'Sumber');
-  return `<article class="coffee-event-card${compact ? ' compact' : ''}"><div class="coffee-event-date">${esc(date)}</div><div class="coffee-event-body"><div class="coffee-event-status ${eventState(event)}">${esc(stateLabel(event, lang))}</div><h3>${url ? `<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(event.name)}</a>` : esc(event.name)}</h3><p class="coffee-event-meta">${esc([event.category, event.location, event.country].filter(Boolean).join(' · '))}</p>${event.organizer ? `<p class="coffee-event-organizer"><strong>${lang === 'en' ? 'Organizer:' : 'Penyelenggara:'}</strong> ${esc(event.organizer)}</p>` : ''}${event.note ? `<p class="coffee-event-note">${esc(event.note)}</p>` : ''}${url ? `<a class="coffee-event-source" href="${esc(url)}" target="_blank" rel="noopener noreferrer">${sourceLabel} →</a>` : ''}</div></article>`;
+  const dateMarkup = `<div class="coffee-event-date">${esc(date)}</div>`;
+  const body = `<div class="coffee-event-body"><div class="coffee-event-status ${eventState(event)}">${esc(stateLabel(event, lang))}</div>${compact ? dateMarkup : ''}<h3>${url ? `<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(event.name)}</a>` : esc(event.name)}</h3><p class="coffee-event-meta">${esc([event.category, event.location, event.country].filter(Boolean).join(' · '))}</p>${event.organizer ? `<p class="coffee-event-organizer"><strong>${lang === 'en' ? 'Organizer:' : 'Penyelenggara:'}</strong> ${esc(event.organizer)}</p>` : ''}${event.note ? `<p class="coffee-event-note">${esc(event.note)}</p>` : ''}${url ? `<a class="coffee-event-source" href="${esc(url)}" target="_blank" rel="noopener noreferrer">${sourceLabel} →</a>` : ''}</div>`;
+  return `<article class="coffee-event-card${compact ? ' compact' : ''}">${compact ? body : `${dateMarkup}${body}`}</article>`;
 }
 function render(lang, compact) {
   const empty = lang === 'en' ? `No upcoming ${CALENDAR_YEAR} coffee events are listed yet.` : `Belum ada event kopi mendatang untuk ${CALENDAR_YEAR}.`;
   if (compact) {
-    const list = upcomingEvents.slice(0, 2);
+    const list = upcomingEvents.slice(0, 4);
     return list.length
       ? `<h3 class="coffee-events-group-title">${lang === 'en' ? `Upcoming · ${CALENDAR_YEAR}` : `Akan datang · ${CALENDAR_YEAR}`}</h3>${list.map(event => card(event, lang, true)).join('')}`
       : `<p class="coffee-events-empty">${esc(empty)}</p>`;
