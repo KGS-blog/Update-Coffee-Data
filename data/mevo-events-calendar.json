@@ -96,21 +96,26 @@
     },
     {
       "id": "cbe-9-2026",
-      "name": "Cafe & Brasserie Expo Indonesia — edisi 9",
+      "name": "Indonesia Coffee Festival (ICF) — edisi ke-9, di Cafe & Brasserie Expo",
       "start_date": "2026-10-09",
       "end_date": "2026-10-11",
-      "location": "NICE, PIK 2, Hall 5",
+      "location": "Hall 5, Nusantara International Convention Exhibition (NICE), PIK 2, Tangerang",
       "country": "Indonesia",
       "organizer": "PT Panorama Media",
-      "category": "Coffee / Cafe / F&B Expo",
-      "date_status": "SOURCE_CONFIRMED",
-      "note": "Rundown terperinci belum tersedia; jadwal mengikuti halaman resmi saat diperiksa.",
+      "category": "Coffee festival & B2B expo",
+      "date_status": "OFFICIAL_SOURCE",
+      "note": "ICF dan Cafe & Brasserie Expo memakai situs resmi, tanggal, venue Hall 5, edisi ke-9, dan penyelenggara yang sama; catat sebagai satu acara agar tidak terduplikasi. Situs resmi menyebut area Coffee & Brew Pavilion, ratusan roaster, tasting, workshop, kompetisi, serta business matching. Berlangsung bersamaan dengan FLEI dan Indonesia Outing & Incentive Travel Expo.",
       "sources": [
         {
+          "url": "https://www.indocoffeefestival.id/id",
+          "kind": "official_icf"
+        },
+        {
           "url": "https://cafebrasserieexpo.com/",
-          "kind": "official"
+          "kind": "official_cbe"
         }
-      ]
+      ],
+      "supersedes_id": "cbe-9-2026"
     },
     {
       "id": "event-becfb283443bd495",
@@ -149,6 +154,234 @@
         {
           "url": "https://www.agrofarm.co.id/2026/10/capai-rekor-tertinggi-ekspor-kopi-indonesia-tembus-usd-251-miliar/",
           "kind": "growth_article"
+        }
+      ]
+    },
+    {
+      "id": "semarang-coffee-week-2-2026",
+      "name": "Semarang Coffee Week #2 — Beyond the Brew",
+      "start_date": "2026-11-11",
+      "end_date": "2026-11-15",
+      "location": "Mall Ciputra Semarang",
+      "country": "Indonesia",
+      "organizer": "Semarang Coffee Week",
+      "category": "Coffee festival & expo",
+      "date_status": "ORGANIZER_POST_CORROBORATED",
+      "note": "Poster akun penyelenggara serta pemberitaan SemarangKita dan About Semarang menyebut 11–15 November 2026. Linktree penyelenggara menampilkan 26–30 November tanpa tahun; jadwal sebaiknya dikonfirmasi kepada penyelenggara sebelum berkunjung.",
+      "sources": [
+        {
+          "url": "https://www.instagram.com/semarangcoffeeweek/",
+          "kind": "official"
+        },
+        {
+          "url": "https://semarangkita.id/kuliner/semarang-coffe-week-2-akan-hadir-di-mall-ciputra-semarang-11-15-november-2026/",
+          "kind": "news"
+        },
+        {
+          "url": "https://aboutsemarang.id/semarang-coffee-week-2-hadir-di-ciputra-mall-gratis-ajak-warga-nikmati-cerita-kopi-dari-masa-lalu-hingga-kini/",
+          "kind": "news"
+        },
+        {
+          "url": "https://linktr.ee/semarangcoffeeweek",
+          "kind": "organizer_links"
+        }
+      ]
+    },
+    {
+      "id": "kksi-xviii-2026",
+      "name": "Kontes Kopi Spesialti Indonesia (KKSI) XVIII",
+      "start_date": "2026-10-14",
+      "end_date": "2026-10-15",
+      "location": "Hall 3A, Indonesia Convention Exhibition (ICE) BSD City, Kabupaten Tangerang, Banten",
+      "country": "Indonesia",
+      "organizer": "",
+      "category": "Coffee competition",
+      "date_status": "OFFICIAL_SOURCE",
+      "note": "Kompetisi kopi spesialti ini merupakan bagian dari rangkaian Trade Expo Indonesia (TEI) 2026 / Zona KoTeKa. Tanggal 14–15 Oktober 2026 diumumkan oleh Kemendag.",
+      "sources": [
+        {
+          "url": "https://www.kemendag.go.id/berita/siaran-pers/tei-2026-siapkan-zona-khusus-kopi-teh-dan-kakao-permudah-buyer-di-area-pameran",
+          "kind": "official"
+        }
+      ]
+    },
+    {
+      "id": "brewkasi-2026",
+      "name": "Brewkasi Event 2026",
+      "start_date": "2026-10-01",
+      "end_date": "2026-10-04",
+      "location": "Grand Galaxy Park, Bekasi, Jawa Barat",
+      "country": "Indonesia",
+      "organizer": "BREWKASI",
+      "category": "Coffee festival & competition",
+      "date_status": "OFFICIAL_VENUE_CONFIRMED",
+      "note": "Tanggal dan venue dikonfirmasi oleh berita pascaacara pada situs resmi Grand Galaxy Park. Sudah selesai.",
+      "sources": [
+        {
+          "url": "https://grandgalaxypark.com/news-updates/",
+          "kind": "official_venue_post_event"
+        },
+        {
+          "url": "https://voiceofasean.com/newsroom/brewkasi-2026-bawa-serunya-dunia-kopi-ke-ggp/",
+          "kind": "event_coverage"
+        },
+        {
+          "url": "https://linktr.ee/brewkasi",
+          "kind": "organizer_links"
+        }
+      ]
+    },
+    {
+      "id": "solo-coffee-party-2026",
+      "name": "Solo Coffee Party 2026",
+      "start_date": "2026-10-02",
+      "end_date": "2026-10-04",
+      "location": "Gedung Graha Wisata Niaga, Surakarta, Jawa Tengah",
+      "country": "Indonesia",
+      "organizer": "Solo Coffee Party",
+      "category": "Coffee festival & trade event",
+      "date_status": "REPORTED_CONFIRMED",
+      "note": "RRI melaporkan tanggal dan lokasi menjelang acara, termasuk konferensi pers penyelenggara. Edisi 2026 direncanakan melibatkan sekitar 100 tenant. Sudah selesai.",
+      "sources": [
+        {
+          "url": "https://rri.co.id/surakarta/wisata/2760118/melibatkan-100-tenant-solo-coffee-party-2026-akan-kembali-hadir-selama-tiga-hari",
+          "kind": "news_pre_event"
+        },
+        {
+          "url": "https://travel.tribunnews.com/news/146248/pesta-kopi-di-solo-solo-coffee-party-2026-hadirkan-100-tenant",
+          "kind": "news_pre_event"
+        }
+      ]
+    },
+    {
+      "id": "prigen-coffee-fest-2026",
+      "name": "Prigen Coffee Fest 2026",
+      "start_date": "2026-10-16",
+      "end_date": "2026-10-17",
+      "location": "Toko Kopi Jaya Lestari, area Camping Ground Hutan Cempaka, Prigen, Kabupaten Pasuruan, Jawa Timur",
+      "country": "Indonesia",
+      "organizer": "Prigen Coffee Fest / Hutan Cempaka",
+      "category": "Coffee festival & competition",
+      "date_status": "OFFICIAL_ORGANIZER_SOURCE",
+      "note": "Situs Hutan Cempaka menyebut tanggal, venue, dan rangkaian festival. Program mencakup kompetisi latte art, manual brew, kopi susu dan kopi kreweng, workshop, serta dukungan untuk petani dan produk lokal.",
+      "sources": [
+        {
+          "url": "https://hutancempaka.com/news",
+          "kind": "official_organizer_venue"
+        },
+        {
+          "url": "https://rri.co.id/malang/regional/2766112/prigen-coffee-fest-2026-siap-digelar-angkat-potensi-kopi-lokal-dan-umkm",
+          "kind": "news_pre_event"
+        }
+      ]
+    },
+    {
+      "id": "jacoweek-market-semarang-2026",
+      "name": "JACOWEEK MRKT 2026 — Semarang",
+      "start_date": "2026-10-09",
+      "end_date": "2026-10-11",
+      "location": "DP Mall Semarang, Jawa Tengah",
+      "country": "Indonesia",
+      "organizer": "Jakarta Coffee Week bersama Bank Mandiri",
+      "category": "Coffee market & brand activation",
+      "date_status": "OFFICIAL_SOURCE",
+      "note": "Bank Mandiri menyebut tanggal dan lokasi serta menjelaskan bahwa JACOWEEK MRKT adalah rangkaian regional Jakarta Coffee Week. Sudah selesai.",
+      "sources": [
+        {
+          "url": "https://www.bankmandiri.co.id/en/jacoweek-2026",
+          "kind": "official_program"
+        },
+        {
+          "url": "https://www.antarafoto.com/view/2881201/mandiri-jakarta-coffee-week-market-di-semarang",
+          "kind": "news_event_coverage"
+        }
+      ]
+    },
+    {
+      "id": "jacoweek-market-surabaya-2026",
+      "name": "JACOWEEK MRKT 2026 — Surabaya",
+      "start_date": "2026-10-16",
+      "end_date": "2026-10-18",
+      "location": "Pakuwon Mall Surabaya, Jawa Timur",
+      "country": "Indonesia",
+      "organizer": "Jakarta Coffee Week bersama Bank Mandiri",
+      "category": "Coffee market & brand activation",
+      "date_status": "OFFICIAL_SOURCE",
+      "note": "Bank Mandiri menyebut tanggal dan lokasi serta menjelaskan bahwa JACOWEEK MRKT adalah rangkaian regional Jakarta Coffee Week.",
+      "sources": [
+        {
+          "url": "https://www.bankmandiri.co.id/en/jacoweek-2026",
+          "kind": "official_program"
+        }
+      ]
+    },
+    {
+      "id": "sial-food-drinks-indonesia-2026",
+      "name": "SIAL Food & Drinks Indonesia 2026 (SIAL Interfood)",
+      "start_date": "2026-11-04",
+      "end_date": "2026-11-06",
+      "location": "JIExpo Kemayoran, Jakarta",
+      "country": "Indonesia",
+      "organizer": "SEVEN EVENT / SIAL Network",
+      "category": "B2B food & beverage trade show",
+      "date_status": "OFFICIAL_SOURCE",
+      "note": "Nama resmi situs penyelenggara untuk 2026 adalah SIAL Food & Drinks Indonesia; SIAL Interfood tetap dipakai sebagai nama yang dikenal pembaca. Situs resmi mengonfirmasi tanggal dan JIExpo serta memposisikan acara sebagai pameran B2B. Relevansi kopi berasal dari sektor F&B dan perluasan buyer, bukan zona kopi yang dipastikan secara khusus.",
+      "sources": [
+        {
+          "url": "https://sialfooddrinksindonesia.com/id/tentang-sial-food-drinks-indonesia/",
+          "kind": "official_organizer"
+        },
+        {
+          "url": "https://sialfooddrinksindonesia.com/visitor-registration/",
+          "kind": "official_visitor_information"
+        },
+        {
+          "url": "https://www.sial-network.com/en/trends/Newsroom/Interfood-returns-to-Jakarta",
+          "kind": "official_network"
+        }
+      ]
+    },
+    {
+      "id": "maluku-coffee-week-2026",
+      "name": "Maluku Coffee Week 2026",
+      "start_date": "2026-11-06",
+      "end_date": "2026-11-08",
+      "location": "Lapangan Tahapary, Ambon, Maluku",
+      "country": "Indonesia",
+      "organizer": "Maluku Coffee Week",
+      "category": "Coffee festival & competition",
+      "date_status": "OFFICIAL_EVENT_AND_TICKETING_SOURCE",
+      "note": "Situs acara dan halaman tiket mencantumkan tanggal, venue, program tiga hari, dan penjualan tiket. Program meliputi pameran kopi, workshop, coffee talk, serta kompetisi brewing/barista.",
+      "sources": [
+        {
+          "url": "https://www.mcwtiks.com/detail-event",
+          "kind": "official_event"
+        },
+        {
+          "url": "https://mcwtiks.com/pesan-tiket?ticket_id=2",
+          "kind": "official_ticketing"
+        }
+      ]
+    },
+    {
+      "id": "jakarta-coffee-week-2026",
+      "name": "Jakarta Coffee Week 2026",
+      "start_date": "2026-12-04",
+      "end_date": "2026-12-06",
+      "location": "ICE BSD, Hall 3–3A, Kabupaten Tangerang, Banten",
+      "country": "Indonesia",
+      "organizer": "Jakarta Coffee Week bersama Bank Mandiri",
+      "category": "Coffee festival & trade event",
+      "date_status": "OFFICIAL_SOURCE",
+      "note": "Bank Mandiri menyebut tanggal dan lokasi untuk acara utama Jakarta Coffee Week, terpisah dari dua JACOWEEK MRKT regional pada Oktober.",
+      "sources": [
+        {
+          "url": "https://www.bankmandiri.co.id/en/jacoweek-2026",
+          "kind": "official_program"
+        },
+        {
+          "url": "https://www.bankmandiri.co.id/en/road-to-hut-mandiri",
+          "kind": "official_program"
         }
       ]
     }
