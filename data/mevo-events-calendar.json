@@ -2,7 +2,7 @@
   "schema": "kabar-kopi-events-calendar-v1",
   "source": "https://raw.githubusercontent.com/KGS-blog/coffee-feed/main/mevo_events.json",
   "timezone": "Asia/Jakarta",
-  "fetched_at": "2026-10-10T04:11:53.434Z",
+  "fetched_at": "2026-10-12T04:13:22.046Z",
   "events": [
     {
       "id": "event-0ff2a35f6b09a6fc",
@@ -114,8 +114,7 @@
           "url": "https://cafebrasserieexpo.com/",
           "kind": "official_cbe"
         }
-      ],
-      "supersedes_id": "cbe-9-2026"
+      ]
     },
     {
       "id": "event-becfb283443bd495",
@@ -167,7 +166,7 @@
       "organizer": "Semarang Coffee Week",
       "category": "Coffee festival & expo",
       "date_status": "ORGANIZER_POST_CORROBORATED",
-      "note": "Poster akun penyelenggara serta pemberitaan SemarangKita dan About Semarang menyebut 11–15 November 2026. Linktree penyelenggara menampilkan 26–30 November tanpa tahun; jadwal sebaiknya dikonfirmasi kepada penyelenggara sebelum berkunjung.",
+      "note": "Poster akun penyelenggara dan pemberitaan SemarangKita serta About Semarang menyebut 11–15 November 2026. Linktree penyelenggara menampilkan 26–30 November tanpa tahun; konfirmasikan jadwal kepada penyelenggara sebelum berkunjung.",
       "sources": [
         {
           "url": "https://www.instagram.com/semarangcoffeeweek/",
@@ -197,10 +196,10 @@
       "organizer": "",
       "category": "Coffee competition",
       "date_status": "OFFICIAL_SOURCE",
-      "note": "Kompetisi kopi spesialti ini merupakan bagian dari rangkaian Trade Expo Indonesia (TEI) 2026 / Zona KoTeKa. Tanggal 14–15 Oktober 2026 diumumkan oleh Kemendag.",
+      "note": "Kompetisi ini merupakan bagian dari rangkaian Trade Expo Indonesia (TEI) 2026 / Zona KoTeKa. Kemendag mengumumkan tanggal 14–15 Oktober 2026.",
       "sources": [
         {
-          "url": "https://www.kemendag.go.id/berita/siaran-pers/tei-2026-siapkan-zona-khusus-kopi-teh-dan-kakao-permudah-buyer-di-area-pameran",
+          "url": "https://www.kemendag.go.id/index.php/berita/siaran-pers/tei-2026-siapkan-zona-khusus-kopi-teh-dan-kakao-permudah-buyer-di-area-pameran",
           "kind": "official"
         }
       ]
@@ -423,10 +422,22 @@
       "date_status": "REPORTED_POST_EVENT_CORROBORATED",
       "note": "Dicatat sebagai satu acara selesai pada 8–9 Oktober 2026. ANTARA mengonfirmasi kegiatan dan venue Gedung PLUT pada 9 Oktober; jadwal dua hari 8–9 Oktober dan penyelenggaraan Pemkab melalui Dikuperin dilaporkan sebelum acara oleh JBM dan dikonfirmasi liputan pascaacara Pacitanku. Liputan berbeda digabung sebagai satu event.",
       "sources": [
-        { "url": "https://www.antaranews.com/berita/5778958/pacitan-gelar-feskop-2026-untuk-perkuat-ekosistem-kopi-lokal", "kind": "post_event_news_report" },
-        { "url": "https://jatim.tribunnews.com/jatim/562570/aksi-unik-kepala-dinas-pacitan-jajal-skill-barista-di-festival-kopi-2026-bupati-beri-apresiasi", "kind": "post_event_news_report" },
-        { "url": "https://jbm.co.id/meracik-kopi-merajut-sinergi-festival-kopi-pacitan-2026-digelar-8-9-oktober/", "kind": "pre_event_schedule_report" },
-        { "url": "https://pacitanku.com/2026/10/10/sedot-barista-bandung-hingga-surabaya-festival-kopi-pacitan-2026-gairahkan-ekosistem-lokal/", "kind": "post_event_schedule_confirmation" }
+        {
+          "url": "https://www.antaranews.com/berita/5778958/pacitan-gelar-feskop-2026-untuk-perkuat-ekosistem-kopi-lokal",
+          "kind": "post_event_news_report"
+        },
+        {
+          "url": "https://jatim.tribunnews.com/jatim/562570/aksi-unik-kepala-dinas-pacitan-jajal-skill-barista-di-festival-kopi-2026-bupati-beri-apresiasi",
+          "kind": "post_event_news_report"
+        },
+        {
+          "url": "https://jbm.co.id/meracik-kopi-merajut-sinergi-festival-kopi-pacitan-2026-digelar-8-9-oktober/",
+          "kind": "pre_event_schedule_report"
+        },
+        {
+          "url": "https://pacitanku.com/2026/10/10/sedot-barista-bandung-hingga-surabaya-festival-kopi-pacitan-2026-gairahkan-ekosistem-lokal/",
+          "kind": "post_event_schedule_confirmation"
+        }
       ]
     }
   ]
