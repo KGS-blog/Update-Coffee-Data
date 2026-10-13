@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-12T07:39:52.775Z",
+  "generated_at": "2026-10-13T05:21:31.774Z",
   "method": {
     "minimum_observations_per_period": 5,
     "minimum_rule": "A chart point is shown only when at least 5 eligible observations are available for the same coffee type, bean form, and period after duplicate, currency, Wine-process, and package-size screening. Each respondent aggregate contributes one value per type/form/period.",

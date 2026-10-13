@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-10-12T07:39:50.159Z",
+  "generated_at": "2026-10-13T05:21:28.163Z",
   "months": [
     {
       "month": "2008-01",
@@ -28,11 +28,6 @@
       "articles": 1
     },
     {
-      "month": "2016-07",
-      "file": "arsip/berita-2016-07.json",
-      "articles": 1
-    },
-    {
       "month": "2017-01",
       "file": "arsip/berita-2017-01.json",
       "articles": 3
@@ -40,7 +35,7 @@
     {
       "month": "2017-03",
       "file": "arsip/berita-2017-03.json",
-      "articles": 1
+      "articles": 2
     },
     {
       "month": "2017-04",
@@ -135,7 +130,7 @@
     {
       "month": "2020-04",
       "file": "arsip/berita-2020-04.json",
-      "articles": 3
+      "articles": 4
     },
     {
       "month": "2020-05",
@@ -350,7 +345,7 @@
     {
       "month": "2024-09",
       "file": "arsip/berita-2024-09.json",
-      "articles": 1
+      "articles": 2
     },
     {
       "month": "2024-10",
@@ -475,13 +470,13 @@
     {
       "month": "2026-10",
       "file": "arsip/berita-2026-10.json",
-      "articles": 341
+      "articles": 356
     }
   ],
   "reference_collection": {
     "label": "Referensi kopi tanpa tanggal publikasi",
     "label_en": "Coffee references without a publication date",
     "file": "arsip/berita-reference-undated.json",
-    "articles": 49
+    "articles": 47
   }
 }

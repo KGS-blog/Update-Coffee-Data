@@ -69,6 +69,29 @@
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
       "cluster_review_version": 0
+    },
+    {
+      "judul": "PENDAHULUAN",
+      "tautan": "https://ejournal.unsrat.ac.id/v3/index.php/agrirud/article/download/29930/28980",
+      "tanggal": "2020-04",
+      "publication_date_precision": "month",
+      "publication_date_evidence": "owa, B. dkk. 2010). AGRIRUD – Volume 2 Nomor 1, April 2020: 36 - 44 37 Tabel 1. Luas Lah",
+      "sumber": "ejournal.unsrat.ac.id",
+      "ringkasan": "Usahatani dan Pengolahan Kopi ............................…..(Tuweben Wandik, Nordy F. L. Waney, dan Yolanda P. .I. Rori) 36 USAHATANI DAN PENGOLAHAN KOPI ARABIKA DI DESA YAGARA DISTRIK WALESI KABUPATEN JAYAWIJAYA Arabika Coffee Farming and Processing in Yagara Village Walesi District of Jayawijaya Regency Tuweben Wandik, Nordy F. L. Waney, dan Yolanda P. I.",
+      "coffee_relevance_context": "Usahatani dan Pengolahan Kopi ............................…..(Tuweben Wandik, Nordy F. L. Waney, dan Yolanda P. .I. Rori) 36 USAHATANI DAN PENGOLAHAN KOPI ARABIKA DI DESA YAGARA DISTRIK WALESI KABUPATEN JAYAWI … dan Pengolahan Kopi ............................…..(Tuweben Wandik, Nordy F. L. Waney, dan Yolanda P. .I. Rori) 36 USAHATANI DAN PENGOLAHAN KOPI ARABIKA DI DESA YAGARA DISTRIK WALESI KABUPATEN JAYAWIJAYA Arabika Coffee Farming and Processing in Yagara Village Walesi District of Jayawijaya Regency Tuweben Wandik, Nordy F. L … y F. L. Waney, dan Yolanda P. .I. Rori) 36 USAHATANI DAN PENGOLAHAN KOPI ARABIKA DI DESA YAGARA DISTRIK WALESI KABUPATEN JAYAWIJAYA Arabika Coffee Farming and Processing in Yagara Village Walesi District of Jayawijaya Regency Tuweben Wandik, Nordy F. L. Waney, dan Yolanda P. I. Rori Jurusan Sosial Ekonomi Pertanian Fakultas",
+      "link_type": "publisher_article",
+      "source_type": "cie_curated_reference",
+      "source_collection": "coffee_relevant_articles",
+      "material_type": null,
+      "source_original_url": "https://ejournal.unsrat.ac.id/v3/index.php/agrirud/article/download/29930/28980",
+      "source_content_sha256": "a3920ab10042fdc56d3c058b1cbc0aa04448734c6e8984a4cefb61996dcc6bc9",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "passed_kabar_kopi_fulltext_coffee_signal",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
     }
   ]
 }
