@@ -3,8 +3,8 @@
   "source": "International Coffee Organization (ICO), Coffee Trade Globe",
   "source_url": "https://data.ico.org/globe/#m=flows&f=export&y=2025&c=ID",
   "api_endpoint": "https://data.ico.org/globe/api/v1/globe/bundle?year=2025",
-  "fetched_at": "2026-10-14T03:19:58.782Z",
-  "api_generated_at": "2026-10-12T10:15:54.693Z",
+  "fetched_at": "2026-10-15T02:58:23.215Z",
+  "api_generated_at": "2026-10-14T16:15:58.190Z",
   "trade_window_through": "2026-08",
   "year": 2025,
   "public_trade_year": 2025,
@@ -182,7 +182,7 @@
     "metrics": {
       "export_volume": {
         "rank": 4,
-        "countries_count": 51,
+        "countries_count": 52,
         "indonesia_value": 11043071,
         "top_five": [
           {
@@ -209,7 +209,7 @@
       },
       "export_customs_value": {
         "rank": 5,
-        "countries_count": 51,
+        "countries_count": 52,
         "indonesia_value": 3084771085,
         "top_five": [
           {
@@ -236,7 +236,7 @@
       },
       "import_volume": {
         "rank": 39,
-        "countries_count": 183,
+        "countries_count": 187,
         "indonesia_value": 967117,
         "top_five": [
           {
@@ -263,7 +263,7 @@
       },
       "import_customs_value": {
         "rank": 40,
-        "countries_count": 183,
+        "countries_count": 187,
         "indonesia_value": 384382750,
         "top_five": [
           {
@@ -290,7 +290,7 @@
       },
       "reexport_volume": {
         "rank": 13,
-        "countries_count": 95,
+        "countries_count": 97,
         "indonesia_value": 901274,
         "top_five": [
           {
@@ -317,7 +317,7 @@
       },
       "reexport_customs_value": {
         "rank": 18,
-        "countries_count": 99,
+        "countries_count": 101,
         "indonesia_value": 260861314,
         "top_five": [
           {
@@ -711,33 +711,123 @@
       "S": 0.2551
     },
     "procMix": {
+      "Wet": 0.0222,
+      "Dry": 0.7213,
       "Spray Dried": 0.0989,
       "Freeze Dried": 0.0226,
       "Unspecified": 0.0843,
       "Extract": 0.0045,
-      "Preparations": 0.0462,
-      "Dry": 0.7213,
-      "Wet": 0.0222
+      "Preparations": 0.0462
     },
     "comboMix": {
+      "GAW": 0.0184,
+      "GAD": 0.1027,
+      "GADD": 0.0002,
+      "GRD": 0.6162,
+      "GRW": 0.0037,
+      "GADO": 0.0015,
+      "GRDD": 0.0002,
+      "GRWO": 0.0001,
+      "GRDO": 0.0005,
       "SSD": 0.0989,
       "SFD": 0.0226,
       "R": 0.0013,
       "SE": 0.0045,
       "SP": 0.0462,
       "S": 0.0829,
-      "GRD": 0.6162,
-      "GAW": 0.0184,
-      "GAD": 0.1027,
-      "GADD": 0.0002,
-      "GRW": 0.0037,
-      "GADO": 0.0015,
-      "GRDD": 0.0002,
-      "GRWO": 0.0001,
-      "GRDO": 0.0005,
       "RD": 0
     },
     "comboDetails": [
+      {
+        "code": "GAW",
+        "share": 0.0184,
+        "label": "Green Arabica Wet",
+        "bags": 35654031,
+        "form": "Green",
+        "type": "Arabica",
+        "method": "Wet",
+        "info": "Unspecified"
+      },
+      {
+        "code": "GAD",
+        "share": 0.1027,
+        "label": "Green Arabica Dry",
+        "bags": 39028634,
+        "form": "Green",
+        "type": "Arabica",
+        "method": "Dry",
+        "info": "Unspecified"
+      },
+      {
+        "code": "GADD",
+        "share": 0.0002,
+        "label": "Green Arabica Dry Decaffeinated",
+        "bags": 547425,
+        "form": "Green",
+        "type": "Arabica",
+        "method": "Dry",
+        "info": "Decaffeinated"
+      },
+      {
+        "code": "GRD",
+        "share": 0.6162,
+        "label": "Green Robusta Dry",
+        "bags": 44962313,
+        "form": "Green",
+        "type": "Robusta",
+        "method": "Dry",
+        "info": "Unspecified"
+      },
+      {
+        "code": "GRW",
+        "share": 0.0037,
+        "label": "Green Robusta Wet",
+        "bags": 548799,
+        "form": "Green",
+        "type": "Robusta",
+        "method": "Wet",
+        "info": "Unspecified"
+      },
+      {
+        "code": "GADO",
+        "share": 0.0015,
+        "label": "Green Arabica Dry Organic",
+        "bags": 78781,
+        "form": "Green",
+        "type": "Arabica",
+        "method": "Dry",
+        "info": "Organic"
+      },
+      {
+        "code": "GRDD",
+        "share": 0.0002,
+        "label": "Green Robusta Dry Decaffeinated",
+        "bags": 23026,
+        "form": "Green",
+        "type": "Robusta",
+        "method": "Dry",
+        "info": "Decaffeinated"
+      },
+      {
+        "code": "GRWO",
+        "share": 0.0001,
+        "label": "Green Robusta Wet Organic",
+        "bags": 3116,
+        "form": "Green",
+        "type": "Robusta",
+        "method": "Wet",
+        "info": "Organic"
+      },
+      {
+        "code": "GRDO",
+        "share": 0.0005,
+        "label": "Green Robusta Dry Organic",
+        "bags": 10114,
+        "form": "Green",
+        "type": "Robusta",
+        "method": "Dry",
+        "info": "Organic"
+      },
       {
         "code": "SSD",
         "share": 0.0989,
@@ -797,96 +887,6 @@
         "type": "Unspecified",
         "method": "Unspecified",
         "info": "Unspecified"
-      },
-      {
-        "code": "GRD",
-        "share": 0.6162,
-        "label": "Green Robusta Dry",
-        "bags": 44960980,
-        "form": "Green",
-        "type": "Robusta",
-        "method": "Dry",
-        "info": "Unspecified"
-      },
-      {
-        "code": "GAW",
-        "share": 0.0184,
-        "label": "Green Arabica Wet",
-        "bags": 35654031,
-        "form": "Green",
-        "type": "Arabica",
-        "method": "Wet",
-        "info": "Unspecified"
-      },
-      {
-        "code": "GAD",
-        "share": 0.1027,
-        "label": "Green Arabica Dry",
-        "bags": 39028634,
-        "form": "Green",
-        "type": "Arabica",
-        "method": "Dry",
-        "info": "Unspecified"
-      },
-      {
-        "code": "GADD",
-        "share": 0.0002,
-        "label": "Green Arabica Dry Decaffeinated",
-        "bags": 547425,
-        "form": "Green",
-        "type": "Arabica",
-        "method": "Dry",
-        "info": "Decaffeinated"
-      },
-      {
-        "code": "GRW",
-        "share": 0.0037,
-        "label": "Green Robusta Wet",
-        "bags": 548799,
-        "form": "Green",
-        "type": "Robusta",
-        "method": "Wet",
-        "info": "Unspecified"
-      },
-      {
-        "code": "GADO",
-        "share": 0.0015,
-        "label": "Green Arabica Dry Organic",
-        "bags": 78781,
-        "form": "Green",
-        "type": "Arabica",
-        "method": "Dry",
-        "info": "Organic"
-      },
-      {
-        "code": "GRDD",
-        "share": 0.0002,
-        "label": "Green Robusta Dry Decaffeinated",
-        "bags": 23026,
-        "form": "Green",
-        "type": "Robusta",
-        "method": "Dry",
-        "info": "Decaffeinated"
-      },
-      {
-        "code": "GRWO",
-        "share": 0.0001,
-        "label": "Green Robusta Wet Organic",
-        "bags": 3116,
-        "form": "Green",
-        "type": "Robusta",
-        "method": "Wet",
-        "info": "Organic"
-      },
-      {
-        "code": "GRDO",
-        "share": 0.0005,
-        "label": "Green Robusta Dry Organic",
-        "bags": 10114,
-        "form": "Green",
-        "type": "Robusta",
-        "method": "Dry",
-        "info": "Organic"
       },
       {
         "code": "RD",
