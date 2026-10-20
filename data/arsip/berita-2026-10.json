@@ -4835,7 +4835,8 @@
       "aggregator": "Google News",
       "link_type": "publisher",
       "resolution_status": "resolved",
-      "tautan_google_news": "https://news.google.com/rss/articles/CBMingFBVV95cUxOS2EtdjZjRzc5T3dKYnllVEstV2RRX1dPd2QtV01xSDNRSVVZODFucGNQZERBbnRBTkdGaEhBSExuZlpBT3JZTTY2RmlDU0Q5SGYzMUNIbmhxS1BaMnIxNVd5WXRxZUlDblRvbDFEWDY3cDJsZVZVclJSbFM2YTNhckVBVzNybW5aal92ek5rbDVkRHNqY1ZJZ082RmtwQQ?oc=5"
+      "tautan_google_news": "https://news.google.com/rss/articles/CBMingFBVV95cUxOS2EtdjZjRzc5T3dKYnllVEstV2RRX1dPd2QtV01xSDNRSVVZODFucGNQZERBbnRBTkdGaEhBSExuZlpBT3JZTTY2RmlDU0Q5SGYzMUNIbmhxS1BaMnIxNVd5WXRxZUlDblRvbDFEWDY3cDJsZVZVclJSbFM2YTNhckVBVzNybW5aal92ek5rbDVkRHNqY1ZJZ082RmtwQQ?oc=5",
+      "ringkasan": "Tepat pukul 10.00 tanggal 14 Oktober 2026, pameran Specialty Coffee Association of Japan (SCAJ) World Specialty Coffee Conference and Exhibition 2026"
     },
     {
       "judul": "Tanaman Kopi Tumbuh Subur Di Dataran Rendah Jaksel, Dulunya Gunungan Sampah",
@@ -4924,6 +4925,107 @@
       "tanggal": "2026-10-17 16:27:16",
       "sumber": "Harianjogja",
       "ringkasan": "Kopi jumbo 1,5 liter viral di Korea Selatan. Selain tampil unik di media sosial, minuman ini dinilai lebih hemat di tengah inflasi.",
+      "asal": "newsdata",
+      "link_type": "publisher"
+    },
+    {
+      "judul": "Tiga Sampel Kopi Muara Enim Raih Penghargaan Nasional - RRI.co.id",
+      "tautan": "https://rri.co.id/palembang/ekonomi/umkm/2824517/tiga-sampel-kopi-muara-enim-raih-penghargaan-nasional",
+      "tanggal": "Tue, 20 Oct 2026 02:44:00 GMT",
+      "sumber": "RRI.co.id",
+      "asal": "google_news",
+      "aggregator": "Google News",
+      "link_type": "publisher",
+      "resolution_status": "resolved",
+      "tautan_google_news": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQUGJPNmFkMnA2VFdFWlNDQlEzeUpJbHNKUS1yTGFCTDEzNnZYMl9xUHgtNkhMbDJsUUwzT1RZNjc5bGY2R2IzLXRRNVQtdjE5bENPa0RaY1lKUzdSZElFR2dIUW8wRU1zb0ZvOWIzTVM2azFmWk1rVDlxa0dJRDltSERRX2hPMkFIU201Y3VVaFZmeXl1QnBLNEpDNk5lYU5PNkxEWg?oc=5"
+    },
+    {
+      "judul": "Gerombolan Bermotor Buat Teror Berdarah di Warung Kopi Kota Mojokerto, Polisi Buru Semua Pelaku",
+      "tautan": "https://surabaya.tribunnews.com/jawa-timur/1952452/gerombolan-bermotor-buat-teror-berdarah-di-warung-kopi-kota-mojokerto-polisi-buru-semua-pelaku",
+      "tanggal": "2026-10-19 14:01:20",
+      "sumber": "Surya.co.id",
+      "ringkasan": "Gerombolan bermotor serang dua warkop di Mojokerto dengan senjata tajam, tiga orang terluka parah.",
+      "asal": "newsdata",
+      "link_type": "publisher"
+    },
+    {
+      "judul": "Harga Kopi Arabika Gayo di Bener Meriah Naik Jelang Panen Raya, Gelondong Tembus Rp 25.000 per Bambu",
+      "tautan": "https://gayo.tribunnews.com/bener-meriah/54749/harga-kopi-arabika-gayo-di-bener-meriah-naik-jelang-panen-raya-gelondong-tembus-rp-25000-per-bambu",
+      "tanggal": "2026-10-19 13:38:52",
+      "sumber": "Tribun News",
+      "ringkasan": "Jelang panen raya, harga kopi arabika Gayo di Bener Meriah naik, gelondong tembus Rp25 ribu/bambu, gabah Rp56 ribu/kg.",
+      "asal": "newsdata",
+      "link_type": "publisher"
+    },
+    {
+      "judul": "Bondowoso Dilirik Kamerun, Buka Peluang Transfer Teknologi Pertanian hingga Ekspor Kopi",
+      "tautan": "https://jatim-timur.tribunnews.com/bondowoso/41218/bondowoso-dilirik-kamerun-buka-peluang-transfer-teknologi-pertanian-hingga-ekspor-kopi",
+      "tanggal": "2026-10-19 11:35:59",
+      "sumber": "Tribun News",
+      "ringkasan": "Bondowoso dilirik Kamerun untuk kerja sama pertanian, ekowisata, transfer teknologi, dan peluang ekspor kopi serta produk olahan singkong.",
+      "asal": "newsdata",
+      "link_type": "publisher"
+    },
+    {
+      "judul": "Dari Kopi Robusta hingga Pupuk Organik, Produk Transmigran Menarik 12.500 Pengunjung",
+      "tautan": "https://ekbis.sindonews.com/read/1762323/34/dari-kopi-robusta-hingga-pupuk-organik-produk-transmigran-menarik-12500-pengunjung-1792408234",
+      "tanggal": "2026-10-19 10:55:00",
+      "sumber": "Sindonews",
+      "ringkasan": "Belasan produk unggulan Kawasan Transmigrasi Muting dipamerkan dalam Festival Kalimaro di Merauke, Papua Selatan.",
+      "asal": "newsdata",
+      "link_type": "publisher"
+    },
+    {
+      "judul": "Ekotap, Inovasi Es Kopi Tape Bondowoso yang Padukan Cita Rasa Lokal",
+      "tautan": "https://beritajatim.com/ekotap-inovasi-es-kopi-tape-bondowoso-yang-padukan-cita-rasa-lokal",
+      "tanggal": "2026-10-19 09:12:28",
+      "sumber": "Berita Jawa Timur",
+      "ringkasan": "Ekotap, Inovasi Es Kopi Tape Bondowoso yang Padukan Cita Rasa Lokal. 👇 Ekotap memadukan kopi dan tape Bondowoso menjadi es kopi unik. Inovasi Ahmad Sofyan ini berpeluang dikembangkan sebagai produk UMKM. -- Ikuti kami di 👉https://bit.ly/392voLE #beritaviral #jawatimur #viral berita #beritaterkini #terpopuler #news #beritajatim #infojatim #newsupdate #FYI #fyp",
+      "asal": "newsdata",
+      "link_type": "publisher"
+    },
+    {
+      "judul": "Kepincut Kopi hingga Tape Singkong, Delegasi Kamerun Jalin Kerja Sama dengan Bondowoso",
+      "tautan": "https://jatim.tribunnews.com/jatim/563708/kepincut-kopi-hingga-tape-singkong-delegasi-kamerun-jalin-kerja-sama-dengan-bondowoso",
+      "tanggal": "2026-10-19 09:11:21",
+      "sumber": "Tribun News",
+      "ringkasan": "Pejabat dari beberapa kota di Kamerun menaruh minat besar pada kopi dan tape Bondowoso.",
+      "asal": "newsdata",
+      "link_type": "publisher"
+    },
+    {
+      "judul": "Bidik Pasar Ekspor, PTPN I Mendorong Hilirisasi Kopi Ijen",
+      "tautan": "https://industri.kontan.co.id/news/bidik-pasar-ekspor-ptpn-i-mendorong-hilirisasi-kopi-ijen",
+      "tanggal": "2026-10-19 07:28:16",
+      "sumber": "Kontan Co Id",
+      "ringkasan": "Aset harus kita amankan, produktivitas harus kita tingkatkan, dan setiap potensi kebun harus kita dorong menjadi nilai tambah.",
+      "asal": "newsdata",
+      "link_type": "publisher"
+    },
+    {
+      "judul": "Hanya Rp60 Ribu, Nikmati Perpaduan Kopi dan Churros Renyah di Hotel Santika Premiere ICE BSD City",
+      "tautan": "https://mediaindonesia.com/kuliner/946064/hanya-rp60-ribu-nikmati-perpaduan-kopi-dan-churros-renyah-di-hotel-santika-premiere-ice-bsd-city",
+      "tanggal": "2026-10-19 07:18:00",
+      "sumber": "Mediaindonesia",
+      "ringkasan": "Hotel Santika Premiere ICE BSD City hadirkan promo Coffee & Churros seharga Rp60.000 nett untuk menemani waktu santai tamu hingga Oktober 2026.",
+      "asal": "newsdata",
+      "link_type": "publisher"
+    },
+    {
+      "judul": "Ini yang Terjadi pada Tubuh saat Berhenti Minum Kopi",
+      "tautan": "https://www.tribunnews.com/kesehatan/7898942/ini-yang-terjadi-pada-tubuh-saat-berhenti-minum-kopi",
+      "tanggal": "2026-10-19 06:23:42",
+      "sumber": "Tribun News",
+      "ringkasan": "Berhenti minum kopi bisa memperbaiki tidur dan mengurangi rasa gelisah, tetapi juga memicu sakit kepala dan kelelahan sementara.",
+      "asal": "newsdata",
+      "link_type": "publisher"
+    },
+    {
+      "judul": "Minum Kopi Sebelum Olahraga Bisa Bantu Tingkatkan Performa, Ini Hasil Penelitiannya",
+      "tautan": "https://www.jawapos.com/lifestyle/2610190044/minum-kopi-sebelum-olahraga-bisa-bantu-tingkatkan-performa-ini-hasil-penelitiannya",
+      "tanggal": "2026-10-19 00:48:45",
+      "sumber": "Jawapos",
+      "ringkasan": "Studi Universitas Tsukuba menemukan kafein dapat meningkatkan daya sprint hingga 3,5 jam. Simak hasil penelitian dan hal yang perlu diperhatikan sebelum mengonsumsinya.",
       "asal": "newsdata",
       "link_type": "publisher"
     }
