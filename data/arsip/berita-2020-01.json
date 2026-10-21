@@ -46,6 +46,29 @@
       "cluster_review_version": 0,
       "source_collection": "coffee_relevant_articles",
       "material_type": null
+    },
+    {
+      "judul": "SOCA: Jurnal Sosial Ekonomi Pertanian Vol",
+      "tautan": "https://ojs.unud.ac.id/index.php/soca/article/download/56770/33333",
+      "tanggal": "2020-01",
+      "publication_date_precision": "month",
+      "publication_date_evidence": "ial Ekonomi Pertanian Vol. 14 No. 1, 31 Januari 2020, page 158 - 168 ISSN: 2615-66",
+      "sumber": "ojs.unud.ac.id",
+      "ringkasan": "SOCA: Jurnal Sosial Ekonomi Pertanian Vol. 14 No. 1, 31 Januari 2020, page 158 - 168 ISSN: 2615-6628 (E), ISSN: 1411-7177 (P) https://ojs.unud.ac.id/index.php/soca FAKTOR-FAKTOR PENDUKUNG KEBERLANJUTAN USAHATANI KOPI ARABIKA DI PROVINSI BALI Ida Ayu Listia Dewi dan I Made Sudarma Program Studi Agribisnis, Fakultas Pertanian, Universitas Udayana, Denpasar, Ba",
+      "coffee_relevance_context": "ge 158 - 168 ISSN: 2615-6628 (E), ISSN: 1411-7177 (P) https://ojs.unud.ac.id/index.php/soca FAKTOR-FAKTOR PENDUKUNG KEBERLANJUTAN USAHATANI KOPI ARABIKA DI PROVINSI BALI Ida Ayu Listia Dewi dan I Made Sudarma Program Studi Agribisnis, Fakultas Pertanian, Universitas Udayana, Denpasar, Bali Email korespondensi: listiadewi60 … korespondensi: listiadewi60@unud.ac.id dan sudarmaimade@yahoo.com Telepon/HP: 082144907558, 08123985990 Abstrak Kata Kunci: Keberlanjutan, kopi Arabika, usahatani, pendapatan. Kopi merupakan andalan ekspor Bali. Potensi pengembangan lahan usahatani kopi Arabika di Bali belum dimanfaatkan. Namun produktivitas hasil kopi Ar … id dan sudarmaimade@yahoo.com Telepon/HP: 082144907558, 08123985990 Abstrak Kata Kunci: Keberlanjutan, kopi Arabika, usahatani, pendapatan. Kopi merupakan andalan ekspor Bali. Potensi pengembangan lahan usahatani kopi Arabika di Bali belum dimanfaatkan. Namun produktivitas hasil kopi Arabika Bali masih rendah. Jumlah petan",
+      "link_type": "publisher_article",
+      "source_type": "cie_curated_reference",
+      "source_collection": "coffee_relevant_articles",
+      "material_type": null,
+      "source_original_url": "https://ojs.unud.ac.id/index.php/soca/article/download/56770/33333",
+      "source_content_sha256": "bcee8e99b0fbf3b780f7739c2d74105a36c82be61426700d33bd97a2aee91490",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "passed_kabar_kopi_fulltext_coffee_signal",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
     }
   ]
 }

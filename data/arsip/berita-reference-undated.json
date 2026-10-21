@@ -1081,6 +1081,29 @@
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
       "cluster_review_version": 0
+    },
+    {
+      "judul": "Microsoft Word - 4. JULI 2019-XV-1",
+      "tautan": "https://ojs.unud.ac.id/index.php/piramida/issue/download/3362/PIRAMIDA%20XV-1.4",
+      "tanggal": "",
+      "publication_date_precision": null,
+      "publication_date_evidence": null,
+      "sumber": "ojs.unud.ac.id",
+      "ringkasan": "90 ANALISIS SKALA PRODUKSI TANAMAN KOPI DI DESA PELAGA KECAMATAN PETANG KABUPATEN BADUNG I Putu Teguh Suryadinatha Putra 1 I Ketut Sudiana 2 1Fakultas Ekonomi dan Bisnis Universitas Udayana (Unud), Bali, Indonesia e-mail: teguhsuryadinatha@gmail.com telp: +62 81239570213 2Fakultas Ekonomi dan Bisnis Universitas Udayana (Unud), Bali, Indonesia ABSTRAK Sektor ",
+      "coffee_relevance_context": "90 ANALISIS SKALA PRODUKSI TANAMAN KOPI DI DESA PELAGA KECAMATAN PETANG KABUPATEN BADUNG I Putu Teguh Suryadinatha Putra 1 I Ketut Sudiana 2 1Fakultas Ekonomi dan Bisnis Universitas Udayana (Unud), Bali, Indonesia e-mai … kan kese jahteraan masyarakat khususnya masyarakat pedesaan. Salah satu jenis perkebunan ya ng termasuk perkebunan rakyat adalah perkebunan kopi. Kopi merupakan salah satu komoditi non migas, yang belakangan ini memiliki pasaran yang cukup menjanjikan di pasaran dunia. Tujuan penelitian ini adalah untuk menganalisis sebera … se jahteraan masyarakat khususnya masyarakat pedesaan. Salah satu jenis perkebunan ya ng termasuk perkebunan rakyat adalah perkebunan kopi. Kopi merupakan salah satu komoditi non migas, yang belakangan ini memiliki pasaran yang cukup menjanjikan di pasaran dunia. Tujuan penelitian ini adalah untuk menganalisis seberapa bes",
+      "link_type": "publisher_article",
+      "source_type": "cie_curated_reference",
+      "source_collection": "coffee_relevant_articles",
+      "material_type": null,
+      "source_original_url": "https://ojs.unud.ac.id/index.php/piramida/issue/download/3362/PIRAMIDA%20XV-1.4",
+      "source_content_sha256": "a940b0462e1ba5873251864fc21203b39382009907e0a03e5eec39266908b059",
+      "extraction_status": "extracted",
+      "source_relevance": "CORE",
+      "relevance_status": "passed_kabar_kopi_fulltext_coffee_signal",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
     }
   ]
 }
