@@ -154,7 +154,7 @@
       "material_type": "growth",
       "source_original_url": "https://bacaini.id/kopi-blitar-meledak-panggung-nasional-robusta-selorejo-juara-2026",
       "source_content_sha256": null,
-      "extraction_status": "thin_content_or_shell",
+      "extraction_status": "http_error",
       "source_relevance": "CORE",
       "relevance_status": "mevo_screened_coffee_relevance",
       "cluster_id": "lainnya",

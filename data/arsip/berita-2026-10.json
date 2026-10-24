@@ -3331,17 +3331,17 @@
       "tautan": "https://inilahnews.com/bisnis/11917720229/kopi-robusta-kalibaru-banyuwangi-naik-kelas-dprd-jatim-siap-kawal-tembus-pasar-global",
       "tanggal": "2026-10-05T00:00:00.000Z",
       "publication_date_precision": "day",
-      "publication_date_evidence": null,
+      "publication_date_evidence": "2026-10-05T15:16:28+0700",
       "sumber": "inilahnews.com",
-      "ringkasan": "",
-      "coffee_relevance_context": "",
+      "ringkasan": "SURABAYA,INILAHNEWS — Potensi komoditas kopi Robusta asal Kalibaru, Kabupaten Banyuwangi, kian mendapat angin segar. Perwakilan Kelompok Tani (Poktan) Bintang Kopi Sejahtera, Kebonrejo, Ali Mursyid Azisi, berkesempatan melakukan audiensi strategis dengan Ketua Komisi B DPRD Jawa Timur, Anik Maslachah. Pertemuan yang berlangsung di DPRD Jatim, Surabaya, ini d",
+      "coffee_relevance_context": "SURABAYA,INILAHNEWS — Potensi komoditas kopi Robusta asal Kalibaru, Kabupaten Banyuwangi, kian mendapat angin segar. Perwakilan Kelompok Tani (Poktan) Bintang Kopi Sejahtera, Kebonrejo, Ali Mursyid Azisi, berkesempatan melak … SURABAYA,INILAHNEWS — Potensi komoditas kopi Robusta asal Kalibaru, Kabupaten Banyuwangi, kian mendapat angin segar. Perwakilan Kelompok Tani (Poktan) Bintang Kopi Sejahtera, Kebonrejo, Ali Mursyid Azisi, berkesempatan melakukan aud … — Potensi komoditas kopi Robusta asal Kalibaru, Kabupaten Banyuwangi, kian mendapat angin segar. Perwakilan Kelompok Tani (Poktan) Bintang Kopi Sejahtera, Kebonrejo, Ali Mursyid Azisi, berkesempatan melakukan audiensi strategis dengan Ketua Komisi B DPRD Jawa Timur, Anik Maslachah. Pertemuan yang berlangsung di DPRD Jatim",
       "link_type": "publisher_article",
       "source_type": "mevo_curated_growth",
       "source_collection": "artikel_pertumbuhan",
       "material_type": "growth",
       "source_original_url": "https://inilahnews.com/bisnis/11917720229/kopi-robusta-kalibaru-banyuwangi-naik-kelas-dprd-jatim-siap-kawal-tembus-pasar-global",
-      "source_content_sha256": null,
-      "extraction_status": "http_error",
+      "source_content_sha256": "7b123d23bbeccbf19c86f773baf245e0cd826cecc2bb086aeda5e5a153c47246",
+      "extraction_status": "extracted",
       "source_relevance": "CORE",
       "relevance_status": "mevo_screened_coffee_relevance",
       "cluster_id": "lainnya",
@@ -5417,6 +5417,118 @@
       "tanggal": "2026-10-22 00:59:20",
       "sumber": "Jpnn",
       "ringkasan": "JPNN.com, JAKARTA - KOPI merupakan salah satu minuman yang kaya akan kandungan kafein.",
+      "asal": "newsdata",
+      "link_type": "publisher"
+    },
+    {
+      "judul": "Pelaku Industri Dorong Hilirisasi Kopi Indonesia Bernilai Tinggi - Demokratis.co.id",
+      "tautan": "https://demokratis.co.id/industri-hilirisasi-kopi-indonesia",
+      "tanggal": "Fri, 23 Oct 2026 16:06:22 GMT",
+      "sumber": "Demokratis.co.id",
+      "asal": "google_news",
+      "aggregator": "Google News",
+      "link_type": "publisher",
+      "resolution_status": "resolved",
+      "tautan_google_news": "https://news.google.com/rss/articles/CBMia0FVX3lxTE80SFJHYmFWYmxSWHBDMFNZY0w3RW1iay15ZUEwakpMR2lKRTl1ZmdJdzFWVEM0aDFrNWZubDMweFp6TTB4dkdpNjdqejk2azlEbERoc1Yyd2VteldIa2ZoLU01SGRMaDFNbVZR?oc=5"
+    },
+    {
+      "judul": "Wisata Kalsel - Minggu Raya Banjarbaru, Tempat Berburu Kopi dan Bersantai Saat Akhir Pekan",
+      "tautan": "https://banjarmasin.tribunnews.com/travel/1380984/wisata-kalsel-minggu-raya-banjarbaru-tempat-berburu-kopi-dan-bersantai-saat-akhir-pekan",
+      "tanggal": "2026-10-23 15:01:30",
+      "sumber": "Tribun News",
+      "ringkasan": "Di kawasan Minggu Raya, Kota Banjarbaru, masyarakat dapat menemukan beragam pilihan kopi yang dijajakan untuk menemani waktu santai",
+      "asal": "newsdata",
+      "link_type": "publisher"
+    },
+    {
+      "judul": "Excelsa Tapin Pikat Pecinta Kopi dari 10 Negara di Trade Expo Indonesia 2026",
+      "tautan": "https://mediaindonesia.com/nusantara/948022/excelsa-tapin-pikat-pecinta-kopi-dari-10-negara-di-trade-expo-indonesia-2026",
+      "tanggal": "2026-10-23 14:19:00",
+      "sumber": "Mediaindonesia",
+      "ringkasan": "Kopi Excelsa dari Kabupaten Tapin, Kalimantan Selatan, mendapat sambutan hangat dari pengunjung mancanegara dalam Trade Expo Indonesia (TEI) 2026.",
+      "asal": "newsdata",
+      "link_type": "publisher"
+    },
+    {
+      "judul": "Tren Kopi Protein Makin Populer, Apa yang Perlu Diperhatikan? Ini Kata Ahli Gizi",
+      "tautan": "https://www.kompas.com/food/read/2026/10/23/193241675/tren-kopi-protein-makin-populer-apa-yang-perlu-diperhatikan-ini-kata-ahli",
+      "tanggal": "2026-10-23 12:32:41",
+      "sumber": "Kompas.com",
+      "ringkasan": "Tren kopi kekinian dengan tambahan protein whey semakin populer, apa yang perlu diperhatikan? simak ini penjelasan ahli gizi.",
+      "asal": "newsdata",
+      "link_type": "publisher"
+    },
+    {
+      "judul": "Punya Ribuan Hektare Kebun Kopi, Desa Air Bening Rejang Lebong Berinovasi Bikin Parfum",
+      "tautan": "https://bengkulu.tribunnews.com/rejang-lebong/107848/punya-ribuan-hektare-kebun-kopi-desa-air-bening-rejang-lebong-berinovasi-bikin-parfum",
+      "tanggal": "2026-10-23 10:12:53",
+      "sumber": "Tribun News",
+      "ringkasan": "Tak hanya menjual hasil panen dalam bentuk biji kopi kering atau green bean, masyarakat mulai mencoba mengolah kopi menjadi produk kreatif.",
+      "asal": "newsdata",
+      "link_type": "publisher"
+    },
+    {
+      "judul": "Kopi Asal Jabar Semakin Harum di Pasar Internasional, Harga Lelang Berpotensi Tembus 80 Dollar AS",
+      "tautan": "https://jabar.tribunnews.com/metro-bandung/1187868/kopi-asal-jabar-semakin-harum-di-pasar-internasional-harga-lelang-berpotensi-tembus-80-dollar-as",
+      "tanggal": "2026-10-23 09:36:37",
+      "sumber": "Tribun News",
+      "ringkasan": "Kopi Indonesia berpeluang meraih harga premium di pasar internasional ketika kualitasnya mendapat pengakuan dari pembeli global.",
+      "asal": "newsdata",
+      "link_type": "publisher"
+    },
+    {
+      "judul": "Rawat 800 Pohon, Petani Modio Harap Festival Kopi Papua Tengah Buka Peluang Pasar",
+      "tautan": "https://papua.tribunnews.com/papua-tengah/130924/rawat-800-pohon-petani-modio-harap-festival-kopi-papua-tengah-buka-peluang-pasar",
+      "tanggal": "2026-10-23 06:23:43",
+      "sumber": "Tribun News",
+      "ringkasan": "Kini, Andreas berharap Festival Kopi Papua Tengah 2026 yang akan digelar di Kabupaten Nabire pada 29–30 Oktober",
+      "asal": "newsdata",
+      "link_type": "publisher"
+    },
+    {
+      "judul": "Tantangan Meningkatkan Nilai Tambah Industri Kopi - investor.id",
+      "tautan": "https://investor.id/business/459169/tantangan-meningkatkan-nilai-tambah-industri-kopi",
+      "tanggal": "Fri, 23 Oct 2026 06:01:35 GMT",
+      "sumber": "investor.id",
+      "asal": "google_news",
+      "aggregator": "Google News",
+      "link_type": "publisher",
+      "resolution_status": "resolved",
+      "tautan_google_news": "https://news.google.com/rss/articles/CBMijgFBVV95cUxQZ051eWgzSEZQU3FnQnQ4OGlZMmFVSk1ZTnZDb0VaMUhZRlVRMS04UVowMWRHNnk4STVERmpvMzhuNlNsX2c0Xzk0YUtoUXJjVnpiemFuSmdDSEtkQ2NERk9FYmFFMmFidTZjSHRwMUJEb3NaRXRsNlNOdmNzNEpZS3NOOEUxeDhGOHl2UTRn?oc=5"
+    },
+    {
+      "judul": "Up Peak Hotel Semarang Bersama Project Ruang Rasa Hadirkan Kelas Kopi",
+      "tautan": "https://jateng.tribunnews.com/travel/1270408/up-peak-hotel-semarang-bersama-project-ruang-rasa-hadirkan-kelas-kopi",
+      "tanggal": "2026-10-23 05:41:26",
+      "sumber": "Tribun News",
+      "ringkasan": "Manual Brewing Course Vol. 4 pada Minggu, 18 Oktober 2026, keduanya kembali bersiap menggelar Basic Latte Art Course Batch 3",
+      "asal": "newsdata",
+      "link_type": "publisher"
+    },
+    {
+      "judul": "Petani Bondowoso Meninggal Tertimpa Pohon Mati Saat Buat Sekat Api di Kebun Kopi",
+      "tautan": "https://madura.tribunnews.com/tapal-kuda/233120/petani-bondowoso-meninggal-tertimpa-pohon-mati-saat-buat-sekat-api-di-kebun-kopi",
+      "tanggal": "2026-10-23 04:53:36",
+      "sumber": "Tribun News",
+      "ringkasan": "Seorang petani bernama Sam (55), asal Bondowoso meninggal dunia setelah tertimpa pohon selasihan yang roboh di kawasan kebun kopi.",
+      "asal": "newsdata",
+      "link_type": "publisher"
+    },
+    {
+      "judul": "Podcast Kaum Tengah: In This Economy, Dennis Adhiswara Akui Berhemat untuk Kopi hingga Kucing",
+      "tautan": "https://www.liputan6.com/showbiz/read/8319320/podcast-kaum-tengah-in-this-economy-dennis-adhiswara-akui-berhemat-untuk-kopi-hingga-kucing",
+      "tanggal": "2026-10-23 02:00:00",
+      "sumber": "Liputan6",
+      "ringkasan": "Di Podcast Kaum Tengah, Dennis Adhiswara terapkan istilah harga kaki lima, tetapi tetap memiliki kualitas bintang lima saat memilih sesuatu.",
+      "asal": "newsdata",
+      "link_type": "publisher"
+    },
+    {
+      "judul": "Dari Kebun ke Cangkir, Camintoran Coffee Kembangkan Kopi Lokal Solok Selatan",
+      "tautan": "https://padek.jawapos.com/solok-selatan/2610230002/dari-kebun-ke-cangkir-camintoran-coffee-kembangkan-kopi-lokal-solok-selatan",
+      "tanggal": "2026-10-23 01:31:42",
+      "sumber": "Padek News",
+      "ringkasan": "ONLY AVAILABLE IN PAID PLANS",
       "asal": "newsdata",
       "link_type": "publisher"
     }
