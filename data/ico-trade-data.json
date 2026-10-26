@@ -3,7 +3,7 @@
   "source": "International Coffee Organization (ICO), Coffee Trade Globe",
   "source_url": "https://data.ico.org/globe/#m=flows&f=export&y=2025&c=ID",
   "api_endpoint": "https://data.ico.org/globe/api/v1/globe/bundle?year=2025",
-  "fetched_at": "2026-10-25T02:58:55.411Z",
+  "fetched_at": "2026-10-26T02:57:45.806Z",
   "api_generated_at": "2026-10-23T15:20:47.954Z",
   "trade_window_through": "2026-08",
   "year": 2025,
