@@ -111,7 +111,7 @@ ${icoPanel}
   const title = en ? 'Coffee Market Data & Trends | Kabar Kopi' : 'Data & Tren Kopi Dunia | Kabar Kopi';
   const description = en ? 'Current Arabica and ICO Robusta reference indicators, USD/IDR exchange rate, separate BPS and International Coffee Organization data on Indonesian coffee exports, USDA PSD estimates, and a separately attributed Ken Research processed-coffee market estimate—with sources, units, periods, and caveats.' : 'Harga acuan Arabika dan indikator Robusta ICO, kurs USD/IDR, data ekspor kopi Indonesia dari BPS dan International Coffee Organization yang disajikan terpisah, estimasi USDA PSD, serta estimasi komersial Ken Research yang dilabeli terpisah—dengan sumber, satuan, periode, dan batas penggunaan.';
   const schema = {'@context':'https://schema.org','@type':'Dataset','name':title,'description':description,'url':canonical,'dateModified':updated,'inLanguage':lang,'creator':{'@type':'Organization','name':'Kabar Kopi'},'variableMeasured':['Arabica C-Market reference price','ICO Robusta Daily Indicator','IDR/USD reference exchange rate','Indonesia coffee exports reported by BPS','Indonesia coffee exports and destination partners reported by ICO in 60-kg bags and USD customs value','Indonesia coffee production, exports, domestic consumption, and ending stocks','Ken Research secondary commercial estimate of processed and packaged coffee market value']};
-  return {path:pathName, html:shell({lang,title,description,canonical,opposite,body: body + blogArchive,schema})};
+  return {path:pathName, lastmod:updated, html:shell({lang,title,description,canonical,opposite,body: body + blogArchive,schema})};
 }
 
 function calculatorPage(lang) {
@@ -136,7 +136,7 @@ function calculatorPage(lang) {
   const title = en ? 'Coffee Export Calculator | FOB & Landed Cost Estimate | Kabar Kopi' : 'Kalkulator Ekspor Kopi | Estimasi FOB & Landed Cost | Kabar Kopi';
   const description = labels.desc;
   const schema = {'@context':'https://schema.org','@type':'SoftwareApplication','name':title,'applicationCategory':'BusinessApplication','operatingSystem':'Any','url':canonical,'description':description,'offers':{'@type':'Offer','price':'0','priceCurrency':'USD'},'creator':{'@type':'Organization','name':'Kabar Kopi'}};
-  return {path:pathName, html:shell({lang,title,description,canonical,opposite,body,schema})};
+  return {path:pathName, lastmod:isoDate(market.meta?.lastUpdated), html:shell({lang,title,description,canonical,opposite,body,schema})};
 }
 
 function exportRequirementsPage(lang) {
@@ -251,7 +251,7 @@ function update(){const code=countrySelect.value,product=productSelect.value,mar
  const refs=key==='us'?[['FDA · importing food','https://www.fda.gov/importing-food-products-united-states'],['FDA · FSVP importer duties','https://www.fda.gov/food/food-safety-modernization-act-fsma/final-rule-foreign-supplier-verification-programs-fsvp-key-requirements']]:key==='eu'?[['EUR-Lex · current EUDR text','https://eur-lex.europa.eu/legal-content/en/ALL/?uri=CELEX:02023R1115-20251226'],...(product==='instant'?[['EUR-Lex · 2026 coffee-extract amendment','https://eur-lex.europa.eu/eli/reg_del/2026/2102/oj/eng']]:[]),['European Commission · pesticide MRLs','https://food.ec.europa.eu/plants/pesticides/maximum-residue-levels_en'],['European Commission · contaminants','https://food.ec.europa.eu/food-safety/chemical-safety/contaminants_en']]:key.startsWith('jp')?[['MAFF · plant import requirements','https://www.maff.go.jp/pps/j/introduction/import/index.html'],['MAFF · plant quarantine FAQ / certificates','https://www.maff.go.jp/pps/j/introduction/english.html']]:key==='kr'?[['MFDS · imported food safety and foreign facility registration','https://www.mfds.go.kr/eng/wpge/m_11/de011002l001.do']]:key==='sg'?[['Singapore Food Agency · commercial food import','https://www.sfa.gov.sg/food-import-export/commercial-imports/what-you-need-to-know-for-import-of-food']]:key==='au'?[['DAFF · plant-based food imports','https://www.agriculture.gov.au/biosecurity-trade/import/goods/plant-products/importing-plant-products-for-human-consumption'],['BICON · import-condition database','https://bicon.agriculture.gov.au/BiconWeb4.0']]:key==='my'?[['Kemendag · LAMANSITU market-requirements search','https://lamansitu.kemendag.go.id/']]:key==='cn'?[['GACC · CIFER registration portal','https://cifer.singlewindow.cn/'],['Kemendag · LAMANSITU market-requirements search','https://lamansitu.kemendag.go.id/']]:[['Kemendag · LAMANSITU market-requirements search','https://lamansitu.kemendag.go.id/']];
  refs.forEach(([label,url],i)=>{if(i)sources.append(' · ');const a=document.createElement('a');a.href=url;a.target='_blank';a.rel='noopener noreferrer';a.textContent=label;sources.append(a)});
 }countrySelect.addEventListener('change',update);productSelect.addEventListener('change',update);document.getElementById('print-checklist').addEventListener('click',()=>window.print());document.getElementById('print-guide').addEventListener('click',()=>{const cards=[...document.querySelectorAll('.document-guide-panel .guide-card')],wasOpen=cards.map(card=>card.open);document.body.classList.add('print-guide-mode');cards.forEach(card=>card.open=true);const restore=()=>{document.body.classList.remove('print-guide-mode');cards.forEach((card,i)=>card.open=wasOpen[i]);window.removeEventListener('afterprint',restore)};window.addEventListener('afterprint',restore);window.print();setTimeout(restore,1000)});update();</script>`;
-  return {path:pathName, html:shell({lang,title,description,canonical,opposite,body,schema})};
+  return {path:pathName, lastmod:'', html:shell({lang,title,description,canonical,opposite,body,schema})};
 }
 
 const allPages = [dataPage('id'), dataPage('en'), calculatorPage('id'), calculatorPage('en'), exportRequirementsPage('id'), exportRequirementsPage('en')];
@@ -264,10 +264,13 @@ for (const page of pages) {
 
 const sitemapPath = path.join(ROOT, 'sitemap.xml');
 let sitemap = fs.readFileSync(sitemapPath, 'utf8');
-const pageLastmod = new Date().toISOString().slice(0, 10);
 for (const page of pages) {
   const url = `${SITE}${page.path}`;
-  if (!sitemap.includes(`<loc>${url}</loc>`)) sitemap = sitemap.replace('</urlset>', `  <url><loc>${url}</loc><lastmod>${pageLastmod}</lastmod></url>\n</urlset>`);
+  const escapedUrl = url.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const entry = new RegExp(`<url><loc>${escapedUrl}</loc>(?:<lastmod>[^<]*</lastmod>)?</url>`);
+  const replacement = `<url><loc>${url}</loc>${page.lastmod ? `<lastmod>${page.lastmod}</lastmod>` : ''}</url>`;
+  if (entry.test(sitemap)) sitemap = sitemap.replace(entry, replacement);
+  else sitemap = sitemap.replace('</urlset>', `  ${replacement}\n</urlset>`);
 }
 fs.writeFileSync(sitemapPath, sitemap);
 console.log(`Generated ${pages.length} crawlable data, calculator, and export-requirement pages; added them to sitemap.xml.`);

@@ -136,10 +136,15 @@ for (const [lang, route] of [['id', 'kalender-event-kopi'], ['en', 'en/coffee-ev
 const sitemapPath = path.join(ROOT, 'sitemap.xml');
 if (fs.existsSync(sitemapPath)) {
   let sitemap = fs.readFileSync(sitemapPath, 'utf8');
-  const lastmod = new Date().toISOString().slice(0, 10);
+  const fetchedAt = snapshot.fetched_at ? new Date(snapshot.fetched_at) : null;
+  const lastmod = fetchedAt && Number.isFinite(fetchedAt.getTime()) ? fetchedAt.toISOString().slice(0, 10) : '';
   for (const route of ['/kalender-event-kopi/', '/en/coffee-events-calendar/']) {
     const url = `${SITE}${route}`;
-    if (!sitemap.includes(`<loc>${url}</loc>`)) sitemap = sitemap.replace('</urlset>', `  <url><loc>${url}</loc><lastmod>${lastmod}</lastmod></url>\n</urlset>`);
+    const entry = `<url><loc>${url}</loc>${lastmod ? `<lastmod>${lastmod}</lastmod>` : ''}</url>`;
+    const escapedUrl = url.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+    const existing = new RegExp(`<url><loc>${escapedUrl}</loc>(?:<lastmod>[^<]*</lastmod>)?</url>`);
+    if (existing.test(sitemap)) sitemap = sitemap.replace(existing, entry);
+    else sitemap = sitemap.replace('</urlset>', `  ${entry}\n</urlset>`);
   }
   fs.writeFileSync(sitemapPath, sitemap);
 }
