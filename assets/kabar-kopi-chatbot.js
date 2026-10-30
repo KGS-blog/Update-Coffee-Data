@@ -157,7 +157,9 @@
   };
   const css=document.createElement('link'); css.rel='stylesheet'; css.href='/assets/kabar-kopi-chatbot.css'; document.head.append(css);
   renderShell(); document.body.append(button,dialog);
-  button.addEventListener('click',()=>{ renderShell(); dialog.showModal(); dialog.querySelector('[name=q]').focus(); });
+  const openGuide = () => { renderShell(); if(!dialog.open) dialog.showModal(); dialog.querySelector('[name=q]').focus(); };
+  button.addEventListener('click',openGuide);
+  document.querySelectorAll('[data-open-kabar-kopi]').forEach(trigger=>trigger.addEventListener('click',openGuide));
   document.documentElement.addEventListener('langchange',renderShell);
   new MutationObserver(()=>{ if(indexedLanguage && indexedLanguage!==langNow()){indexedLanguage='';corpus=[];} if(!dialog.open) renderShell(); }).observe(document.documentElement,{attributes:true,attributeFilter:['lang']});
 })();
