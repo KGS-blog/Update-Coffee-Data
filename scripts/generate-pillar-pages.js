@@ -29,13 +29,16 @@ const articleUrl = (item, language) => `${SITE}/analisis-kopi/${slugify(item.clu
 const authoredSnapshotPath = path.join(ROOT, 'data/blog-pillar-articles.json');
 const authored = fs.existsSync(authoredSnapshotPath) ? JSON.parse(fs.readFileSync(authoredSnapshotPath, 'utf8')).articles || [] : [];
 const authoredDate = article => {
-  for (const value of [article.kabar_featured_at, article.datePublished]) if (value && Number.isFinite(Date.parse(value))) return new Date(value).toISOString();
+  for (const value of [article.kabar_featured_at, article.datePublished, article.date]) if (value && Number.isFinite(Date.parse(value))) return new Date(value).toISOString();
   return '';
 };
 const now = Date.now();
-const authoredFor = pillar => authored.filter(article => article.kabar_pillar === pillar).map(article => ({ article, date: authoredDate(article) }))
+const authoredForPillar = pillar => authored.filter(article => article.kabar_pillar === pillar && article.status === 'Published').map(article => ({ article, date: authoredDate(article) }))
+  .filter(item => item.date && Date.parse(item.date) <= now)
+  .sort((a,b) => Date.parse(b.date) - Date.parse(a.date));
+const authoredFor = pillar => authoredForPillar(pillar)
   .filter(item => item.date && Date.parse(item.date) <= now && now - Date.parse(item.date) <= 7 * 86400000)
-  .sort((a,b) => Date.parse(b.date) - Date.parse(a.date))[0] || null;
+  [0] || null;
 const authoredPath = (article, language) => `/artikel-pilar/${slugify(article.title_id)}-${language}-${article.id}.html`;
 const featuredNews = authoredFor('berita');
 const authoredPillarLabels = {
@@ -51,6 +54,16 @@ function authoredFeature(article, pillar, language) {
   const label = authoredPillarLabels[pillar] || ['Berita Terkini', 'Latest News'];
   const href = `${SITE}${authoredPath(article, language)}`;
   return `<section class="panel"><div class="eyebrow">${esc(en ? label[1] : label[0])} · ${en ? 'Bylined article · featured for 7 days' : 'Artikel penulis · sorotan 7 hari'}</div><h2><a href="${href}">${esc(en ? article.title_en : article.title_id)}</a></h2><p>${esc(en ? article.desc_en : article.desc_id)}</p><p class="muted">${date ? new Intl.DateTimeFormat(en ? 'en-GB' : 'id-ID', { day:'numeric', month:'short', year:'numeric', timeZone:'Asia/Jakarta' }).format(new Date(date)) : ''}</p><a href="${href}">${en ? 'Read the full article →' : 'Baca artikel lengkap →'}</a></section>`;
+}
+function authoredArchive(pillar, language) {
+  const en = language === 'en';
+  const items = authoredForPillar(pillar);
+  if (!items.length) return '';
+  return `<section class="panel"><div class="eyebrow">${en ? 'Kabar Kopi · permanent archive' : 'Kabar Kopi · arsip artikel'}</div><h2>${en ? 'Published articles' : 'Artikel terbit'}</h2>${items.map(({article,date}) => {
+    const title = en ? article.title_en : article.title_id;
+    const description = en ? article.desc_en : article.desc_id;
+    return `<article class="story"><h3><a href="${SITE}${authoredPath(article, language)}">${esc(title)}</a></h3><p class="muted">${date ? new Intl.DateTimeFormat(en ? 'en-GB' : 'id-ID', { day:'numeric', month:'short', year:'numeric', timeZone:'Asia/Jakarta' }).format(new Date(date)) : ''}</p>${description ? `<p>${esc(description)}</p>` : ''}</article>`;
+  }).join('')}</section>`;
 }
 
 const pillarLinks = [
@@ -95,6 +108,8 @@ for (const config of pages) {
   }[config.idPath];
   if (authoredPillar) {
     const item = authoredFor(authoredPillar)?.article;
+    config.bodyId = authoredArchive(authoredPillar, 'id') + config.bodyId;
+    config.bodyEn = authoredArchive(authoredPillar, 'en') + config.bodyEn;
     if (item) {
       config.bodyId = authoredFeature(item, authoredPillar, 'id') + config.bodyId;
       config.bodyEn = authoredFeature(item, authoredPillar, 'en') + config.bodyEn;

@@ -10,6 +10,8 @@ const market = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/market-data.json
 const exportsFeed = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/ekspor.json'), 'utf8'));
 const psd = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/psd.json'), 'utf8'));
 const ico = fs.existsSync(path.join(ROOT, 'data/ico-trade-data.json')) ? JSON.parse(fs.readFileSync(path.join(ROOT, 'data/ico-trade-data.json'), 'utf8')) : null;
+const blogArticlesPath = path.join(ROOT, 'data/blog-pillar-articles.json');
+const blogArticles = fs.existsSync(blogArticlesPath) ? (JSON.parse(fs.readFileSync(blogArticlesPath, 'utf8')).articles || []) : [];
 const esc = value => String(value ?? '').replace(/[&<>"']/g, c => ({ '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[c]));
 const idr = new Intl.NumberFormat('id-ID', { maximumFractionDigits: 0 });
 const usd = new Intl.NumberFormat('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
@@ -59,6 +61,17 @@ function dataPage(lang) {
   const canonical = SITE + pathName;
   const opposite = SITE + (en ? '/data-tren-kopi/' : '/en/coffee-market-data/');
   const locale = en ? 'en-US' : 'id-ID';
+  const archiveArticles = blogArticles.filter(article => article.status === 'Published' && article.kabar_pillar === 'data-tren')
+    .map(article => ({ article, date: article.kabar_featured_at || article.datePublished || article.date || '' }))
+    .filter(item => item.date && Number.isFinite(Date.parse(item.date)) && Date.parse(item.date) <= Date.now())
+    .sort((a,b) => Date.parse(b.date) - Date.parse(a.date));
+  const archiveSlug = value => String(value || '').normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/&/g,' dan ').replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,70) || 'analisis-pasar-kopi';
+  const blogArchive = archiveArticles.length ? `<section class="panel"><div class="eyebrow">${en ? 'Kabar Kopi · permanent archive' : 'Kabar Kopi · arsip artikel'}</div><h2>${en ? 'Published articles' : 'Artikel terbit'}</h2>${archiveArticles.map(({article,date}) => {
+    const title = en ? article.title_en : article.title_id;
+    const description = en ? article.desc_en : article.desc_id;
+    const href = `${SITE}/artikel-pilar/${archiveSlug(article.title_id)}-${en?'en':'id'}-${article.id}.html`;
+    return `<article class="stat"><h3><a href="${href}">${esc(title)}</a></h3><p class="muted">${new Intl.DateTimeFormat(locale, { day:'numeric', month:'short', year:'numeric', timeZone:'Asia/Jakarta' }).format(new Date(date))}</p>${description ? `<p>${esc(description)}</p>` : ''}</article>`;
+  }).join('')}</section>` : '';
   const exportRows = exportTotals.length ? exportTotals.map(x => `<tr><th>${x.year}</th><td>${fmt(x.volume,locale)} ${en?'tonnes':'ton'}</td><td>US$ ${usd.format(x.usd/1e9)} ${en?'billion':'miliar'}</td></tr>`).join('') : `<tr><td colspan="3">${en?'No BPS export records are currently available.':'Belum ada data ekspor BPS yang tersedia.'}</td></tr>`;
   const icoTopRows = (ico?.top_destinations || []).slice(0,5).map(x => `<tr><th>${esc(en ? x.name : (x.name_id || x.name))}</th><td>${fmt(x.bags_60kg,locale)}</td><td>${fmt(x.tonnes,locale)}</td></tr>`).join('');
   const rankLabels = { export_volume:['Export volume','Peringkat volume ekspor'], import_volume:['Import volume','Peringkat volume impor'], reexport_volume:['Re-export volume','Peringkat volume re-ekspor'], production:['Production','Peringkat produksi'], consumption:['Consumption','Peringkat konsumsi'] };
@@ -98,7 +111,7 @@ ${icoPanel}
   const title = en ? 'Coffee Market Data & Trends | Kabar Kopi' : 'Data & Tren Kopi Dunia | Kabar Kopi';
   const description = en ? 'Current Arabica and ICO Robusta reference indicators, USD/IDR exchange rate, separate BPS and International Coffee Organization data on Indonesian coffee exports, USDA PSD estimates, and a separately attributed Ken Research processed-coffee market estimate—with sources, units, periods, and caveats.' : 'Harga acuan Arabika dan indikator Robusta ICO, kurs USD/IDR, data ekspor kopi Indonesia dari BPS dan International Coffee Organization yang disajikan terpisah, estimasi USDA PSD, serta estimasi komersial Ken Research yang dilabeli terpisah—dengan sumber, satuan, periode, dan batas penggunaan.';
   const schema = {'@context':'https://schema.org','@type':'Dataset','name':title,'description':description,'url':canonical,'dateModified':updated,'inLanguage':lang,'creator':{'@type':'Organization','name':'Kabar Kopi'},'variableMeasured':['Arabica C-Market reference price','ICO Robusta Daily Indicator','IDR/USD reference exchange rate','Indonesia coffee exports reported by BPS','Indonesia coffee exports and destination partners reported by ICO in 60-kg bags and USD customs value','Indonesia coffee production, exports, domestic consumption, and ending stocks','Ken Research secondary commercial estimate of processed and packaged coffee market value']};
-  return {path:pathName, html:shell({lang,title,description,canonical,opposite,body,schema})};
+  return {path:pathName, html:shell({lang,title,description,canonical,opposite,body: body + blogArchive,schema})};
 }
 
 function calculatorPage(lang) {
@@ -240,7 +253,8 @@ function update(){const code=countrySelect.value,product=productSelect.value,mar
   return {path:pathName, html:shell({lang,title,description,canonical,opposite,body,schema})};
 }
 
-const pages = [dataPage('id'), dataPage('en'), calculatorPage('id'), calculatorPage('en'), exportRequirementsPage('id'), exportRequirementsPage('en')];
+const allPages = [dataPage('id'), dataPage('en'), calculatorPage('id'), calculatorPage('en'), exportRequirementsPage('id'), exportRequirementsPage('en')];
+const pages = process.env.KABAR_PAGE_ONLY ? allPages.filter(page => page.path === process.env.KABAR_PAGE_ONLY) : allPages;
 for (const page of pages) {
   const output = path.join(ROOT, page.path.replace(/^\//, ''), 'index.html');
   fs.mkdirSync(path.dirname(output), { recursive: true });
