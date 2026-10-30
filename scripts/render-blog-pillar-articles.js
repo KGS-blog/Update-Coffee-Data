@@ -136,7 +136,13 @@ for (const file of ['index.html','kabar-kopi.html']) {
       const cardAttributes = new RegExp(`data-pillar-card="${pillar}"(?: data-has-author-article="true" data-author-expires-at="[^"]*")*`);
       html = html.replace(cardAttributes, `data-pillar-card="${pillar}" data-has-author-article="true" data-author-expires-at="${expiresAt}"`);
     }
-    html = html.replace(marker, homeTeaser(article, pillar));
+    const teaserHtml = homeTeaser(article, pillar);
+    if (html.includes(marker)) {
+      html = html.replace(marker, teaserHtml);
+    } else if (article) {
+      const emptyAuthorSlot = `<div class="home-pillar-author" data-pillar-author="${pillar}"></div>`;
+      html = html.replace(emptyAuthorSlot, `<div class="home-pillar-author" data-pillar-author="${pillar}">${teaserHtml}</div>`);
+    }
   }
   html = html.replace('<!-- BLOG_PILLAR_DATA_TREN -->', teaser(dataLead, 'data-tren') || '<p class="section-intro">Harga acuan kopi terbaru, ringkasan perubahan pasar, dan data ekspor Indonesia. Angka diperbarui dari feed berkala dan ditautkan ke sumbernya.</p>');
   html = html.replace('<!-- BLOG_PILLAR_BERITA -->', newsLead ? `${teaser(newsLead, 'berita')}<p class="source-line id-copy"><a id="weekly-brief-link" href="/rangkuman-pekanan/">Baca rangkuman kopi pekan ini →</a></p><p class="source-line en-copy"><a id="weekly-brief-link-en" href="/en/weekly-coffee-brief/">Read this week’s coffee brief →</a></p>` : '<p class="section-intro" style="margin:4px 0 0"><span class="id-copy">Berita kopi dari berbagai sumber, disatukan dalam satu feed dan dikelompokkan menurut topik.</span><span class="en-copy">Coffee news from multiple sources, brought together in one feed and grouped by topic.</span></p><p class="source-line"><a id="weekly-brief-link" href="/rangkuman-pekanan/">Baca rangkuman kopi pekan ini →</a></p>');
