@@ -68,11 +68,11 @@ const dateForFeature = article => {
   return '';
 };
 const snapshot = readJson('blog-pillar-articles.json', { articles: [] });
-const now = Date.now(), sevenDays = 7 * 24 * 60 * 60 * 1000;
+const now = Date.now();
 const authorNews = (snapshot.articles || [])
   .filter(article => article.kabar_pillar === 'berita' && String(article.status || '').toLowerCase() === 'published')
   .map(article => ({ article, date: dateForFeature(article) }))
-  .filter(item => item.date && Date.parse(item.date) <= now && now - Date.parse(item.date) <= sevenDays)
+  .filter(item => item.date && Date.parse(item.date) <= now)
   .sort((a, b) => Date.parse(b.date) - Date.parse(a.date))[0] || null;
 const slugify = value => String(value || '').normalize('NFKD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/&/g, ' dan ').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 70) || 'artikel-kopi';
 const articlePath = (article, lang) => `/artikel-pilar/${slugify(article.title_id)}-${lang}-${article.id}.html`;
@@ -80,13 +80,12 @@ const escapeContent = value => String(value || '').replace(/<[^>]*>/g, ' ').repl
 const authorFeature = authorNews ? (() => {
   const article = authorNews.article;
   const publishedAt = new Intl.DateTimeFormat('id-ID', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'Asia/Jakarta' }).format(new Date(authorNews.date));
-  return `<div class="pillar-article-feature"><div class="eyebrow"><span class="id-copy">Berita terkini · Tulisan penulis</span><span class="en-copy">Latest news · Bylined article</span></div><h3><a class="id-copy" href="${articlePath(article, 'id')}">${escape(article.title_id)}</a><a class="en-copy" href="${articlePath(article, 'en')}">${escape(article.title_en)}</a></h3><p class="pillar-feature-summary"><span class="id-copy">${escape(article.desc_id)}</span><span class="en-copy">${escape(article.desc_en)}</span></p>${article.content_id ? `<p class="pillar-feature-context"><span class="id-copy">${escape(escapeContent((String(article.content_id).match(/<p\b[^>]*>([\s\S]*?)<\/p>/i) || [,''])[1]).slice(0, 240))}</span><span class="en-copy">${escape(escapeContent((String(article.content_en).match(/<p\b[^>]*>([\s\S]*?)<\/p>/i) || [,''])[1]).slice(0, 240))}</span></p>` : ''}<div class="pillar-author-meta"><span class="id-copy">Terbit ${publishedAt} · ditampilkan 7 hari</span><span class="en-copy">Published ${new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'Asia/Jakarta' }).format(new Date(authorNews.date))} · featured for 7 days</span></div><a class="home-feature-link id-copy" href="${articlePath(article, 'id')}">Baca artikel lengkap →</a><a class="home-feature-link en-copy" href="${articlePath(article, 'en')}">Read the full article →</a></div>`;
+  return `<div class="pillar-article-feature"><div class="eyebrow"><span class="id-copy">Berita terkini · Tulisan penulis</span><span class="en-copy">Latest news · Bylined article</span></div><h3><a class="id-copy" href="${articlePath(article, 'id')}">${escape(article.title_id)}</a><a class="en-copy" href="${articlePath(article, 'en')}">${escape(article.title_en)}</a></h3><p class="pillar-feature-summary"><span class="id-copy">${escape(article.desc_id)}</span><span class="en-copy">${escape(article.desc_en)}</span></p>${article.content_id ? `<p class="pillar-feature-context"><span class="id-copy">${escape(escapeContent((String(article.content_id).match(/<p\b[^>]*>([\s\S]*?)<\/p>/i) || [,''])[1]).slice(0, 240))}</span><span class="en-copy">${escape(escapeContent((String(article.content_en).match(/<p\b[^>]*>([\s\S]*?)<\/p>/i) || [,''])[1]).slice(0, 240))}</span></p>` : ''}<div class="pillar-author-meta"><span class="id-copy">Terbit ${publishedAt} · sorotan terbaru</span><span class="en-copy">Published ${new Intl.DateTimeFormat('en-GB', { day: 'numeric', month: 'short', year: 'numeric', timeZone: 'Asia/Jakarta' }).format(new Date(authorNews.date))} · latest feature</span></div><a class="home-feature-link id-copy" href="${articlePath(article, 'id')}">Baca artikel lengkap →</a><a class="home-feature-link en-copy" href="${articlePath(article, 'en')}">Read the full article →</a></div>`;
 })() : '';
 const leadFallback = visibleNews.length
   ? `<div class="eyebrow"><span class="id-copy">Berita terkini · Pilihan feed</span><span class="en-copy">Latest news · From the feed</span></div><p class="feature-topic">${categoryOf(visibleNews[0])}</p><a class="lead-link" href="${escape(linkOf(visibleNews[0]))}" target="_blank" rel="noopener noreferrer"><h2>${escape(titleOf(visibleNews[0]))}</h2></a><p class="lead-summary">${escape(visibleNews[0].ringkasan || visibleNews[0].source_description || visibleNews[0].summary || visibleNews[0].description || visibleNews[0].deskripsi || visibleNews[0].content_excerpt || '')}</p><p class="lead-meta">${escape(sourceOf(visibleNews[0]))} · <span class="id-copy">${escape(formatDate(visibleNews[0]))} · Sumber artikel langsung</span><span class="en-copy">${escape(formatDate(visibleNews[0], 'en-GB'))} · Direct publisher source</span></p><a class="home-feature-link id-copy" href="/berita-kopi/">Jelajahi berita terkini →</a><a class="home-feature-link en-copy" href="/en/coffee-news/">Explore latest news →</a>`
   : `<div class="eyebrow"><span class="id-copy">Berita terkini</span><span class="en-copy">Latest news</span></div><h2>Belum ada berita yang memenuhi kriteria pilihan.</h2><p>Berita feed tetap tersedia di halaman berita.</p><a class="home-feature-link id-copy" href="/berita-kopi/">Jelajahi berita terkini →</a><a class="home-feature-link en-copy" href="/en/coffee-news/">Explore latest news →</a>`;
-const expiresAt = authorNews ? new Date(Date.parse(authorNews.date) + sevenDays).toISOString() : '';
-const featureAttrs = authorNews ? ` data-has-author-article="true" data-author-expires-at="${escape(expiresAt)}"` : '';
+const featureAttrs = authorNews ? ' data-has-author-article="true"' : '';
 const lead = `<article id="lead-story" data-pillar-card="berita"${featureAttrs} class="home-feature-card feed-feature"><div class="home-pillar-fallback" data-pillar-fallback>${leadFallback}</div><div class="home-pillar-author" data-pillar-author="berita">${authorFeature}</div></article>`;
 const latest = visibleNews.slice(authorNews ? 0 : 1, authorNews ? 4 : 5).map(article => {
   const summary = article.ringkasan || article.source_description || article.summary || article.description || article.deskripsi || article.content_excerpt || '';
@@ -103,4 +102,4 @@ for (const filename of ['index.html', 'kabar-kopi.html']) {
   }
   if (updated !== html) fs.writeFileSync(htmlPath, updated);
 }
-console.log(`Rendered ${visibleNews.length} classified publisher headlines; active bylined feature ${authorNews ? 'retained through ' + expiresAt : 'not found'}.`);
+console.log(`Rendered ${visibleNews.length} classified publisher headlines; latest bylined feature ${authorNews ? 'shown until a newer article is published' : 'not found'}.`);

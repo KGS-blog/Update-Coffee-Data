@@ -8,7 +8,6 @@ const snapshotPath = path.join(ROOT, 'data/blog-pillar-articles.json');
 const snapshot = fs.existsSync(snapshotPath) ? JSON.parse(fs.readFileSync(snapshotPath, 'utf8')) : { articles: [] };
 const articles = Array.isArray(snapshot.articles) ? snapshot.articles : [];
 const now = Date.now();
-const sevenDays = 7 * 24 * 60 * 60 * 1000;
 const pillars = {
   harga: { id: 'Harga & Tracking Kopi', en: 'Coffee Prices & Tracking', marker: 'HARGA' },
   ekspor: { id: 'Panduan Ekspor Kopi', en: 'Coffee Export Guide', marker: 'EKSPOR' },
@@ -47,7 +46,7 @@ function safeArticleHtml(value) {
 function currentFor(pillar) {
   return articles.filter(article => article.kabar_pillar === pillar)
     .map(article => ({ article, date: articleDate(article) }))
-    .filter(item => item.date && Date.parse(item.date) <= now && now - Date.parse(item.date) <= sevenDays)
+    .filter(item => item.date && Date.parse(item.date) <= now)
     .sort((a,b) => Date.parse(b.date) - Date.parse(a.date))[0]?.article || null;
 }
 function homeContext(article, field) {
@@ -80,7 +79,7 @@ function teaser(article, pillar) {
   const hrefEn = articlePath(article, 'en');
   const title = `<span class="id-copy">${esc(article.title_id)}</span><span class="en-copy">${esc(article.title_en)}</span>`;
   const desc = `<span class="id-copy">${esc(article.desc_id)}</span><span class="en-copy">${esc(article.desc_en)}</span>`;
-  const eyebrow = en ? ['Sorotan penulis · 7 hari','Author spotlight · 7 days'] : ['Tulisan penulis · 7 hari','Bylined article · 7 days'];
+  const eyebrow = en ? ['Artikel unggulan terbaru','Latest bylined article'] : ['Artikel penulis terbaru','Latest bylined article'];
   const read = ['Baca artikel lengkap →','Read the full article →'];
   return `<article class="blog-pillar-feature"><div class="eyebrow"><span class="id-copy">${eyebrow[0]}</span><span class="en-copy">${eyebrow[1]}</span></div><h2><a class="id-copy" href="${hrefId}">${esc(article.title_id)}</a><a class="en-copy" href="${hrefEn}">${esc(article.title_en)}</a></h2><p>${desc}</p><a class="home-feature-link id-copy" href="${hrefId}">${read[0]}</a><a class="home-feature-link en-copy" href="${hrefEn}">${read[1]}</a></article>`;
 }
@@ -97,7 +96,7 @@ function homeTeaser(article, pillar) {
   const topicsId = homeTopics(article, 'content_id');
   const topicsEn = homeTopics(article, 'content_en');
   const topicList = (items, lang) => items.length ? `<ul class="${lang}-copy">${items.map(item => `<li>${esc(item)}</li>`).join('')}</ul>` : '';
-  return `<article class="pillar-article-feature"><div class="eyebrow"><span class="id-copy">${esc(labels.id)} · Tulisan penulis</span><span class="en-copy">${esc(labels.en)} · Bylined article</span></div><h3><a class="id-copy" href="${hrefId}">${esc(article.title_id)}</a><a class="en-copy" href="${hrefEn}">${esc(article.title_en)}</a></h3><p class="pillar-feature-summary"><span class="id-copy">${esc(article.desc_id)}</span><span class="en-copy">${esc(article.desc_en)}</span></p>${contextId || contextEn ? `<p class="pillar-feature-context"><span class="id-copy">${esc(contextId)}</span><span class="en-copy">${esc(contextEn)}</span></p>` : ''}${topicsId.length || topicsEn.length ? `<section class="pillar-feature-highlights"><h4><span class="id-copy">Pokok bahasan</span><span class="en-copy">In this article</span></h4>${topicList(topicsId, 'id')}${topicList(topicsEn, 'en')}</section>` : ''}<div class="pillar-author-meta"><span class="id-copy">Terbit ${esc(dateId)} · ditampilkan 7 hari</span><span class="en-copy">Published ${esc(dateEn)} · featured for 7 days</span></div><a class="home-feature-link id-copy" href="${hrefId}">Baca artikel lengkap →</a><a class="home-feature-link en-copy" href="${hrefEn}">Read the full article →</a></article>`;
+  return `<article class="pillar-article-feature"><div class="eyebrow"><span class="id-copy">${esc(labels.id)} · Tulisan penulis</span><span class="en-copy">${esc(labels.en)} · Bylined article</span></div><h3><a class="id-copy" href="${hrefId}">${esc(article.title_id)}</a><a class="en-copy" href="${hrefEn}">${esc(article.title_en)}</a></h3><p class="pillar-feature-summary"><span class="id-copy">${esc(article.desc_id)}</span><span class="en-copy">${esc(article.desc_en)}</span></p>${contextId || contextEn ? `<p class="pillar-feature-context"><span class="id-copy">${esc(contextId)}</span><span class="en-copy">${esc(contextEn)}</span></p>` : ''}${topicsId.length || topicsEn.length ? `<section class="pillar-feature-highlights"><h4><span class="id-copy">Pokok bahasan</span><span class="en-copy">In this article</span></h4>${topicList(topicsId, 'id')}${topicList(topicsEn, 'en')}</section>` : ''}<div class="pillar-author-meta"><span class="id-copy">Terbit ${esc(dateId)} · sorotan terbaru</span><span class="en-copy">Published ${esc(dateEn)} · latest feature</span></div><a class="home-feature-link id-copy" href="${hrefId}">Baca artikel lengkap →</a><a class="home-feature-link en-copy" href="${hrefEn}">Read the full article →</a></article>`;
 }
 function standalone(article, lang) {
   const en = lang === 'en';
@@ -110,7 +109,7 @@ function standalone(article, lang) {
   const content = safeArticleHtml(en ? article.content_en : article.content_id);
   const schema = { '@context':'https://schema.org','@type':'Article',headline:title,description,datePublished:date || undefined,inLanguage:en?'en':'id',author:{'@type':'Person','name':article.author || 'Kabar Kopi'},publisher:{'@type':'Organization','name':'Kabar Kopi','url':`${SITE}/`},mainEntityOfPage:canonical,isPartOf:{'@type':'Blog','name':'Kabar Kopi'},isAccessibleForFree:true };
   const pillarLabel = pillars[article.kabar_pillar] || pillars['data-tren'];
-  return `<!doctype html><html lang="${en?'en':'id'}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${title} | Kabar Kopi</title><meta name="description" content="${description}"><link rel="canonical" href="${blogCanonical}"><link rel="alternate" hreflang="id" href="${en?opposite:canonical}"><link rel="alternate" hreflang="en" href="${en?canonical:opposite}"><script type="application/ld+json">${JSON.stringify(schema).replace(/</g,'\\u003c')}</script><style>body{max-width:900px;margin:40px auto;padding:0 22px;font:17px/1.75 system-ui,sans-serif;color:#29231e}h1,h2,h3{font-family:Georgia,serif;line-height:1.2}h1{font-size:42px}a{color:#704b31}.byline{color:#746f68;font-size:14px;border-bottom:1px solid #e7e1d8;padding-bottom:18px}.body{margin:30px 0}.note{background:#f5f1eb;border-left:4px solid #a4472d;padding:14px 18px}</style></head><body><p><a href="${SITE}/">${en?'← Kabar Kopi home':'← Beranda Kabar Kopi'}</a></p><main><div class="eyebrow">${esc(en?pillarLabel.en:pillarLabel.id)} · ${en?'Bylined article':'Artikel penulis'}</div><h1>${title}</h1><p class="intro">${description}</p><p class="byline">${date?new Intl.DateTimeFormat(en?'en-US':'id-ID',{dateStyle:'long',timeZone:'UTC'}).format(new Date(date)):''} · ${en?'Also published on Kabar Kopi Blog':'Terbit juga di Blog Kabar Kopi'}</p><article class="body">${content}</article><div class="note">${en?'This bylined article was published on the Kabar Kopi Blog and featured in this section for seven days.':'Artikel penulis ini diterbitkan di Blog Kabar Kopi dan ditampilkan sebagai sorotan di bagian ini selama tujuh hari.'}</div><p><a href="${blogCanonical}">${en?'Open the Blog edition':'Buka edisi Blog'}</a></p></main></body></html>`;
+  return `<!doctype html><html lang="${en?'en':'id'}"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${title} | Kabar Kopi</title><meta name="description" content="${description}"><link rel="canonical" href="${blogCanonical}"><link rel="alternate" hreflang="id" href="${en?opposite:canonical}"><link rel="alternate" hreflang="en" href="${en?canonical:opposite}"><script type="application/ld+json">${JSON.stringify(schema).replace(/</g,'\\u003c')}</script><style>body{max-width:900px;margin:40px auto;padding:0 22px;font:17px/1.75 system-ui,sans-serif;color:#29231e}h1,h2,h3{font-family:Georgia,serif;line-height:1.2}h1{font-size:42px}a{color:#704b31}.byline{color:#746f68;font-size:14px;border-bottom:1px solid #e7e1d8;padding-bottom:18px}.body{margin:30px 0}.note{background:#f5f1eb;border-left:4px solid #a4472d;padding:14px 18px}</style></head><body><p><a href="${SITE}/">${en?'← Kabar Kopi home':'← Beranda Kabar Kopi'}</a></p><main><div class="eyebrow">${esc(en?pillarLabel.en:pillarLabel.id)} · ${en?'Bylined article':'Artikel penulis'}</div><h1>${title}</h1><p class="intro">${description}</p><p class="byline">${date?new Intl.DateTimeFormat(en?'en-US':'id-ID',{dateStyle:'long',timeZone:'UTC'}).format(new Date(date)):''} · ${en?'Also published on Kabar Kopi Blog':'Terbit juga di Blog Kabar Kopi'}</p><article class="body">${content}</article><div class="note">${en?'This bylined article was published on the Kabar Kopi Blog and kept available in the Kabar Kopi archive.':'Artikel penulis ini diterbitkan di Blog Kabar Kopi dan tetap tersedia di arsip Kabar Kopi.'}</div><p><a href="${blogCanonical}">${en?'Open the Blog edition':'Buka edisi Blog'}</a></p></main></body></html>`;
 }
 
 const outputDir = path.join(ROOT, 'artikel-pilar');
@@ -132,9 +131,8 @@ for (const file of ['index.html','kabar-kopi.html']) {
     const article = currentFor(pillar);
     const marker = `<!-- BLOG_PILLAR_HOME_${labels.marker} -->`;
     if (article) {
-      const expiresAt = new Date(Date.parse(articleDate(article)) + sevenDays).toISOString();
-      const cardAttributes = new RegExp(`data-pillar-card="${pillar}"(?: data-has-author-article="true" data-author-expires-at="[^"]*")*`);
-      html = html.replace(cardAttributes, `data-pillar-card="${pillar}" data-has-author-article="true" data-author-expires-at="${expiresAt}"`);
+      const cardAttributes = new RegExp(`data-pillar-card="${pillar}"(?: data-has-author-article="true"| data-author-expires-at="[^"]*")*`);
+  html = html.replace(cardAttributes, `data-pillar-card="${pillar}" data-has-author-article="true"`);
     }
     const teaserHtml = homeTeaser(article, pillar);
     if (html.includes(marker)) {
@@ -155,8 +153,9 @@ for (const lang of ['id','en']) {
   if (!fs.existsSync(dataPage) || !article) continue;
   const title = esc(lang === 'en' ? article.title_en : article.title_id);
   const description = esc(lang === 'en' ? article.desc_en : article.desc_id);
-  const block = `<section class="panel"><div class="eyebrow">${lang === 'en' ? 'Bylined article · 7-day feature' : 'Tulisan penulis · sorotan 7 hari'}</div><h2><a href="${SITE}${articlePath(article,lang)}">${title}</a></h2><p>${description}</p><a href="${SITE}${articlePath(article,lang)}">${lang === 'en' ? 'Read the full article →' : 'Baca artikel lengkap →'}</a></section>`;
+  const block = `<section class="panel"><div class="eyebrow">${lang === 'en' ? 'Latest bylined article' : 'Artikel penulis terbaru'}</div><h2><a href="${SITE}${articlePath(article,lang)}">${title}</a></h2><p>${description}</p><a href="${SITE}${articlePath(article,lang)}">${lang === 'en' ? 'Read the full article →' : 'Baca artikel lengkap →'}</a></section>`;
   let html = fs.readFileSync(dataPage, 'utf8');
+  html = html.replace(/<section class="panel"><div class="eyebrow">(?:Bylined article · 7-day feature|Tulisan penulis · sorotan 7 hari|Latest bylined article|Artikel penulis terbaru)<\/div>[\s\S]*?<\/section>/g, '');
   html = html.replace('<section aria-labelledby="prices">', `${block}<section aria-labelledby="prices">`);
   fs.writeFileSync(dataPage, html);
 }
