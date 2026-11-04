@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "generated_at": "2026-11-03T05:12:08.716Z",
+  "generated_at": "2026-11-04T04:47:22.471Z",
   "months": [
     {
       "month": "2008-01",
@@ -190,12 +190,12 @@
     {
       "month": "2021-10",
       "file": "arsip/berita-2021-10.json",
-      "articles": 2
+      "articles": 4
     },
     {
       "month": "2021-11",
       "file": "arsip/berita-2021-11.json",
-      "articles": 1
+      "articles": 2
     },
     {
       "month": "2021-12",
@@ -345,7 +345,7 @@
     {
       "month": "2024-09",
       "file": "arsip/berita-2024-09.json",
-      "articles": 2
+      "articles": 3
     },
     {
       "month": "2024-10",
@@ -370,7 +370,7 @@
     {
       "month": "2025-02",
       "file": "arsip/berita-2025-02.json",
-      "articles": 4
+      "articles": 6
     },
     {
       "month": "2025-03",
@@ -380,7 +380,7 @@
     {
       "month": "2025-04",
       "file": "arsip/berita-2025-04.json",
-      "articles": 12
+      "articles": 13
     },
     {
       "month": "2025-05",
@@ -410,17 +410,17 @@
     {
       "month": "2025-10",
       "file": "arsip/berita-2025-10.json",
-      "articles": 8
+      "articles": 10
     },
     {
       "month": "2025-11",
       "file": "arsip/berita-2025-11.json",
-      "articles": 5
+      "articles": 16
     },
     {
       "month": "2025-12",
       "file": "arsip/berita-2025-12.json",
-      "articles": 27
+      "articles": 33
     },
     {
       "month": "2026-01",
@@ -430,7 +430,7 @@
     {
       "month": "2026-02",
       "file": "arsip/berita-2026-02.json",
-      "articles": 11
+      "articles": 12
     },
     {
       "month": "2026-03",
@@ -440,7 +440,7 @@
     {
       "month": "2026-04",
       "file": "arsip/berita-2026-04.json",
-      "articles": 8
+      "articles": 9
     },
     {
       "month": "2026-05",
@@ -455,33 +455,33 @@
     {
       "month": "2026-07",
       "file": "arsip/berita-2026-07.json",
-      "articles": 36
+      "articles": 41
     },
     {
       "month": "2026-08",
       "file": "arsip/berita-2026-08.json",
-      "articles": 47
+      "articles": 65
     },
     {
       "month": "2026-09",
       "file": "arsip/berita-2026-09.json",
-      "articles": 425
+      "articles": 427
     },
     {
       "month": "2026-10",
       "file": "arsip/berita-2026-10.json",
-      "articles": 591
+      "articles": 639
     },
     {
       "month": "2026-11",
       "file": "arsip/berita-2026-11.json",
-      "articles": 54
+      "articles": 70
     }
   ],
   "reference_collection": {
     "label": "Referensi kopi tanpa tanggal publikasi",
     "label_en": "Coffee references without a publication date",
     "file": "arsip/berita-reference-undated.json",
-    "articles": 48
+    "articles": 66
   }
 }

@@ -23,6 +23,29 @@
       "cluster_review_version": 0,
       "source_collection": "coffee_relevant_articles",
       "material_type": null
+    },
+    {
+      "judul": "JIWA Group Obtains Funding, Changing the Local Coffee Industry Landscapet with Grab & Go Concept - Hybrid.co.id",
+      "tautan": "https://hybrid.co.id/post/jiwa-group-obtains-funding-changing-the-local-coffee-industry-landscapet-with-grab-go-concept",
+      "tanggal": "2021-11-08T00:00:00.000Z",
+      "publication_date_precision": "day",
+      "publication_date_evidence": "2021-11-08T10:09:27+00:00",
+      "sumber": "hybrid.co.id",
+      "ringkasan": "Hybrid JIWA Group Obtains Funding, Changing the Local Coffee Industry Landscapet with Grab & Go Concept by Randi Eka 3 mins read November 8, 2021 Facebook X Linkedin Whatsapp Email JIWA Group was previously known for its product, Kopi Janji Jiwa, it is now expanding to Toast and Tea / JIWA Group Facebook X Linkedin Whatsapp Email Coffee chain startup “JIWA G",
+      "coffee_relevance_context": "Hybrid JIWA Group Obtains Funding, Changing the Local Coffee Industry Landscapet with Grab & Go Concept by Randi Eka 3 mins read November 8, 2021 Facebook X Linkedin Whatsapp Email JIWA Group was previously known for its product, Kopi Janji … & Go Concept by Randi Eka 3 mins read November 8, 2021 Facebook X Linkedin Whatsapp Email JIWA Group was previously known for its product, Kopi Janji Jiwa, it is now expanding to Toast and Tea / JIWA Group Facebook X Linkedin Whatsapp Email Coffee chain startup “JIWA Group” or known as one of its products, Kopi Janji Jiwa … was previously known for its product, Kopi Janji Jiwa, it is now expanding to Toast and Tea / JIWA Group Facebook X Linkedin Whatsapp Email Coffee chain startup “JIWA Group” or known as one of its products, Kopi Janji Jiwa, announced funding from Openspace and Capsquare Asia Partners. The nominal investment is undisclosed, h",
+      "link_type": "publisher_article",
+      "source_type": "mevo_curated_growth",
+      "source_collection": "artikel_pertumbuhan",
+      "material_type": "growth",
+      "source_original_url": "https://hybrid.co.id/post/jiwa-group-obtains-funding-changing-the-local-coffee-industry-landscapet-with-grab-go-concept",
+      "source_content_sha256": "1e194dd905903e7a5af87667281e0c0a86b0af84651a2728b34199b7847ef9b7",
+      "extraction_status": "extracted",
+      "source_relevance": "MIXED",
+      "relevance_status": "mevo_screened_coffee_relevance",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
     }
   ]
 }
