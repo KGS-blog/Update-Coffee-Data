@@ -7539,6 +7539,29 @@
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
       "cluster_review_version": 0
+    },
+    {
+      "judul": "TEI 2026 Satukan Kopi, Teh, Kakao, Mudahkan Pembeli Temukan Produk - RRI.co.id",
+      "tautan": "https://rri.co.id/ekonomi/bisnis/2791589/tei-2026-satukan-kopi-teh-kakao-mudahkan-pembeli-temukan-produk",
+      "tanggal": "2026-10-06T00:00:00.000Z",
+      "publication_date_precision": "day",
+      "publication_date_evidence": null,
+      "sumber": "rri.co.id",
+      "ringkasan": "",
+      "coffee_relevance_context": "",
+      "link_type": "publisher_article",
+      "source_type": "mevo_curated_growth",
+      "source_collection": "artikel_pertumbuhan",
+      "material_type": "growth",
+      "source_original_url": "https://rri.co.id/ekonomi/bisnis/2791589/tei-2026-satukan-kopi-teh-kakao-mudahkan-pembeli-temukan-produk",
+      "source_content_sha256": null,
+      "extraction_status": "http_error",
+      "source_relevance": "CORE",
+      "relevance_status": "mevo_screened_coffee_relevance",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
     }
   ]
 }

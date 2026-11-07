@@ -506,6 +506,29 @@
       "cluster_name": "Lainnya",
       "cluster_assignment": "unassigned",
       "cluster_review_version": 0
+    },
+    {
+      "judul": "Turis Ramai, Harga Kopi Melambung",
+      "tautan": "https://nusabali.com/berita/142504/turis-ramai-harga-kopi-melambung",
+      "tanggal": "2026",
+      "publication_date_precision": "year",
+      "publication_date_evidence": "06 Nov 2026 22:45 Kenalkan Filosofi Canan",
+      "sumber": "nusabali.com",
+      "ringkasan": "06 Nov 2026 22:45 Kenalkan Filosofi Canang, BTID Ajak Wisatawan Belajar Tradisi Bali",
+      "coffee_relevance_context": "",
+      "link_type": "publisher_article",
+      "source_type": "mevo_curated_growth",
+      "source_collection": "artikel_pertumbuhan",
+      "material_type": "growth",
+      "source_original_url": "https://nusabali.com/berita/142504/turis-ramai-harga-kopi-melambung",
+      "source_content_sha256": null,
+      "extraction_status": "thin_content_or_shell",
+      "source_relevance": "CORE",
+      "relevance_status": "mevo_screened_coffee_relevance",
+      "cluster_id": "lainnya",
+      "cluster_name": "Lainnya",
+      "cluster_assignment": "unassigned",
+      "cluster_review_version": 0
     }
   ]
 }
