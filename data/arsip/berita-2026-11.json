@@ -998,7 +998,8 @@
       "aggregator": "Google News",
       "link_type": "publisher",
       "resolution_status": "resolved",
-      "tautan_google_news": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNVzlnOHVMNkFHa200UWJOUXRNbmYwNU1VcmJDYXk2dzQyQUx5d002b1pSOHlaZDVVd003ZUdrc3ZKRDR2Q01DMDkxcWEtOXhxNjczRkNmaHdHdXI3RlU4am82dGFoUkVRbUJEcGsyYUJzSU5fNnc3WjJmemFyRE5KUEt6djhzaS0wejRDQTNGRnl2YjJlTXM5Nld0b1JRVXN0WFhIbHhGUVJzZTFac2pxWHFWdXVoVl8tZjdPVg?oc=5"
+      "tautan_google_news": "https://news.google.com/rss/articles/CBMivAFBVV95cUxNVzlnOHVMNkFHa200UWJOUXRNbmYwNU1VcmJDYXk2dzQyQUx5d002b1pSOHlaZDVVd003ZUdrc3ZKRDR2Q01DMDkxcWEtOXhxNjczRkNmaHdHdXI3RlU4am82dGFoUkVRbUJEcGsyYUJzSU5fNnc3WjJmemFyRE5KUEt6djhzaS0wejRDQTNGRnl2YjJlTXM5Nld0b1JRVXN0WFhIbHhGUVJzZTFac2pxWHFWdXVoVl8tZjdPVg?oc=5",
+      "ringkasan": "Beragam specialty coffee asal Indonesia yang dibawa Cademo Coffee dan Rayanna Roast dari Belanda, serta Meramanis Coffee dari Jerman, berhasil memikat pengunjung Swiss Coffee Festival (SCF) 2026. Keikutsertaan Indonesia untuk keempat kalinya dalam festival kopi tahunan dan paling bergengsi di Swiss itu, merupakan upaya tim Kedutaan Besar Republik Indonesia (KBRI) Bern untuk terus mendorong produk unggulan Indonesia. “Kami ingin mempertahankan momentum peningkatan ekspor kopi ..."
     },
     {
       "judul": "Mengenal Seni Manual Brewing, saat Kemampuan Brewer Menentukan Rasa Kopi",
@@ -1111,6 +1112,136 @@
       "tanggal": "2026-11-06 07:02:25",
       "sumber": "Tribun News",
       "ringkasan": "Pemprov Papua Tengah kerja sama dengan Asosiasi Kopi Indonesia gelar pelatihan budidaya kopi berkelanjutan dan pengolahan pascapanen bagi petani.",
+      "asal": "newsdata",
+      "link_type": "publisher"
+    },
+    {
+      "judul": "Pemprov Papua Tengah Perkuat Kapasitas Petani Kopi Puncak Jaya, Bidik Pasar Dunia - Timika eXpress",
+      "tautan": "https://timikaexpress.id/pemprov-papua-tengah-perkuat-kapasitas-petani-kopi-puncak-jaya-bidik-pasar-dunia/",
+      "tanggal": "Sat, 07 Nov 2026 15:30:00 GMT",
+      "sumber": "Timika eXpress",
+      "asal": "google_news",
+      "aggregator": "Google News",
+      "link_type": "publisher",
+      "resolution_status": "resolved",
+      "tautan_google_news": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxNVEc5cV9EQVotRDlVeEIwTlR3UVI4Mi1qMTVtZkFBTjdhUk94UUgwWlFsbVRRY0xmLXZpWEp0LUJZSFhFanNPbWt2Zmo0RUR2cGp6c2gxNGFXNmFXYkxVQ0RKZW96c3VJYjlTdWxtMk9xbm83dGl2dlV4bl9SSnlMWXFLNmllY2pINk0ydHNZMWhBVnVsZ0lsUnlzWHNTVTg1MTR3MUZkNGg3QQ?oc=5"
+    },
+    {
+      "judul": "Padel Signature Padukan Sport Club dan Coffee Shop di Bandung",
+      "tautan": "https://mediaindonesia.com/jabar/berita/953635/padel-signature-padukan-sport-club-dan-coffee-shop-di-bandung",
+      "tanggal": "2026-11-07 15:27:00",
+      "sumber": "Mediaindonesia",
+      "ringkasan": "Kota Bandung memiliki destinasi olahraga dan gaya hidup baru dengan hadirnya Padel Signature di kawasan Jalan Setiabudi, Bandung Utara.",
+      "asal": "newsdata",
+      "link_type": "publisher"
+    },
+    {
+      "judul": "Dorong UMKM Kopi Naik Kelas, Pertamina Gelar Pekan Kopi Nusantara di Blok M Jakarta",
+      "tautan": "https://wartakota.tribunnews.com/news/906836/dorong-umkm-kopi-naik-kelas-pertamina-gelar-pekan-kopi-nusantara-di-blok-m-jakarta",
+      "tanggal": "2026-11-07 13:49:57",
+      "sumber": "Warta Kota",
+      "ringkasan": "Pertamina menggelar Pekan Kopi Nusantara di Taman Literasi Blok M pada 4–8 November 2026 sebagai ajang promosi menjelang SMEXPO 2026.",
+      "asal": "newsdata",
+      "link_type": "publisher"
+    },
+    {
+      "judul": "Dukung Kopi Lokal, Pertamina Gelar Pekan Kopi Nusantara Jelang SMEXPO 2026 di Blok M",
+      "tautan": "https://bekasi.tribunnews.com/news/65031/dukung-kopi-lokal-pertamina-gelar-pekan-kopi-nusantara-jelang-smexpo-2026-di-blok-m",
+      "tanggal": "2026-11-07 13:48:44",
+      "sumber": "Tribun News",
+      "ringkasan": "Pertamina menggelar Pekan Kopi Nusantara di Taman Literasi Blok M pada 4–8 November 2026 sebagai ajang promosi menjelang SMEXPO 2026.",
+      "asal": "newsdata",
+      "link_type": "publisher"
+    },
+    {
+      "judul": "Pekan Kopi Nusantara Jelang Pertamina SMEXPO 2026: Wadah UMKM Kopi Lokal Jadi Vokal",
+      "tautan": "https://bogor.tribunnews.com/news/324147/pekan-kopi-nusantara-jelang-pertamina-smexpo-2026-wadah-umkm-kopi-lokal-jadi-vokal",
+      "tanggal": "2026-11-07 13:46:04",
+      "sumber": "Tribun News",
+      "ringkasan": "Pertamina menggelar Pekan Kopi Nusantara di Taman Literasi Blok M pada 4–8 November 2026 sebagai ajang promosi menjelang SMEXPO 2026.",
+      "asal": "newsdata",
+      "link_type": "publisher"
+    },
+    {
+      "judul": "Jelang SMEXPO 2026, Pertamina Gelar Pekan Kopi Nusantara di Taman Literasi Blok M",
+      "tautan": "https://www.jpnn.com/news/jelang-smexpo-2026-pertamina-gelar-pekan-kopi-nusantara-di-taman-literasi-blok-m",
+      "tanggal": "2026-11-07 13:16:59",
+      "sumber": "Jpnn",
+      "ringkasan": "JPNN.com, JAKARTA SELATAN - PT Pertamina (Persero) menggelar Pekan Kopi Nusantara di Taman Literasi Blok M, Jakarta Selatan pada 4–8 November 2026.",
+      "asal": "newsdata",
+      "link_type": "publisher"
+    },
+    {
+      "judul": "Kopi Arabika Gayo, Penopang Ekonomi Warga Bener Meriah",
+      "tautan": "https://finance.detik.com/foto-bisnis/d-8742683/kopi-arabika-gayo-penopang-ekonomi-warga-bener-meriah",
+      "tanggal": "2026-11-07 12:28:58",
+      "sumber": "Detik Sport",
+      "ringkasan": "Produksi kopi arabika Gayo kualitas ekspor di Bener Meriah mencapai 700-800 kg green bean per hektare setiap tahun.",
+      "asal": "newsdata",
+      "link_type": "publisher"
+    },
+    {
+      "judul": "Segafredo Bidik Wisatawan Asing Lewat Kopi dan Kuliner Italia di Jogja",
+      "tautan": "https://wisata.harianjogja.com/r-1277994/segafredo-bidik-wisatawan-asing-lewat-kopi-dan-kuliner-italia-di-jogja",
+      "tanggal": "2026-11-07 12:17:41",
+      "sumber": "Harianjogja",
+      "ringkasan": "Segafredo Cafe mengembangkan hospitality Italia di Jogja dengan sajian kopi, pasta, dan pizza untuk menyasar wisatawan asing maupun domestik.",
+      "asal": "newsdata",
+      "link_type": "publisher"
+    },
+    {
+      "judul": "Jijik! Tikus Berkeliaran di Keranjang Kue, Kedai Kopi Ini Bikin Geger",
+      "tautan": "https://food.detik.com/info-kuliner/d-8742428/jijik-tikus-berkeliaran-di-keranjang-kue-kedai-kopi-ini-bikin-geger",
+      "tanggal": "2026-11-07 12:00:00",
+      "sumber": "Detik Sport",
+      "ringkasan": "Terekam ada banyak tikus berkeliaran mencari makan di keranjang kue salah satu kedai kopi. Setelah video ini viral, pihak kedai kopi beri klarifikasi begini!",
+      "asal": "newsdata",
+      "link_type": "publisher"
+    },
+    {
+      "judul": "Pemprov Papua Tengah Latih Petani Puncak Jaya Kembangkan Kopi Berkualitas - Suara Papua",
+      "tautan": "https://suarapapua.com/2026/11/07/pemprov-papua-tengah-latih-petani-puncak-jaya-kembangkan-kopi-berkualitas/",
+      "tanggal": "Sat, 07 Nov 2026 11:15:47 GMT",
+      "sumber": "Suara Papua",
+      "asal": "google_news",
+      "aggregator": "Google News",
+      "link_type": "publisher",
+      "resolution_status": "resolved",
+      "tautan_google_news": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNS0RYaGhGTFVOWXozRlE5VGVQeVhmQ05lQVFZZDM4dHgxME9kVmd4WDZHdTZueGtSTl9TT3NISkh0QWROd3dFVVhaU0VGSmloeFFKNXl2ODA1b3NUTUk4Y245RU95N3ltc216dHZ2QmxqMFh3T083bnF1M1ZUNFRaWFoyX0xlcWYyV0dla2pCOWQzSEFiVGhpeU4zQkhndzVILVZvNmphdnpET1NV?oc=5"
+    },
+    {
+      "judul": "Prima Alvernia Bawa Jaringan Kopi China ke Indonesia",
+      "tautan": "https://hot.detik.com/celeb/d-8742617/prima-alvernia-bawa-jaringan-kopi-china-ke-indonesia",
+      "tanggal": "2026-11-07 08:42:31",
+      "sumber": "Detik",
+      "ringkasan": "Prima Alvernia, mantan presenter berita, kini bawa jaringan kopi China ke Indonesia. Ia fokus ekspansi dan kualitas produk dalam bisnis kopi internasional.",
+      "asal": "newsdata",
+      "link_type": "publisher"
+    },
+    {
+      "judul": "Jangan Panik, Ini Cara Simpel Hilangkan Noda Kopi di Baju",
+      "tautan": "https://www.kompas.com/homey/read/2026/11/07/144725576/jangan-panik-ini-cara-simpel-hilangkan-noda-kopi-di-baju",
+      "tanggal": "2026-11-07 07:47:25",
+      "sumber": "Kompas.com",
+      "ringkasan": "Baju terkena noda kopi masih bisa diselamatkan. Segera bersihkan dan gunakan sabun cuci piring, soda kua, atau cuka untuk hasil maksimal.",
+      "asal": "newsdata",
+      "link_type": "publisher"
+    },
+    {
+      "judul": "Marak Pencurian, Petani Kopi di Aceh Tengah Resah Diimbau Awasi Kebun",
+      "tautan": "https://gayo.tribunnews.com/aceh-tengah/55034/marak-pencurian-petani-kopi-di-aceh-tengah-resah-diimbau-awasi-kebun",
+      "tanggal": "2026-11-07 07:29:34",
+      "sumber": "Tribun News",
+      "ringkasan": "Maraknya pencurian kopi saat panen di Aceh Tengah resahkan petani. Waspadai pencurian di kebun, penjemuran, hingga karung panen saat ditinggal.",
+      "asal": "newsdata",
+      "link_type": "publisher"
+    },
+    {
+      "judul": "Tren Kopi 2027 Diprediksi Makin Berwarna, Rasa Bunga dan Kreasi Berlapis Bakal Jadi Favorit",
+      "tautan": "https://www.liputan6.com/lifestyle/read/8329759/tren-kopi-2027-diprediksi-makin-berwarna-rasa-bunga-dan-kreasi-berlapis-bakal-jadi-favorit",
+      "tanggal": "2026-11-07 00:00:00",
+      "sumber": "Liputan6",
+      "ringkasan": "Persaingan kedai kopi mendorong pelaku usaha terus berinovasi. Pemilihan biji, tekstur, hingga preferensi konsumen menjadi perhatian dalam meracik menu baru.",
       "asal": "newsdata",
       "link_type": "publisher"
     }
