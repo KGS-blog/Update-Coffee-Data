@@ -3,8 +3,8 @@
   "source": "International Coffee Organization (ICO), Coffee Trade Globe",
   "source_url": "https://data.ico.org/globe/#m=flows&f=export&y=2025&c=ID",
   "api_endpoint": "https://data.ico.org/globe/api/v1/globe/bundle?year=2025",
-  "fetched_at": "2026-11-13T04:50:53.374Z",
-  "api_generated_at": "2026-11-13T00:20:51.133Z",
+  "fetched_at": "2026-11-14T04:44:21.971Z",
+  "api_generated_at": "2026-11-13T17:20:58.256Z",
   "trade_window_through": "2026-09",
   "year": 2025,
   "public_trade_year": 2025,
@@ -236,7 +236,7 @@
       },
       "import_volume": {
         "rank": 39,
-        "countries_count": 187,
+        "countries_count": 190,
         "indonesia_value": 967117,
         "top_five": [
           {
@@ -263,7 +263,7 @@
       },
       "import_customs_value": {
         "rank": 40,
-        "countries_count": 187,
+        "countries_count": 190,
         "indonesia_value": 384382750,
         "top_five": [
           {
@@ -290,7 +290,7 @@
       },
       "reexport_volume": {
         "rank": 13,
-        "countries_count": 97,
+        "countries_count": 98,
         "indonesia_value": 901274,
         "top_five": [
           {
@@ -317,7 +317,7 @@
       },
       "reexport_customs_value": {
         "rank": 18,
-        "countries_count": 101,
+        "countries_count": 102,
         "indonesia_value": 260861314,
         "top_five": [
           {
