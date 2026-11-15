@@ -1923,7 +1923,8 @@
       "aggregator": "Google News",
       "link_type": "publisher",
       "resolution_status": "resolved",
-      "tautan_google_news": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPNFBwamhYRHpvanNCVnFJZm5OelBrYmJaOXhIVnR3OXNKQUp1X1otQTVlYlA1OFBna2RuRkZwVUFWczhHaC1WYXB1UUZ2TFJIUGJoVmVYVjBVZjFhYlBWWUc0NVpCMTNIbmJldEtIMVlpM0F2MDAwTmJYbllKVTlpc3Yycmtuck9FcURRQnB6QXJfUFRndkljNk9IU2pjcVdDOUNTSUxZdExkeTlPdk5IS1dwbnZRUQ?oc=5"
+      "tautan_google_news": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPNFBwamhYRHpvanNCVnFJZm5OelBrYmJaOXhIVnR3OXNKQUp1X1otQTVlYlA1OFBna2RuRkZwVUFWczhHaC1WYXB1UUZ2TFJIUGJoVmVYVjBVZjFhYlBWWUc0NVpCMTNIbmJldEtIMVlpM0F2MDAwTmJYbllKVTlpc3Yycmtuck9FcURRQnB6QXJfUFRndkljNk9IU2pjcVdDOUNTSUxZdExkeTlPdk5IS1dwbnZRUQ?oc=5",
+      "ringkasan": "Kopi Vietnam dikenal memiliki karakter rasa yang kuat, pekat, dan khas. Kenali karakter rasa dan metode penyeduhannya."
     },
     {
       "judul": "Minum Kopi Tanpa Kafein Setelah Makan Malam Bantu Jaga Kesehatan Hati",
@@ -2014,6 +2015,87 @@
       "tanggal": "2026-11-13 03:22:57",
       "sumber": "Liputan6",
       "ringkasan": "Dari Hanoi hingga Jakarta, Cong Ca Phe membawa cita rasa kopi Vietnam yang mengajak pengunjung bernostalgia lewat menu autentik.",
+      "asal": "newsdata",
+      "link_type": "publisher"
+    },
+    {
+      "judul": "Pemkab Magetan dorong kemitraan usaha kopi dari hulu ke hilir",
+      "tautan": "https://www.antaranews.com/berita/5854795/pemkab-magetan-dorong-kemitraan-usaha-kopi-dari-hulu-ke-hilir",
+      "tanggal": "2026-11-14 16:08:21",
+      "sumber": "Antara News",
+      "ringkasan": "Dinas Koperasi dan UKM Kabupaten Magetan, Jawa Timur terus berupaya mendorong terwujudnya konsep kemitraan komoditas ...",
+      "asal": "newsdata",
+      "link_type": "publisher"
+    },
+    {
+      "judul": "Keseruan IShowSpeed saat Makan Nasi Padang hingga Cicip Kopi Luwak di Indonesia",
+      "tautan": "https://food.detik.com/foto-kuliner/d-8753153/keseruan-ishowspeed-saat-makan-nasi-padang-hingga-cicip-kopi-luwak-di-indonesia",
+      "tanggal": "2026-11-14 15:00:32",
+      "sumber": "Detik Sport",
+      "ringkasan": "YouTuber IShowSpeed terima penghargaan Streamer of The Year 2026 pakai bahasa Indonesia. Saat ke Indonesia, ia pernah mencicipi nasi padang hingga kopi luwak.",
+      "asal": "newsdata",
+      "link_type": "publisher"
+    },
+    {
+      "judul": "Pecinta Kopi Merapat! Ada Konferensi Kopi Internasional di Jakarta",
+      "tautan": "https://www.cnbcindonesia.com/lifestyle/20261113162713-34-785099/pecinta-kopi-merapat-ada-konferensi-kopi-internasional-di-jakarta",
+      "tanggal": "2026-11-14 14:00:00",
+      "sumber": "Cnbc Indonesia",
+      "ringkasan": "Konferensi kopi yang berlansgung pada 13/15 November ini memberi warna baru bagi industri kopi Indonesia di panggung dunia.",
+      "asal": "newsdata",
+      "link_type": "publisher"
+    },
+    {
+      "judul": "Dari Kopi hingga Alat Kesehatan, Produk Indonesia Perluas Pasar di AS",
+      "tautan": "https://www.liputan6.com/global/read/8335088/dari-kopi-hingga-alat-kesehatan-produk-indonesia-perluas-pasar-di-as",
+      "tanggal": "2026-11-14 01:06:00",
+      "sumber": "Liputan6",
+      "ringkasan": "Perubahan kebijakan perdagangan AS dan persaingan dengan negara pemasok lain menjadi tantangan bagi produk Indonesia dalam memperluas pasar.",
+      "asal": "newsdata",
+      "link_type": "publisher"
+    },
+    {
+      "judul": "Akhir Pekan Seru di Jakarta: Ada Pameran Kopi hingga Jumpa Penggemar Ong Seong-wu",
+      "tautan": "https://mediaindonesia.com/travelista/956087/akhir-pekan-seru-di-jakarta-ada-pameran-kopi-hingga-jumpa-penggemar-ong-seong-wu",
+      "tanggal": "2026-11-14 00:14:00",
+      "sumber": "Mediaindonesia",
+      "ringkasan": "Simak 5 rekomendasi acara akhir pekan di Jakarta 14–15 November 2026 dari Disparekraf DKI Jakarta, mulai dari pameran kopi di Gedung A.A. Maramis hingga fan meeting Ong Seong-wu.",
+      "asal": "newsdata",
+      "link_type": "publisher"
+    },
+    {
+      "judul": "Sering Minum Kopi Sebelum Tidur? Ini 5 Efeknya bagi Tubuh",
+      "tautan": "https://food.detik.com/info-sehat/d-8751504/sering-minum-kopi-sebelum-tidur-ini-5-efeknya-bagi-tubuh",
+      "tanggal": "2026-11-14 00:00:29",
+      "sumber": "Detik Sport",
+      "ringkasan": "Demi mendapat khasiat sehatnya, konsumsi kopi tak bisa sembarangan. Bahkan, jika dikonsumsi sebelum tidur, kopi punya efek samping.",
+      "asal": "newsdata",
+      "link_type": "publisher"
+    },
+    {
+      "judul": "Akhir pekan di Jakarta, ada pameran kopi lalu jumpa Ong Seong-wu",
+      "tautan": "https://www.antaranews.com/berita/5853195/akhir-pekan-di-jakarta-ada-pameran-kopi-lalu-jumpa-ong-seong-wu",
+      "tanggal": "2026-11-13 23:27:47",
+      "sumber": "Antara News",
+      "ringkasan": "Akhir pekan ini di Jakarta, ada pameran sejumlah pameran dari puluhan tenant kopi serta panel diskusi dalam Jakarta ...",
+      "asal": "newsdata",
+      "link_type": "publisher"
+    },
+    {
+      "judul": "Minum 3 Gelas Kopi Sehari Turunkan Risiko Penyakit Hati Serius",
+      "tautan": "https://mediaindonesia.com/kesehatan/956017/minum-3-gelas-kopi-sehari-turunkan-risiko-penyakit-hati-serius",
+      "tanggal": "2026-11-13 16:57:00",
+      "sumber": "Mediaindonesia",
+      "ringkasan": "Studi Cedars-Sinai mengungkap minum kopi, termasuk decaf, berkaitan dengan penurunan risiko sirosis dan kanker hati. Simak takaran idealnya di sini.",
+      "asal": "newsdata",
+      "link_type": "publisher"
+    },
+    {
+      "judul": "15 Contoh Laporan Hasil Observasi Pohon Kopi hingga Nyamuk, Kerangka dan Daftar Periksa",
+      "tautan": "https://pekanbaru.tribunnews.com/lifestyle/1121510/15-contoh-laporan-hasil-observasi-pohon-kopi-hingga-nyamuk-kerangka-dan-daftar-periksa",
+      "tanggal": "2026-11-13 16:46:13",
+      "sumber": "Tribun News",
+      "ringkasan": "15 contoh laporan hasil observasi dengan objek observasi pohon kopi hingga nyamuk lengkap dengan kerangka laporan hasil observasi dan daftar periksa",
       "asal": "newsdata",
       "link_type": "publisher"
     }
