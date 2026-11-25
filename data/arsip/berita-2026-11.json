@@ -2980,7 +2980,8 @@
       "aggregator": "Google News",
       "link_type": "publisher",
       "resolution_status": "resolved",
-      "tautan_google_news": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNY0RCYlVrcjg0OHVNZkZQOEFHZ3hXZDVFSFZieUx2dFRUWHp0UGtQaWNxZUdzdUNhYURueTJDNWVXY3dWRzlSUEpCdkNoaE9Eb2swaDJyY2tqMXlPQk1sSjBVbWpmMFNDTzFLVFozVlJMdjFNaTltcnh1Nm1VVjBNeTUtUE5ncHNtRWtPQzdPNU5saEY0Y3lPZUpvWnY0bzBjdzNCRi1UUDdMRVdBUk1tcnlQX3RveDNWTElVTnd0dURRaEdraURN?oc=5"
+      "tautan_google_news": "https://news.google.com/rss/articles/CBMixwFBVV95cUxNY0RCYlVrcjg0OHVNZkZQOEFHZ3hXZDVFSFZieUx2dFRUWHp0UGtQaWNxZUdzdUNhYURueTJDNWVXY3dWRzlSUEpCdkNoaE9Eb2swaDJyY2tqMXlPQk1sSjBVbWpmMFNDTzFLVFozVlJMdjFNaTltcnh1Nm1VVjBNeTUtUE5ncHNtRWtPQzdPNU5saEY0Y3lPZUpvWnY0bzBjdzNCRi1UUDdMRVdBUk1tcnlQX3RveDNWTElVTnd0dURRaEdraURN?oc=5",
+      "ringkasan": "BPOM RI akan memanggil produsen kopi yang 20 ton produknya ditahan di Taiwan karena ditemukan adanya residu pestisida."
     },
     {
       "judul": "Kopi hingga Cokelat Indonesia Tarik Minat Buyer Korea Selatan di Seoul Café Show - Majalah HORTUS Archipelago",
@@ -3082,6 +3083,118 @@
       "tanggal": "2026-11-23 04:42:18",
       "sumber": "Poskota",
       "ringkasan": "Peran guru di era digital tak tergantikan teknologi. Simak 3 tantangan utama pendidik dalam menjaga keteladanan digugu dan ditiru di tengah arus informasi di Kopi Pagi edisi hari ini.",
+      "asal": "newsdata",
+      "link_type": "publisher"
+    },
+    {
+      "judul": "Kalahkan Italia, Indonesia Masuk 10 Besar Negara Peminum Kopi di Dunia - detikFood",
+      "tautan": "https://food.detik.com/info-kuliner/d-8767608/kalahkan-italia-indonesia-masuk-10-besar-negara-peminum-kopi-di-dunia",
+      "tanggal": "Wed, 25 Nov 2026 00:00:00 GMT",
+      "sumber": "detikFood",
+      "asal": "google_news",
+      "aggregator": "Google News",
+      "link_type": "publisher",
+      "resolution_status": "resolved",
+      "tautan_google_news": "https://news.google.com/rss/articles/CBMitgFBVV95cUxONnZXb2lfbDdDb2NfaGZDZzFJMVNaZ0J0QUstbGx6Z1B0SldIZVBWbEFPbnEtbUgteGZuM1BlU0xMVHR4MndVMFBTUkxqYWhwVmlabW1kUmkzelZvVmkzeHVRdFdlNG1iVGE5Uy1hMlEwT0VkSTZxR1VmS05kSzhPMFBES3htbXJnMFNUdEo0X2NTY0xQV3d4eGR6bDdDbWJPSDk3WkdZY3RNS3pyc1ZhekdaSXdFd9IBuwFBVV95cUxQdXU1eFQ5eUc0MlBjQWkyalp0MGF2NUU3bFV0TERQZ2JDUjZjNU4yTmdzc00wdkFTcTV5WlpmelNNeWhpQlUzN1kzSWVFbHUydy1OZVVlaVJDVUQycXdYQVJscExUdGdGYlppUmNfLUptRTlTblFGa19fdlNFMVl1UU5RSHM5UWIxWEJsNkwyRVFSVTg5MzRTT0ZwVXRwcFdKd2Q3MXk3a1JpckpSb2RQZm9xbGtRZHloT0dZ?oc=5"
+    },
+    {
+      "judul": "Lebih Suka Latte daripada Kopi Hitam? Ini 8 Ciri Kepribadian Unikmu",
+      "tautan": "https://www.jawapos.com/kepribadian/2611240470/lebih-suka-latte-daripada-kopi-hitam-ini-8-ciri-kepribadian-unikmu?page=all",
+      "tanggal": "2026-11-24 12:01:56",
+      "sumber": "Jawapos",
+      "ringkasan": "Berikut delapan karakter menarik yang bisa menjadi bahan refleksi untuk mengenali preferensi dan gaya hidupmu.",
+      "asal": "newsdata",
+      "link_type": "publisher"
+    },
+    {
+      "judul": "5 Kafe Indonesia Masuk Daftar 100 Kedai Kopi Terbaik di Asia 2026, Mana Saja?",
+      "tautan": "https://www.kompas.com/food/read/2026/11/24/190000675/5-kafe-indonesia-masuk-daftar-100-kedai-kopi-terbaik-di-asia-2026-mana-saja",
+      "tanggal": "2026-11-24 12:00:00",
+      "sumber": "Kompas.com",
+      "ringkasan": "Lima kafe di Indonesia masuk dalam daftar “TOP 100 Coffee Shops Asia-Pacific” dari The World’s 100 Best Coffee Shops.",
+      "asal": "newsdata",
+      "link_type": "publisher"
+    },
+    {
+      "judul": "6 Cara Menambahkan Protein ke Kopi, Cocok untuk yang Ingin Lebih Sehat",
+      "tautan": "https://www.kompas.com/food/read/2026/11/24/183000775/6-cara-menambahkan-protein-ke-kopi-cocok-untuk-yang-ingin-lebih-sehat",
+      "tanggal": "2026-11-24 11:30:00",
+      "sumber": "Kompas.com",
+      "ringkasan": "ONLY AVAILABLE IN PAID PLANS",
+      "asal": "newsdata",
+      "link_type": "publisher"
+    },
+    {
+      "judul": "KJRI Kota Kinabalu dorong perluasan pasar kopi Indonesia di Sabah",
+      "tautan": "https://www.antaranews.com/berita/5874991/kjri-kota-kinabalu-dorong-perluasan-pasar-kopi-indonesia-di-sabah",
+      "tanggal": "2026-11-24 09:38:51",
+      "sumber": "Antara News",
+      "ringkasan": "Konsulat Jenderal Republik Indonesia (KJRI) Kota Kinabalu terus mendorong perluasan akses pasar bagi produk kopi ...",
+      "asal": "newsdata",
+      "link_type": "publisher"
+    },
+    {
+      "judul": "KJRI Kota Kinabalu dorong perluasan pasar kopi Indonesia di Sabah - ANTARA News",
+      "tautan": "https://kl.antaranews.com/berita/48695/kjri-kota-kinabalu-dorong-perluasan-pasar-kopi-indonesia-di-sabah",
+      "tanggal": "Tue, 24 Nov 2026 09:30:26 GMT",
+      "sumber": "ANTARA News",
+      "asal": "google_news",
+      "aggregator": "Google News",
+      "link_type": "publisher",
+      "resolution_status": "resolved",
+      "tautan_google_news": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQeWdoSDdnX2NkVjNZelp6RUR3djRncFdFTzFvdkxJWHZ2V1BMbHJyOHZOM2MtRmlIb1d3NUpQbWNmWXJVVGU0MldkWDlFQlBUSkFTYkhhMEl2QW9Rc3gxVHJ6b1B3MjJTRVZGUHlLVHc0X2I0NUZsVU9Va2tmRFZBbDBFVG1xc0FHRjVMSGFhcjVBNmtMeUxoMEFCeWt6dllvd2tNYkd4Yw?oc=5"
+    },
+    {
+      "judul": "Kemeriahan Festival Kopi Klaten 2026, Alun-Alun Dipadati Pengunjung, Ada Puluhan UMKM & Mancanegara",
+      "tautan": "https://newsmaker.tribunnews.com/viral/188123/kemeriahan-festival-kopi-klaten-2026-alun-alun-dipadati-pengunjung-ada-puluhan-umkm-mancanegara",
+      "tanggal": "2026-11-24 07:11:15",
+      "sumber": "Tribun News",
+      "ringkasan": "Festival Kopi Klaten 2026 berlangsung meriah di Alun-Alun Kabupaten Klaten, Jawa Tengah, pada Jumat-Sabtu (20-21/11/2026).",
+      "asal": "newsdata",
+      "link_type": "publisher"
+    },
+    {
+      "judul": "Bongkar Kasus Narkoba dan TPPU, BNN Sita 11 Mobil hingga Kedai Kopi",
+      "tautan": "https://www.cnnindonesia.com/nasional/20261124130956-12-1430779/bongkar-kasus-narkoba-tppu-bnn-sita-11-mobil-hingga-kedai-kopi",
+      "tanggal": "2026-11-24 07:05:26",
+      "sumber": "Cnnindonesia",
+      "ringkasan": "BNN membongkar kasus dugaan pencucian uang dengan pidana asal narkotika serta menyita banyak barang bukti diduga terkait perkara, seperti rumah dan kedai kopi.",
+      "asal": "newsdata",
+      "link_type": "publisher"
+    },
+    {
+      "judul": "5 Cara Menghilangkan Bau Tak Sedap di Dapur setelah Memasak, Cukup Pakai Rempah hingga Kopi",
+      "tautan": "https://style.tribunnews.com/life/391303/5-cara-menghilangkan-bau-tak-sedap-di-dapur-setelah-memasak-cukup-pakai-rempah-hingga-kopi",
+      "tanggal": "2026-11-24 06:43:57",
+      "sumber": "Tribun News",
+      "ringkasan": "Dapur masih bau amis & berminyak habis masak? Jangan buru-buru pakai pengharum ruangan! Coba 5 cara ini, dari rebus rempah hingga bubuk kopi.",
+      "asal": "newsdata",
+      "link_type": "publisher"
+    },
+    {
+      "judul": "Residu Pestisida Picu Penahanan 20 Ton Kopi, BPOM Panggil Pihak Produsen",
+      "tautan": "https://www.viv.co.id/read/263164/residu-pestisida-picu-penahanan-20-ton-kopi-bpom-panggil-pihak-produsen",
+      "tanggal": "2026-11-24 05:35:11",
+      "sumber": "Viv Indonesia",
+      "ringkasan": "BPOM RI akan memanggil produsen kopi menyusul penahanan 20 ton biji kopi asal Indonesia di Taiwan karena residu pestisida.",
+      "asal": "newsdata",
+      "link_type": "publisher"
+    },
+    {
+      "judul": "Putri, Perempuan Cantik di Halmahera Barat Ini Bangun Kedai Grace Berbekal Resep Kopi Sendiri",
+      "tautan": "https://ternate.tribunnews.com/maluku-utara/108234/putri-perempuan-cantik-di-halmahera-barat-ini-bangun-kedai-grace-berbekal-resep-kopi-sendiri",
+      "tanggal": "2026-11-24 05:12:46",
+      "sumber": "Tribun News",
+      "ringkasan": "Bagi Putri, setiap cangkir kopi yang tersaji bukan sekadar minuman pelepas dahaga, melainkan simbol perjalanan merintis usaha lewat kerja keras",
+      "asal": "newsdata",
+      "link_type": "publisher"
+    },
+    {
+      "judul": "Antonio Blanco Jr Buka Bisnis Kopi Bareng Aqeela Calista, Target Buka Desember 2026",
+      "tautan": "https://www.kapanlagi.com/showbiz/selebriti/antonio-blanco-jr-buka-bisnis-kopi-bareng-aqeela-calista-target-buka-desember-2026-2a2205431c.html",
+      "tanggal": "2026-11-24 04:07:39",
+      "sumber": "Kapanlagi",
+      "ringkasan": "Antonio Blanco Jr Buka Bisnis Kopi Bareng Aqeela Calista, Target Buka Desember 2026",
       "asal": "newsdata",
       "link_type": "publisher"
     }

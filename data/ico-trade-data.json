@@ -3,8 +3,8 @@
   "source": "International Coffee Organization (ICO), Coffee Trade Globe",
   "source_url": "https://data.ico.org/globe/#m=flows&f=export&y=2025&c=ID",
   "api_endpoint": "https://data.ico.org/globe/api/v1/globe/bundle?year=2025",
-  "fetched_at": "2026-11-24T08:08:46.282Z",
-  "api_generated_at": "2026-11-17T16:20:57.940Z",
+  "fetched_at": "2026-11-25T06:46:44.480Z",
+  "api_generated_at": "2026-11-25T01:16:12.515Z",
   "trade_window_through": "2026-09",
   "year": 2025,
   "public_trade_year": 2025,
@@ -25,7 +25,7 @@
     "exports_bags_60kg": 11043071,
     "exports_value_usd": 3084771085,
     "imports_bags_60kg": 967117,
-    "imports_value_usd": 384382750,
+    "imports_value_usd": 384382751,
     "reexports_bags_60kg": 901274,
     "reexports_value_usd": 260861314,
     "partner_flows_available_in_public_bundle": [
@@ -264,7 +264,7 @@
       "import_customs_value": {
         "rank": 40,
         "countries_count": 190,
-        "indonesia_value": 384382750,
+        "indonesia_value": 384382751,
         "top_five": [
           {
             "iso": "US",
@@ -284,13 +284,13 @@
           },
           {
             "iso": "NL",
-            "value": 3110089264
+            "value": 3110089265
           }
         ]
       },
       "reexport_volume": {
         "rank": 13,
-        "countries_count": 98,
+        "countries_count": 100,
         "indonesia_value": 901274,
         "top_five": [
           {
@@ -299,7 +299,7 @@
           },
           {
             "iso": "IT",
-            "value": 5939436
+            "value": 5939437
           },
           {
             "iso": "NL",
@@ -317,7 +317,7 @@
       },
       "reexport_customs_value": {
         "rank": 18,
-        "countries_count": 102,
+        "countries_count": 104,
         "indonesia_value": 260861314,
         "top_five": [
           {
@@ -551,15 +551,21 @@
       "S": 0.2551
     },
     "procMix": {
-      "Wet": 0.0222,
-      "Dry": 0.7213,
       "Spray Dried": 0.0989,
       "Freeze Dried": 0.0226,
       "Unspecified": 0.0843,
       "Extract": 0.0045,
-      "Preparations": 0.0462
+      "Preparations": 0.0462,
+      "Wet": 0.0222,
+      "Dry": 0.7213
     },
     "comboMix": {
+      "SSD": 0.0989,
+      "SFD": 0.0226,
+      "R": 0.0013,
+      "SE": 0.0045,
+      "SP": 0.0462,
+      "S": 0.0829,
       "GAW": 0.0184,
       "GAD": 0.1027,
       "GADD": 0.0002,
@@ -569,15 +575,69 @@
       "GRDD": 0.0002,
       "GRWO": 0.0001,
       "GRDO": 0.0005,
-      "SSD": 0.0989,
-      "SFD": 0.0226,
-      "R": 0.0013,
-      "SE": 0.0045,
-      "SP": 0.0462,
-      "S": 0.0829,
       "RD": 0
     },
     "comboDetails": [
+      {
+        "code": "SSD",
+        "share": 0.0989,
+        "label": "Soluble Spray Dried",
+        "bags": 4078504,
+        "form": "Soluble",
+        "type": "Unspecified",
+        "method": "Spray Dried",
+        "info": "Unspecified"
+      },
+      {
+        "code": "SFD",
+        "share": 0.0226,
+        "label": "Soluble Freeze Dried",
+        "bags": 1980552,
+        "form": "Soluble",
+        "type": "Unspecified",
+        "method": "Freeze Dried",
+        "info": "Unspecified"
+      },
+      {
+        "code": "R",
+        "share": 0.0013,
+        "label": "Roasted",
+        "bags": 648965,
+        "form": "Roasted",
+        "type": "Unspecified",
+        "method": "Unspecified",
+        "info": "Unspecified"
+      },
+      {
+        "code": "SE",
+        "share": 0.0045,
+        "label": "Soluble Extract",
+        "bags": 7172929,
+        "form": "Soluble",
+        "type": "Unspecified",
+        "method": "Extract",
+        "info": "Unspecified"
+      },
+      {
+        "code": "SP",
+        "share": 0.0462,
+        "label": "Soluble Preparation",
+        "bags": 1052532,
+        "form": "Soluble",
+        "type": "Unspecified",
+        "method": "Preparations",
+        "info": "Unspecified"
+      },
+      {
+        "code": "S",
+        "share": 0.0829,
+        "label": "Soluble",
+        "bags": 4083444,
+        "form": "Soluble",
+        "type": "Unspecified",
+        "method": "Unspecified",
+        "info": "Unspecified"
+      },
       {
         "code": "GAW",
         "share": 0.0184,
@@ -667,66 +727,6 @@
         "type": "Robusta",
         "method": "Dry",
         "info": "Organic"
-      },
-      {
-        "code": "SSD",
-        "share": 0.0989,
-        "label": "Soluble Spray Dried",
-        "bags": 4078505,
-        "form": "Soluble",
-        "type": "Unspecified",
-        "method": "Spray Dried",
-        "info": "Unspecified"
-      },
-      {
-        "code": "SFD",
-        "share": 0.0226,
-        "label": "Soluble Freeze Dried",
-        "bags": 1980552,
-        "form": "Soluble",
-        "type": "Unspecified",
-        "method": "Freeze Dried",
-        "info": "Unspecified"
-      },
-      {
-        "code": "R",
-        "share": 0.0013,
-        "label": "Roasted",
-        "bags": 648965,
-        "form": "Roasted",
-        "type": "Unspecified",
-        "method": "Unspecified",
-        "info": "Unspecified"
-      },
-      {
-        "code": "SE",
-        "share": 0.0045,
-        "label": "Soluble Extract",
-        "bags": 7172929,
-        "form": "Soluble",
-        "type": "Unspecified",
-        "method": "Extract",
-        "info": "Unspecified"
-      },
-      {
-        "code": "SP",
-        "share": 0.0462,
-        "label": "Soluble Preparation",
-        "bags": 1052532,
-        "form": "Soluble",
-        "type": "Unspecified",
-        "method": "Preparations",
-        "info": "Unspecified"
-      },
-      {
-        "code": "S",
-        "share": 0.0829,
-        "label": "Soluble",
-        "bags": 4083444,
-        "form": "Soluble",
-        "type": "Unspecified",
-        "method": "Unspecified",
-        "info": "Unspecified"
       },
       {
         "code": "RD",
